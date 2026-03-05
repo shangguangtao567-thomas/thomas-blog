@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "openclaw-ultimate-setup-guide",
+    "titleZh": "OpenClaw 终极安装指南：从零搭建你的私有 AI 助手",
+    "titleEn": "The Ultimate OpenClaw Setup Guide: Build Your Private AI Assistant",
+    "excerptZh": "完整记录 OpenClaw 的安装配置流程，涵盖 Telegram、Discord 接入、技能扩展与常见问题排查，帮你少踩坑。",
+    "excerptEn": "A complete walkthrough of OpenClaw installation and configuration, covering Telegram/Discord integration, skill extensions, and common troubleshooting.",
+    "tag": "AI",
+    "tagEn": "AI",
+    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop&q=80",
+    "readTime": 15,
+    "publishedAt": "2026-03-03"
+  },
+  {
+    "slug": "open-source-models-agent-orchestration",
+    "titleZh": "2026 春节档 AI 大乱斗：Qwen3.5、MiniMax M2.5、GLM-5、Kimi K2.5 深度对比，以及我对 OpenClaw 层级价值的判断",
+    "titleEn": "Spring 2026 Open-Source Model Showdown: Qwen3.5, MiniMax M2.5, GLM-5, Kimi K2.5 — And Why the Orchestration Layer Matters",
+    "excerptZh": "四个模型的技术路线各有侧重，但有一个共同方向：把工具调用和 Agent 能力放在比\"聪明程度\"更优先的位置。这背后，是 OpenClaw 这个层级正在崛起的价值。",
+    "excerptEn": "Four models, four technical approaches, one shared direction: prioritizing tool-calling and agent capabilities over raw intelligence. Behind this trend lies the rising value of the orchestration layer.",
+    "tag": "AI",
+    "tagEn": "AI",
+    "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=80",
+    "readTime": 18,
+    "publishedAt": "2026-03-03"
+  }
+]

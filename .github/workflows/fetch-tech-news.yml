@@ -1,0 +1,66 @@
+name: Fetch Tech News Daily
+
+on:
+  # Run every day at 08:00 UTC (16:00 Beijing time)
+  schedule:
+    - cron: '0 8 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      fetch_count:
+        description: 'Number of stories to fetch'
+        required: false
+        default: '20'
+
+permissions:
+  contents: write  # Need write permission to commit the updated JSON
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Fetch tech news
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FETCH_COUNT: ${{ github.event.inputs.fetch_count || '20' }}
+        run: node scripts/fetch-tech-news.mjs
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet src/data/tech-news.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push updated tech news
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/tech-news.json
+          git commit -m "chore: update tech news [$(date -u '+%Y-%m-%d')]"
+          git push
+
+      - name: No changes
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "No new tech news items found. Skipping commit."
