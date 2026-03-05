@@ -7,7 +7,19 @@ import Tech from './pages/Tech';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 
-function parseRoute(path: string): { page: string; slug?: string } {
+// The base path set in vite.config.ts (e.g. '/thomas-blog/')
+// Strip it from the pathname before routing so routes work the same locally and on GitHub Pages
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/thomas-blog' or ''
+
+function stripBase(path: string): string {
+  if (BASE && path.startsWith(BASE)) {
+    return path.slice(BASE.length) || '/';
+  }
+  return path || '/';
+}
+
+function parseRoute(rawPath: string): { page: string; slug?: string } {
+  const path = stripBase(rawPath);
   if (path === '/' || path === '') return { page: 'home' };
   if (path === '/blog') return { page: 'blog' };
   if (path === '/tech') return { page: 'tech' };
@@ -27,9 +39,11 @@ function AppInner() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Navigate with base prefix applied
   const navigate = (path: string) => {
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
+    const fullPath = BASE + path;
+    window.history.pushState({}, '', fullPath);
+    setCurrentPath(fullPath);
     window.scrollTo(0, 0);
   };
 

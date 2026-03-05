@@ -26,9 +26,11 @@ export default function TopNav({ currentPath, navigate }: TopNavProps) {
     { path: '/tech', label: language === 'zh' ? '科技热点' : 'Tech' },
   ];
 
+  const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
   const isActive = (path: string) => {
-    if (path === '/') return currentPath === '/';
-    return currentPath.startsWith(path);
+    const full = BASE + path;
+    if (path === '/') return currentPath === full || currentPath === BASE || currentPath === BASE + '/';
+    return currentPath.startsWith(full);
   };
 
   const handleCordPull = () => {
