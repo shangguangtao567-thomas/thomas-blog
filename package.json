@@ -7,14 +7,16 @@
     "dev": "vite",
     "build": "node scripts/build-data.mjs && tsc -b && vite build",
     "preview": "vite preview",
-    "fetch-tech": "node scripts/fetch-tech-news.mjs"
+    "fetch-tech": "node scripts/fetch-tech-news.mjs",
+    "fetch-ai-rss": "node scripts/fetch-ai-rss.mjs"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "wouter": "^3.3.5"
+    "wouter": "^3.3.5",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
