@@ -1,0 +1,51 @@
+[
+  {
+    "name": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml",
+    "category": "AI",
+    "priority": 10,
+    "reason": "官方一手模型与产品更新"
+  },
+  {
+    "name": "MIT Technology Review AI",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    "category": "Tech",
+    "priority": 9,
+    "reason": "高质量趋势与行业分析"
+  },
+  {
+    "name": "MarkTechPost",
+    "url": "https://marktechpost.com/feed/",
+    "category": "AI",
+    "priority": 8,
+    "reason": "研究与产品快讯密度高"
+  },
+  {
+    "name": "ByteByteGo",
+    "url": "https://blog.bytebytego.com/feed",
+    "category": "Infrastructure",
+    "priority": 8,
+    "reason": "工程架构与系统实现视角强"
+  },
+  {
+    "name": "KDnuggets",
+    "url": "https://www.kdnuggets.com/feed",
+    "category": "Data",
+    "priority": 7,
+    "reason": "AI/ML/数据科学综合覆盖"
+  },
+  {
+    "name": "arXiv cs.AI",
+    "url": "https://arxiv.org/rss/cs.AI",
+    "category": "AI",
+    "priority": 6,
+    "reason": "研究前沿雷达"
+  },
+  {
+    "name": "The Rundown AI",
+    "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml",
+    "category": "AI",
+    "priority": 7,
+    "reason": "高压缩摘要入口"
+  }
+]
