@@ -215,7 +215,7 @@ async function main() {
 
   if (candidates.length === 0) {
     console.log('[rss] no new items');
-    return;
+    process.exit(0);
   }
 
   const newItems = await summarizeWithAI(candidates);
@@ -236,6 +236,7 @@ async function main() {
   const merged = [...newItems, ...existing].slice(0, MAX_ITEMS_TO_KEEP);
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(merged, null, 2));
   console.log(`[rss] wrote ${merged.length} items to ${OUTPUT_FILE}`);
+  process.exit(0);
 }
 
 main().catch(err => {
