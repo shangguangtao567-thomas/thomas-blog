@@ -4,8 +4,9 @@
     "rank": 1,
     "titleZh": "Improving instruction hierarchy in frontier LLMs",
     "titleEn": "Improving instruction hierarchy in frontier LLMs",
-    "summaryZh": "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerab…。更像是值得今天先看一眼的方向信号。",
-    "summaryEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injectio…. Worth treating as an early signal, not just a headline.",
+    "summaryZh": "这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. 它属于“模型安全与可控性”这个主题，值得关注的原因是：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
+    "summaryEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. Theme: 模型安全与可控性. Why it matters: 这类更新影响的不只是论文指标…",
+    "deckZh": "发生了什么：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.",
     "tag": "AI",
     "source": "openai.com",
     "sourceName": "OpenAI News",
@@ -22,21 +23,26 @@
         "url": "https://openai.com/news/rss.xml"
       }
     ],
-    "publishedAt": "2026-03-10",
+    "publishedAt": "2026-03-10T11:00:00.000Z",
+    "publishedLabelZh": "21 小时前",
     "score": 108,
     "featured": true,
     "takeawayBulletsZh": [
-      "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, i…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+      "为什么重要：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
+      "相关主题：模型安全与可控性",
+      "可能影响：对开发者和企业来说，后续要关注它会不会进入 API、系统提示控制或评测基线；一旦产品化，很多高风险场景的接入成本会下降。"
+    ],
+    "themeZh": "模型安全与可控性",
+    "impactZh": "对开发者和企业来说，后续要关注它会不会进入 API、系统提示控制或评测基线；一旦产品化，很多高风险场景的接入成本会下降。"
   },
   {
     "id": "openai.com-88306bd64ac1",
     "rank": 2,
     "titleZh": "New ways to learn math and science in ChatGPT",
     "titleEn": "New ways to learn math and science in ChatGPT",
-    "summaryZh": "来源于 OpenAI News，ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, va…。对产品、模型能力或生态节奏都有直接参考价值。",
-    "summaryEn": "ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time.. Useful for tracking where product and model momentum is shifting.",
+    "summaryZh": "这条来自 OpenAI News 的更新，核心是：ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time. 它属于“AI 产品体验”这个主题，值得关注的原因是：它说明大模型产品正在从“会回答”走向“会讲解”，竞争点开始转向交互式教学体验、留存和使用深度，而不只是模型分数。",
+    "summaryEn": "ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time. Theme: AI 产品体验. Why it matters: 它说明大模型产品正在从“会回答”走向“会讲解”…",
+    "deckZh": "发生了什么：ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time.",
     "tag": "AI",
     "source": "openai.com",
     "sourceName": "OpenAI News",
@@ -53,21 +59,26 @@
         "url": "https://openai.com/news/rss.xml"
       }
     ],
-    "publishedAt": "2026-03-10",
+    "publishedAt": "2026-03-10T10:00:00.000Z",
+    "publishedLabelZh": "22 小时前",
     "score": 107,
     "featured": true,
     "takeawayBulletsZh": [
-      "来源于 OpenAI News，ChatGPT introduces interactive visual explanations for math and…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+      "为什么重要：它说明大模型产品正在从“会回答”走向“会讲解”，竞争点开始转向交互式教学体验、留存和使用深度，而不只是模型分数。",
+      "相关主题：AI 产品体验",
+      "可能影响：短期会推动 AI 教育产品继续内卷，长期可能改变用户对“搜索答案”和“理解过程”之间的期待。"
+    ],
+    "themeZh": "AI 产品体验",
+    "impactZh": "短期会推动 AI 教育产品继续内卷，长期可能改变用户对“搜索答案”和“理解过程”之间的期待。"
   },
   {
     "id": "huggingface.co-087b7ac98b37",
     "rank": 3,
     "titleZh": "How NVIDIA Builds Open Data for AI",
     "titleEn": "How NVIDIA Builds Open Data for AI",
-    "summaryZh": "来源于 Hugging Face Blog，How NVIDIA Builds Open Data for AI。适合作为今天判断 AI 进展节奏的切片。",
-    "summaryEn": "How NVIDIA Builds Open Data for AI. A compact snapshot of today's AI execution layer.",
+    "summaryZh": "这条来自 Hugging Face Blog 的更新，核心是：How NVIDIA Builds Open Data for AI 这条更新目前公开摘要不多，但从标题和来源看，属于 数据基础设施 方向的新进展。 它属于“数据基础设施”这个主题，值得关注的原因是：数据供给决定模型上限，这类消息通常意味着训练资源、评测标准或开源生态又在往前走一步。",
+    "summaryEn": "How NVIDIA Builds Open Data for AI 这条更新目前公开摘要不多，但从标题和来源看，属于 数据基础设施 方向的新进展。 Theme: 数据基础设施. Why it matters: 数据供给决定模型上限，这类消息通常意味着训练资源、评测标准或开源生态又在往前走一步。",
+    "deckZh": "发生了什么：How NVIDIA Builds Open Data for AI 这条更新目前公开摘要不多，但从标题和来源看，属于 数据基础设施 方向的新进展。",
     "tag": "Open Source",
     "source": "huggingface.co",
     "sourceName": "Hugging Face Blog",
@@ -84,21 +95,26 @@
         "url": "https://huggingface.co/blog/feed.xml"
       }
     ],
-    "publishedAt": "2026-03-10",
+    "publishedAt": "2026-03-10T19:49:28.000Z",
+    "publishedLabelZh": "12 小时前",
     "score": 106,
     "featured": true,
     "takeawayBulletsZh": [
-      "来源于 Hugging Face Blog，How NVIDIA Builds Open Data for AI。适合作为今天判断 AI 进展节奏的切片。",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+      "为什么重要：数据供给决定模型上限，这类消息通常意味着训练资源、评测标准或开源生态又在往前走一步。",
+      "相关主题：数据基础设施",
+      "可能影响：更实际的看点是：它会不会很快进入产品、开发者工作流或开源生态，而不只是停留在宣传层。"
+    ],
+    "themeZh": "数据基础设施",
+    "impactZh": "更实际的看点是：它会不会很快进入产品、开发者工作流或开源生态，而不只是停留在宣传层。"
   },
   {
     "id": "blog.google-a015ffb3f8b4",
     "rank": 4,
     "titleZh": "Gemini in Google Sheets just achieved state-of-the-art performance.",
     "titleEn": "Gemini in Google Sheets just achieved state-of-the-art performance.",
-    "summaryZh": "来源于 Google AI Blog，Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets,…。背后反映的是行业资源和注意力正在重新分配。",
-    "summaryEn": "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analys…. More interesting for the direction it implies than the announcement itself.",
+    "summaryZh": "这条来自 Google AI Blog 的更新，核心是：Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe … 它属于“数据基础设施”这个主题，值得关注的原因是：它值得看，不只是因为有新发布，而是因为它能帮助判断 AI 产业的竞争焦点正在往哪里移动。",
+    "summaryEn": "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe … Theme: 数据基础设施. Why it matters: 它值得看，不只是因为有新发布…",
+    "deckZh": "发生了什么：Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe …",
     "tag": "AI",
     "source": "blog.google",
     "sourceName": "Google AI Blog",
@@ -115,21 +131,26 @@
         "url": "https://blog.google/technology/ai/rss/"
       }
     ],
-    "publishedAt": "2026-03-10",
+    "publishedAt": "2026-03-10T13:00:00.000Z",
+    "publishedLabelZh": "19 小时前",
     "score": 103,
-    "featured": true,
+    "featured": false,
     "takeawayBulletsZh": [
-      "来源于 Google AI Blog，Today we announced new beta features for Gemini in Sheets to…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+      "为什么重要：它值得看，不只是因为有新发布，而是因为它能帮助判断 AI 产业的竞争焦点正在往哪里移动。",
+      "相关主题：数据基础设施",
+      "可能影响：更实际的看点是：它会不会很快进入产品、开发者工作流或开源生态，而不只是停留在宣传层。"
+    ],
+    "themeZh": "数据基础设施",
+    "impactZh": "更实际的看点是：它会不会很快进入产品、开发者工作流或开源生态，而不只是停留在宣传层。"
   },
   {
     "id": "github.blog-7f0c197269a0",
     "rank": 5,
     "titleZh": "The era of “AI as text” is over. Execution is the new interface.",
     "titleEn": "The era of “AI as text” is over. Execution is the new interface.",
-    "summaryZh": "来源于 GitHub Blog / AI & ML，AI is shifting from prompt-response interactions to programmable execution…。比单点新闻更像趋势拐点的局部证据。",
-    "summaryEn": "AI is shifting from prompt-response interactions to programmable execution…. A good proxy for where industry attention is moving next.",
+    "summaryZh": "这条来自 GitHub Blog / AI & ML 的更新，核心是：AI is shifting from prompt-response interactions to programmable execution. See how the GitHub Copilot SDK enables agentic workflows directly inside your applications… 它属于“Agent 与开发者工具”这个主题，值得关注的原因是：它反映行业焦点正在从聊天界面转向可执行工作流，谁能把模型接进真实软件和自动化链路，谁就更接近生产力入口。",
+    "summaryEn": "AI is shifting from prompt-response interactions to programmable execution. See how the GitHub Copilot SDK enables agentic workflows directly inside your applications… Theme: Agent 与开发者工具…",
+    "deckZh": "发生了什么：AI is shifting from prompt-response interactions to programmable execution. See how the GitHub Copilot SDK enables agentic workflows directly inside your applications…",
     "tag": "Tools",
     "source": "github.blog",
     "sourceName": "GitHub Blog / AI & ML",
@@ -146,83 +167,26 @@
         "url": "https://github.blog/ai-and-ml/feed"
       }
     ],
-    "publishedAt": "2026-03-10",
+    "publishedAt": "2026-03-10T20:16:01.000Z",
+    "publishedLabelZh": "11 小时前",
     "score": 102,
     "featured": false,
     "takeawayBulletsZh": [
-      "来源于 GitHub Blog / AI & ML，AI is shifting from prompt-response interactions to pr…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
-  },
-  {
-    "id": "huggingface.co-cf14fb4125ba",
-    "rank": 6,
-    "titleZh": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
-    "titleEn": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
-    "summaryZh": "来源于 Hugging Face Blog，Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries。更像是值得今天先看一眼的方向信号。",
-    "summaryEn": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries. Worth treating as an early signal, not just a headline.",
-    "tag": "Open Source",
-    "source": "huggingface.co",
-    "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/async-rl-training-landscape",
-    "relatedLinks": [
-      {
-        "labelZh": "Hugging Face Blog 原文",
-        "labelEn": "Hugging Face Blog source",
-        "url": "https://huggingface.co/blog/async-rl-training-landscape"
-      },
-      {
-        "labelZh": "RSS 源",
-        "labelEn": "RSS feed",
-        "url": "https://huggingface.co/blog/feed.xml"
-      }
+      "为什么重要：它反映行业焦点正在从聊天界面转向可执行工作流，谁能把模型接进真实软件和自动化链路，谁就更接近生产力入口。",
+      "相关主题：Agent 与开发者工具",
+      "可能影响：这会让软件产品更倾向于内置可编排 Agent，而不是只加一个聊天框，开发者生态和平台分发方式都会受影响。"
     ],
-    "publishedAt": "2026-03-10",
-    "score": 93,
-    "featured": false,
-    "takeawayBulletsZh": [
-      "来源于 Hugging Face Blog，Keep the Tokens Flowing: Lessons from 16 Open-Source RL Li…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
-  },
-  {
-    "id": "huggingface.co-2ae52e2df01b",
-    "rank": 7,
-    "titleZh": "Introducing Storage Buckets on the Hugging Face Hub",
-    "titleEn": "Introducing Storage Buckets on the Hugging Face Hub",
-    "summaryZh": "来源于 Hugging Face Blog，Introducing Storage Buckets on the Hugging Face Hub。对产品、模型能力或生态节奏都有直接参考价值。",
-    "summaryEn": "Introducing Storage Buckets on the Hugging Face Hub. Useful for tracking where product and model momentum is shifting.",
-    "tag": "Open Source",
-    "source": "huggingface.co",
-    "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/storage-buckets",
-    "relatedLinks": [
-      {
-        "labelZh": "Hugging Face Blog 原文",
-        "labelEn": "Hugging Face Blog source",
-        "url": "https://huggingface.co/blog/storage-buckets"
-      },
-      {
-        "labelZh": "RSS 源",
-        "labelEn": "RSS feed",
-        "url": "https://huggingface.co/blog/feed.xml"
-      }
-    ],
-    "publishedAt": "2026-03-10",
-    "score": 92,
-    "featured": false,
-    "takeawayBulletsZh": [
-      "来源于 Hugging Face Blog，Introducing Storage Buckets on the Hugging Face Hub…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+    "themeZh": "Agent 与开发者工具",
+    "impactZh": "这会让软件产品更倾向于内置可编排 Agent，而不是只加一个聊天框，开发者生态和平台分发方式都会受影响。"
   },
   {
     "id": "marktechpost.com-47f4cdba0650",
-    "rank": 8,
+    "rank": 6,
     "titleZh": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
     "titleEn": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
-    "summaryZh": "来源于 MarkTechPost，Google expanded its Gemini model family with the release of Gemini Embedding 2…。适合作为今天判断 AI 进展节奏的切片。",
-    "summaryEn": "Google expanded its Gemini model family with the release of Gemini Embedding 2…. A compact snapshot of today's AI execution layer.",
+    "summaryZh": "这条来自 MarkTechPost 的更新，核心是：Google expanded its Gemini model family with the release of Gemini Embedding 2… 它属于“检索与多模态基础能力”这个主题，值得关注的原因是：这类能力会直接影响搜索、推荐、知识库和多模态检索系统的效果，是很多 AI 应用是否好用的底层能力。",
+    "summaryEn": "Google expanded its Gemini model family with the release of Gemini Embedding 2… Theme: 检索与多模态基础能力. Why it matters: 这类能力会直接影响搜索、推荐、知识库和多模态检索系统的效果，是很多 AI 应用是否好用的底层能力。",
+    "deckZh": "发生了什么：Google expanded its Gemini model family with the release of Gemini Embedding 2…",
     "tag": "AI",
     "source": "marktechpost.com",
     "sourceName": "MarkTechPost",
@@ -239,12 +203,16 @@
         "url": "https://www.marktechpost.com/feed/"
       }
     ],
-    "publishedAt": "2026-03-11",
+    "publishedAt": "2026-03-11T07:18:20.000Z",
+    "publishedLabelZh": "1 小时内",
     "score": 92,
     "featured": false,
     "takeawayBulletsZh": [
-      "来源于 MarkTechPost，Google expanded its Gemini model family with the release of Gem…",
-      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
-    ]
+      "为什么重要：这类能力会直接影响搜索、推荐、知识库和多模态检索系统的效果，是很多 AI 应用是否好用的底层能力。",
+      "相关主题：检索与多模态基础能力",
+      "可能影响：如果效果和成本比真的拉开差距，RAG、企业知识库和跨模态搜索的方案会很快跟进，工具链也会随之调整。"
+    ],
+    "themeZh": "检索与多模态基础能力",
+    "impactZh": "如果效果和成本比真的拉开差距，RAG、企业知识库和跨模态搜索的方案会很快跟进，工具链也会随之调整。"
   }
 ]

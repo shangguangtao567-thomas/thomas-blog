@@ -26,13 +26,17 @@ export interface TechNewsItem {
   titleEn: string;
   summaryZh: string;
   summaryEn: string;
+  deckZh?: string;
   tag: string;
   source: string;
   sourceName?: string;
   sourceUrl: string;
   relatedLinks?: TechNewsLink[];
   takeawayBulletsZh?: string[];
+  themeZh?: string;
+  impactZh?: string;
   publishedAt: string;
+  publishedLabelZh?: string;
   score?: number;
   featured: boolean;
 }
@@ -48,10 +52,13 @@ export interface AiDigestIndexItem {
   itemCount: number;
   heroTitleZh?: string;
   heroTitleEn?: string;
+  limitedUpdateWindow?: boolean;
   featuredItems?: Array<{
     id: string;
     titleZh: string;
     titleEn: string;
     tag: string;
+    summaryZh?: string;
+    publishedLabelZh?: string;
   }>;
 }

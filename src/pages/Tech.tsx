@@ -24,7 +24,8 @@ export default function Tech({ navigate }: TechProps) {
   const items = techNewsData as TechNewsItem[];
   const latestDigest = digests[0];
 
-  const featuredItems = useMemo(() => items.slice(0, 6), [items]);
+  const highlightItems = useMemo(() => items.slice(0, 3), [items]);
+  const archiveItems = useMemo(() => digests.slice(1), [digests]);
 
   return (
     <div className="min-h-screen">
@@ -40,8 +41,8 @@ export default function Tech({ navigate }: TechProps) {
               </h1>
               <p className="text-sm md:text-base text-muted-foreground font-ui max-w-2xl leading-relaxed">
                 {language === 'zh'
-                  ? '每天从 AI RSS 信号流里挑出最值得看的几条，先在站内整理成可读的日报文章，再附来源链接供继续深挖。主阅读体验留在博客里，不把用户直接甩去外站。'
-                  : 'Each day the site turns high-signal AI RSS items into an on-site briefing post first, then keeps source links as supporting references instead of making outbound clicks the default experience.'}
+                  ? '层级现在分开了：这里的卡片只做预览，完整解释放在日报正文里，归档只保留往期入口，不再重复当天内容。每天只收近 24 小时的新信息；如果不足，会明确说明，而不是拿旧消息凑数。'
+                  : 'The hierarchy is now split cleanly: cards are previews, full explanation lives in the digest article, and the archive keeps past entries only. The pipeline keeps the last 24 hours only and explicitly says when updates are limited instead of backfilling older items.'}
               </p>
             </div>
             {latestDigest && (
@@ -56,6 +57,9 @@ export default function Tech({ navigate }: TechProps) {
                 <p className="text-sm text-muted-foreground font-ui leading-relaxed mb-3">
                   {language === 'zh' ? latestDigest.excerptZh : latestDigest.excerptEn}
                 </p>
+                {latestDigest.limitedUpdateWindow && language === 'zh' && (
+                  <p className="text-xs text-amber-700 font-ui mb-3">近 24 小时重点更新有限，所以没有混入更早内容。</p>
+                )}
                 <p className="text-xs font-ui text-foreground">→ {language === 'zh' ? '阅读最新一期' : 'Read latest issue'}</p>
               </button>
             )}
@@ -66,10 +70,10 @@ export default function Tech({ navigate }: TechProps) {
           <div className="flex items-center justify-between mb-4">
             <div>
               <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.15em] font-mono mb-1">
-                {language === 'zh' ? '// 今日摘要卡片' : '// TODAY HIGHLIGHTS'}
+                {language === 'zh' ? '// 今日预览卡片' : '// TODAY PREVIEWS'}
               </p>
               <h2 className="text-xl font-semibold text-foreground font-display">
-                {language === 'zh' ? '今天站内先读这几条' : 'Read these on-site first'}
+                {language === 'zh' ? '先知道发生了什么，再进正文看完整解释' : 'Preview what happened, then open the full digest'}
               </h2>
             </div>
             {latestDigest && (
@@ -79,23 +83,30 @@ export default function Tech({ navigate }: TechProps) {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {featuredItems.map(item => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {highlightItems.map(item => (
               <div key={item.id} className="rounded-2xl border border-border bg-card p-5">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <span className={`text-[10px] font-medium px-2 py-1 rounded-md font-ui ${tagColorMap[item.tag] ?? 'bg-secondary text-secondary-foreground'}`}>
                     {item.tag}
                   </span>
-                  <span className="text-[11px] font-mono text-muted-foreground">{item.publishedAt}</span>
+                  <span className="text-[11px] font-mono text-muted-foreground">{item.publishedLabelZh || item.publishedAt}</span>
                 </div>
                 <h3 className="text-base font-semibold text-foreground leading-snug mb-2 font-ui">
                   {language === 'zh' ? item.titleZh : item.titleEn}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-ui mb-4">
-                  {language === 'zh' ? item.summaryZh : item.summaryEn}
+                <p className="text-sm text-muted-foreground leading-relaxed font-ui mb-3">
+                  {language === 'zh' ? item.deckZh || item.summaryZh : item.summaryEn}
                 </p>
+                {language === 'zh' && item.takeawayBulletsZh?.length ? (
+                  <ul className="space-y-1.5 mb-4 text-xs text-muted-foreground font-ui">
+                    {item.takeawayBulletsZh.slice(0, 2).map(line => (
+                      <li key={line}>- {line}</li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="flex flex-wrap gap-2">
-                  {(item.relatedLinks || []).slice(0, 2).map(link => (
+                  {(item.relatedLinks || []).slice(0, 1).map(link => (
                     <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="text-xs font-ui px-2.5 py-1 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-foreground/20 transition-colors">
                       {language === 'zh' ? link.labelZh : link.labelEn}
                     </a>
@@ -111,7 +122,7 @@ export default function Tech({ navigate }: TechProps) {
             {language === 'zh' ? '// 往期日报' : '// ARCHIVE'}
           </p>
           <div className="space-y-3">
-            {digests.map((digest, index) => (
+            {archiveItems.map((digest, index) => (
               <button
                 key={digest.slug}
                 onClick={() => navigate(digest.path)}
@@ -137,6 +148,11 @@ export default function Tech({ navigate }: TechProps) {
                 </div>
               </button>
             ))}
+            {!archiveItems.length && (
+              <div className="rounded-2xl border border-dashed border-border p-5 text-sm text-muted-foreground font-ui">
+                {language === 'zh' ? '目前还没有更多往期日报。' : 'No older digest issues yet.'}
+              </div>
+            )}
           </div>
         </section>
       </div>

@@ -19,9 +19,8 @@ export default function Blog({ navigate }: BlogProps) {
   const [activeTag, setActiveTag] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const allPosts = postsIndex as Post[];
+  const allPosts = (postsIndex as Post[]).filter(post => !post.slug.startsWith('ai-daily-'));
 
-  // Collect unique tags
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
     allPosts.forEach(p => tagSet.add(language === 'zh' ? p.tag : p.tagEn));
@@ -31,7 +30,6 @@ export default function Blog({ navigate }: BlogProps) {
   const allLabel = language === 'zh' ? '全部' : 'All';
   const tags = [allLabel, ...allTags];
 
-  // Client-side filter
   const filteredPosts = useMemo(() => {
     return allPosts.filter(post => {
       const title = language === 'zh' ? post.titleZh : post.titleEn;
@@ -67,7 +65,6 @@ export default function Blog({ navigate }: BlogProps) {
   return (
     <div className="min-h-screen">
       <div className="px-6 md:px-8 py-10 max-w-3xl mx-auto">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground font-display mb-1.5">
             {language === 'zh' ? '博客' : 'Blog'}
@@ -79,9 +76,7 @@ export default function Blog({ navigate }: BlogProps) {
           </p>
         </div>
 
-        {/* Search + Tags row */}
         <div className="flex flex-col sm:flex-row gap-3 mb-8">
-          {/* Search */}
           <div className="relative flex-1">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" style={{ color: 'var(--muted-foreground)' }}>
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
@@ -96,7 +91,6 @@ export default function Blog({ navigate }: BlogProps) {
             />
           </div>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-1.5 items-center">
             {tags.map((tag) => {
               const isActive = tag === allLabel ? !activeTag : activeTag === tag;
@@ -118,7 +112,6 @@ export default function Blog({ navigate }: BlogProps) {
           </div>
         </div>
 
-        {/* Post list */}
         {paginatedPosts.length > 0 ? (
           <div className="space-y-2">
             {paginatedPosts.map((post, index) => {
@@ -172,7 +165,6 @@ export default function Blog({ navigate }: BlogProps) {
           </div>
         )}
 
-        {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex items-center justify-between mt-10 pt-6 border-t border-border">
             <button
@@ -209,7 +201,6 @@ export default function Blog({ navigate }: BlogProps) {
         )}
       </div>
 
-      {/* Footer */}
       <footer className="border-t border-border py-6 px-6 mt-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs text-muted-foreground font-mono text-center">

@@ -12,6 +12,7 @@ const tagColors: Record<string, string> = {
   Infrastructure: 'bg-orange-100 text-orange-700',
   Tools: 'bg-blue-100 text-blue-700',
   Security: 'bg-red-100 text-red-700',
+  Data: 'bg-yellow-100 text-yellow-700',
   Web: 'bg-cyan-100 text-cyan-700',
   Tech: 'bg-gray-100 text-gray-700',
 };
@@ -23,8 +24,8 @@ interface HomeProps {
 export default function Home({ navigate }: HomeProps) {
   const { language } = useLanguage();
 
-  const posts = (postsIndex as Post[]).slice(0, 4);
-  const techNews = (techNewsData as TechNewsItem[]).filter(n => n.featured).slice(0, 4);
+  const posts = (postsIndex as Post[]).filter(post => !post.slug.startsWith('ai-daily-')).slice(0, 4);
+  const techNews = (techNewsData as TechNewsItem[]).slice(0, 3);
   const latestDigest = (digestsData as AiDigestIndexItem[])[0];
 
   return (
@@ -67,7 +68,7 @@ export default function Home({ navigate }: HomeProps) {
 
             <div className="grid grid-cols-3 gap-3 pt-1">
               {[
-                { value: String((postsIndex as Post[]).length), label: language === 'zh' ? '篇文章' : 'Posts' },
+                { value: String(posts.length), label: language === 'zh' ? '篇文章' : 'Posts' },
                 { value: String((digestsData as AiDigestIndexItem[]).length), label: language === 'zh' ? '期日报' : 'Digests' },
                 { value: '∞', label: language === 'zh' ? '好奇心' : 'Curiosity' },
               ].map(({ value, label }) => (
@@ -125,7 +126,7 @@ export default function Home({ navigate }: HomeProps) {
                 {language === 'zh' ? '// AI 日报' : '// AI DAILY'}
               </p>
               <h2 className="text-lg font-semibold text-foreground font-display">
-                {language === 'zh' ? '先在站内读完，再决定要不要深挖外链' : 'Read the briefing on-site before opening sources'}
+                {language === 'zh' ? '先看完整日报，再决定要不要深挖来源' : 'Read the full digest first, then open sources'}
               </h2>
             </div>
             <button onClick={() => navigate('/tech')} className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors font-ui group" style={{ background: 'none', border: 'none', padding: 0 }}>
@@ -139,27 +140,30 @@ export default function Home({ navigate }: HomeProps) {
               <h3 className="text-2xl font-display font-semibold text-foreground mb-3">
                 {language === 'zh' ? latestDigest.titleZh : latestDigest.titleEn}
               </h3>
-              <p className="text-sm text-muted-foreground font-ui leading-relaxed mb-4 max-w-3xl">
+              <p className="text-sm text-muted-foreground font-ui leading-relaxed mb-3 max-w-3xl">
                 {language === 'zh' ? latestDigest.excerptZh : latestDigest.excerptEn}
               </p>
+              {latestDigest.limitedUpdateWindow && language === 'zh' && (
+                <p className="text-xs text-amber-700 font-ui mb-4">近 24 小时重点更新有限，这期没有混入更早内容。</p>
+              )}
               <p className="text-xs font-ui text-foreground">→ {language === 'zh' ? '阅读完整日报' : 'Read full digest'}</p>
             </button>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {techNews.map(item => (
               <div key={item.id} className="group flex flex-col gap-2 p-4 rounded-xl bg-card border border-border">
                 <div className="flex items-start justify-between gap-2">
                   <span className={`text-[10px] font-medium px-2 py-0.5 rounded-md font-ui ${tagColors[item.tag] ?? 'bg-secondary text-secondary-foreground'}`}>
                     {item.tag}
                   </span>
-                  <span className="text-[11px] text-muted-foreground font-mono">{item.source}</span>
+                  <span className="text-[11px] text-muted-foreground font-mono">{item.publishedLabelZh || item.source}</span>
                 </div>
                 <p className="text-sm font-medium text-foreground line-clamp-2 leading-snug font-ui">
                   {language === 'zh' ? item.titleZh : item.titleEn}
                 </p>
-                <p className="text-xs text-muted-foreground font-ui line-clamp-3">
-                  {language === 'zh' ? item.summaryZh : item.summaryEn}
+                <p className="text-xs text-muted-foreground font-ui line-clamp-4">
+                  {language === 'zh' ? item.deckZh || item.summaryZh : item.summaryEn}
                 </p>
               </div>
             ))}

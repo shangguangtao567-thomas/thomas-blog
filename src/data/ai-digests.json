@@ -4,30 +4,37 @@
     "date": "2026-03-11",
     "titleZh": "2026-03-11 AI 日报",
     "titleEn": "2026-03-11 AI Daily Briefing",
-    "excerptZh": "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerab…。更像是值得今天先看一眼的方向信号。",
-    "excerptEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injectio…. Worth treating as an early signal, not just a headline.",
+    "excerptZh": "这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. 它属于“模型安全与可控性”这个主题，值得关注的原因是：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
+    "excerptEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. Theme: 模型安全与可控性. Why it matters: 这类更新影响的不只是论文指标…",
     "path": "/blog/ai-daily-2026-03-11",
-    "itemCount": 8,
+    "itemCount": 6,
     "heroTitleZh": "Improving instruction hierarchy in frontier LLMs",
     "heroTitleEn": "Improving instruction hierarchy in frontier LLMs",
+    "limitedUpdateWindow": false,
     "featuredItems": [
       {
         "id": "openai.com-458a72f18aa6",
         "titleZh": "Improving instruction hierarchy in frontier LLMs",
         "titleEn": "Improving instruction hierarchy in frontier LLMs",
-        "tag": "AI"
+        "tag": "AI",
+        "summaryZh": "这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. 它属于“模型安全与可控性”这个主题，值得关注的原因是：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
+        "publishedLabelZh": "21 小时前"
       },
       {
         "id": "openai.com-88306bd64ac1",
         "titleZh": "New ways to learn math and science in ChatGPT",
         "titleEn": "New ways to learn math and science in ChatGPT",
-        "tag": "AI"
+        "tag": "AI",
+        "summaryZh": "这条来自 OpenAI News 的更新，核心是：ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time. 它属于“AI 产品体验”这个主题，值得关注的原因是：它说明大模型产品正在从“会回答”走向“会讲解”，竞争点开始转向交互式教学体验、留存和使用深度，而不只是模型分数。",
+        "publishedLabelZh": "22 小时前"
       },
       {
         "id": "huggingface.co-087b7ac98b37",
         "titleZh": "How NVIDIA Builds Open Data for AI",
         "titleEn": "How NVIDIA Builds Open Data for AI",
-        "tag": "Open Source"
+        "tag": "Open Source",
+        "summaryZh": "这条来自 Hugging Face Blog 的更新，核心是：How NVIDIA Builds Open Data for AI 这条更新目前公开摘要不多，但从标题和来源看，属于 数据基础设施 方向的新进展。 它属于“数据基础设施”这个主题，值得关注的原因是：数据供给决定模型上限，这类消息通常意味着训练资源、评测标准或开源生态又在往前走一步。",
+        "publishedLabelZh": "12 小时前"
       }
     ]
   }
