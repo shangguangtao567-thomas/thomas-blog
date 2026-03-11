@@ -1,5 +1,17 @@
 [
   {
+    "slug": "ai-daily-2026-03-11",
+    "titleZh": "2026-03-11 AI 日报：Improving instruction hierarchy in frontier LLMs",
+    "titleEn": "2026-03-11 AI Daily Briefing",
+    "excerptZh": "今天挑了 8 条值得先看的 AI 消息，重点包括 Improving instruction hierarchy in frontier LLMs、New ways to learn math and science in ChatGPT、How NVIDIA Builds Open Data for AI。",
+    "excerptEn": "A curated AI briefing for 2026-03-11, featuring Improving instruction hierarchy in frontier LLMs, New ways to learn math and science in ChatGPT, How NVIDIA Builds Open Data for AI.",
+    "tag": "AI",
+    "tagEn": "AI",
+    "image": "",
+    "readTime": 20,
+    "publishedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
     "slug": "openclaw-ultimate-setup-guide",
     "titleZh": "OpenClaw 终极安装指南：从零搭建你的私有 AI 助手",
     "titleEn": "The Ultimate OpenClaw Setup Guide: Build Your Private AI Assistant",

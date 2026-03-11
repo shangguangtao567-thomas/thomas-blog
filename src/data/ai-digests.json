@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "ai-daily-2026-03-11",
+    "date": "2026-03-11",
+    "titleZh": "2026-03-11 AI 日报",
+    "titleEn": "2026-03-11 AI Daily Briefing",
+    "excerptZh": "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerab…。更像是值得今天先看一眼的方向信号。",
+    "excerptEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injectio…. Worth treating as an early signal, not just a headline.",
+    "path": "/blog/ai-daily-2026-03-11",
+    "itemCount": 8,
+    "heroTitleZh": "Improving instruction hierarchy in frontier LLMs",
+    "heroTitleEn": "Improving instruction hierarchy in frontier LLMs",
+    "featuredItems": [
+      {
+        "id": "openai.com-458a72f18aa6",
+        "titleZh": "Improving instruction hierarchy in frontier LLMs",
+        "titleEn": "Improving instruction hierarchy in frontier LLMs",
+        "tag": "AI"
+      },
+      {
+        "id": "openai.com-88306bd64ac1",
+        "titleZh": "New ways to learn math and science in ChatGPT",
+        "titleEn": "New ways to learn math and science in ChatGPT",
+        "tag": "AI"
+      },
+      {
+        "id": "huggingface.co-087b7ac98b37",
+        "titleZh": "How NVIDIA Builds Open Data for AI",
+        "titleEn": "How NVIDIA Builds Open Data for AI",
+        "tag": "Open Source"
+      }
+    ]
+  }
+]

@@ -5,150 +5,176 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'src', 'data');
+const POSTS_DIR = path.join(ROOT, 'posts');
 const CANDIDATES_FILE = path.join(DATA_DIR, 'ai-candidates.json');
 const TECH_NEWS_FILE = path.join(DATA_DIR, 'tech-news.json');
+const DIGESTS_FILE = path.join(DATA_DIR, 'ai-digests.json');
 const REPORT_FILE = path.join(DATA_DIR, 'ai-digest-report.txt');
+const SITE_URL = (process.env.SITE_URL || 'https://guangtaos29545.github.io/thomas-blog').replace(/\/$/, '');
+const TODAY = new Date().toISOString().slice(0, 10);
+const POST_SLUG = `ai-daily-${TODAY}`;
+const POST_FILENAME = `${TODAY}-${POST_SLUG}.md`;
+const POST_PATH = path.join(POSTS_DIR, POST_FILENAME);
+
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
 function loadJson(file, fallback) {
   if (!fs.existsSync(file)) return fallback;
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-const candidatesPayload = loadJson(CANDIDATES_FILE, { items: [] });
-const candidates = candidatesPayload.items || [];
-const existing = loadJson(TECH_NEWS_FILE, []);
-
-const curatedConfig = [
-  {
-    match: /instruction hierarchy/i,
-    titleZh: 'OpenAI 提升前沿 LLM 的指令层级能力',
-    summaryZh: 'OpenAI 发布 IH-Challenge，核心是让模型更清楚地区分高可信与低可信指令，从而增强安全可控性，并提升对 prompt injection 的抵抗力。',
-    summaryEn: 'OpenAI introduced IH-Challenge to improve instruction hierarchy handling, steerability, and resilience against prompt injection.',
-    tag: 'AI', featured: true,
-  },
-  {
-    match: /learn math and science in chatgpt/i,
-    titleZh: 'ChatGPT 上线更适合学习数理的交互式讲解',
-    summaryZh: 'ChatGPT 开始加入更强的可视化与互动式讲解能力，数学和科学学习场景明显更像“交互教具”而不只是问答框。',
-    summaryEn: 'ChatGPT is becoming a more interactive learning tool for math and science, moving beyond plain text Q&A.',
-    tag: 'AI', featured: true,
-  },
-  {
-    match: /open data for ai/i,
-    titleZh: 'NVIDIA 解释如何构建面向 AI 的开放数据',
-    summaryZh: '文章聚焦 NVIDIA 如何建设开放数据体系，重点价值在于训练数据工程、质量治理和生态协作。',
-    summaryEn: 'The post outlines how NVIDIA approaches open data for AI, with practical signals on data engineering and ecosystem design.',
-    tag: 'Open Source', featured: true,
-  },
-  {
-    match: /gemini in google sheets/i,
-    titleZh: 'Gemini 在 Google Sheets 中拿到更强的数据分析能力',
-    summaryZh: 'Google 正在把 Gemini 从“表格助手”往“自然语言驱动的数据分析接口”推进，办公 AI agent 味道越来越浓。',
-    summaryEn: 'Google is pushing Gemini in Sheets toward a stronger natural-language interface for spreadsheet analysis and editing.',
-    tag: 'AI', featured: true,
-  },
-  {
-    match: /execution is the new interface/i,
-    titleZh: 'GitHub：AI 不再只是文本接口，执行才是新界面',
-    summaryZh: 'GitHub 的判断很明确：下一阶段 AI 产品的核心不是聊天，而是进入可执行工作流，把 agent 能力嵌进应用本身。',
-    summaryEn: 'GitHub argues that execution, not chat alone, is becoming the defining AI interface for software workflows.',
-    tag: 'Tools', featured: true,
-  },
-  {
-    match: /16 open-source rl libraries/i,
-    titleZh: '16 个开源 RL 库的经验总结：训练系统开始卷工程效率',
-    summaryZh: '这篇总结的重点不在算法花样，而在异步训练、吞吐与工程权衡，说明训练基础设施仍然是高价值方向。',
-    summaryEn: 'A review of 16 open-source RL libraries highlights async training, throughput, and system tradeoffs over novelty for novelty’s sake.',
-    tag: 'Open Source', featured: false,
-  },
-  {
-    match: /storage buckets/i,
-    titleZh: 'Hugging Face Hub 推出 Storage Buckets',
-    summaryZh: 'Hugging Face 正在继续下探到更底层的基础设施层，说明它的目标不只是模型托管，而是更完整的 AI 开发平台。',
-    summaryEn: 'Storage Buckets suggest Hugging Face is expanding further into foundational infrastructure for AI teams.',
-    tag: 'Infrastructure', featured: false,
-  },
-  {
-    match: /better code/i,
-    titleZh: 'Simon Willison：AI 应该帮助我们写出更好的代码',
-    summaryZh: '如果引入 coding agent 后代码质量下降，问题不该怪在“用了 AI”，而该回到流程、评审和反馈机制本身。',
-    summaryEn: 'Simon Willison argues that if coding agents reduce quality, teams should repair the process instead of normalizing worse code.',
-    tag: 'Tools', featured: false,
-  },
-  {
-    match: /granite 4\.0 1b speech/i,
-    titleZh: 'IBM Granite 4.0 1B Speech 指向更实用的边缘语音模型',
-    summaryZh: '更小、更轻、支持多语言的语音模型正变得更实用，边缘部署和低成本推理会继续升温。',
-    summaryEn: 'IBM’s compact Granite speech model reinforces the trend toward practical multilingual models for edge deployment.',
-    tag: 'AI', featured: false,
-  },
-  {
-    match: /security architecture of github agentic workflows/i,
-    titleZh: 'GitHub 拆解 Agentic Workflows 的安全架构',
-    summaryZh: '隔离、受限输出、审计日志，这些 agent 落地到生产环境时真正关键的安全能力，GitHub 这篇讲得很实。',
-    summaryEn: 'GitHub’s security breakdown focuses on the practical foundations for running agent workflows safely in production.',
-    tag: 'Security', featured: false,
-  },
-  {
-    match: /acquire promptfoo/i,
-    titleZh: 'OpenAI 将收购 Promptfoo，AI 安全工具战略价值上升',
-    summaryZh: '这说明模型安全与评测能力正在进一步前置到开发流程里，AI security tooling 的重要性继续走高。',
-    summaryEn: 'OpenAI’s planned Promptfoo acquisition highlights the increasing strategic importance of AI evaluation and security tooling.',
-    tag: 'Security', featured: false,
-  },
-  {
-    match: /nemotron-terminal/i,
-    titleZh: 'NVIDIA 的 Nemotron-Terminal 押注终端 Agent 的数据工程',
-    summaryZh: '亮点不只是 agent 本身，而是围绕终端 agent 训练数据流水线的方法论，这比单个模型发布更值得盯。',
-    summaryEn: 'NVIDIA’s Nemotron-Terminal stands out for its data-engineering pipeline around terminal agents, not just the model label itself.',
-    tag: 'AI', featured: false,
-  }
-];
-
-function pickSummary(item) {
-  for (const cfg of curatedConfig) {
-    if (cfg.match.test(item.title)) return cfg;
-  }
-  return null;
+function clean(text = '') {
+  return text.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-const curated = [];
-for (const item of candidates) {
-  const cfg = pickSummary(item);
-  if (!cfg) continue;
-  curated.push({
-    id: item.id,
-    titleEn: item.title,
-    titleZh: cfg.titleZh,
-    summaryEn: cfg.summaryEn,
-    summaryZh: cfg.summaryZh,
-    tag: cfg.tag,
-    source: item.sourceDomain,
-    sourceUrl: item.link,
-    publishedAt: item.publishedAt,
-    score: item.score,
-    featured: cfg.featured,
+function trimSentence(text = '', max = 140) {
+  const normalized = clean(text);
+  if (!normalized) return '';
+  if (normalized.length <= max) return normalized;
+  const sliced = normalized.slice(0, max);
+  const lastStop = Math.max(sliced.lastIndexOf('。'), sliced.lastIndexOf('；'), sliced.lastIndexOf('. '), sliced.lastIndexOf('; '), sliced.lastIndexOf('，'));
+  return `${(lastStop > 40 ? sliced.slice(0, lastStop) : sliced).trim()}…`;
+}
+
+function keywordTag(text = '') {
+  const t = text.toLowerCase();
+  if (/(security|safety|guardrail|prompt injection|vulnerability)/i.test(t)) return 'Security';
+  if (/(open source|apache|mit|github|hugging face|hf|model card)/i.test(t)) return 'Open Source';
+  if (/(chip|gpu|infra|inference|deployment|server|cloud|datacenter)/i.test(t)) return 'Infrastructure';
+  if (/(copilot|agent|cli|developer|tool|workflow|coding)/i.test(t)) return 'Tools';
+  if (/(data|dataset|benchmark|evaluation)/i.test(t)) return 'Data';
+  return 'AI';
+}
+
+function summaryZh(item, index) {
+  const base = clean(item.contentSnippet || '');
+  const title = clean(item.title || '');
+  const sourceHint = item.sourceName ? `来源于 ${item.sourceName}，` : '';
+  const sentence = trimSentence(base, 110);
+  const angle = [
+    '更像是值得今天先看一眼的方向信号',
+    '对产品、模型能力或生态节奏都有直接参考价值',
+    '适合作为今天判断 AI 进展节奏的切片',
+    '背后反映的是行业资源和注意力正在重新分配',
+    '比单点新闻更像趋势拐点的局部证据',
+  ][index % 5];
+
+  if (sentence) return `${sourceHint}${sentence}。${angle}。`;
+  return `${sourceHint}${title}。${angle}。`;
+}
+
+function summaryEn(item, index) {
+  const base = trimSentence(item.contentSnippet || item.title || '', 150);
+  const angle = [
+    'Worth treating as an early signal, not just a headline.',
+    'Useful for tracking where product and model momentum is shifting.',
+    'A compact snapshot of today\'s AI execution layer.',
+    'More interesting for the direction it implies than the announcement itself.',
+    'A good proxy for where industry attention is moving next.',
+  ][index % 5];
+  return `${base || item.title}. ${angle}`;
+}
+
+function buildItems(candidates) {
+  return candidates.map((item, index) => {
+    const titleZh = clean(item.title);
+    const titleEn = clean(item.title);
+    const tag = item.categoryHint || keywordTag(`${item.title} ${item.contentSnippet}`);
+    const takeawaysZh = [
+      trimSentence(summaryZh(item, index), 80),
+      trimSentence(`我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。`, 80),
+    ].filter(Boolean);
+
+    return {
+      id: item.id,
+      rank: index + 1,
+      titleZh,
+      titleEn,
+      summaryZh: summaryZh(item, index),
+      summaryEn: summaryEn(item, index),
+      tag,
+      source: item.sourceDomain,
+      sourceName: item.sourceName,
+      sourceUrl: item.link,
+      relatedLinks: [
+        { labelZh: `${item.sourceName || item.sourceDomain} 原文`, labelEn: `${item.sourceName || item.sourceDomain} source`, url: item.link },
+        item.sourceUrl ? { labelZh: 'RSS 源', labelEn: 'RSS feed', url: item.sourceUrl } : null,
+      ].filter(Boolean),
+      publishedAt: item.publishedAt,
+      score: item.score,
+      featured: index < 4,
+      takeawayBulletsZh: takeawaysZh,
+    };
   });
 }
 
-const curatedIds = new Set(curated.map(item => item.id));
-const merged = [...curated, ...existing.filter(item => !curatedIds.has(item.id))].slice(0, 60);
-fs.writeFileSync(TECH_NEWS_FILE, JSON.stringify(merged, null, 2));
+function buildMarkdown(date, items) {
+  const top = items[0];
+  const titleZh = `${date} AI 日报：${top ? top.titleZh : '今日精选'}`;
+  const titleEn = `${date} AI Daily Briefing`;
+  const excerptZh = items.length
+    ? `今天挑了 ${items.length} 条值得先看的 AI 消息，重点包括 ${items.slice(0, 3).map(item => item.titleZh).join('、')}。`
+    : '今天没有筛到足够值得单独成文的 AI 条目。';
+  const excerptEn = items.length
+    ? `A curated AI briefing for ${date}, featuring ${items.slice(0, 3).map(item => item.titleEn).join(', ')}.`
+    : `No strong AI items were selected for ${date}.`;
 
-const lines = [];
-lines.push(`AI 日报（${new Date().toISOString().slice(0, 10)}）`);
-lines.push('');
-if (curated.length === 0) {
-  lines.push('今天没有筛到足够值得推送的新条目，网站保持原样。');
-} else {
-  lines.push('今日重点：');
-  for (const item of curated.slice(0, 8)) {
-    lines.push(`- ${item.titleZh}：${item.summaryZh}`);
-  }
-  lines.push('');
-  lines.push('网站已更新。');
+  const zhBody = items.map(item => `## ${String(item.rank).padStart(2, '0')} · ${item.titleZh}\n\n${item.summaryZh}\n\n**为什么值得看：**\n${item.takeawayBulletsZh.map(line => `- ${line}`).join('\n')}\n\n**相关链接：**\n${item.relatedLinks.map(link => `- [${link.labelZh}](${link.url})`).join('\n')}`).join('\n\n---\n\n');
+  const enBody = items.map(item => `## ${String(item.rank).padStart(2, '0')} · ${item.titleEn}\n\n${item.summaryEn}\n\n**Links**\n${item.relatedLinks.map(link => `- [${link.labelEn}](${link.url})`).join('\n')}`).join('\n\n---\n\n');
+
+  return `---\ntitleZh: "${titleZh.replace(/"/g, '\\"')}"\ntitleEn: "${titleEn.replace(/"/g, '\\"')}"\nexcerptZh: "${excerptZh.replace(/"/g, '\\"')}"\nexcerptEn: "${excerptEn.replace(/"/g, '\\"')}"\ntag: "AI"\ntagEn: "AI"\nreadTime: ${Math.max(6, Math.round(items.length * 2.5))}\ndate: ${date}\n---\n\n<!-- CONTENT_EN -->\n${enBody || 'No briefing today.'}\n\n<!-- CONTENT_ZH -->\n${zhBody || '今天没有筛到足够值得单独成文的 AI 条目。'}\n`;
 }
-fs.writeFileSync(REPORT_FILE, lines.join('\n'));
-console.log(`[digest] curated ${curated.length} items`);
+
+function buildReport(date, digestUrl, items) {
+  if (!items.length) {
+    return `AI 日报已检查完成（${date}），今天没有筛到足够强的新条目，站点暂不更新。`;
+  }
+
+  const lines = [
+    `AI 日报已更新（${date}）`,
+    '',
+    '今天重点：',
+    ...items.slice(0, 4).map((item, index) => `${index + 1}. ${item.titleZh} —— ${trimSentence(item.summaryZh, 58)}`),
+    '',
+    `已生成站内日报页面：<${digestUrl}>`,
+    '这次不是外链聚合页，而是站内可读的日报总览，文内保留了来源链接供继续深挖。',
+  ];
+
+  return lines.join('\n');
+}
+
+ensureDir(DATA_DIR);
+ensureDir(POSTS_DIR);
+
+const candidatesPayload = loadJson(CANDIDATES_FILE, { items: [] });
+const candidates = (candidatesPayload.items || []).slice(0, 8);
+const items = buildItems(candidates);
+const digestUrl = `${SITE_URL}/blog/${POST_SLUG}`;
+
+fs.writeFileSync(TECH_NEWS_FILE, JSON.stringify(items, null, 2));
+
+const digestIndex = loadJson(DIGESTS_FILE, []);
+const todayDigest = {
+  slug: POST_SLUG,
+  date: TODAY,
+  titleZh: `${TODAY} AI 日报`,
+  titleEn: `${TODAY} AI Daily Briefing`,
+  excerptZh: items.length ? items[0].summaryZh : '今天没有筛到足够值得单独成文的 AI 条目。',
+  excerptEn: items.length ? items[0].summaryEn : 'No strong AI items were selected today.',
+  path: `/blog/${POST_SLUG}`,
+  itemCount: items.length,
+  heroTitleZh: items[0]?.titleZh || '',
+  heroTitleEn: items[0]?.titleEn || '',
+  featuredItems: items.slice(0, 3).map(item => ({ id: item.id, titleZh: item.titleZh, titleEn: item.titleEn, tag: item.tag })),
+};
+const mergedDigests = [todayDigest, ...digestIndex.filter(item => item.slug !== POST_SLUG)].sort((a, b) => b.date.localeCompare(a.date));
+fs.writeFileSync(DIGESTS_FILE, JSON.stringify(mergedDigests, null, 2));
+fs.writeFileSync(POST_PATH, buildMarkdown(TODAY, items));
+fs.writeFileSync(REPORT_FILE, buildReport(TODAY, digestUrl, items));
+
 console.log(`[digest] wrote ${TECH_NEWS_FILE}`);
+console.log(`[digest] wrote ${DIGESTS_FILE}`);
+console.log(`[digest] wrote ${POST_PATH}`);
 console.log(`[digest] wrote ${REPORT_FILE}`);

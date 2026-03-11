@@ -1,782 +1,250 @@
 [
   {
     "id": "openai.com-458a72f18aa6",
+    "rank": 1,
+    "titleZh": "Improving instruction hierarchy in frontier LLMs",
     "titleEn": "Improving instruction hierarchy in frontier LLMs",
-    "titleZh": "OpenAI 提升前沿 LLM 的指令层级能力",
-    "summaryEn": "OpenAI introduced IH-Challenge to improve instruction hierarchy handling, steerability, and resilience against prompt injection.",
-    "summaryZh": "OpenAI 发布 IH-Challenge，核心是让模型更清楚地区分高可信与低可信指令，从而增强安全可控性，并提升对 prompt injection 的抵抗力。",
+    "summaryZh": "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerab…。更像是值得今天先看一眼的方向信号。",
+    "summaryEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injectio…. Worth treating as an early signal, not just a headline.",
     "tag": "AI",
     "source": "openai.com",
+    "sourceName": "OpenAI News",
     "sourceUrl": "https://openai.com/index/instruction-hierarchy-challenge",
+    "relatedLinks": [
+      {
+        "labelZh": "OpenAI News 原文",
+        "labelEn": "OpenAI News source",
+        "url": "https://openai.com/index/instruction-hierarchy-challenge"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://openai.com/news/rss.xml"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 111,
-    "featured": true
+    "score": 108,
+    "featured": true,
+    "takeawayBulletsZh": [
+      "来源于 OpenAI News，IH-Challenge trains models to prioritize trusted instructions, i…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "openai.com-88306bd64ac1",
+    "rank": 2,
+    "titleZh": "New ways to learn math and science in ChatGPT",
     "titleEn": "New ways to learn math and science in ChatGPT",
-    "titleZh": "ChatGPT 上线更适合学习数理的交互式讲解",
-    "summaryEn": "ChatGPT is becoming a more interactive learning tool for math and science, moving beyond plain text Q&A.",
-    "summaryZh": "ChatGPT 开始加入更强的可视化与互动式讲解能力，数学和科学学习场景明显更像“交互教具”而不只是问答框。",
+    "summaryZh": "来源于 OpenAI News，ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, va…。对产品、模型能力或生态节奏都有直接参考价值。",
+    "summaryEn": "ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time.. Useful for tracking where product and model momentum is shifting.",
     "tag": "AI",
     "source": "openai.com",
+    "sourceName": "OpenAI News",
     "sourceUrl": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+    "relatedLinks": [
+      {
+        "labelZh": "OpenAI News 原文",
+        "labelEn": "OpenAI News source",
+        "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://openai.com/news/rss.xml"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 110,
-    "featured": true
+    "score": 107,
+    "featured": true,
+    "takeawayBulletsZh": [
+      "来源于 OpenAI News，ChatGPT introduces interactive visual explanations for math and…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "huggingface.co-087b7ac98b37",
+    "rank": 3,
+    "titleZh": "How NVIDIA Builds Open Data for AI",
     "titleEn": "How NVIDIA Builds Open Data for AI",
-    "titleZh": "NVIDIA 解释如何构建面向 AI 的开放数据",
-    "summaryEn": "The post outlines how NVIDIA approaches open data for AI, with practical signals on data engineering and ecosystem design.",
-    "summaryZh": "文章聚焦 NVIDIA 如何建设开放数据体系，重点价值在于训练数据工程、质量治理和生态协作。",
+    "summaryZh": "来源于 Hugging Face Blog，How NVIDIA Builds Open Data for AI。适合作为今天判断 AI 进展节奏的切片。",
+    "summaryEn": "How NVIDIA Builds Open Data for AI. A compact snapshot of today's AI execution layer.",
     "tag": "Open Source",
     "source": "huggingface.co",
+    "sourceName": "Hugging Face Blog",
     "sourceUrl": "https://huggingface.co/blog/nvidia/open-data-for-ai",
+    "relatedLinks": [
+      {
+        "labelZh": "Hugging Face Blog 原文",
+        "labelEn": "Hugging Face Blog source",
+        "url": "https://huggingface.co/blog/nvidia/open-data-for-ai"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://huggingface.co/blog/feed.xml"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 109,
-    "featured": true
+    "score": 106,
+    "featured": true,
+    "takeawayBulletsZh": [
+      "来源于 Hugging Face Blog，How NVIDIA Builds Open Data for AI。适合作为今天判断 AI 进展节奏的切片。",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "blog.google-a015ffb3f8b4",
+    "rank": 4,
+    "titleZh": "Gemini in Google Sheets just achieved state-of-the-art performance.",
     "titleEn": "Gemini in Google Sheets just achieved state-of-the-art performance.",
-    "titleZh": "Gemini 在 Google Sheets 中拿到更强的数据分析能力",
-    "summaryEn": "Google is pushing Gemini in Sheets toward a stronger natural-language interface for spreadsheet analysis and editing.",
-    "summaryZh": "Google 正在把 Gemini 从“表格助手”往“自然语言驱动的数据分析接口”推进，办公 AI agent 味道越来越浓。",
+    "summaryZh": "来源于 Google AI Blog，Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets,…。背后反映的是行业资源和注意力正在重新分配。",
+    "summaryEn": "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analys…. More interesting for the direction it implies than the announcement itself.",
     "tag": "AI",
     "source": "blog.google",
+    "sourceName": "Google AI Blog",
     "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+    "relatedLinks": [
+      {
+        "labelZh": "Google AI Blog 原文",
+        "labelEn": "Google AI Blog source",
+        "url": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://blog.google/technology/ai/rss/"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 106,
-    "featured": true
+    "score": 103,
+    "featured": true,
+    "takeawayBulletsZh": [
+      "来源于 Google AI Blog，Today we announced new beta features for Gemini in Sheets to…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "github.blog-7f0c197269a0",
+    "rank": 5,
+    "titleZh": "The era of “AI as text” is over. Execution is the new interface.",
     "titleEn": "The era of “AI as text” is over. Execution is the new interface.",
-    "titleZh": "GitHub：AI 不再只是文本接口，执行才是新界面",
-    "summaryEn": "GitHub argues that execution, not chat alone, is becoming the defining AI interface for software workflows.",
-    "summaryZh": "GitHub 的判断很明确：下一阶段 AI 产品的核心不是聊天，而是进入可执行工作流，把 agent 能力嵌进应用本身。",
+    "summaryZh": "来源于 GitHub Blog / AI & ML，AI is shifting from prompt-response interactions to programmable execution…。比单点新闻更像趋势拐点的局部证据。",
+    "summaryEn": "AI is shifting from prompt-response interactions to programmable execution…. A good proxy for where industry attention is moving next.",
     "tag": "Tools",
     "source": "github.blog",
+    "sourceName": "GitHub Blog / AI & ML",
     "sourceUrl": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/",
+    "relatedLinks": [
+      {
+        "labelZh": "GitHub Blog / AI & ML 原文",
+        "labelEn": "GitHub Blog / AI & ML source",
+        "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://github.blog/ai-and-ml/feed"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 105,
-    "featured": true
+    "score": 102,
+    "featured": false,
+    "takeawayBulletsZh": [
+      "来源于 GitHub Blog / AI & ML，AI is shifting from prompt-response interactions to pr…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "huggingface.co-cf14fb4125ba",
+    "rank": 6,
+    "titleZh": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
     "titleEn": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
-    "titleZh": "16 个开源 RL 库的经验总结：训练系统开始卷工程效率",
-    "summaryEn": "A review of 16 open-source RL libraries highlights async training, throughput, and system tradeoffs over novelty for novelty’s sake.",
-    "summaryZh": "这篇总结的重点不在算法花样，而在异步训练、吞吐与工程权衡，说明训练基础设施仍然是高价值方向。",
+    "summaryZh": "来源于 Hugging Face Blog，Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries。更像是值得今天先看一眼的方向信号。",
+    "summaryEn": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries. Worth treating as an early signal, not just a headline.",
     "tag": "Open Source",
     "source": "huggingface.co",
+    "sourceName": "Hugging Face Blog",
     "sourceUrl": "https://huggingface.co/blog/async-rl-training-landscape",
+    "relatedLinks": [
+      {
+        "labelZh": "Hugging Face Blog 原文",
+        "labelEn": "Hugging Face Blog source",
+        "url": "https://huggingface.co/blog/async-rl-training-landscape"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://huggingface.co/blog/feed.xml"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 96,
-    "featured": false
+    "score": 93,
+    "featured": false,
+    "takeawayBulletsZh": [
+      "来源于 Hugging Face Blog，Keep the Tokens Flowing: Lessons from 16 Open-Source RL Li…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
     "id": "huggingface.co-2ae52e2df01b",
+    "rank": 7,
+    "titleZh": "Introducing Storage Buckets on the Hugging Face Hub",
     "titleEn": "Introducing Storage Buckets on the Hugging Face Hub",
-    "titleZh": "Hugging Face Hub 推出 Storage Buckets",
-    "summaryEn": "Storage Buckets suggest Hugging Face is expanding further into foundational infrastructure for AI teams.",
-    "summaryZh": "Hugging Face 正在继续下探到更底层的基础设施层，说明它的目标不只是模型托管，而是更完整的 AI 开发平台。",
-    "tag": "Infrastructure",
+    "summaryZh": "来源于 Hugging Face Blog，Introducing Storage Buckets on the Hugging Face Hub。对产品、模型能力或生态节奏都有直接参考价值。",
+    "summaryEn": "Introducing Storage Buckets on the Hugging Face Hub. Useful for tracking where product and model momentum is shifting.",
+    "tag": "Open Source",
     "source": "huggingface.co",
+    "sourceName": "Hugging Face Blog",
     "sourceUrl": "https://huggingface.co/blog/storage-buckets",
+    "relatedLinks": [
+      {
+        "labelZh": "Hugging Face Blog 原文",
+        "labelEn": "Hugging Face Blog source",
+        "url": "https://huggingface.co/blog/storage-buckets"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://huggingface.co/blog/feed.xml"
+      }
+    ],
     "publishedAt": "2026-03-10",
-    "score": 95,
-    "featured": false
+    "score": 92,
+    "featured": false,
+    "takeawayBulletsZh": [
+      "来源于 Hugging Face Blog，Introducing Storage Buckets on the Hugging Face Hub…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   },
   {
-    "id": "simonwillison.net-e08fba5cae09",
-    "titleEn": "AI should help us produce better code",
-    "titleZh": "Simon Willison：AI 应该帮助我们写出更好的代码",
-    "summaryEn": "Simon Willison argues that if coding agents reduce quality, teams should repair the process instead of normalizing worse code.",
-    "summaryZh": "如果引入 coding agent 后代码质量下降，问题不该怪在“用了 AI”，而该回到流程、评审和反馈机制本身。",
-    "tag": "Tools",
-    "source": "simonwillison.net",
-    "sourceUrl": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
-    "publishedAt": "2026-03-10",
-    "score": 93,
-    "featured": false
-  },
-  {
-    "id": "huggingface.co-ec92a6e121b6",
-    "titleEn": "Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge",
-    "titleZh": "IBM Granite 4.0 1B Speech 指向更实用的边缘语音模型",
-    "summaryEn": "IBM’s compact Granite speech model reinforces the trend toward practical multilingual models for edge deployment.",
-    "summaryZh": "更小、更轻、支持多语言的语音模型正变得更实用，边缘部署和低成本推理会继续升温。",
-    "tag": "AI",
-    "source": "huggingface.co",
-    "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-speech",
-    "publishedAt": "2026-03-09",
-    "score": 91,
-    "featured": false
-  },
-  {
-    "id": "github.blog-a4ec18135cb6",
-    "titleEn": "Under the hood: Security architecture of GitHub Agentic Workflows",
-    "titleZh": "GitHub 拆解 Agentic Workflows 的安全架构",
-    "summaryEn": "GitHub’s security breakdown focuses on the practical foundations for running agent workflows safely in production.",
-    "summaryZh": "隔离、受限输出、审计日志，这些 agent 落地到生产环境时真正关键的安全能力，GitHub 这篇讲得很实。",
-    "tag": "Security",
-    "source": "github.blog",
-    "sourceUrl": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/",
-    "publishedAt": "2026-03-09",
-    "score": 90,
-    "featured": false
-  },
-  {
-    "id": "openai.com-bdffd4a95bf1",
-    "titleEn": "OpenAI to acquire Promptfoo",
-    "titleZh": "OpenAI 将收购 Promptfoo，AI 安全工具战略价值上升",
-    "summaryEn": "OpenAI’s planned Promptfoo acquisition highlights the increasing strategic importance of AI evaluation and security tooling.",
-    "summaryZh": "这说明模型安全与评测能力正在进一步前置到开发流程里，AI security tooling 的重要性继续走高。",
-    "tag": "Security",
-    "source": "openai.com",
-    "sourceUrl": "https://openai.com/index/openai-to-acquire-promptfoo",
-    "publishedAt": "2026-03-09",
-    "score": 85,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-ff6d869256bc",
-    "titleEn": "NVIDIA AI Releases Nemotron-Terminal: A Systematic Data Engineering Pipeline for Scaling LLM Terminal Agents",
-    "titleZh": "NVIDIA 的 Nemotron-Terminal 押注终端 Agent 的数据工程",
-    "summaryEn": "NVIDIA’s Nemotron-Terminal stands out for its data-engineering pipeline around terminal agents, not just the model label itself.",
-    "summaryZh": "亮点不只是 agent 本身，而是围绕终端 agent 训练数据流水线的方法论，这比单个模型发布更值得盯。",
+    "id": "marktechpost.com-47f4cdba0650",
+    "rank": 8,
+    "titleZh": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
+    "titleEn": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
+    "summaryZh": "来源于 MarkTechPost，Google expanded its Gemini model family with the release of Gemini Embedding 2…。适合作为今天判断 AI 进展节奏的切片。",
+    "summaryEn": "Google expanded its Gemini model family with the release of Gemini Embedding 2…. A compact snapshot of today's AI execution layer.",
     "tag": "AI",
     "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/10/nvidia-ai-releases-nemotron-terminal-a-systematic-data-engineering-pipeline-for-scaling-llm-terminal-agents/",
-    "publishedAt": "2026-03-10",
-    "score": 83,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-3218344e2a86",
-    "titleEn": "How to Build a Risk-Aware AI Agent with Internal Critic, Self-Consistency Reasoning, and Uncertainty Estimation for Reliable Decision-Making",
-    "titleZh": "How to Build a Risk-Aware AI Agent with Internal Critic, Self-Consistency Reasoning, and Uncertainty Estimation for Reliable Decision-Making",
-    "summaryEn": "In this tutorial, we build an advanced agent system that goes beyond simple response generation by integrating an internal critic and uncertainty estimation framework. We simulate multi-sample inference, evaluate candidate responses across accuracy, coherence, and safety dimensions, and quantify pre…",
-    "summaryZh": "In this tutorial, we build an advanced agent system that goes beyond simple response generation by integrating an internal critic and uncertainty estimation framework. We simulate multi-sample inference, evaluate candidate responses across accuracy, coherence, and safety dimensions, and quantify pre…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/09/how-to-build-a-risk-aware-ai-agent-with-internal-critic-self-consistency-reasoning-and-uncertainty-estimation-for-reliable-decision-making/",
-    "publishedAt": "2026-03-10",
-    "score": 76,
-    "featured": true
-  },
-  {
-    "id": "marktechpost.com-a6e923cc01a3",
-    "titleEn": "ByteDance Releases DeerFlow 2.0: An Open-Source SuperAgent Harness that Orchestrates Sub-Agents, Memory, and Sandboxes to do Complex Tasks",
-    "titleZh": "ByteDance Releases DeerFlow 2.0: An Open-Source SuperAgent Harness that Orchestrates Sub-Agents, Memory, and Sandboxes to do Complex Tasks",
-    "summaryEn": "The era of the ‘Copilot’ is officially getting an upgrade. While the tech world has spent the last two years getting comfortable with AI that suggests code or drafts emails, ByteDance team is moving the goalposts. They released DeerFlow 2.0, a newly open-sourced ‘SuperAgent’ framework that doesn’t j…",
-    "summaryZh": "The era of the ‘Copilot’ is officially getting an upgrade. While the tech world has spent the last two years getting comfortable with AI that suggests code or drafts emails, ByteDance team is moving the goalposts. They released DeerFlow 2.0, a newly open-sourced ‘SuperAgent’ framework that doesn’t j…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/09/bytedance-releases-deerflow-2-0-an-open-source-superagent-harness-that-orchestrates-sub-agents-memory-and-sandboxes-to-do-complex-tasks/",
-    "publishedAt": "2026-03-10",
-    "score": 76,
-    "featured": true
-  },
-  {
-    "id": "marktechpost.com-51aaea51420a",
-    "titleEn": "Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Gives Your Coding Agent the Up-to-Date API Documentation It Needs",
-    "titleZh": "Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Gives Your Coding Agent the Up-to-Date API Documentation It Needs",
-    "summaryEn": "In the fast-moving world of agentic workflows, the most powerful AI model is still only as good as its documentation. Today, Andrew Ng and his team at DeepLearning.AI officially launched Context Hub, an open-source tool designed to bridge the gap between an agent’s static training data and the rapid…",
-    "summaryZh": "In the fast-moving world of agentic workflows, the most powerful AI model is still only as good as its documentation. Today, Andrew Ng and his team at DeepLearning.AI officially launched Context Hub, an open-source tool designed to bridge the gap between an agent’s static training data and the rapid…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/09/andrew-ngs-team-releases-context-hub-an-open-source-tool-that-gives-your-coding-agent-the-up-to-date-api-documentation-it-needs/",
-    "publishedAt": "2026-03-09",
-    "score": 67,
-    "featured": true
-  },
-  {
-    "id": "technologyreview.com-e30b7ac10c08",
-    "titleEn": "How Pokémon Go is giving delivery robots an inch-perfect view of the world",
-    "titleZh": "How Pokémon Go is giving delivery robots an inch-perfect view of the world",
-    "summaryEn": "Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by the Google spinout Niantic, the AR twist on the juggernaut Pokémon franchise fast became a global phenomenon. From Chicago to Oslo to Enoshima, players hit the streets in the urgent hope of catching a Jigglypuff or a Squ…",
-    "summaryZh": "Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by the Google spinout Niantic, the AR twist on the juggernaut Pokémon franchise fast became a global phenomenon. From Chicago to Oslo to Enoshima, players hit the streets in the urgent hope of catching a Jigglypuff or a Squ…",
-    "tag": "Tech",
-    "source": "technologyreview.com",
-    "sourceUrl": "https://www.technologyreview.com/2026/03/10/1134099/how-pokemon-go-is-helping-robots-deliver-pizza-on-time/",
-    "publishedAt": "2026-03-10",
-    "score": 83,
-    "featured": false
-  },
-  {
-    "id": "machinelearningmastery.com-dec8e0983abb",
-    "titleEn": "From Text to Tables: Feature Engineering with LLMs for Tabular Data",
-    "titleZh": "From Text to Tables: Feature Engineering with LLMs for Tabular Data",
-    "summaryEn": "While large language models (LLMs) are typically used for conversational purposes in use cases that revolve around natural language interactions, they can also assist with tasks like feature engineering on complex datasets.",
-    "summaryZh": "While large language models (LLMs) are typically used for conversational purposes in use cases that revolve around natural language interactions, they can also assist with tasks like feature engineering on complex datasets.",
-    "tag": "AI",
-    "source": "machinelearningmastery.com",
-    "sourceUrl": "https://machinelearningmastery.com/from-text-to-tables-feature-engineering-with-llms-for-tabular-data/",
-    "publishedAt": "2026-03-10",
-    "score": 74,
-    "featured": false
-  },
-  {
-    "id": "machinelearningmastery.com-8f714f97bfcc",
-    "titleEn": "Setting Up a Google Colab AI-Assisted Coding Environment That Actually Works",
-    "titleZh": "Setting Up a Google Colab AI-Assisted Coding Environment That Actually Works",
-    "summaryEn": "This article focuses on Google Colab , an increasingly popular, free, and accessible, cloud-based Python environment that is well-suited for prototyping data analysis workflows and experimental code before moving to production systems.",
-    "summaryZh": "This article focuses on Google Colab , an increasingly popular, free, and accessible, cloud-based Python environment that is well-suited for prototyping data analysis workflows and experimental code before moving to production systems.",
-    "tag": "AI",
-    "source": "machinelearningmastery.com",
-    "sourceUrl": "https://machinelearningmastery.com/setting-up-a-google-colab-ai-assisted-coding-environment-that-actually-works/",
-    "publishedAt": "2026-03-10",
-    "score": 73,
-    "featured": false
-  },
-  {
-    "id": "simonwillison.net-cbd3a0c193e5",
-    "titleEn": "Production query plans without production data",
-    "titleZh": "Production query plans without production data",
-    "summaryEn": "Production query plans without production data Radim Marek describes the new pg_restore_relation_stats() and pg_restore_attribute_stats() functions that were introduced in PostgreSQL 18 in September 2025. The PostgreSQL query planner makes use of internal statistics to help it decide how to best exe…",
-    "summaryZh": "Production query plans without production data Radim Marek describes the new pg_restore_relation_stats() and pg_restore_attribute_stats() functions that were introduced in PostgreSQL 18 in September 2025. The PostgreSQL query planner makes use of internal statistics to help it decide how to best exe…",
-    "tag": "Tools",
-    "source": "simonwillison.net",
-    "sourceUrl": "https://simonwillison.net/2026/Mar/9/production-query-plans-without-production-data/#atom-everything",
-    "publishedAt": "2026-03-09",
-    "score": 69,
-    "featured": false
-  },
-  {
-    "id": "simonwillison.net-1a132378f0c9",
-    "titleEn": "Perhaps not Boring Technology after all",
-    "titleZh": "Perhaps not Boring Technology after all",
-    "summaryEn": "A recurring concern I've seen regarding LLMs for programming is that they will push our technology choices towards the tools that are best represented in their training data, making it harder for new, better tools to break through the noise. This was certainly the case a couple of years ago, when as…",
-    "summaryZh": "A recurring concern I've seen regarding LLMs for programming is that they will push our technology choices towards the tools that are best represented in their training data, making it harder for new, better tools to break through the noise. This was certainly the case a couple of years ago, when as…",
-    "tag": "Tools",
-    "source": "simonwillison.net",
-    "sourceUrl": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
-    "publishedAt": "2026-03-09",
-    "score": 68,
-    "featured": false
-  },
-  {
-    "id": "simonwillison.net-bc5e8056d1bc",
-    "titleEn": "Quoting Joseph Weizenbaum",
-    "titleZh": "Quoting Joseph Weizenbaum",
-    "summaryEn": "What I had not realized is that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people. &mdash; Joseph Weizenbaum , creator of ELIZA, in 1976 ( via ) Tags: ai-ethics , ai , computer-history , internet-archive",
-    "summaryZh": "What I had not realized is that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people. &mdash; Joseph Weizenbaum , creator of ELIZA, in 1976 ( via ) Tags: ai-ethics , ai , computer-history , internet-archive",
-    "tag": "Tools",
-    "source": "simonwillison.net",
-    "sourceUrl": "https://simonwillison.net/2026/Mar/8/joseph-weizenbaum/#atom-everything",
-    "publishedAt": "2026-03-08",
-    "score": 66,
-    "featured": false
-  },
-  {
-    "id": "technologyreview.com-6b4dbc8ecd7d",
-    "titleEn": "How AI is turning the Iran conflict into theater",
-    "titleZh": "How AI is turning the Iran conflict into theater",
-    "summaryEn": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. “Anyone wanna host a get together in SF and pull this up on a 100 inch TV?” The author of that post on X was referring to an online intelligence dashboard followi…",
-    "summaryZh": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. “Anyone wanna host a get together in SF and pull this up on a 100 inch TV?” The author of that post on X was referring to an online intelligence dashboard followi…",
-    "tag": "Tech",
-    "source": "technologyreview.com",
-    "sourceUrl": "https://www.technologyreview.com/2026/03/09/1134063/how-ai-is-turning-the-iran-conflict-into-theater/",
-    "publishedAt": "2026-03-09",
-    "score": 62,
-    "featured": false
-  },
-  {
-    "id": "arxiv.org-9b0083077ba2",
-    "titleEn": "Scaling Strategy, Not Compute: A Stand-Alone, Open-Source StarCraft II Benchmark for Accessible Reinforcement Learning Research",
-    "titleZh": "Scaling Strategy, Not Compute: A Stand-Alone, Open-Source StarCraft II Benchmark for Accessible Reinforcement Learning Research",
-    "summaryEn": "arXiv:2603.06608v1 Announce Type: new Abstract: The research community lacks a middle ground between StarCraft IIs full game and its mini-games. The full-games sprawling state-action space renders reward signals sparse and noisy, but in mini-games simple agents saturate performance. This complexity …",
-    "summaryZh": "arXiv:2603.06608v1 Announce Type: new Abstract: The research community lacks a middle ground between StarCraft IIs full game and its mini-games. The full-games sprawling state-action space renders reward signals sparse and noisy, but in mini-games simple agents saturate performance. This complexity …",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.06608",
-    "publishedAt": "2026-03-10",
-    "score": 60,
-    "featured": false
-  },
-  {
-    "id": "arxiv.org-7c204f5c9b50",
-    "titleEn": "Autonomous AI Agents for Option Hedging: Enhancing Financial Stability through Shortfall Aware Reinforcement Learning",
-    "titleZh": "Autonomous AI Agents for Option Hedging: Enhancing Financial Stability through Shortfall Aware Reinforcement Learning",
-    "summaryEn": "arXiv:2603.06587v1 Announce Type: new Abstract: The deployment of autonomous AI agents in derivatives markets has widened a practical gap between static model calibration and realized hedging outcomes. We introduce two reinforcement learning frameworks, a novel Replication Learning of Option Pricing…",
-    "summaryZh": "arXiv:2603.06587v1 Announce Type: new Abstract: The deployment of autonomous AI agents in derivatives markets has widened a practical gap between static model calibration and realized hedging outcomes. We introduce two reinforcement learning frameworks, a novel Replication Learning of Option Pricing…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.06587",
-    "publishedAt": "2026-03-10",
-    "score": 59,
-    "featured": false
-  },
-  {
-    "id": "machinelearningmastery.com-5646030ed518",
-    "titleEn": "The 6 Best AI Agent Memory Frameworks You Should Try in 2026",
-    "titleZh": "The 6 Best AI Agent Memory Frameworks You Should Try in 2026",
-    "summaryEn": "Memory helps <a href=\"https://www.",
-    "summaryZh": "Memory helps <a href=\"https://www.",
-    "tag": "AI",
-    "source": "machinelearningmastery.com",
-    "sourceUrl": "https://machinelearningmastery.com/the-6-best-ai-agent-memory-frameworks-you-should-try-in-2026/",
-    "publishedAt": "2026-03-09",
-    "score": 55,
-    "featured": false
-  },
-  {
-    "id": "arxiv.org-db50bb56acc9",
-    "titleEn": "Hierarchical Latent Structures in Data Generation Process Unify Mechanistic Phenomena across Scale",
-    "titleZh": "Hierarchical Latent Structures in Data Generation Process Unify Mechanistic Phenomena across Scale",
-    "summaryEn": "arXiv:2603.06592v1 Announce Type: new Abstract: Contemporary studies have uncovered many puzzling phenomena in the neural information processing of Transformer-based language models. Building a robust, unified understanding of these phenomena requires disassembling a model within the scope of its tr…",
-    "summaryZh": "arXiv:2603.06592v1 Announce Type: new Abstract: Contemporary studies have uncovered many puzzling phenomena in the neural information processing of Transformer-based language models. Building a robust, unified understanding of these phenomena requires disassembling a model within the scope of its tr…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.06592",
-    "publishedAt": "2026-03-10",
-    "score": 50,
-    "featured": false
-  },
-  {
-    "id": "arxiv.org-7bca3a0903a0",
-    "titleEn": "ARC-AGI-2 Technical Report",
-    "titleZh": "ARC-AGI-2 Technical Report",
-    "summaryEn": "arXiv:2603.06590v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus (ARC) is designed to assess generalization beyond pattern matching, requiring models to infer symbolic rules from very few examples. In this work, we present a transformer-based system that advances ARC performance …",
-    "summaryZh": "arXiv:2603.06590v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus (ARC) is designed to assess generalization beyond pattern matching, requiring models to infer symbolic rules from very few examples. In this work, we present a transformer-based system that advances ARC performance …",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.06590",
-    "publishedAt": "2026-03-10",
-    "score": 44,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-1c3088a7e183",
-    "titleEn": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-    "titleZh": "The ‘Bayesian’ Upgrade: Why Google AI’s New Teaching Method is the Key to LLM Reasoning",
-    "summaryEn": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs based on new evidence, they are surprisingly stubborn. A team of researchers from Google argue that the current crop of AI agents falls far short of ‘probabilistic reasoning’—the a…",
-    "summaryZh": "Large Language Models (LLMs) are the world’s best mimics, but when it comes to the cold, hard logic of updating beliefs based on new evidence, they are surprisingly stubborn. A team of researchers from Google argue that the current crop of AI agents falls far short of ‘probabilistic reasoning’—the a…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/09/the-bayesian-upgrade-why-google-ais-new-teaching-method-is-the-key-to-llm-reasoning/",
-    "publishedAt": "2026-03-09",
-    "score": 83,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-7a0e8c6cf910",
-    "titleEn": "Agentic LLM Planning via Step-Wise PDDL Simulation: An Empirical Characterisation",
-    "titleZh": "Agentic LLM Planning via Step-Wise PDDL Simulation: An Empirical Characterisation",
-    "summaryEn": "arXiv:2603.06064v1 Announce Type: new Abstract: Task planning, the problem of sequencing actions to reach a goal from an initial state, is a core capability requirement for autonomous robotic systems. Whether large language models (LLMs) can serve as viable planners alongside classical symbolic meth…",
-    "summaryZh": "arXiv:2603.06064v1 Announce Type: new Abstract: Task planning, the problem of sequencing actions to reach a goal from an initial state, is a core capability requirement for autonomous robotic systems. Whether large language models (LLMs) can serve as viable planners alongside classical symbolic meth…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.06064",
-    "publishedAt": "2026-03-09",
-    "score": 79,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-4b6c24eac219",
-    "titleEn": "The World Won't Stay Still: Programmable Evolution for Agent Benchmarks",
-    "titleZh": "The World Won't Stay Still: Programmable Evolution for Agent Benchmarks",
-    "summaryEn": "arXiv:2603.05910v1 Announce Type: new Abstract: LLM-powered agents fulfill user requests by interacting with environments, querying data, and invoking tools in a multi-turn process. Yet, most existing benchmarks assume static environments with fixed schemas and toolsets, neglecting the evolutionary …",
-    "summaryZh": "arXiv:2603.05910v1 Announce Type: new Abstract: LLM-powered agents fulfill user requests by interacting with environments, querying data, and invoking tools in a multi-turn process. Yet, most existing benchmarks assume static environments with fixed schemas and toolsets, neglecting the evolutionary …",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05910",
-    "publishedAt": "2026-03-09",
-    "score": 78,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-19004bf5246c",
-    "titleEn": "DeepFact: Co-Evolving Benchmarks and Agents for Deep Research Factuality",
-    "titleZh": "DeepFact: Co-Evolving Benchmarks and Agents for Deep Research Factuality",
-    "summaryEn": "arXiv:2603.05912v1 Announce Type: new Abstract: Search-augmented LLM agents can produce deep research reports (DRRs), but verifying claim-level factuality remains challenging. Existing fact-checkers are primarily designed for general-domain, factoid-style atomic claims, and there is no benchmark to …",
-    "summaryZh": "arXiv:2603.05912v1 Announce Type: new Abstract: Search-augmented LLM agents can produce deep research reports (DRRs), but verifying claim-level factuality remains challenging. Existing fact-checkers are primarily designed for general-domain, factoid-style atomic claims, and there is no benchmark to …",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05912",
-    "publishedAt": "2026-03-09",
-    "score": 78,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-c8313e5b3d7c",
-    "titleEn": "An Interactive Multi-Agent System for Evaluation of New Product Concepts",
-    "titleZh": "An Interactive Multi-Agent System for Evaluation of New Product Concepts",
-    "summaryEn": "arXiv:2603.05980v1 Announce Type: new Abstract: Product concept evaluation is a critical stage that determines strategic resource allocation and project success in enterprises. However, traditional expert-led approaches face limitations such as subjective bias and high time and cost requirements. To…",
-    "summaryZh": "arXiv:2603.05980v1 Announce Type: new Abstract: Product concept evaluation is a critical stage that determines strategic resource allocation and project success in enterprises. However, traditional expert-led approaches face limitations such as subjective bias and high time and cost requirements. To…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05980",
-    "publishedAt": "2026-03-09",
-    "score": 78,
-    "featured": false
-  },
-  {
-    "id": "therundown.ai-1f2e863db745",
-    "titleEn": "OpenAI's robotics lead exits over Pentagon deal",
-    "titleZh": "OpenAI's robotics lead exits over Pentagon deal",
-    "summaryEn": "PLUS: How to build an AI case study generator",
-    "summaryZh": "PLUS: How to build an AI case study generator",
-    "tag": "AI",
-    "source": "therundown.ai",
-    "sourceUrl": "https://www.therundown.ai/p/openai-robotics-lead-exits-over-pentagon-deal",
-    "publishedAt": "2026-03-09",
-    "score": 74,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-159fd8a3eebc",
-    "titleEn": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
-    "titleZh": "How to Build Progress Monitoring Using Advanced tqdm for Async, Parallel, Pandas, Logging, and High-Performance Workflows",
-    "summaryEn": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into modern Python workflows. We begin with nested progress bars and manual progress control, then move into practical scenarios such as streaming downloads, pandas data processing, parallel…",
-    "summaryZh": "In this tutorial, we explore tqdm in depth and demonstrate how we build powerful, real-time progress tracking into modern Python workflows. We begin with nested progress bars and manual progress control, then move into practical scenarios such as streaming downloads, pandas data processing, parallel…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/07/how-to-build-progress-monitoring-using-advanced-tqdm-for-async-parallel-pandas-logging-and-high-performance-workflows/",
-    "publishedAt": "2026-03-08",
-    "score": 64,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-f68e053c6ee8",
-    "titleEn": "Yann LeCun’s New AI Paper Argues AGI Is Misdefined and Introduces Superhuman Adaptable Intelligence (SAI) Instead",
-    "titleZh": "Yann LeCun’s New AI Paper Argues AGI Is Misdefined and Introduces Superhuman Adaptable Intelligence (SAI) Instead",
-    "summaryEn": "What if the AI industry is optimizing for a goal that cannot be clearly defined or reliably measured? That is the central argument of a new paper by Yann LeCun, and his team, which claims that Artificial General Intelligence has become an overloaded term used in inconsistent ways across academia and…",
-    "summaryZh": "What if the AI industry is optimizing for a goal that cannot be clearly defined or reliably measured? That is the central argument of a new paper by Yann LeCun, and his team, which claims that Artificial General Intelligence has become an overloaded term used in inconsistent ways across academia and…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/07/yann-lecuns-new-ai-paper-argues-agi-is-misdefined-and-introduces-superhuman-adaptable-intelligence-sai-instead/",
-    "publishedAt": "2026-03-08",
-    "score": 63,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-646e87de2871",
-    "titleEn": "Google Launches TensorFlow 2.21 And LiteRT: Faster GPU Performance, New NPU Acceleration, And Seamless PyTorch Edge Deployment Upgrades",
-    "titleZh": "Google Launches TensorFlow 2.21 And LiteRT: Faster GPU Performance, New NPU Acceleration, And Seamless PyTorch Edge Deployment Upgrades",
-    "summaryEn": "Google has officially released TensorFlow 2.21. The most significant update in this release is the graduation of LiteRT from its preview stage to a fully production-ready stack. Moving forward, LiteRT serves as the universal on-device inference framework, officially replacing TensorFlow Lite (TFLite…",
-    "summaryZh": "Google has officially released TensorFlow 2.21. The most significant update in this release is the graduation of LiteRT from its preview stage to a fully production-ready stack. Moving forward, LiteRT serves as the universal on-device inference framework, officially replacing TensorFlow Lite (TFLite…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/06/google-launches-tensorflow-2-21-and-litert-faster-gpu-performance-new-npu-acceleration-and-seamless-pytorch-edge-deployment-upgrades/",
-    "publishedAt": "2026-03-07",
-    "score": 60,
-    "featured": false
-  },
-  {
-    "id": "kdnuggets.com-595c43f4b497",
-    "titleEn": "5 Powerful Python Decorators to Optimize LLM Applications",
-    "titleZh": "5 Powerful Python Decorators to Optimize LLM Applications",
-    "summaryEn": "Learn these five Python decorators based on diverse libraries, that take particular significance when used in the context of LLM-based applications.",
-    "summaryZh": "Learn these five Python decorators based on diverse libraries, that take particular significance when used in the context of LLM-based applications.",
-    "tag": "Data",
-    "source": "kdnuggets.com",
-    "sourceUrl": "https://www.kdnuggets.com/5-powerful-python-decorators-to-optimize-llm-applications",
-    "publishedAt": "2026-03-06",
-    "score": 47,
-    "featured": false
-  },
-  {
-    "id": "technologyreview.com-68fb4ebd0d2f",
-    "titleEn": "Is the Pentagon allowed to surveil Americans with AI?",
-    "titleZh": "Is the Pentagon allowed to surveil Americans with AI?",
-    "summaryEn": "The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and still unanswered question: Does the law actually allow the US government to conduct mass surveillance on Americans? Surprisingly, the answer is not straightforward. More than a decade after E…",
-    "summaryZh": "The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and still unanswered question: Does the law actually allow the US government to conduct mass surveillance on Americans? Surprisingly, the answer is not straightforward. More than a decade after E…",
-    "tag": "Tech",
-    "source": "technologyreview.com",
-    "sourceUrl": "https://www.technologyreview.com/2026/03/06/1134012/is-the-pentagon-allowed-to-surveil-americans-with-ai/",
-    "publishedAt": "2026-03-06",
-    "score": 59,
-    "featured": true
-  },
-  {
-    "id": "therundown.ai-7223eda8a81b",
-    "titleEn": "AI will make engineering more human, not less",
-    "titleZh": "AI will make engineering more human, not less",
-    "summaryEn": "What changes, what breaks, and what still belongs to humans the modern age of development",
-    "summaryZh": "What changes, what breaks, and what still belongs to humans the modern age of development",
-    "tag": "AI",
-    "source": "therundown.ai",
-    "sourceUrl": "https://www.therundown.ai/p/ai-will-make-engineering-more-human-not-less",
-    "publishedAt": "2026-03-08",
-    "score": 59,
-    "featured": true
-  },
-  {
-    "id": "technologyreview.com-623e816ac3bd",
-    "titleEn": "Online harassment is entering its AI era",
-    "titleZh": "Online harassment is entering its AI era",
-    "summaryEn": "Scott Shambaugh didn’t think twice when he denied an AI agent’s request to contribute to matplotlib, a software library that he helps manage. Like many open-source projects, matplotlib has been overwhelmed by a glut of AI code contributions, and so Shambaugh and his fellow maintainers have institute…",
-    "summaryZh": "Scott Shambaugh didn’t think twice when he denied an AI agent’s request to contribute to matplotlib, a software library that he helps manage. Like many open-source projects, matplotlib has been overwhelmed by a glut of AI code contributions, and so Shambaugh and his fellow maintainers have institute…",
-    "tag": "Tech",
-    "source": "technologyreview.com",
-    "sourceUrl": "https://www.technologyreview.com/2026/03/05/1133962/online-harassment-is-entering-its-ai-era/",
-    "publishedAt": "2026-03-05",
-    "score": 58,
-    "featured": true
-  },
-  {
-    "id": "technologyreview.com-63042c285ed9",
-    "titleEn": "Bridging the operational AI gap",
-    "titleZh": "Bridging the operational AI gap",
-    "summaryEn": "The transformational potential of AI is already well established. Enterprise use cases are building momentum and organizations are transitioning from pilot projects to AI in production. Companies are no longer just talking about AI; they are redirecting budgets and resources to make it happen. Many …",
-    "summaryZh": "The transformational potential of AI is already well established. Enterprise use cases are building momentum and organizations are transitioning from pilot projects to AI in production. Companies are no longer just talking about AI; they are redirecting budgets and resources to make it happen. Many …",
-    "tag": "Tech",
-    "source": "technologyreview.com",
-    "sourceUrl": "https://www.technologyreview.com/2026/03/04/1133642/bridging-the-operational-ai-gap/",
-    "publishedAt": "2026-03-04",
-    "score": 57,
-    "featured": true
-  },
-  {
-    "id": "blog.bytebytego.com-e70929a81cbc",
-    "titleEn": "What’s Next in AI: Five Trends to Watch in 2026",
-    "titleZh": "What’s Next in AI: Five Trends to Watch in 2026",
-    "summaryEn": "This article covers five key trends that will likely shape how teams build with AI this year.",
-    "summaryZh": "This article covers five key trends that will likely shape how teams build with AI this year.",
-    "tag": "Infrastructure",
-    "source": "blog.bytebytego.com",
-    "sourceUrl": "https://blog.bytebytego.com/p/whats-next-in-ai-five-trends-to-watch",
-    "publishedAt": "2026-03-04",
-    "score": 52,
-    "featured": false
-  },
-  {
-    "id": "blog.bytebytego.com-6444d89c9100",
-    "titleEn": "How to Build High Throughput Systems",
-    "titleZh": "How to Build High Throughput Systems",
-    "summaryEn": "In this article, we will go through the fundamental concepts and practical strategies for building systems that can handle high volumes of work without breaking down under pressure.",
-    "summaryZh": "In this article, we will go through the fundamental concepts and practical strategies for building systems that can handle high volumes of work without breaking down under pressure.",
-    "tag": "Infrastructure",
-    "source": "blog.bytebytego.com",
-    "sourceUrl": "https://blog.bytebytego.com/p/how-to-build-high-throughput-systems",
-    "publishedAt": "2026-03-05",
-    "score": 51,
-    "featured": false
-  },
-  {
-    "id": "blog.bytebytego.com-c7c4cba0627e",
-    "titleEn": "EP205: CPU vs GPU vs TPU",
-    "titleZh": "EP205: CPU vs GPU vs TPU",
-    "summaryEn": "Why does the same code run fast on a GPU, slow on a CPU, and leave both behind on a TPU? The answer is architecture.",
-    "summaryZh": "Why does the same code run fast on a GPU, slow on a CPU, and leave both behind on a TPU? The answer is architecture.",
-    "tag": "Infrastructure",
-    "source": "blog.bytebytego.com",
-    "sourceUrl": "https://blog.bytebytego.com/p/ep205-cpu-vs-gpu-vs-tpu",
-    "publishedAt": "2026-03-07",
-    "score": 50,
-    "featured": false
-  },
-  {
-    "id": "kdnuggets.com-aacf016012da",
-    "titleEn": "Pandas vs. Polars: A Complete Comparison of Syntax, Speed, and Memory",
-    "titleZh": "Pandas vs. Polars: A Complete Comparison of Syntax, Speed, and Memory",
-    "summaryEn": "Need help choosing the right Python dataframe library? This article compares Pandas and Polars to help you decide.",
-    "summaryZh": "Need help choosing the right Python dataframe library? This article compares Pandas and Polars to help you decide.",
-    "tag": "Data",
-    "source": "kdnuggets.com",
-    "sourceUrl": "https://www.kdnuggets.com/pandas-vs-polars-a-complete-comparison-of-syntax-speed-and-memory",
-    "publishedAt": "2026-03-05",
-    "score": 48,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-aHR0cHM6Ly93",
-    "titleEn": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
-    "titleZh": "A Coding Guide to Build a Complete Single Cell RNA Sequencing Analysis Pipeline Using Scanpy for Clustering Visualization and Cell Type Annotation",
-    "summaryEn": "In this tutorial, we build a complete pipeline for single-cell RNA sequencing analysis using Scanpy. We start by installing the required libraries and loading the PBMC 3k dataset, then perform quality control, filtering, and normalization to prepare the data for downstream analysis. We then identify…",
-    "summaryZh": "In this tutorial, we build a complete pipeline for single-cell RNA sequencing analysis using Scanpy. We start by installing the required libraries and loading the PBMC 3k dataset, then perform quality control, filtering, and normalization to prepare the data for downstream analysis. We then identify…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/08/a-coding-guide-to-build-a-complete-single-cell-rna-sequencing-analysis-pipeline-using-scanpy-for-clustering-visualization-and-cell-type-annotation/",
-    "publishedAt": "2026-03-09",
-    "score": 88,
-    "featured": true
-  },
-  {
-    "id": "marktechpost.com-aHR0cHM6Ly93",
-    "titleEn": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-    "titleZh": "Andrej Karpathy Open-Sources ‘Autoresearch’: A 630-Line Python Tool Letting AI Agents Run Autonomous ML Experiments on Single GPUs",
-    "summaryEn": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct machine learning experiments. The project is a stripped-down version of the nanochat LLM training core, condensed into a single-file repository of approximately ~630 lines of code. It…",
-    "summaryZh": "Andrej Karpathy released autoresearch, a minimalist Python tool designed to enable AI agents to autonomously conduct machine learning experiments. The project is a stripped-down version of the nanochat LLM training core, condensed into a single-file repository of approximately ~630 lines of code. It…",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/08/andrej-karpathy-open-sources-autoresearch-a-630-line-python-tool-letting-ai-agents-run-autonomous-ml-experiments-on-single-gpus/",
-    "publishedAt": "2026-03-09",
-    "score": 85,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-aHR0cHM6Ly9h",
-    "titleEn": "Real-Time AI Service Economy: A Framework for Agentic Computing Across the Continuum",
-    "titleZh": "Real-Time AI Service Economy: A Framework for Agentic Computing Across the Continuum",
-    "summaryEn": "arXiv:2603.05614v1 Announce Type: new Abstract: Real-time AI services increasingly operate across the device-edge-cloud continuum, where autonomous AI agents generate latency-sensitive workloads, orchestrate multi-stage processing pipelines, and compete for shared resources under policy and governan…",
-    "summaryZh": "arXiv:2603.05614v1 Announce Type: new Abstract: Real-time AI services increasingly operate across the device-edge-cloud continuum, where autonomous AI agents generate latency-sensitive workloads, orchestrate multi-stage processing pipelines, and compete for shared resources under policy and governan…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05614",
-    "publishedAt": "2026-03-09",
-    "score": 82,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-aHR0cHM6Ly9h",
-    "titleEn": "Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery",
-    "titleZh": "Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery",
-    "summaryEn": "arXiv:2603.05860v1 Announce Type: new Abstract: Clinical image interpretation is inherently multi-step and tool-centric: clinicians iteratively combine visual evidence with patient context, quantify findings, and refine their decisions through a sequence of specialized procedures. While LLM-based ag…",
-    "summaryZh": "arXiv:2603.05860v1 Announce Type: new Abstract: Clinical image interpretation is inherently multi-step and tool-centric: clinicians iteratively combine visual evidence with patient context, quantify findings, and refine their decisions through a sequence of specialized procedures. While LLM-based ag…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05860",
-    "publishedAt": "2026-03-09",
-    "score": 82,
-    "featured": true
-  },
-  {
-    "id": "arxiv.org-aHR0cHM6Ly9h",
-    "titleEn": "RoboLayout: Differentiable 3D Scene Generation for Embodied Agents",
-    "titleZh": "RoboLayout: Differentiable 3D Scene Generation for Embodied Agents",
-    "summaryEn": "arXiv:2603.05522v1 Announce Type: new Abstract: Recent advances in vision language models (VLMs) have shown strong potential for spatial reasoning and 3D scene layout generation from open-ended language instructions. However, generating layouts that are not only semantically coherent but also feasib…",
-    "summaryZh": "arXiv:2603.05522v1 Announce Type: new Abstract: Recent advances in vision language models (VLMs) have shown strong potential for spatial reasoning and 3D scene layout generation from open-ended language instructions. However, generating layouts that are not only semantically coherent but also feasib…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05522",
-    "publishedAt": "2026-03-09",
-    "score": 81,
-    "featured": false
-  },
-  {
-    "id": "arxiv.org-aHR0cHM6Ly9h",
-    "titleEn": "Reasoning Models Struggle to Control their Chains of Thought",
-    "titleZh": "Reasoning Models Struggle to Control their Chains of Thought",
-    "summaryEn": "arXiv:2603.05706v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To me…",
-    "summaryZh": "arXiv:2603.05706v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To me…",
-    "tag": "AI",
-    "source": "arxiv.org",
-    "sourceUrl": "https://arxiv.org/abs/2603.05706",
-    "publishedAt": "2026-03-09",
-    "score": 80,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-aHR0cHM6Ly93",
-    "titleEn": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
-    "titleZh": "Beyond Accuracy: Quantifying the Production Fragility Caused by Excessive, Redundant, and Low-Signal Features in Regression",
-    "summaryEn": "At first glance, adding more features to a model seems like an obvious way to improve performance. If a model can learn from more information, it should be able to make better predictions. In practice, however, this instinct often introduces hidden structural risks. Every additional feature creates …",
-    "summaryZh": "At first glance, adding more features to a model seems like an obvious way to improve performance. If a model can learn from more information, it should be able to make better predictions. In practice, however, this instinct often introduces hidden structural risks. Every additional feature creates …",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/08/beyond-accuracy-quantifying-the-production-fragility-caused-by-excessive-redundant-and-low-signal-features-in-regression/",
-    "publishedAt": "2026-03-08",
-    "score": 79,
-    "featured": false
-  },
-  {
-    "id": "openai.com-aHR0cHM6Ly9v",
-    "titleEn": "How Balyasny Asset Management built an AI research engine for investing",
-    "titleZh": "How Balyasny Asset Management built an AI research engine for investing",
-    "summaryEn": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
-    "summaryZh": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceUrl": "https://openai.com/index/balyasny-asset-management",
-    "publishedAt": "2026-03-06",
-    "score": 78,
-    "featured": false
-  },
-  {
-    "id": "openai.com-aHR0cHM6Ly9v",
-    "titleEn": "How Descript enables multilingual video dubbing at scale",
-    "titleZh": "How Descript enables multilingual video dubbing at scale",
-    "summaryEn": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so dubbed speech sounds natural across languages.",
-    "summaryZh": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so dubbed speech sounds natural across languages.",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceUrl": "https://openai.com/index/descript",
-    "publishedAt": "2026-03-06",
-    "score": 77,
-    "featured": false
-  },
-  {
-    "id": "openai.com-aHR0cHM6Ly9v",
-    "titleEn": "Codex Security: now in research preview ",
-    "titleZh": "Codex Security: now in research preview ",
-    "summaryEn": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
-    "summaryZh": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceUrl": "https://openai.com/index/codex-security-now-in-research-preview",
-    "publishedAt": "2026-03-06",
-    "score": 76,
-    "featured": false
-  },
-  {
-    "id": "openai.com-aHR0cHM6Ly9v",
-    "titleEn": "GPT-5.4 Thinking System Card",
-    "titleZh": "GPT-5.4 Thinking System Card",
-    "summaryEn": "Update from OpenAI News",
-    "summaryZh": "OpenAI News 更新",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceUrl": "https://openai.com/index/gpt-5-4-thinking-system-card",
-    "publishedAt": "2026-03-05",
-    "score": 75,
-    "featured": false
-  },
-  {
-    "id": "marktechpost.com-aHR0cHM6Ly93",
-    "titleEn": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-    "titleZh": "Building Next-Gen Agentic AI: A Complete Framework for Cognitive Blueprint Driven Runtime Agents with Memory Tools and Validation",
-    "summaryEn": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints for identity, goals, planning, memory, validation, and tool access, and use them to create agents that not only respond but also plan, execute, validate, and systematically improve …",
-    "summaryZh": "In this tutorial, we build a complete cognitive blueprint and runtime agent framework. We define structured blueprints for identity, goals, planning, memory, validation, and tool access, and use them to create agents that not only respond but also plan, execute, validate, and systematically improve …",
-    "tag": "AI",
-    "source": "marktechpost.com",
-    "sourceUrl": "https://www.marktechpost.com/2026/03/07/building-next-gen-agentic-ai-a-complete-framework-for-cognitive-blueprint-driven-runtime-agents-with-memory-tools-and-validation/",
-    "publishedAt": "2026-03-08",
-    "score": 69,
-    "featured": false
-  },
-  {
-    "id": 47293119,
-    "titleEn": "Cloud VM Benchmarks for 2026",
-    "titleZh": "2026年云虚拟机基准测试",
-    "summaryEn": "This article presents performance and pricing benchmarks for cloud virtual machines, helping users make informed decisions in a competitive market.",
-    "summaryZh": "本文提供了云虚拟机的性能和定价基准测试，帮助用户在竞争激烈的市场中做出明智的决策。",
-    "tag": "Infrastructure",
-    "source": "devblog.ecuadors.net",
-    "sourceUrl": "https://devblog.ecuadors.net/cloud-vm-benchmarks-2026-performance-price-1i1m.html",
-    "publishedAt": "2026-03-08",
-    "score": 194,
-    "featured": true
-  },
-  {
-    "id": 47293415,
-    "titleEn": "Warning About Unmaintained PyPy",
-    "titleZh": "警告关于未维护的PyPy",
-    "summaryEn": "This discussion raises concerns about the lack of maintenance for PyPy, which could impact developers relying on this Python implementation.",
-    "summaryZh": "该讨论对PyPy缺乏维护表示担忧，这可能会影响依赖于此Python实现的开发者。",
-    "tag": "Tools",
-    "source": "github.com",
-    "sourceUrl": "https://github.com/astral-sh/uv/pull/17643",
-    "publishedAt": "2026-03-08",
-    "score": 140,
-    "featured": false
-  },
-  {
-    "id": 47291292,
-    "titleEn": "Introducing CasNum: A New Tool",
-    "titleZh": "介绍CasNum：一款新工具",
-    "summaryEn": "CasNum is a new tool that aims to simplify numerical calculations, potentially improving productivity for developers and researchers.",
-    "summaryZh": "CasNum是一款旨在简化数值计算的新工具，可能提高开发者和研究人员的生产力。",
-    "tag": "Tools",
-    "source": "github.com",
-    "sourceUrl": "https://github.com/0x0mer/CasNum",
-    "publishedAt": "2026-03-08",
-    "score": 271,
-    "featured": true
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/03/11/google-ai-introduces-gemini-embedding-2-a-multimodal-embedding-model-that-lets-your-bring-text-images-video-audio-and-docs-into-the-embedding-space/",
+    "relatedLinks": [
+      {
+        "labelZh": "MarkTechPost 原文",
+        "labelEn": "MarkTechPost source",
+        "url": "https://www.marktechpost.com/2026/03/11/google-ai-introduces-gemini-embedding-2-a-multimodal-embedding-model-that-lets-your-bring-text-images-video-audio-and-docs-into-the-embedding-space/"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://www.marktechpost.com/feed/"
+      }
+    ],
+    "publishedAt": "2026-03-11",
+    "score": 92,
+    "featured": false,
+    "takeawayBulletsZh": [
+      "来源于 MarkTechPost，Google expanded its Gemini model family with the release of Gem…",
+      "我会更关注它后续是否真的落到产品、开发者工作流或基础设施成本变化上。"
+    ]
   }
 ]

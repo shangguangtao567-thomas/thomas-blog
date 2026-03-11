@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T03:46:11.965Z",
+  "generatedAt": "2026-03-11T07:23:48.523Z",
   "items": [
     {
       "sourceName": "OpenAI News",
@@ -13,7 +13,7 @@
       "pubDate": "2026-03-10T11:00:00.000Z",
       "sourceDomain": "openai.com",
       "id": "openai.com-458a72f18aa6",
-      "score": 111,
+      "score": 108,
       "publishedAt": "2026-03-10"
     },
     {
@@ -28,7 +28,7 @@
       "pubDate": "2026-03-10T10:00:00.000Z",
       "sourceDomain": "openai.com",
       "id": "openai.com-88306bd64ac1",
-      "score": 110,
+      "score": 107,
       "publishedAt": "2026-03-10"
     },
     {
@@ -43,7 +43,7 @@
       "pubDate": "2026-03-10T19:49:28.000Z",
       "sourceDomain": "huggingface.co",
       "id": "huggingface.co-087b7ac98b37",
-      "score": 109,
+      "score": 106,
       "publishedAt": "2026-03-10"
     },
     {
@@ -58,7 +58,7 @@
       "pubDate": "2026-03-10T13:00:00.000Z",
       "sourceDomain": "blog.google",
       "id": "blog.google-a015ffb3f8b4",
-      "score": 106,
+      "score": 103,
       "publishedAt": "2026-03-10"
     },
     {
@@ -73,7 +73,7 @@
       "pubDate": "2026-03-10T20:16:01.000Z",
       "sourceDomain": "github.blog",
       "id": "github.blog-7f0c197269a0",
-      "score": 105,
+      "score": 102,
       "publishedAt": "2026-03-10"
     },
     {
@@ -88,7 +88,7 @@
       "pubDate": "2026-03-10T00:00:00.000Z",
       "sourceDomain": "huggingface.co",
       "id": "huggingface.co-cf14fb4125ba",
-      "score": 96,
+      "score": 93,
       "publishedAt": "2026-03-10"
     },
     {
@@ -103,8 +103,23 @@
       "pubDate": "2026-03-10T00:00:00.000Z",
       "sourceDomain": "huggingface.co",
       "id": "huggingface.co-2ae52e2df01b",
-      "score": 95,
+      "score": 92,
       "publishedAt": "2026-03-10"
+    },
+    {
+      "sourceName": "MarkTechPost",
+      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "categoryHint": "AI",
+      "priority": 6,
+      "reason": "更新很快，但作为二级信号源使用",
+      "title": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
+      "link": "https://www.marktechpost.com/2026/03/11/google-ai-introduces-gemini-embedding-2-a-multimodal-embedding-model-that-lets-your-bring-text-images-video-audio-and-docs-into-the-embedding-space/",
+      "contentSnippet": "Google expanded its Gemini model family with the release of Gemini Embedding 2. This second-generation model succeeds the text-only gemini-embedding-001 and is designed specifically to address the high-dimensional storage and cross-modal retrieval challenges faced by AI developers building production-grade Retrieval-Augmented Generation (RAG) systems. The Gemini Embedding 2 release marks a significant technical shift…",
+      "pubDate": "2026-03-11T07:18:20.000Z",
+      "sourceDomain": "marktechpost.com",
+      "id": "marktechpost.com-47f4cdba0650",
+      "score": 92,
+      "publishedAt": "2026-03-11"
     },
     {
       "sourceName": "Simon Willison",
@@ -118,7 +133,7 @@
       "pubDate": "2026-03-10T22:25:09.000Z",
       "sourceDomain": "simonwillison.net",
       "id": "simonwillison.net-e08fba5cae09",
-      "score": 93,
+      "score": 90,
       "publishedAt": "2026-03-10"
     },
     {
@@ -133,7 +148,7 @@
       "pubDate": "2026-03-09T18:36:33.000Z",
       "sourceDomain": "huggingface.co",
       "id": "huggingface.co-ec92a6e121b6",
-      "score": 91,
+      "score": 89,
       "publishedAt": "2026-03-09"
     },
     {
@@ -148,8 +163,38 @@
       "pubDate": "2026-03-09T16:00:00.000Z",
       "sourceDomain": "github.blog",
       "id": "github.blog-a4ec18135cb6",
-      "score": 90,
+      "score": 89,
       "publishedAt": "2026-03-09"
+    },
+    {
+      "sourceName": "MarkTechPost",
+      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "categoryHint": "AI",
+      "priority": 6,
+      "reason": "更新很快，但作为二级信号源使用",
+      "title": "Fish Audio Releases Fish Audio S2: A New Generation of Expressive Text-to-Speech (TTS) with Absurdly Controllable Emotion",
+      "link": "https://www.marktechpost.com/2026/03/10/fish-audio-releases-fish-audio-s2-a-new-generation-of-expressive-text-to-speech-tts-with-absurdly-controllable-emotion/",
+      "contentSnippet": "The landscape of Text-to-Speech (TTS) is moving away from modular pipelines toward integrated Large Audio Models (LAMs). Fish Audio’s release of S2-Pro, the flagship model within the Fish Speech ecosystem, represents a shift toward open architectures capable of high-fidelity, multi-speaker synthesis with sub-150ms latency. The release provides a framework for zero-shot voice cloning and granular […] The post Fish Aud…",
+      "pubDate": "2026-03-11T04:58:33.000Z",
+      "sourceDomain": "marktechpost.com",
+      "id": "marktechpost.com-b8044225c203",
+      "score": 89,
+      "publishedAt": "2026-03-11"
+    },
+    {
+      "sourceName": "MarkTechPost",
+      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "categoryHint": "AI",
+      "priority": 6,
+      "reason": "更新很快，但作为二级信号源使用",
+      "title": "How to Build a Self-Designing Meta-Agent That Automatically Constructs, Instantiates, and Refines Task-Specific AI Agents",
+      "link": "https://www.marktechpost.com/2026/03/10/how-to-build-a-self-designing-meta-agent-that-automatically-constructs-instantiates-and-refines-task-specific-ai-agents/",
+      "contentSnippet": "In this tutorial, we build a Meta-Agent that designs other agents automatically from a simple task description. We implement a system that analyzes the task, selects tools, chooses a memory architecture, configures a planner, and then instantiates a fully working agent runtime. We go beyond static agent templates and instead build a dynamic, self-configuring architecture […] The post How to Build a Self-Designing Met…",
+      "pubDate": "2026-03-11T04:23:22.000Z",
+      "sourceDomain": "marktechpost.com",
+      "id": "marktechpost.com-f772cb39dcd8",
+      "score": 89,
+      "publishedAt": "2026-03-11"
     },
     {
       "sourceName": "OpenAI News",
@@ -178,7 +223,7 @@
       "pubDate": "2026-03-10T20:15:08.000Z",
       "sourceDomain": "marktechpost.com",
       "id": "marktechpost.com-ff6d869256bc",
-      "score": 83,
+      "score": 80,
       "publishedAt": "2026-03-10"
     },
     {
@@ -193,38 +238,38 @@
       "pubDate": "2026-03-10T13:47:26.000Z",
       "sourceDomain": "technologyreview.com",
       "id": "technologyreview.com-e30b7ac10c08",
-      "score": 82,
+      "score": 79,
       "publishedAt": "2026-03-10"
     },
     {
-      "sourceName": "MarkTechPost",
-      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "sourceName": "arXiv cs.CL",
+      "sourceUrl": "https://rss.arxiv.org/rss/cs.CL",
       "categoryHint": "AI",
-      "priority": 6,
-      "reason": "更新很快，但作为二级信号源使用",
-      "title": "How to Build a Risk-Aware AI Agent with Internal Critic, Self-Consistency Reasoning, and Uncertainty Estimation for Reliable Decision-Making",
-      "link": "https://www.marktechpost.com/2026/03/09/how-to-build-a-risk-aware-ai-agent-with-internal-critic-self-consistency-reasoning-and-uncertainty-estimation-for-reliable-decision-making/",
-      "contentSnippet": "In this tutorial, we build an advanced agent system that goes beyond simple response generation by integrating an internal critic and uncertainty estimation framework. We simulate multi-sample inference, evaluate candidate responses across accuracy, coherence, and safety dimensions, and quantify predictive uncertainty using entropy, variance, and consistency measures. We implement risk-sensitive selection strategies …",
-      "pubDate": "2026-03-10T06:35:45.000Z",
-      "sourceDomain": "marktechpost.com",
-      "id": "marktechpost.com-3218344e2a86",
-      "score": 75,
-      "publishedAt": "2026-03-10"
+      "priority": 5,
+      "reason": "LLM / NLP 方向的重要论文入口",
+      "title": "MultiGraSCCo: A Multilingual Anonymization Benchmark with Annotations of Personal Identifiers",
+      "link": "https://arxiv.org/abs/2603.08879",
+      "contentSnippet": "arXiv:2603.08879v1 Announce Type: new Abstract: Accessing sensitive patient data for machine learning is challenging due to privacy concerns. Datasets with annotations of personally identifiable information are crucial for developing and testing anonymization systems to enable safe data sharing that complies with privacy regulations. Since accessing real patient data is a bottleneck, synthetic data offers an efficien…",
+      "pubDate": "2026-03-11T04:00:00.000Z",
+      "sourceDomain": "arxiv.org",
+      "id": "arxiv.org-4e0cab4f775d",
+      "score": 72,
+      "publishedAt": "2026-03-11"
     },
     {
-      "sourceName": "MarkTechPost",
-      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "sourceName": "arXiv cs.CL",
+      "sourceUrl": "https://rss.arxiv.org/rss/cs.CL",
       "categoryHint": "AI",
-      "priority": 6,
-      "reason": "更新很快，但作为二级信号源使用",
-      "title": "ByteDance Releases DeerFlow 2.0: An Open-Source SuperAgent Harness that Orchestrates Sub-Agents, Memory, and Sandboxes to do Complex Tasks",
-      "link": "https://www.marktechpost.com/2026/03/09/bytedance-releases-deerflow-2-0-an-open-source-superagent-harness-that-orchestrates-sub-agents-memory-and-sandboxes-to-do-complex-tasks/",
-      "contentSnippet": "The era of the ‘Copilot’ is officially getting an upgrade. While the tech world has spent the last two years getting comfortable with AI that suggests code or drafts emails, ByteDance team is moving the goalposts. They released DeerFlow 2.0, a newly open-sourced ‘SuperAgent’ framework that doesn’t just suggest work; it executes it. DeerFlow is […] The post ByteDance Releases DeerFlow 2.0: An Open-Source SuperAgent Ha…",
-      "pubDate": "2026-03-10T06:10:37.000Z",
-      "sourceDomain": "marktechpost.com",
-      "id": "marktechpost.com-a6e923cc01a3",
-      "score": 75,
-      "publishedAt": "2026-03-10"
+      "priority": 5,
+      "reason": "LLM / NLP 方向的重要论文入口",
+      "title": "One Language, Two Scripts: Probing Script-Invariance in LLM Concept Representations",
+      "link": "https://arxiv.org/abs/2603.08869",
+      "contentSnippet": "arXiv:2603.08869v1 Announce Type: new Abstract: Do the features learned by Sparse Autoencoders (SAEs) represent abstract meaning, or are they tied to how text is written? We investigate this question using Serbian digraphia as a controlled testbed: Serbian is written interchangeably in Latin and Cyrillic scripts with a near-perfect character mapping between them, enabling us to vary orthography while holding meaning …",
+      "pubDate": "2026-03-11T04:00:00.000Z",
+      "sourceDomain": "arxiv.org",
+      "id": "arxiv.org-5b075d23aba9",
+      "score": 71,
+      "publishedAt": "2026-03-11"
     },
     {
       "sourceName": "Machine Learning Mastery",
@@ -238,8 +283,23 @@
       "pubDate": "2026-03-10T11:00:41.000Z",
       "sourceDomain": "machinelearningmastery.com",
       "id": "machinelearningmastery.com-dec8e0983abb",
-      "score": 73,
+      "score": 70,
       "publishedAt": "2026-03-10"
+    },
+    {
+      "sourceName": "arXiv cs.AI",
+      "sourceUrl": "https://rss.arxiv.org/rss/cs.AI",
+      "categoryHint": "AI",
+      "priority": 5,
+      "reason": "研究前沿雷达，适合补充学术方向",
+      "title": "MASEval: Extending Multi-Agent Evaluation from Models to Systems",
+      "link": "https://arxiv.org/abs/2603.08835",
+      "contentSnippet": "arXiv:2603.08835v1 Announce Type: new Abstract: The rapid adoption of LLM-based agentic systems has produced a rich ecosystem of frameworks (smolagents, LangGraph, AutoGen, CAMEL, LlamaIndex, i.a.). Yet existing benchmarks are model-centric: they fix the agentic setup and do not compare other system components. We argue that implementation decisions substantially impact performance, including choices such as topology…",
+      "pubDate": "2026-03-11T04:00:00.000Z",
+      "sourceDomain": "arxiv.org",
+      "id": "arxiv.org-d1ae21a0ec5a",
+      "score": 70,
+      "publishedAt": "2026-03-11"
     },
     {
       "sourceName": "Machine Learning Mastery",
@@ -253,8 +313,23 @@
       "pubDate": "2026-03-10T19:00:39.000Z",
       "sourceDomain": "machinelearningmastery.com",
       "id": "machinelearningmastery.com-8f714f97bfcc",
-      "score": 72,
+      "score": 69,
       "publishedAt": "2026-03-10"
+    },
+    {
+      "sourceName": "arXiv cs.AI",
+      "sourceUrl": "https://rss.arxiv.org/rss/cs.AI",
+      "categoryHint": "AI",
+      "priority": 5,
+      "reason": "研究前沿雷达，适合补充学术方向",
+      "title": "LDP: An Identity-Aware Protocol for Multi-Agent LLM Systems",
+      "link": "https://arxiv.org/abs/2603.08852",
+      "contentSnippet": "arXiv:2603.08852v1 Announce Type: new Abstract: As multi-agent AI systems grow in complexity, the protocols connecting them constrain their capabilities. Current protocols such as A2A and MCP do not expose model-level properties as first-class primitives, ignoring properties fundamental to effective delegation: model identity, reasoning profile, quality calibration, and cost characteristics. We present the LLM Delega…",
+      "pubDate": "2026-03-11T04:00:00.000Z",
+      "sourceDomain": "arxiv.org",
+      "id": "arxiv.org-72071943348a",
+      "score": 69,
+      "publishedAt": "2026-03-11"
     },
     {
       "sourceName": "Simon Willison",
@@ -268,7 +343,7 @@
       "pubDate": "2026-03-09T15:05:15.000Z",
       "sourceDomain": "simonwillison.net",
       "id": "simonwillison.net-cbd3a0c193e5",
-      "score": 68,
+      "score": 67,
       "publishedAt": "2026-03-09"
     },
     {
@@ -285,81 +360,6 @@
       "id": "simonwillison.net-1a132378f0c9",
       "score": 67,
       "publishedAt": "2026-03-09"
-    },
-    {
-      "sourceName": "Simon Willison",
-      "sourceUrl": "https://simonwillison.net/atom/everything/",
-      "categoryHint": "Tools",
-      "priority": 9,
-      "reason": "LLM 工具、agent 实验、开发者一线观察",
-      "title": "Quoting Joseph Weizenbaum",
-      "link": "https://simonwillison.net/2026/Mar/8/joseph-weizenbaum/#atom-everything",
-      "contentSnippet": "What I had not realized is that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people. &mdash; Joseph Weizenbaum , creator of ELIZA, in 1976 ( via ) Tags: ai-ethics , ai , computer-history , internet-archive",
-      "pubDate": "2026-03-08T14:59:48.000Z",
-      "sourceDomain": "simonwillison.net",
-      "id": "simonwillison.net-bc5e8056d1bc",
-      "score": 66,
-      "publishedAt": "2026-03-08"
-    },
-    {
-      "sourceName": "MarkTechPost",
-      "sourceUrl": "https://www.marktechpost.com/feed/",
-      "categoryHint": "AI",
-      "priority": 6,
-      "reason": "更新很快，但作为二级信号源使用",
-      "title": "Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Gives Your Coding Agent the Up-to-Date API Documentation It Needs",
-      "link": "https://www.marktechpost.com/2026/03/09/andrew-ngs-team-releases-context-hub-an-open-source-tool-that-gives-your-coding-agent-the-up-to-date-api-documentation-it-needs/",
-      "contentSnippet": "In the fast-moving world of agentic workflows, the most powerful AI model is still only as good as its documentation. Today, Andrew Ng and his team at DeepLearning.AI officially launched Context Hub, an open-source tool designed to bridge the gap between an agent’s static training data and the rapidly evolving reality of modern APIs. You […] The post Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Giv…",
-      "pubDate": "2026-03-09T20:47:33.000Z",
-      "sourceDomain": "marktechpost.com",
-      "id": "marktechpost.com-51aaea51420a",
-      "score": 66,
-      "publishedAt": "2026-03-09"
-    },
-    {
-      "sourceName": "MIT Technology Review / AI",
-      "sourceUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
-      "categoryHint": "Tech",
-      "priority": 8,
-      "reason": "高质量 AI 行业、政策与趋势分析",
-      "title": "How AI is turning the Iran conflict into theater",
-      "link": "https://www.technologyreview.com/2026/03/09/1134063/how-ai-is-turning-the-iran-conflict-into-theater/",
-      "contentSnippet": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. “Anyone wanna host a get together in SF and pull this up on a 100 inch TV?” The author of that post on X was referring to an online intelligence dashboard following…",
-      "pubDate": "2026-03-09T15:11:01.000Z",
-      "sourceDomain": "technologyreview.com",
-      "id": "technologyreview.com-6b4dbc8ecd7d",
-      "score": 61,
-      "publishedAt": "2026-03-09"
-    },
-    {
-      "sourceName": "arXiv cs.AI",
-      "sourceUrl": "https://rss.arxiv.org/rss/cs.AI",
-      "categoryHint": "AI",
-      "priority": 5,
-      "reason": "研究前沿雷达，适合补充学术方向",
-      "title": "Scaling Strategy, Not Compute: A Stand-Alone, Open-Source StarCraft II Benchmark for Accessible Reinforcement Learning Research",
-      "link": "https://arxiv.org/abs/2603.06608",
-      "contentSnippet": "arXiv:2603.06608v1 Announce Type: new Abstract: The research community lacks a middle ground between StarCraft IIs full game and its mini-games. The full-games sprawling state-action space renders reward signals sparse and noisy, but in mini-games simple agents saturate performance. This complexity gap hinders steady curriculum design and prevents researchers from experimenting with modern Reinforcement Learning algo…",
-      "pubDate": "2026-03-10T04:00:00.000Z",
-      "sourceDomain": "arxiv.org",
-      "id": "arxiv.org-9b0083077ba2",
-      "score": 59,
-      "publishedAt": "2026-03-10"
-    },
-    {
-      "sourceName": "arXiv cs.AI",
-      "sourceUrl": "https://rss.arxiv.org/rss/cs.AI",
-      "categoryHint": "AI",
-      "priority": 5,
-      "reason": "研究前沿雷达，适合补充学术方向",
-      "title": "Autonomous AI Agents for Option Hedging: Enhancing Financial Stability through Shortfall Aware Reinforcement Learning",
-      "link": "https://arxiv.org/abs/2603.06587",
-      "contentSnippet": "arXiv:2603.06587v1 Announce Type: new Abstract: The deployment of autonomous AI agents in derivatives markets has widened a practical gap between static model calibration and realized hedging outcomes. We introduce two reinforcement learning frameworks, a novel Replication Learning of Option Pricing (RLOP) approach and an adaptive extension of Q-learner in Black-Scholes (QLBS), that prioritize shortfall probability a…",
-      "pubDate": "2026-03-10T04:00:00.000Z",
-      "sourceDomain": "arxiv.org",
-      "id": "arxiv.org-7c204f5c9b50",
-      "score": 58,
-      "publishedAt": "2026-03-10"
     }
   ]
 }

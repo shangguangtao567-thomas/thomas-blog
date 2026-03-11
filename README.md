@@ -2,126 +2,71 @@
 
 A minimal, fast personal blog powered by Vite + React + GitHub Pages.
 
-**Live site:** https://[your-username].github.io/[repo-name]/
+## 内容结构
 
----
+- `posts/`：正式博客文章与自动生成的 AI 日报文章
+- `src/data/posts*.json`：由 `posts/` 构建出来的静态内容索引
+- `src/data/tech-news.json`：当天 AI 日报的站内摘要卡片数据
+- `src/data/ai-digests.json`：AI 日报归档索引
+- `src/data/ai-digest-report.txt`：更新完成后可直接发到 Discord 的中文汇报
 
-## ✍️ Writing a New Post
+## 日常写文章
 
-1. Create a new file in the `posts/` directory:
+1. 在 `posts/` 下新建 Markdown 文件：
    ```
    posts/YYYY-MM-DD-your-post-slug.md
    ```
-
-2. Add frontmatter at the top:
+2. 添加 frontmatter：
    ```markdown
    ---
    titleEn: "Your Post Title in English"
-   titleZh: "你的文章标题（中文）"
-   excerptEn: "A brief description of your post."
-   excerptZh: "文章简介（中文）"
-   tag: AI          # One of: AI, Open Source, Infrastructure, Tools, Security, Web, Mobile, Data, Tech
+   titleZh: "你的文章标题"
+   excerptEn: "Short summary"
+   excerptZh: "中文摘要"
+   tag: AI
    tagEn: AI
-   image: https://images.unsplash.com/photo-xxx?w=800&auto=format&fit=crop
-   readTime: 8      # Estimated reading time in minutes
+   readTime: 8
    date: 2026-03-05
    ---
-
-   Your post content in Markdown...
    ```
+3. 推到 `main`，GitHub Pages 会自动部署静态站点。
 
-3. Push to `main` branch — GitHub Pages will automatically build and deploy in ~90 seconds.
+## AI 日报工作流
 
----
+这个仓库现在的 AI 日报流程是：
 
-## 🏗️ Project Structure
+1. `node scripts/fetch-ai-candidates.mjs`
+   - 只做 RSS 抓取、打分、去重，产出候选池。
+2. `node scripts/build-ai-digest.mjs`
+   - **不调用外部摘要 API**。
+   - 用本地脚本逻辑把候选池整理成：
+     - 当天站内日报文章 `posts/YYYY-MM-DD-ai-daily-YYYY-MM-DD.md`
+     - `src/data/tech-news.json`
+     - `src/data/ai-digests.json`
+     - `src/data/ai-digest-report.txt`
+3. `pnpm build`
+   - 重新构建静态站点。
+4. `scripts/run-ai-rss-update.sh`
+   - 适合放进 OpenClaw cron，拉取更新、生成日报、构建、commit、push。
 
-```
-posts/                    ← Write your Markdown posts here
-src/
-  data/
-    posts-index.json      ← Auto-generated from posts/ (don't edit)
-    posts.json            ← Auto-generated from posts/ (don't edit)
-    tech-news.json        ← Auto-updated daily by OpenClaw cron
-  pages/                  ← React page components
-  components/             ← Shared UI components
-  contexts/               ← Theme & Language contexts
-scripts/
-  build-data.mjs          ← Converts posts/ → JSON (runs before build)
-  fetch-tech-news.mjs     ← Legacy HN fetch script (not scheduled)
-.github/workflows/
-  deploy.yml              ← Auto-deploy on push to main
-```
-
----
-
-## 🚀 GitHub Pages Setup
-
-### First-time setup:
-
-1. **Create a GitHub repository** (public)
-
-2. **Push this code:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages:**
-   - Go to repo Settings → Pages
-   - Source: **GitHub Actions**
-
-4. **Add secrets:**
-   - Go to repo Settings → Secrets and variables → Actions
-   - Add `OPENAI_API_KEY` with your OpenAI API key
-
-5. **Trigger first deploy:**
-   - Go to Actions tab → "Build and Deploy to GitHub Pages" → Run workflow
-
----
-
-## 🔧 Local Development
+## 本地开发
 
 ```bash
 pnpm install
-pnpm dev          # Start dev server at http://localhost:5173
-pnpm build        # Build for production
-pnpm preview      # Preview production build
+pnpm dev
+pnpm build
 ```
 
-### Refresh AI digest locally:
+手动刷新 AI 日报：
+
 ```bash
-OPENAI_API_KEY=sk-xxx pnpm fetch-ai-rss
-# or
-bash scripts/run-ai-rss-update.sh
+node scripts/fetch-ai-candidates.mjs
+node scripts/build-ai-digest.mjs
+pnpm build
+cat src/data/ai-digest-report.txt
 ```
 
----
+## 部署
 
-## 🌐 Custom Domain (Optional)
-
-1. Add a `CNAME` file in the `public/` directory with your domain:
-   ```
-   blog.yourdomain.com
-   ```
-
-2. Update `vite.config.ts`:
-   ```ts
-   base: '/'  // Keep as '/' for custom domains
-   ```
-
-3. Configure DNS with your domain provider.
-
----
-
-## 📝 Tech Stack
-
-- **Framework:** Vite + React 19 + TypeScript
-- **Styling:** Tailwind CSS v3
-- **Markdown:** gray-matter (parsing) + marked (rendering)
-- **Hosting:** GitHub Pages (free)
-- **CI/CD:** GitHub Pages + OpenClaw cron
-- **AI:** OpenAI/OpenRouter summarization for AI RSS digest
+- 定时更新：继续使用 OpenClaw cron 调 `scripts/run-ai-rss-update.sh`
+- 站点部署：保留 GitHub Pages，通过 push 到 `main` 触发

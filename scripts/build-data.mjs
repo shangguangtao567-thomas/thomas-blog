@@ -73,12 +73,17 @@ fs.writeFileSync(
 
 console.log(`✓ Built ${posts.length} posts → src/data/posts-index.json & posts.json`);
 
-// Check tech-news.json exists, if not create empty
-const techNewsPath = path.join(DATA_DIR, 'tech-news.json');
-if (!fs.existsSync(techNewsPath)) {
-  fs.writeFileSync(techNewsPath, '[]');
-  console.log('✓ Created empty src/data/tech-news.json');
-} else {
-  const techNews = JSON.parse(fs.readFileSync(techNewsPath, 'utf-8'));
-  console.log(`✓ tech-news.json: ${techNews.length} items`);
+// Ensure AI data files exist for static imports
+for (const [filename, label] of [
+  ['tech-news.json', 'tech-news'],
+  ['ai-digests.json', 'ai-digests'],
+]) {
+  const filePath = path.join(DATA_DIR, filename);
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, '[]');
+    console.log(`✓ Created empty src/data/${filename}`);
+  } else {
+    const payload = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    console.log(`✓ ${label}: ${payload.length} items`);
+  }
 }

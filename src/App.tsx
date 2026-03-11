@@ -7,9 +7,7 @@ import Tech from './pages/Tech';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 
-// The base path set in vite.config.ts (e.g. '/thomas-blog/')
-// Strip it from the pathname before routing so routes work the same locally and on GitHub Pages
-const BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/thomas-blog' or ''
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 function stripBase(path: string): string {
   if (BASE && path.startsWith(BASE)) {
@@ -29,9 +27,7 @@ function parseRoute(rawPath: string): { page: string; slug?: string } {
 }
 
 function AppInner() {
-  const [currentPath, setCurrentPath] = useState(() => {
-    return window.location.pathname || '/';
-  });
+  const [currentPath, setCurrentPath] = useState(() => window.location.pathname || '/');
 
   useEffect(() => {
     const handlePopState = () => setCurrentPath(window.location.pathname);
@@ -39,7 +35,6 @@ function AppInner() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Navigate with base prefix applied
   const navigate = (path: string) => {
     const fullPath = BASE + path;
     window.history.pushState({}, '', fullPath);
@@ -56,7 +51,7 @@ function AppInner() {
       case 'blog':
         return <Blog navigate={navigate} />;
       case 'tech':
-        return <Tech />;
+        return <Tech navigate={navigate} />;
       case 'post':
         return <PostDetail slug={route.slug!} navigate={navigate} />;
       default:
@@ -77,11 +72,7 @@ function AppInner() {
     }
   };
 
-  return (
-    <Layout currentPath={currentPath} navigate={navigate}>
-      {renderPage()}
-    </Layout>
-  );
+  return <Layout currentPath={currentPath} navigate={navigate}>{renderPage()}</Layout>;
 }
 
 export default function App() {
