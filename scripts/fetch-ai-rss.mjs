@@ -16,9 +16,9 @@ const OPENAI_MODEL = process.env.OPENAI_MODEL || 'openai/gpt-4.1-mini';
 const FETCH_COUNT = parseInt(process.env.FETCH_COUNT || '24', 10);
 const MAX_AGE_DAYS = parseInt(process.env.MAX_AGE_DAYS || '3', 10);
 const MAX_ITEMS_TO_KEEP = parseInt(process.env.MAX_ITEMS_TO_KEEP || '60', 10);
-const MAX_PER_SOURCE = Math.max(3, Math.ceil(FETCH_COUNT / 3));
+const MAX_PER_SOURCE = parseInt(process.env.MAX_PER_SOURCE || '4', 10);
 
-const parser = new Parser({ timeout: 10000, headers: { 'User-Agent': 'thomas-blog-ai-rss/1.0' } });
+const parser = new Parser({ timeout: 15000, headers: { 'User-Agent': 'thomas-blog-ai-rss/1.0' } });
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
@@ -55,17 +55,23 @@ function scoreItem(item) {
   const published = new Date(item.pubDate || item.isoDate || now).getTime();
   const ageHours = Math.max(0, (now - published) / 36e5);
   const freshness = Math.max(0, 30 - Math.min(30, ageHours * 0.8));
-  const officialBoost = /(openai|google|anthropic|huggingface|arxiv)/i.test(item.sourceDomain) ? 12 : 0;
+  const officialBoost = /(openai|google|huggingface|github\.blog|berkeley\.edu)/i.test(item.sourceDomain) ? 12 : 0;
   const titleBoost = Math.min(12, Math.ceil((item.title || '').length / 12));
-  return Math.round(item.priority * 6 + freshness + officialBoost + titleBoost);
+  const keywordBoost = /(agent|llm|gpt|model|inference|multimodal|reasoning|open source|benchmark|release|copilot|robotics)/i.test(item.title)
+    ? 8
+    : 0;
+  const redditPenalty = /reddit\.com$/i.test(item.sourceDomain) ? 8 : 0;
+  const arxivPenalty = /arxiv\.org$/i.test(item.sourceDomain) ? 6 : 0;
+  return Math.round(item.priority * 7 + freshness + officialBoost + titleBoost + keywordBoost - redditPenalty - arxivPenalty);
 }
 
 async function fetchSource(source) {
   try {
     const feed = await parser.parseURL(source.url);
+    const limit = Math.max(1, Math.min(MAX_PER_SOURCE, source.maxItems || MAX_PER_SOURCE));
     const items = (feed.items || [])
       .filter(item => item.link && item.title)
-      .slice(0, MAX_PER_SOURCE)
+      .slice(0, limit)
       .map(item => ({
         sourceName: source.name,
         sourceUrl: source.url,
@@ -114,45 +120,62 @@ For each item provide:
 
 Items:\n${candidates.map((item, i) => `${i + 1}. [${item.sourceName}] ${item.title}\nURL: ${item.link}\nPublished: ${item.pubDate}\nHint: ${item.categoryHint}\nSnippet: ${item.contentSnippet}`).join('\n\n')}`;
 
-  const response = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: OPENAI_MODEL,
-      temperature: 0.2,
-      messages: [{ role: 'user', content: prompt }],
-      response_format: { type: 'json_object' },
-    }),
-    signal: AbortSignal.timeout(60000),
-  });
+  try {
+    const response = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: OPENAI_MODEL,
+        temperature: 0.2,
+        messages: [{ role: 'user', content: prompt }],
+        response_format: { type: 'json_object' },
+      }),
+      signal: AbortSignal.timeout(60000),
+    });
 
-  if (!response.ok) {
-    const err = await response.text();
-    throw new Error(`AI API error ${response.status}: ${err}`);
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`AI API error ${response.status}: ${err}`);
+    }
+
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON.parse(content);
+    const items = Array.isArray(parsed) ? parsed : parsed.items;
+    if (!Array.isArray(items)) throw new Error('AI response missing items array');
+
+    return candidates.map((item, index) => ({
+      id: item.id,
+      titleEn: items[index]?.titleEn || item.title,
+      titleZh: items[index]?.titleZh || item.title,
+      summaryEn: items[index]?.summaryEn || item.contentSnippet || `Update from ${item.sourceName}`,
+      summaryZh: items[index]?.summaryZh || item.contentSnippet || `${item.sourceName} 更新`,
+      tag: items[index]?.tag || item.categoryHint || 'Tech',
+      source: item.sourceDomain,
+      sourceUrl: item.link,
+      publishedAt: isoDate(item.pubDate),
+      score: item.score,
+      featured: Boolean(items[index]?.featured),
+    }));
+  } catch (error) {
+    console.warn(`[rss] AI summarization failed, fallback to basic formatting: ${error.message}`);
+    return candidates.map((item, index) => ({
+      id: item.id,
+      titleEn: item.title,
+      titleZh: item.title,
+      summaryEn: item.contentSnippet || `Update from ${item.sourceName}`,
+      summaryZh: item.contentSnippet || `${item.sourceName} 更新`,
+      tag: item.categoryHint || 'Tech',
+      source: item.sourceDomain,
+      sourceUrl: item.link,
+      publishedAt: isoDate(item.pubDate),
+      score: item.score,
+      featured: index < 4,
+    }));
   }
-
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content || '{}';
-  const parsed = JSON.parse(content);
-  const items = Array.isArray(parsed) ? parsed : parsed.items;
-  if (!Array.isArray(items)) throw new Error('AI response missing items array');
-
-  return candidates.map((item, index) => ({
-    id: item.id,
-    titleEn: items[index]?.titleEn || item.title,
-    titleZh: items[index]?.titleZh || item.title,
-    summaryEn: items[index]?.summaryEn || item.contentSnippet || `Update from ${item.sourceName}`,
-    summaryZh: items[index]?.summaryZh || item.contentSnippet || `${item.sourceName} 更新`,
-    tag: items[index]?.tag || item.categoryHint || 'Tech',
-    source: item.sourceDomain,
-    sourceUrl: item.link,
-    publishedAt: isoDate(item.pubDate),
-    score: item.score,
-    featured: Boolean(items[index]?.featured),
-  }));
 }
 
 async function main() {

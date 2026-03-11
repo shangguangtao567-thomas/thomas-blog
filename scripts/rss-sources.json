@@ -4,48 +4,99 @@
     "url": "https://openai.com/news/rss.xml",
     "category": "AI",
     "priority": 10,
-    "reason": "官方一手模型与产品更新"
+    "reason": "官方一手模型、产品与研究更新"
   },
   {
-    "name": "MIT Technology Review AI",
-    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-    "category": "Tech",
+    "name": "Google AI Blog",
+    "url": "https://blog.google/technology/ai/rss/",
+    "category": "AI",
+    "priority": 10,
+    "reason": "Google AI 官方动态，覆盖模型、产品与基础设施"
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "Open Source",
+    "priority": 10,
+    "reason": "开源模型与 AI 工具链生态最重要来源之一"
+  },
+  {
+    "name": "GitHub Blog / AI & ML",
+    "url": "https://github.blog/ai-and-ml/feed",
+    "category": "Tools",
     "priority": 9,
-    "reason": "高质量趋势与行业分析"
+    "reason": "AI 工程实践、Copilot、开发工具链动态"
+  },
+  {
+    "name": "Microsoft AI Blog",
+    "url": "https://blogs.microsoft.com/ai/feed/",
+    "category": "AI",
+    "priority": 8,
+    "reason": "企业 AI、Copilot 与 Azure AI 落地趋势"
+  },
+  {
+    "name": "MIT Technology Review / AI",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+    "category": "Tech",
+    "priority": 8,
+    "reason": "高质量 AI 行业、政策与趋势分析"
+  },
+  {
+    "name": "BAIR Blog",
+    "url": "https://bair.berkeley.edu/blog/feed.xml",
+    "category": "AI",
+    "priority": 8,
+    "reason": "伯克利 AI 研究博客，学术与工程兼顾"
+  },
+  {
+    "name": "The Gradient",
+    "url": "https://thegradient.pub/rss/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "高质量 AI 长文、研究解读与行业观察"
+  },
+  {
+    "name": "Chip Huyen",
+    "url": "https://huyenchip.com/feed.xml",
+    "category": "Infrastructure",
+    "priority": 8,
+    "reason": "ML systems、生产部署与 AI 产品化视角"
+  },
+  {
+    "name": "Simon Willison",
+    "url": "https://simonwillison.net/atom/everything/",
+    "category": "Tools",
+    "priority": 9,
+    "reason": "LLM 工具、agent 实验、开发者一线观察"
+  },
+  {
+    "name": "Machine Learning Mastery",
+    "url": "https://machinelearningmastery.com/feed/",
+    "category": "AI",
+    "priority": 6,
+    "reason": "偏实践与教程，适合补充开发者视角"
   },
   {
     "name": "MarkTechPost",
-    "url": "https://marktechpost.com/feed/",
+    "url": "https://www.marktechpost.com/feed/",
     "category": "AI",
-    "priority": 8,
-    "reason": "研究与产品快讯密度高"
-  },
-  {
-    "name": "ByteByteGo",
-    "url": "https://blog.bytebytego.com/feed",
-    "category": "Infrastructure",
-    "priority": 8,
-    "reason": "工程架构与系统实现视角强"
-  },
-  {
-    "name": "KDnuggets",
-    "url": "https://www.kdnuggets.com/feed",
-    "category": "Data",
-    "priority": 7,
-    "reason": "AI/ML/数据科学综合覆盖"
+    "priority": 6,
+    "reason": "更新很快，但作为二级信号源使用"
   },
   {
     "name": "arXiv cs.AI",
-    "url": "https://arxiv.org/rss/cs.AI",
+    "url": "https://rss.arxiv.org/rss/cs.AI",
     "category": "AI",
-    "priority": 6,
-    "reason": "研究前沿雷达"
+    "priority": 5,
+    "maxItems": 2,
+    "reason": "研究前沿雷达，适合补充学术方向"
   },
   {
-    "name": "The Rundown AI",
-    "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml",
+    "name": "arXiv cs.CL",
+    "url": "https://rss.arxiv.org/rss/cs.CL",
     "category": "AI",
-    "priority": 7,
-    "reason": "高压缩摘要入口"
+    "priority": 5,
+    "maxItems": 2,
+    "reason": "LLM / NLP 方向的重要论文入口"
   }
 ]

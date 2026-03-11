@@ -30,7 +30,7 @@ A minimal, fast personal blog powered by Vite + React + GitHub Pages.
    Your post content in Markdown...
    ```
 
-3. Push to `main` branch — GitHub Actions will automatically build and deploy in ~90 seconds.
+3. Push to `main` branch — GitHub Pages will automatically build and deploy in ~90 seconds.
 
 ---
 
@@ -42,16 +42,15 @@ src/
   data/
     posts-index.json      ← Auto-generated from posts/ (don't edit)
     posts.json            ← Auto-generated from posts/ (don't edit)
-    tech-news.json        ← Auto-updated daily by GitHub Actions
+    tech-news.json        ← Auto-updated daily by OpenClaw cron
   pages/                  ← React page components
   components/             ← Shared UI components
   contexts/               ← Theme & Language contexts
 scripts/
   build-data.mjs          ← Converts posts/ → JSON (runs before build)
-  fetch-tech-news.mjs     ← Fetches HN + OpenAI processing
+  fetch-tech-news.mjs     ← Legacy HN fetch script (not scheduled)
 .github/workflows/
   deploy.yml              ← Auto-deploy on push to main
-  fetch-tech-news.yml     ← Daily tech news fetch (08:00 UTC)
 ```
 
 ---
@@ -93,9 +92,11 @@ pnpm build        # Build for production
 pnpm preview      # Preview production build
 ```
 
-### Fetch tech news locally:
+### Refresh AI digest locally:
 ```bash
-OPENAI_API_KEY=sk-xxx pnpm fetch-tech
+OPENAI_API_KEY=sk-xxx pnpm fetch-ai-rss
+# or
+bash scripts/run-ai-rss-update.sh
 ```
 
 ---
@@ -122,5 +123,5 @@ OPENAI_API_KEY=sk-xxx pnpm fetch-tech
 - **Styling:** Tailwind CSS v3
 - **Markdown:** gray-matter (parsing) + marked (rendering)
 - **Hosting:** GitHub Pages (free)
-- **CI/CD:** GitHub Actions
-- **AI:** OpenAI GPT-4o-mini (tech news summarization)
+- **CI/CD:** GitHub Pages + OpenClaw cron
+- **AI:** OpenAI/OpenRouter summarization for AI RSS digest

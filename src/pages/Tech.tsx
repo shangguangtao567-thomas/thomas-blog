@@ -1,6 +1,6 @@
 /**
- * Tech Spotlight Page (static version)
- * Reads from src/data/tech-news.json (auto-updated by GitHub Actions daily)
+ * AI Digest Page (static version)
+ * Reads from src/data/tech-news.json (auto-updated by automation daily)
  */
 import { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -80,16 +80,16 @@ export default function Tech() {
               <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>
             </svg>
             <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.15em] font-mono">
-              {language === 'zh' ? '// 科技热点' : '// TECH SPOTLIGHT'}
+              {language === 'zh' ? '// AI 情报流' : '// AI DIGEST'}
             </p>
           </div>
           <h1 className="text-3xl font-bold text-foreground font-display mb-1.5">
-            {language === 'zh' ? '科技热点' : 'Tech Spotlight'}
+            {language === 'zh' ? 'AI 情报流' : 'AI Digest'}
           </h1>
           <p className="text-sm text-muted-foreground font-ui">
             {language === 'zh'
-              ? `来自 Hacker News 的精选内容，AI 汇总 · 共 ${filteredItems.length} 条`
-              : `Curated from Hacker News, AI-summarized · ${filteredItems.length} items`}
+              ? `来自优质 AI RSS 源的每日精选 · 共 ${filteredItems.length} 条`
+              : `Daily curated highlights from high-signal AI RSS feeds · ${filteredItems.length} items`}
           </p>
         </div>
 
@@ -129,8 +129,8 @@ export default function Tech() {
             </h2>
             <p className="text-sm text-muted-foreground font-ui max-w-xs mx-auto">
               {language === 'zh'
-                ? '科技热点将由 GitHub Actions 每天自动更新'
-                : 'Tech news will be auto-updated daily by GitHub Actions'}
+                ? 'AI 情报流将由自动任务每天更新'
+                : 'The AI digest will be refreshed automatically every day'}
             </p>
           </div>
         ) : (
@@ -271,7 +271,7 @@ export default function Tech() {
       <footer className="border-t border-border py-6 px-6 mt-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs text-muted-foreground font-mono text-center">
-            © 2026 Thomas · {language === 'zh' ? 'AI 辅助策展，数据来自 Hacker News' : 'AI-assisted curation, data from Hacker News'}
+            © 2026 Thomas · {language === 'zh' ? 'AI 辅助策展，数据来自精选 AI RSS 源' : 'AI-assisted curation from curated AI RSS sources'}
           </p>
         </div>
       </footer>
