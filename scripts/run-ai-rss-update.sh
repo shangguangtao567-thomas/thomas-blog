@@ -23,5 +23,15 @@ export MAX_AGE_DAYS="${MAX_AGE_DAYS:-3}"
 export MAX_PER_SOURCE="${MAX_PER_SOURCE:-4}"
 
 node scripts/fetch-ai-candidates.mjs
+node scripts/build-ai-digest.mjs
+pnpm build
 
-echo "[ai-rss] candidates ready: src/data/ai-candidates.json"
+if [ -d .git ] && ! git diff --quiet src/data/tech-news.json src/data/ai-candidates.json src/data/ai-digest-report.txt; then
+  git add src/data/tech-news.json src/data/ai-candidates.json src/data/ai-digest-report.txt package.json scripts/fetch-ai-candidates.mjs scripts/build-ai-digest.mjs scripts/run-ai-rss-update.sh
+  git commit -m "chore: refresh AI digest [$(date '+%Y-%m-%d %H:%M')]" || true
+  git push origin "$BRANCH"
+else
+  echo "[ai-rss] No digest changes to commit."
+fi
+
+echo "[ai-rss] report ready: src/data/ai-digest-report.txt"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T03:24:11.091Z",
+  "generatedAt": "2026-03-11T03:46:11.965Z",
   "items": [
     {
       "sourceName": "OpenAI News",
@@ -133,7 +133,7 @@
       "pubDate": "2026-03-09T18:36:33.000Z",
       "sourceDomain": "huggingface.co",
       "id": "huggingface.co-ec92a6e121b6",
-      "score": 92,
+      "score": 91,
       "publishedAt": "2026-03-09"
     },
     {
@@ -148,7 +148,7 @@
       "pubDate": "2026-03-09T16:00:00.000Z",
       "sourceDomain": "github.blog",
       "id": "github.blog-a4ec18135cb6",
-      "score": 91,
+      "score": 90,
       "publishedAt": "2026-03-09"
     },
     {
@@ -287,21 +287,6 @@
       "publishedAt": "2026-03-09"
     },
     {
-      "sourceName": "MarkTechPost",
-      "sourceUrl": "https://www.marktechpost.com/feed/",
-      "categoryHint": "AI",
-      "priority": 6,
-      "reason": "更新很快，但作为二级信号源使用",
-      "title": "Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Gives Your Coding Agent the Up-to-Date API Documentation It Needs",
-      "link": "https://www.marktechpost.com/2026/03/09/andrew-ngs-team-releases-context-hub-an-open-source-tool-that-gives-your-coding-agent-the-up-to-date-api-documentation-it-needs/",
-      "contentSnippet": "In the fast-moving world of agentic workflows, the most powerful AI model is still only as good as its documentation. Today, Andrew Ng and his team at DeepLearning.AI officially launched Context Hub, an open-source tool designed to bridge the gap between an agent’s static training data and the rapidly evolving reality of modern APIs. You […] The post Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Giv…",
-      "pubDate": "2026-03-09T20:47:33.000Z",
-      "sourceDomain": "marktechpost.com",
-      "id": "marktechpost.com-51aaea51420a",
-      "score": 67,
-      "publishedAt": "2026-03-09"
-    },
-    {
       "sourceName": "Simon Willison",
       "sourceUrl": "https://simonwillison.net/atom/everything/",
       "categoryHint": "Tools",
@@ -315,6 +300,21 @@
       "id": "simonwillison.net-bc5e8056d1bc",
       "score": 66,
       "publishedAt": "2026-03-08"
+    },
+    {
+      "sourceName": "MarkTechPost",
+      "sourceUrl": "https://www.marktechpost.com/feed/",
+      "categoryHint": "AI",
+      "priority": 6,
+      "reason": "更新很快，但作为二级信号源使用",
+      "title": "Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Gives Your Coding Agent the Up-to-Date API Documentation It Needs",
+      "link": "https://www.marktechpost.com/2026/03/09/andrew-ngs-team-releases-context-hub-an-open-source-tool-that-gives-your-coding-agent-the-up-to-date-api-documentation-it-needs/",
+      "contentSnippet": "In the fast-moving world of agentic workflows, the most powerful AI model is still only as good as its documentation. Today, Andrew Ng and his team at DeepLearning.AI officially launched Context Hub, an open-source tool designed to bridge the gap between an agent’s static training data and the rapidly evolving reality of modern APIs. You […] The post Andrew Ng’s Team Releases Context Hub: An Open Source Tool that Giv…",
+      "pubDate": "2026-03-09T20:47:33.000Z",
+      "sourceDomain": "marktechpost.com",
+      "id": "marktechpost.com-51aaea51420a",
+      "score": 66,
+      "publishedAt": "2026-03-09"
     },
     {
       "sourceName": "MIT Technology Review / AI",
