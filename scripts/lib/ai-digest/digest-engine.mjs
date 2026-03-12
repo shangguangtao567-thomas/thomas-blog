@@ -16,9 +16,9 @@ const THEME_RULES = [
     themeEn: 'Model safety and controllability',
     keywords: ['instruction hierarchy', 'prompt injection', 'safety', 'guardrail', 'jailbreak', 'policy', 'alignment', 'steerability'],
     whyZh: '这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。',
-    whyEn: 'This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.',
+    whyEn: 'This changes whether models can be trusted to follow the right instructions under pressure, which is foundational for enterprise use, controllable agents, and higher-risk deployments.',
     watchZh: '接下来要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。',
-    watchEn: 'Watch whether it moves into APIs, system-prompt policy controls, and public eval baselines instead of remaining a research-only result.',
+    watchEn: 'The next question is whether this moves into APIs, policy controls, and shared eval baselines instead of remaining a research-side result.',
     focusZh: '让模型在复杂提示冲突里更可控',
     focusEn: 'making models more controllable under conflicting instructions',
     topicZh: '安全控制与指令层级',
@@ -31,9 +31,9 @@ const THEME_RULES = [
     themeEn: 'Agents and developer tooling',
     keywords: ['agent', 'workflow', 'copilot', 'sdk', 'developer', 'cli', 'tool use', 'tooling', 'execution', 'automation', 'app building', 'coding'],
     whyZh: '行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。',
-    whyEn: 'The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.',
+    whyEn: 'The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.',
     watchZh: '后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。',
-    watchEn: 'Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.',
+    watchEn: 'What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.',
     focusZh: '把模型能力变成可编排的执行链路',
     focusEn: 'turning model capability into orchestrated execution workflows',
     topicZh: 'Agent 工作流与开发工具',
@@ -46,9 +46,9 @@ const THEME_RULES = [
     themeEn: 'Retrieval, multimodal, and memory systems',
     keywords: ['embedding', 'retrieval', 'rag', 'vector', 'multimodal', 'image', 'video', 'audio', 'memory', 'search', 'document'],
     whyZh: '这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。',
-    whyEn: 'These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.',
+    whyEn: 'These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.',
     watchZh: '接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。',
-    watchEn: 'Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response.',
+    watchEn: 'Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.',
     focusZh: '提升非结构化信息进入同一检索空间的能力',
     focusEn: 'bringing more unstructured data into the same retrieval space',
     topicZh: '多模态检索与记忆',
@@ -61,9 +61,9 @@ const THEME_RULES = [
     themeEn: 'AI product experience',
     keywords: ['chatgpt', 'gemini', 'claude', 'copilot chat', 'students', 'learn', 'math', 'science', 'education', 'workspace', 'sheets', 'consumer'],
     whyZh: '当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。',
-    whyEn: 'Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.',
+    whyEn: 'Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.',
     watchZh: '后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。',
-    watchEn: 'The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization.',
+    watchEn: 'The next signal is behavior: more frequent use, new habits, and eventually some retention or monetization proof.',
     focusZh: '把 AI 能力做成可重复使用的产品体验',
     focusEn: 'turning capability into repeatable product behavior',
     topicZh: '产品体验升级',
@@ -76,9 +76,9 @@ const THEME_RULES = [
     themeEn: 'Open models and ecosystems',
     keywords: ['open source', 'open model', 'apache', 'mit license', 'weights', 'hugging face', 'model card', 'community'],
     whyZh: '开源动作通常会改变谁能拿到能力、以什么成本落地，以及外围生态会围绕哪些模型和工具形成共识。',
-    whyEn: 'Open-source moves change who can access capability, at what cost, and which models or tools the surrounding ecosystem standardizes around.',
+    whyEn: 'Open releases reshape who gets access, at what cost, and which models or tools the broader ecosystem starts to standardize around.',
     watchZh: '重点看许可证、部署门槛、社区跟进速度，以及是否出现围绕它的新工具链和最佳实践。',
-    watchEn: 'Watch the license, deployment requirements, community uptake, and whether new tooling or best practices form around it.',
+    watchEn: 'Watch the license, deployment threshold, community uptake, and whether new tooling and best practices gather around it.',
     focusZh: '把能力扩散到更广的开发者和本地部署场景',
     focusEn: 'spreading capability across more developers and local deployment scenarios',
     topicZh: '开源生态与模型扩散',
@@ -91,9 +91,9 @@ const THEME_RULES = [
     themeEn: 'AI infrastructure',
     keywords: ['gpu', 'inference', 'storage', 'server', 'cloud', 'datacenter', 'throughput', 'latency', 'infra', 'deployment', 'cluster'],
     whyZh: '基础设施变化往往决定成本、吞吐、协作和交付速度，虽然不总是最吸睛，但对团队能否大规模落地最关键。',
-    whyEn: 'Infrastructure changes often decide cost, throughput, collaboration, and delivery speed. They are rarely the flashiest updates, but they often decide whether teams can scale real deployments.',
+    whyEn: 'Infrastructure shifts decide cost, throughput, delivery speed, and how much friction real deployment still carries.',
     watchZh: '接下来要看这类能力会不会真正进入默认工作流，以及是否显著改变推理成本、部署复杂度或数据协同方式。',
-    watchEn: 'Watch whether these capabilities land in default workflows and materially change inference cost, deployment complexity, or data collaboration patterns.',
+    watchEn: 'Watch whether this becomes default workflow plumbing and materially changes inference cost, deployment complexity, or data collaboration.',
     focusZh: '降低规模化部署的摩擦',
     focusEn: 'reducing friction in scaled deployment',
     topicZh: '部署、算力与数据基础设施',
@@ -106,9 +106,9 @@ const THEME_RULES = [
     themeEn: 'Data and evaluation infrastructure',
     keywords: ['dataset', 'benchmark', 'evaluation', 'open data', 'leaderboard', 'training data', 'eval'],
     whyZh: '数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。',
-    whyEn: 'Data supply and evaluation standards shape the ceiling of model performance, and they redefine how teams compare capability, optimize training, and choose directions.',
+    whyEn: 'Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.',
     watchZh: '值得继续跟进的是：它会不会被社区广泛复用，是否成为新的默认比较口径。',
-    watchEn: 'The key question is whether the community actually reuses it and whether it becomes part of the default comparison stack.',
+    watchEn: 'The real question is whether the community reuses it enough for it to become part of the default comparison stack.',
     focusZh: '提高训练与比较的可复用性',
     focusEn: 'making training and comparison more reusable',
     topicZh: '数据与评测基线',
@@ -121,9 +121,9 @@ const THEME_RULES = [
     themeEn: 'Frontier research and capability shifts',
     keywords: ['research', 'paper', 'frontier', 'reasoning', 'training', 'model', 'capability', 'challenge'],
     whyZh: '研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。',
-    whyEn: 'Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.',
+    whyEn: 'Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.',
     watchZh: '要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。',
-    watchEn: 'Watch for replications, open implementations, API exposure, or absorption into mainstream products.',
+    watchEn: 'The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.',
     focusZh: '推动能力边界继续外扩',
     focusEn: 'pushing the capability frontier outward',
     topicZh: '研究前沿',
@@ -261,56 +261,92 @@ function pickEvidenceSentences(item) {
   return evidence.filter(line => line.length >= 28).slice(0, 3);
 }
 
-function actionLabelZh(action) {
-  switch (action) {
-    case 'open-source': return '开源';
-    case 'integration': return '推进';
-    case 'research': return '公布';
-    case 'tutorial': return '拆解';
-    case 'commercial': return '产品化';
-    case 'release': return '发布';
-    case 'benchmark': return '刷新';
-    default: return '更新';
+function normalizePhraseCase(text = '') {
+  return cleanText(text)
+    .replace(/\bAI\b/gi, 'AI')
+    .replace(/\bOpenAI\b/gi, 'OpenAI')
+    .replace(/\bChatGPT\b/gi, 'ChatGPT')
+    .replace(/\bGitHub\b/gi, 'GitHub')
+    .replace(/\bGoogle\b/gi, 'Google')
+    .replace(/\bGemini\b/gi, 'Gemini')
+    .replace(/\bHugging Face\b/gi, 'Hugging Face')
+    .trim();
+}
+
+function clipEvidence(text = '', max = 110) {
+  return trimText(cleanText(text).replace(/[。；;:]$/, ''), max);
+}
+
+function firstStrongEvidence(item, evidence, lang = 'en') {
+  if (!evidence.length) {
+    return lang === 'zh'
+      ? (item.bodyFetched ? '正文给出了更具体的落地细节。' : '目前公开细节仍然偏少，更多还是标题级信号。')
+      : (item.bodyFetched ? 'The full article adds more implementation detail.' : 'Public detail is still fairly thin, so this remains a headline-level signal.');
   }
+
+  const line = lang === 'zh'
+    ? replaceTermsZh(clipEvidence(evidence[0], 72))
+    : clipEvidence(evidence[0], 120);
+
+  if (lang === 'zh') {
+    return item.bodyFetched ? `文中最值得记的一处细节是：${line}` : `目前能确认的公开信号是：${line}`;
+  }
+  return item.bodyFetched ? `The most useful detail in the piece is this: ${line}` : `The clearest public signal so far is this: ${line}`;
+}
+
+function titleCasePhrase(text = '') {
+  return normalizePhraseCase(text)
+    .split(/\s+/)
+    .map(word => word.length <= 3 ? word : word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 function composeWhatChangedEn(actor, action, topicEn, theme) {
   switch (action) {
-    case 'open-source': return `${actor} open-sourced work around ${topicEn}, making it easier for the wider ecosystem to reuse and inspect.`;
-    case 'integration': return `${actor} pushed ${topicEn} deeper into product and developer workflows, extending ${theme.focusEn}.`;
+    case 'open-source': return `${actor} opened up work around ${topicEn}, making it easier for the wider ecosystem to inspect, reuse, and build on.`;
+    case 'integration': return `${actor} moved ${topicEn} deeper into product and developer workflows, which is really about ${theme.focusEn}.`;
     case 'research': return `${actor} published a research-led update around ${topicEn}, aimed at ${theme.focusEn}.`;
-    case 'tutorial': return `${actor} published a hands-on walkthrough around ${topicEn}, showing how the capability is moving into real workflows.`;
-    case 'commercial': return `${actor} tied ${topicEn} to a more productized rollout, suggesting a stronger go-to-market push.`;
-    case 'release': return `${actor} rolled out a new move around ${topicEn}, continuing its push on ${theme.focusEn}.`;
-    case 'benchmark': return `${actor} framed ${topicEn} as a performance step-change rather than a minor iteration.`;
-    default: return `${actor} published a meaningful update around ${topicEn}.`;
+    case 'tutorial': return `${actor} published a hands-on account of ${topicEn}, with the emphasis on how it behaves in a real workflow rather than in abstract.`;
+    case 'commercial': return `${actor} tied ${topicEn} to a more explicit product push, suggesting the story is moving closer to distribution and adoption.`;
+    case 'release': return `${actor} rolled out a fresh move around ${topicEn}, continuing its push on ${theme.focusEn}.`;
+    case 'benchmark': return `${actor} framed ${topicEn} as a notable performance jump rather than a routine iteration.`;
+    default: return `${actor} put out a meaningful update around ${topicEn}.`;
   }
 }
 
 function composeWhatChangedZh(actor, action, topicZh, theme) {
   switch (action) {
-    case 'open-source': return `${actor}把围绕${topicZh}的成果进一步开放出来，让外部生态更容易复用、验证和继续搭建。`;
-    case 'integration': return `${actor}把${topicZh}继续往产品和开发者工作流里推进，重点是${theme.focusZh}。`;
-    case 'research': return `${actor}公布了一项围绕${topicZh}的研究型更新，目标是${theme.focusZh}。`;
-    case 'tutorial': return `${actor}发布了一篇围绕${topicZh}的实践拆解，重点不是概念，而是它如何进入真实工作流。`;
-    case 'commercial': return `${actor}把${topicZh}和更明确的产品化动作绑在一起，说明它正在往业务入口靠近。`;
+    case 'open-source': return `${actor}把围绕${topicZh}的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。`;
+    case 'integration': return `${actor}把${topicZh}继续往产品和开发者工作流里压，重点已经不是演示能力，而是${theme.focusZh}。`;
+    case 'research': return `${actor}放出了一项围绕${topicZh}的研究型更新，指向的是${theme.focusZh}。`;
+    case 'tutorial': return `${actor}给出了一篇围绕${topicZh}的实践拆解，重点不在概念，而在它怎么进真实工作流。`;
+    case 'commercial': return `${actor}把${topicZh}和更明确的产品化动作绑在一起，说明这件事正在往业务入口靠近。`;
     case 'release': return `${actor}围绕${topicZh}又往前推了一步，继续沿着“${theme.focusZh}”这条线加速。`;
-    case 'benchmark': return `${actor}把${topicZh}放进更强的性能与评测叙事里，这不是一次普通的小改版。`;
-    default: return `${actor}发布了一条围绕${topicZh}的重要更新。`;
+    case 'benchmark': return `${actor}把${topicZh}放进更强的性能叙事里，这不是一次普通的小改版。`;
+    default: return `${actor}带来了一条围绕${topicZh}的重要更新。`;
   }
 }
 
-function buildLocalizedTitleZh(item, actor, action, topicZh) {
+function buildLocalizedTitleZh(item, actor, action, topicZh, theme) {
   const originalTitle = cleanText(item.title || item.pageTitle || '');
   if (containsChinese(originalTitle)) return originalTitle;
-  if (action === 'tutorial' && /rakuten/i.test(originalTitle)) return 'Rakuten 用 Codex 把修复速度拉快';
-  if (action === 'research' && /heart health/i.test(originalTitle)) return 'Google 把 AI 心血管筛查带到偏远地区';
-  if (action === 'benchmark' && /deepresearch/i.test(originalTitle)) return 'NVIDIA AI-Q 登顶 DeepResearch Bench';
-  return `${actor}${actionLabelZh(action)}${topicZh}`;
+  if (/heart health/i.test(originalTitle)) return 'Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务';
+  if (/deepresearch/i.test(originalTitle)) return 'NVIDIA AI-Q 登顶 DeepResearch Bench，Agent 工程开始卷长链路稳定性';
+  if (/computer environment/i.test(originalTitle)) return 'OpenAI 把 agent runtime 讲明白了：模型之外，环境也开始产品化';
+  if (/prompt injection/i.test(originalTitle)) return '挡提示注入，OpenAI 先补的是 agent 这层的防线';
+  if (/rakuten/i.test(originalTitle)) return 'Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标';
+  if (/wayfair/i.test(originalTitle)) return 'Wayfair 案例说明：AI 的价值正在从客服问答转到业务流程改写';
+  if (/sheets/i.test(originalTitle)) return 'Gemini 进了表格，AI 开始接手更具体的办公室动作';
+  if (/embedding/i.test(originalTitle)) return '多模态 embedding 继续往前卷，检索层开始重新洗牌';
+  return `${actor}｜${theme.themeZh}`;
 }
 
-function buildCardHeadlineEn(item, actor, action, topicEn) {
-  return cleanText(item.title || item.pageTitle || `${actor} update on ${topicEn}`);
+function buildCardHeadlineEn(item, actor, action, topicEn, theme) {
+  const originalTitle = cleanText(item.title || item.pageTitle || '');
+  if (originalTitle) return normalizePhraseCase(originalTitle);
+  if (action === 'tutorial') return `${actor} gets specific about ${topicEn} in production`;
+  if (action === 'benchmark') return `${actor} turns ${topicEn} into a performance story`;
+  return `${actor} pushes on ${theme.themeEn.toLowerCase()}`;
 }
 
 function buildBriefTitleZh(item, actor, theme) {
@@ -323,42 +359,114 @@ function buildBriefTitleZh(item, actor, theme) {
 
 function buildBriefTitleEn(item, actor, theme) {
   const title = cleanText(item.titleEn || item.title || item.pageTitle || '');
-  if (title) return title;
+  if (title) return normalizePhraseCase(title);
   return `${actor} | ${theme.themeEn}`;
 }
 
-function buildLeadSentenceZh(actor, titleZh, whatChangedZh) {
-  return `${actor}这次的更新，核心不是多发了一条新闻，而是 ${trimText(whatChangedZh, 72)}`;
+function chooseZhAngle(theme, action, actor) {
+  if (theme.key === 'agents-tools') return `${actor}想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。`;
+  if (theme.key === 'safety') return `这条更新真正关心的不是概念安全，而是模型在复杂链路里还能不能守住边界。`;
+  if (theme.key === 'retrieval-multimodal') return `看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。`;
+  if (theme.key === 'products') return `重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。`;
+  if (theme.key === 'data-eval') return `它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。`;
+  if (action === 'tutorial') return `值得看的是，它给出的不只是观点，而是更接近工作流现场的做法。`;
+  return `这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。`;
 }
 
-function buildLeadSentenceEn(actor, whatChangedEn) {
-  return `The headline from ${actor} is not just a fresh announcement, but that ${trimText(whatChangedEn, 120)}`;
+function chooseEnAngle(theme, action, actor) {
+  if (theme.key === 'agents-tools') return `${actor} is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow.`;
+  if (theme.key === 'safety') return `The point here is not safety theater; it is whether models can keep their footing when instructions start to conflict.`;
+  if (theme.key === 'retrieval-multimodal') return `This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice.`;
+  if (theme.key === 'products') return `The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior.`;
+  if (theme.key === 'data-eval') return `On the surface this is about data or benchmarks; underneath, it is about who gets to define the comparison standard.`;
+  if (action === 'tutorial') return `What makes this worth reading is that it is closer to workflow reality than to abstract positioning.`;
+  return `What makes this worth following is that it pushes the broader industry arc a little further forward.`;
 }
 
-function buildEvidenceReferenceZh(item, evidence) {
-  if (!evidence.length) return item.bodyFetched ? '从正文能看到更完整的落地细节。' : '目前公开信息还主要停留在标题和摘要层面。';
-  const line = replaceTermsZh(trimText(evidence[0], 70));
-  return item.bodyFetched ? `正文里一个很能说明问题的细节是：${line}` : `目前最明确的公开信号是：${line}`;
+function buildNarrativeZh(item, actor, theme, action, whatChangedZh, whyZh, watchZh, evidence) {
+  const originalTitle = cleanText(item.title || item.pageTitle || '');
+  const evidenceLine = firstStrongEvidence(item, evidence, 'zh');
+
+  if (theme.key === 'agents-tools') {
+    return [
+      trimText(`${whatChangedZh}${/rakuten/i.test(originalTitle) ? ' 这类案例最有意思的地方，是它已经不再停留在“开发者喜欢不喜欢”，而是开始拿 MTTR、评审效率、CI/CD 这类业务指标说话。' : ` ${chooseZhAngle(theme, 'integration', actor)}`}`, 140),
+      trimText(`${evidenceLine} 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。`, 140),
+      trimText(`接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。${watchZh}`, 140),
+    ];
+  }
+
+  if (theme.key === 'safety') {
+    return [
+      trimText(`${whatChangedZh}${chooseZhAngle(theme, 'research', actor)}`, 140),
+      trimText(`${evidenceLine} 这件事一旦做不好，Agent 在企业和高风险场景里的可用性就会被直接卡住。`, 140),
+      trimText(`${whyZh}${watchZh}`, 140),
+    ];
+  }
+
+  if (theme.key === 'retrieval-multimodal' || theme.key === 'data-eval') {
+    return [
+      trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
+      trimText(`${evidenceLine} 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。`, 140),
+      trimText(`${whyZh}${watchZh}`, 140),
+    ];
+  }
+
+  if (theme.key === 'products') {
+    return [
+      trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
+      trimText(`${evidenceLine} 一旦用户开始在日常动作里反复用到它，竞争维度就会从“能力有没有”转向“入口深不深、习惯强不强”。`, 140),
+      trimText(`所以后面该盯的，不只是发布节奏，而是使用频率、留存和付费这些更硬的产品信号。${watchZh}`, 140),
+    ];
+  }
+
+  return [
+    trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
+    trimText(`${evidenceLine} ${whyZh}`, 140),
+    trimText(`如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。${watchZh}`, 140),
+  ];
 }
 
-function buildEvidenceReferenceEn(item, evidence) {
-  if (!evidence.length) return item.bodyFetched ? 'The full article adds useful implementation detail.' : 'Public detail is still limited to the headline-level framing.';
-  const line = trimText(evidence[0], 120);
-  return item.bodyFetched ? `One concrete detail from the article stands out: ${line}` : `The clearest public signal so far is: ${line}`;
-}
+function buildNarrativeEn(item, actor, theme, action, whatChangedEn, whyEn, watchEn, evidence) {
+  const originalTitle = cleanText(item.title || item.pageTitle || '');
+  const evidenceLine = firstStrongEvidence(item, evidence, 'en');
 
-function buildNarrativeZh(item, actor, theme, whatChangedZh, whyZh, watchZh, evidence) {
-  const p1 = `${buildLeadSentenceZh(actor, item.titleZh, whatChangedZh)} ${buildEvidenceReferenceZh(item, evidence)}`;
-  const p2 = `这条消息值得看，不只是因为它本身新，而是因为它和最近的行业主线接得上：${whyZh}`;
-  const p3 = `如果把它放回这几周的节奏里看，更大的问题是它会不会很快从展示走向默认能力。${watchZh}`;
-  return [p1, p2, p3].map(line => trimText(line, 140));
-}
+  if (theme.key === 'agents-tools') {
+    return [
+      trimText(`${whatChangedEn} ${/rakuten/i.test(originalTitle) ? 'That matters because the story is already shifting from developer enthusiasm to operating metrics like MTTR, review speed, and CI/CD throughput.' : chooseEnAngle(theme, 'integration', actor)}`, 220),
+      trimText(`${evidenceLine} In other words, the race is no longer just about who answers well; it is about who plugs into software and keeps the surrounding workflow intact.`, 220),
+      trimText(`What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies. ${watchEn}`, 220),
+    ];
+  }
 
-function buildNarrativeEn(item, actor, theme, whatChangedEn, whyEn, watchEn, evidence) {
-  const p1 = `${buildLeadSentenceEn(actor, whatChangedEn)} ${buildEvidenceReferenceEn(item, evidence)}`;
-  const p2 = `The reason this matters is not only the update itself, but how neatly it fits the broader thread: ${whyEn}`;
-  const p3 = `Placed against the last few weeks, the bigger question is whether this moves from a showcase into a default capability. ${watchEn}`;
-  return [trimText(p1, 220), trimText(p2, 220), trimText(p3, 220)];
+  if (theme.key === 'safety') {
+    return [
+      trimText(`${whatChangedEn} ${chooseEnAngle(theme, 'research', actor)}`, 220),
+      trimText(`${evidenceLine} If this layer does not hold, controllable agents in enterprise and higher-risk settings stay much harder to trust.`, 220),
+      trimText(`${whyEn} ${watchEn}`, 220),
+    ];
+  }
+
+  if (theme.key === 'retrieval-multimodal' || theme.key === 'data-eval') {
+    return [
+      trimText(`${whatChangedEn} ${chooseEnAngle(theme, action, actor)}`, 220),
+      trimText(`${evidenceLine} These are not always the loudest headlines, but they often decide the ceiling for a whole wave of downstream products.`, 220),
+      trimText(`${whyEn} ${watchEn}`, 220),
+    ];
+  }
+
+  if (theme.key === 'products') {
+    return [
+      trimText(`${whatChangedEn} ${chooseEnAngle(theme, action, actor)}`, 220),
+      trimText(`${evidenceLine} Once people start using a feature inside everyday tasks, the contest shifts from raw capability to habit, entry point, and product depth.`, 220),
+      trimText(`So the next signals to watch are not more launch copy, but usage frequency, retention, and eventually monetization. ${watchEn}`, 220),
+    ];
+  }
+
+  return [
+    trimText(`${whatChangedEn} ${chooseEnAngle(theme, action, actor)}`, 220),
+    trimText(`${evidenceLine} ${whyEn}`, 220),
+    trimText(`Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. ${watchEn}`, 220),
+  ];
 }
 
 function buildSectionLabelZh(theme, index) {
@@ -392,27 +500,45 @@ function buildBodyCoverage(items = []) {
 
 function buildHeroSummaryZh(items, themes, windowHours) {
   if (!items.length) return `过去 ${windowHours} 小时没有出现值得单独展开的高信号更新。`;
-  const actorSet = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
-  const themeText = themes.slice(0, 2).map(item => item.themeZh).join('、');
-  return `今天这期 AI 日报有两条并行主线：一条是 ${themeText || '能力边界的继续外扩'}，另一条是这些能力正越来越快地落到具体产品和工作流里。${actorSet.length ? `${actorSet.join('、')} 都在用不同方式把这件事往前推。` : ''}`;
+  const actors = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
+  const topTheme = themes[0]?.themeZh || '能力边界';
+  const secondTheme = themes[1]?.themeZh || '产品与工作流';
+  if (themes[0]?.themeZh && themes[1]?.themeZh) {
+    return `今天这期更像两条线同时加速：一条是 ${topTheme}，另一条是 ${secondTheme}。${actors.length ? `${actors.join('、')} 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。` : '几条更新都在把同一个问题往前推：能力怎样真正接进现实流程。'}`;
+  }
+  return `过去 ${windowHours} 小时里，AI 领域最值得看的不是单条新闻，而是一条更清晰的方向：${topTheme} 正在更快地往真实产品和工作流里落。`;
 }
 
 function buildHeroSummaryEn(items, themes, windowHours) {
   if (!items.length) return `There were no high-signal AI updates in the last ${windowHours} hours worth expanding today.`;
   const actors = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
-  const themeText = themes.slice(0, 2).map(item => item.themeEn).join(' and ');
-  return `Today's AI Daily follows two connected threads: ${themeText || 'capability expansion'}, and the speed at which those capabilities are moving into real products and workflows. ${actors.length ? `${actors.join(', ')} are all pushing on that arc from different angles.` : ''}`;
+  const topTheme = themes[0]?.themeEn || 'capability shifts';
+  const secondTheme = themes[1]?.themeEn || 'products and workflows';
+  if (themes[0]?.themeEn && themes[1]?.themeEn) {
+    return `This issue is really about two lines accelerating at once: ${topTheme}, and ${secondTheme}. ${actors.length ? `${actors.join(', ')} are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.` : 'Across the items, the shared question is whether capability survives contact with real workflows.'}`;
+  }
+  return `The clearest signal from the last ${windowHours} hours is not one announcement, but a direction: AI capability is moving closer to real product and workflow use.`;
 }
 
 function buildTitleSummaryZh(items, themes) {
+  const titles = items.map(item => item.titleZh || '');
+  if (titles.some(title => /提示注入|指令层级/.test(title)) && titles.some(title => /Codex|agent|工作流/i.test(title))) return '安全边界与 agent 落地，正在一起往前推';
+  if (titles.some(title => /表格|ChatGPT|心血管|Wayfair/.test(title))) return 'AI 正在离“会回答”更远，离“真能干活”更近';
   const actors = uniqueStrings(items.slice(0, 3).map(item => inferActor(item)));
-  if (themes[0]?.themeZh && actors.length >= 2) return `${actors.slice(0, 2).join('、')}都在把 AI 从能力展示推向真实工作流`;
-  if (themes[0]?.themeZh) return `${themes[0].themeZh}继续升温`;
+  if (themes[0]?.themeZh && actors.length >= 2) return `${actors.slice(0, 2).join('、')}都在把 AI 往真实工作流里送`;
+  if (themes[0]?.themeZh) return `${themes[0].themeZh}这一侧又有新动静`;
   return '近 24 小时重点更新';
 }
 
-function buildTitleSummaryEn(themes) {
-  if (themes[0]?.themeEn) return `Where AI capability is turning into workflow`; 
+function buildTitleSummaryEn(themes, items) {
+  const titles = items.map(item => cleanText(item.titleEn || item.title || ''));
+  if (titles.some(title => /prompt injection|instruction hierarchy/i.test(title)) && titles.some(title => /codex|agent|workflow/i.test(title))) {
+    return 'Safety and agent execution are starting to converge';
+  }
+  if (titles.some(title => /sheets|chatgpt|heart health|wayfair/i.test(title))) {
+    return 'AI is moving away from novelty and closer to actual work';
+  }
+  if (themes[0]?.themeEn) return 'Where AI starts to look more like infrastructure than demo';
   return 'High-signal updates';
 }
 
@@ -429,14 +555,14 @@ function buildItem(item, index) {
   const whyItMattersZh = theme.whyZh;
   const watchNextEn = theme.watchEn;
   const watchNextZh = theme.watchZh;
-  const narrativeZh = buildNarrativeZh(item, actor, theme, whatChangedZh, whyItMattersZh, watchNextZh, evidence);
-  const narrativeEn = buildNarrativeEn(item, actor, theme, whatChangedEn, whyItMattersEn, watchNextEn, evidence);
+  const narrativeZh = buildNarrativeZh(item, actor, theme, action, whatChangedZh, whyItMattersZh, watchNextZh, evidence);
+  const narrativeEn = buildNarrativeEn(item, actor, theme, action, whatChangedEn, whyItMattersEn, watchNextEn, evidence);
   const summaryZh = trimText(narrativeZh.slice(0, 2).join(' '), 150);
   const summaryEn = trimText(narrativeEn.slice(0, 2).join(' '), 240);
   const labels = relativeTimeLabels(item.pubDate || item.publishedAt);
 
-  const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh);
-  const titleEn = buildCardHeadlineEn(item, actor, action, topics.topicEn);
+  const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh, theme);
+  const titleEn = buildCardHeadlineEn(item, actor, action, topics.topicEn, theme);
 
   return {
     id: item.id,
@@ -451,8 +577,8 @@ function buildItem(item, index) {
     kickerEn: `${actor} · ${theme.themeEn}`,
     summaryZh,
     summaryEn,
-    deckZh: trimText(whatChangedZh, 90),
-    deckEn: trimText(whatChangedEn, 150),
+    deckZh: trimText(whatChangedZh, 92),
+    deckEn: trimText(whatChangedEn, 156),
     narrativeZh,
     narrativeEn,
     whatChangedZh,
@@ -500,11 +626,11 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
   const themes = buildThemes(items);
   const bodyCoverage = buildBodyCoverage(items);
   const titleSummaryZh = buildTitleSummaryZh(items, themes);
-  const titleSummaryEn = buildTitleSummaryEn(themes);
-  const introZh = buildHeroSummaryZh(items, themes, windowHours) + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有回填更早内容。` : '');
-  const introEn = buildHeroSummaryEn(items, themes, windowHours) + (limitedUpdateWindow ? ` High-signal items were limited in the last ${windowHours} hours, so older items were intentionally not backfilled.` : '');
-  const excerptZh = items.length ? trimText(`${introZh} 下面几条按“先看主线、再看落地”的顺序展开。`, 120) : `近 ${windowHours} 小时重点更新有限，今天不混入更早内容。`;
-  const excerptEn = items.length ? trimText(`${introEn} The entries below are ordered to read from the main thread into concrete execution signals.`, 180) : `Updates in the last ${windowHours} hours were limited, so older items were intentionally excluded.`;
+  const titleSummaryEn = buildTitleSummaryEn(themes, items);
+  const introZh = buildHeroSummaryZh(items, themes, windowHours) + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有拿更早的消息来凑数。` : '');
+  const introEn = buildHeroSummaryEn(items, themes, windowHours) + (limitedUpdateWindow ? ` High-signal items were thin in the last ${windowHours} hours, so older material was deliberately left out rather than padded in.` : '');
+  const excerptZh = items.length ? trimText(`${introZh} 下面这几条按重要性和可读性往下排，先抓方向，再看细节。`, 120) : `近 ${windowHours} 小时重点更新有限，今天不混入更早内容。`;
+  const excerptEn = items.length ? trimText(`${introEn} The entries below are ordered to help you catch the line of travel first, then the concrete details.`, 180) : `Updates in the last ${windowHours} hours were limited, so older items were intentionally excluded.`;
 
   return {
     slug: `ai-daily-${date}`,
