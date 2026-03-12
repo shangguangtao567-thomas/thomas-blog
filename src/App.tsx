@@ -1,105 +1,26 @@
-import { useState, useEffect } from 'react';
+import { Route, Switch } from 'wouter';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import PostDetail from './pages/PostDetail';
 import Tech from './pages/Tech';
-import TopicArchive from './pages/TopicArchive';
-import { ThemeProvider } from './contexts/ThemeContext';
-import { LanguageProvider } from './contexts/LanguageContext';
-import { ensurePlausible, trackPageview } from './lib/analytics';
-
-const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-function stripBase(path: string): string {
-  if (BASE && path.startsWith(BASE)) {
-    return path.slice(BASE.length) || '/';
-  }
-  return path || '/';
-}
-
-function normalizePath(path: string): string {
-  if (!path || path === '/') return '/';
-  return path.replace(/\/+$/, '');
-}
-
-function parseRoute(rawPath: string): { page: string; slug?: string } {
-  const path = normalizePath(stripBase(rawPath));
-  if (path === '/' || path === '') return { page: 'home' };
-  if (path === '/blog') return { page: 'blog' };
-  if (path === '/tech') return { page: 'tech' };
-  const topicMatch = path.match(/^\/topic\/(.+)$/);
-  if (topicMatch) return { page: 'topic', slug: topicMatch[1] };
-  const blogMatch = path.match(/^\/blog\/(.+)$/);
-  if (blogMatch) return { page: 'post', slug: blogMatch[1] };
-  return { page: '404' };
-}
-
-function AppInner() {
-  const [currentPath, setCurrentPath] = useState(() => window.location.pathname || '/');
-
-  useEffect(() => {
-    const handlePopState = () => setCurrentPath(window.location.pathname);
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  useEffect(() => {
-    ensurePlausible();
-  }, []);
-
-  useEffect(() => {
-    trackPageview(currentPath || '/');
-  }, [currentPath]);
-
-  const navigate = (path: string) => {
-    const fullPath = BASE + path;
-    window.history.pushState({}, '', fullPath);
-    setCurrentPath(fullPath);
-    window.scrollTo(0, 0);
-  };
-
-  const route = parseRoute(currentPath);
-
-  const renderPage = () => {
-    switch (route.page) {
-      case 'home':
-        return <Home navigate={navigate} />;
-      case 'blog':
-        return <Blog navigate={navigate} />;
-      case 'tech':
-        return <Tech navigate={navigate} />;
-      case 'topic':
-        return <TopicArchive slug={route.slug!} navigate={navigate} />;
-      case 'post':
-        return <PostDetail slug={route.slug!} navigate={navigate} />;
-      default:
-        return (
-          <div className="min-h-screen flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-6xl font-mono font-bold text-muted-foreground mb-4">404</p>
-              <button
-                onClick={() => navigate('/')}
-                className="text-sm text-muted-foreground hover:text-foreground font-ui underline underline-offset-4"
-                style={{ background: 'none', border: 'none', padding: 0 }}
-              >
-                Go home
-              </button>
-            </div>
-          </div>
-        );
-    }
-  };
-
-  return <Layout currentPath={currentPath} navigate={navigate}>{renderPage()}</Layout>;
-}
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <AppInner />
-      </LanguageProvider>
-    </ThemeProvider>
+    <Layout>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug" component={PostDetail} />
+        <Route path="/briefing" component={Tech} />
+        <Route path="/tech" component={Tech} />
+        <Route>
+          <div className="site-container" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
+            <p style={{ color: '#6b6b6b', fontSize: '0.875rem' }}>Page not found.</p>
+            <a href="/" style={{ fontSize: '0.875rem', color: '#a8a8a8', marginTop: '1rem', display: 'inline-block' }}>← Home</a>
+          </div>
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
