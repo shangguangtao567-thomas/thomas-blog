@@ -2,14 +2,14 @@
   {
     "slug": "ai-daily-2026-03-12",
     "kind": "digest",
-    "titleZh": "2026-03-12 AI 日报：Google公布数据集",
-    "titleEn": "2026-03-12 AI Daily Briefing",
-    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
-    "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "titleZh": "AI 日报｜Google、Hugging Face都在把 AI 从能力展示推向真实工作流",
+    "titleEn": "AI Daily | Where AI capability is turning into workflow",
+    "excerptZh": "今天这期 AI 日报有两条并行主线：一条是 前沿研究与能力边界、Agent 与开发者工具，另一条是这些能力正越来越快地落到具体产品和工作流里。Google、Hugging Face、OpenAI 都在用不同方式把这件事往前推…",
+    "excerptEn": "Today's AI Daily follows two connected threads: Frontier research and capability shifts and Agents and developer tooling…",
     "tag": "AI 日报",
     "tagEn": "AI Daily",
     "image": "",
-    "readTime": 27,
+    "readTime": 21,
     "publishedAt": "2026-03-12T00:00:00.000Z"
   },
   {

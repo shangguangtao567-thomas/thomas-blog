@@ -10,9 +10,9 @@
     "totalWords": 2390,
     "ratio": 0.4
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-12）\n网站地址：<https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>\n口径：只看近 24 小时；高价值条目优先抓正文（2/5）。\n今日主线：\n1. Google公布数据集 —— Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。\n2. Hugging Face开源上下文窗口、开源 —— Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。\n3. OpenAI推进研究前沿 —— OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。\n4. OpenAI推进提示注入、工作流 —— OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
-  "messageEn": "✅ AI digest updated successfully (2026-03-12)\nDigest URL: <https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>\nScope: last 24 hours only; full-body fetches for high-value items (2/5).\nTop lines:\n1. How AI is helping improve heart health in rural Australia — Google published a research-driven update around dataset…\n2. How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II — Hugging Face turned work around context window and open source into something the wider ec…\n3. From model to agent: Equipping the Responses API with a computer environment — OpenAI pushed research frontier deeper into product and developer workflows…",
-  "generatedAt": "2026-03-12T04:02:36.560Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-12）\n网站地址：<https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>\n今日导语：今天这期 AI 日报有两条并行主线：一条是 前沿研究与能力边界、Agent 与开发者工具，另一条是这些能力正越来越快地落到具体产品和工作流里…\n今天展开：\n1. Google 把 AI 心血管筛查带到偏远地区 —— Google这次的更新，核心不是多发了一条新闻，而是 Google公布了一项围绕数据集的研究型更新…\n2. Hugging Face开源上下文窗口、开源 —— Hugging Face这次的更新，核心不是多发了一条新闻，而是 Hugging Face把围绕上下文窗口、开源的成果进…\n3. OpenAI推进研究前沿 —— OpenAI这次的更新，核心不是多发了一条新闻，而是 OpenAI把研究前沿继续往产品和开发者工作流里推进…\n4. OpenAI推进提示注入、工作流 —— OpenAI这次的更新，核心不是多发了一条新闻，而是 OpenAI把提示注入、工作流继续往产品和开发者工作流里推进…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-12)\nDigest URL: <https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>\nLead: Today's AI Daily follows two connected threads: Frontier research and capability shifts and Agents and developer tooling…\nInside today:\n1. How AI is helping improve heart health in rural Australia — The headline from Google is not just a fresh announcement…\n2. How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II — The headline from Hugging Face is not just a fresh announcement…\n3. From model to agent: Equipping the Responses API with a computer environment — The headline from OpenAI is not just a fresh announcement…",
+  "generatedAt": "2026-03-12T05:44:17.010Z",
   "themes": [
     {
       "themeZh": "前沿研究与能力边界",

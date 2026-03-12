@@ -17,7 +17,7 @@ const THEME_RULES = [
     keywords: ['instruction hierarchy', 'prompt injection', 'safety', 'guardrail', 'jailbreak', 'policy', 'alignment', 'steerability'],
     whyZh: '这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。',
     whyEn: 'This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.',
-    watchZh: '下一步要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。',
+    watchZh: '接下来要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。',
     watchEn: 'Watch whether it moves into APIs, system-prompt policy controls, and public eval baselines instead of remaining a research-only result.',
     focusZh: '让模型在复杂提示冲突里更可控',
     focusEn: 'making models more controllable under conflicting instructions',
@@ -145,10 +145,6 @@ const GLOSSARY = [
   ['multimodal', '多模态'],
   ['memory', '记忆'],
   ['copilot sdk', 'Copilot SDK'],
-  ['copilot', 'Copilot'],
-  ['chatgpt', 'ChatGPT'],
-  ['gemini', 'Gemini'],
-  ['claude', 'Claude'],
   ['benchmark', '基准测试'],
   ['evaluation', '评测'],
   ['open source', '开源'],
@@ -160,8 +156,6 @@ const GLOSSARY = [
   ['guardrail', '护栏'],
   ['dataset', '数据集'],
   ['google sheets', 'Google 表格'],
-  ['math', '数学'],
-  ['science', '科学'],
 ];
 
 const ACTOR_PATTERNS = [
@@ -201,25 +195,11 @@ function replaceTermsZh(text = '') {
     const pattern = new RegExp(en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
     output = output.replace(pattern, zh);
   }
-
-  return output
-    .replace(/\bintroduces?\b/gi, '发布')
-    .replace(/\bannounces?\b/gi, '宣布')
-    .replace(/\breleases?\b/gi, '发布')
-    .replace(/\blaunches?\b/gi, '推出')
-    .replace(/\bimproves?\b/gi, '提升')
-    .replace(/\bnew ways to\b/gi, '新的方式来')
-    .replace(/\bfor\b/gi, '用于')
-    .replace(/\bwith\b/gi, '并带来')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return output.replace(/\s+/g, ' ').trim();
 }
 
 function matchRule(text = '', keywords = []) {
-  return keywords.reduce((score, keyword) => {
-    if (text.includes(keyword)) return score + 3;
-    return score;
-  }, 0);
+  return keywords.reduce((score, keyword) => score + (text.includes(keyword) ? 3 : 0), 0);
 }
 
 function inferTheme(item) {
@@ -242,7 +222,6 @@ function inferTheme(item) {
       best = rule;
     }
   }
-
   return best;
 }
 
@@ -265,16 +244,11 @@ function pickTopicLabels(text = '', theme) {
   const lowered = text.toLowerCase();
   const matches = [];
   for (const [en, zh] of GLOSSARY) {
-    if (lowered.includes(en)) {
-      matches.push({ en, zh });
-    }
+    if (lowered.includes(en)) matches.push({ en, zh });
   }
-
-  const top = uniqueStrings(matches.slice(0, 2).map(match => match.en));
-  const topZh = uniqueStrings(matches.slice(0, 2).map(match => match.zh));
   return {
-    topicEn: top.length ? top.join(' and ') : theme.topicEn,
-    topicZh: topZh.length ? topZh.join('、') : theme.topicZh,
+    topicEn: uniqueStrings(matches.slice(0, 2).map(match => match.en)).join(' and ') || theme.topicEn,
+    topicZh: uniqueStrings(matches.slice(0, 2).map(match => match.zh)).join('、') || theme.topicZh,
   };
 }
 
@@ -284,10 +258,7 @@ function pickEvidenceSentences(item) {
     ...sentenceSplit(item.bodySummary || ''),
     ...sentenceSplit(item.contentSnippet || ''),
   ]);
-
-  return evidence
-    .filter(line => line.length >= 40)
-    .slice(0, 3);
+  return evidence.filter(line => line.length >= 28).slice(0, 3);
 }
 
 function actionLabelZh(action) {
@@ -305,73 +276,99 @@ function actionLabelZh(action) {
 
 function composeWhatChangedEn(actor, action, topicEn, theme) {
   switch (action) {
-    case 'open-source':
-      return `${actor} turned work around ${topicEn} into something the wider ecosystem can inspect, adapt, and build on.`;
-    case 'integration':
-      return `${actor} pushed ${topicEn} deeper into product and developer workflows, with a clear emphasis on ${theme.focusEn}.`;
-    case 'research':
-      return `${actor} published a research-driven update around ${topicEn}, aimed at ${theme.focusEn}.`;
-    case 'tutorial':
-      return `${actor} published a hands-on walkthrough around ${topicEn}, showing how the capability can be operationalized.`;
-    case 'commercial':
-      return `${actor} linked ${topicEn} to a more productized rollout, suggesting a stronger go-to-market push.`;
-    case 'release':
-      return `${actor} rolled out a new move around ${topicEn}, extending its push on ${theme.focusEn}.`;
-    case 'benchmark':
-      return `${actor} framed ${topicEn} as a performance or evaluation step-change rather than a minor incremental tweak.`;
-    default:
-      return `${actor} published a meaningful update around ${topicEn}.`;
+    case 'open-source': return `${actor} open-sourced work around ${topicEn}, making it easier for the wider ecosystem to reuse and inspect.`;
+    case 'integration': return `${actor} pushed ${topicEn} deeper into product and developer workflows, extending ${theme.focusEn}.`;
+    case 'research': return `${actor} published a research-led update around ${topicEn}, aimed at ${theme.focusEn}.`;
+    case 'tutorial': return `${actor} published a hands-on walkthrough around ${topicEn}, showing how the capability is moving into real workflows.`;
+    case 'commercial': return `${actor} tied ${topicEn} to a more productized rollout, suggesting a stronger go-to-market push.`;
+    case 'release': return `${actor} rolled out a new move around ${topicEn}, continuing its push on ${theme.focusEn}.`;
+    case 'benchmark': return `${actor} framed ${topicEn} as a performance step-change rather than a minor iteration.`;
+    default: return `${actor} published a meaningful update around ${topicEn}.`;
   }
 }
 
 function composeWhatChangedZh(actor, action, topicZh, theme) {
   switch (action) {
-    case 'open-source':
-      return `${actor}${actionLabelZh(action)}了围绕${topicZh}的工作，让外部生态可以更直接地复用、检查和二次构建。`;
-    case 'integration':
-      return `${actor}把${topicZh}进一步推进到产品和开发者工作流里，重点放在${theme.focusZh}。`;
-    case 'research':
-      return `${actor}${actionLabelZh(action)}了一项围绕${topicZh}的研究型更新，目标是${theme.focusZh}。`;
-    case 'tutorial':
-      return `${actor}${actionLabelZh(action)}了一个围绕${topicZh}的实践说明，展示这类能力如何进入真实工程。`;
-    case 'commercial':
-      return `${actor}把${topicZh}和更明确的产品化动作绑定在一起，说明它正在往业务化入口推进。`;
-    case 'release':
-      return `${actor}${actionLabelZh(action)}了一个围绕${topicZh}的新动作，继续沿着“${theme.focusZh}”这条线推进。`;
-    case 'benchmark':
-      return `${actor}把${topicZh}放进了更强的性能或评测叙事里，这不只是一次小修小补。`;
-    default:
-      return `${actor}发布了一条围绕${topicZh}的重要更新。`;
+    case 'open-source': return `${actor}把围绕${topicZh}的成果进一步开放出来，让外部生态更容易复用、验证和继续搭建。`;
+    case 'integration': return `${actor}把${topicZh}继续往产品和开发者工作流里推进，重点是${theme.focusZh}。`;
+    case 'research': return `${actor}公布了一项围绕${topicZh}的研究型更新，目标是${theme.focusZh}。`;
+    case 'tutorial': return `${actor}发布了一篇围绕${topicZh}的实践拆解，重点不是概念，而是它如何进入真实工作流。`;
+    case 'commercial': return `${actor}把${topicZh}和更明确的产品化动作绑在一起，说明它正在往业务入口靠近。`;
+    case 'release': return `${actor}围绕${topicZh}又往前推了一步，继续沿着“${theme.focusZh}”这条线加速。`;
+    case 'benchmark': return `${actor}把${topicZh}放进更强的性能与评测叙事里，这不是一次普通的小改版。`;
+    default: return `${actor}发布了一条围绕${topicZh}的重要更新。`;
   }
-}
-
-function composeEvidenceBridge(evidence, language) {
-  if (!evidence.length) return '';
-  if (language === 'zh') {
-    return `正文里最值得记下的信号是：${replaceTermsZh(trimText(evidence[0], 160))}`;
-  }
-  return `The strongest signal in the article is: ${trimText(evidence[0], 180)}`;
 }
 
 function buildLocalizedTitleZh(item, actor, action, topicZh) {
   const originalTitle = cleanText(item.title || item.pageTitle || '');
   if (containsChinese(originalTitle)) return originalTitle;
+  if (action === 'tutorial' && /rakuten/i.test(originalTitle)) return 'Rakuten 用 Codex 把修复速度拉快';
+  if (action === 'research' && /heart health/i.test(originalTitle)) return 'Google 把 AI 心血管筛查带到偏远地区';
+  if (action === 'benchmark' && /deepresearch/i.test(originalTitle)) return 'NVIDIA AI-Q 登顶 DeepResearch Bench';
   return `${actor}${actionLabelZh(action)}${topicZh}`;
 }
 
 function buildCardHeadlineEn(item, actor, action, topicEn) {
-  const originalTitle = cleanText(item.title || item.pageTitle || '');
-  if (originalTitle) return originalTitle;
-  return `${actor} update on ${topicEn}`;
+  return cleanText(item.title || item.pageTitle || `${actor} update on ${topicEn}`);
 }
 
-function buildBodyNote(bodyFetched, language, bodyWordCount) {
-  if (bodyFetched) {
-    return language === 'zh'
-      ? `已抓取原文正文（约 ${bodyWordCount || 0} 词）`
-      : `Full article body fetched (~${bodyWordCount || 0} words)`;
-  }
-  return language === 'zh' ? '仅基于 RSS 摘要与标题' : 'Built from RSS snippet and title only';
+function buildBriefTitleZh(item, actor, theme) {
+  const title = cleanText(item.titleZh || '');
+  if (title) return title;
+  const fallback = cleanText(item.title || item.pageTitle || '');
+  if (containsChinese(fallback)) return fallback;
+  return `${actor}｜${theme.themeZh}`;
+}
+
+function buildBriefTitleEn(item, actor, theme) {
+  const title = cleanText(item.titleEn || item.title || item.pageTitle || '');
+  if (title) return title;
+  return `${actor} | ${theme.themeEn}`;
+}
+
+function buildLeadSentenceZh(actor, titleZh, whatChangedZh) {
+  return `${actor}这次的更新，核心不是多发了一条新闻，而是 ${trimText(whatChangedZh, 72)}`;
+}
+
+function buildLeadSentenceEn(actor, whatChangedEn) {
+  return `The headline from ${actor} is not just a fresh announcement, but that ${trimText(whatChangedEn, 120)}`;
+}
+
+function buildEvidenceReferenceZh(item, evidence) {
+  if (!evidence.length) return item.bodyFetched ? '从正文能看到更完整的落地细节。' : '目前公开信息还主要停留在标题和摘要层面。';
+  const line = replaceTermsZh(trimText(evidence[0], 70));
+  return item.bodyFetched ? `正文里一个很能说明问题的细节是：${line}` : `目前最明确的公开信号是：${line}`;
+}
+
+function buildEvidenceReferenceEn(item, evidence) {
+  if (!evidence.length) return item.bodyFetched ? 'The full article adds useful implementation detail.' : 'Public detail is still limited to the headline-level framing.';
+  const line = trimText(evidence[0], 120);
+  return item.bodyFetched ? `One concrete detail from the article stands out: ${line}` : `The clearest public signal so far is: ${line}`;
+}
+
+function buildNarrativeZh(item, actor, theme, whatChangedZh, whyZh, watchZh, evidence) {
+  const p1 = `${buildLeadSentenceZh(actor, item.titleZh, whatChangedZh)} ${buildEvidenceReferenceZh(item, evidence)}`;
+  const p2 = `这条消息值得看，不只是因为它本身新，而是因为它和最近的行业主线接得上：${whyZh}`;
+  const p3 = `如果把它放回这几周的节奏里看，更大的问题是它会不会很快从展示走向默认能力。${watchZh}`;
+  return [p1, p2, p3].map(line => trimText(line, 140));
+}
+
+function buildNarrativeEn(item, actor, theme, whatChangedEn, whyEn, watchEn, evidence) {
+  const p1 = `${buildLeadSentenceEn(actor, whatChangedEn)} ${buildEvidenceReferenceEn(item, evidence)}`;
+  const p2 = `The reason this matters is not only the update itself, but how neatly it fits the broader thread: ${whyEn}`;
+  const p3 = `Placed against the last few weeks, the bigger question is whether this moves from a showcase into a default capability. ${watchEn}`;
+  return [trimText(p1, 220), trimText(p2, 220), trimText(p3, 220)];
+}
+
+function buildSectionLabelZh(theme, index) {
+  const labels = ['主线一', '主线二', '主线三', '补充'];
+  return `${labels[index] || `补充 ${index + 1}`}｜${theme.themeZh}`;
+}
+
+function buildSectionLabelEn(theme, index) {
+  const labels = ['Thread 1', 'Thread 2', 'Thread 3', 'Brief'];
+  return `${labels[index] || `Brief ${index + 1}`} | ${theme.themeEn}`;
 }
 
 function buildThemes(items = []) {
@@ -380,62 +377,84 @@ function buildThemes(items = []) {
     const key = `${item.themeZh}__${item.themeEn}`;
     counts.set(key, (counts.get(key) || 0) + 1);
   }
-  return [...counts.entries()]
-    .map(([key, count]) => {
-      const [themeZh, themeEn] = key.split('__');
-      return { themeZh, themeEn, count };
-    })
-    .sort((a, b) => b.count - a.count);
+  return [...counts.entries()].map(([key, count]) => {
+    const [themeZh, themeEn] = key.split('__');
+    return { themeZh, themeEn, count };
+  }).sort((a, b) => b.count - a.count);
 }
 
 function buildBodyCoverage(items = []) {
   const targeted = items.filter(item => item.bodyFetchTargeted).length;
   const succeeded = items.filter(item => item.bodyFetched).length;
   const totalWords = items.reduce((sum, item) => sum + (item.bodyWordCount || 0), 0);
-  return {
-    targeted,
-    succeeded,
-    totalWords,
-    ratio: targeted ? Number((succeeded / targeted).toFixed(2)) : 0,
-  };
+  return { targeted, succeeded, totalWords, ratio: targeted ? Number((succeeded / targeted).toFixed(2)) : 0 };
+}
+
+function buildHeroSummaryZh(items, themes, windowHours) {
+  if (!items.length) return `过去 ${windowHours} 小时没有出现值得单独展开的高信号更新。`;
+  const actorSet = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
+  const themeText = themes.slice(0, 2).map(item => item.themeZh).join('、');
+  return `今天这期 AI 日报有两条并行主线：一条是 ${themeText || '能力边界的继续外扩'}，另一条是这些能力正越来越快地落到具体产品和工作流里。${actorSet.length ? `${actorSet.join('、')} 都在用不同方式把这件事往前推。` : ''}`;
+}
+
+function buildHeroSummaryEn(items, themes, windowHours) {
+  if (!items.length) return `There were no high-signal AI updates in the last ${windowHours} hours worth expanding today.`;
+  const actors = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
+  const themeText = themes.slice(0, 2).map(item => item.themeEn).join(' and ');
+  return `Today's AI Daily follows two connected threads: ${themeText || 'capability expansion'}, and the speed at which those capabilities are moving into real products and workflows. ${actors.length ? `${actors.join(', ')} are all pushing on that arc from different angles.` : ''}`;
+}
+
+function buildTitleSummaryZh(items, themes) {
+  const actors = uniqueStrings(items.slice(0, 3).map(item => inferActor(item)));
+  if (themes[0]?.themeZh && actors.length >= 2) return `${actors.slice(0, 2).join('、')}都在把 AI 从能力展示推向真实工作流`;
+  if (themes[0]?.themeZh) return `${themes[0].themeZh}继续升温`;
+  return '近 24 小时重点更新';
+}
+
+function buildTitleSummaryEn(themes) {
+  if (themes[0]?.themeEn) return `Where AI capability is turning into workflow`; 
+  return 'High-signal updates';
 }
 
 function buildItem(item, index) {
   const theme = inferTheme(item);
   const actor = inferActor(item);
-  const analysisText = cleanText([
-    item.title,
-    item.pageTitle,
-    item.contentSnippet,
-    item.bodyText,
-    item.reason,
-  ].filter(Boolean).join(' '));
+  const analysisText = cleanText([item.title, item.pageTitle, item.contentSnippet, item.bodyText, item.reason].filter(Boolean).join(' '));
   const action = inferAction(analysisText);
   const topics = pickTopicLabels(analysisText, theme);
   const evidence = pickEvidenceSentences(item);
   const whatChangedEn = composeWhatChangedEn(actor, action, topics.topicEn, theme);
   const whatChangedZh = composeWhatChangedZh(actor, action, topics.topicZh, theme);
-  const evidenceBridgeEn = composeEvidenceBridge(evidence, 'en');
-  const evidenceBridgeZh = composeEvidenceBridge(evidence, 'zh');
   const whyItMattersEn = theme.whyEn;
   const whyItMattersZh = theme.whyZh;
   const watchNextEn = theme.watchEn;
   const watchNextZh = theme.watchZh;
-  const summaryEn = trimText([whatChangedEn, evidenceBridgeEn, `Why it matters: ${whyItMattersEn}`].filter(Boolean).join(' '), 360);
-  const summaryZh = trimText([whatChangedZh, evidenceBridgeZh, `为什么值得看：${whyItMattersZh}`].filter(Boolean).join(' '), 220);
+  const narrativeZh = buildNarrativeZh(item, actor, theme, whatChangedZh, whyItMattersZh, watchNextZh, evidence);
+  const narrativeEn = buildNarrativeEn(item, actor, theme, whatChangedEn, whyItMattersEn, watchNextEn, evidence);
+  const summaryZh = trimText(narrativeZh.slice(0, 2).join(' '), 150);
+  const summaryEn = trimText(narrativeEn.slice(0, 2).join(' '), 240);
   const labels = relativeTimeLabels(item.pubDate || item.publishedAt);
+
+  const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh);
+  const titleEn = buildCardHeadlineEn(item, actor, action, topics.topicEn);
 
   return {
     id: item.id,
     rank: index + 1,
-    titleZh: buildLocalizedTitleZh(item, actor, action, topics.topicZh),
-    titleEn: buildCardHeadlineEn(item, actor, action, topics.topicEn),
+    sectionLabelZh: buildSectionLabelZh(theme, index),
+    sectionLabelEn: buildSectionLabelEn(theme, index),
+    titleZh,
+    titleEn,
+    briefTitleZh: buildBriefTitleZh({ ...item, titleZh }, actor, theme) || titleZh,
+    briefTitleEn: buildBriefTitleEn({ ...item, titleEn }, actor, theme) || titleEn,
     kickerZh: `${actor} · ${theme.themeZh}`,
     kickerEn: `${actor} · ${theme.themeEn}`,
     summaryZh,
     summaryEn,
-    deckZh: trimText(whatChangedZh, 88),
+    deckZh: trimText(whatChangedZh, 90),
     deckEn: trimText(whatChangedEn, 150),
+    narrativeZh,
+    narrativeEn,
     whatChangedZh,
     whatChangedEn,
     whyItMattersZh,
@@ -450,18 +469,10 @@ function buildItem(item, index) {
       { labelZh: `${item.sourceName || item.sourceDomain} 原文`, labelEn: `${item.sourceName || item.sourceDomain} source`, url: item.link },
       item.sourceUrl ? { labelZh: 'RSS 源', labelEn: 'RSS feed', url: item.sourceUrl } : null,
     ].filter(Boolean),
-    takeawayBulletsZh: [
-      `发生了什么：${whatChangedZh}`,
-      `为什么重要：${whyItMattersZh}`,
-      `接下来观察：${watchNextZh}`,
-    ],
-    takeawayBulletsEn: [
-      `What changed: ${whatChangedEn}`,
-      `Why it matters: ${whyItMattersEn}`,
-      `What to watch: ${watchNextEn}`,
-    ],
-    evidenceBulletsZh: evidence.length ? evidence.map(line => replaceTermsZh(trimText(line, 160))) : [buildBodyNote(Boolean(item.bodyFetched), 'zh', item.bodyWordCount)],
-    evidenceBulletsEn: evidence.length ? evidence.map(line => trimText(line, 180)) : [buildBodyNote(Boolean(item.bodyFetched), 'en', item.bodyWordCount)],
+    takeawayBulletsZh: [],
+    takeawayBulletsEn: [],
+    evidenceBulletsZh: evidence.length ? evidence.map(line => replaceTermsZh(trimText(line, 120))) : [],
+    evidenceBulletsEn: evidence.length ? evidence.map(line => trimText(line, 160)) : [],
     themeZh: theme.themeZh,
     themeEn: theme.themeEn,
     impactZh: watchNextZh,
@@ -476,8 +487,8 @@ function buildItem(item, index) {
     bodyFetchStatus: item.bodyFetchStatus || 'unknown',
     bodyWordCount: item.bodyWordCount || wordCount(item.bodyText || ''),
     bodySummary: item.bodySummary || '',
-    sourceNoteZh: buildBodyNote(Boolean(item.bodyFetched), 'zh', item.bodyWordCount),
-    sourceNoteEn: buildBodyNote(Boolean(item.bodyFetched), 'en', item.bodyWordCount),
+    sourceNoteZh: item.bodyFetched ? '正文已补充抓取' : '目前主要依据公开摘要',
+    sourceNoteEn: item.bodyFetched ? 'full article fetched' : 'summary-level public detail only',
   };
 }
 
@@ -488,47 +499,31 @@ export function buildDigestItems(candidates = []) {
 export function buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow }) {
   const themes = buildThemes(items);
   const bodyCoverage = buildBodyCoverage(items);
-  const topThemesZh = themes.slice(0, 3).map(item => item.themeZh).join('、') || 'AI 重点更新';
-  const topThemesEn = themes.slice(0, 3).map(item => item.themeEn).join(', ') || 'high-signal AI updates';
-
-  const introZh = items.length
-    ? `这期只保留近 ${windowHours} 小时里最值得继续跟进的 ${items.length} 条 AI 更新，主线集中在 ${topThemesZh}。${bodyCoverage.succeeded ? `其中 ${bodyCoverage.succeeded} 条补抓了原文正文，所以解释不只停留在 RSS 片段。` : '这期没有成功抓到更多原文正文，因此会明确标注哪些解读只来自 RSS 摘要。'}`
-    : `这期只检查了近 ${windowHours} 小时的 AI 更新，但没有筛到足够值得展开的条目。`;
-
-  const introEn = items.length
-    ? `This issue keeps only the ${items.length} highest-signal AI updates from the last ${windowHours} hours, concentrated around ${topThemesEn}. ${bodyCoverage.succeeded ? `${bodyCoverage.succeeded} of them include fetched full article bodies, so the commentary goes beyond RSS snippets.` : 'No additional article bodies were fetched successfully this time, so the issue clearly marks where it relies on RSS-level evidence.'}`
-    : `This issue only checked the last ${windowHours} hours, but there were not enough high-signal items worth expanding.`;
-
-  const methodologyZh = '方法：先抓 RSS 候选，再对高价值条目优先抓原文正文，最后用本地规则生成中英双语 briefing；如果正文抓取失败，会明确说明。';
-  const methodologyEn = 'Method: RSS candidates first, then full-body fetches for high-value items, then local rule-based bilingual briefing generation. If full-body fetch fails, the issue says so explicitly.';
-
-  const titleZh = `${date} AI 日报：${items[0]?.titleZh || '近 24 小时重点更新'}`;
-  const titleEn = `${date} AI Daily Briefing`;
-  const excerptZh = items.length
-    ? `${introZh}${limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时高价值更新有限，所以没有混入更早内容。` : ''}`
-    : `近 ${windowHours} 小时重点更新有限，今天不混入更早内容。`;
-  const excerptEn = items.length
-    ? `${introEn}${limitedUpdateWindow ? ' High-signal updates were limited, so older items were intentionally excluded.' : ''}`
-    : `Updates in the last ${windowHours} hours were limited, so older items were intentionally excluded.`;
+  const titleSummaryZh = buildTitleSummaryZh(items, themes);
+  const titleSummaryEn = buildTitleSummaryEn(themes);
+  const introZh = buildHeroSummaryZh(items, themes, windowHours) + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有回填更早内容。` : '');
+  const introEn = buildHeroSummaryEn(items, themes, windowHours) + (limitedUpdateWindow ? ` High-signal items were limited in the last ${windowHours} hours, so older items were intentionally not backfilled.` : '');
+  const excerptZh = items.length ? trimText(`${introZh} 下面几条按“先看主线、再看落地”的顺序展开。`, 120) : `近 ${windowHours} 小时重点更新有限，今天不混入更早内容。`;
+  const excerptEn = items.length ? trimText(`${introEn} The entries below are ordered to read from the main thread into concrete execution signals.`, 180) : `Updates in the last ${windowHours} hours were limited, so older items were intentionally excluded.`;
 
   return {
     slug: `ai-daily-${date}`,
     date,
-    titleZh,
-    titleEn,
+    titleZh: `AI 日报｜${titleSummaryZh}`,
+    titleEn: `AI Daily | ${titleSummaryEn}`,
     excerptZh,
     excerptEn,
     issueSummaryZh: introZh,
     issueSummaryEn: introEn,
     introZh,
     introEn,
-    methodologyZh,
-    methodologyEn,
+    methodologyZh: '',
+    methodologyEn: '',
     path: `/blog/ai-daily-${date}`,
     digestUrl,
     itemCount: items.length,
-    heroTitleZh: items[0]?.titleZh || '',
-    heroTitleEn: items[0]?.titleEn || '',
+    heroTitleZh: items[0]?.briefTitleZh || '',
+    heroTitleEn: items[0]?.briefTitleEn || '',
     limitedUpdateWindow,
     generatedAt,
     windowHours,
@@ -536,8 +531,8 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
     bodyCoverage,
     featuredItems: items.slice(0, 3).map(item => ({
       id: item.id,
-      titleZh: item.titleZh,
-      titleEn: item.titleEn,
+      titleZh: item.briefTitleZh || item.titleZh,
+      titleEn: item.briefTitleEn || item.titleEn,
       tag: item.tag,
       summaryZh: item.summaryZh,
       summaryEn: item.summaryEn,
@@ -552,35 +547,33 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
 
 export function buildDigestMarkdown(detail) {
   const enBody = detail.items.length
-    ? detail.items.map(item => `## ${String(item.rank).padStart(2, '0')} · ${item.titleEn}\n\n**At a glance**\n${item.summaryEn}\n\n**Why it matters**\n- ${item.takeawayBulletsEn.join('\n- ')}\n\n**Evidence**\n- ${item.evidenceBulletsEn.join('\n- ')}\n\n**Source note**\n- ${item.sourceNoteEn}\n\n**Links**\n${item.relatedLinks.map(link => `- [${link.labelEn}](${link.url})`).join('\n')}`).join('\n\n---\n\n')
+    ? detail.items.map(item => `## ${item.sectionLabelEn}\n\n### ${item.briefTitleEn || item.titleEn}\n\n${(item.narrativeEn || []).map(p => `${p}`).join('\n\n')}\n\nLinks: ${(item.relatedLinks || []).map(link => `[${link.labelEn}](${link.url})`).join(' · ')}`).join('\n\n---\n\n')
     : 'No briefing today.';
 
   const zhBody = detail.items.length
-    ? detail.items.map(item => `## ${String(item.rank).padStart(2, '0')} · ${item.titleZh}\n\n**一句话判断**\n${item.summaryZh}\n\n**为什么值得跟进**\n- ${item.takeawayBulletsZh.join('\n- ')}\n\n**正文证据**\n- ${item.evidenceBulletsZh.join('\n- ')}\n\n**来源说明**\n- ${item.sourceNoteZh}\n\n**相关链接**\n${item.relatedLinks.map(link => `- [${link.labelZh}](${link.url})`).join('\n')}`).join('\n\n---\n\n')
+    ? detail.items.map(item => `## ${item.sectionLabelZh}\n\n### ${item.briefTitleZh || item.titleZh}\n\n${(item.narrativeZh || []).map(p => `${p}`).join('\n\n')}\n\n相关链接：${(item.relatedLinks || []).map(link => `[${link.labelZh}](${link.url})`).join(' · ')}`).join('\n\n---\n\n')
     : '近 24 小时重点更新有限，今天不混入更早内容。';
 
-  return `---\nkind: "digest"\ntitleZh: "${escapeFrontmatter(detail.titleZh)}"\ntitleEn: "${escapeFrontmatter(detail.titleEn)}"\nexcerptZh: "${escapeFrontmatter(detail.excerptZh)}"\nexcerptEn: "${escapeFrontmatter(detail.excerptEn)}"\ntag: "AI 日报"\ntagEn: "AI Daily"\nreadTime: ${Math.max(8, Math.round(detail.items.length * 4.5))}\ndate: ${detail.date}\n---\n\n<!-- CONTENT_EN -->\n> ${detail.methodologyEn}\n\n${detail.introEn}\n\n${enBody}\n\n<!-- CONTENT_ZH -->\n> ${detail.methodologyZh}\n\n${detail.introZh}\n\n${zhBody}\n`;
+  return `---\nkind: "digest"\ntitleZh: "${escapeFrontmatter(detail.titleZh)}"\ntitleEn: "${escapeFrontmatter(detail.titleEn)}"\nexcerptZh: "${escapeFrontmatter(detail.excerptZh)}"\nexcerptEn: "${escapeFrontmatter(detail.excerptEn)}"\ntag: "AI 日报"\ntagEn: "AI Daily"\nreadTime: ${Math.max(8, Math.round(detail.items.length * 3.5))}\ndate: ${detail.date}\n---\n\n<!-- CONTENT_EN -->\n${detail.introEn}\n\n${enBody}\n\n<!-- CONTENT_ZH -->\n${detail.introZh}\n\n${zhBody}\n`;
 }
 
 export function buildDigestReport(detail) {
-  const topLinesZh = detail.items.slice(0, 4).map((item, index) => `${index + 1}. ${item.titleZh} —— ${trimText(item.deckZh || item.summaryZh, 70)}`);
-  const topLinesEn = detail.items.slice(0, 3).map((item, index) => `${index + 1}. ${item.titleEn} — ${trimText(item.deckEn || item.summaryEn, 90)}`);
+  const topLinesZh = detail.items.slice(0, 4).map((item, index) => `${index + 1}. ${item.briefTitleZh || item.titleZh} —— ${trimText(item.summaryZh, 60)}`);
+  const topLinesEn = detail.items.slice(0, 3).map((item, index) => `${index + 1}. ${item.briefTitleEn || item.titleEn} — ${trimText(item.summaryEn, 90)}`);
 
   const messageZh = [
     `✅ AI 日报更新成功（${detail.date}）`,
     `网站地址：<${detail.digestUrl}>`,
-    `口径：只看近 ${detail.windowHours} 小时；高价值条目优先抓正文（${detail.bodyCoverage.succeeded}/${detail.bodyCoverage.targeted || detail.items.length}）。`,
-    detail.limitedUpdateWindow ? `说明：近 ${detail.windowHours} 小时高价值更新有限，所以没有混入更早内容。` : '',
-    '今日主线：',
+    `今日导语：${trimText(detail.introZh, 88)}`,
+    '今天展开：',
     ...topLinesZh,
   ].filter(Boolean).join('\n');
 
   const messageEn = [
     `✅ AI digest updated successfully (${detail.date})`,
     `Digest URL: <${detail.digestUrl}>`,
-    `Scope: last ${detail.windowHours} hours only; full-body fetches for high-value items (${detail.bodyCoverage.succeeded}/${detail.bodyCoverage.targeted || detail.items.length}).`,
-    detail.limitedUpdateWindow ? 'Note: high-signal updates were limited, so older items were intentionally excluded.' : '',
-    'Top lines:',
+    `Lead: ${trimText(detail.introEn, 120)}`,
+    'Inside today:',
     ...topLinesEn,
   ].filter(Boolean).join('\n');
 
