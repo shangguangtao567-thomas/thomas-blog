@@ -7,6 +7,8 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
+import { trackGrowthEvent } from '../lib/analytics';
+import { siteConfig } from '../lib/siteConfig';
 
 const MASCOT_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663381834685/XCS6Hwos8gWNHteCJu7gAk/avatar-mascot-dark-3pskxT3vg4vKNUuH8m9JKo.webp';
 
@@ -23,7 +25,7 @@ export default function TopNav({ currentPath, navigate }: TopNavProps) {
   const navItems = [
     { path: '/', label: language === 'zh' ? '首页' : 'Home' },
     { path: '/blog', label: language === 'zh' ? '博客' : 'Blog' },
-    { path: '/tech', label: language === 'zh' ? '科技热点' : 'Tech' },
+    { path: '/tech', label: language === 'zh' ? 'AI 日报' : 'AI Briefing' },
   ];
 
   const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -80,6 +82,18 @@ export default function TopNav({ currentPath, navigate }: TopNavProps) {
 
         {/* Right: language + pull-cord theme toggle */}
         <div className="flex items-center gap-2 flex-shrink-0">
+          <a
+            href={siteConfig.xProfileUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => trackGrowthEvent('follow_on_x_click', { context: 'top_nav' })}
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-ui font-medium hover:opacity-90 transition-opacity"
+            style={{ background: 'var(--foreground)', color: 'var(--background)', textDecoration: 'none' }}
+          >
+            <span>Follow on X</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
           {/* Language toggle */}
           <button
             onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')}

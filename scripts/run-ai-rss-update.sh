@@ -26,8 +26,8 @@ node scripts/build-ai-digest.mjs
 pnpm build
 
 UPDATED=0
-if [ -d .git ] && ! git diff --quiet posts src/data scripts package.json README.md; then
-  git add posts src/data scripts package.json README.md
+if [ -d .git ] && ! git diff --quiet posts src/data x-drafts scripts package.json README.md site.config.json; then
+  git add posts src/data x-drafts scripts package.json README.md site.config.json
   git commit -m "chore: refresh AI daily digest [$(date '+%Y-%m-%d %H:%M')]" || true
   git push origin "$BRANCH"
   UPDATED=1

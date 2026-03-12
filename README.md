@@ -1,72 +1,149 @@
-# Thomas's Blog — Static Edition
+# Thomas's Blog — Daily Content Growth System
 
-A minimal, fast personal blog powered by Vite + React + GitHub Pages.
+一个围绕 `X -> 网站承接 -> 订阅/复访沉淀` 设计的静态博客与日报系统。
 
-## 内容结构
+## 内容层结构
 
-- `posts/`：正式博客文章与自动生成的 AI 日报文章
-- `src/data/posts*.json`：由 `posts/` 构建出来的静态内容索引
-- `src/data/tech-news.json`：当天 AI 日报的站内摘要卡片数据
-- `src/data/ai-digests.json`：AI 日报归档索引
-- `src/data/ai-digest-details.json`：AI 日报的结构化详情数据，用于专栏式详情页
-- `src/data/ai-digest-report.txt`：更新完成后可直接发到 Discord 的文本汇报
-- `src/data/ai-digest-report.json`：Discord 汇报与自动化所用的结构化状态文件
-- `learning/`：轻量的一次性学习沉淀候选区（不替代现有 memory system）
+- `posts/`
+  - 手写长文
+  - 自动生成的 AI 日报文章
+- `x-drafts/`
+  - 每天一份待审的 X 分发包 Markdown
+- `src/data/posts*.json`
+  - 由 `posts/` 构建出的静态文章索引与正文
+- `src/data/ai-digests.json`
+  - 日报归档索引
+- `src/data/ai-digest-details.json`
+  - 日报详情页所需的结构化数据
+- `src/data/x-drafts.json`
+  - 首页 / tech 页面使用的最新 X 草稿包索引
+- `src/data/topics.json`
+  - `topic/<slug>` 专题页数据
+- `src/data/weekly-content-opportunities.json`
+  - 最近 7 天值得扩成长文的 3 个主题建议
+- `src/data/ai-digest-report.txt`
+  - 日报发布后的文本汇报
+- `src/data/ai-digest-report.json`
+  - 自动化与 Discord 汇报的结构化状态文件
 
-## 日常写文章
+## Frontmatter
 
-1. 在 `posts/` 下新建 Markdown 文件：
-   ```
-   posts/YYYY-MM-DD-your-post-slug.md
-   ```
-2. 添加 frontmatter：
-   ```markdown
-   ---
-   titleEn: "Your Post Title in English"
-   titleZh: "你的文章标题"
-   excerptEn: "Short summary"
-   excerptZh: "中文摘要"
-   tag: AI
-   tagEn: AI
-   readTime: 8
-   date: 2026-03-05
-   ---
-   ```
-3. 推到 `main`，GitHub Pages 会自动部署静态站点。
+历史文章不需要补齐所有字段；缺失时会自动回退。
 
-## AI 日报工作流
+```yaml
+---
+titleEn: "Your Post Title in English"
+titleZh: "你的文章标题"
+seoTitleEn: "Optional SEO title"
+seoTitleZh: "可选 SEO 标题"
+excerptEn: "Short summary"
+excerptZh: "中文摘要"
+tag: AI
+tagEn: AI
+pillar: Agent Infra
+pillarZh: Agent 基础设施
+keywords: "agent infra, coding agent, open source"
+featured: true
+xHookEn: "Optional X hook"
+xHookZh: "可选中文钩子"
+readTime: 8
+date: 2026-03-05
+---
+```
 
-这个仓库现在的 AI 日报流程是：
+## 站点与增长配置
 
-1. `node scripts/fetch-ai-candidates.mjs`
-   - 抓 RSS 候选、打分、去重。
-   - 对高价值条目优先抓公开原文正文（本地确定性解析，不依赖付费摘要 API）。
-   - 产出 `src/data/ai-candidates.json`，里面包含 body-fetch 元数据。
-2. `node scripts/build-ai-digest.mjs`
-   - **不调用外部摘要 API**。
-   - 用本地脚本逻辑生成中英双语解释、主题归类、why-it-matters 和 issue metadata。
-   - 产出：
-     - 当天站内日报文章 `posts/YYYY-MM-DD-ai-daily-YYYY-MM-DD.md`
-     - `src/data/tech-news.json`
-     - `src/data/ai-digests.json`
-     - `src/data/ai-digest-details.json`
-     - `src/data/ai-digest-report.txt`
-     - `src/data/ai-digest-report.json`
-3. `pnpm build`
-   - 重新构建静态站点。
-4. `scripts/run-ai-rss-update.sh`
-   - 适合放进 OpenClaw cron，拉取更新、生成日报、构建、commit、push。
-   - 若设置 `DISCORD_WEBHOOK_URL`，会在成功发布后发送 Discord 成功汇报，并带上站点 digest URL。
+编辑根目录的 `site.config.json`：
 
-## 关键环境变量
+```json
+{
+  "siteName": "Thomas's Blog",
+  "siteUrl": "https://shangguangtao567-thomas.github.io/thomas-blog",
+  "authorName": "Thomas",
+  "xHandle": "@GuangtaoS29545",
+  "xProfileUrl": "https://x.com/GuangtaoS29545",
+  "buttondownUrl": "",
+  "plausibleDomain": "",
+  "primaryTopics": ["AI", "Tools", "Infrastructure", "Open Source"]
+}
+```
+
+说明：
+
+- `buttondownUrl`
+  - 为空时，站内订阅入口会回退到 `feed.xml`
+- `plausibleDomain`
+  - 为空时不注入 Plausible
+  - 配好后会自动启用首页 / 文章页 / digest 页的基础点击统计
+
+## Daily Content Engine
+
+### 1. 早上：生成日报并发布
 
 ```bash
-SITE_URL=https://shangguangtao567-thomas.github.io/thomas-blog
-AI_DIGEST_WINDOW_HOURS=24
-AI_DIGEST_MAX_ITEMS=6
-AI_DIGEST_BODY_FETCH_LIMIT=5
-DISCORD_WEBHOOK_URL=...
+scripts/run-ai-rss-update.sh
 ```
+
+它会执行：
+
+1. `node scripts/fetch-ai-candidates.mjs`
+2. `node scripts/build-ai-digest.mjs`
+3. `pnpm build`
+4. 自动 commit / push
+5. 若设置 `DISCORD_WEBHOOK_URL`，发送发布汇报
+
+### 2. 中午：生成 X 分发包
+
+```bash
+scripts/run-midday-content-ops.sh
+```
+
+它会执行：
+
+1. `node scripts/build-x-drafts.mjs`
+2. `pnpm build`
+3. 自动 commit / push
+
+产物：
+
+- `x-drafts/YYYY-MM-DD.md`
+- `src/data/x-drafts.json`
+
+X 草稿包遵循现有 [$x-idea-to-article](/Users/shangguangtao/.codex/skills/x-idea-to-article/SKILL.md) 工作流：
+
+- 先中文审稿
+- 再确认后产出英文 / X 版本
+
+### 3. 每周一次：规划长文机会
+
+```bash
+scripts/run-weekly-content-planning.sh
+```
+
+它会执行：
+
+1. `node scripts/build-weekly-content-opportunities.mjs`
+2. 自动 commit / push
+
+产物：
+
+- `src/data/weekly-content-opportunities.json`
+
+## 构建产物
+
+`pnpm build` 现在会生成：
+
+- `主页静态 HTML`
+- `blog` 静态列表页
+- `tech` 静态 digest hub
+- `topic/<slug>/index.html`
+- `blog/<slug>/index.html`
+- `sitemap.xml`
+- `robots.txt`
+- `feed.xml`
+- `Article / BlogPosting / CollectionPage / WebSite` JSON-LD
+
+这样搜索引擎抓到的是带正文的真实 HTML，而不是空壳 SPA。
 
 ## 本地开发
 
@@ -76,32 +153,31 @@ pnpm dev
 pnpm build
 ```
 
-手动刷新 AI 日报：
+常用命令：
 
 ```bash
-node scripts/fetch-ai-candidates.mjs
-node scripts/build-ai-digest.mjs
-pnpm build
-cat src/data/ai-digest-report.txt
+pnpm build-x-drafts
+pnpm build-weekly-content-opportunities
 ```
 
-生成一份 repo 内的学习沉淀候选：
+## OpenClaw Cron 建议
 
-```bash
-node scripts/create-learning-deposit.mjs
-```
+推荐拆成三段：
 
-发送 Discord 汇报（需要设置 webhook）：
+- 早上固定时段：`scripts/run-ai-rss-update.sh`
+- 中午固定时段：`scripts/run-midday-content-ops.sh`
+- 每周一次：`scripts/run-weekly-content-planning.sh`
 
-```bash
-pnpm send-discord-report
-```
+## 还需要你手动接入的东西
+
+- Google Search Console
+  - 提交 `sitemap.xml`
+- Plausible
+  - 建站点并把 `plausibleDomain` 写进 `site.config.json`
+- Buttondown
+  - 创建订阅页并把 `buttondownUrl` 写进 `site.config.json`
 
 ## 部署
 
-- 定时更新：继续使用 OpenClaw cron 调 `scripts/run-ai-rss-update.sh`
-- 站点部署：保留 GitHub Pages，通过 push 到 `main` 触发
-
-## 额外交接
-
-- 详细升级说明与后续 Codex 本地聊天安全接入建议：`docs/ai-digest-round-2-handoff.md`
+- 继续使用 GitHub Pages
+- push 到 `main` 后触发 `.github/workflows/deploy.yml`

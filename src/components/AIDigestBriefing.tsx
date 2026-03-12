@@ -1,4 +1,6 @@
-import type { AiDigestDetail, AiDigestIndexItem, Post, TechNewsItem } from '../types';
+import type { AiDigestDetail, AiDigestIndexItem, Post, TechNewsItem, XDraftPack } from '../types';
+import GrowthActions from './GrowthActions';
+import xDraftsData from '../data/x-drafts.json';
 
 interface AIDigestBriefingProps {
   detail?: AiDigestDetail;
@@ -87,6 +89,8 @@ export default function AIDigestBriefing({ detail, post, archive, language, navi
   const topThemes = (detail?.themes || []).slice(0, 4);
   const items = detail?.items || [];
   const archiveItems = archive.filter(item => item.slug !== detail?.slug).slice(0, 5);
+  const draftPacks = xDraftsData as XDraftPack[];
+  const relatedDraft = draftPacks.find(item => item.digestSlug === detail?.slug || item.digestSlug === post.slug) || draftPacks[0];
 
   return (
     <div className="min-h-screen">
@@ -150,6 +154,7 @@ export default function AIDigestBriefing({ detail, post, archive, language, navi
                   </div>
                 </div>
               )}
+              <GrowthActions language={language} context={`digest_${post.slug}_hero`} className="mt-5" />
             </div>
           </div>
         </section>
@@ -216,6 +221,22 @@ export default function AIDigestBriefing({ detail, post, archive, language, navi
               </section>
             ) : null}
 
+            {relatedDraft ? (
+              <section className="rounded-[24px] border border-border bg-card p-5">
+                <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                  {language === 'zh' ? '今日 X 草稿' : 'Today’s X draft'}
+                </p>
+                <p className="text-sm leading-relaxed text-foreground font-ui mb-3">
+                  {language === 'zh' ? relatedDraft.angleZh : relatedDraft.angleEn}
+                </p>
+                <div className="space-y-2">
+                  {(language === 'zh' ? relatedDraft.hooksZh : relatedDraft.hooksEn).slice(0, 2).map(hook => (
+                    <p key={hook} className="text-xs leading-relaxed text-muted-foreground font-ui">{hook}</p>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <section className="rounded-[24px] border border-border bg-card p-5">
               <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-3">
                 {language === 'zh' ? '往期日报' : 'Archive'}
@@ -239,6 +260,21 @@ export default function AIDigestBriefing({ detail, post, archive, language, navi
             </section>
           </aside>
         </div>
+
+        <section className="mt-10 rounded-[28px] border border-border bg-card p-6 md:p-8">
+          <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
+            {language === 'zh' ? '// DISTRIBUTION LOOP' : '// DISTRIBUTION LOOP'}
+          </p>
+          <h2 className="text-2xl font-display text-foreground mb-3">
+            {language === 'zh' ? '看完日报之后的下一步' : 'What to do after reading this digest'}
+          </h2>
+          <p className="text-sm md:text-base leading-relaxed text-muted-foreground font-ui mb-5 max-w-3xl">
+            {language === 'zh'
+              ? '如果这期里有一条值得继续写，就先回到 X 发观点，再把高信号主题扩成一篇更耐存档的长文。'
+              : 'If one item deserves a deeper take, push the short opinion to X first, then expand the strongest thread into a more durable long-form post.'}
+          </p>
+          <GrowthActions language={language} context={`digest_${post.slug}_footer`} />
+        </section>
       </div>
     </div>
   );

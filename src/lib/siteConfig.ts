@@ -1,0 +1,20 @@
+import rawConfig from '../../site.config.json';
+
+const defaultSiteConfig = {
+  siteName: "Thomas's Blog",
+  siteUrl: 'https://shangguangtao567-thomas.github.io/thomas-blog',
+  authorName: 'Thomas',
+  xHandle: '@GuangtaoS29545',
+  xProfileUrl: 'https://x.com/GuangtaoS29545',
+  buttondownUrl: '',
+  plausibleDomain: '',
+  primaryTopics: ['AI', 'Tools', 'Infrastructure', 'Open Source'],
+};
+
+export const siteConfig = {
+  ...defaultSiteConfig,
+  ...(rawConfig as Partial<typeof defaultSiteConfig>),
+};
+
+export const hasNewsletter = Boolean(siteConfig.buttondownUrl);
+export const hasPlausible = Boolean(siteConfig.plausibleDomain);

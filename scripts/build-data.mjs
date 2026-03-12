@@ -36,6 +36,29 @@ function extractContentSections(body) {
   };
 }
 
+function parseKeywords(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.map(String).map(item => item.trim()).filter(Boolean);
+  if (typeof value === 'string') {
+    return value
+      .split(',')
+      .map(item => item.trim())
+      .filter(Boolean);
+  }
+  return [];
+}
+
+function normalizeTopicLabel(value, fallback) {
+  return String(value || fallback || 'Tech').trim();
+}
+
+function slugify(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 // Read all markdown files
 const files = fs.readdirSync(POSTS_DIR)
   .filter(f => f.endsWith('.md'))
@@ -58,8 +81,17 @@ const posts = files.map(filename => {
     kind: frontmatter.kind || '',
     titleZh: frontmatter.titleZh || frontmatter.title || slug,
     titleEn: frontmatter.titleEn || frontmatter.title || slug,
+    seoTitleZh: frontmatter.seoTitleZh || '',
+    seoTitleEn: frontmatter.seoTitleEn || '',
     excerptZh: frontmatter.excerptZh || frontmatter.excerpt || '',
     excerptEn: frontmatter.excerptEn || frontmatter.excerpt || '',
+    keywords: parseKeywords(frontmatter.keywords),
+    pillar: frontmatter.pillar || '',
+    pillarZh: frontmatter.pillarZh || '',
+    topicSlug: slugify(normalizeTopicLabel(frontmatter.pillar || frontmatter.tagEn, frontmatter.tag)),
+    featured: Boolean(frontmatter.featured),
+    xHookZh: frontmatter.xHookZh || '',
+    xHookEn: frontmatter.xHookEn || '',
     tag: frontmatter.tag || 'Tech',
     tagEn: frontmatter.tagEn || frontmatter.tag || 'Tech',
     image: frontmatter.image || '',
@@ -83,7 +115,30 @@ fs.writeFileSync(
   JSON.stringify(posts, null, 2)
 );
 
+const topicMap = new Map();
+for (const post of posts.filter(item => !item.slug.startsWith('ai-daily-'))) {
+  const key = post.topicSlug || slugify(post.pillar || post.tagEn || post.tag);
+  if (!key) continue;
+  const existing = topicMap.get(key) || {
+    slug: key,
+    labelZh: post.pillarZh || post.tag,
+    labelEn: post.pillar || post.tagEn || post.tag,
+    count: 0,
+    latestPostSlugs: [],
+  };
+  existing.count += 1;
+  existing.latestPostSlugs = [post.slug, ...existing.latestPostSlugs.filter(item => item !== post.slug)].slice(0, 6);
+  topicMap.set(key, existing);
+}
+
+const topics = Array.from(topicMap.values()).sort((a, b) => b.count - a.count || a.labelEn.localeCompare(b.labelEn));
+fs.writeFileSync(
+  path.join(DATA_DIR, 'topics.json'),
+  JSON.stringify(topics, null, 2)
+);
+
 console.log(`✓ Built ${posts.length} posts → src/data/posts-index.json & posts.json`);
+console.log(`✓ Built ${topics.length} topics → src/data/topics.json`);
 
 // Ensure AI data files exist for static imports
 for (const [filename, label, fallback] of [
@@ -91,6 +146,8 @@ for (const [filename, label, fallback] of [
   ['ai-digests.json', 'ai-digests', []],
   ['ai-digest-details.json', 'ai-digest-details', []],
   ['ai-digest-report.json', 'ai-digest-report', {}],
+  ['x-drafts.json', 'x-drafts', []],
+  ['weekly-content-opportunities.json', 'weekly-content-opportunities', []],
 ]) {
   const filePath = path.join(DATA_DIR, filename);
   if (!fs.existsSync(filePath)) {

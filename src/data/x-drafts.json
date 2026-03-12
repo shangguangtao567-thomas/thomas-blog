@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-03-12",
+    "slug": "x-draft-2026-03-12",
+    "digestSlug": "ai-daily-2026-03-12",
+    "digestPath": "/blog/ai-daily-2026-03-12",
+    "angleZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "angleEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "hooksZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "前沿研究与能力边界 这条主线，今天又被往前推了一截。",
+      "如果你只看今天一条 AI 结论，我会看这个：Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务"
+    ],
+    "hooksEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "Frontier research and capability shifts moved another step forward today.",
+      "If I had to compress today's AI signal into one takeaway, I would start here: How AI is helping improve heart health in rural Australia"
+    ],
+    "shortPostZh": "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。\n研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。\n另一条同时在加速的线是：Agent 与开发者工具。\n完整日报：https://shangguangtao567-thomas.github.io/thomas-blog/blog/ai-daily-2026-03-12",
+    "shortPostEn": "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.\nResearch updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.\nThe second line accelerating at the same time is Agents and developer tooling.\nFull digest: https://shangguangtao567-thomas.github.io/thomas-blog/blog/ai-daily-2026-03-12",
+    "threadZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "1. Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务\n研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+      "2. NVIDIA AI-Q 登顶 DeepResearch Bench，Agent 工程开始卷长链路稳定性\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+      "3. OpenAI 把 agent runtime 讲明白了：模型之外，环境也开始产品化\n研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+      "如果你想看完整证据链，我把今天的 digest 放这里：https://shangguangtao567-thomas.github.io/thomas-blog/blog/ai-daily-2026-03-12"
+    ],
+    "threadEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "1. How AI is helping improve heart health in rural Australia\nResearch updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+      "2. How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+      "3. From model to agent: Equipping the Responses API with a computer environment\nResearch updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+      "Full evidence chain: https://shangguangtao567-thomas.github.io/thomas-blog/blog/ai-daily-2026-03-12"
+    ],
+    "ctaUrl": "https://shangguangtao567-thomas.github.io/thomas-blog/blog/ai-daily-2026-03-12",
+    "ctaLabelZh": "阅读完整日报",
+    "ctaLabelEn": "Read the full digest",
+    "reviewPath": "x-drafts/2026-03-12.md"
+  }
+]

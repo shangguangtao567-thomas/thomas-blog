@@ -4,8 +4,10 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import PostDetail from './pages/PostDetail';
 import Tech from './pages/Tech';
+import TopicArchive from './pages/TopicArchive';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ensurePlausible, trackPageview } from './lib/analytics';
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -26,6 +28,8 @@ function parseRoute(rawPath: string): { page: string; slug?: string } {
   if (path === '/' || path === '') return { page: 'home' };
   if (path === '/blog') return { page: 'blog' };
   if (path === '/tech') return { page: 'tech' };
+  const topicMatch = path.match(/^\/topic\/(.+)$/);
+  if (topicMatch) return { page: 'topic', slug: topicMatch[1] };
   const blogMatch = path.match(/^\/blog\/(.+)$/);
   if (blogMatch) return { page: 'post', slug: blogMatch[1] };
   return { page: '404' };
@@ -39,6 +43,14 @@ function AppInner() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  useEffect(() => {
+    ensurePlausible();
+  }, []);
+
+  useEffect(() => {
+    trackPageview(currentPath || '/');
+  }, [currentPath]);
 
   const navigate = (path: string) => {
     const fullPath = BASE + path;
@@ -57,6 +69,8 @@ function AppInner() {
         return <Blog navigate={navigate} />;
       case 'tech':
         return <Tech navigate={navigate} />;
+      case 'topic':
+        return <TopicArchive slug={route.slug!} navigate={navigate} />;
       case 'post':
         return <PostDetail slug={route.slug!} navigate={navigate} />;
       default:

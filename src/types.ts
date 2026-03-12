@@ -3,8 +3,17 @@ export interface Post {
   kind?: string;
   titleZh: string;
   titleEn: string;
+  seoTitleZh?: string;
+  seoTitleEn?: string;
   excerptZh: string;
   excerptEn: string;
+  keywords?: string[];
+  pillar?: string;
+  pillarZh?: string;
+  topicSlug?: string;
+  featured?: boolean;
+  xHookZh?: string;
+  xHookEn?: string;
   tag: string;
   tagEn: string;
   image: string;
@@ -122,4 +131,43 @@ export interface AiDigestDetail extends AiDigestIndexItem {
   methodologyZh: string;
   methodologyEn: string;
   items: TechNewsItem[];
+}
+
+export interface TopicIndexItem {
+  slug: string;
+  labelZh: string;
+  labelEn: string;
+  count: number;
+  latestPostSlugs: string[];
+}
+
+export interface XDraftPack {
+  date: string;
+  slug: string;
+  digestSlug: string;
+  digestPath: string;
+  angleZh: string;
+  angleEn: string;
+  hooksZh: string[];
+  hooksEn: string[];
+  shortPostZh: string;
+  shortPostEn: string;
+  threadZh: string[];
+  threadEn: string[];
+  ctaUrl: string;
+  ctaLabelZh: string;
+  ctaLabelEn: string;
+  reviewPath: string;
+}
+
+export interface WeeklyContentOpportunity {
+  id: string;
+  themeZh: string;
+  themeEn: string;
+  score: number;
+  rationaleZh: string;
+  rationaleEn: string;
+  proposedTitleZh: string;
+  proposedTitleEn: string;
+  relatedDigestSlugs: string[];
 }

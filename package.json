@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-data.mjs && tsc -b && vite build && node scripts/postbuild-static-routes.mjs",
+    "build": "node scripts/build-data.mjs && node scripts/build-x-drafts.mjs && node scripts/build-weekly-content-opportunities.mjs && tsc -b && vite build && node scripts/postbuild-static-routes.mjs",
     "preview": "vite preview",
     "fetch-tech": "node scripts/fetch-tech-news.mjs",
     "fetch-ai-rss": "node scripts/fetch-ai-rss.mjs",
     "fetch-ai-candidates": "node scripts/fetch-ai-candidates.mjs",
     "build-ai-digest": "node scripts/build-ai-digest.mjs",
+    "build-x-drafts": "node scripts/build-x-drafts.mjs",
+    "build-weekly-content-opportunities": "node scripts/build-weekly-content-opportunities.mjs",
+    "run-midday-content-ops": "bash scripts/run-midday-content-ops.sh",
+    "run-weekly-content-planning": "bash scripts/run-weekly-content-planning.sh",
     "send-discord-report": "node scripts/send-discord-report.mjs",
     "create-learning-deposit": "node scripts/create-learning-deposit.mjs"
   },

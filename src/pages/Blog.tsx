@@ -4,8 +4,10 @@
  */
 import { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import type { Post } from '../types';
+import type { Post, TopicIndexItem } from '../types';
 import postsIndex from '../data/posts-index.json';
+import topicsData from '../data/topics.json';
+import GrowthActions from '../components/GrowthActions';
 
 const POSTS_PER_PAGE = 10;
 
@@ -20,6 +22,7 @@ export default function Blog({ navigate }: BlogProps) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const allPosts = (postsIndex as Post[]).filter(post => !post.slug.startsWith('ai-daily-'));
+  const topics = topicsData as TopicIndexItem[];
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -74,7 +77,23 @@ export default function Blog({ navigate }: BlogProps) {
               ? `共 ${filteredPosts.length} 篇文章，关于 AI、开源工具和技术趋势`
               : `${filteredPosts.length} posts about AI, open source tools, and tech trends`}
           </p>
+          <GrowthActions language={language} context="blog_index" className="mt-4" />
         </div>
+
+        {topics.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {topics.slice(0, 6).map(topic => (
+              <button
+                key={topic.slug}
+                onClick={() => navigate(`/topic/${topic.slug}`)}
+                className="px-3 py-1.5 rounded-full border border-border text-xs font-ui text-muted-foreground hover:text-foreground hover:border-foreground/25 transition-colors"
+                style={{ background: 'none' }}
+              >
+                {language === 'zh' ? topic.labelZh : topic.labelEn} · {topic.count}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="flex flex-col sm:flex-row gap-3 mb-8">
           <div className="relative flex-1">
