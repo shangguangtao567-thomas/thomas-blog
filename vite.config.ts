@@ -9,7 +9,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // GitHub Pages sub-path deployment: base must match the repo name
-  // Change to '/' if using a custom domain or username.github.io repo
-  base: '/thomas-blog/',
+  base: '/',
 })

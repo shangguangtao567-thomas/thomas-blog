@@ -58,7 +58,7 @@ date: 2026-03-05
 ```json
 {
   "siteName": "Thomas's Blog",
-  "siteUrl": "https://shangguangtao567-thomas.github.io/thomas-blog",
+  "siteUrl": "https://blog.lincept.com",
   "authorName": "Thomas",
   "xHandle": "@GuangtaoS29545",
   "xProfileUrl": "https://x.com/GuangtaoS29545",

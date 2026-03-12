@@ -2,33 +2,33 @@
   {
     "slug": "ai-daily-2026-03-12",
     "date": "2026-03-12",
-    "titleZh": "AI 日报｜安全边界与 agent 落地，正在一起往前推",
-    "titleEn": "AI Daily | Safety and agent execution are starting to converge",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Google、Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
-    "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Google, Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
+    "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 前沿研究与能力边界。Google、Hugging Face、OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Frontier research and capability shifts. Google, Hugging Face, OpenAI…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 前沿研究与能力边界。Google、Hugging Face、OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Frontier research and capability shifts. Google, Hugging Face, OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-12",
     "itemCount": 6,
     "heroTitleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
     "heroTitleEn": "How AI is helping improve heart health in rural Australia",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
-      "targeted": 5,
+      "targeted": 3,
       "succeeded": 2,
       "totalWords": 2390,
-      "ratio": 0.4
+      "ratio": 0.67
     },
     "themes": [
       {
-        "themeZh": "前沿研究与能力边界",
-        "themeEn": "Frontier research and capability shifts",
-        "count": 3
-      },
-      {
         "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
-        "count": 3
+        "count": 5
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 1
       }
     ],
     "featuredItems": [
@@ -53,20 +53,20 @@
         "summaryEn": "Hugging Face opened up work around context window and open source, making it easier for the wider ecosystem to inspect, reuse, and build on…",
         "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "2 小时前",
-        "publishedLabelEn": "2 hours ago"
+        "publishedLabelZh": "9 小时前",
+        "publishedLabelEn": "9 hours ago"
       },
       {
-        "id": "openai.com-d4732a41e5a2",
-        "titleZh": "OpenAI 把 agent runtime 讲明白了：模型之外，环境也开始产品化",
-        "titleEn": "From model to agent: Equipping the Responses API with a computer environment",
-        "tag": "AI",
-        "summaryZh": "OpenAI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
-        "summaryEn": "OpenAI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward… The clearest public signal so far is this…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
-        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "19 小时前",
-        "publishedLabelEn": "19 hours ago"
+        "id": "openai.com-34e6351b3e4d",
+        "titleZh": "Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标",
+        "titleEn": "Rakuten fixes issues twice as fast with Codex",
+        "tag": "Tools",
+        "summaryZh": "OpenAI给出了一篇围绕Agent 工作流与开发工具的实践拆解，重点不在概念，而在它怎么进真实工作流。 这类案例最有意思的地方，是它已经不再停留在“开发者喜欢不喜欢”，而是开始拿 MTTR、评审效率、CI/CD 这类业务指标说话。 目前能确认的公开信号是：Rakuten uses Codex…",
+        "summaryEn": "OpenAI published a hands-on account of agent workflows and developer tooling, with the emphasis on how it behaves in a real workflow rather than in abstract… The clearest public signal so far is this: Rakuten uses Codex…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "1 天前",
+        "publishedLabelEn": "1 day ago"
       }
     ]
   },

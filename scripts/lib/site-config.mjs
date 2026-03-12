@@ -8,7 +8,7 @@ const CONFIG_FILE = path.join(ROOT, 'site.config.json');
 
 const DEFAULT_SITE_CONFIG = {
   siteName: "Thomas's Blog",
-  siteUrl: 'https://shangguangtao567-thomas.github.io/thomas-blog',
+  siteUrl: 'https://blog.lincept.com',
   authorName: 'Thomas',
   xHandle: '@GuangtaoS29545',
   xProfileUrl: 'https://x.com/GuangtaoS29545',

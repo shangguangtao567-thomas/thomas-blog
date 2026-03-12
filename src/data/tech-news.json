@@ -139,8 +139,8 @@
     "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
     "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
     "publishedAt": "2026-03-12T03:53:34.000Z",
-    "publishedLabelZh": "2 小时前",
-    "publishedLabelEn": "2 hours ago",
+    "publishedLabelZh": "9 小时前",
+    "publishedLabelEn": "9 hours ago",
     "score": 117,
     "featured": true,
     "bodyFetched": true,
@@ -152,154 +152,10 @@
     "sourceNoteEn": "full article fetched"
   },
   {
-    "id": "openai.com-d4732a41e5a2",
-    "rank": 3,
-    "sectionLabelZh": "主线三｜前沿研究与能力边界",
-    "sectionLabelEn": "Thread 3 | Frontier research and capability shifts",
-    "titleZh": "OpenAI 把 agent runtime 讲明白了：模型之外，环境也开始产品化",
-    "titleEn": "From model to agent: Equipping the Responses API with a computer environment",
-    "briefTitleZh": "OpenAI 把 agent runtime 讲明白了：模型之外，环境也开始产品化",
-    "briefTitleEn": "From model to agent: Equipping the Responses API with a computer environment",
-    "kickerZh": "OpenAI · 前沿研究与能力边界",
-    "kickerEn": "OpenAI · Frontier research and capability shifts",
-    "summaryZh": "OpenAI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
-    "summaryEn": "OpenAI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward… The clearest public signal so far is this…",
-    "deckZh": "OpenAI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。",
-    "deckEn": "OpenAI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward.",
-    "narrativeZh": [
-      "OpenAI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
-      "目前能确认的公开信号是：How OpenAI built an agent runtime using the Responses API, shell tool… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
-      "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
-    ],
-    "narrativeEn": [
-      "OpenAI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward…",
-      "The clearest public signal so far is this: How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure… Research updates do not always become products quickly…",
-      "Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. The next step to watch is replication, open implementation, API exposure…"
-    ],
-    "whatChangedZh": "OpenAI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。",
-    "whatChangedEn": "OpenAI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward.",
-    "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
-    "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-    "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
-    "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/equip-responses-api-computer-environment",
-    "relatedLinks": [
-      {
-        "labelZh": "OpenAI News 原文",
-        "labelEn": "OpenAI News source",
-        "url": "https://openai.com/index/equip-responses-api-computer-environment"
-      },
-      {
-        "labelZh": "RSS 源",
-        "labelEn": "RSS feed",
-        "url": "https://openai.com/news/rss.xml"
-      }
-    ],
-    "takeawayBulletsZh": [],
-    "takeawayBulletsEn": [],
-    "evidenceBulletsZh": [
-      "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure…"
-    ],
-    "evidenceBulletsEn": [
-      "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state."
-    ],
-    "themeZh": "前沿研究与能力边界",
-    "themeEn": "Frontier research and capability shifts",
-    "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
-    "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
-    "publishedAt": "2026-03-11T11:00:00.000Z",
-    "publishedLabelZh": "19 小时前",
-    "publishedLabelEn": "19 hours ago",
-    "score": 113,
-    "featured": true,
-    "bodyFetched": false,
-    "bodyFetchTargeted": true,
-    "bodyFetchStatus": "failed:HTTP 403",
-    "bodyWordCount": 0,
-    "bodySummary": "",
-    "sourceNoteZh": "目前主要依据公开摘要",
-    "sourceNoteEn": "summary-level public detail only"
-  },
-  {
-    "id": "openai.com-86852cb22192",
-    "rank": 4,
-    "sectionLabelZh": "补充｜Agent 与开发者工具",
-    "sectionLabelEn": "Brief | Agents and developer tooling",
-    "titleZh": "挡提示注入，OpenAI 先补的是 agent 这层的防线",
-    "titleEn": "Designing AI agents to resist prompt injection",
-    "briefTitleZh": "挡提示注入，OpenAI 先补的是 agent 这层的防线",
-    "briefTitleEn": "Designing AI agents to resist prompt injection",
-    "kickerZh": "OpenAI · Agent 与开发者工具",
-    "kickerEn": "OpenAI · Agents and developer tooling",
-    "summaryZh": "OpenAI把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
-    "summaryEn": "OpenAI moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
-    "deckZh": "OpenAI把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
-    "deckEn": "OpenAI moved prompt injection and workflow deeper into product and developer workflows…",
-    "narrativeZh": [
-      "OpenAI把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
-      "目前能确认的公开信号是：How ChatGPT defends against 提示注入 and social engineering by c… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
-      "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
-    ],
-    "narrativeEn": [
-      "OpenAI moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
-      "The clearest public signal so far is this: How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensiti… In other words…",
-      "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
-    ],
-    "whatChangedZh": "OpenAI把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
-    "whatChangedEn": "OpenAI moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
-    "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
-    "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-    "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
-    "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
-    "tag": "Tools",
-    "source": "openai.com",
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
-    "relatedLinks": [
-      {
-        "labelZh": "OpenAI News 原文",
-        "labelEn": "OpenAI News source",
-        "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection"
-      },
-      {
-        "labelZh": "RSS 源",
-        "labelEn": "RSS feed",
-        "url": "https://openai.com/news/rss.xml"
-      }
-    ],
-    "takeawayBulletsZh": [],
-    "takeawayBulletsEn": [],
-    "evidenceBulletsZh": [
-      "How ChatGPT defends against 提示注入 and social engineering by constraining risky actions and protecting sensiti…"
-    ],
-    "evidenceBulletsEn": [
-      "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows."
-    ],
-    "themeZh": "Agent 与开发者工具",
-    "themeEn": "Agents and developer tooling",
-    "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
-    "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
-    "publishedAt": "2026-03-11T11:30:00.000Z",
-    "publishedLabelZh": "19 小时前",
-    "publishedLabelEn": "19 hours ago",
-    "score": 111,
-    "featured": false,
-    "bodyFetched": false,
-    "bodyFetchTargeted": true,
-    "bodyFetchStatus": "failed:HTTP 403",
-    "bodyWordCount": 0,
-    "bodySummary": "",
-    "sourceNoteZh": "目前主要依据公开摘要",
-    "sourceNoteEn": "summary-level public detail only"
-  },
-  {
     "id": "openai.com-34e6351b3e4d",
-    "rank": 5,
-    "sectionLabelZh": "补充 5｜Agent 与开发者工具",
-    "sectionLabelEn": "Brief 5 | Agents and developer tooling",
+    "rank": 3,
+    "sectionLabelZh": "主线三｜Agent 与开发者工具",
+    "sectionLabelEn": "Thread 3 | Agents and developer tooling",
     "titleZh": "Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标",
     "titleEn": "Rakuten fixes issues twice as fast with Codex",
     "briefTitleZh": "Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标",
@@ -355,10 +211,10 @@
     "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
     "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
     "publishedAt": "2026-03-11T13:00:00.000Z",
-    "publishedLabelZh": "17 小时前",
-    "publishedLabelEn": "17 hours ago",
+    "publishedLabelZh": "1 天前",
+    "publishedLabelEn": "1 day ago",
     "score": 104,
-    "featured": false,
+    "featured": true,
     "bodyFetched": false,
     "bodyFetchTargeted": true,
     "bodyFetchStatus": "failed:HTTP 403",
@@ -368,68 +224,218 @@
     "sourceNoteEn": "summary-level public detail only"
   },
   {
-    "id": "openai.com-69f2b5ec7d18",
-    "rank": 6,
-    "sectionLabelZh": "补充 6｜前沿研究与能力边界",
-    "sectionLabelEn": "Brief 6 | Frontier research and capability shifts",
-    "titleZh": "Wayfair 案例说明：AI 的价值正在从客服问答转到业务流程改写",
-    "titleEn": "Wayfair boosts catalog accuracy and support speed with OpenAI",
-    "briefTitleZh": "Wayfair 案例说明：AI 的价值正在从客服问答转到业务流程改写",
-    "briefTitleEn": "Wayfair boosts catalog accuracy and support speed with OpenAI",
-    "kickerZh": "OpenAI · 前沿研究与能力边界",
-    "kickerEn": "OpenAI · Frontier research and capability shifts",
-    "summaryZh": "OpenAI带来了一条围绕研究前沿的重要更新。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：Wayfair uses OpenAI models to improve ecommerce support and product cata… 研究…",
-    "summaryEn": "OpenAI put out a meaningful update around research frontier. What makes this worth following is that it pushes the broader industry arc a little further forward. The clearest public signal so far is this…",
-    "deckZh": "OpenAI带来了一条围绕研究前沿的重要更新。",
-    "deckEn": "OpenAI put out a meaningful update around research frontier.",
+    "id": "simonwillison.net-3059ff7ce689",
+    "rank": 4,
+    "sectionLabelZh": "补充｜Agent 与开发者工具",
+    "sectionLabelEn": "Brief | Agents and developer tooling",
+    "titleZh": "Simon Willison｜Agent 与开发者工具",
+    "titleEn": "Sorting algorithms",
+    "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+    "briefTitleEn": "Sorting algorithms",
+    "kickerZh": "Simon Willison · Agent 与开发者工具",
+    "kickerEn": "Simon Willison · Agents and developer tooling",
+    "summaryZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：Here's the full sequence of prompts…",
+    "summaryEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat… The clearest public signal so far is this…",
+    "deckZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+    "deckEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
     "narrativeZh": [
-      "OpenAI带来了一条围绕研究前沿的重要更新。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
-      "目前能确认的公开信号是：Wayfair uses OpenAI models to improve ecommerce support and product cata… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
-      "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+      "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+      "目前能确认的公开信号是：Here's the full sequence of prompts : Interactive animated demos of the… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+      "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
     ],
     "narrativeEn": [
-      "OpenAI put out a meaningful update around research frontier. What makes this worth following is that it pushes the broader industry arc a little further forward.",
-      "The clearest public signal so far is this: Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy… Research updates do not always become products quickly…",
-      "Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. The next step to watch is replication, open implementation, API exposure…"
+      "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat…",
+      "The clearest public signal so far is this: Here's the full sequence of prompts : Interactive animated demos of the most common sorting algorithms This gave me bubb… In other words…",
+      "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
     ],
-    "whatChangedZh": "OpenAI带来了一条围绕研究前沿的重要更新。",
-    "whatChangedEn": "OpenAI put out a meaningful update around research frontier.",
-    "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
-    "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-    "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
-    "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
-    "tag": "AI",
-    "source": "openai.com",
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/wayfair",
+    "whatChangedZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+    "whatChangedEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
+    "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+    "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+    "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "tag": "Tools",
+    "source": "simonwillison.net",
+    "sourceName": "Simon Willison",
+    "sourceUrl": "https://simonwillison.net/2026/Mar/11/sorting-algorithms/#atom-everything",
     "relatedLinks": [
       {
-        "labelZh": "OpenAI News 原文",
-        "labelEn": "OpenAI News source",
-        "url": "https://openai.com/index/wayfair"
+        "labelZh": "Simon Willison 原文",
+        "labelEn": "Simon Willison source",
+        "url": "https://simonwillison.net/2026/Mar/11/sorting-algorithms/#atom-everything"
       },
       {
         "labelZh": "RSS 源",
         "labelEn": "RSS feed",
-        "url": "https://openai.com/news/rss.xml"
+        "url": "https://simonwillison.net/atom/everything/"
       }
     ],
     "takeawayBulletsZh": [],
     "takeawayBulletsEn": [],
     "evidenceBulletsZh": [
-      "Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy…"
+      "Here's the full sequence of prompts : Interactive animated demos of the most common sorting algorithms This gave me bubb…",
+      "Sorting algorithms Today in animated explanations built using Claude…"
     ],
     "evidenceBulletsEn": [
-      "Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy…"
+      "Here's the full sequence of prompts : Interactive animated demos of the most common sorting algorithms This gave me bubble sort, selec…",
+      "Sorting algorithms Today in animated explanations built using Claude…"
     ],
-    "themeZh": "前沿研究与能力边界",
-    "themeEn": "Frontier research and capability shifts",
-    "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
-    "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
-    "publishedAt": "2026-03-11T11:00:00.000Z",
-    "publishedLabelZh": "19 小时前",
-    "publishedLabelEn": "19 hours ago",
-    "score": 104,
+    "themeZh": "Agent 与开发者工具",
+    "themeEn": "Agents and developer tooling",
+    "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "publishedAt": "2026-03-11T22:58:06.000Z",
+    "publishedLabelZh": "14 小时前",
+    "publishedLabelEn": "14 hours ago",
+    "score": 91,
+    "featured": false,
+    "bodyFetched": false,
+    "bodyFetchTargeted": false,
+    "bodyFetchStatus": "skipped",
+    "bodyWordCount": 0,
+    "bodySummary": "",
+    "sourceNoteZh": "目前主要依据公开摘要",
+    "sourceNoteEn": "summary-level public detail only"
+  },
+  {
+    "id": "marktechpost.com-74ea74da3e18",
+    "rank": 5,
+    "sectionLabelZh": "补充 5｜Agent 与开发者工具",
+    "sectionLabelEn": "Brief 5 | Agents and developer tooling",
+    "titleZh": "MarkTechPost｜Agent 与开发者工具",
+    "titleEn": "How to Design a Streaming Decision Agent with Partial Reasoning, Online Replanning, and Reactive Mid-Execution Adaptation in Dynamic Environments",
+    "briefTitleZh": "MarkTechPost｜Agent 与开发者工具",
+    "briefTitleEn": "How to Design a Streaming Decision Agent with Partial Reasoning, Online Replanning, and Reactive Mid-Execution Adaptation in Dynamic Environments",
+    "kickerZh": "MarkTechPost · Agent 与开发者工具",
+    "kickerEn": "MarkTechPost · Agents and developer tooling",
+    "summaryZh": "MarkTechPost放出了一项围绕推理的研究型更新，指向的是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：In this tutorial…",
+    "summaryEn": "MarkTechPost published a research-led update around reasoning, aimed at turning model capability into orchestrated execution workflows…",
+    "deckZh": "MarkTechPost放出了一项围绕推理的研究型更新，指向的是把模型能力变成可编排的执行链路。",
+    "deckEn": "MarkTechPost published a research-led update around reasoning, aimed at turning model capability into orchestrated execution workflows.",
+    "narrativeZh": [
+      "MarkTechPost放出了一项围绕推理的研究型更新，指向的是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+      "目前能确认的公开信号是：In this tutorial, we build a Streaming Decision Agent that thinks and ac… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+      "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+    ],
+    "narrativeEn": [
+      "MarkTechPost published a research-led update around reasoning, aimed at turning model capability into orchestrated execution workflows. MarkTechPost is making the case that the next battle is not smarter chat…",
+      "The clearest public signal so far is this: In this tutorial, we build a Streaming Decision Agent that thinks and acts in an online… In other words, the race is no longer just about who answers well…",
+      "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+    ],
+    "whatChangedZh": "MarkTechPost放出了一项围绕推理的研究型更新，指向的是把模型能力变成可编排的执行链路。",
+    "whatChangedEn": "MarkTechPost published a research-led update around reasoning, aimed at turning model capability into orchestrated execution workflows.",
+    "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+    "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+    "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "tag": "Tools",
+    "source": "marktechpost.com",
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/03/11/how-to-design-a-streaming-decision-agent-with-partial-reasoning-online-replanning-and-reactive-mid-execution-adaptation-in-dynamic-environments/",
+    "relatedLinks": [
+      {
+        "labelZh": "MarkTechPost 原文",
+        "labelEn": "MarkTechPost source",
+        "url": "https://www.marktechpost.com/2026/03/11/how-to-design-a-streaming-decision-agent-with-partial-reasoning-online-replanning-and-reactive-mid-execution-adaptation-in-dynamic-environments/"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://www.marktechpost.com/feed/"
+      }
+    ],
+    "takeawayBulletsZh": [],
+    "takeawayBulletsEn": [],
+    "evidenceBulletsZh": [
+      "In this tutorial, we build a Streaming Decision Agent that thinks and acts in an online…",
+      "We implement a dynamic grid world with moving obstacles and a shifting goal…"
+    ],
+    "evidenceBulletsEn": [
+      "In this tutorial, we build a Streaming Decision Agent that thinks and acts in an online, changing environment while continuously streaming safe…",
+      "We implement a dynamic grid world with moving obstacles and a shifting goal…"
+    ],
+    "themeZh": "Agent 与开发者工具",
+    "themeEn": "Agents and developer tooling",
+    "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "publishedAt": "2026-03-11T23:44:44.000Z",
+    "publishedLabelZh": "13 小时前",
+    "publishedLabelEn": "13 hours ago",
+    "score": 89,
+    "featured": false,
+    "bodyFetched": false,
+    "bodyFetchTargeted": false,
+    "bodyFetchStatus": "skipped",
+    "bodyWordCount": 0,
+    "bodySummary": "",
+    "sourceNoteZh": "目前主要依据公开摘要",
+    "sourceNoteEn": "summary-level public detail only"
+  },
+  {
+    "id": "simonwillison.net-e2317408af0c",
+    "rank": 6,
+    "sectionLabelZh": "补充 6｜Agent 与开发者工具",
+    "sectionLabelEn": "Brief 6 | Agents and developer tooling",
+    "titleZh": "Simon Willison｜Agent 与开发者工具",
+    "titleEn": "Quoting John Carmack",
+    "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+    "briefTitleEn": "Quoting John Carmack",
+    "kickerZh": "Simon Willison · Agent 与开发者工具",
+    "kickerEn": "Simon Willison · Agents and developer tooling",
+    "summaryZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：— John Carmack , a tweet in June 2021 Tags…",
+    "summaryEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat… The clearest public signal so far is this: — John Carmack…",
+    "deckZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+    "deckEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
+    "narrativeZh": [
+      "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+      "目前能确认的公开信号是：— John Carmack , a tweet in June 2021 Tags: john-carmack… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+      "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+    ],
+    "narrativeEn": [
+      "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat…",
+      "The clearest public signal so far is this: — John Carmack , a tweet in June 2021 Tags: john-carmack , software-engineering , yagni In other words, the race is no longer just about who answers well…",
+      "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+    ],
+    "whatChangedZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+    "whatChangedEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
+    "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+    "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+    "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "tag": "Tools",
+    "source": "simonwillison.net",
+    "sourceName": "Simon Willison",
+    "sourceUrl": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+    "relatedLinks": [
+      {
+        "labelZh": "Simon Willison 原文",
+        "labelEn": "Simon Willison source",
+        "url": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything"
+      },
+      {
+        "labelZh": "RSS 源",
+        "labelEn": "RSS feed",
+        "url": "https://simonwillison.net/atom/everything/"
+      }
+    ],
+    "takeawayBulletsZh": [],
+    "takeawayBulletsEn": [],
+    "evidenceBulletsZh": [
+      "— John Carmack , a tweet in June 2021 Tags: john-carmack , software-engineering , yagni",
+      "It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications…"
+    ],
+    "evidenceBulletsEn": [
+      "— John Carmack , a tweet in June 2021 Tags: john-carmack , software-engineering , yagni",
+      "It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-positive."
+    ],
+    "themeZh": "Agent 与开发者工具",
+    "themeEn": "Agents and developer tooling",
+    "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+    "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+    "publishedAt": "2026-03-11T14:47:09.000Z",
+    "publishedLabelZh": "22 小时前",
+    "publishedLabelEn": "22 hours ago",
+    "score": 84,
     "featured": false,
     "bodyFetched": false,
     "bodyFetchTargeted": false,
