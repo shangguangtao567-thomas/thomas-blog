@@ -19,7 +19,7 @@ fi
 export FETCH_COUNT="${FETCH_COUNT:-24}"
 export MAX_AGE_DAYS="${MAX_AGE_DAYS:-3}"
 export MAX_PER_SOURCE="${MAX_PER_SOURCE:-4}"
-export SITE_URL="${SITE_URL:-https://guangtaos29545.github.io/thomas-blog}"
+export SITE_URL="${SITE_URL:-https://shangguangtao567-thomas.github.io/thomas-blog}"
 
 node scripts/fetch-ai-candidates.mjs
 node scripts/build-ai-digest.mjs

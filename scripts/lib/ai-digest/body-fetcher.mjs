@@ -143,7 +143,7 @@ function summarizeFetch(items = []) {
 async function fetchHtml(url) {
   const response = await fetch(url, {
     headers: {
-      'User-Agent': 'thomas-blog-ai-digest/2.0 (+https://guangtaos29545.github.io/thomas-blog)',
+      'User-Agent': 'thomas-blog-ai-digest/2.0 (+https://shangguangtao567-thomas.github.io/thomas-blog)',
       Accept: 'text/html,application/xhtml+xml',
     },
     signal: AbortSignal.timeout(BODY_TIMEOUT_MS),

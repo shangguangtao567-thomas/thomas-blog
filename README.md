@@ -61,7 +61,7 @@ A minimal, fast personal blog powered by Vite + React + GitHub Pages.
 ## 关键环境变量
 
 ```bash
-SITE_URL=https://guangtaos29545.github.io/thomas-blog
+SITE_URL=https://shangguangtao567-thomas.github.io/thomas-blog
 AI_DIGEST_WINDOW_HOURS=24
 AI_DIGEST_MAX_ITEMS=6
 AI_DIGEST_BODY_FETCH_LIMIT=5
