@@ -24,6 +24,12 @@ function currentText(language: 'zh' | 'en', zh?: string, en?: string) {
   return language === 'zh' ? (zh || en || '') : (en || zh || '');
 }
 
+function truncateText(text: string | undefined, max = 180) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (normalized.length <= max) return normalized;
+  return `${normalized.slice(0, max).trim()}...`;
+}
+
 export default function Tech({ navigate }: TechProps) {
   const { language } = useLanguage();
   const digests = digestsData as AiDigestIndexItem[];
@@ -32,17 +38,17 @@ export default function Tech({ navigate }: TechProps) {
   const latestDigest = digests[0];
   const latestDraft = xDrafts[0];
 
-  const previewItems = useMemo(() => items.slice(0, 4), [items]);
+  const previewItems = useMemo(() => items.slice(0, 6), [items]);
   const archiveItems = useMemo(() => digests.slice(1), [digests]);
   const bodyCoverage = latestDigest?.bodyCoverage;
   const themes = latestDigest?.themes?.slice(0, 4) || [];
 
   return (
     <div className="min-h-screen">
-      <div className="px-6 md:px-8 py-10 max-w-6xl mx-auto space-y-10">
+      <div className="px-6 md:px-8 py-10 max-w-6xl mx-auto space-y-8">
         <section className="rounded-[32px] border border-border bg-card p-6 md:p-8 overflow-hidden relative">
           <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,rgba(99,102,241,0.9),rgba(16,185,129,0.8),rgba(251,191,36,0.75))]" />
-          <div className="grid gap-8 lg:grid-cols-[1.35fr_0.95fr] lg:items-start">
+          <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
             <div>
               <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.18em] font-mono mb-3">
                 {language === 'zh' ? '// AI 日报专栏' : '// AI DAILY COLUMN'}
@@ -52,8 +58,8 @@ export default function Tech({ navigate }: TechProps) {
               </h1>
               <p className="text-sm md:text-base text-muted-foreground font-ui max-w-3xl leading-relaxed mb-5">
                 {language === 'zh'
-                  ? '这里不再把日报当成泛博客文章。流程现在分成三层：RSS 抓候选、高价值条目抓正文、本地规则生成中英双语 briefing。预览卡片负责让你快速扫一眼，完整解释则进入日报专栏页。'
-                  : 'The digest is no longer treated like a generic blog post. The pipeline now has three layers: RSS candidates, full-body fetches for high-value items, and local rule-based bilingual briefings. Preview cards help you scan quickly; the full explanation lives in the briefing issue itself.'}
+                  ? '这里的重点不是“新闻越多越好”，而是把当天最值得跟进的几条信号压成一条可读、可引用、可继续分发的主线。'
+                  : 'The goal here is not volume. It is to compress the highest-signal updates of the day into one line of thought that is readable, citable, and easy to distribute further.'}
               </p>
               {latestDigest && (
                 <div className="flex flex-wrap gap-2 text-xs font-ui text-muted-foreground mb-4">
@@ -68,23 +74,27 @@ export default function Tech({ navigate }: TechProps) {
                         : `Full-body coverage ${bodyCoverage.succeeded}/${bodyCoverage.targeted || latestDigest.itemCount}`}
                     </span>
                   )}
-                  {latestDigest.limitedUpdateWindow && (
-                    <span className="px-3 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-700">
-                      {language === 'zh' ? '近 24 小时更新有限' : 'Limited last-24h updates'}
-                    </span>
-                  )}
                 </div>
               )}
-              {latestDigest && (
+              <div className="flex flex-wrap gap-3">
+                {latestDigest && (
+                  <button
+                    onClick={() => navigate(latestDigest.path)}
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-foreground text-background text-sm font-ui hover:opacity-90 transition-opacity"
+                    style={{ background: 'var(--foreground)', color: 'var(--background)', border: 'none' }}
+                  >
+                    {language === 'zh' ? '阅读最新一期日报' : 'Read latest issue'}
+                    <span>→</span>
+                  </button>
+                )}
                 <button
-                  onClick={() => navigate(latestDigest.path)}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-foreground text-background text-sm font-ui hover:opacity-90 transition-opacity"
-                  style={{ background: 'var(--foreground)', color: 'var(--background)', border: 'none' }}
+                  onClick={() => navigate('/')}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border text-sm font-ui text-muted-foreground hover:text-foreground hover:border-foreground/20 transition-colors"
+                  style={{ background: 'none' }}
                 >
-                  {language === 'zh' ? '阅读最新一期日报' : 'Read latest issue'}
-                  <span>→</span>
+                  {language === 'zh' ? '回到首页' : 'Back home'}
                 </button>
-              )}
+              </div>
               <GrowthActions language={language} context="tech_hub_hero" className="mt-4" />
             </div>
 
@@ -115,87 +125,81 @@ export default function Tech({ navigate }: TechProps) {
           </div>
         </section>
 
-        <section className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px]">
-          <div>
-            <div className="flex items-center justify-between mb-4">
+        <section className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_300px]">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.15em] font-mono mb-1">
-                  {language === 'zh' ? '// 今日简报卡片' : '// TODAY’S BRIEFING CARDS'}
+                  {language === 'zh' ? '// 今日重点' : '// TODAY\'S PRIORITIES'}
                 </p>
                 <h2 className="text-2xl font-display text-foreground">
-                  {language === 'zh' ? '先扫重点，再打开日报正文' : 'Scan the key moves, then open the full issue'}
+                  {language === 'zh' ? '先扫重点，再进完整日报' : 'Scan the priorities, then open the full issue'}
                 </h2>
               </div>
               {latestDigest && (
-                <button onClick={() => navigate(latestDigest.path)} className="text-xs font-ui text-muted-foreground hover:text-foreground transition-colors" style={{ background: 'none', border: 'none', padding: 0 }}>
+                <button
+                  onClick={() => navigate(latestDigest.path)}
+                  className="text-xs font-ui text-muted-foreground hover:text-foreground transition-colors"
+                  style={{ background: 'none', border: 'none', padding: 0 }}
+                >
                   {language === 'zh' ? '进入完整专栏' : 'Open full column'}
                 </button>
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {previewItems.map(item => (
-                <button
-                  key={item.id}
-                  onClick={() => latestDigest && navigate(latestDigest.path)}
-                  className="text-left rounded-[24px] border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
-                >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div>
-                      <span className={`inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md font-ui ${tagColorMap[item.tag] ?? 'bg-secondary text-secondary-foreground'}`}>
-                        {item.tag}
-                      </span>
-                      {item.kickerZh && (
-                        <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.12em] text-muted-foreground">
-                          {currentText(language, item.kickerZh, item.kickerEn)}
-                        </p>
-                      )}
-                    </div>
-                    <span className="text-[11px] text-muted-foreground font-mono text-right">
-                      {currentText(language, item.publishedLabelZh, item.publishedLabelEn) || item.sourceName || item.source}
+            {previewItems.map(item => (
+              <button
+                key={item.id}
+                onClick={() => latestDigest && navigate(latestDigest.path)}
+                className="w-full text-left rounded-[28px] border border-border bg-card p-5 md:p-6 hover:border-foreground/20 hover:shadow-sm transition-all"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[11px] font-mono text-muted-foreground">#{String(item.rank || 0).padStart(2, '0')}</span>
+                    <span className={`inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md font-ui ${tagColorMap[item.tag] ?? 'bg-secondary text-secondary-foreground'}`}>
+                      {item.tag}
                     </span>
+                    {item.kickerZh && (
+                      <span className="text-[11px] font-mono uppercase tracking-[0.12em] text-muted-foreground">
+                        {currentText(language, item.kickerZh, item.kickerEn)}
+                      </span>
+                    )}
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground leading-snug font-display mb-2">
-                    {currentText(language, item.titleZh, item.titleEn)}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed font-ui mb-3">
-                    {currentText(language, item.deckZh || item.summaryZh, item.deckEn || item.summaryEn)}
-                  </p>
-                  <p className="text-xs text-foreground/85 leading-relaxed font-ui mb-3">
-                    {currentText(language, item.whyItMattersZh, item.whyItMattersEn)}
-                  </p>
-                  <div className="flex items-center justify-between text-[11px] font-ui text-muted-foreground">
-                    <span>{currentText(language, item.sourceNoteZh, item.sourceNoteEn)}</span>
-                    <span>→ {language === 'zh' ? '看完整解释' : 'Open issue'}</span>
+                  <span className="text-[11px] text-muted-foreground font-mono">
+                    {currentText(language, item.publishedLabelZh, item.publishedLabelEn) || item.sourceName || item.source}
+                  </span>
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-display text-foreground leading-snug mb-3">
+                  {currentText(language, item.titleZh, item.titleEn)}
+                </h3>
+
+                <div className="grid gap-4 md:grid-cols-[1fr_0.9fr]">
+                  <div>
+                    <p className="text-sm text-muted-foreground leading-relaxed font-ui mb-3">
+                      {truncateText(currentText(language, item.deckZh || item.summaryZh, item.deckEn || item.summaryEn), 170)}
+                    </p>
+                    <p className="text-sm text-foreground/85 leading-relaxed font-ui">
+                      {currentText(language, item.whyItMattersZh, item.whyItMattersEn)}
+                    </p>
                   </div>
-                </button>
-              ))}
-            </div>
+                  <div className="rounded-2xl border border-border bg-background/70 p-4">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.12em] text-muted-foreground mb-2">
+                      {language === 'zh' ? '来源判断' : 'Source note'}
+                    </p>
+                    <p className="text-xs leading-relaxed text-muted-foreground font-ui mb-3">
+                      {currentText(language, item.sourceNoteZh, item.sourceNoteEn)}
+                    </p>
+                    <p className="text-xs font-ui text-foreground">
+                      → {language === 'zh' ? '看完整解释' : 'Open issue'}
+                    </p>
+                  </div>
+                </div>
+              </button>
+            ))}
           </div>
 
-          <aside className="space-y-4">
-            <section className="rounded-[24px] border border-border bg-card p-5">
-              <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
-                {language === 'zh' ? '本期方法' : 'Method'}
-              </p>
-              <ul className="space-y-2 text-sm leading-relaxed text-foreground font-ui">
-                <li>{language === 'zh' ? 'RSS 只负责抓候选，不直接充当最终解读。' : 'RSS only provides candidates; it is not treated as the final explanation layer.'}</li>
-                <li>{language === 'zh' ? '高价值条目优先抓原文正文，再生成双语 digest。' : 'High-value items get full-body fetch priority before the bilingual digest is generated.'}</li>
-                <li>{language === 'zh' ? '不足时明确写不足，不用旧消息凑数。' : 'If updates are thin, the issue says so explicitly instead of padding with older items.'}</li>
-              </ul>
-            </section>
-
-            <section className="rounded-[24px] border border-border bg-card p-5">
-              <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
-                {language === 'zh' ? '为什么值得订阅' : 'Why this is useful'}
-              </p>
-              <p className="text-sm leading-relaxed text-foreground font-ui">
-                {language === 'zh'
-                  ? '如果你不想每天自己刷一堆源，这里提供的是一个“先判断，再点击”的入口：先看本地解释，再决定哪些原文值得深挖。'
-                  : 'If you do not want to scan a dozen feeds yourself, this gives you a “judge first, click later” workflow: read the local explanation first, then decide which originals deserve a deeper read.'}
-              </p>
-            </section>
-
+          <aside className="space-y-4 xl:sticky xl:top-20 xl:self-start">
             {latestDraft && (
               <section className="rounded-[24px] border border-border bg-card p-5">
                 <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
@@ -204,53 +208,58 @@ export default function Tech({ navigate }: TechProps) {
                 <p className="text-sm leading-relaxed text-foreground font-ui mb-3">
                   {language === 'zh' ? latestDraft.angleZh : latestDraft.angleEn}
                 </p>
-                <p className="text-xs leading-relaxed text-muted-foreground font-ui">
-                  {language === 'zh' ? latestDraft.shortPostZh : latestDraft.shortPostEn}
-                </p>
+                <div className="space-y-2 mb-3">
+                  {(language === 'zh' ? latestDraft.hooksZh : latestDraft.hooksEn).slice(0, 2).map(hook => (
+                    <p key={hook} className="text-xs leading-relaxed text-muted-foreground font-ui">{truncateText(hook, 110)}</p>
+                  ))}
+                </div>
+                <button
+                  onClick={() => latestDigest && navigate(latestDigest.path)}
+                  className="text-xs font-ui text-foreground hover:opacity-75 transition-opacity"
+                  style={{ background: 'none', border: 'none', padding: 0 }}
+                >
+                  {language === 'zh' ? '回到今天这期日报' : 'Open today’s digest'}
+                </button>
               </section>
             )}
-          </aside>
-        </section>
 
-        <section>
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.15em] font-mono mb-1">
-                {language === 'zh' ? '// 往期归档' : '// ARCHIVE'}
+            <section className="rounded-[24px] border border-border bg-card p-5">
+              <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
+                {language === 'zh' ? '方法' : 'Method'}
               </p>
-              <h2 className="text-2xl font-display text-foreground">
-                {language === 'zh' ? '往期日报入口' : 'Past digest issues'}
-              </h2>
-            </div>
-          </div>
+              <ul className="space-y-2 text-sm leading-relaxed text-foreground font-ui">
+                <li>{language === 'zh' ? 'RSS 只负责抓候选，不直接充当最终解读。' : 'RSS only provides candidates, not the final explanation.'}</li>
+                <li>{language === 'zh' ? '高价值条目优先抓原文正文，再生成双语 digest。' : 'High-value items get full-body fetch priority before the bilingual digest is generated.'}</li>
+                <li>{language === 'zh' ? '更新不够多时，明确写不足，不用旧消息凑数。' : 'If updates are thin, the issue says so instead of padding with older items.'}</li>
+              </ul>
+            </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {archiveItems.length ? archiveItems.map(digest => (
-              <button
-                key={digest.slug}
-                onClick={() => navigate(digest.path)}
-                className="text-left rounded-[24px] border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
-              >
-                <p className="text-[11px] font-mono text-muted-foreground mb-2">{digest.date}</p>
-                <h3 className="text-lg font-display text-foreground mb-2">{currentText(language, digest.titleZh, digest.titleEn)}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-ui mb-3">{currentText(language, digest.excerptZh, digest.excerptEn)}</p>
-                {digest.themes?.length ? (
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {digest.themes.slice(0, 2).map(theme => (
-                      <span key={`${digest.slug}-${theme.themeZh}`} className="px-2 py-1 rounded-full border border-border text-[11px] font-ui text-muted-foreground">
-                        {language === 'zh' ? theme.themeZh : theme.themeEn}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-                <div className="text-xs font-ui text-foreground">→ {language === 'zh' ? '打开这一期' : 'Open issue'}</div>
-              </button>
-            )) : (
-              <div className="text-sm text-muted-foreground font-ui">
-                {language === 'zh' ? '目前还没有更多往期日报。' : 'No older digest issues yet.'}
+            <section className="rounded-[24px] border border-border bg-card p-5">
+              <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
+                {language === 'zh' ? '往期归档' : 'Archive'}
+              </p>
+              <div className="space-y-3">
+                {archiveItems.length ? archiveItems.map(digest => (
+                  <button
+                    key={digest.slug}
+                    onClick={() => navigate(digest.path)}
+                    className="block w-full text-left pb-3 border-b border-border last:border-b-0 last:pb-0"
+                    style={{ background: 'none', borderLeft: 'none', borderRight: 'none', borderTop: 'none', paddingInline: 0 }}
+                  >
+                    <p className="text-[11px] font-mono text-muted-foreground mb-1">{digest.date}</p>
+                    <p className="text-sm font-medium text-foreground font-ui mb-1">{currentText(language, digest.titleZh, digest.titleEn)}</p>
+                    <p className="text-xs leading-relaxed text-muted-foreground font-ui">
+                      {truncateText(currentText(language, digest.excerptZh, digest.excerptEn), 88)}
+                    </p>
+                  </button>
+                )) : (
+                  <p className="text-sm text-muted-foreground font-ui">
+                    {language === 'zh' ? '目前还没有更多往期日报。' : 'No older digest issues yet.'}
+                  </p>
+                )}
               </div>
-            )}
-          </div>
+            </section>
+          </aside>
         </section>
       </div>
     </div>

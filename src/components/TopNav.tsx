@@ -21,6 +21,7 @@ export default function TopNav({ currentPath, navigate }: TopNavProps) {
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [cordSwing, setCordSwing] = useState(false);
+  const followLabel = language === 'zh' ? '在 X 上关注' : 'Follow on X';
 
   const navItems = [
     { path: '/', label: language === 'zh' ? '首页' : 'Home' },
@@ -90,7 +91,7 @@ export default function TopNav({ currentPath, navigate }: TopNavProps) {
             className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-ui font-medium hover:opacity-90 transition-opacity"
             style={{ background: 'var(--foreground)', color: 'var(--background)', textDecoration: 'none' }}
           >
-            <span>Follow on X</span>
+            <span>{followLabel}</span>
             <span aria-hidden="true">↗</span>
           </a>
 

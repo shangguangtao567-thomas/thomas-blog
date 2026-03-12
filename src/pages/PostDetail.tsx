@@ -26,6 +26,12 @@ interface PostDetailProps {
   navigate: (path: string) => void;
 }
 
+function truncateText(text: string | undefined, max = 110) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (normalized.length <= max) return normalized;
+  return `${normalized.slice(0, max).trim()}...`;
+}
+
 export default function PostDetail({ slug, navigate }: PostDetailProps) {
   const { language } = useLanguage();
   const [renderedContent, setRenderedContent] = useState('');
@@ -120,7 +126,7 @@ export default function PostDetail({ slug, navigate }: PostDetailProps) {
 
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto px-6 md:px-8 pt-10 pb-20">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 pt-10 pb-20">
         <button
           onClick={() => navigate('/blog')}
           className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors font-ui mb-8 group"
@@ -132,94 +138,127 @@ export default function PostDetail({ slug, navigate }: PostDetailProps) {
           {language === 'zh' ? '返回博客' : 'Back to blog'}
         </button>
 
-        {post.image && (
-          <div className="rounded-2xl overflow-hidden aspect-[16/7] mb-10">
-            <img src={post.image} alt={title} className="w-full h-full object-cover" />
-          </div>
-        )}
+        <div className="grid gap-10 xl:grid-cols-[minmax(0,1fr)_280px]">
+          <article className="min-w-0">
+            {post.image && (
+              <div className="rounded-[28px] overflow-hidden aspect-[16/7] mb-8">
+                <img src={post.image} alt={title} className="w-full h-full object-cover" />
+              </div>
+            )}
 
-        <div className="flex flex-wrap items-center gap-4 mb-6 text-xs text-muted-foreground font-ui">
-          <span>{date}</span>
-          <span>{post.readTime} {language === 'zh' ? '分钟阅读' : 'min read'}</span>
-          {tag && (
-            <button
-              onClick={() => navigate(`/topic/${post.topicSlug || ''}`)}
-              className="px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground text-[10px] font-medium"
-              style={{ background: 'var(--secondary)', color: 'var(--secondary-foreground)', border: 'none' }}
-              disabled={!post.topicSlug}
-            >
-              {tag}
-            </button>
-          )}
+            <div className="rounded-[28px] border border-border bg-card p-6 md:p-8 mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-4 text-xs text-muted-foreground font-ui">
+                <span>{date}</span>
+                <span>{post.readTime} {language === 'zh' ? '分钟阅读' : 'min read'}</span>
+                {tag && (
+                  <button
+                    onClick={() => post.topicSlug && navigate(`/topic/${post.topicSlug}`)}
+                    className="px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] font-medium"
+                    style={{ background: 'var(--secondary)', color: 'var(--secondary-foreground)', border: 'none' }}
+                    disabled={!post.topicSlug}
+                  >
+                    {tag}
+                  </button>
+                )}
+              </div>
+
+              <h1 className="text-3xl md:text-5xl font-display text-foreground leading-tight mb-4">{title}</h1>
+              <p className="text-base md:text-lg text-muted-foreground font-ui leading-relaxed mb-6 max-w-3xl">{excerpt}</p>
+              <GrowthActions language={language} context={`post_${post.slug}`} />
+            </div>
+
+            {renderedContent ? (
+              <div className="prose-article" dangerouslySetInnerHTML={{ __html: renderedContent }} />
+            ) : (
+              <div className="text-center py-16 text-muted-foreground">
+                <p className="text-4xl mb-3">📝</p>
+                <p className="font-ui text-sm">
+                  {language === 'zh' ? '文章内容即将发布...' : 'Article content coming soon...'}
+                </p>
+              </div>
+            )}
+
+            {(previousPost || nextPost) && (
+              <section className="mt-16 pt-8 border-t border-border">
+                <p className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted-foreground mb-4">
+                  {language === 'zh' ? '// CONTINUE READING' : '// CONTINUE READING'}
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {nextPost && (
+                    <button
+                      onClick={() => navigate(`/blog/${nextPost.slug}`)}
+                      className="text-left rounded-2xl border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
+                    >
+                      <p className="text-[11px] font-mono text-muted-foreground mb-2">{language === 'zh' ? '更新的一篇' : 'Newer post'}</p>
+                      <p className="text-lg font-display text-foreground mb-2">{language === 'zh' ? nextPost.titleZh : nextPost.titleEn}</p>
+                      <p className="text-sm text-muted-foreground font-ui leading-relaxed">{truncateText(language === 'zh' ? nextPost.excerptZh : nextPost.excerptEn)}</p>
+                    </button>
+                  )}
+
+                  {previousPost && (
+                    <button
+                      onClick={() => navigate(`/blog/${previousPost.slug}`)}
+                      className="text-left rounded-2xl border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
+                    >
+                      <p className="text-[11px] font-mono text-muted-foreground mb-2">{language === 'zh' ? '更早的一篇' : 'Older post'}</p>
+                      <p className="text-lg font-display text-foreground mb-2">{language === 'zh' ? previousPost.titleZh : previousPost.titleEn}</p>
+                      <p className="text-sm text-muted-foreground font-ui leading-relaxed">{truncateText(language === 'zh' ? previousPost.excerptZh : previousPost.excerptEn)}</p>
+                    </button>
+                  )}
+                </div>
+              </section>
+            )}
+          </article>
+
+          <aside className="space-y-4 xl:sticky xl:top-20 xl:self-start">
+            <section className="rounded-[24px] border border-border bg-card p-5">
+              <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-2">
+                {language === 'zh' ? '阅读面板' : 'Reading panel'}
+              </p>
+              <div className="space-y-3 text-sm font-ui">
+                <p className="text-foreground">{language === 'zh' ? '这篇内容更适合从开头一路读完，再去看延伸文章。' : 'This piece is best read front to back before you branch into the related posts.'}</p>
+                <button
+                  onClick={() => navigate('/')}
+                  className="block text-left text-muted-foreground hover:text-foreground transition-colors"
+                  style={{ background: 'none', border: 'none', padding: 0 }}
+                >
+                  {language === 'zh' ? '回到首页' : 'Back home'}
+                </button>
+                <button
+                  onClick={() => navigate('/tech')}
+                  className="block text-left text-muted-foreground hover:text-foreground transition-colors"
+                  style={{ background: 'none', border: 'none', padding: 0 }}
+                >
+                  {language === 'zh' ? '查看最新日报' : 'Open latest digest'}
+                </button>
+              </div>
+            </section>
+
+            {relatedPosts.length > 0 && (
+              <section className="rounded-[24px] border border-border bg-card p-5">
+                <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                  {language === 'zh' ? '相关内容' : 'Related posts'}
+                </p>
+                <div className="space-y-3">
+                  {relatedPosts.map(item => (
+                    <button
+                      key={item.slug}
+                      onClick={() => navigate(`/blog/${item.slug}`)}
+                      className="block w-full text-left pb-3 border-b border-border last:border-b-0 last:pb-0"
+                      style={{ background: 'none', borderLeft: 'none', borderRight: 'none', borderTop: 'none', paddingInline: 0 }}
+                    >
+                      <p className="text-sm font-medium text-foreground font-ui mb-1">{language === 'zh' ? item.titleZh : item.titleEn}</p>
+                      <p className="text-xs leading-relaxed text-muted-foreground font-ui">
+                        {truncateText(language === 'zh' ? item.excerptZh : item.excerptEn, 90)}
+                      </p>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
+          </aside>
         </div>
-
-        <h1 className="text-3xl md:text-5xl font-display text-foreground leading-tight mb-4">{title}</h1>
-        <p className="text-base md:text-lg text-muted-foreground font-ui leading-relaxed mb-8">{excerpt}</p>
-
-        <GrowthActions language={language} context={`post_${post.slug}`} className="mb-10" />
-
-        {renderedContent ? (
-          <div className="prose-article" dangerouslySetInnerHTML={{ __html: renderedContent }} />
-        ) : (
-          <div className="text-center py-16 text-muted-foreground">
-            <p className="text-4xl mb-3">📝</p>
-            <p className="font-ui text-sm">
-              {language === 'zh' ? '文章内容即将发布...' : 'Article content coming soon...'}
-            </p>
-          </div>
-        )}
-
-        {(previousPost || nextPost) && (
-          <section className="mt-16 pt-8 border-t border-border">
-            <p className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted-foreground mb-4">
-              {language === 'zh' ? '// CONTINUE READING' : '// CONTINUE READING'}
-            </p>
-            <div className="grid gap-4 md:grid-cols-2">
-              {nextPost && (
-                <button
-                  onClick={() => navigate(`/blog/${nextPost.slug}`)}
-                  className="text-left rounded-2xl border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
-                >
-                  <p className="text-[11px] font-mono text-muted-foreground mb-2">{language === 'zh' ? '更新的一篇' : 'Newer post'}</p>
-                  <p className="text-lg font-display text-foreground mb-2">{language === 'zh' ? nextPost.titleZh : nextPost.titleEn}</p>
-                  <p className="text-sm text-muted-foreground font-ui leading-relaxed">{language === 'zh' ? nextPost.excerptZh : nextPost.excerptEn}</p>
-                </button>
-              )}
-
-              {previousPost && (
-                <button
-                  onClick={() => navigate(`/blog/${previousPost.slug}`)}
-                  className="text-left rounded-2xl border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
-                >
-                  <p className="text-[11px] font-mono text-muted-foreground mb-2">{language === 'zh' ? '更早的一篇' : 'Older post'}</p>
-                  <p className="text-lg font-display text-foreground mb-2">{language === 'zh' ? previousPost.titleZh : previousPost.titleEn}</p>
-                  <p className="text-sm text-muted-foreground font-ui leading-relaxed">{language === 'zh' ? previousPost.excerptZh : previousPost.excerptEn}</p>
-                </button>
-              )}
-            </div>
-          </section>
-        )}
-
-        {relatedPosts.length > 0 && (
-          <section className="mt-12 pt-8 border-t border-border">
-            <p className="text-[10px] font-mono uppercase tracking-[0.16em] text-muted-foreground mb-4">
-              {language === 'zh' ? '// RELATED POSTS' : '// RELATED POSTS'}
-            </p>
-            <div className="space-y-3">
-              {relatedPosts.map(item => (
-                <button
-                  key={item.slug}
-                  onClick={() => navigate(`/blog/${item.slug}`)}
-                  className="w-full text-left rounded-2xl border border-border bg-card p-5 hover:border-foreground/20 hover:shadow-sm transition-all"
-                >
-                  <p className="text-lg font-display text-foreground mb-2">{language === 'zh' ? item.titleZh : item.titleEn}</p>
-                  <p className="text-sm text-muted-foreground font-ui leading-relaxed">{language === 'zh' ? item.excerptZh : item.excerptEn}</p>
-                </button>
-              ))}
-            </div>
-          </section>
-        )}
-      </article>
+      </div>
     </div>
   );
 }
