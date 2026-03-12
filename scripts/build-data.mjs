@@ -26,6 +26,16 @@ if (!fs.existsSync(POSTS_DIR)) {
   console.log('Created posts/ directory');
 }
 
+function extractContentSections(body) {
+  const enMatch = body.match(/<!-- CONTENT_EN -->\n([\s\S]*?)(?=\n<!-- CONTENT_ZH -->|$)/);
+  const zhMatch = body.match(/<!-- CONTENT_ZH -->\n([\s\S]*?)$/);
+
+  return {
+    contentEn: enMatch ? enMatch[1].trim() : body.trim(),
+    contentZh: zhMatch ? zhMatch[1].trim() : '',
+  };
+}
+
 // Read all markdown files
 const files = fs.readdirSync(POSTS_DIR)
   .filter(f => f.endsWith('.md'))
@@ -36,6 +46,7 @@ const posts = files.map(filename => {
   const filePath = path.join(POSTS_DIR, filename);
   const raw = fs.readFileSync(filePath, 'utf-8');
   const { data: frontmatter, content } = matter(raw);
+  const { contentEn, contentZh } = extractContentSections(content);
 
   // Derive slug from filename: YYYY-MM-DD-slug.md -> slug
   const slug = filename
@@ -44,6 +55,7 @@ const posts = files.map(filename => {
 
   return {
     slug,
+    kind: frontmatter.kind || '',
     titleZh: frontmatter.titleZh || frontmatter.title || slug,
     titleEn: frontmatter.titleEn || frontmatter.title || slug,
     excerptZh: frontmatter.excerptZh || frontmatter.excerpt || '',
@@ -53,8 +65,8 @@ const posts = files.map(filename => {
     image: frontmatter.image || '',
     readTime: frontmatter.readTime || Math.ceil(content.split(' ').length / 200),
     publishedAt: frontmatter.date || frontmatter.publishedAt || filename.slice(0, 10),
-    contentEn: frontmatter.lang === 'zh' ? '' : content,
-    contentZh: frontmatter.lang === 'zh' ? content : '',
+    contentEn: frontmatter.lang === 'zh' ? '' : contentEn,
+    contentZh: frontmatter.lang === 'zh' ? content : contentZh,
   };
 });
 
@@ -74,16 +86,19 @@ fs.writeFileSync(
 console.log(`✓ Built ${posts.length} posts → src/data/posts-index.json & posts.json`);
 
 // Ensure AI data files exist for static imports
-for (const [filename, label] of [
-  ['tech-news.json', 'tech-news'],
-  ['ai-digests.json', 'ai-digests'],
+for (const [filename, label, fallback] of [
+  ['tech-news.json', 'tech-news', []],
+  ['ai-digests.json', 'ai-digests', []],
+  ['ai-digest-details.json', 'ai-digest-details', []],
+  ['ai-digest-report.json', 'ai-digest-report', {}],
 ]) {
   const filePath = path.join(DATA_DIR, filename);
   if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, '[]');
+    fs.writeFileSync(filePath, JSON.stringify(fallback, null, 2));
     console.log(`✓ Created empty src/data/${filename}`);
   } else {
     const payload = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    console.log(`✓ ${label}: ${payload.length} items`);
+    const size = Array.isArray(payload) ? payload.length : Object.keys(payload).length;
+    console.log(`✓ ${label}: ${size} item${size === 1 ? '' : 's'}`);
   }
 }

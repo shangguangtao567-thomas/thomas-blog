@@ -1,0 +1,988 @@
+[
+  {
+    "slug": "ai-daily-2026-03-12",
+    "date": "2026-03-12",
+    "titleZh": "2026-03-12 AI 日报：Google公布数据集",
+    "titleEn": "2026-03-12 AI Daily Briefing",
+    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "issueSummaryZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "issueSummaryEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "introZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "introEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "methodologyZh": "方法：先抓 RSS 候选，再对高价值条目优先抓原文正文，最后用本地规则生成中英双语 briefing；如果正文抓取失败，会明确说明。",
+    "methodologyEn": "Method: RSS candidates first, then full-body fetches for high-value items, then local rule-based bilingual briefing generation. If full-body fetch fails, the issue says so explicitly.",
+    "path": "/blog/ai-daily-2026-03-12",
+    "digestUrl": "https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12",
+    "itemCount": 6,
+    "heroTitleZh": "Google公布数据集",
+    "heroTitleEn": "How AI is helping improve heart health in rural Australia",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-12T04:02:36.560Z",
+    "windowHours": 24,
+    "themes": [
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 3
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 3
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 2,
+      "totalWords": 2390,
+      "ratio": 0.4
+    },
+    "featuredItems": [
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "titleZh": "Google公布数据集",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "tag": "AI",
+        "summaryZh": "Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。 正文里最值得记下的信号是：Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)… 为什么值得看：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "summaryEn": "Google published a research-driven update around dataset, aimed at pushing the capability frontier outward. The strongest signal in the article is: Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI), this collaboration uses Google for Health’s Population Health AI (PHAI). Why it matters…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour"
+      },
+      {
+        "id": "huggingface.co-74a942baffcf",
+        "titleZh": "Hugging Face开源上下文窗口、开源",
+        "titleEn": "How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II",
+        "tag": "Tools",
+        "summaryZh": "Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。 正文里最值得记下的信号是：- Then we generated ~80k trajectories 用于 the full 工作流 using the open-sourced GPT-OSS-120B model. 为什么值得看：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”…",
+        "summaryEn": "Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on. The strongest signal in the article is: - Then we generated ~80k trajectories for the full workflow using the open-sourced GPT-OSS-120B model. Why it matters…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour"
+      },
+      {
+        "id": "openai.com-d4732a41e5a2",
+        "titleZh": "OpenAI推进研究前沿",
+        "titleEn": "From model to agent: Equipping the Responses API with a computer environment",
+        "tag": "AI",
+        "summaryZh": "OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。 正文里最值得记下的信号是：How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents 并带来 files, tools, and state…",
+        "summaryEn": "OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward. The strongest signal in the article is: How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state. Why it matters…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "rank": 1,
+        "titleZh": "Google公布数据集",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "kickerZh": "Google · 前沿研究与能力边界",
+        "kickerEn": "Google · Frontier research and capability shifts",
+        "summaryZh": "Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。 正文里最值得记下的信号是：Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)… 为什么值得看：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "summaryEn": "Google published a research-driven update around dataset, aimed at pushing the capability frontier outward. The strongest signal in the article is: Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI), this collaboration uses Google for Health’s Population Health AI (PHAI). Why it matters…",
+        "deckZh": "Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。",
+        "deckEn": "Google published a research-driven update around dataset, aimed at pushing the capability frontier outward.",
+        "whatChangedZh": "Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。",
+        "whatChangedEn": "Google published a research-driven update around dataset, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "blog.google",
+        "sourceName": "Google AI Blog",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
+        "relatedLinks": [
+          {
+            "labelZh": "Google AI Blog 原文",
+            "labelEn": "Google AI Blog source",
+            "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://blog.google/technology/ai/rss/"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。",
+          "为什么重要：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "接下来观察：要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: Google published a research-driven update around dataset, aimed at pushing the capability frontier outward.",
+          "Why it matters: Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+          "What to watch: Watch for replications, open implementations, API exposure, or absorption into mainstream products."
+        ],
+        "evidenceBulletsZh": [
+          "Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)…",
+          "Supported by the DFI, SISU Health plans to conduct over 50,000 new health screenings in remote areas.",
+          "A one million dollar investment from Google Australia's Digital Future Initiative supports this program."
+        ],
+        "evidenceBulletsEn": [
+          "Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI), this collaboration uses Google for Health’s Population Health AI (PHAI).",
+          "Supported by the DFI, SISU Health plans to conduct over 50,000 new health screenings in remote areas.",
+          "A one million dollar investment from Google Australia's Digital Future Initiative supports this program."
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-12T15:00:00.000Z",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour",
+        "score": 117,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 688,
+        "bodySummary": "How AI is helping improve heart health in rural Australia We’re partnering with leading Australian health organizations to bring new AI tools to regional communities. This project helps identify heart health risks early, making proactive care possible for more people. Head of Strategic Health Solutions, Asia-Pacific Google is partnering with Australian health organizations to improve heart health in rural areas…",
+        "sourceNoteZh": "已抓取原文正文（约 688 词）",
+        "sourceNoteEn": "Full article body fetched (~688 words)"
+      },
+      {
+        "id": "huggingface.co-74a942baffcf",
+        "rank": 2,
+        "titleZh": "Hugging Face开源上下文窗口、开源",
+        "titleEn": "How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II",
+        "kickerZh": "Hugging Face · Agent 与开发者工具",
+        "kickerEn": "Hugging Face · Agents and developer tooling",
+        "summaryZh": "Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。 正文里最值得记下的信号是：- Then we generated ~80k trajectories 用于 the full 工作流 using the open-sourced GPT-OSS-120B model. 为什么值得看：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”…",
+        "summaryEn": "Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on. The strongest signal in the article is: - Then we generated ~80k trajectories for the full workflow using the open-sourced GPT-OSS-120B model. Why it matters…",
+        "deckZh": "Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。",
+        "deckEn": "Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on.",
+        "whatChangedZh": "Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。",
+        "whatChangedEn": "Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "tag": "Tools",
+        "source": "huggingface.co",
+        "sourceName": "Hugging Face Blog",
+        "sourceUrl": "https://huggingface.co/blog/nvidia/how-nvidia-won-deepresearch-bench",
+        "relatedLinks": [
+          {
+            "labelZh": "Hugging Face Blog 原文",
+            "labelEn": "Hugging Face Blog source",
+            "url": "https://huggingface.co/blog/nvidia/how-nvidia-won-deepresearch-bench"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://huggingface.co/blog/feed.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。",
+          "为什么重要：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+          "接下来观察：后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on.",
+          "Why it matters: The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+          "What to watch: Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns."
+        ],
+        "evidenceBulletsZh": [
+          "- Then we generated ~80k trajectories 用于 the full 工作流 using the open-sourced GPT-OSS-120B model.",
+          "用于 the 基准测试 submission, a fine-tuned Nemotron 3 drives the researcher, which processes 4x more tokens than the planner and orchestrator combined.",
+          "Custom Middleware 用于 Long-Horizon Reliability Each agent and subagent interleaves LLM and tool calls across many steps (often 32+)."
+        ],
+        "evidenceBulletsEn": [
+          "- Then we generated ~80k trajectories for the full workflow using the open-sourced GPT-OSS-120B model.",
+          "For the benchmark submission, a fine-tuned Nemotron 3 drives the researcher, which processes 4x more tokens than the planner and orchestrator combined.",
+          "Custom Middleware for Long-Horizon Reliability Each agent and subagent interleaves LLM and tool calls across many steps (often 32+)."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "publishedAt": "2026-03-12T03:53:34.000Z",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour",
+        "score": 117,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 1702,
+        "bodySummary": "How NVIDIA AI-Q Reached #1 on DeepResearch Bench I and II Enterprise + Article Published March 12, 2026 - Contributors : Raja Biswas, Divyansh Jain, Ivan Sorokin, Alessio Devoto, Chantal D Gama Rose, Ajay Thorve, David Austin, Jean-Francois Puget NVIDIA AI-Q deep research agent recently achieved first place on both DeepResearch Bench (55.95) and DeepResearch Bench II (54.50)…",
+        "sourceNoteZh": "已抓取原文正文（约 1702 词）",
+        "sourceNoteEn": "Full article body fetched (~1702 words)"
+      },
+      {
+        "id": "openai.com-d4732a41e5a2",
+        "rank": 3,
+        "titleZh": "OpenAI推进研究前沿",
+        "titleEn": "From model to agent: Equipping the Responses API with a computer environment",
+        "kickerZh": "OpenAI · 前沿研究与能力边界",
+        "kickerEn": "OpenAI · Frontier research and capability shifts",
+        "summaryZh": "OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。 正文里最值得记下的信号是：How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents 并带来 files, tools, and state…",
+        "summaryEn": "OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward. The strongest signal in the article is: How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state. Why it matters…",
+        "deckZh": "OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。",
+        "deckEn": "OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward.",
+        "whatChangedZh": "OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。",
+        "whatChangedEn": "OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/equip-responses-api-computer-environment",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/equip-responses-api-computer-environment"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。",
+          "为什么重要：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "接下来观察：要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward.",
+          "Why it matters: Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+          "What to watch: Watch for replications, open implementations, API exposure, or absorption into mainstream products."
+        ],
+        "evidenceBulletsZh": [
+          "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents 并带来 files, tools, and state."
+        ],
+        "evidenceBulletsEn": [
+          "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state."
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-11T11:00:00.000Z",
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago",
+        "score": 113,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "openai.com-86852cb22192",
+        "rank": 4,
+        "titleZh": "OpenAI推进提示注入、工作流",
+        "titleEn": "Designing AI agents to resist prompt injection",
+        "kickerZh": "OpenAI · Agent 与开发者工具",
+        "kickerEn": "OpenAI · Agents and developer tooling",
+        "summaryZh": "OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。 正文里最值得记下的信号是：How ChatGPT defends against 提示注入 and social engineering by constraining risky actions and protecting sensitive data in agent 工作流s…",
+        "summaryEn": "OpenAI pushed prompt injection and workflow deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows. The strongest signal in the article is…",
+        "deckZh": "OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+        "deckEn": "OpenAI pushed prompt injection and workflow deeper into product and developer workflows…",
+        "whatChangedZh": "OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "OpenAI pushed prompt injection and workflow deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "tag": "Tools",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+          "为什么重要：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+          "接下来观察：后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI pushed prompt injection and workflow deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows.",
+          "Why it matters: The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+          "What to watch: Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns."
+        ],
+        "evidenceBulletsZh": [
+          "How ChatGPT defends against 提示注入 and social engineering by constraining risky actions and protecting sensitive data in agent 工作流s."
+        ],
+        "evidenceBulletsEn": [
+          "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "publishedAt": "2026-03-11T11:30:00.000Z",
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago",
+        "score": 111,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "openai.com-34e6351b3e4d",
+        "rank": 5,
+        "titleZh": "OpenAI拆解Agent 工作流与开发工具",
+        "titleEn": "Rakuten fixes issues twice as fast with Codex",
+        "kickerZh": "OpenAI · Agent 与开发者工具",
+        "kickerEn": "OpenAI · Agents and developer tooling",
+        "summaryZh": "OpenAI拆解了一个围绕Agent 工作流与开发工具的实践说明，展示这类能力如何进入真实工程。 正文里最值得记下的信号是：Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%…",
+        "summaryEn": "OpenAI published a hands-on walkthrough around agent workflows and developer tooling, showing how the capability can be operationalized. The strongest signal in the article is: Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks…",
+        "deckZh": "OpenAI拆解了一个围绕Agent 工作流与开发工具的实践说明，展示这类能力如何进入真实工程。",
+        "deckEn": "OpenAI published a hands-on walkthrough around agent workflows and developer tooling, showing how the capability can be operationalized.",
+        "whatChangedZh": "OpenAI拆解了一个围绕Agent 工作流与开发工具的实践说明，展示这类能力如何进入真实工程。",
+        "whatChangedEn": "OpenAI published a hands-on walkthrough around agent workflows and developer tooling, showing how the capability can be operationalized.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "tag": "Tools",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/rakuten",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/rakuten"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI拆解了一个围绕Agent 工作流与开发工具的实践说明，展示这类能力如何进入真实工程。",
+          "为什么重要：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+          "接下来观察：后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI published a hands-on walkthrough around agent workflows and developer tooling, showing how the capability can be operationalized.",
+          "Why it matters: The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+          "What to watch: Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns."
+        ],
+        "evidenceBulletsZh": [
+          "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews…"
+        ],
+        "evidenceBulletsEn": [
+          "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "publishedAt": "2026-03-11T13:00:00.000Z",
+        "publishedLabelZh": "15 小时前",
+        "publishedLabelEn": "15 hours ago",
+        "score": 104,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "openai.com-69f2b5ec7d18",
+        "rank": 6,
+        "titleZh": "OpenAI更新研究前沿",
+        "titleEn": "Wayfair boosts catalog accuracy and support speed with OpenAI",
+        "kickerZh": "OpenAI · 前沿研究与能力边界",
+        "kickerEn": "OpenAI · Frontier research and capability shifts",
+        "summaryZh": "OpenAI发布了一条围绕研究前沿的重要更新。 正文里最值得记下的信号是：Wayfair uses OpenAI models to 提升 ecommerce support and product catalog accuracy… 为什么值得看：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "summaryEn": "OpenAI published a meaningful update around research frontier. The strongest signal in the article is: Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy, automating ticket triage and enhancing millions of product attributes at scale. Why it matters: Research-heavy updates do not always become products immediately…",
+        "deckZh": "OpenAI发布了一条围绕研究前沿的重要更新。",
+        "deckEn": "OpenAI published a meaningful update around research frontier.",
+        "whatChangedZh": "OpenAI发布了一条围绕研究前沿的重要更新。",
+        "whatChangedEn": "OpenAI published a meaningful update around research frontier.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/wayfair",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/wayfair"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI发布了一条围绕研究前沿的重要更新。",
+          "为什么重要：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "接下来观察：要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI published a meaningful update around research frontier.",
+          "Why it matters: Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+          "What to watch: Watch for replications, open implementations, API exposure, or absorption into mainstream products."
+        ],
+        "evidenceBulletsZh": [
+          "Wayfair uses OpenAI models to 提升 ecommerce support and product catalog accuracy…"
+        ],
+        "evidenceBulletsEn": [
+          "Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy, automating ticket triage and enhancing millions of product attributes at scale."
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "Watch for replications, open implementations, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-11T11:00:00.000Z",
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago",
+        "score": 104,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      }
+    ]
+  },
+  {
+    "slug": "ai-daily-2026-03-11",
+    "date": "2026-03-11",
+    "titleZh": "2026-03-11 AI 日报：OpenAI公布指令层级、提示注入",
+    "titleEn": "2026-03-11 AI Daily Briefing",
+    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "issueSummaryZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "issueSummaryEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "introZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "introEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "methodologyZh": "方法：先抓 RSS 候选，再对高价值条目优先抓原文正文，最后用本地规则生成中英双语 briefing；如果正文抓取失败，会明确说明。",
+    "methodologyEn": "Method: RSS candidates first, then full-body fetches for high-value items, then local rule-based bilingual briefing generation. If full-body fetch fails, the issue says so explicitly.",
+    "path": "/blog/ai-daily-2026-03-11",
+    "digestUrl": "https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-11",
+    "itemCount": 6,
+    "heroTitleZh": "OpenAI公布指令层级、提示注入",
+    "heroTitleEn": "Improving instruction hierarchy in frontier LLMs",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-11T08:16:34.546Z",
+    "windowHours": 24,
+    "themes": [
+      {
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "count": 2
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 2
+      },
+      {
+        "themeZh": "模型安全与可控性",
+        "themeEn": "Model safety and controllability",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 2,
+      "totalWords": 1619,
+      "ratio": 0.4
+    },
+    "featuredItems": [
+      {
+        "id": "openai.com-458a72f18aa6",
+        "titleZh": "OpenAI公布指令层级、提示注入",
+        "titleEn": "Improving instruction hierarchy in frontier LLMs",
+        "tag": "Security",
+        "summaryZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。 正文里最值得记下的信号是：IH-Challenge trains models to prioritize trusted instructions, improving 指令层级, 安全 steerability, and resistance to 提示注入 attacks…",
+        "summaryEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions. The strongest signal in the article is: IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability…",
+        "whyItMattersZh": "这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
+        "whyItMattersEn": "This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.",
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago"
+      },
+      {
+        "id": "openai.com-88306bd64ac1",
+        "titleZh": "OpenAI发布交互式可视化讲解、数学与科学",
+        "titleEn": "New ways to learn math and science in ChatGPT",
+        "tag": "AI",
+        "summaryZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。 正文里最值得记下的信号是：ChatGPT 发布 交互式可视化讲解 用于 数学与科学, helping students explore formulas, variables, and concepts in real time. 为什么值得看：当能力真正进入用户日常动作时…",
+        "summaryEn": "OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior. The strongest signal in the article is: ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time…",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago"
+      },
+      {
+        "id": "huggingface.co-087b7ac98b37",
+        "titleZh": "Hugging Face推进嵌入模型、多模态",
+        "titleEn": "How NVIDIA Builds Open Data for AI",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。 正文里最值得记下的信号是：Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents…",
+        "summaryEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space. The strongest signal in the article is: Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents. Why it matters…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "openai.com-458a72f18aa6",
+        "rank": 1,
+        "titleZh": "OpenAI公布指令层级、提示注入",
+        "titleEn": "Improving instruction hierarchy in frontier LLMs",
+        "kickerZh": "OpenAI · 模型安全与可控性",
+        "kickerEn": "OpenAI · Model safety and controllability",
+        "summaryZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。 正文里最值得记下的信号是：IH-Challenge trains models to prioritize trusted instructions, improving 指令层级, 安全 steerability, and resistance to 提示注入 attacks…",
+        "summaryEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions. The strongest signal in the article is: IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability…",
+        "deckZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。",
+        "deckEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection…",
+        "whatChangedZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。",
+        "whatChangedEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions.",
+        "whyItMattersZh": "这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
+        "whyItMattersEn": "This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.",
+        "watchNextZh": "下一步要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。",
+        "watchNextEn": "Watch whether it moves into APIs, system-prompt policy controls, and public eval baselines instead of remaining a research-only result.",
+        "tag": "Security",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/instruction-hierarchy-challenge",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/instruction-hierarchy-challenge"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。",
+          "为什么重要：这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
+          "接下来观察：下一步要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions.",
+          "Why it matters: This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.",
+          "What to watch: Watch whether it moves into APIs, system-prompt policy controls, and public eval baselines instead of remaining a research-only result."
+        ],
+        "evidenceBulletsZh": [
+          "IH-Challenge trains models to prioritize trusted instructions, improving 指令层级, 安全 steerability, and resistance to 提示注入 attacks."
+        ],
+        "evidenceBulletsEn": [
+          "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks."
+        ],
+        "themeZh": "模型安全与可控性",
+        "themeEn": "Model safety and controllability",
+        "impactZh": "下一步要看它会不会进入 API、系统提示策略和公开评测基线，而不只是停留在研究展示。",
+        "impactEn": "Watch whether it moves into APIs, system-prompt policy controls, and public eval baselines instead of remaining a research-only result.",
+        "publishedAt": "2026-03-10T11:00:00.000Z",
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago",
+        "score": 107,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "openai.com-88306bd64ac1",
+        "rank": 2,
+        "titleZh": "OpenAI发布交互式可视化讲解、数学与科学",
+        "titleEn": "New ways to learn math and science in ChatGPT",
+        "kickerZh": "OpenAI · AI 产品体验",
+        "kickerEn": "OpenAI · AI product experience",
+        "summaryZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。 正文里最值得记下的信号是：ChatGPT 发布 交互式可视化讲解 用于 数学与科学, helping students explore formulas, variables, and concepts in real time. 为什么值得看：当能力真正进入用户日常动作时…",
+        "summaryEn": "OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior. The strongest signal in the article is: ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time…",
+        "deckZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。",
+        "deckEn": "OpenAI rolled out a new move around interactive visual explanations and math and science…",
+        "whatChangedZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。",
+        "whatChangedEn": "OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior.",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+        "watchNextZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "watchNextEn": "The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization.",
+        "tag": "AI",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。",
+          "为什么重要：当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+          "接下来观察：后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior.",
+          "Why it matters: Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+          "What to watch: The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization."
+        ],
+        "evidenceBulletsZh": [
+          "ChatGPT 发布 交互式可视化讲解 用于 数学与科学, helping students explore formulas, variables, and concepts in real time."
+        ],
+        "evidenceBulletsEn": [
+          "ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time."
+        ],
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "impactZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "impactEn": "The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization.",
+        "publishedAt": "2026-03-10T10:00:00.000Z",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago",
+        "score": 106,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "huggingface.co-087b7ac98b37",
+        "rank": 3,
+        "titleZh": "Hugging Face推进嵌入模型、多模态",
+        "titleEn": "How NVIDIA Builds Open Data for AI",
+        "kickerZh": "Hugging Face · 检索、多模态与记忆系统",
+        "kickerEn": "Hugging Face · Retrieval, multimodal, and memory systems",
+        "summaryZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。 正文里最值得记下的信号是：Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents…",
+        "summaryEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space. The strongest signal in the article is: Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents. Why it matters…",
+        "deckZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows…",
+        "whatChangedZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response.",
+        "tag": "Data",
+        "source": "huggingface.co",
+        "sourceName": "Hugging Face Blog",
+        "sourceUrl": "https://huggingface.co/blog/nvidia/open-data-for-ai",
+        "relatedLinks": [
+          {
+            "labelZh": "Hugging Face Blog 原文",
+            "labelEn": "Hugging Face Blog source",
+            "url": "https://huggingface.co/blog/nvidia/open-data-for-ai"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://huggingface.co/blog/feed.xml"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。",
+          "为什么重要：这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+          "接下来观察：接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space.",
+          "Why it matters: These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+          "What to watch: Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response."
+        ],
+        "evidenceBulletsZh": [
+          "Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents.",
+          "The 数据集s also supported the development of NVIDIA Nemotron-Nano-9B-v2-Japanese…",
+          "In-domain fine-tuning of 嵌入模型s demonstrates substantial gains…"
+        ],
+        "evidenceBulletsEn": [
+          "Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents.",
+          "The datasets also supported the development of NVIDIA Nemotron-Nano-9B-v2-Japanese , a state-of-the-art sub-10B model that reached the top of the Nejumi leaderboard .",
+          "In-domain fine-tuning of embedding models demonstrates substantial gains: fine-tuning nvidia/llama-nemotron-embed-1b-v2 on this dataset yields an 11% increase in NDCG@10."
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response.",
+        "publishedAt": "2026-03-10T19:49:28.000Z",
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago",
+        "score": 105,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 1498,
+        "bodySummary": "Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents. AI progress is often framed in terms of model capability and efficiency. In reality, every training pipeline ultimately rests on a data layer that determines how those models behave. As agentic systems become more autonomous, the data they are trained on increasingly determines what they know…",
+        "sourceNoteZh": "已抓取原文正文（约 1498 词）",
+        "sourceNoteEn": "Full article body fetched (~1498 words)"
+      },
+      {
+        "id": "blog.google-a015ffb3f8b4",
+        "rank": 4,
+        "titleZh": "Google推进Google 表格、基准测试",
+        "titleEn": "Gemini in Google Sheets just achieved state-of-the-art performance.",
+        "kickerZh": "Google · AI 产品体验",
+        "kickerEn": "Google · AI product experience",
+        "summaryZh": "Google把Google 表格、基准测试进一步推进到产品和开发者工作流里，重点放在把 AI 能力做成可重复使用的产品体验。 正文里最值得记下的信号是：Today we announced new beta features 用于 Gemini in Sheets to help you create, organize and edit entire sheets… 为什么值得看：当能力真正进入用户日常动作时…",
+        "summaryEn": "Google pushed google sheets and benchmark deeper into product and developer workflows, with a clear emphasis on turning capability into repeatable product behavior. The strongest signal in the article is: Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets… Why it matters…",
+        "deckZh": "Google把Google 表格、基准测试进一步推进到产品和开发者工作流里，重点放在把 AI 能力做成可重复使用的产品体验。",
+        "deckEn": "Google pushed google sheets and benchmark deeper into product and developer workflows…",
+        "whatChangedZh": "Google把Google 表格、基准测试进一步推进到产品和开发者工作流里，重点放在把 AI 能力做成可重复使用的产品体验。",
+        "whatChangedEn": "Google pushed google sheets and benchmark deeper into product and developer workflows, with a clear emphasis on turning capability into repeatable product behavior.",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+        "watchNextZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "watchNextEn": "The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization.",
+        "tag": "AI",
+        "source": "blog.google",
+        "sourceName": "Google AI Blog",
+        "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+        "relatedLinks": [
+          {
+            "labelZh": "Google AI Blog 原文",
+            "labelEn": "Google AI Blog source",
+            "url": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://blog.google/technology/ai/rss/"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：Google把Google 表格、基准测试进一步推进到产品和开发者工作流里，重点放在把 AI 能力做成可重复使用的产品体验。",
+          "为什么重要：当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+          "接下来观察：后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: Google pushed google sheets and benchmark deeper into product and developer workflows, with a clear emphasis on turning capability into repeatable product behavior.",
+          "Why it matters: Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+          "What to watch: The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization."
+        ],
+        "evidenceBulletsZh": [
+          "Today we announced new beta features 用于 Gemini in Sheets to help you create, organize and edit entire sheets…",
+          "Achieving a 70.48% success rate, Gemini in Sheets not only exceeds competitors but nears human expert ability.",
+          "Gemini in Sheets has reached state-of-the-art proficiency in autonomously manipulating complex, real-world spreadsheets on the full SpreadsheetBench 数据集…"
+        ],
+        "evidenceBulletsEn": [
+          "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets…",
+          "Achieving a 70.48% success rate, Gemini in Sheets not only exceeds competitors but nears human expert ability.",
+          "Gemini in Sheets has reached state-of-the-art proficiency in autonomously manipulating complex, real-world spreadsheets on the full SpreadsheetBench dataset…"
+        ],
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "impactZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "impactEn": "The next thing to watch is user behavior change: more frequent opens, new default habits, and measurable gains in retention or monetization.",
+        "publishedAt": "2026-03-10T13:00:00.000Z",
+        "publishedLabelZh": "19 小时前",
+        "publishedLabelEn": "19 hours ago",
+        "score": 103,
+        "featured": false,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 121,
+        "bodySummary": "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe what you need. Gemini in Sheets has reached state-of-the-art proficiency in autonomously manipulating complex, real-world spreadsheets on the full SpreadsheetBench dataset…",
+        "sourceNoteZh": "已抓取原文正文（约 121 词）",
+        "sourceNoteEn": "Full article body fetched (~121 words)"
+      },
+      {
+        "id": "github.blog-7f0c197269a0",
+        "rank": 5,
+        "titleZh": "GitHub推进Agent 工作流、Copilot SDK",
+        "titleEn": "The era of “AI as text” is over. Execution is the new interface.",
+        "kickerZh": "GitHub · Agent 与开发者工具",
+        "kickerEn": "GitHub · Agents and developer tooling",
+        "summaryZh": "GitHub把Agent 工作流、Copilot SDK进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。 正文里最值得记下的信号是：AI is shifting from prompt-response interactions to programmable execution. 为什么值得看：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "summaryEn": "GitHub pushed agentic workflows and copilot sdk deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows. The strongest signal in the article is: AI is shifting from prompt-response interactions to programmable execution. Why it matters…",
+        "deckZh": "GitHub把Agent 工作流、Copilot SDK进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+        "deckEn": "GitHub pushed agentic workflows and copilot sdk deeper into product and developer workflows…",
+        "whatChangedZh": "GitHub把Agent 工作流、Copilot SDK进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "GitHub pushed agentic workflows and copilot sdk deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "tag": "Tools",
+        "source": "github.blog",
+        "sourceName": "GitHub Blog / AI & ML",
+        "sourceUrl": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/",
+        "relatedLinks": [
+          {
+            "labelZh": "GitHub Blog / AI & ML 原文",
+            "labelEn": "GitHub Blog / AI & ML source",
+            "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://github.blog/ai-and-ml/feed"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：GitHub把Agent 工作流、Copilot SDK进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。",
+          "为什么重要：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+          "接下来观察：后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: GitHub pushed agentic workflows and copilot sdk deeper into product and developer workflows, with a clear emphasis on turning model capability into orchestrated execution workflows.",
+          "Why it matters: The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+          "What to watch: Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns."
+        ],
+        "evidenceBulletsZh": [
+          "AI is shifting from prompt-response interactions to programmable execution.",
+          "See how the GitHub Copilot SDK enables Agent 工作流 directly inside your applications.",
+          "The post The era of “AI as text” is over."
+        ],
+        "evidenceBulletsEn": [
+          "AI is shifting from prompt-response interactions to programmable execution.",
+          "See how the GitHub Copilot SDK enables agentic workflows directly inside your applications.",
+          "The post The era of “AI as text” is over."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "Watch whether it gets embedded into real products and developer workflows, and whether the ecosystem reorganizes around new distribution and integration patterns.",
+        "publishedAt": "2026-03-10T20:16:01.000Z",
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago",
+        "score": 101,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:fetch failed",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      },
+      {
+        "id": "marktechpost.com-47f4cdba0650",
+        "rank": 6,
+        "titleZh": "Google公布多模态嵌入、嵌入模型",
+        "titleEn": "Google AI Introduces Gemini Embedding 2: A Multimodal Embedding Model that Lets Your Bring Text, Images, Video, Audio, and Docs into the Embedding Space",
+        "kickerZh": "Google · 检索、多模态与记忆系统",
+        "kickerEn": "Google · Retrieval, multimodal, and memory systems",
+        "summaryZh": "Google公布了一项围绕多模态嵌入、嵌入模型的研究型更新，目标是提升非结构化信息进入同一检索空间的能力。 正文里最值得记下的信号是：Google expanded its Gemini model family 并带来 the 发布 of Gemini Embedding 2. 为什么值得看：这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "summaryEn": "Google published a research-driven update around multimodal embedding and embedding model, aimed at bringing more unstructured data into the same retrieval space. The strongest signal in the article is: Google expanded its Gemini model family with the release of Gemini Embedding 2. Why it matters…",
+        "deckZh": "Google公布了一项围绕多模态嵌入、嵌入模型的研究型更新，目标是提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "Google published a research-driven update around multimodal embedding and embedding model…",
+        "whatChangedZh": "Google公布了一项围绕多模态嵌入、嵌入模型的研究型更新，目标是提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "Google published a research-driven update around multimodal embedding and embedding model, aimed at bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response.",
+        "tag": "Data",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/11/google-ai-introduces-gemini-embedding-2-a-multimodal-embedding-model-that-lets-your-bring-text-images-video-audio-and-docs-into-the-embedding-space/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/11/google-ai-introduces-gemini-embedding-2-a-multimodal-embedding-model-that-lets-your-bring-text-images-video-audio-and-docs-into-the-embedding-space/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [
+          "发生了什么：Google公布了一项围绕多模态嵌入、嵌入模型的研究型更新，目标是提升非结构化信息进入同一检索空间的能力。",
+          "为什么重要：这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+          "接下来观察：接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "takeawayBulletsEn": [
+          "What changed: Google published a research-driven update around multimodal embedding and embedding model, aimed at bringing more unstructured data into the same retrieval space.",
+          "Why it matters: These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+          "What to watch: Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response."
+        ],
+        "evidenceBulletsZh": [
+          "Google expanded its Gemini model family 并带来 the 发布 of Gemini Embedding 2.",
+          "This second-generation model succeeds the text-only Gemini-embedding-001 and is designed specifically to address the high-dimensional storage and cross-modal re…",
+          "The Gemini Embedding 2 发布 marks a significant technical shift…"
+        ],
+        "evidenceBulletsEn": [
+          "Google expanded its Gemini model family with the release of Gemini Embedding 2.",
+          "This second-generation model succeeds the text-only gemini-embedding-001 and is designed specifically to address the high-dimensional storage and cross-modal retrieval challenges f…",
+          "The Gemini Embedding 2 release marks a significant technical shift…"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch whether quality, cost, and tooling support create a real gap—and whether enterprise knowledge bases, RAG stacks, and cross-modal search move quickly in response.",
+        "publishedAt": "2026-03-11T07:18:20.000Z",
+        "publishedLabelZh": "1 小时前",
+        "publishedLabelEn": "1 hour ago",
+        "score": 91,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "仅基于 RSS 摘要与标题",
+        "sourceNoteEn": "Built from RSS snippet and title only"
+      }
+    ]
+  }
+]

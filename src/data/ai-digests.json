@@ -1,40 +1,153 @@
 [
   {
+    "slug": "ai-daily-2026-03-12",
+    "date": "2026-03-12",
+    "titleZh": "2026-03-12 AI 日报：Google公布数据集",
+    "titleEn": "2026-03-12 AI Daily Briefing",
+    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "issueSummaryZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 前沿研究与能力边界、Agent 与开发者工具。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "issueSummaryEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around Frontier research and capability shifts, Agents and developer tooling. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "path": "/blog/ai-daily-2026-03-12",
+    "itemCount": 6,
+    "heroTitleZh": "Google公布数据集",
+    "heroTitleEn": "How AI is helping improve heart health in rural Australia",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 2,
+      "totalWords": 2390,
+      "ratio": 0.4
+    },
+    "themes": [
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 3
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 3
+      }
+    ],
+    "featuredItems": [
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "titleZh": "Google公布数据集",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "tag": "AI",
+        "summaryZh": "Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。 正文里最值得记下的信号是：Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)… 为什么值得看：研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "summaryEn": "Google published a research-driven update around dataset, aimed at pushing the capability frontier outward. The strongest signal in the article is: Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI), this collaboration uses Google for Health’s Population Health AI (PHAI). Why it matters…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour"
+      },
+      {
+        "id": "huggingface.co-74a942baffcf",
+        "titleZh": "Hugging Face开源上下文窗口、开源",
+        "titleEn": "How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II",
+        "tag": "Tools",
+        "summaryZh": "Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。 正文里最值得记下的信号是：- Then we generated ~80k trajectories 用于 the full 工作流 using the open-sourced GPT-OSS-120B model. 为什么值得看：行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”…",
+        "summaryEn": "Hugging Face turned work around context window and open source into something the wider ecosystem can inspect, adapt, and build on. The strongest signal in the article is: - Then we generated ~80k trajectories for the full workflow using the open-sourced GPT-OSS-120B model. Why it matters…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competitive focus is shifting from chat quality to whether models can plug into software, tooling, and automation flows reliably; that is where durable productivity entry points emerge.",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour"
+      },
+      {
+        "id": "openai.com-d4732a41e5a2",
+        "titleZh": "OpenAI推进研究前沿",
+        "titleEn": "From model to agent: Equipping the Responses API with a computer environment",
+        "tag": "AI",
+        "summaryZh": "OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。 正文里最值得记下的信号是：How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents 并带来 files, tools, and state…",
+        "summaryEn": "OpenAI pushed research frontier deeper into product and developer workflows, with a clear emphasis on pushing the capability frontier outward. The strongest signal in the article is: How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state. Why it matters…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research-heavy updates do not always become products immediately, but they often reveal where the next capability boundary is moving.",
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago"
+      }
+    ]
+  },
+  {
     "slug": "ai-daily-2026-03-11",
     "date": "2026-03-11",
-    "titleZh": "2026-03-11 AI 日报",
+    "titleZh": "2026-03-11 AI 日报：OpenAI公布指令层级、提示注入",
     "titleEn": "2026-03-11 AI Daily Briefing",
-    "excerptZh": "这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. 它属于“模型安全与可控性”这个主题，值得关注的原因是：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
-    "excerptEn": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. Theme: 模型安全与可控性. Why it matters: 这类更新影响的不只是论文指标…",
+    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
+    "issueSummaryZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
+    "issueSummaryEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
     "path": "/blog/ai-daily-2026-03-11",
     "itemCount": 6,
-    "heroTitleZh": "Improving instruction hierarchy in frontier LLMs",
+    "heroTitleZh": "OpenAI公布指令层级、提示注入",
     "heroTitleEn": "Improving instruction hierarchy in frontier LLMs",
     "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 2,
+      "totalWords": 1619,
+      "ratio": 0.4
+    },
+    "themes": [
+      {
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "count": 2
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 2
+      },
+      {
+        "themeZh": "模型安全与可控性",
+        "themeEn": "Model safety and controllability",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 1
+      }
+    ],
     "featuredItems": [
       {
         "id": "openai.com-458a72f18aa6",
-        "titleZh": "Improving instruction hierarchy in frontier LLMs",
+        "titleZh": "OpenAI公布指令层级、提示注入",
         "titleEn": "Improving instruction hierarchy in frontier LLMs",
-        "tag": "AI",
-        "summaryZh": "这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks. 它属于“模型安全与可控性”这个主题，值得关注的原因是：这类更新影响的不只是论文指标，而是模型在真实产品里能否更稳定地遵守高优先级指令，直接关系到安全性、企业采用门槛和 Agent 可控性。",
-        "publishedLabelZh": "21 小时前"
+        "tag": "Security",
+        "summaryZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。 正文里最值得记下的信号是：IH-Challenge trains models to prioritize trusted instructions, improving 指令层级, 安全 steerability, and resistance to 提示注入 attacks…",
+        "summaryEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions. The strongest signal in the article is: IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability…",
+        "whyItMattersZh": "这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
+        "whyItMattersEn": "This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.",
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago"
       },
       {
         "id": "openai.com-88306bd64ac1",
-        "titleZh": "New ways to learn math and science in ChatGPT",
+        "titleZh": "OpenAI发布交互式可视化讲解、数学与科学",
         "titleEn": "New ways to learn math and science in ChatGPT",
         "tag": "AI",
-        "summaryZh": "这条来自 OpenAI News 的更新，核心是：ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time. 它属于“AI 产品体验”这个主题，值得关注的原因是：它说明大模型产品正在从“会回答”走向“会讲解”，竞争点开始转向交互式教学体验、留存和使用深度，而不只是模型分数。",
-        "publishedLabelZh": "22 小时前"
+        "summaryZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。 正文里最值得记下的信号是：ChatGPT 发布 交互式可视化讲解 用于 数学与科学, helping students explore formulas, variables, and concepts in real time. 为什么值得看：当能力真正进入用户日常动作时…",
+        "summaryEn": "OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior. The strongest signal in the article is: ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time…",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago"
       },
       {
         "id": "huggingface.co-087b7ac98b37",
-        "titleZh": "How NVIDIA Builds Open Data for AI",
+        "titleZh": "Hugging Face推进嵌入模型、多模态",
         "titleEn": "How NVIDIA Builds Open Data for AI",
-        "tag": "Open Source",
-        "summaryZh": "这条来自 Hugging Face Blog 的更新，核心是：How NVIDIA Builds Open Data for AI 这条更新目前公开摘要不多，但从标题和来源看，属于 数据基础设施 方向的新进展。 它属于“数据基础设施”这个主题，值得关注的原因是：数据供给决定模型上限，这类消息通常意味着训练资源、评测标准或开源生态又在往前走一步。",
-        "publishedLabelZh": "12 小时前"
+        "tag": "Data",
+        "summaryZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。 正文里最值得记下的信号是：Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents…",
+        "summaryEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space. The strongest signal in the article is: Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents. Why it matters…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago"
       }
     ]
   }

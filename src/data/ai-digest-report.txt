@@ -1,12 +1,16 @@
-AI 日报已更新（2026-03-11）
+✅ AI 日报更新成功（2026-03-12）
+网站地址：<https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>
+口径：只看近 24 小时；高价值条目优先抓正文（2/5）。
+今日主线：
+1. Google公布数据集 —— Google公布了一项围绕数据集的研究型更新，目标是推动能力边界继续外扩。
+2. Hugging Face开源上下文窗口、开源 —— Hugging Face开源了围绕上下文窗口、开源的工作，让外部生态可以更直接地复用、检查和二次构建。
+3. OpenAI推进研究前沿 —— OpenAI把研究前沿进一步推进到产品和开发者工作流里，重点放在推动能力边界继续外扩。
+4. OpenAI推进提示注入、工作流 —— OpenAI把提示注入、工作流进一步推进到产品和开发者工作流里，重点放在把模型能力变成可编排的执行链路。
 
-口径：只保留近 24 小时内容。
-
-今天重点：
-1. Improving instruction hierarchy in frontier LLMs —— 这条来自 OpenAI News 的更新，核心是：IH-Challenge trains models to prioritize truste…
-2. New ways to learn math and science in ChatGPT —— 这条来自 OpenAI News 的更新，核心是：ChatGPT introduces interactive visual explanati…
-3. How NVIDIA Builds Open Data for AI —— 这条来自 Hugging Face Blog 的更新，核心是：How NVIDIA Builds Open Data for AI 这条更新目前…
-4. Gemini in Google Sheets just achieved state-of-the-art performance. —— 这条来自 Google AI Blog 的更新，核心是：Today we announced new beta features for Gem…
-
-已生成站内日报页面：<https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-11>
-这次把卡片、日报正文和归档层级拆开了：卡片只做预览，正文负责解释，归档不再重复当天摘要。
+✅ AI digest updated successfully (2026-03-12)
+Digest URL: <https://guangtaos29545.github.io/thomas-blog/blog/ai-daily-2026-03-12>
+Scope: last 24 hours only; full-body fetches for high-value items (2/5).
+Top lines:
+1. How AI is helping improve heart health in rural Australia — Google published a research-driven update around dataset…
+2. How NVIDIA AI-Q Reached \#1 on DeepResearch Bench I and II — Hugging Face turned work around context window and open source into something the wider ec…
+3. From model to agent: Equipping the Responses API with a computer environment — OpenAI pushed research frontier deeper into product and developer workflows…

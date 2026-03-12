@@ -10,7 +10,9 @@
     "fetch-tech": "node scripts/fetch-tech-news.mjs",
     "fetch-ai-rss": "node scripts/fetch-ai-rss.mjs",
     "fetch-ai-candidates": "node scripts/fetch-ai-candidates.mjs",
-    "build-ai-digest": "node scripts/build-ai-digest.mjs"
+    "build-ai-digest": "node scripts/build-ai-digest.mjs",
+    "send-discord-report": "node scripts/send-discord-report.mjs",
+    "create-learning-deposit": "node scripts/create-learning-deposit.mjs"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",

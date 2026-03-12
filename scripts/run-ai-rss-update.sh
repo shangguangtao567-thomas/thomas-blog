@@ -25,12 +25,18 @@ node scripts/fetch-ai-candidates.mjs
 node scripts/build-ai-digest.mjs
 pnpm build
 
+UPDATED=0
 if [ -d .git ] && ! git diff --quiet posts src/data scripts package.json README.md; then
   git add posts src/data scripts package.json README.md
   git commit -m "chore: refresh AI daily digest [$(date '+%Y-%m-%d %H:%M')]" || true
   git push origin "$BRANCH"
+  UPDATED=1
 else
   echo "[ai-rss] No digest changes to commit."
+fi
+
+if [ "$UPDATED" -eq 1 ]; then
+  pnpm send-discord-report
 fi
 
 echo "[ai-rss] report ready: src/data/ai-digest-report.txt"
