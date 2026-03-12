@@ -16,8 +16,13 @@ function stripBase(path: string): string {
   return path || '/';
 }
 
+function normalizePath(path: string): string {
+  if (!path || path === '/') return '/';
+  return path.replace(/\/+$/, '');
+}
+
 function parseRoute(rawPath: string): { page: string; slug?: string } {
-  const path = stripBase(rawPath);
+  const path = normalizePath(stripBase(rawPath));
   if (path === '/' || path === '') return { page: 'home' };
   if (path === '/blog') return { page: 'blog' };
   if (path === '/tech') return { page: 'tech' };
