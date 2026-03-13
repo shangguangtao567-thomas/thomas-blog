@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-03-13",
+    "slug": "x-draft-2026-03-13",
+    "digestSlug": "ai-daily-2026-03-13",
+    "digestPath": "/blog/ai-daily-2026-03-13",
+    "angleZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "angleEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "hooksZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "Agent 与开发者工具 这条主线，今天又被往前推了一截。",
+      "如果你只看今天一条 AI 结论，我会看这个：Hugging Face｜数据与评测基础设施"
+    ],
+    "hooksEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "Agents and developer tooling moved another step forward today.",
+      "If I had to compress today's AI signal into one takeaway, I would start here: Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation"
+    ],
+    "shortPostZh": "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。\n数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。\n另一条同时在加速的线是：数据与评测基础设施。\n完整日报：https://blog.lincept.com/blog/ai-daily-2026-03-13",
+    "shortPostEn": "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.\nData supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.\nThe second line accelerating at the same time is Data and evaluation infrastructure.\nFull digest: https://blog.lincept.com/blog/ai-daily-2026-03-13",
+    "threadZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "1. Hugging Face｜数据与评测基础设施\n数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。",
+      "2. Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务\n研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+      "3. GitHub｜Agent 与开发者工具\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+      "如果你想看完整证据链，我把今天的 digest 放这里：https://blog.lincept.com/blog/ai-daily-2026-03-13"
+    ],
+    "threadEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "1. Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation\nData supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.",
+      "2. How AI is helping improve heart health in rural Australia\nResearch updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+      "3. Continuous AI for accessibility: How GitHub transforms feedback into inclusion\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+      "Full evidence chain: https://blog.lincept.com/blog/ai-daily-2026-03-13"
+    ],
+    "ctaUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-13",
+    "ctaLabelZh": "阅读完整日报",
+    "ctaLabelEn": "Read the full digest",
+    "reviewPath": "x-drafts/2026-03-13.md"
+  },
+  {
     "date": "2026-03-12",
     "slug": "x-draft-2026-03-12",
     "digestSlug": "ai-daily-2026-03-12",

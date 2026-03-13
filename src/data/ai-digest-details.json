@@ -1,5 +1,540 @@
 [
   {
+    "slug": "ai-daily-2026-03-13",
+    "date": "2026-03-13",
+    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
+    "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "introZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "introEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "methodologyZh": "",
+    "methodologyEn": "",
+    "path": "/blog/ai-daily-2026-03-13",
+    "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-13",
+    "itemCount": 6,
+    "heroTitleZh": "Hugging Face｜数据与评测基础设施",
+    "heroTitleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-13T07:29:15.201Z",
+    "windowHours": 24,
+    "themes": [
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 4
+      },
+      {
+        "themeZh": "数据与评测基础设施",
+        "themeEn": "Data and evaluation infrastructure",
+        "count": 1
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 4,
+      "succeeded": 2,
+      "totalWords": 2462,
+      "ratio": 0.5
+    },
+    "featuredItems": [
+      {
+        "id": "huggingface.co-4e558c1ba7e5",
+        "titleZh": "Hugging Face｜数据与评测基础设施",
+        "titleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。 文中最值得记的一处细节是：Notably…",
+        "summaryEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable. On the surface this is about data or benchmarks…",
+        "whyItMattersZh": "数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。",
+        "whyItMattersEn": "Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago"
+      },
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "titleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "tag": "AI",
+        "summaryZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
+        "summaryEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "publishedLabelZh": "16 小时前",
+        "publishedLabelEn": "16 hours ago"
+      },
+      {
+        "id": "github.blog-8802ea5b7cd4",
+        "titleZh": "GitHub｜Agent 与开发者工具",
+        "titleEn": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+        "tag": "Tools",
+        "summaryZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "15 小时前",
+        "publishedLabelEn": "15 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "huggingface.co-4e558c1ba7e5",
+        "rank": 1,
+        "sectionLabelZh": "主线一｜数据与评测基础设施",
+        "sectionLabelEn": "Thread 1 | Data and evaluation infrastructure",
+        "titleZh": "Hugging Face｜数据与评测基础设施",
+        "titleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+        "briefTitleZh": "Hugging Face｜数据与评测基础设施",
+        "briefTitleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+        "kickerZh": "Hugging Face · 数据与评测基础设施",
+        "kickerEn": "Hugging Face · Data and evaluation infrastructure",
+        "summaryZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。 文中最值得记的一处细节是：Notably…",
+        "summaryEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable. On the surface this is about data or benchmarks…",
+        "deckZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。",
+        "deckEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable.",
+        "narrativeZh": [
+          "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。",
+          "文中最值得记的一处细节是：Notably, our approach establishes new state-of-the-art (SOTA) performanc… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。值得继续跟进的是：它会不会被社区广泛复用，是否成为新的默认比较口径。"
+        ],
+        "narrativeEn": [
+          "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable. On the surface this is about data or benchmarks; underneath…",
+          "The most useful detail in the piece is this: Notably, our approach establishes new state-of-the-art (SOTA) performance on the Data Agent Benchmark for Multi-step Rea… These are not always the loudest headlines…",
+          "Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions…"
+        ],
+        "whatChangedZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。",
+        "whatChangedEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable.",
+        "whyItMattersZh": "数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。",
+        "whyItMattersEn": "Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.",
+        "watchNextZh": "值得继续跟进的是：它会不会被社区广泛复用，是否成为新的默认比较口径。",
+        "watchNextEn": "The real question is whether the community reuses it enough for it to become part of the default comparison stack.",
+        "tag": "Data",
+        "source": "huggingface.co",
+        "sourceName": "Hugging Face Blog",
+        "sourceUrl": "https://huggingface.co/blog/nvidia/nemo-agent-toolkit-data-explorer-dabstep-1st-place",
+        "relatedLinks": [
+          {
+            "labelZh": "Hugging Face Blog 原文",
+            "labelEn": "Hugging Face Blog source",
+            "url": "https://huggingface.co/blog/nvidia/nemo-agent-toolkit-data-explorer-dabstep-1st-place"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://huggingface.co/blog/feed.xml"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Notably, our approach establishes new state-of-the-art (SOTA) performance on the Data Agent 基准测试 for Multi-step Rea…",
+          "Open-ended Exploration and Tabular Data QA Currently the NVIDIA KGMON (NeMo Agent Toolkit) Data Explorer focuses on two…",
+          "We focus on Data Agent 基准测试 for Multi-step 推理 (DABStep) 基准测试…"
+        ],
+        "evidenceBulletsEn": [
+          "Notably, our approach establishes new state-of-the-art (SOTA) performance on the Data Agent Benchmark for Multi-step Reasoning (DABStep) benchmark…",
+          "Open-ended Exploration and Tabular Data QA Currently the NVIDIA KGMON (NeMo Agent Toolkit) Data Explorer focuses on two primary applications: 1.",
+          "We focus on Data Agent Benchmark for Multi-step Reasoning (DABStep) benchmark…"
+        ],
+        "themeZh": "数据与评测基础设施",
+        "themeEn": "Data and evaluation infrastructure",
+        "impactZh": "值得继续跟进的是：它会不会被社区广泛复用，是否成为新的默认比较口径。",
+        "impactEn": "The real question is whether the community reuses it enough for it to become part of the default comparison stack.",
+        "publishedAt": "2026-03-13T01:02:47.000Z",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago",
+        "score": 124,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 1774,
+        "bodySummary": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation Enterprise + Article Published March 13, 2026 - The world of data is vast, but quantitative information is often sparse or unavailable in text form online, presenting a significant challenge for deep research agents. This post shares an architecture, NVIDIA KGMON (NeMo Agent Toolkit) Data Explorer…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched"
+      },
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "rank": 2,
+        "sectionLabelZh": "主线二｜前沿研究与能力边界",
+        "sectionLabelEn": "Thread 2 | Frontier research and capability shifts",
+        "titleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "briefTitleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
+        "briefTitleEn": "How AI is helping improve heart health in rural Australia",
+        "kickerZh": "Google · 前沿研究与能力边界",
+        "kickerEn": "Google · Frontier research and capability shifts",
+        "summaryZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
+        "summaryEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "deckZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。",
+        "deckEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward.",
+        "narrativeZh": [
+          "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "文中最值得记的一处细节是：Supported by a $1 million AUD investment from Google Australia’s Digital… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward.",
+          "The most useful detail in the piece is this: Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)… Research updates do not always become products quickly…",
+          "Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. The next step to watch is replication, open implementation, API exposure…"
+        ],
+        "whatChangedZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。",
+        "whatChangedEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "blog.google",
+        "sourceName": "Google AI Blog",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
+        "relatedLinks": [
+          {
+            "labelZh": "Google AI Blog 原文",
+            "labelEn": "Google AI Blog source",
+            "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://blog.google/technology/ai/rss/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)…",
+          "Supported by the DFI, SISU Health plans to conduct over 50,000 new health screenings in remote areas.",
+          "A one million dollar investment from Google Australia's Digital Future Initiative supports this program."
+        ],
+        "evidenceBulletsEn": [
+          "Supported by a $1 million AUD investment from Google Australia’s Digital Future Initiative (DFI)…",
+          "Supported by the DFI, SISU Health plans to conduct over 50,000 new health screenings in remote areas.",
+          "A one million dollar investment from Google Australia's Digital Future Initiative supports this program."
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-12T15:00:00.000Z",
+        "publishedLabelZh": "16 小时前",
+        "publishedLabelEn": "16 hours ago",
+        "score": 104,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "cached",
+        "bodyWordCount": 688,
+        "bodySummary": "How AI is helping improve heart health in rural Australia We’re partnering with leading Australian health organizations to bring new AI tools to regional communities. This project helps identify heart health risks early, making proactive care possible for more people. Head of Strategic Health Solutions, Asia-Pacific Google is partnering with Australian health organizations to improve heart health in rural areas…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched"
+      },
+      {
+        "id": "github.blog-8802ea5b7cd4",
+        "rank": 3,
+        "sectionLabelZh": "主线三｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 3 | Agents and developer tooling",
+        "titleZh": "GitHub｜Agent 与开发者工具",
+        "titleEn": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+        "briefTitleZh": "GitHub｜Agent 与开发者工具",
+        "briefTitleEn": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+        "kickerZh": "GitHub · Agent 与开发者工具",
+        "kickerEn": "GitHub · Agents and developer tooling",
+        "summaryZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "deckZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows…",
+        "narrativeZh": [
+          "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：AI automates triage for accessibility feedback, allowing us to focus on… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into c… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "github.blog",
+        "sourceName": "GitHub Blog / AI & ML",
+        "sourceUrl": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/",
+        "relatedLinks": [
+          {
+            "labelZh": "GitHub Blog / AI & ML 原文",
+            "labelEn": "GitHub Blog / AI & ML source",
+            "url": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://github.blog/ai-and-ml/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into c…",
+          "The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blo…"
+        ],
+        "evidenceBulletsEn": [
+          "AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions.",
+          "The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-12T16:00:00.000Z",
+        "publishedLabelZh": "15 小时前",
+        "publishedLabelEn": "15 hours ago",
+        "score": 100,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "simonwillison.net-efa4d9124f71",
+        "rank": 4,
+        "sectionLabelZh": "补充｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Shopify/liquid: Performance: 53% faster parse+render, 61% fewer allocations",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Shopify/liquid: Performance: 53% faster parse+render, 61% fewer allocations",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：Shopify/liquid…",
+        "summaryEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on…",
+        "deckZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "deckEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "narrativeZh": [
+          "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Shopify/liquid: Performance: 53% faster parse+render… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on. Simon Willison is making the case that the next battle is not smarter chat…",
+          "The clearest public signal so far is this: Shopify/liquid: Performance: 53% faster parse+render… In other words, the race is no longer just about who answers well…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "whatChangedEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/13/liquid/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/13/liquid/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Shopify/liquid: Performance: 53% faster parse+render…",
+          "Tobi found dozens of new performance micro-optimizations using a variant of autoresearch…"
+        ],
+        "evidenceBulletsEn": [
+          "Shopify/liquid: Performance: 53% faster parse+render, 61% fewer allocations PR from Shopify CEO Tobias Lütke against Liquid…",
+          "Tobi found dozens of new performance micro-optimizations using a variant of autoresearch…"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-13T03:44:34.000Z",
+        "publishedLabelZh": "4 小时前",
+        "publishedLabelEn": "4 hours ago",
+        "score": 97,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "simonwillison.net-6a6b8f4938a2",
+        "rank": 5,
+        "sectionLabelZh": "补充 5｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief 5 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Coding After Coders: The End of Computer Programming as We Know It",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Coding After Coders: The End of Computer Programming as We Know It",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：Coding After Coders…",
+        "summaryEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat… The clearest public signal so far is this: Coding After Coders…",
+        "deckZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+        "deckEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
+        "narrativeZh": [
+          "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Coding After Coders: The End of Computer Programming as We Know It Epic… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison put out a meaningful update around agent workflows and developer tooling. Simon Willison is making the case that the next battle is not smarter chat…",
+          "The clearest public signal so far is this: Coding After Coders: The End of Computer Programming as We Know It Epic piece on AI-assisted development by Clive Thomps… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。",
+        "whatChangedEn": "Simon Willison put out a meaningful update around agent workflows and developer tooling.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/12/coding-after-coders/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/12/coding-after-coders/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Coding After Coders: The End of Computer Programming as We Know It Epic piece on AI-assisted development by Clive Thomps…",
+          "I think the piece accurately and clearly captures what's going on in our industr…"
+        ],
+        "evidenceBulletsEn": [
+          "Coding After Coders: The End of Computer Programming as We Know It Epic piece on AI-assisted development by Clive Thompson for the New York Times Magazine…",
+          "I think the piece accurately and clearly captures what's going on in our industr…"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-12T19:23:44.000Z",
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago",
+        "score": 89,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "simonwillison.net-f3cb10a8abb3",
+        "rank": 6,
+        "sectionLabelZh": "补充 6｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief 6 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "MALUS - Clean Room as a Service",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "MALUS - Clean Room as a Service",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on…",
+        "deckZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "deckEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "narrativeZh": [
+          "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：MALUS - Clean Room as a Service Brutal satire on the whole vibe-porting… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on. Simon Willison is making the case that the next battle is not smarter chat…",
+          "The clearest public signal so far is this: MALUS - Clean Room as a Service Brutal satire on the whole vibe-porting license washing thing ( previously ): Finally… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "whatChangedEn": "Simon Willison opened up work around open source, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/12/malus/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/12/malus/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "MALUS - Clean Room as a Service Brutal satire on the whole vibe-porting license washing thing ( previously ): Finally…",
+          "Our proprietary AI robots independently recreate any 开源 project from scratch.",
+          "Legally distinct code with corporate-friendly licensing."
+        ],
+        "evidenceBulletsEn": [
+          "MALUS - Clean Room as a Service Brutal satire on the whole vibe-porting license washing thing ( previously ): Finally…",
+          "Our proprietary AI robots independently recreate any open source project from scratch.",
+          "Legally distinct code with corporate-friendly licensing."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-12T20:08:55.000Z",
+        "publishedLabelZh": "11 小时前",
+        "publishedLabelEn": "11 hours ago",
+        "score": 87,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      }
+    ]
+  },
+  {
     "slug": "ai-daily-2026-03-12",
     "date": "2026-03-12",
     "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",

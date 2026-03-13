@@ -1,5 +1,81 @@
 [
   {
+    "slug": "ai-daily-2026-03-13",
+    "date": "2026-03-13",
+    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
+    "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "path": "/blog/ai-daily-2026-03-13",
+    "itemCount": 6,
+    "heroTitleZh": "Hugging Face｜数据与评测基础设施",
+    "heroTitleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 4,
+      "succeeded": 2,
+      "totalWords": 2462,
+      "ratio": 0.5
+    },
+    "themes": [
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 4
+      },
+      {
+        "themeZh": "数据与评测基础设施",
+        "themeEn": "Data and evaluation infrastructure",
+        "count": 1
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 1
+      }
+    ],
+    "featuredItems": [
+      {
+        "id": "huggingface.co-4e558c1ba7e5",
+        "titleZh": "Hugging Face｜数据与评测基础设施",
+        "titleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。 文中最值得记的一处细节是：Notably…",
+        "summaryEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable. On the surface this is about data or benchmarks…",
+        "whyItMattersZh": "数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。",
+        "whyItMattersEn": "Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago"
+      },
+      {
+        "id": "blog.google-dbf82fe6e648",
+        "titleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
+        "titleEn": "How AI is helping improve heart health in rural Australia",
+        "tag": "AI",
+        "summaryZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
+        "summaryEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "publishedLabelZh": "16 小时前",
+        "publishedLabelEn": "16 hours ago"
+      },
+      {
+        "id": "github.blog-8802ea5b7cd4",
+        "titleZh": "GitHub｜Agent 与开发者工具",
+        "titleEn": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+        "tag": "Tools",
+        "summaryZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "15 小时前",
+        "publishedLabelEn": "15 hours ago"
+      }
+    ]
+  },
+  {
     "slug": "ai-daily-2026-03-12",
     "date": "2026-03-12",
     "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",

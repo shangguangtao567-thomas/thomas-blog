@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ai-daily-2026-03-13",
+    "kind": "digest",
+    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
+    "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
+    "seoTitleZh": "",
+    "seoTitleEn": "",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub…",
+    "keywords": [],
+    "pillar": "",
+    "pillarZh": "",
+    "topicSlug": "ai-daily",
+    "featured": false,
+    "xHookZh": "",
+    "xHookEn": "",
+    "tag": "AI 日报",
+    "tagEn": "AI Daily",
+    "image": "",
+    "readTime": 21,
+    "publishedAt": "2026-03-13T00:00:00.000Z"
+  },
+  {
     "slug": "openclaw-product-of-its-time",
     "kind": "",
     "titleZh": "OpenClaw 为什么会爆：它不是技术奇迹，而是 agent 时代的产物",

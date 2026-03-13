@@ -1,23 +1,28 @@
 {
   "status": "success",
-  "date": "2026-03-12",
-  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-12",
+  "date": "2026-03-13",
+  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-13",
   "itemCount": 6,
   "limitedUpdateWindow": false,
   "bodyCoverage": {
-    "targeted": 3,
+    "targeted": 4,
     "succeeded": 2,
-    "totalWords": 2390,
-    "ratio": 0.67
+    "totalWords": 2462,
+    "ratio": 0.5
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-12）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-12>\n今日导语：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 前沿研究与能力边界。Google、Hugging Face、OpenAI、Simon Willison…\n今天展开：\n1. Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务 —— Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…\n2. NVIDIA AI-Q 登顶 DeepResearch Bench，Agent 工程开始卷长链路稳定性 —— Hugging Face把围绕上下文窗口、开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验…\n3. Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标 —— OpenAI给出了一篇围绕Agent 工作流与开发工具的实践拆解，重点不在概念，而在它怎么进真实工作流…\n4. Simon Willison｜Agent 与开发者工具 —— Simon Willison带来了一条围绕Agent 工作流与开发工具的重要更新。 Simon Willison想证明的…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-12)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-12>\nLead: This issue is really about two lines accelerating at once: Agents and developer tooling…\nInside today:\n1. How AI is helping improve heart health in rural Australia — Google published a research-led update around dataset…\n2. How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II — Hugging Face opened up work around context window and open source…\n3. Rakuten fixes issues twice as fast with Codex — OpenAI published a hands-on account of agent workflows and developer tooling…",
-  "generatedAt": "2026-03-12T12:56:22.971Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-13）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-13>\n今日导语：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison…\n今天展开：\n1. Hugging Face｜数据与评测基础设施 —— Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性…\n2. Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务 —— Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…\n3. GitHub｜Agent 与开发者工具 —— GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的…\n4. Simon Willison｜Agent 与开发者工具 —— Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-13)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-13>\nLead: This issue is really about two lines accelerating at once: Agents and developer tooling…\nInside today:\n1. Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation — Hugging Face moved benchmark and evaluation deeper into product and developer workflows…\n2. How AI is helping improve heart health in rural Australia — Google published a research-led update around dataset…\n3. Continuous AI for accessibility: How GitHub transforms feedback into inclusion — GitHub moved agent workflows and developer tooling deeper into product and developer workf…",
+  "generatedAt": "2026-03-13T07:29:15.201Z",
   "themes": [
     {
       "themeZh": "Agent 与开发者工具",
       "themeEn": "Agents and developer tooling",
-      "count": 5
+      "count": 4
+    },
+    {
+      "themeZh": "数据与评测基础设施",
+      "themeEn": "Data and evaluation infrastructure",
+      "count": 1
     },
     {
       "themeZh": "前沿研究与能力边界",
