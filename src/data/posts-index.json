@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ai-daily-2026-03-14",
+    "kind": "digest",
+    "titleZh": "AI 日报｜Hugging Face、Simon Willison都在把 AI 往真实工作流里送",
+    "titleEn": "AI Daily | Where AI starts to look more like infrastructure than demo",
+    "seoTitleZh": "",
+    "seoTitleEn": "",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Hugging Face、Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Hugging Face, Simon Willison…",
+    "keywords": [],
+    "pillar": "",
+    "pillarZh": "",
+    "topicSlug": "ai-daily",
+    "featured": false,
+    "xHookZh": "",
+    "xHookEn": "",
+    "tag": "AI 日报",
+    "tagEn": "AI Daily",
+    "image": "",
+    "readTime": 21,
+    "publishedAt": "2026-03-14T00:00:00.000Z"
+  },
+  {
     "slug": "ai-daily-2026-03-13",
     "kind": "digest",
     "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",

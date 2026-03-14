@@ -1,32 +1,42 @@
 {
   "status": "success",
-  "date": "2026-03-13",
-  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-13",
+  "date": "2026-03-14",
+  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-14",
   "itemCount": 6,
   "limitedUpdateWindow": false,
   "bodyCoverage": {
-    "targeted": 4,
-    "succeeded": 2,
-    "totalWords": 2462,
+    "targeted": 2,
+    "succeeded": 1,
+    "totalWords": 1414,
     "ratio": 0.5
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-13）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-13>\n今日导语：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison…\n今天展开：\n1. Hugging Face｜数据与评测基础设施 —— Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性…\n2. Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务 —— Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…\n3. GitHub｜Agent 与开发者工具 —— GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的…\n4. Simon Willison｜Agent 与开发者工具 —— Simon Willison把围绕开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-13)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-13>\nLead: This issue is really about two lines accelerating at once: Agents and developer tooling…\nInside today:\n1. Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation — Hugging Face moved benchmark and evaluation deeper into product and developer workflows…\n2. How AI is helping improve heart health in rural Australia — Google published a research-led update around dataset…\n3. Continuous AI for accessibility: How GitHub transforms feedback into inclusion — GitHub moved agent workflows and developer tooling deeper into product and developer workf…",
-  "generatedAt": "2026-03-13T07:29:15.201Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-14）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-14>\n今日导语：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Hugging Face、Simon Willison、MarkTechPost 分别…\n今天展开：\n1. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把嵌入模型、Agent 工作流继续往产品和开发者工作流里压，重点已经不是演示能力…\n2. Simon Willison｜AI 产品体验 —— Simon Willison把产品体验升级和更明确的产品化动作绑在一起，说明这件事正在往业务入口靠近…\n3. Google｜前沿研究与能力边界 —— Google放出了一项围绕研究前沿的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…\n4. Simon Willison｜Agent 与开发者工具 —— Simon Willison给出了一篇围绕Agent 工作流与开发工具的实践拆解，重点不在概念，而在它怎么进真实工作流…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-14)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-14>\nLead: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval…\nInside today:\n1. Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline — Hugging Face moved embedding model and agentic workflows deeper into product and developer…\n2. 1M context is now generally available for Opus 4.6 and Sonnet 4.6 — Simon Willison tied product experience upgrades to a more explicit product push…\n3. Google DeepMind Introduces Aletheia: The AI Agent Moving from Math Competitions to Fully Autonomous Professional Research Discoveries — Google published a research-led update around research frontier…",
+  "generatedAt": "2026-03-14T04:45:28.215Z",
   "themes": [
-    {
-      "themeZh": "Agent 与开发者工具",
-      "themeEn": "Agents and developer tooling",
-      "count": 4
-    },
-    {
-      "themeZh": "数据与评测基础设施",
-      "themeEn": "Data and evaluation infrastructure",
-      "count": 1
-    },
     {
       "themeZh": "前沿研究与能力边界",
       "themeEn": "Frontier research and capability shifts",
+      "count": 2
+    },
+    {
+      "themeZh": "检索、多模态与记忆系统",
+      "themeEn": "Retrieval, multimodal, and memory systems",
+      "count": 1
+    },
+    {
+      "themeZh": "AI 产品体验",
+      "themeEn": "AI product experience",
+      "count": 1
+    },
+    {
+      "themeZh": "Agent 与开发者工具",
+      "themeEn": "Agents and developer tooling",
+      "count": 1
+    },
+    {
+      "themeZh": "模型安全与可控性",
+      "themeEn": "Model safety and controllability",
       "count": 1
     }
   ]
