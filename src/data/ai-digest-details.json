@@ -1,5 +1,546 @@
 [
   {
+    "slug": "ai-daily-2026-03-16",
+    "date": "2026-03-16",
+    "titleZh": "AI 日报｜Simon Willison、MarkTechPost都在把 AI 往真实工作流里送",
+    "titleEn": "AI Daily | Where AI starts to look more like infrastructure than demo",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "introZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "introEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "methodologyZh": "",
+    "methodologyEn": "",
+    "path": "/blog/ai-daily-2026-03-16",
+    "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-16",
+    "itemCount": 6,
+    "heroTitleZh": "Simon Willison｜Agent 与开发者工具",
+    "heroTitleEn": "What is agentic engineering?",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-16T04:01:09.261Z",
+    "windowHours": 24,
+    "themes": [
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 3
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 2
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 3,
+      "succeeded": 0,
+      "totalWords": 0,
+      "ratio": 0
+    },
+    "featuredItems": [
+      {
+        "id": "simonwillison.net-3272e374bfa9",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "What is agentic engineering?",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison published a research-led update around agent workflows and developer tooling, aimed at turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "5 小时前",
+        "publishedLabelEn": "5 hours ago"
+      },
+      {
+        "id": "marktechpost.com-e6a3c7ded45a",
+        "titleZh": "MarkTechPost｜Agent 与开发者工具",
+        "titleEn": "A Coding Implementation to Design an Enterprise AI Governance System Using OpenClaw Gateway Policy Engines, Approval Workflows and Auditable Agent Execution",
+        "tag": "Tools",
+        "summaryZh": "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：In this tutorial…",
+        "summaryEn": "MarkTechPost moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: In this tutorial…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago"
+      },
+      {
+        "id": "marktechpost.com-229df46cd61a",
+        "titleZh": "MarkTechPost｜检索、多模态与记忆系统",
+        "titleEn": "Meet OpenViking: An Open-Source Context Database that Brings Filesystem-Based Memory and Retrieval to AI Agent Systems like OpenClaw",
+        "tag": "Data",
+        "summaryZh": "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "9 小时前",
+        "publishedLabelEn": "9 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "simonwillison.net-3272e374bfa9",
+        "rank": 1,
+        "sectionLabelZh": "主线一｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 1 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "What is agentic engineering?",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "What is agentic engineering?",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison published a research-led update around agent workflows and developer tooling, aimed at turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "deckZh": "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。",
+        "deckEn": "Simon Willison published a research-led update around agent workflows and developer tooling…",
+        "narrativeZh": [
+          "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Agentic Engineering Patterns > I use the term agentic engineering to des… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison published a research-led update around agent workflows and developer tooling, aimed at turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: Agentic Engineering Patterns > I use the term agentic engineering to describe the practice of developing software with t… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "Simon Willison published a research-led update around agent workflows and developer tooling, aimed at turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Agentic Engineering Patterns > I use the term agentic engineering to describe the practice of developing software with t…",
+          "They're agents that can both write and execute code.",
+          "Popular examples include Claude Code , OpenAI Codex , and Gemini CLI ."
+        ],
+        "evidenceBulletsEn": [
+          "Agentic Engineering Patterns > I use the term agentic engineering to describe the practice of developing software with the assistance of coding agents.",
+          "They're agents that can both write and execute code.",
+          "Popular examples include Claude Code , OpenAI Codex , and Gemini CLI ."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-15T22:41:57.000Z",
+        "publishedLabelZh": "5 小时前",
+        "publishedLabelEn": "5 hours ago",
+        "score": 100,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "marktechpost.com-e6a3c7ded45a",
+        "rank": 2,
+        "sectionLabelZh": "主线二｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 2 | Agents and developer tooling",
+        "titleZh": "MarkTechPost｜Agent 与开发者工具",
+        "titleEn": "A Coding Implementation to Design an Enterprise AI Governance System Using OpenClaw Gateway Policy Engines, Approval Workflows and Auditable Agent Execution",
+        "briefTitleZh": "MarkTechPost｜Agent 与开发者工具",
+        "briefTitleEn": "A Coding Implementation to Design an Enterprise AI Governance System Using OpenClaw Gateway Policy Engines, Approval Workflows and Auditable Agent Execution",
+        "kickerZh": "MarkTechPost · Agent 与开发者工具",
+        "kickerEn": "MarkTechPost · Agents and developer tooling",
+        "summaryZh": "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：In this tutorial…",
+        "summaryEn": "MarkTechPost moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: In this tutorial…",
+        "deckZh": "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "MarkTechPost moved workflow deeper into product and developer workflows…",
+        "narrativeZh": [
+          "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：In this tutorial, we build an enterprise-grade AI governance system usin… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "MarkTechPost moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: In this tutorial, we build an enterprise-grade AI governance system using OpenClaw and Python. In other words, the race is no longer just about who answers well…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "MarkTechPost moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/15/a-coding-implementation-to-design-an-enterprise-ai-governance-system-using-openclaw-gateway-policy-engines-approval-workflows-and-auditable-agent-execution/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/15/a-coding-implementation-to-design-an-enterprise-ai-governance-system-using-openclaw-gateway-policy-engines-approval-workflows-and-auditable-agent-execution/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "In this tutorial, we build an enterprise-grade AI governance system using OpenClaw and Python.",
+          "We start by setting up the OpenClaw runtime and launching the OpenClaw Gateway so that our Python environment can intera…",
+          "We then design a governance layer that classifies requests based on risk…"
+        ],
+        "evidenceBulletsEn": [
+          "In this tutorial, we build an enterprise-grade AI governance system using OpenClaw and Python.",
+          "We start by setting up the OpenClaw runtime and launching the OpenClaw Gateway so that our Python environment can interact with a real agent through the OpenCla…",
+          "We then design a governance layer that classifies requests based on risk, enforces […] The post A Coding Implementation to Design an Enterprise AI Governance …"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-15T22:12:45.000Z",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago",
+        "score": 87,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "marktechpost.com-229df46cd61a",
+        "rank": 3,
+        "sectionLabelZh": "主线三｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Thread 3 | Retrieval, multimodal, and memory systems",
+        "titleZh": "MarkTechPost｜检索、多模态与记忆系统",
+        "titleEn": "Meet OpenViking: An Open-Source Context Database that Brings Filesystem-Based Memory and Retrieval to AI Agent Systems like OpenClaw",
+        "briefTitleZh": "MarkTechPost｜检索、多模态与记忆系统",
+        "briefTitleEn": "Meet OpenViking: An Open-Source Context Database that Brings Filesystem-Based Memory and Retrieval to AI Agent Systems like OpenClaw",
+        "kickerZh": "MarkTechPost · 检索、多模态与记忆系统",
+        "kickerEn": "MarkTechPost · Retrieval, multimodal, and memory systems",
+        "summaryZh": "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "deckZh": "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "deckEn": "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "narrativeZh": [
+          "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "目前能确认的公开信号是：OpenViking is an open-source Context Database for AI Agents from Volceng… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search, memory…",
+          "The clearest public signal so far is this: OpenViking is an open-source Context Database for AI Agents from Volcengine. These are not always the loudest headlines…",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "whatChangedEn": "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/15/meet-openviking-an-open-source-context-database-that-brings-filesystem-based-memory-and-retrieval-to-ai-agent-systems-like-openclaw/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/15/meet-openviking-an-open-source-context-database-that-brings-filesystem-based-memory-and-retrieval-to-ai-agent-systems-like-openclaw/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "OpenViking is an open-source Context Database for AI Agents from Volcengine.",
+          "The project is built around a simple architectural concept…",
+          "Instead, OpenViking organizes context through a file system paradigm, with the goal of making 记忆, resources…"
+        ],
+        "evidenceBulletsEn": [
+          "OpenViking is an open-source Context Database for AI Agents from Volcengine.",
+          "The project is built around a simple architectural concept: agent systems should not treat context as a flat collection of text chunks.",
+          "Instead, OpenViking organizes context through a file system paradigm, with the goal of making memory, resources…"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-15T18:49:21.000Z",
+        "publishedLabelZh": "9 小时前",
+        "publishedLabelEn": "9 hours ago",
+        "score": 84,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "marktechpost.com-42091bbe8f79",
+        "rank": 4,
+        "sectionLabelZh": "补充｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief | Agents and developer tooling",
+        "titleZh": "MarkTechPost｜Agent 与开发者工具",
+        "titleEn": "LangChain Releases Deep Agents: A Structured Runtime for Planning, Memory, and Context Isolation in Multi-Step AI Agents",
+        "briefTitleZh": "MarkTechPost｜Agent 与开发者工具",
+        "briefTitleEn": "LangChain Releases Deep Agents: A Structured Runtime for Planning, Memory, and Context Isolation in Multi-Step AI Agents",
+        "kickerZh": "MarkTechPost · Agent 与开发者工具",
+        "kickerEn": "MarkTechPost · Agents and developer tooling",
+        "summaryZh": "MarkTechPost给出了一篇围绕记忆的实践拆解，重点不在概念，而在它怎么进真实工作流。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "MarkTechPost published a hands-on account of memory, with the emphasis on how it behaves in a real workflow rather than in abstract…",
+        "deckZh": "MarkTechPost给出了一篇围绕记忆的实践拆解，重点不在概念，而在它怎么进真实工作流。",
+        "deckEn": "MarkTechPost published a hands-on account of memory, with the emphasis on how it behaves in a real workflow rather than in abstract.",
+        "narrativeZh": [
+          "MarkTechPost给出了一篇围绕记忆的实践拆解，重点不在概念，而在它怎么进真实工作流。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Most LLM agents work well for short tool-calling loops but start to brea… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "MarkTechPost published a hands-on account of memory, with the emphasis on how it behaves in a real workflow rather than in abstract. MarkTechPost is making the case that the next battle is not smarter chat…",
+          "The clearest public signal so far is this: Most LLM agents work well for short tool-calling loops but start to break down when the task becomes multi-step… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "MarkTechPost给出了一篇围绕记忆的实践拆解，重点不在概念，而在它怎么进真实工作流。",
+        "whatChangedEn": "MarkTechPost published a hands-on account of memory, with the emphasis on how it behaves in a real workflow rather than in abstract.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/15/langchain-releases-deep-agents-a-structured-runtime-for-planning-memory-and-context-isolation-in-multi-step-ai-agents/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/15/langchain-releases-deep-agents-a-structured-runtime-for-planning-memory-and-context-isolation-in-multi-step-ai-agents/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Most LLM agents work well for short tool-calling loops but start to break down when the task becomes multi-step…",
+          "LangChain’s Deep Agents is designed for that gap.",
+          "The project is described by LangChain as an ‘agent harness‘…"
+        ],
+        "evidenceBulletsEn": [
+          "Most LLM agents work well for short tool-calling loops but start to break down when the task becomes multi-step, stateful, and artifact-heavy.",
+          "LangChain’s Deep Agents is designed for that gap.",
+          "The project is described by LangChain as an ‘agent harness‘: a standalone library built on top of LangChain’s agent building blocks and powered by the […] The p…"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-15T09:07:48.000Z",
+        "publishedLabelZh": "19 小时前",
+        "publishedLabelEn": "19 hours ago",
+        "score": 75,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "arxiv.org-ba39f712e9e9",
+        "rank": 5,
+        "sectionLabelZh": "补充 5｜前沿研究与能力边界",
+        "sectionLabelEn": "Brief 5 | Frontier research and capability shifts",
+        "titleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "titleEn": "Diagnosing Retrieval Bias Under Multiple In-Context Knowledge Updates in Large Language Models",
+        "briefTitleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "briefTitleEn": "Diagnosing Retrieval Bias Under Multiple In-Context Knowledge Updates in Large Language Models",
+        "kickerZh": "arXiv cs.CL · 前沿研究与能力边界",
+        "kickerEn": "arXiv cs.CL · Frontier research and capability shifts",
+        "summaryZh": "arXiv cs.CL放出了一项围绕检索的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：arXiv:2603.12271v1 Announce Type: new Abstract…",
+        "summaryEn": "arXiv cs.CL published a research-led update around retrieval, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "deckZh": "arXiv cs.CL放出了一项围绕检索的研究型更新，指向的是推动能力边界继续外扩。",
+        "deckEn": "arXiv cs.CL published a research-led update around retrieval, aimed at pushing the capability frontier outward.",
+        "narrativeZh": [
+          "arXiv cs.CL放出了一项围绕检索的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "目前能确认的公开信号是：arXiv:2603.12271v1 Announce Type: new Abstract: LLMs are widely used in… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "arXiv cs.CL published a research-led update around retrieval, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward.",
+          "The clearest public signal so far is this: arXiv:2603.12271v1 Announce Type: new Abstract…",
+          "Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. The next step to watch is replication, open implementation, API exposure…"
+        ],
+        "whatChangedZh": "arXiv cs.CL放出了一项围绕检索的研究型更新，指向的是推动能力边界继续外扩。",
+        "whatChangedEn": "arXiv cs.CL published a research-led update around retrieval, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "arxiv.org",
+        "sourceName": "arXiv cs.CL",
+        "sourceUrl": "https://arxiv.org/abs/2603.12271",
+        "relatedLinks": [
+          {
+            "labelZh": "arXiv cs.CL 原文",
+            "labelEn": "arXiv cs.CL source",
+            "url": "https://arxiv.org/abs/2603.12271"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://rss.arxiv.org/rss/cs.CL"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "arXiv:2603.12271v1 Announce Type: new Abstract: LLMs are widely used in knowledge-intensive tasks where the same fact ma…",
+          "Unlike prior work focusing on one-shot updates or single conflicts…",
+          "This challenge resembles the AB-AC interference paradigm in cogniti…"
+        ],
+        "evidenceBulletsEn": [
+          "arXiv:2603.12271v1 Announce Type: new Abstract: LLMs are widely used in knowledge-intensive tasks where the same fact may be revised multiple times within conte…",
+          "Unlike prior work focusing on one-shot updates or single conflicts…",
+          "This challenge resembles the AB-AC interference paradigm in cogniti…"
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-16T04:00:00.000Z",
+        "publishedLabelZh": "1 小时内",
+        "publishedLabelEn": "within 1 hour",
+        "score": 75,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      },
+      {
+        "id": "marktechpost.com-7ed77871c465",
+        "rank": 6,
+        "sectionLabelZh": "补充 6｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Brief 6 | Retrieval, multimodal, and memory systems",
+        "titleZh": "MarkTechPost｜检索、多模态与记忆系统",
+        "titleEn": "Zhipu AI Introduces GLM-OCR: A 0.9B Multimodal OCR Model for Document Parsing and Key Information Extraction (KIE)",
+        "briefTitleZh": "MarkTechPost｜检索、多模态与记忆系统",
+        "briefTitleEn": "Zhipu AI Introduces GLM-OCR: A 0.9B Multimodal OCR Model for Document Parsing and Key Information Extraction (KIE)",
+        "kickerZh": "MarkTechPost · 检索、多模态与记忆系统",
+        "kickerEn": "MarkTechPost · Retrieval, multimodal, and memory systems",
+        "summaryZh": "MarkTechPost放出了一项围绕多模态、推理的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 目前能确认的公开信号是：That is the problem targeted by GLM-OCR…",
+        "summaryEn": "MarkTechPost published a research-led update around multimodal and inference, aimed at bringing more unstructured data into the same retrieval space. This looks like infrastructure… The clearest public signal so far is this…",
+        "deckZh": "MarkTechPost放出了一项围绕多模态、推理的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "MarkTechPost published a research-led update around multimodal and inference, aimed at bringing more unstructured data into the same retrieval space.",
+        "narrativeZh": [
+          "MarkTechPost放出了一项围绕多模态、推理的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "目前能确认的公开信号是：That is the problem targeted by GLM-OCR, introduced by researchers […] T… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "MarkTechPost published a research-led update around multimodal and inference, aimed at bringing more unstructured data into the same retrieval space. This looks like infrastructure…",
+          "The clearest public signal so far is this: That is the problem targeted by GLM-OCR, introduced by researchers […] The post Zhipu AI Introduces GLM-OCR… These are not always the loudest headlines…",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "MarkTechPost放出了一项围绕多模态、推理的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "MarkTechPost published a research-led update around multimodal and inference, aimed at bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/15/zhipu-ai-introduces-glm-ocr-a-0-9b-multimodal-ocr-model-for-document-parsing-and-key-information-extraction-kie/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/15/zhipu-ai-introduces-glm-ocr-a-0-9b-multimodal-ocr-model-for-document-parsing-and-key-information-extraction-kie/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "That is the problem targeted by GLM-OCR, introduced by researchers […] The post Zhipu AI Introduces GLM-OCR…",
+          "And can a compact 多模态 model handle parsing, tables, formulas…",
+          "What does it take to make OCR useful for real documents instead of clean demo images?"
+        ],
+        "evidenceBulletsEn": [
+          "That is the problem targeted by GLM-OCR, introduced by researchers […] The post Zhipu AI Introduces GLM-OCR: A 0.9B Multimodal OC…",
+          "And can a compact multimodal model handle parsing, tables, formulas, and structured extraction without turning inference into a resource bonfire?",
+          "What does it take to make OCR useful for real documents instead of clean demo images?"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-15T08:08:01.000Z",
+        "publishedLabelZh": "20 小时前",
+        "publishedLabelEn": "20 hours ago",
+        "score": 74,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only"
+      }
+    ]
+  },
+  {
     "slug": "ai-daily-2026-03-14",
     "date": "2026-03-14",
     "titleZh": "AI 日报｜Hugging Face、Simon Willison都在把 AI 往真实工作流里送",

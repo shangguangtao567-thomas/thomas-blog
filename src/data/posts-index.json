@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ai-daily-2026-03-16",
+    "kind": "digest",
+    "titleZh": "AI 日报｜Simon Willison、MarkTechPost都在把 AI 往真实工作流里送",
+    "titleEn": "AI Daily | Where AI starts to look more like infrastructure than demo",
+    "seoTitleZh": "",
+    "seoTitleEn": "",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison…",
+    "keywords": [],
+    "pillar": "",
+    "pillarZh": "",
+    "topicSlug": "ai-daily",
+    "featured": false,
+    "xHookZh": "",
+    "xHookEn": "",
+    "tag": "AI 日报",
+    "tagEn": "AI Daily",
+    "image": "",
+    "readTime": 21,
+    "publishedAt": "2026-03-16T00:00:00.000Z"
+  },
+  {
     "slug": "ai-daily-2026-03-14",
     "kind": "digest",
     "titleZh": "AI 日报｜Hugging Face、Simon Willison都在把 AI 往真实工作流里送",

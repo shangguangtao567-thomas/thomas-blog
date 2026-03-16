@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-03-16",
+    "slug": "x-draft-2026-03-16",
+    "digestSlug": "ai-daily-2026-03-16",
+    "digestPath": "/blog/ai-daily-2026-03-16",
+    "angleZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "angleEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "hooksZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "Agent 与开发者工具 这条主线，今天又被往前推了一截。",
+      "如果你只看今天一条 AI 结论，我会看这个：Simon Willison｜Agent 与开发者工具"
+    ],
+    "hooksEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "Agents and developer tooling moved another step forward today.",
+      "If I had to compress today's AI signal into one takeaway, I would start here: What is agentic engineering?"
+    ],
+    "shortPostZh": "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。\n另一条同时在加速的线是：检索、多模态与记忆系统。\n完整日报：https://blog.lincept.com/blog/ai-daily-2026-03-16",
+    "shortPostEn": "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.\nThe second line accelerating at the same time is Retrieval, multimodal, and memory systems.\nFull digest: https://blog.lincept.com/blog/ai-daily-2026-03-16",
+    "threadZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "1. Simon Willison｜Agent 与开发者工具\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+      "2. MarkTechPost｜Agent 与开发者工具\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+      "3. MarkTechPost｜检索、多模态与记忆系统\n这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+      "如果你想看完整证据链，我把今天的 digest 放这里：https://blog.lincept.com/blog/ai-daily-2026-03-16"
+    ],
+    "threadEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "1. What is agentic engineering?\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+      "2. A Coding Implementation to Design an Enterprise AI Governance System Using OpenClaw Gateway Policy Engines, Approval Workflows and Auditable Agent Execution\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+      "3. Meet OpenViking: An Open-Source Context Database that Brings Filesystem-Based Memory and Retrieval to AI Agent Systems like OpenClaw\nThese lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+      "Full evidence chain: https://blog.lincept.com/blog/ai-daily-2026-03-16"
+    ],
+    "ctaUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-16",
+    "ctaLabelZh": "阅读完整日报",
+    "ctaLabelEn": "Read the full digest",
+    "reviewPath": "x-drafts/2026-03-16.md"
+  },
+  {
     "date": "2026-03-14",
     "slug": "x-draft-2026-03-14",
     "digestSlug": "ai-daily-2026-03-14",
