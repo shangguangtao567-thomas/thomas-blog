@@ -2,37 +2,37 @@
   {
     "slug": "ai-daily-2026-03-16",
     "date": "2026-03-16",
-    "titleZh": "AI 日报｜Simon Willison、MarkTechPost都在把 AI 往真实工作流里送",
-    "titleEn": "AI Daily | Where AI starts to look more like infrastructure than demo",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
-    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "titleZh": "AI 日报｜Agents and developer tooling +  Frontier research and capability shifts",
+    "titleEn": "AI Daily |  Agents and developer tooling, Frontier research and capability shifts, AI infrastructure",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Simon Willison、MarkTechPost、arXiv cs.CL 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Simon Willison, MarkTechPost…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Simon Willison、MarkTechPost、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Simon Willison, MarkTechPost, arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-16",
     "itemCount": 6,
     "heroTitleZh": "Simon Willison｜Agent 与开发者工具",
     "heroTitleEn": "What is agentic engineering?",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
-      "targeted": 3,
+      "targeted": 2,
       "succeeded": 0,
       "totalWords": 0,
       "ratio": 0
     },
     "themes": [
       {
-        "themeZh": "Agent 与开发者工具",
-        "themeEn": "Agents and developer tooling",
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
         "count": 3
       },
       {
-        "themeZh": "检索、多模态与记忆系统",
-        "themeEn": "Retrieval, multimodal, and memory systems",
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
         "count": 2
       },
       {
-        "themeZh": "前沿研究与能力边界",
-        "themeEn": "Frontier research and capability shifts",
+        "themeZh": "AI 基础设施",
+        "themeEn": "AI infrastructure",
         "count": 1
       }
     ],
@@ -42,38 +42,40 @@
         "titleZh": "Simon Willison｜Agent 与开发者工具",
         "titleEn": "What is agentic engineering?",
         "tag": "Tools",
-        "summaryZh": "Simon Willison放出了一项围绕Agent 工作流与开发工具的研究型更新，指向的是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
-        "summaryEn": "Simon Willison published a research-led update around agent workflows and developer tooling, aimed at turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
         "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "5 小时前",
-        "publishedLabelEn": "5 hours ago"
+        "publishedLabelZh": "12 小时前",
+        "publishedLabelEn": "12 hours ago"
       },
       {
-        "id": "marktechpost.com-e6a3c7ded45a",
-        "titleZh": "MarkTechPost｜Agent 与开发者工具",
-        "titleEn": "A Coding Implementation to Design an Enterprise AI Governance System Using OpenClaw Gateway Policy Engines, Approval Workflows and Auditable Agent Execution",
-        "tag": "Tools",
-        "summaryZh": "MarkTechPost把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 MarkTechPost想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：In this tutorial…",
-        "summaryEn": "MarkTechPost moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: In this tutorial…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
-        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "id": "marktechpost.com-f8eeee9f4e88",
+        "titleZh": "MarkTechPost｜前沿研究与能力边界",
+        "titleEn": "Moonshot AI Releases 𝑨𝒕𝒕𝒆𝒏𝒕𝒊𝒐𝒏 𝑹𝒆𝒔𝒊𝒅𝒖𝒂𝒍𝒔 to Replace Fixed Residual Mixing with Depth-Wise Attention for Better Scaling in Transformers",
+        "tag": "AI",
+        "summaryZh": "MarkTechPost放出了一项围绕研究前沿的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
+        "summaryEn": "MarkTechPost published a research-led update around research frontier, aimed at pushing the capability frontier outward… The clearest public signal so far is this…",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "publishedLabelZh": "4 小时前",
+        "publishedLabelEn": "4 hours ago"
+      },
+      {
+        "id": "marktechpost.com-9956eaeec682",
+        "titleZh": "MarkTechPost｜AI 基础设施",
+        "titleEn": "IBM AI Releases Granite 4.0 1B Speech as a Compact Multilingual Speech Model for Edge AI and Translation Pipelines",
+        "tag": "Infrastructure",
+        "summaryZh": "MarkTechPost放出了一项围绕基准测试、记忆的研究型更新，指向的是降低规模化部署的摩擦。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：IBM has released Granite 4.0 1B Speech…",
+        "summaryEn": "MarkTechPost published a research-led update around benchmark and memory, aimed at reducing friction in scaled deployment… The clearest public signal so far is this: IBM has released Granite 4.0 1B Speech…",
+        "whyItMattersZh": "基础设施变化往往决定成本、吞吐、协作和交付速度，虽然不总是最吸睛，但对团队能否大规模落地最关键。",
+        "whyItMattersEn": "Infrastructure shifts decide cost, throughput, delivery speed, and how much friction real deployment still carries.",
         "publishedLabelZh": "6 小时前",
         "publishedLabelEn": "6 hours ago"
-      },
-      {
-        "id": "marktechpost.com-229df46cd61a",
-        "titleZh": "MarkTechPost｜检索、多模态与记忆系统",
-        "titleEn": "Meet OpenViking: An Open-Source Context Database that Brings Filesystem-Based Memory and Retrieval to AI Agent Systems like OpenClaw",
-        "tag": "Data",
-        "summaryZh": "MarkTechPost把围绕检索、记忆的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
-        "summaryEn": "MarkTechPost opened up work around retrieval and memory, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
-        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "9 小时前",
-        "publishedLabelEn": "9 hours ago"
       }
-    ]
+    ],
+    "llmGenerated": false,
+    "titleRegenerated": true
   },
   {
     "slug": "ai-daily-2026-03-14",

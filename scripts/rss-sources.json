@@ -79,19 +79,17 @@
   },
   {
     "name": "机器之心 (Synced)",
-    "url": "https://www.jiqizhixin.com/",
+    "url": "https://www.jiqizhixin.com/rss",
     "category": "AI",
     "priority": 7,
-    "reason": "Leading Chinese AI media covering research, industry, and domestic model developments",
-    "customScraper": "jiqizhixin"
+    "reason": "Leading Chinese AI media covering research, industry, and domestic model developments"
   },
   {
     "name": "量子位 (QbitAI)",
-    "url": "https://www.qbitai.com/",
+    "url": "https://www.qbitai.com/feed",
     "category": "AI",
     "priority": 6,
-    "reason": "Chinese AI news and analysis, strong coverage of domestic AI ecosystem",
-    "customScraper": "qbitai"
+    "reason": "Chinese AI news and analysis, strong coverage of domestic AI ecosystem"
   },
   {
     "name": "Machine Learning Mastery",

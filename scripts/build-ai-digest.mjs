@@ -8,6 +8,7 @@ import {
   buildDigestReport,
 } from './lib/ai-digest/digest-engine.mjs';
 import {
+  cleanText,
   ensureDir,
   loadJson,
   normalizeTitle,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T10:31:53.972Z",
+  "generatedAt": "2026-03-16T10:48:06.669Z",
   "windowDays": 3,
   "selectedCount": 13,
   "bodyFetch": {
@@ -20,7 +20,7 @@
       "pubDate": "2026-03-15T22:41:57.000Z",
       "sourceDomain": "simonwillison.net",
       "id": "simonwillison.net-3272e374bfa9",
-      "score": 95,
+      "score": 94,
       "publishedAt": "2026-03-15",
       "bodyFetchTargeted": true,
       "bodyFetched": false,
@@ -136,7 +136,7 @@
       "pubDate": "2026-03-16T04:57:26.000Z",
       "sourceDomain": "marktechpost.com",
       "id": "marktechpost.com-9956eaeec682",
-      "score": 65,
+      "score": 64,
       "publishedAt": "2026-03-16",
       "bodyFetchTargeted": false,
       "bodyFetched": false,
