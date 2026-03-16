@@ -25,6 +25,105 @@ const MAX_PER_SOURCE = Number.parseInt(process.env.MAX_PER_SOURCE || '4', 10);
 
 const parser = new Parser({ timeout: 15000, headers: { 'User-Agent': 'thomas-blog-ai-rss/2.0' } });
 
+// Custom scrapers for sources without RSS feeds
+async function scrapeTisi(source) {
+  try {
+    const response = await fetch(source.url, {
+      headers: { 'User-Agent': 'thomas-blog-ai-rss/2.0' },
+    });
+    const html = await response.text();
+
+    const items = [];
+    const articlePattern = /<article[^>]*>[\s\S]*?<\/article>/gi;
+    let match;
+
+    while ((match = articlePattern.exec(html)) !== null) {
+      const article = match[0];
+      const titleMatch = article.match(/<h3[^>]*><a[^>]*>([^<]+)<\/a>/i);
+      const linkMatch = article.match(/<a\s+href="([^"]+)"/i);
+      const dateMatch = article.match(/<span[^>]*class="date"[^>]*>([^<]+)<\/span>/i);
+
+      if (titleMatch && linkMatch) {
+        const title = cleanText(titleMatch[1]);
+        const link = linkMatch[1].startsWith('http') ? linkMatch[1] : `https://www.tisi.org${linkMatch[1]}`;
+        const pubDate = dateMatch ? cleanText(dateMatch[1]) : new Date().toISOString();
+
+        items.push({
+          sourceName: source.name,
+          sourceUrl: source.url,
+          categoryHint: source.category,
+          priority: source.priority,
+          reason: source.reason,
+          title,
+          link,
+          contentSnippet: clip(title, 200),
+          pubDate,
+          sourceDomain: 'tisi.org',
+        });
+      }
+    }
+
+    return items.slice(0, MAX_PER_SOURCE);
+  } catch (error) {
+    console.warn(`[candidates] failed: ${source.name} -> ${error.message}`);
+    return [];
+  }
+}
+
+async function scrapeJiqizhixin(source) {
+  try {
+    const response = await fetch(`${source.url}api/v4/flash_news`, {
+      headers: { 'User-Agent': 'thomas-blog-ai-rss/2.0' },
+    });
+    const data = await response.json();
+
+    return (data.news_items || data.items || [])
+      .slice(0, MAX_PER_SOURCE)
+      .map(item => ({
+        sourceName: source.name,
+        sourceUrl: source.url,
+        categoryHint: source.category,
+        priority: source.priority,
+        reason: source.reason,
+        title: item.title || item.name || '',
+        link: item.url || `${source.url}news/${item.id}`,
+        contentSnippet: clip(item.summary || item.description || item.title || '', 200),
+        pubDate: item.published_at || item.created_at || new Date().toISOString(),
+        sourceDomain: 'jiqizhixin.com',
+      }));
+  } catch (error) {
+    console.warn(`[candidates] failed: ${source.name} -> ${error.message}`);
+    return [];
+  }
+}
+
+async function scrapeQbitai(source) {
+  try {
+    const response = await fetch(`${source.url}api/v1/posts/list?category=all&page=1&page_size=${MAX_PER_SOURCE}`, {
+      headers: { 'User-Agent': 'thomas-blog-ai-rss/2.0' },
+    });
+    const data = await response.json();
+
+    return (data.posts || data.items || data.data || [])
+      .slice(0, MAX_PER_SOURCE)
+      .map(item => ({
+        sourceName: source.name,
+        sourceUrl: source.url,
+        categoryHint: source.category,
+        priority: source.priority,
+        reason: source.reason,
+        title: item.title || item.name || '',
+        link: item.url || `${source.url}${item.slug || item.id}`,
+        contentSnippet: clip(item.excerpt || item.summary || item.description || item.title || '', 200),
+        pubDate: item.published_at || item.created_at || item.date || new Date().toISOString(),
+        sourceDomain: 'qbitai.com',
+      }));
+  } catch (error) {
+    console.warn(`[candidates] failed: ${source.name} -> ${error.message}`);
+    return [];
+  }
+}
+
 function extractDomain(url) {
   try {
     return new URL(url).hostname.replace(/^www\./, '');
@@ -53,6 +152,18 @@ function scoreItem(item) {
 }
 
 async function fetchSource(source) {
+  // Handle custom scrapers for sources without RSS feeds
+  if (source.customScraper === 'tisi') {
+    return scrapeTisi(source);
+  }
+  if (source.customScraper === 'jiqizhixin') {
+    return scrapeJiqizhixin(source);
+  }
+  if (source.customScraper === 'qbitai') {
+    return scrapeQbitai(source);
+  }
+
+  // Default RSS feed handling
   try {
     const feed = await parser.parseURL(source.url);
     const limit = Math.max(1, Math.min(MAX_PER_SOURCE, source.maxItems || MAX_PER_SOURCE));

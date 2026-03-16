@@ -7,6 +7,7 @@ import {
   uniqueStrings,
   wordCount,
 } from './shared.mjs';
+import { generateNarrativeWithLLM } from './llm-narrative.mjs';
 
 const THEME_RULES = [
   {
@@ -615,20 +616,127 @@ function buildItem(item, index) {
     bodySummary: item.bodySummary || '',
     sourceNoteZh: item.bodyFetched ? '正文已补充抓取' : '目前主要依据公开摘要',
     sourceNoteEn: item.bodyFetched ? 'full article fetched' : 'summary-level public detail only',
+    llmGenerated: false,
   };
+}
+
+function buildItemWithLLM(item, index, llmAnalysis) {
+  const theme = inferTheme(item);
+  const actor = inferActor(item);
+  const analysisText = cleanText([item.title, item.pageTitle, item.contentSnippet, item.bodyText, item.reason].filter(Boolean).join(' '));
+  const action = inferAction(analysisText);
+  const topics = pickTopicLabels(analysisText, theme);
+  const evidence = pickEvidenceSentences(item);
+  const labels = relativeTimeLabels(item.pubDate || item.publishedAt);
+
+  const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh, theme);
+  const titleEn = buildCardHeadlineEn(item, actor, action, topics.topicEn, theme);
+
+  const narrativeEn = [
+    llmAnalysis.english.whatChanged || '',
+    llmAnalysis.english.whyItMatters || '',
+    llmAnalysis.english.watchNext || '',
+  ].filter(Boolean);
+
+  const narrativeZh = [
+    llmAnalysis.chinese.whatChanged || '',
+    llmAnalysis.chinese.whyItMatters || '',
+    llmAnalysis.chinese.watchNext || '',
+  ].filter(Boolean);
+
+  return {
+    id: item.id,
+    rank: index + 1,
+    sectionLabelZh: buildSectionLabelZh(theme, index),
+    sectionLabelEn: buildSectionLabelEn(theme, index),
+    titleZh,
+    titleEn,
+    briefTitleZh: titleZh,
+    briefTitleEn: titleEn,
+    kickerZh: `${actor} · ${theme.themeZh}`,
+    kickerEn: `${actor} · ${theme.themeEn}`,
+    summaryZh: trimText(narrativeZh.slice(0, 2).join(' '), 150),
+    summaryEn: trimText(narrativeEn.slice(0, 2).join(' '), 240),
+    deckZh: trimText(llmAnalysis.chinese.whatChanged, 92),
+    deckEn: trimText(llmAnalysis.english.whatChanged, 156),
+    narrativeZh,
+    narrativeEn,
+    whatChangedZh: llmAnalysis.chinese.whatChanged,
+    whatChangedEn: llmAnalysis.english.whatChanged,
+    whyItMattersZh: llmAnalysis.chinese.whyItMatters,
+    whyItMattersEn: llmAnalysis.english.whyItMatters,
+    watchNextZh: llmAnalysis.chinese.watchNext,
+    watchNextEn: llmAnalysis.english.watchNext,
+    tag: theme.tag || item.categoryHint || 'AI',
+    source: item.sourceDomain,
+    sourceName: item.sourceName,
+    sourceUrl: item.link,
+    relatedLinks: [
+      { labelZh: `${item.sourceName || item.sourceDomain} 原文`, labelEn: `${item.sourceName || item.sourceDomain} source`, url: item.link },
+      item.sourceUrl ? { labelZh: 'RSS 源', labelEn: 'RSS feed', url: item.sourceUrl } : null,
+    ].filter(Boolean),
+    takeawayBulletsZh: [],
+    takeawayBulletsEn: [],
+    evidenceBulletsZh: evidence.length ? evidence.map(line => replaceTermsZh(trimText(line, 120))) : [],
+    evidenceBulletsEn: evidence.length ? evidence.map(line => trimText(line, 160)) : [],
+    themeZh: theme.themeZh,
+    themeEn: theme.themeEn,
+    impactZh: llmAnalysis.chinese.watchNext,
+    impactEn: llmAnalysis.english.watchNext,
+    publishedAt: item.pubDate || item.publishedAt,
+    publishedLabelZh: labels.zh,
+    publishedLabelEn: labels.en,
+    score: item.score,
+    featured: index < 3,
+    bodyFetched: Boolean(item.bodyFetched),
+    bodyFetchTargeted: Boolean(item.bodyFetchTargeted),
+    bodyFetchStatus: item.bodyFetchStatus || 'unknown',
+    bodyWordCount: item.bodyWordCount || wordCount(item.bodyText || ''),
+    bodySummary: item.bodySummary || '',
+    sourceNoteZh: item.bodyFetched ? '正文已补充抓取，LLM 分析' : 'LLM 分析（基于摘要）',
+    sourceNoteEn: item.bodyFetched ? 'full article fetched, LLM analyzed' : 'LLM analyzed from summary',
+    llmGenerated: true,
+  };
+}
+
+export async function buildDigestItemsAsync(candidates = []) {
+  const llmAnalysis = await generateNarrativeWithLLM(candidates);
+
+  if (llmAnalysis) {
+    return candidates.map((item, index) => buildItemWithLLM(item, index, llmAnalysis));
+  }
+
+  return candidates.map((item, index) => buildItem(item, index));
 }
 
 export function buildDigestItems(candidates = []) {
   return candidates.map((item, index) => buildItem(item, index));
 }
 
-export function buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow }) {
+export function buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow, llmAnalysis }) {
   const themes = buildThemes(items);
   const bodyCoverage = buildBodyCoverage(items);
-  const titleSummaryZh = buildTitleSummaryZh(items, themes);
-  const titleSummaryEn = buildTitleSummaryEn(themes, items);
-  const introZh = buildHeroSummaryZh(items, themes, windowHours) + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有拿更早的消息来凑数。` : '');
-  const introEn = buildHeroSummaryEn(items, themes, windowHours) + (limitedUpdateWindow ? ` High-signal items were thin in the last ${windowHours} hours, so older material was deliberately left out rather than padded in.` : '');
+
+  let titleSummaryZh, titleSummaryEn, introZh, introEn;
+
+  if (llmAnalysis?.issueTitle?.en) {
+    titleSummaryEn = llmAnalysis.issueTitle.en;
+    titleSummaryZh = llmAnalysis.issueTitle.zh || titleSummaryEn;
+    introEn = (llmAnalysis.heroSummary.en
+      ? llmAnalysis.heroSummary.en
+      : buildHeroSummaryEn(items, themes, windowHours))
+      + (limitedUpdateWindow ? ` High-signal items were thin in the last ${windowHours} hours, so older material was deliberately left out rather than padded in.` : '');
+    introZh = (llmAnalysis.heroSummary.zh
+      ? llmAnalysis.heroSummary.zh
+      : buildHeroSummaryZh(items, themes, windowHours))
+      + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有拿更早的消息来凑数。` : '');
+  } else {
+    titleSummaryZh = buildTitleSummaryZh(items, themes);
+    titleSummaryEn = buildTitleSummaryEn(themes, items);
+    introZh = buildHeroSummaryZh(items, themes, windowHours) + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有拿更早的消息来凑数。` : '');
+    introEn = buildHeroSummaryEn(items, themes, windowHours) + (limitedUpdateWindow ? ` High-signal items were thin in the last ${windowHours} hours, so older material was deliberately left out rather than padded in.` : '');
+  }
+
   const excerptZh = items.length ? trimText(`${introZh} 下面这几条按重要性和可读性往下排，先抓方向，再看细节。`, 120) : `近 ${windowHours} 小时重点更新有限，今天不混入更早内容。`;
   const excerptEn = items.length ? trimText(`${introEn} The entries below are ordered to help you catch the line of travel first, then the concrete details.`, 180) : `Updates in the last ${windowHours} hours were limited, so older items were intentionally excluded.`;
 
@@ -668,7 +776,13 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
       publishedLabelEn: item.publishedLabelEn,
     })),
     items,
+    llmGenerated: Boolean(llmAnalysis),
   };
+}
+
+export async function buildDigestDetailAsync({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow }) {
+  const llmAnalysis = await generateNarrativeWithLLM(items);
+  return buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow, llmAnalysis });
 }
 
 export function buildDigestMarkdown(detail) {

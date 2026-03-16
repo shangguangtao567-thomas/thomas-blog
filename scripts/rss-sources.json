@@ -4,99 +4,123 @@
     "url": "https://openai.com/news/rss.xml",
     "category": "AI",
     "priority": 10,
-    "reason": "官方一手模型、产品与研究更新"
+    "reason": "Official model and product updates from OpenAI"
   },
   {
     "name": "Google AI Blog",
     "url": "https://blog.google/technology/ai/rss/",
     "category": "AI",
     "priority": 10,
-    "reason": "Google AI 官方动态，覆盖模型、产品与基础设施"
+    "reason": "Google AI official announcements covering models, products, and infrastructure"
   },
   {
     "name": "Hugging Face Blog",
     "url": "https://huggingface.co/blog/feed.xml",
     "category": "Open Source",
     "priority": 10,
-    "reason": "开源模型与 AI 工具链生态最重要来源之一"
+    "reason": "Primary source for open-source models and AI tooling ecosystem"
   },
   {
     "name": "GitHub Blog / AI & ML",
     "url": "https://github.blog/ai-and-ml/feed",
     "category": "Tools",
     "priority": 9,
-    "reason": "AI 工程实践、Copilot、开发工具链动态"
+    "reason": "AI engineering practices, Copilot, and developer tooling updates"
   },
   {
     "name": "Microsoft AI Blog",
     "url": "https://blogs.microsoft.com/ai/feed/",
     "category": "AI",
     "priority": 8,
-    "reason": "企业 AI、Copilot 与 Azure AI 落地趋势"
+    "reason": "Enterprise AI, Copilot, and Azure AI deployment trends"
   },
   {
     "name": "MIT Technology Review / AI",
     "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
     "category": "Tech",
     "priority": 8,
-    "reason": "高质量 AI 行业、政策与趋势分析"
+    "reason": "High-quality AI industry, policy, and trend analysis"
   },
   {
     "name": "BAIR Blog",
     "url": "https://bair.berkeley.edu/blog/feed.xml",
     "category": "AI",
     "priority": 8,
-    "reason": "伯克利 AI 研究博客，学术与工程兼顾"
+    "reason": "Berkeley AI research covering both academic and engineering advances"
   },
   {
     "name": "The Gradient",
     "url": "https://thegradient.pub/rss/",
     "category": "AI",
     "priority": 7,
-    "reason": "高质量 AI 长文、研究解读与行业观察"
+    "reason": "High-quality long-form AI analysis, research deep-dives, and industry observations"
   },
   {
     "name": "Chip Huyen",
     "url": "https://huyenchip.com/feed.xml",
     "category": "Infrastructure",
     "priority": 8,
-    "reason": "ML systems、生产部署与 AI 产品化视角"
+    "reason": "ML systems, production deployment, and AI productization insights"
   },
   {
     "name": "Simon Willison",
     "url": "https://simonwillison.net/atom/everything/",
     "category": "Tools",
     "priority": 9,
-    "reason": "LLM 工具、agent 实验、开发者一线观察"
+    "reason": "LLM tools, agent experiments, and developer workflow observations"
+  },
+  {
+    "name": "Tencent Research Institute",
+    "url": "https://www.tisi.org/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "Chinese AI research and industry insights, covering domestic model progress (DeepSeek, Qwen, GLM, etc.)",
+    "customScraper": "tisi"
+  },
+  {
+    "name": "机器之心 (Synced)",
+    "url": "https://www.jiqizhixin.com/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "Leading Chinese AI media covering research, industry, and domestic model developments",
+    "customScraper": "jiqizhixin"
+  },
+  {
+    "name": "量子位 (QbitAI)",
+    "url": "https://www.qbitai.com/",
+    "category": "AI",
+    "priority": 6,
+    "reason": "Chinese AI news and analysis, strong coverage of domestic AI ecosystem",
+    "customScraper": "qbitai"
   },
   {
     "name": "Machine Learning Mastery",
     "url": "https://machinelearningmastery.com/feed/",
     "category": "AI",
-    "priority": 6,
-    "reason": "偏实践与教程，适合补充开发者视角"
+    "priority": 3,
+    "reason": "Practical tutorials and how-to guides, useful for developer education context"
   },
   {
     "name": "MarkTechPost",
     "url": "https://www.marktechpost.com/feed/",
     "category": "AI",
-    "priority": 6,
-    "reason": "更新很快，但作为二级信号源使用"
+    "priority": 3,
+    "reason": "Fast updates but secondary signal quality; use for breadth not depth"
   },
   {
     "name": "arXiv cs.AI",
     "url": "https://rss.arxiv.org/rss/cs.AI",
     "category": "AI",
-    "priority": 5,
+    "priority": 4,
     "maxItems": 2,
-    "reason": "研究前沿雷达，适合补充学术方向"
+    "reason": "Research frontier source; useful for spotting emerging academic directions"
   },
   {
     "name": "arXiv cs.CL",
     "url": "https://rss.arxiv.org/rss/cs.CL",
     "category": "AI",
-    "priority": 5,
+    "priority": 4,
     "maxItems": 2,
-    "reason": "LLM / NLP 方向的重要论文入口"
+    "reason": "Key paper source for LLM and NLP research"
   }
 ]
