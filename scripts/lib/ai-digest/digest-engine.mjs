@@ -629,20 +629,23 @@ function buildItemWithLLM(item, index, llmAnalysis) {
   const evidence = pickEvidenceSentences(item);
   const labels = relativeTimeLabels(item.pubDate || item.publishedAt);
 
-  const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh, theme);
-  const titleEn = buildCardHeadlineEn(item, actor, action, topics.topicEn, theme);
+  // Find this article's LLM analysis by index (1-based in LLM output)
+  const articleLLM = llmAnalysis.articles?.find(a => a.index === index + 1);
 
-  const narrativeEn = [
-    llmAnalysis.english.whatChanged || '',
-    llmAnalysis.english.whyItMatters || '',
-    llmAnalysis.english.watchNext || '',
-  ].filter(Boolean);
+  // Use LLM-generated title if available, otherwise build from templates
+  const titleZh = articleLLM?.titleZh || buildLocalizedTitleZh(item, actor, action, topics.topicZh, theme);
+  const titleEn = articleLLM?.titleEn || buildCardHeadlineEn(item, actor, action, topics.topicEn, theme);
 
-  const narrativeZh = [
-    llmAnalysis.chinese.whatChanged || '',
-    llmAnalysis.chinese.whyItMatters || '',
-    llmAnalysis.chinese.watchNext || '',
-  ].filter(Boolean);
+  // narrativeEn/Zh arrays: [whatChanged, whyItMatters, watchNext]
+  const narrativeEn = articleLLM?.narrativeEn?.filter(Boolean) || [];
+  const narrativeZh = articleLLM?.narrativeZh?.filter(Boolean) || [];
+
+  const whatChangedEn = narrativeEn[0] || '';
+  const whyItMattersEn = narrativeEn[1] || '';
+  const watchNextEn = narrativeEn[2] || '';
+  const whatChangedZh = narrativeZh[0] || '';
+  const whyItMattersZh = narrativeZh[1] || '';
+  const watchNextZh = narrativeZh[2] || '';
 
   return {
     id: item.id,
@@ -657,16 +660,16 @@ function buildItemWithLLM(item, index, llmAnalysis) {
     kickerEn: `${actor} · ${theme.themeEn}`,
     summaryZh: trimText(narrativeZh.slice(0, 2).join(' '), 150),
     summaryEn: trimText(narrativeEn.slice(0, 2).join(' '), 240),
-    deckZh: trimText(llmAnalysis.chinese.whatChanged, 92),
-    deckEn: trimText(llmAnalysis.english.whatChanged, 156),
+    deckZh: trimText(whatChangedZh, 92),
+    deckEn: trimText(whatChangedEn, 156),
     narrativeZh,
     narrativeEn,
-    whatChangedZh: llmAnalysis.chinese.whatChanged,
-    whatChangedEn: llmAnalysis.english.whatChanged,
-    whyItMattersZh: llmAnalysis.chinese.whyItMatters,
-    whyItMattersEn: llmAnalysis.english.whyItMatters,
-    watchNextZh: llmAnalysis.chinese.watchNext,
-    watchNextEn: llmAnalysis.english.watchNext,
+    whatChangedZh,
+    whatChangedEn,
+    whyItMattersZh,
+    whyItMattersEn,
+    watchNextZh,
+    watchNextEn,
     tag: theme.tag || item.categoryHint || 'AI',
     source: item.sourceDomain,
     sourceName: item.sourceName,
@@ -681,8 +684,8 @@ function buildItemWithLLM(item, index, llmAnalysis) {
     evidenceBulletsEn: evidence.length ? evidence.map(line => trimText(line, 160)) : [],
     themeZh: theme.themeZh,
     themeEn: theme.themeEn,
-    impactZh: llmAnalysis.chinese.watchNext,
-    impactEn: llmAnalysis.english.watchNext,
+    impactZh: watchNextZh,
+    impactEn: watchNextEn,
     publishedAt: item.pubDate || item.publishedAt,
     publishedLabelZh: labels.zh,
     publishedLabelEn: labels.en,

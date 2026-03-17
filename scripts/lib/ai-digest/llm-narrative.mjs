@@ -1,265 +1,143 @@
 /**
- * LLM-driven narrative generation for AI daily digest.
+ * LLM-driven narrative generation via `claude --print` CLI.
  *
- * This module replaces the template-based narrative generation with actual LLM calls.
- * It supports any OpenAI-compatible API endpoint.
+ * Uses the locally installed Claude Code CLI (which may use Qwen 3.5 or other configured model).
+ * No API key needed — inherits the CLI's own authentication.
  *
- * Configuration via environment variables:
- * - LLM_API_KEY: API key for the LLM provider
- * - LLM_API_ENDPOINT: API endpoint URL (default: https://api.openai.com/v1/chat/completions)
- * - LLM_MODEL: Model name (default: gpt-4o-mini)
- * - LLM_ENABLED: Set to "1" or "true" to enable LLM generation
+ * Configuration:
+ * - LLM_ENABLED: Set to "1" or "true" to enable (default: false, falls back to templates)
+ * - CLAUDE_BIN: Path to claude binary (default: claude)
  */
 
+import { execFile } from 'node:child_process';
 import { cleanText, trimText } from './shared.mjs';
 
-const LLM_CONFIG = {
-  apiKey: process.env.LLM_API_KEY || '',
-  endpoint: process.env.LLM_API_ENDPOINT || 'https://api.openai.com/v1/chat/completions',
-  model: process.env.LLM_MODEL || 'gpt-4o-mini',
-  enabled: process.env.LLM_ENABLED === '1' || process.env.LLM_ENABLED === 'true',
-  timeout: Number.parseInt(process.env.LLM_TIMEOUT_MS || '30000', 10),
-  maxTokens: Number.parseInt(process.env.LLM_MAX_TOKENS || '1200', 10),
-};
-
-const SYSTEM_PROMPT = `You are an AI industry analyst writing for practitioners. Your task is to write brief, opinionated analysis of AI news - not summaries, but insights about what changed, why it matters, and what to watch next.
-
-Tone guidelines:
-- Direct and confident, like a knowledgeable insider
-- No marketing speak, no press release language
-- No SEO fluff or generic statements
-- Focus on real-world implications for builders and companies
-- Be specific when you can, skip obvious points
-
-Output format:
-Write your analysis in the following structure:
-
-ENGLISH:
-- whatChanged: 1-2 sentences on what actually happened
-- whyItMatters: 1-2 sentences on why practitioners should care
-- watchNext: 1 sentence on what signals to track
-
-CHINESE (中文):
-- whatChanged: 1-2 句关于实际变化的分析
-- whyItMatters: 1-2 句关于为什么从业者应该关心的见解
-- watchNext: 1 句关于接下来应该关注什么信号
-
-Keep each section concise - no more than 3 sentences each. The English and Chinese should convey the same insights but are NOT direct translations of each other.`;
+const CLAUDE_BIN = process.env.CLAUDE_BIN || 'claude';
+const LLM_ENABLED = process.env.LLM_ENABLED === '1' || process.env.LLM_ENABLED === 'true';
+const TIMEOUT_MS = Number.parseInt(process.env.LLM_TIMEOUT_MS || '180000', 10);
 
 function buildPrompt(articles) {
-  const articleContext = articles.map((article, index) => {
-    const bodyContext = article.bodyText
-      ? `\n    Full article excerpt: "${trimText(article.bodyText, 800)}"`
-      : `\n    Snippet: "${article.contentSnippet || 'No content available'}"`;
-
-    return `### Article ${index + 1}
-- Title: ${article.title || article.pageTitle || 'Untitled'}
-- Source: ${article.sourceName || article.sourceDomain || 'Unknown'}
-- Category: ${article.categoryHint || 'AI'}${bodyContext}`;
+  const articlesBlock = articles.map((a, i) => {
+    const body = a.bodyText ? trimText(a.bodyText, 600) : (a.contentSnippet || '');
+    return `[${i + 1}] "${a.title || a.pageTitle || 'Untitled'}"
+Source: ${a.sourceName || a.sourceDomain || 'Unknown'}
+Content: ${body}`;
   }).join('\n\n');
 
-  return `Analyze these AI news items and write opinionated analysis for each:
+  return `You write the daily AI briefing for blog.lincept.com. Readers are senior AI engineers and founders who ship products. They scan dozens of newsletters — yours survives only if every sentence earns its place.
 
-${articleContext}
+Here are today's articles:
 
-For each article, provide:
-1. What actually changed (not just "what was announced" - what shifted in the landscape)
-2. Why it matters for people building with AI (not investors, not enterprises generally - builders)
-3. What to watch next (specific signals, not vague "adoption" talk)
+${articlesBlock}
 
-Also write a brief hero summary (2-3 sentences) that ties the articles together into a coherent narrative about what's happening in AI right now.
+---
 
-And suggest an issue title that captures the main theme - something a practitioner would find interesting, not clickbait.`;
+For EACH article write exactly 3 short paragraphs (English) and 3 short paragraphs (Chinese):
+1. What shifted — NOT "X published Y" or "X released Y". Instead: what capability, assumption, or constraint actually changed? Be concrete.
+2. Builder impact — how does this change what a practitioner would do THIS WEEK? Name the workflow, tool, or decision affected.
+3. Signal to watch — one specific, falsifiable prediction or metric. Not "adoption will grow" — name the thing to check.
+
+BANNED phrases: "game-changer", "paradigm shift", "revolutionize", "ecosystem", "landscape", "exciting", "groundbreaking", "stay tuned", "it remains to be seen"
+BANNED patterns: starting with "This", "It", "The article"; restating the title; press-release tone
+
+Chinese (中文) paragraphs should be written for Chinese AI practitioners. Do NOT translate from English — write independently with Chinese-specific context where relevant (mention domestic alternatives, local adoption patterns, etc.).
+
+Also write:
+- issueTitle: a sharp 8-12 word English title + 中文标题 that captures today's SPECIFIC theme (never reusable across days)
+- heroSummary: 2-sentence English + 中文 overview connecting the articles. What pattern links them?
+
+Output ONLY valid JSON (no markdown fences, no commentary):
+
+{"issueTitle":{"en":"...","zh":"..."},"heroSummary":{"en":"...","zh":"..."},"articles":[{"index":1,"narrativeEn":["what shifted","builder impact","signal"],"narrativeZh":["变化","影响","信号"],"titleEn":"...","titleZh":"..."}]}`;
 }
 
-function parseLLMResponse(responseText) {
-  const result = {
-    english: { whatChanged: '', whyItMatters: '', watchNext: '' },
-    chinese: { whatChanged: '', whyItMatters: '', watchNext: '' },
-    heroSummary: { en: '', zh: '' },
-    issueTitle: { en: '', zh: '' },
-    parseError: null,
-  };
-
-  try {
-    const lines = responseText.split('\n').filter(line => line.trim());
-
-    let currentSection = null;
-    let currentLang = null;
-    let currentField = null;
-    let buffer = [];
-
-    function flushBuffer() {
-      if (buffer.length > 0 && currentLang && currentField) {
-        const text = cleanText(buffer.join(' '));
-        if (currentLang === 'en' && result.english[currentField]) {
-          result.english[currentField] += ' ' + text;
-        } else if (currentLang === 'zh' && result.chinese[currentField]) {
-          result.chinese[currentField] += ' ' + text;
-        }
-        buffer = [];
-      }
-    }
-
-    for (const line of lines) {
-      const trimmed = line.trim();
-
-      if (/^#{1,3}\s*(English|英文|ENGLISH)/i.test(trimmed)) {
-        flushBuffer();
-        currentLang = 'en';
-        continue;
-      }
-
-      if (/^#{1,3}\s*(Chinese|中文|CHINESE)/i.test(trimmed)) {
-        flushBuffer();
-        currentLang = 'zh';
-        continue;
-      }
-
-      if (/^(?:###?\s*)?What Changed/i.test(trimmed)) {
-        flushBuffer();
-        currentField = 'whatChanged';
-        const afterMatch = trimmed.replace(/^(?:###?\s*)?What Changed[:\s]*/i, '').trim();
-        if (afterMatch) buffer.push(afterMatch);
-        continue;
-      }
-
-      if (/^(?:###?\s*)?Why It Matters/i.test(trimmed)) {
-        flushBuffer();
-        currentField = 'whyItMatters';
-        const afterMatch = trimmed.replace(/^(?:###?\s*)?Why It Matters[:\s]*/i, '').trim();
-        if (afterMatch) buffer.push(afterMatch);
-        continue;
-      }
-
-      if (/^(?:###?\s*)?Watch Next/i.test(trimmed)) {
-        flushBuffer();
-        currentField = 'watchNext';
-        const afterMatch = trimmed.replace(/^(?:###?\s*)?Watch Next[:\s]*/i, '').trim();
-        if (afterMatch) buffer.push(afterMatch);
-        continue;
-      }
-
-      if (/^(?:###?\s*)?Hero Summary|^(?:###?\s*)?Issue Title/i.test(trimmed)) {
-        flushBuffer();
-        if (/Hero Summary/i.test(trimmed)) {
-          currentField = 'heroSummary';
-        } else {
-          currentField = 'issueTitle';
-        }
-        const afterMatch = trimmed.replace(/^(?:###?\s*)?Hero Summary[:\s]*|^(?:###?\s*)?Issue Title[:\s]*/i, '').trim();
-        if (afterMatch) buffer.push(afterMatch);
-        continue;
-      }
-
-      if (buffer.length > 0 || currentField) {
-        buffer.push(trimmed);
-      }
-    }
-
-    flushBuffer();
-
-    if (!result.english.whatChanged && !result.chinese.whatChanged) {
-      result.parseError = 'Could not parse whatChanged from LLM response';
-    }
-  } catch (err) {
-    result.parseError = err.message;
+function parseResponse(raw) {
+  // Strip markdown fences if model wraps in ```json ... ```
+  let cleaned = raw.trim();
+  if (cleaned.startsWith('```')) {
+    cleaned = cleaned.replace(/^```(?:json)?\s*/, '').replace(/```\s*$/, '').trim();
   }
 
-  return result;
+  const parsed = JSON.parse(cleaned);
+
+  // Validate structure
+  if (!parsed.issueTitle?.en || !parsed.heroSummary?.en || !Array.isArray(parsed.articles)) {
+    throw new Error('Missing required fields in LLM response');
+  }
+
+  for (const article of parsed.articles) {
+    if (!Array.isArray(article.narrativeEn) || article.narrativeEn.length !== 3) {
+      throw new Error(`Article ${article.index}: narrativeEn must be array of 3 strings`);
+    }
+    if (!Array.isArray(article.narrativeZh) || article.narrativeZh.length !== 3) {
+      throw new Error(`Article ${article.index}: narrativeZh must be array of 3 strings`);
+    }
+  }
+
+  return parsed;
 }
 
-async function callLLM(prompt) {
-  if (!LLM_CONFIG.apiKey) {
-    throw new Error('LLM_API_KEY not configured');
-  }
-
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), LLM_CONFIG.timeout);
-
-  try {
-    const response = await fetch(LLM_CONFIG.endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${LLM_CONFIG.apiKey}`,
+function callClaude(prompt) {
+  return new Promise((resolve, reject) => {
+    const child = execFile(
+      CLAUDE_BIN,
+      ['--print', '--permission-mode', 'bypassPermissions', prompt],
+      {
+        timeout: TIMEOUT_MS,
+        maxBuffer: 1024 * 1024,
+        env: { ...process.env, NO_COLOR: '1' },
       },
-      body: JSON.stringify({
-        model: LLM_CONFIG.model,
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          { role: 'user', content: prompt },
-        ],
-        max_tokens: LLM_CONFIG.maxTokens,
-        temperature: 0.7,
-      }),
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeoutId);
-
-    if (!response.ok) {
-      const errorText = await response.text().catch(() => 'Unknown error');
-      throw new Error(`LLM API error: ${response.status} ${errorText}`);
-    }
-
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content;
-
-    if (!content) {
-      throw new Error('LLM returned empty response');
-    }
-
-    return parseLLMResponse(content);
-  } catch (error) {
-    clearTimeout(timeoutId);
-    if (error.name === 'AbortError') {
-      throw new Error(`LLM request timed out after ${LLM_CONFIG.timeout}ms`);
-    }
-    throw error;
-  }
+      (error, stdout, stderr) => {
+        if (error) {
+          if (error.killed) {
+            reject(new Error(`claude CLI timed out after ${TIMEOUT_MS}ms`));
+          } else {
+            reject(new Error(`claude CLI error: ${error.message}${stderr ? ` | stderr: ${stderr.slice(0, 200)}` : ''}`));
+          }
+          return;
+        }
+        resolve(stdout);
+      },
+    );
+  });
 }
 
 export async function generateNarrativeWithLLM(articles) {
-  if (!LLM_CONFIG.enabled || !LLM_CONFIG.apiKey) {
+  if (!LLM_ENABLED) {
     return null;
   }
 
   try {
     const prompt = buildPrompt(articles.slice(0, 6));
-    const result = await callLLM(prompt);
+    console.log('[llm-narrative] Calling claude CLI...');
+    const raw = await callClaude(prompt);
+    console.log(`[llm-narrative] Got response (${raw.length} chars)`);
 
-    if (result.parseError) {
-      console.warn('[llm-narrative] Parse error:', result.parseError);
-      return null;
-    }
+    const parsed = parseResponse(raw);
 
     return {
-      english: {
-        whatChanged: trimText(result.english.whatChanged, 220),
-        whyItMatters: trimText(result.english.whyItMatters, 220),
-        watchNext: trimText(result.english.watchNext, 220),
-      },
-      chinese: {
-        whatChanged: trimText(result.chinese.whatChanged, 140),
-        whyItMatters: trimText(result.chinese.whyItMatters, 140),
-        watchNext: trimText(result.chinese.watchNext, 140),
+      issueTitle: {
+        en: trimText(parsed.issueTitle.en, 100),
+        zh: trimText(parsed.issueTitle.zh, 60),
       },
       heroSummary: {
-        en: trimText(result.heroSummary.en, 180),
-        zh: trimText(result.heroSummary.zh, 120),
+        en: trimText(parsed.heroSummary.en, 300),
+        zh: trimText(parsed.heroSummary.zh, 200),
       },
-      issueTitle: {
-        en: result.issueTitle.en || '',
-        zh: result.issueTitle.zh || '',
-      },
+      articles: parsed.articles.map(a => ({
+        index: a.index,
+        narrativeEn: a.narrativeEn.map(s => trimText(s, 220)),
+        narrativeZh: a.narrativeZh.map(s => trimText(s, 140)),
+        titleEn: a.titleEn ? trimText(a.titleEn, 120) : '',
+        titleZh: a.titleZh ? trimText(a.titleZh, 60) : '',
+      })),
     };
   } catch (error) {
-    console.warn('[llm-narrative] LLM call failed, falling back to templates:', error.message);
+    console.warn('[llm-narrative] Failed, falling back to templates:', error.message);
     return null;
   }
 }
 
 export function getLLMConfig() {
-  return LLM_CONFIG;
+  return { enabled: LLM_ENABLED, claudeBin: CLAUDE_BIN, timeout: TIMEOUT_MS };
 }

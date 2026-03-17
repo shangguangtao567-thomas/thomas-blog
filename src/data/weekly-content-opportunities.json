@@ -3,7 +3,7 @@
     "id": "agents-and-developer-tooling",
     "themeZh": "Agent 与开发者工具",
     "themeEn": "Agents and developer tooling",
-    "score": 14,
+    "score": 13,
     "rationaleZh": "过去 7 天里，Agent 与开发者工具 在日报里反复出现，而且还没有被系统化写成专题长文。",
     "rationaleEn": "Agents and developer tooling kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
     "proposedTitleZh": "Agent 与开发者工具 为什么正在变成这一周最值得写的 AI 主线",
@@ -12,6 +12,21 @@
       "ai-daily-2026-03-11",
       "ai-daily-2026-03-12",
       "ai-daily-2026-03-13"
+    ]
+  },
+  {
+    "id": "frontier-research-and-capability-shifts",
+    "themeZh": "前沿研究与能力边界",
+    "themeEn": "Frontier research and capability shifts",
+    "score": 10,
+    "rationaleZh": "过去 7 天里，前沿研究与能力边界 在日报里反复出现，而且还没有被系统化写成专题长文。",
+    "rationaleEn": "Frontier research and capability shifts kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
+    "proposedTitleZh": "前沿研究与能力边界 为什么正在变成这一周最值得写的 AI 主线",
+    "proposedTitleEn": "Why Frontier research and capability shifts is becoming the AI theme worth writing this week",
+    "relatedDigestSlugs": [
+      "ai-daily-2026-03-12",
+      "ai-daily-2026-03-13",
+      "ai-daily-2026-03-14"
     ]
   },
   {
@@ -26,22 +41,7 @@
     "relatedDigestSlugs": [
       "ai-daily-2026-03-11",
       "ai-daily-2026-03-14",
-      "ai-daily-2026-03-16"
-    ]
-  },
-  {
-    "id": "frontier-research-and-capability-shifts",
-    "themeZh": "前沿研究与能力边界",
-    "themeEn": "Frontier research and capability shifts",
-    "score": 5,
-    "rationaleZh": "过去 7 天里，前沿研究与能力边界 在日报里反复出现，而且还没有被系统化写成专题长文。",
-    "rationaleEn": "Frontier research and capability shifts kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
-    "proposedTitleZh": "前沿研究与能力边界 为什么正在变成这一周最值得写的 AI 主线",
-    "proposedTitleEn": "Why Frontier research and capability shifts is becoming the AI theme worth writing this week",
-    "relatedDigestSlugs": [
-      "ai-daily-2026-03-12",
-      "ai-daily-2026-03-13",
-      "ai-daily-2026-03-14"
+      "ai-daily-2026-03-17"
     ]
   }
 ]

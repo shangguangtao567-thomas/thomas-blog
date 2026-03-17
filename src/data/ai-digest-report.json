@@ -1,18 +1,18 @@
 {
   "status": "success",
-  "date": "2026-03-16",
-  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-16",
+  "date": "2026-03-17",
+  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-17",
   "itemCount": 6,
   "limitedUpdateWindow": false,
   "bodyCoverage": {
-    "targeted": 2,
-    "succeeded": 0,
-    "totalWords": 0,
-    "ratio": 0
+    "targeted": 4,
+    "succeeded": 3,
+    "totalWords": 4021,
+    "ratio": 0.75
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-16）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-16>\n今日导语：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Simon Willison、MarkTechPost、arXiv cs.CL 分别…\n今天展开：\n1. Simon Willison｜Agent 与开发者工具 —— Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链…\n2. MarkTechPost｜前沿研究与能力边界 —— MarkTechPost放出了一项围绕研究前沿的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看…\n3. MarkTechPost｜AI 基础设施 —— MarkTechPost放出了一项围绕基准测试、记忆的研究型更新，指向的是降低规模化部署的摩擦。这条消息值得看…\n4. arXiv cs.CL｜前沿研究与能力边界 —— arXiv cs.CL放出了一项围绕检索的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-16)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-16>\nLead: This issue is really about two lines accelerating at once: Frontier research and capability shifts…\nInside today:\n1. What is agentic engineering? — Simon Willison moved workflow deeper into product and developer workflows…\n2. Moonshot AI Releases 𝑨𝒕𝒕𝒆𝒏𝒕𝒊𝒐𝒏 𝑹𝒆𝒔𝒊𝒅𝒖𝒂𝒍𝒔 to Replace Fixed Residual Mixing with Depth-Wise Attention for Better Scaling in Transformers — MarkTechPost published a research-led update around research frontier…\n3. IBM AI Releases Granite 4.0 1B Speech as a Compact Multilingual Speech Model for Edge AI and Translation Pipelines — MarkTechPost published a research-led update around benchmark and memory…",
-  "generatedAt": "2026-03-16T10:49:07.752Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-17）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-17>\n今日导语：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。MIT Technology Review / AI、arXiv cs.CL 分别从研…\n今天展开：\n1. MIT Technology Review / AI｜模型安全与可控性 —— MIT Technology Review / AI把围绕基准测试、开源的东西真正放了出来，重点不只是“开源”两个字…\n2. OpenAI｜检索、多模态与记忆系统 —— OpenAI把多模态检索与记忆继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的…\n3. MIT Technology Review / AI｜前沿研究与能力边界 —— MIT Technology Review / AI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力…\n4. arXiv cs.CL｜前沿研究与能力边界 —— arXiv cs.CL放出了一项围绕推理的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-17)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-17>\nLead: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval…\nInside today:\n1. Nurturing agentic AI beyond the toddler stage — MIT Technology Review / AI opened up work around benchmark and open source…\n2. Where OpenAI’s technology could show up in Iran — OpenAI moved multimodal retrieval and memory deeper into product and developer workflows…\n3. Securing digital assets against future threats — MIT Technology Review / AI moved research frontier deeper into product and developer workf…",
+  "generatedAt": "2026-03-17T04:04:55.642Z",
   "themes": [
     {
       "themeZh": "前沿研究与能力边界",
@@ -20,13 +20,13 @@
       "count": 3
     },
     {
-      "themeZh": "Agent 与开发者工具",
-      "themeEn": "Agents and developer tooling",
+      "themeZh": "检索、多模态与记忆系统",
+      "themeEn": "Retrieval, multimodal, and memory systems",
       "count": 2
     },
     {
-      "themeZh": "AI 基础设施",
-      "themeEn": "AI infrastructure",
+      "themeZh": "模型安全与可控性",
+      "themeEn": "Model safety and controllability",
       "count": 1
     }
   ]
