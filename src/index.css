@@ -146,6 +146,16 @@
     cursor: pointer;
   }
   .post-item:last-child { border-bottom: none; }
+
+  .post-item-excerpt,
+  .digest-item-excerpt {
+    font-size: 0.8rem;
+    color: var(--fg-subtle);
+    margin-top: 0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .post-item-date {
     color: var(--fg-subtle);
     font-size: 0.7rem;
@@ -159,6 +169,10 @@
     line-height: 1.4;
     transition: color 0.15s;
     flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
   .post-item:hover .post-item-title { color: var(--fg); filter: brightness(1.15); }
   .post-item-tag {

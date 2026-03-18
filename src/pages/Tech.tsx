@@ -49,7 +49,7 @@ export default function Tech() {
             <div style={{ flex: 1, minWidth: 0 }}>
               <div className="post-item-title">{digest.titleEn}</div>
               {digest.excerptEn && (
-                <div style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div className="digest-item-excerpt">
                   {digest.excerptEn}
                 </div>
               )}

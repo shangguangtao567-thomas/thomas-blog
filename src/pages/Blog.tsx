@@ -51,7 +51,7 @@ export default function Blog() {
             <div style={{ flex: 1, minWidth: 0 }}>
               <div className="post-item-title">{post.titleEn}</div>
               {post.excerptEn && (
-                <div style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div className="post-item-excerpt">
                   {post.excerptEn}
                 </div>
               )}
