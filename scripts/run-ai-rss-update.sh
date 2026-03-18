@@ -20,6 +20,8 @@ export FETCH_COUNT="${FETCH_COUNT:-24}"
 export MAX_AGE_DAYS="${MAX_AGE_DAYS:-3}"
 export MAX_PER_SOURCE="${MAX_PER_SOURCE:-4}"
 export SITE_URL="${SITE_URL:-https://blog.lincept.com}"
+export LLM_ENABLED=1
+export LLM_TIMEOUT_MS=120000
 
 node scripts/fetch-ai-candidates.mjs
 node scripts/build-ai-digest.mjs
