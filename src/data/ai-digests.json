@@ -2,36 +2,70 @@
   {
     "slug": "ai-daily-2026-03-18",
     "date": "2026-03-18",
-    "titleZh": "AI 日报｜Agents and developer tooling +  Agents and developer tooling",
-    "titleEn": "AI Daily |  Agents and developer tooling, Agents and developer tooling, Agents and developer tooling",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
-    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "titleZh": "AI 日报｜Retrieval +  multimodal",
+    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Hugging Face…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-18",
     "itemCount": 6,
-    "heroTitleZh": "OpenAI｜Agent 与开发者工具",
-    "heroTitleEn": "Introducing GPT-5.4 mini and nano",
+    "heroTitleZh": "Hugging Face｜检索、多模态与记忆系统",
+    "heroTitleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
       "targeted": 5,
-      "succeeded": 1,
-      "totalWords": 1002,
-      "ratio": 0.2
+      "succeeded": 4,
+      "totalWords": 4354,
+      "ratio": 0.8
     },
     "themes": [
       {
-        "themeZh": "Agent 与开发者工具",
-        "themeEn": "Agents and developer tooling",
-        "count": 5
-      },
-      {
         "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 2
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 2
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 1
+      },
+      {
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
         "count": 1
       }
     ],
     "featuredItems": [
+      {
+        "id": "huggingface.co-310658f5b680",
+        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
+        "titleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Hugging Face opened up work around memory and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago"
+      },
+      {
+        "id": "huggingface.co-c07825b4f460",
+        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
+        "titleEn": "Holotron-12B - High Throughput Computer Use Agent",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把围绕多模态、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Hugging Face opened up work around multimodal and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "18 小时前",
+        "publishedLabelEn": "18 hours ago"
+      },
       {
         "id": "openai.com-c3d41e50070e",
         "titleZh": "OpenAI｜Agent 与开发者工具",
@@ -41,32 +75,8 @@
         "summaryEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
         "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "20 小时前",
-        "publishedLabelEn": "20 hours ago"
-      },
-      {
-        "id": "simonwillison.net-aca07b9a4a89",
-        "titleZh": "Simon Willison｜Agent 与开发者工具",
-        "titleEn": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
-        "tag": "Tools",
-        "summaryZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：OpenAI today…",
-        "summaryEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: OpenAI today…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
-        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "10 小时前",
-        "publishedLabelEn": "10 hours ago"
-      },
-      {
-        "id": "simonwillison.net-83d8b79c2470",
-        "titleZh": "Simon Willison｜Agent 与开发者工具",
-        "titleEn": "Quoting Ken Jin",
-        "tag": "Tools",
-        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
-        "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
-        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "8 小时前",
-        "publishedLabelEn": "8 hours ago"
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago"
       }
     ],
     "llmGenerated": false,

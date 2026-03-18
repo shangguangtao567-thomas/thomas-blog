@@ -6,22 +6,32 @@
   "limitedUpdateWindow": false,
   "bodyCoverage": {
     "targeted": 5,
-    "succeeded": 1,
-    "totalWords": 1002,
-    "ratio": 0.2
+    "succeeded": 4,
+    "totalWords": 4354,
+    "ratio": 0.8
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-18）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-18>\n今日导语：今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱…\n今天展开：\n1. OpenAI｜Agent 与开发者工具 —— OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路…\n2. Simon Willison｜Agent 与开发者工具 —— Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排…\n3. Simon Willison｜Agent 与开发者工具 —— Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链…\n4. Simon Willison｜Agent 与开发者工具 —— Simon Willison把基准测试、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-18)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-18>\nLead: This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal…\nInside today:\n1. Introducing GPT-5.4 mini and nano — OpenAI moved multimodal and reasoning deeper into product and developer workflows…\n2. GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52 — Simon Willison moved benchmark and reasoning deeper into product and developer workflows…\n3. Quoting Ken Jin — Simon Willison moved workflow deeper into product and developer workflows…",
-  "generatedAt": "2026-03-18T06:07:20.157Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-18）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-18>\n今日导语：今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱…\n今天展开：\n1. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证…\n2. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把围绕多模态、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验…\n3. OpenAI｜Agent 与开发者工具 —— OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路…\n4. Hugging Face｜前沿研究与能力边界 —— Hugging Face把围绕开源、评测的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-18)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-18>\nLead: This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems…\nInside today:\n1. Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI — Hugging Face opened up work around memory and benchmark…\n2. Holotron-12B - High Throughput Computer Use Agent — Hugging Face opened up work around multimodal and benchmark…\n3. Introducing GPT-5.4 mini and nano — OpenAI moved multimodal and reasoning deeper into product and developer workflows…",
+  "generatedAt": "2026-03-18T07:01:56.538Z",
   "themes": [
-    {
-      "themeZh": "Agent 与开发者工具",
-      "themeEn": "Agents and developer tooling",
-      "count": 5
-    },
     {
       "themeZh": "检索、多模态与记忆系统",
       "themeEn": "Retrieval, multimodal, and memory systems",
+      "count": 2
+    },
+    {
+      "themeZh": "前沿研究与能力边界",
+      "themeEn": "Frontier research and capability shifts",
+      "count": 2
+    },
+    {
+      "themeZh": "Agent 与开发者工具",
+      "themeEn": "Agents and developer tooling",
+      "count": 1
+    },
+    {
+      "themeZh": "AI 产品体验",
+      "themeEn": "AI product experience",
       "count": 1
     }
   ]
