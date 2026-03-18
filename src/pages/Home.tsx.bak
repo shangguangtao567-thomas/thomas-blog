@@ -17,8 +17,6 @@ interface Digest {
   titleEn: string;
   date: string;
   path: string;
-  excerptEn?: string;
-  itemCount?: number;
 }
 
 function formatDateShort(dateStr: string): string {
@@ -37,10 +35,10 @@ export default function Home() {
 
       {/* Bio */}
       <section style={{ marginBottom: '4rem' }}>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: '600', color: 'var(--fg)', marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
+        <h1 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#ffffff', marginBottom: '0.75rem', letterSpacing: '-0.01em' }}>
           Thomas
         </h1>
-        <p style={{ fontSize: '0.9rem', color: 'var(--fg-muted)', lineHeight: '1.7', maxWidth: '520px', marginBottom: '1.25rem' }}>
+        <p style={{ fontSize: '0.9rem', color: '#888888', lineHeight: '1.7', maxWidth: '520px', marginBottom: '1.25rem' }}>
           Writing about AI infrastructure, open source tooling, and the mechanics of building in the agent era.
           I track what's actually shipping, not what's being announced.
         </p>
@@ -56,7 +54,7 @@ export default function Home() {
             </svg>
             Follow on X
           </a>
-          <a href="/feed.xml" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>RSS ↗</a>
+          <a href="/feed.xml" style={{ fontSize: '0.75rem', color: '#6b6b6b' }}>RSS ↗</a>
         </div>
       </section>
 
@@ -64,7 +62,7 @@ export default function Home() {
       <section style={{ marginBottom: '4rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
           <p className="section-label">Writing</p>
-          <a href="/blog" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>All posts →</a>
+          <a href="/blog" style={{ fontSize: '0.75rem', color: '#6b6b6b' }}>All posts →</a>
         </div>
         <div>
           {allPosts.slice(0, 6).map((post) => (
@@ -78,7 +76,7 @@ export default function Home() {
         <section>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
             <p className="section-label">AI Briefing</p>
-            <a href="/briefing" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>Archive →</a>
+            <a href="/briefing" style={{ fontSize: '0.75rem', color: '#6b6b6b' }}>Archive →</a>
           </div>
           <div>
             {digests.map((digest) => (
@@ -117,19 +115,8 @@ function DigestItem({ digest }: { digest: Digest }) {
       onKeyDown={e => e.key === 'Enter' && (window.location.href = digest.path || `/briefing/${digest.slug}`)}
     >
       <span className="post-item-date">{formatDateShort(digest.date)}</span>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div className="post-item-title">{digest.titleEn}</div>
-        {digest.excerptEn && (
-          <div style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {digest.excerptEn}
-          </div>
-        )}
-      </div>
-      {digest.itemCount && (
-        <span className="post-item-tag" style={{ background: 'color-mix(in srgb, var(--link) 15%, var(--accent))', color: 'var(--link)' }}>
-          {digest.itemCount} items
-        </span>
-      )}
+      <span className="post-item-title">{digest.titleEn}</span>
+      <span className="post-item-tag">digest</span>
     </div>
   );
 }

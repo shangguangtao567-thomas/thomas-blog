@@ -27,10 +27,10 @@ export default function Tech() {
   return (
     <div className="site-container fade-in" style={{ paddingTop: '3rem', paddingBottom: '6rem' }}>
       <div style={{ marginBottom: '2.5rem' }}>
-        <h1 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#ffffff', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
+        <h1 style={{ fontSize: '1.125rem', fontWeight: '600', color: 'var(--fg)', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
           AI Briefing
         </h1>
-        <p style={{ fontSize: '0.875rem', color: '#6b6b6b' }}>
+        <p style={{ fontSize: '0.875rem', color: 'var(--fg-subtle)' }}>
           Daily digests on AI infrastructure, open source models, and developer tooling.
         </p>
       </div>
@@ -49,7 +49,7 @@ export default function Tech() {
             <div style={{ flex: 1, minWidth: 0 }}>
               <div className="post-item-title">{digest.titleEn}</div>
               {digest.excerptEn && (
-                <div style={{ fontSize: '0.8rem', color: '#6b6b6b', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {digest.excerptEn}
                 </div>
               )}

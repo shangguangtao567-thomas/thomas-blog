@@ -29,10 +29,10 @@ export default function Blog() {
   return (
     <div className="site-container fade-in" style={{ paddingTop: '3rem', paddingBottom: '6rem' }}>
       <div style={{ marginBottom: '2.5rem' }}>
-        <h1 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#ffffff', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
+        <h1 style={{ fontSize: '1.125rem', fontWeight: '600', color: 'var(--fg)', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
           Writing
         </h1>
-        <p style={{ fontSize: '0.875rem', color: '#6b6b6b' }}>
+        <p style={{ fontSize: '0.875rem', color: 'var(--fg-subtle)' }}>
           {posts.length} posts on AI, open source, and building in the agent era.
         </p>
       </div>
@@ -51,14 +51,14 @@ export default function Blog() {
             <div style={{ flex: 1, minWidth: 0 }}>
               <div className="post-item-title">{post.titleEn}</div>
               {post.excerptEn && (
-                <div style={{ fontSize: '0.8rem', color: '#6b6b6b', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)', marginTop: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {post.excerptEn}
                 </div>
               )}
             </div>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexShrink: 0 }}>
               {post.tagEn && <span className="post-item-tag">{post.tagEn}</span>}
-              {post.readTime && <span style={{ fontSize: '0.65rem', color: '#6b6b6b', fontFamily: 'JetBrains Mono, monospace' }}>{post.readTime}m</span>}
+              {post.readTime && <span style={{ fontSize: '0.65rem', color: 'var(--fg-subtle)', fontFamily: 'JetBrains Mono, monospace' }}>{post.readTime}m</span>}
             </div>
           </article>
         ))}

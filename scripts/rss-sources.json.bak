@@ -1,0 +1,124 @@
+[
+  {
+    "name": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml",
+    "category": "AI",
+    "priority": 10,
+    "reason": "Official model and product updates from OpenAI"
+  },
+  {
+    "name": "Google AI Blog",
+    "url": "https://blog.google/technology/ai/rss/",
+    "category": "AI",
+    "priority": 10,
+    "reason": "Google AI official announcements covering models, products, and infrastructure"
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "Open Source",
+    "priority": 10,
+    "reason": "Primary source for open-source models and AI tooling ecosystem"
+  },
+  {
+    "name": "GitHub Blog / AI & ML",
+    "url": "https://github.blog/ai-and-ml/feed",
+    "category": "Tools",
+    "priority": 9,
+    "reason": "AI engineering practices, Copilot, and developer tooling updates"
+  },
+  {
+    "name": "Microsoft AI Blog",
+    "url": "https://blogs.microsoft.com/ai/feed/",
+    "category": "AI",
+    "priority": 8,
+    "reason": "Enterprise AI, Copilot, and Azure AI deployment trends"
+  },
+  {
+    "name": "MIT Technology Review / AI",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+    "category": "Tech",
+    "priority": 8,
+    "reason": "High-quality AI industry, policy, and trend analysis"
+  },
+  {
+    "name": "BAIR Blog",
+    "url": "https://bair.berkeley.edu/blog/feed.xml",
+    "category": "AI",
+    "priority": 8,
+    "reason": "Berkeley AI research covering both academic and engineering advances"
+  },
+  {
+    "name": "The Gradient",
+    "url": "https://thegradient.pub/rss/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "High-quality long-form AI analysis, research deep-dives, and industry observations"
+  },
+  {
+    "name": "Chip Huyen",
+    "url": "https://huyenchip.com/feed.xml",
+    "category": "Infrastructure",
+    "priority": 8,
+    "reason": "ML systems, production deployment, and AI productization insights"
+  },
+  {
+    "name": "Simon Willison",
+    "url": "https://simonwillison.net/atom/everything/",
+    "category": "Tools",
+    "priority": 9,
+    "reason": "LLM tools, agent experiments, and developer workflow observations"
+  },
+  {
+    "name": "Tencent Research Institute",
+    "url": "https://www.tisi.org/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "Chinese AI research and industry insights, covering domestic model progress (DeepSeek, Qwen, GLM, etc.)",
+    "customScraper": "tisi"
+  },
+  {
+    "name": "机器之心 (Synced)",
+    "url": "https://www.jiqizhixin.com/rss",
+    "category": "AI",
+    "priority": 7,
+    "reason": "Leading Chinese AI media covering research, industry, and domestic model developments"
+  },
+  {
+    "name": "量子位 (QbitAI)",
+    "url": "https://www.qbitai.com/feed",
+    "category": "AI",
+    "priority": 6,
+    "reason": "Chinese AI news and analysis, strong coverage of domestic AI ecosystem"
+  },
+  {
+    "name": "Machine Learning Mastery",
+    "url": "https://machinelearningmastery.com/feed/",
+    "category": "AI",
+    "priority": 3,
+    "reason": "Practical tutorials and how-to guides, useful for developer education context"
+  },
+  {
+    "name": "MarkTechPost",
+    "url": "https://www.marktechpost.com/feed/",
+    "category": "AI",
+    "priority": 3,
+    "reason": "Fast updates but secondary signal quality; use for breadth not depth"
+  },
+  {
+    "name": "arXiv cs.AI",
+    "url": "https://rss.arxiv.org/rss/cs.AI",
+    "category": "AI",
+    "priority": 4,
+    "maxItems": 2,
+    "reason": "Research frontier source; useful for spotting emerging academic directions"
+  },
+  {
+    "name": "arXiv cs.CL",
+    "url": "https://rss.arxiv.org/rss/cs.CL",
+    "category": "AI",
+    "priority": 4,
+    "maxItems": 2,
+    "reason": "Key paper source for LLM and NLP research"
+  }
+]

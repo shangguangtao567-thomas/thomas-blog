@@ -46,8 +46,8 @@ export default function PostDetail() {
   if (!post) {
     return (
       <div className="site-container" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
-        <p style={{ color: '#6b6b6b', fontSize: '0.875rem' }}>Post not found.</p>
-        <a href="/blog" style={{ fontSize: '0.875rem', color: '#a8a8a8', marginTop: '1rem', display: 'inline-block' }}>← Back to writing</a>
+        <p style={{ color: 'var(--fg-subtle)', fontSize: '0.875rem' }}>Post not found.</p>
+        <a href="/blog" style={{ fontSize: '0.875rem', color: 'var(--link)', marginTop: '1rem', display: 'inline-block' }}>← Back to writing</a>
       </div>
     );
   }
@@ -55,7 +55,7 @@ export default function PostDetail() {
   return (
     <div className="site-container fade-in" style={{ paddingTop: '3rem', paddingBottom: '6rem' }}>
       {/* Back */}
-      <a href="/blog" style={{ fontSize: '0.8125rem', color: '#6b6b6b', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', marginBottom: '2.5rem', transition: 'color 0.15s' }}>
+      <a href="/blog" style={{ fontSize: '0.8125rem', color: 'var(--fg-subtle)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', marginBottom: '2.5rem', transition: 'color 0.15s' }}>
         ← Writing
       </a>
 
@@ -64,17 +64,17 @@ export default function PostDetail() {
         {post.tagEn && (
           <span className="tag-pill" style={{ marginBottom: '0.75rem', display: 'inline-block' }}>{post.tagEn}</span>
         )}
-        <h1 style={{ fontSize: '1.625rem', fontWeight: '600', color: '#ffffff', lineHeight: '1.3', letterSpacing: '-0.025em', marginBottom: '0.75rem', marginTop: '0.5rem' }}>
+        <h1 style={{ fontSize: '1.625rem', fontWeight: '600', color: 'var(--fg)', lineHeight: '1.3', letterSpacing: '-0.025em', marginBottom: '0.75rem', marginTop: '0.5rem' }}>
           {post.titleEn}
         </h1>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '0.8rem', color: '#6b6b6b' }}>{formatDate(post.publishedAt)}</span>
+          <span style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)' }}>{formatDate(post.publishedAt)}</span>
           {post.readTime && (
-            <span style={{ fontSize: '0.8rem', color: '#6b6b6b' }}>{post.readTime} min read</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)' }}>{post.readTime} min read</span>
           )}
         </div>
         {post.excerptEn && (
-          <p style={{ fontSize: '0.9375rem', color: '#888888', lineHeight: '1.65', marginTop: '1rem', borderLeft: '2px solid #1f1f1f', paddingLeft: '1rem' }}>
+          <p style={{ fontSize: '0.9375rem', color: 'var(--fg-muted)', lineHeight: '1.65', marginTop: '1rem', borderLeft: '2px solid #1f1f1f', paddingLeft: '1rem' }}>
             {post.excerptEn}
           </p>
         )}
@@ -91,7 +91,7 @@ export default function PostDetail() {
       {/* Footer */}
       <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #1f1f1f' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <a href="/blog" style={{ fontSize: '0.8125rem', color: '#6b6b6b' }}>← Back to writing</a>
+          <a href="/blog" style={{ fontSize: '0.8125rem', color: 'var(--fg-subtle)' }}>← Back to writing</a>
           <a
             href={`https://x.com/intent/tweet?text=${encodeURIComponent(post.titleEn)}&url=${encodeURIComponent(`https://blog.lincept.com/blog/${post.slug}`)}&via=GuangtaoS29545`}
             target="_blank"

@@ -1,5 +1,78 @@
 [
   {
+    "slug": "ai-daily-2026-03-18",
+    "date": "2026-03-18",
+    "titleZh": "AI 日报｜Agents and developer tooling +  Agents and developer tooling",
+    "titleEn": "AI Daily |  Agents and developer tooling, Agents and developer tooling, Agents and developer tooling",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "path": "/blog/ai-daily-2026-03-18",
+    "itemCount": 6,
+    "heroTitleZh": "OpenAI｜Agent 与开发者工具",
+    "heroTitleEn": "Introducing GPT-5.4 mini and nano",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 1,
+      "totalWords": 1002,
+      "ratio": 0.2
+    },
+    "themes": [
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 5
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 1
+      }
+    ],
+    "featuredItems": [
+      {
+        "id": "openai.com-c3d41e50070e",
+        "titleZh": "OpenAI｜Agent 与开发者工具",
+        "titleEn": "Introducing GPT-5.4 mini and nano",
+        "tag": "Tools",
+        "summaryZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：GPT-5.4 mini and nano are smaller…",
+        "summaryEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "20 小时前",
+        "publishedLabelEn": "20 hours ago"
+      },
+      {
+        "id": "simonwillison.net-aca07b9a4a89",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：OpenAI today…",
+        "summaryEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: OpenAI today…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "10 小时前",
+        "publishedLabelEn": "10 hours ago"
+      },
+      {
+        "id": "simonwillison.net-83d8b79c2470",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Quoting Ken Jin",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago"
+      }
+    ],
+    "llmGenerated": false,
+    "titleRegenerated": true
+  },
+  {
     "slug": "ai-daily-2026-03-17",
     "date": "2026-03-17",
     "titleZh": "AI 日报｜Model safety and controllability +  Retrieval",

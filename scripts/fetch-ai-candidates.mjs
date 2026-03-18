@@ -21,7 +21,9 @@ const SOURCES_FILE = path.join(__dirname, 'rss-sources.json');
 
 const FETCH_COUNT = Number.parseInt(process.env.FETCH_COUNT || '24', 10);
 const MAX_AGE_DAYS = Number.parseInt(process.env.MAX_AGE_DAYS || '3', 10);
-const MAX_PER_SOURCE = Number.parseInt(process.env.MAX_PER_SOURCE || '4', 10);
+const MAX_PER_SOURCE = Number.parseInt(process.env.MAX_PER_SOURCE || '2', 10);
+const WINDOW_HOURS = Number.parseInt(process.env.AI_DIGEST_WINDOW_HOURS || '24', 10);
+const WINDOW_MS = WINDOW_HOURS * 36e5;
 
 const parser = new Parser({ timeout: 15000, headers: { 'User-Agent': 'thomas-blog-ai-rss/2.0' } });
 
@@ -210,7 +212,17 @@ async function main() {
 
   for (const item of rawItems) {
     const published = new Date(item.pubDate).getTime();
-    if (Number.isNaN(published) || published < cutoff) continue;
+
+    // HARD filter: pubDate must be parseable AND within 24h window
+    if (Number.isNaN(published)) {
+      console.warn(`[candidates] discard: unparseable pubDate for "${item.title}" from ${item.sourceName}`);
+      continue;
+    }
+    const ageHours = (Date.now() - published) / 36e5;
+    if (ageHours > WINDOW_HOURS) {
+      console.warn(`[candidates] discard: "${item.title}" from ${item.sourceName} is ${ageHours.toFixed(1)}h old (> ${WINDOW_HOURS}h)`);
+      continue;
+    }
 
     const normalizedTitle = normalizeTitle(item.title);
     if (localSeenUrls.has(item.link) || localSeenTitles.has(normalizedTitle)) continue;

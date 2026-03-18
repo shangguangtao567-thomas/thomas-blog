@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ai-daily-2026-03-18",
+    "kind": "digest",
+    "titleZh": "AI 日报｜Agents and developer tooling +  Agents and developer tooling",
+    "titleEn": "AI Daily |  Agents and developer tooling, Agents and developer tooling, Agents and developer tooling",
+    "seoTitleZh": "",
+    "seoTitleEn": "",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI…",
+    "keywords": [],
+    "pillar": "",
+    "pillarZh": "",
+    "topicSlug": "ai-daily",
+    "featured": false,
+    "xHookZh": "",
+    "xHookEn": "",
+    "tag": "AI 日报",
+    "tagEn": "AI Daily",
+    "image": "",
+    "readTime": 21,
+    "publishedAt": "2026-03-18T00:00:00.000Z"
+  },
+  {
     "slug": "ai-daily-2026-03-17",
     "kind": "digest",
     "titleZh": "AI 日报｜Model safety and controllability +  Retrieval",

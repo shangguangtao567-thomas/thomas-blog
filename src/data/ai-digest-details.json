@@ -1,5 +1,544 @@
 [
   {
+    "slug": "ai-daily-2026-03-18",
+    "date": "2026-03-18",
+    "titleZh": "AI 日报｜Agents and developer tooling +  Agents and developer tooling",
+    "titleEn": "AI Daily |  Agents and developer tooling, Agents and developer tooling, Agents and developer tooling",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "introZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "introEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "methodologyZh": "",
+    "methodologyEn": "",
+    "path": "/blog/ai-daily-2026-03-18",
+    "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-18",
+    "itemCount": 6,
+    "heroTitleZh": "OpenAI｜Agent 与开发者工具",
+    "heroTitleEn": "Introducing GPT-5.4 mini and nano",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-18T06:07:20.157Z",
+    "windowHours": 36,
+    "themes": [
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 5
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 1,
+      "totalWords": 1002,
+      "ratio": 0.2
+    },
+    "featuredItems": [
+      {
+        "id": "openai.com-c3d41e50070e",
+        "titleZh": "OpenAI｜Agent 与开发者工具",
+        "titleEn": "Introducing GPT-5.4 mini and nano",
+        "tag": "Tools",
+        "summaryZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：GPT-5.4 mini and nano are smaller…",
+        "summaryEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "20 小时前",
+        "publishedLabelEn": "20 hours ago"
+      },
+      {
+        "id": "simonwillison.net-aca07b9a4a89",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：OpenAI today…",
+        "summaryEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: OpenAI today…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "10 小时前",
+        "publishedLabelEn": "10 hours ago"
+      },
+      {
+        "id": "simonwillison.net-83d8b79c2470",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Quoting Ken Jin",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "openai.com-c3d41e50070e",
+        "rank": 1,
+        "sectionLabelZh": "主线1｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 1 | Agents and developer tooling",
+        "titleZh": "OpenAI｜Agent 与开发者工具",
+        "titleEn": "Introducing GPT-5.4 mini and nano",
+        "briefTitleZh": "OpenAI｜Agent 与开发者工具",
+        "briefTitleEn": "Introducing GPT-5.4 mini and nano",
+        "kickerZh": "OpenAI · Agent 与开发者工具",
+        "kickerEn": "OpenAI · Agents and developer tooling",
+        "summaryZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：GPT-5.4 mini and nano are smaller…",
+        "summaryEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "deckZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows…",
+        "narrativeZh": [
+          "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "openai.com",
+        "sourceName": "OpenAI News",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+        "relatedLinks": [
+          {
+            "labelZh": "OpenAI News 原文",
+            "labelEn": "OpenAI News source",
+            "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://openai.com/news/rss.xml"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, 多模态 推理…"
+        ],
+        "evidenceBulletsEn": [
+          "GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-17T10:00:00.000Z",
+        "publishedLabelZh": "20 小时前",
+        "publishedLabelEn": "20 hours ago",
+        "score": 35,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "failed:HTTP 403",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "simonwillison.net-aca07b9a4a89",
+        "rank": 2,
+        "sectionLabelZh": "主线2｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 2 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：OpenAI today…",
+        "summaryEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this: OpenAI today…",
+        "deckZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：OpenAI today: Introducing GPT‑5.4 mini and nano . 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: OpenAI today: Introducing GPT‑5.4 mini and nano . In other words, the race is no longer just about who answers well…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把基准测试、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "Simon Willison moved benchmark and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/17/mini-and-nano/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/17/mini-and-nano/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "OpenAI today: Introducing GPT‑5.4 mini and nano .",
+          "These models join GPT-5.4 which was released two weeks ago .",
+          "OpenAI's self-reported 基准测试s show the new 5.4-nano out-performing their previous GPT-5 mini model when run at maxim…"
+        ],
+        "evidenceBulletsEn": [
+          "OpenAI today: Introducing GPT‑5.4 mini and nano .",
+          "These models join GPT-5.4 which was released two weeks ago .",
+          "OpenAI's self-reported benchmarks show the new 5.4-nano out-performing their previous GPT-5 mini model when run at maximum reasoning effort."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-17T19:39:17.000Z",
+        "publishedLabelZh": "10 小时前",
+        "publishedLabelEn": "10 hours ago",
+        "score": 34.8,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "simonwillison.net-83d8b79c2470",
+        "rank": 3,
+        "sectionLabelZh": "补充1｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief 1 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Quoting Ken Jin",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Quoting Ken Jin",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "deckZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "Simon Willison moved workflow deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Great news—we’ve hit our (very modest) performance goals for the CPython… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: Great news—we’ve hit our (very modest) performance goals for the CPython JIT over a year early for macOS AArch64… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/17/ken-jin/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/17/ken-jin/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Great news—we’ve hit our (very modest) performance goals for the CPython JIT over a year early for macOS AArch64…",
+          "The 3.15 alpha JIT is about 11-12% faster on macOS AArch64 than the tail calling interpreter…",
+          "— Ken Jin , Python 3.15’s JIT is now back on track Tags: python"
+        ],
+        "evidenceBulletsEn": [
+          "Great news—we’ve hit our (very modest) performance goals for the CPython JIT over a year early for macOS AArch64, and a few months early for x86_64 Linux.",
+          "The 3.15 alpha JIT is about 11-12% faster on macOS AArch64 than the tail calling interpreter, and 5-6% faster than the standard interpreter on x86_64 Linux.",
+          "— Ken Jin , Python 3.15’s JIT is now back on track Tags: python"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-17T21:48:26.000Z",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago",
+        "score": 32.8,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "simonwillison.net-aa43fec35d34",
+        "rank": 4,
+        "sectionLabelZh": "补充2｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief 2 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Subagents",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Subagents",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把基准测试、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved benchmark and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
+        "deckZh": "Simon Willison把基准测试、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "Simon Willison moved benchmark and workflow deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Simon Willison把基准测试、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：Agentic Engineering Patterns > LLMs are restricted by their context limi… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison moved benchmark and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The clearest public signal so far is this: Agentic Engineering Patterns > LLMs are restricted by their context limit - how many tokens they can fit in their workin… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把基准测试、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "Simon Willison moved benchmark and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/guides/agentic-engineering-patterns/subagents/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/guides/agentic-engineering-patterns/subagents/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Agentic Engineering Patterns > LLMs are restricted by their context limit - how many tokens they can fit in their workin…",
+          "These values have not increased much over the past two years even as the LLMs themselves have seen dramatic improvements…"
+        ],
+        "evidenceBulletsEn": [
+          "Agentic Engineering Patterns > LLMs are restricted by their context limit - how many tokens they can fit in their working memory at any given time.",
+          "These values have not increased much over the past two years even as the LLMs themselves have seen dramatic improvements in their abilities - they generally top…"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-17T12:32:28.000Z",
+        "publishedLabelZh": "18 小时前",
+        "publishedLabelEn": "18 hours ago",
+        "score": 31.2,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "technologyreview.com-9f58e7bc211c",
+        "rank": 5,
+        "sectionLabelZh": "补充一｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Brief 3 | Retrieval, multimodal, and memory systems",
+        "titleZh": "MIT Technology Review / AI｜检索、多模态与记忆系统",
+        "titleEn": "The Pentagon is planning for AI companies to train on classified data, defense official says",
+        "briefTitleZh": "MIT Technology Review / AI｜检索、多模态与记忆系统",
+        "briefTitleEn": "The Pentagon is planning for AI companies to train on classified data, defense official says",
+        "kickerZh": "MIT Technology Review / AI · 检索、多模态与记忆系统",
+        "kickerEn": "MIT Technology Review / AI · Retrieval, multimodal, and memory systems",
+        "summaryZh": "MIT Technology Review / AI放出了一项围绕多模态检索与记忆的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "MIT Technology Review / AI published a research-led update around multimodal retrieval and memory, aimed at bringing more unstructured data into the same retrieval space…",
+        "deckZh": "MIT Technology Review / AI放出了一项围绕多模态检索与记忆的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "MIT Technology Review / AI published a research-led update around multimodal retrieval and memory…",
+        "narrativeZh": [
+          "MIT Technology Review / AI放出了一项围绕多模态检索与记忆的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "文中最值得记的一处细节是：That could include learning to identify subtle clues in an image the way… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "MIT Technology Review / AI published a research-led update around multimodal retrieval and memory, aimed at bringing more unstructured data into the same retrieval space. This looks like infrastructure…",
+          "The most useful detail in the piece is this: That could include learning to identify subtle clues in an image the way an analyst does… These are not always the loudest headlines…",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "MIT Technology Review / AI放出了一项围绕多模态检索与记忆的研究型更新，指向的是提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "MIT Technology Review / AI published a research-led update around multimodal retrieval and memory, aimed at bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "technologyreview.com",
+        "sourceName": "MIT Technology Review / AI",
+        "sourceUrl": "https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/",
+        "relatedLinks": [
+          {
+            "labelZh": "MIT Technology Review / AI 原文",
+            "labelEn": "MIT Technology Review / AI source",
+            "url": "https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "That could include learning to identify subtle clues in an image the way an analyst does…",
+          "- Michelle Kim archive page The viral social network for bots reveals more about our own current mania for AI as it does…",
+          "It’s really hard to say which specific military tasks would require AI models to train on such data, Mehta cautions…"
+        ],
+        "evidenceBulletsEn": [
+          "That could include learning to identify subtle clues in an image the way an analyst does, or connecting new information with historical context.",
+          "- Michelle Kim archive page The viral social network for bots reveals more about our own current mania for AI as it does about the future of agents.",
+          "It’s really hard to say which specific military tasks would require AI models to train on such data, Mehta cautions…"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-17T22:30:46.000Z",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago",
+        "score": 30.2,
+        "featured": false,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 1002,
+        "bodySummary": "The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on classified data, MIT Technology Review has learned. AI models like Anthropic’s Claude are already used to answer questions in classified settings; applications include analyzing targets in Iran…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "simonwillison.net-6ee8addec139",
+        "rank": 6,
+        "sectionLabelZh": "补充4｜Agent 与开发者工具",
+        "sectionLabelEn": "Brief 4 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Quoting Tim Schilling",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Quoting Tim Schilling",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把围绕开源、工作流的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on…",
+        "deckZh": "Simon Willison把围绕开源、工作流的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "deckEn": "Simon Willison opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "narrativeZh": [
+          "Simon Willison把围绕开源、工作流的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "目前能确认的公开信号是：This is because contributing to 开源, especially Django… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on. Simon Willison is making the case that the next battle is not smarter chat…",
+          "The clearest public signal so far is this: This is because contributing to open source, especially Django, is a communal endeavor. In other words, the race is no longer just about who answers well…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把围绕开源、工作流的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。",
+        "whatChangedEn": "Simon Willison opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/17/tim-schilling/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/17/tim-schilling/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "This is because contributing to 开源, especially Django, is a communal endeavor.",
+          "If you do not understand the ticket, if you do not understand the solution…",
+          "[...] For a reviewer, it’s demoralizing to communicate with a facade of a human."
+        ],
+        "evidenceBulletsEn": [
+          "This is because contributing to open source, especially Django, is a communal endeavor.",
+          "If you do not understand the ticket, if you do not understand the solution, or if you do not understand the feedback on your PR…",
+          "[...] For a reviewer, it’s demoralizing to communicate with a facade of a human."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-17T16:13:37.000Z",
+        "publishedLabelZh": "14 小时前",
+        "publishedLabelEn": "14 hours ago",
+        "score": 30.1,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      }
+    ],
+    "llmGenerated": false,
+    "titleRegenerated": true,
+    "titleRegenReason": "Similar to digest from 2026-03-17"
+  },
+  {
     "slug": "ai-daily-2026-03-17",
     "date": "2026-03-17",
     "titleZh": "AI 日报｜Model safety and controllability +  Retrieval",
