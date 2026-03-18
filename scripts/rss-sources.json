@@ -106,6 +106,41 @@
     "reason": "Fast updates but secondary signal quality; use for breadth not depth"
   },
   {
+    "name": "Anthropic Blog",
+    "url": "https://www.anthropic.com/rss/feed",
+    "category": "AI",
+    "priority": 10,
+    "reason": "Official research and safety updates from Anthropic"
+  },
+  {
+    "name": "DeepMind Blog",
+    "url": "https://deepmind.google/blog/rss.xml",
+    "category": "AI",
+    "priority": 10,
+    "reason": "Google DeepMind research publications"
+  },
+  {
+    "name": "Apple Machine Learning",
+    "url": "https://machinelearning.apple.com/rss.xml",
+    "category": "AI",
+    "priority": 8,
+    "reason": "Apple ML research and on-device AI"
+  },
+  {
+    "name": "The Batch (Andrew Ng)",
+    "url": "https://www.deeplearning.ai/the-batch/feed/",
+    "category": "AI",
+    "priority": 7,
+    "reason": "Andrew Ng weekly AI industry analysis"
+  },
+  {
+    "name": "36kr AI",
+    "url": "https://36kr.com/feed",
+    "category": "AI",
+    "priority": 3,
+    "reason": "Chinese tech media AI coverage"
+  },
+  {
     "name": "arXiv cs.AI",
     "url": "https://rss.arxiv.org/rss/cs.AI",
     "category": "AI",

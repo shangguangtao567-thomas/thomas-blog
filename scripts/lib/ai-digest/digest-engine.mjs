@@ -9,6 +9,114 @@ import {
 } from './shared.mjs';
 import { generateNarrativeWithLLM } from './llm-narrative.mjs';
 
+// Official sources that get a boost
+const OFFICIAL_SOURCES = ['openai.com', 'openai', 'google', 'google.com', 'anthropic.com', 'anthropic', 'github.com', 'github.blog', 'huggingface.co', 'huggingface'];
+
+/**
+ * Score a candidate item for inclusion priority.
+ * Higher score = more likely to be selected.
+ */
+export function scoreCandidate(item) {
+  const title = cleanText(item.title || item.pageTitle || '');
+  const sourceDomain = cleanText(item.sourceDomain || '').toLowerCase();
+
+  // Signal: +3 if title contains specific product/model/tool name (not generic "AI")
+  const specificProductPatterns = [
+    /gpt-[45o]/i, /claude [34]/i, /gemini [12]/i, /llama [23]/i, /mistral/i, /qwen/i,
+    /copilot/i, /notebooklm/i, /learnfm/i, /deepresearch/i, /agent/i, /sdk/i, /api/i,
+    /robotics/i, /embedding/i, /multimodal/i, /reasoning/i, /workflow/i,
+    /\b(?:model|inference|checkpoint|release|launch)\b/i,
+  ];
+  const signalScore = specificProductPatterns.some(p => p.test(title)) ? 3 : 0;
+
+  // Freshness: proportional to hours since publish (more recent = higher)
+  const published = new Date(item.pubDate || item.publishedAt || Date.now()).getTime();
+  const ageHours = Math.max(0, (Date.now() - published) / 36e5);
+  const freshnessScore = Math.max(0, 10 - ageHours * 0.5); // 10 pts at 0h, 0 pts at 20h+
+
+  // Source authority: +2 for official sources
+  const sourceAuthorityScore = OFFICIAL_SOURCES.some(s => sourceDomain.includes(s)) ? 2 : 0;
+
+  // Title specificity: -2 if title is >15 words (likely SEO junk)
+  const wordCount = title.split(/\s+/).length;
+  const specificityPenalty = wordCount > 15 ? -2 : 0;
+
+  // Base score from existing priority
+  const baseScore = (item.priority || 1) * 3;
+
+  const total = baseScore + signalScore + freshnessScore + sourceAuthorityScore + specificityPenalty;
+  return Math.round(total * 10) / 10;
+}
+
+/**
+ * Semantic title deduplication.
+ * If two titles share >80% word overlap, keep the higher-scored one.
+ */
+export function titleSimilarityScore(title1, title2) {
+  const normalize = (t) => {
+    const cleaned = cleanText(t).toLowerCase();
+    // Remove common stopwords and punctuation
+    const stopwords = new Set(['the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'ought', 'used', 'to', 'of', 'in', 'for', 'on', 'with', 'at', 'by', 'from', 'as', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'between', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 'just', 'and', 'but', 'if', 'or', 'because', 'until', 'while', 'although', 'though', 'after', 'before', 'when', 'whenever', 'where', 'wherever', 'whether', 'which', 'whichever', 'who', 'whoever', 'whom', 'whomever', 'whose', 'what', 'whatever', 'that', 'this', 'these', 'those', 'i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them', 'my', 'your', 'his', 'its', 'our', 'their', 'mine', 'yours', 'hers', 'ours', 'theirs']);
+    const words = cleaned.replace(/[^a-z0-9\u4e00-\u9fff\s]/g, '').split(/\s+/).filter(w => w.length > 1 && !stopwords.has(w));
+    return new Set(words);
+  };
+
+  const words1 = normalize(title1);
+  const words2 = normalize(title2);
+
+  if (words1.size === 0 || words2.size === 0) return 0;
+
+  // Check for exact match or containment
+  const str1 = [...words1].sort().join(' ');
+  const str2 = [...words2].sort().join(' ');
+  if (str1 === str2) return 1;
+  if (str1.includes(str2) || str2.includes(str1)) return 0.9;
+
+  // Calculate word overlap ratio
+  const intersection = [...words1].filter(w => words2.has(w)).length;
+  const union = new Set([...words1, ...words2]).size;
+  return union > 0 ? intersection / union : 0;
+}
+
+/**
+ * Two-layer deduplication: URL dedup + semantic title dedup.
+ */
+export function dedupeCandidates(items) {
+  const seenLinks = new Set();
+  const result = [];
+
+  for (const item of items) {
+    const link = item.link || item.sourceUrl;
+    if (!link || seenLinks.has(link)) continue;
+
+    const titleKey = cleanText(item.title || item.titleZh || item.titleEn || '');
+    if (!titleKey) continue;
+
+    // Check semantic similarity with existing items
+    let isDuplicate = false;
+    for (const existing of result) {
+      const existingTitle = cleanText(existing.title || existing.titleZh || existing.titleEn || '');
+      if (titleSimilarityScore(titleKey, existingTitle) > 0.8) {
+        // Keep higher-scored one
+        if ((item.score || 0) <= (existing.score || 0)) {
+          isDuplicate = true;
+        } else {
+          // Replace existing with this one
+          Object.assign(existing, item);
+        }
+        break;
+      }
+    }
+
+    if (!isDuplicate) {
+      seenLinks.add(link);
+      result.push(item);
+    }
+  }
+
+  return result;
+}
+
 const THEME_RULES = [
   {
     key: 'safety',
@@ -466,17 +574,17 @@ function buildNarrativeEn(item, actor, theme, action, whatChangedEn, whyEn, watc
   return [
     trimText(`${whatChangedEn} ${chooseEnAngle(theme, action, actor)}`, 220),
     trimText(`${evidenceLine} ${whyEn}`, 220),
-    trimText(`Placed in the context of the past few weeks, the bigger question is whether this moves from a signal to a default capability. ${watchEn}`, 220),
+    trimText(`Given the current pace, the most concrete thing to track is: ${watchEn}`, 220),
   ];
 }
 
 function buildSectionLabelZh(theme, index) {
-  const labels = ['主线一', '主线二', '主线三', '补充'];
+  const labels = ['主线一', '主线二', '主线三', '主线四', '补充一', '补充二', '补充三', '补充四'];
   return `${labels[index] || `补充 ${index + 1}`}｜${theme.themeZh}`;
 }
 
 function buildSectionLabelEn(theme, index) {
-  const labels = ['Thread 1', 'Thread 2', 'Thread 3', 'Brief'];
+  const labels = ['Thread 1', 'Thread 2', 'Thread 3', 'Thread 4', 'Brief 1', 'Brief 2', 'Brief 3', 'Brief 4'];
   return `${labels[index] || `Brief ${index + 1}`} | ${theme.themeEn}`;
 }
 
@@ -706,17 +814,150 @@ export async function buildDigestItemsAsync(candidates = []) {
   const llmAnalysis = await generateNarrativeWithLLM(candidates);
 
   if (llmAnalysis) {
-    return candidates.map((item, index) => buildItemWithLLM(item, index, llmAnalysis));
+    // llmAnalysis.articles already contains the per-article results
+    // Map each candidate to its corresponding LLM result
+    const items = llmAnalysis.articles.map((llmResult, index) => {
+      const originalItem = candidates[index];
+      if (!originalItem) return null;
+
+      // If LLM failed for this item, use template fallback
+      if (llmResult.llmFailed || !llmResult.narrativeEn) {
+        return buildItem(originalItem, index);
+      }
+
+      // Build item with LLM-generated content
+      return buildItemWithLLM(originalItem, index, {
+        articles: [{
+          index: llmResult.index,
+          narrativeEn: llmResult.narrativeEn,
+          narrativeZh: llmResult.narrativeZh || [],
+          titleEn: llmResult.titleEn || '',
+          titleZh: '',
+        }],
+        issueTitle: llmAnalysis.issueTitle,
+        heroSummary: llmAnalysis.heroSummary,
+      });
+    }).filter(Boolean);
+
+    // Attach LLM metadata to items for later use in buildDigestDetail
+    items._llmIssueTitle = llmAnalysis.issueTitle;
+    items._llmHeroSummary = llmAnalysis.heroSummary;
+    return items;
   }
 
   return candidates.map((item, index) => buildItem(item, index));
 }
 
 export function buildDigestItems(candidates = []) {
-  return candidates.map((item, index) => buildItem(item, index));
+  const items = candidates.map((item, index) => buildItem(item, index));
+  return diversifyNarratives(items);
+}
+
+/**
+ * Diversify narratives to reduce template repetition.
+ * If two items' narrativeEn[0] share >60% word overlap, append specific evidence.
+ */
+function diversifyNarratives(items) {
+  const STOPWORDS = new Set(['the','a','an','is','are','was','were','be','been','being','have','has','had',
+    'do','does','did','will','would','could','should','may','might','must','can','to','of','in','for',
+    'on','with','at','by','from','as','into','through','during','before','after','above','below',
+    'between','under','again','further','then','once','here','there','when','where','why','how',
+    'all','each','few','more','most','other','some','such','no','nor','not','only','own','same',
+    'so','than','too','very','just','and','but','if','or','because','until','while','that','this',
+    'these','those','what','which','who','whom','whose']);
+  
+  function wordSet(text) {
+    return new Set(text.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 2 && !STOPWORDS.has(w)));
+  }
+  
+  function overlap(a, b) {
+    const ws = wordSet(a), wt = wordSet(b);
+    if (ws.size === 0 || wt.size === 0) return 0;
+    const inter = [...ws].filter(w => wt.has(w)).length;
+    const union = new Set([...ws, ...wt]).size;
+    return union > 0 ? inter / union : 0;
+  }
+  
+  for (let i = 1; i < items.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (!items[i].narrativeEn?.[0] || !items[j].narrativeEn?.[0]) continue;
+      if (overlap(items[i].narrativeEn[0], items[j].narrativeEn[0]) > 0.6) {
+        // Append article title or evidence to break similarity
+        const evidence = items[i].evidenceBulletsEn?.[0] || items[i].titleEn || '';
+        if (evidence) {
+          const suffix = ` In "${evidence.slice(0, 80)}"`;
+          items[i].narrativeEn[0] = trimText(items[i].narrativeEn[0].replace(/\.\s*$/, '') + suffix + '.', 220);
+        }
+        // Same for Chinese
+        if (items[i].narrativeZh?.[0] && items[j].narrativeZh?.[0]) {
+          const evidenceZh = items[i].evidenceBulletsZh?.[0] || items[i].titleZh || '';
+          if (evidenceZh) {
+            const suffixZh = `在"${evidenceZh.slice(0, 60)}"中可以看到`;
+            items[i].narrativeZh[0] = trimText(items[i].narrativeZh[0].replace(/[。；]?\s*$/, '') + suffixZh + '。', 220);
+          }
+        }
+        break; // Only fix once per item
+      }
+    }
+  }
+  
+  return items;
+}
+
+/**
+ * Reassign section labels so no more than 2 items share the same theme header.
+ */
+function reassignSectionLabels(items) {
+  const themeCount = new Map();
+  const themeIndex = new Map();
+  
+  // Group by theme
+  const groups = new Map();
+  for (const item of items) {
+    const key = `${item.themeZh}__${item.themeEn}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
+  }
+  
+  // Reassign: if a theme has >2 items, move extras to "补充" variant
+  let supplementIdx = 0;
+  for (const [key, group] of groups) {
+    if (group.length > 2) {
+      for (let i = 2; i < group.length; i++) {
+        const baseIdx = group.length > 4 ? i : 3 + supplementIdx;
+        supplementIdx++;
+        group[i].sectionLabelZh = `补充${supplementIdx}｜${group[i].themeZh}`;
+        group[i].sectionLabelEn = `Brief ${supplementIdx} | ${group[i].themeEn}`;
+      }
+    }
+  }
+  
+  // Re-number sequentially
+  let threadIdx = 0;
+  let briefIdx = 0;
+  for (const item of items) {
+    if (item.sectionLabelZh.startsWith('主线') || item.sectionLabelZh.startsWith('补充')) {
+      if (item.sectionLabelZh.startsWith('主线')) {
+        const zh = `主线${threadIdx + 1}｜${item.themeZh}`;
+        const en = `Thread ${threadIdx + 1} | ${item.themeEn}`;
+        item.sectionLabelZh = zh;
+        item.sectionLabelEn = en;
+        threadIdx++;
+      } else {
+        briefIdx++;
+        item.sectionLabelZh = item.sectionLabelZh.replace(/^补充\d+/, `补充${briefIdx}`);
+        item.sectionLabelEn = item.sectionLabelEn.replace(/^Brief \d+/, `Brief ${briefIdx}`);
+      }
+    }
+  }
+  
+  return items;
 }
 
 export function buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow, llmAnalysis }) {
+  // Reassign section labels to avoid >2 items sharing same header
+  reassignSectionLabels(items);
+
   const themes = buildThemes(items);
   const bodyCoverage = buildBodyCoverage(items);
 
@@ -784,7 +1025,9 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
 }
 
 export async function buildDigestDetailAsync({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow }) {
-  const llmAnalysis = await generateNarrativeWithLLM(items);
+  // LLM already ran in buildDigestItemsAsync, so just build the detail
+  const llmGenerated = items.some(item => item.llmGenerated);
+  const llmAnalysis = llmGenerated ? { issueTitle: null, heroSummary: null } : null;
   return buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow, llmAnalysis });
 }
 

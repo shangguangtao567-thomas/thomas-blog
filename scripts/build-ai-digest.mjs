@@ -6,6 +6,8 @@ import {
   buildDigestItemsAsync,
   buildDigestMarkdown,
   buildDigestReport,
+  scoreCandidate,
+  dedupeCandidates,
 } from './lib/ai-digest/digest-engine.mjs';
 import {
   cleanText,
@@ -31,33 +33,9 @@ const TODAY = NOW.toISOString().slice(0, 10);
 const POST_SLUG = `ai-daily-${TODAY}`;
 const POST_FILENAME = `${TODAY}-${POST_SLUG}.md`;
 const POST_PATH = path.join(POSTS_DIR, POST_FILENAME);
-const WINDOW_HOURS = Number.parseInt(process.env.AI_DIGEST_WINDOW_HOURS || '24', 10);
+const WINDOW_HOURS = Number.parseInt(process.env.AI_DIGEST_WINDOW_HOURS || '36', 10);
 const MAX_ITEMS = Number.parseInt(process.env.AI_DIGEST_MAX_ITEMS || '6', 10);
 const SUFFICIENT_ITEMS = Number.parseInt(process.env.AI_DIGEST_SUFFICIENT_ITEMS || '4', 10);
-
-function isWithinWindow(item) {
-  const ts = new Date(item.pubDate || item.publishedAt || '').getTime();
-  if (Number.isNaN(ts)) return false;
-  return Date.now() - ts <= WINDOW_HOURS * 36e5;
-}
-
-function dedupeCandidates(items) {
-  const seenLinks = new Set();
-  const seenTitles = new Set();
-  const result = [];
-
-  for (const item of items) {
-    const link = item.link || item.sourceUrl;
-    const titleKey = normalizeTitle(item.title || item.titleZh || item.titleEn || '');
-    if (!link || !titleKey) continue;
-    if (seenLinks.has(link) || seenTitles.has(titleKey)) continue;
-    seenLinks.add(link);
-    seenTitles.add(titleKey);
-    result.push(item);
-  }
-
-  return result;
-}
 
 function mergeBySlug(current, next) {
   return [next, ...current.filter(item => item.slug !== next.slug)].sort((a, b) => b.date.localeCompare(a.date));
@@ -125,11 +103,34 @@ async function main() {
   ensureDir(POSTS_DIR);
 
   const candidatesPayload = loadJson(CANDIDATES_FILE, { items: [] });
-  const freshCandidates = dedupeCandidates((candidatesPayload.items || []).filter(isWithinWindow))
-    .sort((a, b) => (b.score || 0) - (a.score || 0));
-  const selectedCandidates = freshCandidates.slice(0, MAX_ITEMS);
+  const rawCandidates = candidatesPayload.items || [];
 
-  // Use LLM-driven narrative generation (with fallback to templates)
+  // Step 1: Strict time filtering (already done in fetch-ai-candidates, but double-check)
+  const timeFiltered = rawCandidates.filter(item => {
+    const ts = new Date(item.pubDate || item.publishedAt || '').getTime();
+    if (Number.isNaN(ts)) {
+      console.warn(`[digest] discard: unparseable pubDate for "${item.title}"`);
+      return false;
+    }
+    const withinWindow = Date.now() - ts <= WINDOW_HOURS * 36e5;
+    if (!withinWindow) {
+      console.warn(`[digest] discard: "${item.title}" is older than ${WINDOW_HOURS}h`);
+    }
+    return withinWindow;
+  });
+
+  // Step 2: Two-layer dedup (URL + semantic title)
+  const deduped = dedupeCandidates(timeFiltered);
+  console.log(`[digest] after time filter: ${timeFiltered.length}, after dedup: ${deduped.length}`);
+
+  // Step 3: Machine scoring and select top N
+  const scored = deduped.map(item => ({ ...item, score: scoreCandidate(item) }));
+  const sorted = scored.sort((a, b) => (b.score || 0) - (a.score || 0));
+  const selectedCandidates = sorted.slice(0, MAX_ITEMS);
+  console.log(`[digest] selected top ${selectedCandidates.length} by score`);
+
+  // Step 4-7: LLM narrative generation (per-article + editorial summary + quality gate)
+  // This happens inside buildDigestItemsAsync
   const items = await buildDigestItemsAsync(selectedCandidates);
   const digestUrl = `${SITE_URL}/blog/${POST_SLUG}`;
   const limitedUpdateWindow = items.length > 0 && items.length < SUFFICIENT_ITEMS;
@@ -193,7 +194,7 @@ async function main() {
   fs.writeFileSync(REPORT_FILE, report.text);
   writeJson(REPORT_JSON_FILE, report.json);
 
-  console.log(`[digest] window ${WINDOW_HOURS}h -> ${freshCandidates.length} fresh candidates, selected ${items.length}`);
+  console.log(`[digest] window ${WINDOW_HOURS}h -> ${timeFiltered.length} time-filtered, ${deduped.length} deduped, selected ${items.length}`);
   console.log(`[digest] LLM generated: ${finalDetail.llmGenerated ? 'yes' : 'no (fallback to templates)'}`);
   if (finalDetail.titleRegenerated) {
     console.log(`[digest] title regenerated: ${finalDetail.titleRegenReason}`);
