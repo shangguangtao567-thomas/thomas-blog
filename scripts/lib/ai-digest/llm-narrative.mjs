@@ -50,19 +50,28 @@ Article: "${title}"
 Source: ${sourceName}
 Content: ${body}
 
-Write exactly 3 short paragraphs in English AND 3 in Chinese:
-1. What shifted (NOT "X published Y" — what capability/constraint/assumption changed?)
-2. Builder impact (what should a practitioner DO differently this week?)
-3. Signal to watch (one specific, falsifiable thing to check)
+Write exactly 3 short paragraphs in English AND 3 in Chinese. Each paragraph is 2-3 sentences. No flowery language.
 
-BANNED (EN): "game-changer", "paradigm shift", "ecosystem", "landscape", "exciting", "groundbreaking"
-BANNED (EN): starting sentences with "This", "It", "The article"
-BANNED (ZH): "值得关注", "意义重大", "具有重要意义", "不得不说", "让我们拭目以待", "不言而喻"
-BANNED: restating the title or press-release language
-IMPORTANT: Each article's 3 paragraphs must be UNIQUE — do NOT reuse sentence patterns across articles. Reference specific details from the content. Write complete sentences — do NOT cut off mid-word or mid-sentence.
+Paragraph 1 — Factual update (NOT "X published Y"):
+  Describe what specific thing changed. Include one concrete number or technical detail if available.
+  Do NOT editorialize. Do NOT use passive ("it is believed that..."). Write like a technical news brief.
+  Include 1 natural keyword phrase for searchability.
+
+Paragraph 2 — Builder impact:
+  What specific thing should a practitioner do differently THIS WEEK because of this?
+  Be concrete, not philosophical. "Switch to X" or "Add Y to your stack" or "Verify Z claim before using in prod" — not "worth watching".
+
+Paragraph 3 — Signal to watch:
+  One falsifiable thing to check. Not a trend — a specific claim, benchmark, or release to look up.
+
+BANNED (EN): "game-changer", "paradigm shift", "ecosystem", "landscape", "exciting", "groundbreaking", "landmark", "notable", "significant"
+BANNED (EN): starting sentences with "This", "It", "The article", "This piece", "This update"
+BANNED (ZH): "值得关注", "意义重大", "具有重要意义", "不得不说", "让我们拭目以待", "不言而喻", "震撼", "突破性"
+BANNED: restating the title or press-release language verbatim
+IMPORTANT: Each paragraph must be COMPLETE SENTENCES. Do NOT cut off mid-word. Do NOT reuse sentence patterns across articles.
 
 Output ONLY valid JSON:
-{"narrativeEn":["...","...","..."],"narrativeZh":["...","...","..."],"titleEn":"better title if original is SEO junk, else empty string"}`;
+{"narrativeEn":["<para1>","<para2>","<para3>"],"narrativeZh":["<para1>","<para2>","<para3>"],"titleEn":"rewrite title to be descriptive and keyword-rich, OR empty string if original title is already clear"}`;
 }
 
 /**
@@ -75,16 +84,22 @@ function buildEditorialSummaryPrompt(items) {
     return `[${i + 1}] "${title}" — ${oneLine}`;
   }).join('\n');
 
-  return `You are the editor of a daily AI briefing. Here are today's sections:
+  return `You are the editor of a daily AI briefing for blog.lincept.com.
+Readers are senior engineers who ship AI products.
 
 ${articleSummaries}
 
-Write:
-1. issueTitle: sharp 8-12 word title capturing today SPECIFIC theme. IMPORTANT: do NOT repeat the same phrase (3+ words) twice in the title.
-2. heroSummary: 2 sentences connecting the articles into one narrative. IMPORTANT: write complete sentences, do NOT cut off mid-word or mid-sentence.
+Write SEO metadata for this briefing:
 
-Output ONLY JSON:
-{"issueTitle":{"en":"...","zh":"..."},"heroSummary":{"en":"...","zh":"..."}}`;
+1. seoTitle: 8-12 words. PRIMARY KEYWORD FIRST. Format: "Primary Keyword | Secondary Topic [AI Daily]". Example: "Local LLM Inference Speeds Up | Enterprise AI Agents Go Mainstream". Do NOT start with "AI Daily". Do NOT repeat the same phrase twice.
+2. seoDescription: 120-155 chars. Factual, keyword-rich, drives click-through. Describe what engineers will learn, not how you feel about it. No "today's issue" or "in this issue".
+3. keywords: 3-5 comma-separated topic tags (e.g. "local-llm,inference,enterprise-agents,security,open-source")
+4. heroSummary: 2 sentences. Write as a factual brief opening paragraph. Start with a concrete fact, not "This issue". No marketing language.
+
+IMPORTANT: seoTitle and seoDescription are used for search engine ranking and social sharing — write for discoverability, not style.
+
+Output ONLY valid JSON:
+{"seoTitle":{"en":"...","zh":"..."},"seoDescription":{"en":"...","zh":"..."},"keywords":"tag1,tag2,tag3","heroSummary":{"en":"...","zh":"..."}}`;
 }
 
 /**
@@ -187,16 +202,21 @@ export async function generateEditorialSummary(items) {
   try {
     const prompt = buildEditorialSummaryPrompt(items);
     const raw = await callClaude(prompt);
-    const parsed = parseJsonResponse(raw, ['issueTitle', 'heroSummary']);
+    const parsed = parseJsonResponse(raw, ['seoTitle', 'seoDescription', 'keywords', 'heroSummary']);
 
     return {
-      issueTitle: {
-        en: trimText(parsed.issueTitle.en, 100),
-        zh: parsed.issueTitle.zh ? trimText(parsed.issueTitle.zh, 60) : '',
+      seoTitle: {
+        en: trimText(parsed.seoTitle?.en || '', 80),
+        zh: trimText(parsed.seoTitle?.zh || '', 60),
       },
+      seoDescription: {
+        en: trimText(parsed.seoDescription?.en || '', 155),
+        zh: trimText(parsed.seoDescription?.zh || '', 120),
+      },
+      keywords: parsed.keywords || 'AI,daily',
       heroSummary: {
-        en: trimText(parsed.heroSummary.en, 300),
-        zh: parsed.heroSummary.zh ? trimText(parsed.heroSummary.zh, 200) : '',
+        en: trimText(parsed.heroSummary?.en || '', 300),
+        zh: trimText(parsed.heroSummary?.zh || '', 200),
       },
     };
   } catch (error) {

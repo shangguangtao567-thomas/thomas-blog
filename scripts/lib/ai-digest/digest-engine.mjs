@@ -834,13 +834,17 @@ export async function buildDigestItemsAsync(candidates = []) {
           titleEn: llmResult.titleEn || '',
           titleZh: '',
         }],
-        issueTitle: llmAnalysis.issueTitle,
+        seoTitle: llmAnalysis.seoTitle,
         heroSummary: llmAnalysis.heroSummary,
+        seoDescription: llmAnalysis.seoDescription,
+        keywords: llmAnalysis.keywords,
       });
     }).filter(Boolean);
 
     // Attach LLM metadata to items for later use in buildDigestDetail
-    items._llmIssueTitle = llmAnalysis.issueTitle;
+    items._llmSeoTitle = llmAnalysis.seoTitle;
+    items._llmSeoDescription = llmAnalysis.seoDescription;
+    items._llmKeywords = llmAnalysis.keywords;
     items._llmHeroSummary = llmAnalysis.heroSummary;
     return items;
   }
@@ -963,9 +967,9 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
 
   let titleSummaryZh, titleSummaryEn, introZh, introEn;
 
-  if (llmAnalysis?.issueTitle?.en) {
-    titleSummaryEn = llmAnalysis.issueTitle.en;
-    titleSummaryZh = llmAnalysis.issueTitle.zh || titleSummaryEn;
+  if (llmAnalysis?.seoTitle?.en) {
+    titleSummaryEn = llmAnalysis.seoTitle.en;
+    titleSummaryZh = llmAnalysis.seoTitle.zh || titleSummaryEn;
     introEn = (llmAnalysis.heroSummary.en
       ? llmAnalysis.heroSummary.en
       : buildHeroSummaryEn(items, themes, windowHours))
@@ -1027,7 +1031,7 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
 export async function buildDigestDetailAsync({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow }) {
   // LLM already ran in buildDigestItemsAsync, so just build the detail
   const llmGenerated = items.some(item => item.llmGenerated);
-  const llmAnalysis = llmGenerated ? { issueTitle: null, heroSummary: null } : null;
+  const llmAnalysis = llmGenerated ? { seoTitle: null, seoDescription: null, keywords: null, heroSummary: null } : null;
   return buildDigestDetail({ date, items, windowHours, digestUrl, generatedAt, limitedUpdateWindow, llmAnalysis });
 }
 
