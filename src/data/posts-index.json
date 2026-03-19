@@ -2,12 +2,12 @@
   {
     "slug": "ai-daily-2026-03-19",
     "kind": "digest",
-    "titleZh": "AI 日报｜Retrieval、多模态与记忆系统；Agent 开发工具",
-    "titleEn": "AI Daily | Retrieval, Multimodal & Memory Systems; Agent Tooling",
+    "titleZh": "AI 日报｜本地推理加速；飞书企业 Agent 批量上线",
+    "titleEn": "AI Daily | Local Inference Acceleration; Enterprise Agents Go Mainstream",
     "seoTitleZh": "",
     "seoTitleEn": "",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Hugging Face, Simon Willison…",
+    "excerptZh": "两条主线并行：一条是本地推理加速（Hugging Face + Apple），另一条是企业级 Agent 开始批量落地（飞书、Snowflake）。",
+    "excerptEn": "Two tracks this issue: local inference acceleration on consumer hardware, and enterprise agent platforms moving from demos to production deployments.",
     "keywords": [],
     "pillar": "",
     "pillarZh": "",
@@ -18,7 +18,7 @@
     "tag": "AI 日报",
     "tagEn": "AI Daily",
     "image": "",
-    "readTime": 21,
+    "readTime": 14,
     "publishedAt": "2026-03-19T00:00:00.000Z"
   },
   {
