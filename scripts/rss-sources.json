@@ -28,13 +28,6 @@
     "reason": "AI engineering practices, Copilot, and developer tooling updates"
   },
   {
-    "name": "Microsoft AI Blog",
-    "url": "https://blogs.microsoft.com/ai/feed/",
-    "category": "AI",
-    "priority": 8,
-    "reason": "Enterprise AI, Copilot, and Azure AI deployment trends"
-  },
-  {
     "name": "MIT Technology Review / AI",
     "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
     "category": "Tech",
@@ -78,13 +71,6 @@
     "customScraper": "tisi"
   },
   {
-    "name": "机器之心 (Synced)",
-    "url": "https://www.jiqizhixin.com/rss",
-    "category": "AI",
-    "priority": 7,
-    "reason": "Leading Chinese AI media covering research, industry, and domestic model developments"
-  },
-  {
     "name": "量子位 (QbitAI)",
     "url": "https://www.qbitai.com/feed",
     "category": "AI",
@@ -106,13 +92,6 @@
     "reason": "Fast updates but secondary signal quality; use for breadth not depth"
   },
   {
-    "name": "Anthropic Blog",
-    "url": "https://www.anthropic.com/rss/feed",
-    "category": "AI",
-    "priority": 10,
-    "reason": "Official research and safety updates from Anthropic"
-  },
-  {
     "name": "DeepMind Blog",
     "url": "https://deepmind.google/blog/rss.xml",
     "category": "AI",
@@ -125,13 +104,6 @@
     "category": "AI",
     "priority": 8,
     "reason": "Apple ML research and on-device AI"
-  },
-  {
-    "name": "The Batch (Andrew Ng)",
-    "url": "https://www.deeplearning.ai/the-batch/feed/",
-    "category": "AI",
-    "priority": 7,
-    "reason": "Andrew Ng weekly AI industry analysis"
   },
   {
     "name": "36kr AI",

@@ -2,8 +2,8 @@
   {
     "slug": "ai-daily-2026-03-19",
     "kind": "digest",
-    "titleZh": "AI 日报｜Retrieval +  multimodal",
-    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling",
+    "titleZh": "AI 日报｜Retrieval、多模态与记忆系统；Agent 开发工具",
+    "titleEn": "AI Daily | Retrieval, Multimodal & Memory Systems; Agent Tooling",
     "seoTitleZh": "",
     "seoTitleEn": "",
     "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
