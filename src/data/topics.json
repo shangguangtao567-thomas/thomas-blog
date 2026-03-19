@@ -9,5 +9,14 @@
       "openclaw-ultimate-setup-guide",
       "openclaw-product-of-its-time"
     ]
+  },
+  {
+    "slug": "essay",
+    "labelZh": "思考",
+    "labelEn": "Essay",
+    "count": 1,
+    "latestPostSlugs": [
+      "the-physics-of-success"
+    ]
   }
 ]

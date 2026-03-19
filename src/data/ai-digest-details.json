@@ -1,5 +1,556 @@
 [
   {
+    "slug": "ai-daily-2026-03-19",
+    "date": "2026-03-19",
+    "titleZh": "AI 日报｜Retrieval +  multimodal",
+    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Agents and developer tooling, AI product experience",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI)…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "introZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "introEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "methodologyZh": "",
+    "methodologyEn": "",
+    "path": "/blog/ai-daily-2026-03-19",
+    "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-19",
+    "itemCount": 6,
+    "heroTitleZh": "Alibaba｜检索、多模态与记忆系统",
+    "heroTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-19T07:42:10.955Z",
+    "windowHours": 36,
+    "themes": [
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 3
+      },
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 1
+      },
+      {
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 3,
+      "totalWords": 840,
+      "ratio": 0.6
+    },
+    "featuredItems": [
+      {
+        "id": "simonwillison.net-0a402a421780",
+        "titleZh": "Alibaba｜检索、多模态与记忆系统",
+        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "tag": "Data",
+        "summaryZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago"
+      },
+      {
+        "id": "simonwillison.net-7c94606786d3",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+        "tag": "Tools",
+        "summaryZh": "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The most useful detail in the piece is this…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "14 小时前",
+        "publishedLabelEn": "14 hours ago"
+      },
+      {
+        "id": "qbitai.com-4e6bf395be42",
+        "titleZh": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "titleEn": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "tag": "AI",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。 文中最值得记的一处细节是：其中，OpenClaw贡献了675B Token的使用量…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior. The most useful detail in the piece is this: 其中…",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "simonwillison.net-0a402a421780",
+        "rank": 1,
+        "sectionLabelZh": "主线1｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Thread 1 | Retrieval, multimodal, and memory systems",
+        "titleZh": "Alibaba｜检索、多模态与记忆系统",
+        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "briefTitleZh": "Alibaba｜检索、多模态与记忆系统",
+        "briefTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "kickerZh": "Alibaba · 检索、多模态与记忆系统",
+        "kickerEn": "Alibaba · Retrieval, multimodal, and memory systems",
+        "summaryZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
+        "deckZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "Alibaba moved memory and evaluation deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "文中最值得记的一处细节是：Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space. This looks like infrastructure…",
+          "The most useful detail in the piece is this: Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model… These are not always the loudest headlines, but they often decide the ceiling for a whole wave of downstream products.",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/18/llm-in-a-flash/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/18/llm-in-a-flash/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model…",
+          "Qwen 3.5 usually runs 10 experts per token, but this setup dropped that to 4 while claiming that the biggest quality dro…",
+          "Here's a fascinating piece of research by Dan Woods…"
+        ],
+        "evidenceBulletsEn": [
+          "Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model, which means that each token only needs to run against a subset of the overall model weights.",
+          "Qwen 3.5 usually runs 10 experts per token, but this setup dropped that to 4 while claiming that the biggest quality drop-off occurred at 3.",
+          "Here's a fascinating piece of research by Dan Woods, who managed to get a custom version of Qwen3.5-397B-A17B running at 5.5+ tokens/second on a 48GB MacBook Pr…"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-18T23:56:46.000Z",
+        "publishedLabelZh": "8 小时前",
+        "publishedLabelEn": "8 hours ago",
+        "score": 36.1,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 487,
+        "bodySummary": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally . Here's a fascinating piece of research by Dan Woods, who managed to get a custom version of Qwen3.5-397B-A17B running at 5.5+ tokens/second on a 48GB MacBook Pro M3 Max despite that model taking up 209GB (120GB quantized) on disk. Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "simonwillison.net-7c94606786d3",
+        "rank": 2,
+        "sectionLabelZh": "主线2｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 2 | Agents and developer tooling",
+        "titleZh": "Simon Willison｜Agent 与开发者工具",
+        "titleEn": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+        "briefTitleZh": "Simon Willison｜Agent 与开发者工具",
+        "briefTitleEn": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+        "kickerZh": "Simon Willison · Agent 与开发者工具",
+        "kickerEn": "Simon Willison · Agents and developer tooling",
+        "summaryZh": "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
+        "summaryEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The most useful detail in the piece is this…",
+        "deckZh": "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "deckEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "文中最值得记的一处细节是：- GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $5… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows…",
+          "The most useful detail in the piece is this: - GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52 - 17th March 2026 - My fireside chat about age… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。",
+        "whatChangedEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/18/snowflake-cortex-ai/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/18/snowflake-cortex-ai/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "- GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52 - 17th March 2026 - My fireside chat about age…",
+          "Snowflake Cortex AI Escapes Sandbox and Executes Malware ( via ) PromptArmor report on a 提示注入 attack chain i…",
+          "The attack started when a Cortex user asked the agent to review a GitHub repository that had a 提示注入 attack h…"
+        ],
+        "evidenceBulletsEn": [
+          "- GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52 - 17th March 2026 - My fireside chat about agentic engineering at the Pragmatic Summit…",
+          "Snowflake Cortex AI Escapes Sandbox and Executes Malware ( via ) PromptArmor report on a prompt injection attack chain in Snowflake's Cortex Agent , now fixed.",
+          "The attack started when a Cortex user asked the agent to review a GitHub repository that had a prompt injection attack hidden at the bottom of the README."
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-18T17:43:49.000Z",
+        "publishedLabelZh": "14 小时前",
+        "publishedLabelEn": "14 hours ago",
+        "score": 30,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 285,
+        "bodySummary": "Snowflake Cortex AI Escapes Sandbox and Executes Malware ( via ) PromptArmor report on a prompt injection attack chain in Snowflake's Cortex Agent , now fixed. The attack started when a Cortex user asked the agent to review a GitHub repository that had a prompt injection attack hidden at the bottom of the README. The attack caused the agent to execute this code…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "qbitai.com-4e6bf395be42",
+        "rank": 3,
+        "sectionLabelZh": "主线3｜AI 产品体验",
+        "sectionLabelEn": "Thread 3 | AI product experience",
+        "titleZh": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "titleEn": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "briefTitleZh": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "briefTitleEn": "小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听",
+        "kickerZh": "量子位 (QbitAI) · AI 产品体验",
+        "kickerEn": "量子位 (QbitAI) · AI product experience",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。 文中最值得记的一处细节是：其中，OpenClaw贡献了675B Token的使用量…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior. The most useful detail in the piece is this: 其中…",
+        "deckZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。",
+        "deckEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades.",
+        "narrativeZh": [
+          "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。",
+          "文中最值得记的一处细节是：其中，OpenClaw贡献了675B Token的使用量，Kilo Code和Roo Code也分别达到了50.1B和38.6B Token… 一旦用户开始在日常动作里反复用到它，竞争维度就会从“能力有没有”转向“入口深不深、习惯强不强”。",
+          "所以后面该盯的，不只是发布节奏，而是使用频率、留存和付费这些更硬的产品信号。后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。"
+        ],
+        "narrativeEn": [
+          "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior.",
+          "The most useful detail in the piece is this: 其中，OpenClaw贡献了675B Token的使用量，Kilo Code和Roo Code也分别达到了50.1B和38.6B Token，这些硬核的代码开发工具充分验证了它在生产环境中的极致可靠性 Once people start using a feature inside everyday tasks…",
+          "So the next signals to watch are not more launch copy, but usage frequency, retention, and eventually monetization. The next signal is behavior: more frequent use, new habits…"
+        ],
+        "whatChangedZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。",
+        "whatChangedEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades.",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
+        "watchNextZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "watchNextEn": "The next signal is behavior: more frequent use, new habits, and eventually some retention or monetization proof.",
+        "tag": "AI",
+        "source": "qbitai.com",
+        "sourceName": "量子位 (QbitAI)",
+        "sourceUrl": "https://www.qbitai.com/2026/03/389038.html",
+        "relatedLinks": [
+          {
+            "labelZh": "量子位 (QbitAI) 原文",
+            "labelEn": "量子位 (QbitAI) source",
+            "url": "https://www.qbitai.com/2026/03/389038.html"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.qbitai.com/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "其中，OpenClaw贡献了675B Token的使用量，Kilo Code和Roo Code也分别达到了50.1B和38.6B Token，这些硬核的代码开发工具充分验证了它在生产环境中的极致可靠性。",
+          "搭配轻量级的MTP多Token预测层，模型在处理高达1M Token超长上下文时依然能够保持极快的生成速度。",
+          "它们亮相于3月11日，随后在OpenRouter上的调用量连续多日霸榜，总使用量迅速突破了1T Token。"
+        ],
+        "evidenceBulletsEn": [
+          "其中，OpenClaw贡献了675B Token的使用量，Kilo Code和Roo Code也分别达到了50.1B和38.6B Token，这些硬核的代码开发工具充分验证了它在生产环境中的极致可靠性。",
+          "搭配轻量级的MTP多Token预测层，模型在处理高达1M Token超长上下文时依然能够保持极快的生成速度。",
+          "它们亮相于3月11日，随后在OpenRouter上的调用量连续多日霸榜，总使用量迅速突破了1T Token。"
+        ],
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "impactZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "impactEn": "The next signal is behavior: more frequent use, new habits, and eventually some retention or monetization proof.",
+        "publishedAt": "2026-03-19T01:18:29.000Z",
+        "publishedLabelZh": "6 小时前",
+        "publishedLabelEn": "6 hours ago",
+        "score": 24.8,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 68,
+        "bodySummary": "占领OpenRouter调用量榜单第一的神秘模型Hunter Alpha，终于揭开神秘面纱—— 既不是GPT，也不是DeepSeek，而是来自小米的万亿旗舰模型MiMo-V2-Pro。 就在今天凌晨，小米团队官宣了MiMo-V2家族三款新模型，分别是Pro、Omni和TTS。 在这之前，网友们对这两款模型的身份可谓是猜什么的都有，有的说是GPT，也有人觉得是DeepSeek。 MiMo-V2-Pro参数规模万亿，支持百万级长文本，非常擅长应对真实场景中的任务。 它在Artificial Analysis全球智能指数里拿了全球第八和国内第二的好成绩。 无论是调用工具还是规划复杂任务，它的表现也都相当扎实，能直接用Three.js写出一个带有动态背景和升级路线的3D塔防游戏代码。 作为整个家族的旗舰大模型，MiMo-V2-Pro核心设计围绕 真实世界的智能体工作流 展开。 它的模型总参数量突破了1T大关，激活参数达到42B…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "arxiv.org-6439bd0ad5c3",
+        "rank": 4,
+        "sectionLabelZh": "主线4｜前沿研究与能力边界",
+        "sectionLabelEn": "Thread 4 | Frontier research and capability shifts",
+        "titleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "titleEn": "Recursive Language Models Meet Uncertainty: The Surprising Effectiveness of Self-Reflective Program Search for Long Context",
+        "briefTitleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "briefTitleEn": "Recursive Language Models Meet Uncertainty: The Surprising Effectiveness of Self-Reflective Program Search for Long Context",
+        "kickerZh": "arXiv cs.CL · 前沿研究与能力边界",
+        "kickerEn": "arXiv cs.CL · Frontier research and capability shifts",
+        "summaryZh": "arXiv cs.CL放出了一项围绕上下文窗口的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：arXiv:2603.15653v1 Announce Type: new Abstract…",
+        "summaryEn": "arXiv cs.CL published a research-led update around context window, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "deckZh": "arXiv cs.CL放出了一项围绕上下文窗口的研究型更新，指向的是推动能力边界继续外扩。",
+        "deckEn": "arXiv cs.CL published a research-led update around context window, aimed at pushing the capability frontier outward.",
+        "narrativeZh": [
+          "arXiv cs.CL放出了一项围绕上下文窗口的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "目前能确认的公开信号是：arXiv:2603.15653v1 Announce Type: new Abstract: Long-context handling re… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "arXiv cs.CL published a research-led update around context window, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward.",
+          "The clearest public signal so far is this: arXiv:2603.15653v1 Announce Type: new Abstract: Long-context handling remains a core challenge for language models… Research updates do not always become products quickly…",
+          "Given the current pace, the most concrete thing to track is: The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products."
+        ],
+        "whatChangedZh": "arXiv cs.CL放出了一项围绕上下文窗口的研究型更新，指向的是推动能力边界继续外扩。",
+        "whatChangedEn": "arXiv cs.CL published a research-led update around context window, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "arxiv.org",
+        "sourceName": "arXiv cs.CL",
+        "sourceUrl": "https://arxiv.org/abs/2603.15653",
+        "relatedLinks": [
+          {
+            "labelZh": "arXiv cs.CL 原文",
+            "labelEn": "arXiv cs.CL source",
+            "url": "https://arxiv.org/abs/2603.15653"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://rss.arxiv.org/rss/cs.CL"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "arXiv:2603.15653v1 Announce Type: new Abstract: Long-context handling remains a core challenge for language models…",
+          "Recent works like Recursive Language Models (RLM) have approached this challenge by agentic way of decomposing long cont…"
+        ],
+        "evidenceBulletsEn": [
+          "arXiv:2603.15653v1 Announce Type: new Abstract: Long-context handling remains a core challenge for language models: even with extended context windows…",
+          "Recent works like Recursive Language Models (RLM) have approached this challenge by agentic way of decomposing long contexts into recursive sub-calls through pr…"
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-19T04:00:00.000Z",
+        "publishedLabelZh": "4 小时前",
+        "publishedLabelEn": "4 hours ago",
+        "score": 20.1,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "arxiv.org-66394c80fe44",
+        "rank": 5,
+        "sectionLabelZh": "补充一｜前沿研究与能力边界",
+        "sectionLabelEn": "Brief 1 | Frontier research and capability shifts",
+        "titleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "titleEn": "MedArena: Comparing LLMs for Medicine-in-the-Wild Clinician Preferences",
+        "briefTitleZh": "arXiv cs.CL｜前沿研究与能力边界",
+        "briefTitleEn": "MedArena: Comparing LLMs for Medicine-in-the-Wild Clinician Preferences",
+        "kickerZh": "arXiv cs.CL · 前沿研究与能力边界",
+        "kickerEn": "arXiv cs.CL · Frontier research and capability shifts",
+        "summaryZh": "arXiv cs.CL把评测、基准测试继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：arXiv:2603.15677v1 Announce Type…",
+        "summaryEn": "arXiv cs.CL moved evaluation and benchmark deeper into product and developer workflows, which is really about pushing the capability frontier outward… The clearest public signal so far is this: arXiv:2603.15677v1 Announce Type…",
+        "deckZh": "arXiv cs.CL把评测、基准测试继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。",
+        "deckEn": "arXiv cs.CL moved evaluation and benchmark deeper into product and developer workflows, which is really about pushing the capability frontier outward.",
+        "narrativeZh": [
+          "arXiv cs.CL把评测、基准测试继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "目前能确认的公开信号是：arXiv:2603.15677v1 Announce Type: new Abstract: Large language models (L… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "arXiv cs.CL moved evaluation and benchmark deeper into product and developer workflows, which is really about pushing the capability frontier outward…",
+          "The clearest public signal so far is this: arXiv:2603.15677v1 Announce Type: new Abstract…",
+          "Given the current pace, the most concrete thing to track is: The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products."
+        ],
+        "whatChangedZh": "arXiv cs.CL把评测、基准测试继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。",
+        "whatChangedEn": "arXiv cs.CL moved evaluation and benchmark deeper into product and developer workflows, which is really about pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "arxiv.org",
+        "sourceName": "arXiv cs.CL",
+        "sourceUrl": "https://arxiv.org/abs/2603.15677",
+        "relatedLinks": [
+          {
+            "labelZh": "arXiv cs.CL 原文",
+            "labelEn": "arXiv cs.CL source",
+            "url": "https://arxiv.org/abs/2603.15677"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://rss.arxiv.org/rss/cs.CL"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "arXiv:2603.15677v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly central to clinician workf…",
+          "However, current 评测 methods for medical LLMs rely heavily on static…"
+        ],
+        "evidenceBulletsEn": [
+          "arXiv:2603.15677v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly central to clinician workflows…",
+          "However, current evaluation methods for medical LLMs rely heavily on static…"
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-19T04:00:00.000Z",
+        "publishedLabelZh": "4 小时前",
+        "publishedLabelEn": "4 hours ago",
+        "score": 20.1,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "marktechpost.com-cdeb7e60e299",
+        "rank": 6,
+        "sectionLabelZh": "补充2｜前沿研究与能力边界",
+        "sectionLabelEn": "Brief 2 | Frontier research and capability shifts",
+        "titleZh": "MarkTechPost｜前沿研究与能力边界",
+        "titleEn": "Meet Mamba-3: A New State Space Model Frontier with 2x Smaller States and Enhanced MIMO Decoding Hardware Efficiency",
+        "briefTitleZh": "MarkTechPost｜前沿研究与能力边界",
+        "briefTitleEn": "Meet Mamba-3: A New State Space Model Frontier with 2x Smaller States and Enhanced MIMO Decoding Hardware Efficiency",
+        "kickerZh": "MarkTechPost · 前沿研究与能力边界",
+        "kickerEn": "MarkTechPost · Frontier research and capability shifts",
+        "summaryZh": "MarkTechPost放出了一项围绕推理、记忆的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
+        "summaryEn": "MarkTechPost published a research-led update around inference and memory, aimed at pushing the capability frontier outward… The clearest public signal so far is this…",
+        "deckZh": "MarkTechPost放出了一项围绕推理、记忆的研究型更新，指向的是推动能力边界继续外扩。",
+        "deckEn": "MarkTechPost published a research-led update around inference and memory, aimed at pushing the capability frontier outward.",
+        "narrativeZh": [
+          "MarkTechPost放出了一项围绕推理、记忆的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "目前能确认的公开信号是：The scaling of 推理-time compute has become a primary driver for La… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "MarkTechPost published a research-led update around inference and memory, aimed at pushing the capability frontier outward…",
+          "The clearest public signal so far is this: The scaling of inference-time compute has become a primary driver for Large Language Model (LLM) performance… Research updates do not always become products quickly…",
+          "Given the current pace, the most concrete thing to track is: The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products."
+        ],
+        "whatChangedZh": "MarkTechPost放出了一项围绕推理、记忆的研究型更新，指向的是推动能力边界继续外扩。",
+        "whatChangedEn": "MarkTechPost published a research-led update around inference and memory, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "marktechpost.com",
+        "sourceName": "MarkTechPost",
+        "sourceUrl": "https://www.marktechpost.com/2026/03/18/meet-mamba-3-a-new-state-space-model-frontier-with-2x-smaller-states-and-enhanced-mimo-decoding-hardware-efficiency/",
+        "relatedLinks": [
+          {
+            "labelZh": "MarkTechPost 原文",
+            "labelEn": "MarkTechPost source",
+            "url": "https://www.marktechpost.com/2026/03/18/meet-mamba-3-a-new-state-space-model-frontier-with-2x-smaller-states-and-enhanced-mimo-decoding-hardware-efficiency/"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.marktechpost.com/feed/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "The scaling of 推理-time compute has become a primary driver for Large Language Model (LLM) performance…",
+          "While Transformer-based architectures remain the standard…",
+          "A team of researchers from Carnegie Mellon University …"
+        ],
+        "evidenceBulletsEn": [
+          "The scaling of inference-time compute has become a primary driver for Large Language Model (LLM) performance…",
+          "While Transformer-based architectures remain the standard, their quadratic computational complexity and linear memory requirements create significant deployment…",
+          "A team of researchers from Carnegie Mellon University …"
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-19T06:01:22.000Z",
+        "publishedLabelZh": "2 小时前",
+        "publishedLabelEn": "2 hours ago",
+        "score": 19.2,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "low-signal",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      }
+    ],
+    "llmGenerated": false,
+    "titleRegenerated": true,
+    "titleRegenReason": "Similar to digest from 2026-03-18"
+  },
+  {
     "slug": "ai-daily-2026-03-18",
     "date": "2026-03-18",
     "titleZh": "AI 日报｜Retrieval +  multimodal",

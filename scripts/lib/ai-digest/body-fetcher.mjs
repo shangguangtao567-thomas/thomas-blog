@@ -68,9 +68,8 @@ function collectCandidateBlocks(html = '') {
     blocks.push(match[0]);
   }
 
-  if (blocks.length === 0) {
-    blocks.push(body);
-  }
+  // Always include body as a candidate so pickBestBlock can compare
+  blocks.push(body);
 
   return blocks;
 }

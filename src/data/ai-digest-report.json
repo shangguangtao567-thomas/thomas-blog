@@ -1,28 +1,28 @@
 {
   "status": "success",
-  "date": "2026-03-18",
-  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-18",
+  "date": "2026-03-19",
+  "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-19",
   "itemCount": 6,
   "limitedUpdateWindow": false,
   "bodyCoverage": {
     "targeted": 5,
-    "succeeded": 4,
-    "totalWords": 4354,
-    "ratio": 0.8
+    "succeeded": 3,
+    "totalWords": 840,
+    "ratio": 0.6
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-18）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-18>\n今日导语：今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱…\n今天展开：\n1. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证…\n2. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把围绕多模态、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验…\n3. OpenAI｜Agent 与开发者工具 —— OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路…\n4. Hugging Face｜前沿研究与能力边界 —— Hugging Face把围绕开源、评测的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-18)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-18>\nLead: This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems…\nInside today:\n1. Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI — Hugging Face opened up work around memory and benchmark…\n2. Holotron-12B - High Throughput Computer Use Agent — Hugging Face opened up work around multimodal and benchmark…\n3. Introducing GPT-5.4 mini and nano — OpenAI moved multimodal and reasoning deeper into product and developer workflows…",
-  "generatedAt": "2026-03-18T07:01:56.538Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-19）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-19>\n今日导语：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从…\n今天展开：\n1. Alibaba｜检索、多模态与记忆系统 —— Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力…\n2. Simon Willison｜Agent 与开发者工具 —— Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编…\n3. 小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听 —— 量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常…\n4. arXiv cs.CL｜前沿研究与能力边界 —— arXiv cs.CL放出了一项围绕上下文窗口的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-19)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-19>\nLead: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval…\nInside today:\n1. Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally — Alibaba moved memory and evaluation deeper into product and developer workflows…\n2. Snowflake Cortex AI Escapes Sandbox and Executes Malware — Simon Willison moved prompt injection and workflow deeper into product and developer workf…\n3. 小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听 — 量子位 (QbitAI) put out a meaningful update around product experience upgrades…",
+  "generatedAt": "2026-03-19T07:42:10.955Z",
   "themes": [
-    {
-      "themeZh": "检索、多模态与记忆系统",
-      "themeEn": "Retrieval, multimodal, and memory systems",
-      "count": 2
-    },
     {
       "themeZh": "前沿研究与能力边界",
       "themeEn": "Frontier research and capability shifts",
-      "count": 2
+      "count": 3
+    },
+    {
+      "themeZh": "检索、多模态与记忆系统",
+      "themeEn": "Retrieval, multimodal, and memory systems",
+      "count": 1
     },
     {
       "themeZh": "Agent 与开发者工具",

@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-03-19",
+    "slug": "x-draft-2026-03-19",
+    "digestSlug": "ai-daily-2026-03-19",
+    "digestPath": "/blog/ai-daily-2026-03-19",
+    "angleZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "angleEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "hooksZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "前沿研究与能力边界 这条主线，今天又被往前推了一截。",
+      "如果你只看今天一条 AI 结论，我会看这个：Alibaba｜检索、多模态与记忆系统"
+    ],
+    "hooksEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "Frontier research and capability shifts moved another step forward today.",
+      "If I had to compress today's AI signal into one takeaway, I would start here: Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally"
+    ],
+    "shortPostZh": "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。\n这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。\n另一条同时在加速的线是：检索、多模态与记忆系统。\n完整日报：https://blog.lincept.com/blog/ai-daily-2026-03-19",
+    "shortPostEn": "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.\nThese lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.\nThe second line accelerating at the same time is Retrieval, multimodal, and memory systems.\nFull digest: https://blog.lincept.com/blog/ai-daily-2026-03-19",
+    "threadZh": [
+      "今天最值得发到 X 的，不是 6 条新闻，而是 1 个判断：今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Simon Willison、量子位 (QbitAI)、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+      "1. Alibaba｜检索、多模态与记忆系统\n这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+      "2. Simon Willison｜Agent 与开发者工具\n行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+      "3. 小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听\n当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+      "如果你想看完整证据链，我把今天的 digest 放这里：https://blog.lincept.com/blog/ai-daily-2026-03-19"
+    ],
+    "threadEn": [
+      "The real story today is not six AI updates. It is one market shift: This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Simon Willison, 量子位 (QbitAI), arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+      "1. Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally\nThese lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+      "2. Snowflake Cortex AI Escapes Sandbox and Executes Malware\nThe competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+      "3. 小米神操作！认领榜一神秘模型Hunter Alpha，龙虾之父都忍不住打听\nOnce capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
+      "Full evidence chain: https://blog.lincept.com/blog/ai-daily-2026-03-19"
+    ],
+    "ctaUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-19",
+    "ctaLabelZh": "阅读完整日报",
+    "ctaLabelEn": "Read the full digest",
+    "reviewPath": "x-drafts/2026-03-19.md"
+  },
+  {
     "date": "2026-03-18",
     "slug": "x-draft-2026-03-18",
     "digestSlug": "ai-daily-2026-03-18",
