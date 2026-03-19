@@ -5,33 +5,23 @@
   "itemCount": 6,
   "limitedUpdateWindow": false,
   "bodyCoverage": {
-    "targeted": 5,
+    "targeted": 4,
     "succeeded": 4,
-    "totalWords": 970,
-    "ratio": 0.8
+    "totalWords": 2288,
+    "ratio": 1
   },
-  "messageZh": "✅ AI 日报更新成功（2026-03-19）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-19>\n今日导语：今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前…\n今天展开：\n1. Alibaba｜检索、多模态与记忆系统 —— Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力…\n2. Simon Willison｜Agent 与开发者工具 —— Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编…\n3. 英伟达首台DGX GB300，老黄亲自登门送给他 —— 量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常…\n4. AI球球直播喊话全人类：开源脑机接口，开源科技文明 —— 量子位 (QbitAI)把多模态检索与记忆和更明确的产品化动作绑在一起，说明这件事正在往业务入口靠近。看上去像底层升级…",
-  "messageEn": "✅ AI digest updated successfully (2026-03-19)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-19>\nLead: This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems…\nInside today:\n1. Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally — Alibaba moved memory and evaluation deeper into product and developer workflows…\n2. Snowflake Cortex AI Escapes Sandbox and Executes Malware — Simon Willison moved prompt injection and workflow deeper into product and developer workf…\n3. 英伟达首台DGX GB300，老黄亲自登门送给他 — 量子位 (QbitAI) put out a meaningful update around product experience upgrades…",
-  "generatedAt": "2026-03-19T08:08:09.328Z",
+  "messageZh": "✅ AI 日报更新成功（2026-03-19）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-19>\n今日导语：今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、Hugging Face、量子位 (QbitAI)…\n今天展开：\n1. Alibaba｜检索、多模态与记忆系统 —— Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力…\n2. Hugging Face｜检索、多模态与记忆系统 —— Hugging Face把围绕上下文窗口、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用…\n3. Simon Willison｜Agent 与开发者工具 —— Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编…\n4. 英伟达首台DGX GB300，老黄亲自登门送给他 —— 量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态…",
+  "messageEn": "✅ AI digest updated successfully (2026-03-19)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-19>\nLead: This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems…\nInside today:\n1. Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally — Alibaba moved memory and evaluation deeper into product and developer workflows…\n2. Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI — Hugging Face opened up work around context window and benchmark…\n3. Snowflake Cortex AI Escapes Sandbox and Executes Malware — Simon Willison moved prompt injection and workflow deeper into product and developer workf…",
+  "generatedAt": "2026-03-19T08:27:49.385Z",
   "themes": [
     {
       "themeZh": "检索、多模态与记忆系统",
       "themeEn": "Retrieval, multimodal, and memory systems",
-      "count": 2
-    },
-    {
-      "themeZh": "前沿研究与能力边界",
-      "themeEn": "Frontier research and capability shifts",
-      "count": 2
+      "count": 5
     },
     {
       "themeZh": "Agent 与开发者工具",
       "themeEn": "Agents and developer tooling",
-      "count": 1
-    },
-    {
-      "themeZh": "AI 产品体验",
-      "themeEn": "AI product experience",
       "count": 1
     }
   ]

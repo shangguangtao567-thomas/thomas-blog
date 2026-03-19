@@ -3,41 +3,31 @@
     "slug": "ai-daily-2026-03-19",
     "date": "2026-03-19",
     "titleZh": "AI 日报｜Retrieval +  multimodal",
-    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Agents and developer tooling, AI product experience",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Simon Willison…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
-    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、Hugging Face、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, Hugging Face…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、Hugging Face、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, Hugging Face, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-19",
     "itemCount": 6,
     "heroTitleZh": "Alibaba｜检索、多模态与记忆系统",
     "heroTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
-      "targeted": 5,
+      "targeted": 4,
       "succeeded": 4,
-      "totalWords": 970,
-      "ratio": 0.8
+      "totalWords": 2288,
+      "ratio": 1
     },
     "themes": [
       {
         "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
-        "count": 2
-      },
-      {
-        "themeZh": "前沿研究与能力边界",
-        "themeEn": "Frontier research and capability shifts",
-        "count": 2
+        "count": 5
       },
       {
         "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
-        "count": 1
-      },
-      {
-        "themeZh": "AI 产品体验",
-        "themeEn": "AI product experience",
         "count": 1
       }
     ],
@@ -51,8 +41,20 @@
         "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
         "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "8 小时前",
-        "publishedLabelEn": "8 hours ago"
+        "publishedLabelZh": "9 小时前",
+        "publishedLabelEn": "9 hours ago"
+      },
+      {
+        "id": "huggingface.co-310658f5b680",
+        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
+        "titleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
+        "tag": "Data",
+        "summaryZh": "Hugging Face把围绕上下文窗口、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Hugging Face opened up work around context window and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "1 天前",
+        "publishedLabelEn": "1 day ago"
       },
       {
         "id": "simonwillison.net-7c94606786d3",
@@ -63,20 +65,8 @@
         "summaryEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The most useful detail in the piece is this…",
         "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "14 小时前",
-        "publishedLabelEn": "14 hours ago"
-      },
-      {
-        "id": "qbitai.com-432762e034ba",
-        "titleZh": "英伟达首台DGX GB300，老黄亲自登门送给他",
-        "titleEn": "英伟达首台DGX GB300，老黄亲自登门送给他",
-        "tag": "AI",
-        "summaryZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。 文中最值得记的一处细节是：大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起…",
-        "summaryEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior. The most useful detail in the piece is this…",
-        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
-        "whyItMattersEn": "Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
-        "publishedLabelZh": "1 小时内",
-        "publishedLabelEn": "within 1 hour"
+        "publishedLabelZh": "15 小时前",
+        "publishedLabelEn": "15 hours ago"
       }
     ],
     "llmGenerated": false,
