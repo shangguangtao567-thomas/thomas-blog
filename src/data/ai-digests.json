@@ -4,69 +4,74 @@
     "date": "2026-03-19",
     "titleZh": "AI 日报｜Retrieval +  multimodal",
     "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、Hugging Face、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
-    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, Hugging Face…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、Hugging Face、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
-    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, Hugging Face, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Hugging Face, Simon Willison…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Hugging Face, Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-19",
     "itemCount": 6,
-    "heroTitleZh": "Alibaba｜检索、多模态与记忆系统",
-    "heroTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+    "heroTitleZh": "Hugging Face｜检索、多模态与记忆系统",
+    "heroTitleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
       "targeted": 4,
       "succeeded": 4,
-      "totalWords": 2288,
+      "totalWords": 2280,
       "ratio": 1
     },
     "themes": [
       {
         "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
-        "count": 5
+        "count": 3
       },
       {
         "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
+        "count": 2
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
         "count": 1
       }
     ],
     "featuredItems": [
       {
-        "id": "simonwillison.net-0a402a421780",
-        "titleZh": "Alibaba｜检索、多模态与记忆系统",
-        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
-        "tag": "Data",
-        "summaryZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
-        "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
-        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "9 小时前",
-        "publishedLabelEn": "9 hours ago"
-      },
-      {
         "id": "huggingface.co-310658f5b680",
         "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
         "tag": "Data",
-        "summaryZh": "Hugging Face把围绕上下文窗口、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
-        "summaryEn": "Hugging Face opened up work around context window and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
+        "summaryZh": "Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Hugging Face opened up work around memory and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
         "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
         "publishedLabelZh": "1 天前",
         "publishedLabelEn": "1 day ago"
       },
       {
-        "id": "simonwillison.net-7c94606786d3",
-        "titleZh": "Simon Willison｜Agent 与开发者工具",
-        "titleEn": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+        "id": "simonwillison.net-0a402a421780",
+        "titleZh": "Alibaba｜检索、多模态与记忆系统",
+        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "tag": "Data",
+        "summaryZh": "Alibaba把评测、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Alibaba moved evaluation and inference deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "11 小时前",
+        "publishedLabelEn": "11 hours ago"
+      },
+      {
+        "id": "qbitai.com-632099a9a997",
+        "titleZh": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "titleEn": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
         "tag": "Tools",
-        "summaryZh": "Simon Willison把提示注入、工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
-        "summaryEn": "Simon Willison moved prompt injection and workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The most useful detail in the piece is this…",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling. 量子位 (QbitAI) is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow…",
         "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "15 小时前",
-        "publishedLabelEn": "15 hours ago"
+        "publishedLabelZh": "2 小时前",
+        "publishedLabelEn": "2 hours ago"
       }
     ],
     "llmGenerated": false,
