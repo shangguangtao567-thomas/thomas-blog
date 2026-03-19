@@ -317,13 +317,30 @@ async function buildDigestPages(template, digests) {
     const bodyContent = bodyHtml ||
       `<p style="color:#888;">Full content not available. Visit the <a href="${SITE_URL}/briefing">briefing archive</a>.</p>`;
 
+    // Build SEO keywords from themes + topics in the digest
+    const topicTags = (digest.themes || []).map(t => (t.themeEn || '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')).filter(Boolean);
+    const seoKeywords = ['AI Daily', 'AI briefing', 'daily AI digest', ...topicTags.slice(0, 5)].filter(Boolean);
+
     const route = {
       title: `${digest.titleEn || frontmatter.titleEn || slug} · Thomas`,
       description: truncateText(digest.excerptEn || frontmatter.excerptEn || '', 155),
       url: routeUrl(`blog/${slug}`),
       type: 'article',
       publishedAt: digest.date ? new Date(digest.date).toISOString() : undefined,
-      keywords: ['AI Daily', 'digest'],
+      keywords: seoKeywords,
+      jsonLd: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: digest.titleEn || slug,
+        description: truncateText(digest.excerptEn || '', 200),
+        datePublished: digest.date ? new Date(digest.date).toISOString() : undefined,
+        author: { '@type': 'Person', name: 'Thomas' },
+        publisher: { '@type': 'Person', name: 'Thomas' },
+        url: routeUrl(`blog/${slug}`),
+        keywords: seoKeywords.join(', '),
+        articleSection: 'AI Briefing',
+        inLanguage: 'en',
+      }),
     };
 
     const bodyPageHtml = `
