@@ -12,6 +12,7 @@ const POSTS_FILE = path.join(DATA_DIR, 'posts.json');
 const POSTS_INDEX_FILE = path.join(DATA_DIR, 'posts-index.json');
 const DIGESTS_FILE = path.join(DATA_DIR, 'ai-digests.json');
 
+const POSTS_DIR = path.join(ROOT, 'posts');
 const siteConfig = loadSiteConfig();
 const SITE_URL = (process.env.SITE_URL || siteConfig.siteUrl || 'https://blog.lincept.com').replace(/\/$/, '');
 const DEFAULT_TITLE = `Thomas · AI, Open Source, and Agent-era Engineering`;
@@ -112,7 +113,8 @@ function injectIntoHead(html, snippet) {
 }
 
 function injectRootContent(html, content) {
-  return html.replace('<div id="root"></div>', `<div id="root">${content}</div>`);
+  // Use regex to replace entire root div (not just empty ones)
+  return html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${content}</div>`);
 }
 
 function setTitle(html, title) {
@@ -194,7 +196,7 @@ function renderStaticHome({ posts, digests }) {
   `).join('\n');
 
   const digestItems = digests.slice(0, 3).map(digest => `
-    <a href="${digest.path || `/briefing/${digest.slug}`}" class="post-item" style="text-decoration: none;">
+    <a href="${digest.path || `/blog/${digest.slug}`}" class="post-item" style="text-decoration: none;">
       <span class="post-item-date">${formatDateShort(digest.date)}</span>
       <div class="post-item-title">${escapeHtml(digest.titleEn)}</div>
       <span class="post-item-tag">digest</span>
@@ -224,6 +226,145 @@ function renderStaticHome({ posts, digests }) {
       </section>
     </div>
   `;
+}
+
+// --- AI Daily Digest page builder ---
+function parseDigestFrontmatter(content) {
+  const lines = content.split('\n');
+  if (lines[0] !== '---') return {};
+  const result = {};
+  let i = 1;
+  while (i < lines.length && lines[i] !== '---') {
+    const colonIdx = lines[i].indexOf(':');
+    if (colonIdx > 0) {
+      const key = lines[i].slice(0, colonIdx).trim();
+      const value = lines[i].slice(colonIdx + 1).trim().replace(/^["']|["']$/g, '');
+      result[key] = value;
+    }
+    i++;
+  }
+  return result;
+}
+
+function extractContentEn(content) {
+  const marker = '<!-- CONTENT_EN -->';
+  const idx = content.indexOf(marker);
+  if (idx === -1) return content;
+  return content.slice(idx + marker.length).trim();
+}
+
+function stripFrontmatter(content) {
+  if (!content.startsWith('---')) return content;
+  const end = content.indexOf('---', 3);
+  if (end === -1) return content;
+  return content.slice(end + 3).trim();
+}
+
+async function buildDigestPages(template, digests) {
+  if (!digests || digests.length === 0) {
+    console.log('  (no AI daily digests to prerender)');
+    return;
+  }
+
+  // Read all ai-daily markdown files
+  const digestFiles = fs.readdirSync(POSTS_DIR)
+    .filter(f => f.startsWith('ai-daily-') && f.endsWith('.md'))
+    .sort()
+    .reverse();
+
+  const slugToMarkdown = {};
+  for (const file of digestFiles) {
+    const content = fs.readFileSync(path.join(POSTS_DIR, file), 'utf-8');
+    slugToMarkdown[file] = content;
+  }
+
+  let count = 0;
+  for (const digest of digests) {
+    // Find matching markdown file
+    const slug = digest.slug || `ai-daily-${digest.date}`;
+    const possibleFiles = [
+      `${digest.date}-${slug}.md`,
+      `${digest.date}-${slug.replace('/', '-')}.md`,
+    ];
+    let mdContent = null;
+    let mdFile = null;
+    for (const f of possibleFiles) {
+      if (fs.existsSync(path.join(POSTS_DIR, f))) {
+        mdContent = fs.readFileSync(path.join(POSTS_DIR, f), 'utf-8');
+        mdFile = f;
+        break;
+      }
+    }
+    if (!mdContent) {
+      // Try glob-style search
+      const matched = digestFiles.find(f => f.includes(digest.date) && f.includes('ai-daily'));
+      if (matched) {
+        mdContent = slugToMarkdown[matched];
+        mdFile = matched;
+      }
+    }
+
+    if (!mdContent) {
+      console.warn(`  [digest] no markdown for ${slug}, skipping HTML generation`);
+      continue;
+    }
+
+    // Parse frontmatter + content
+    const frontmatter = parseDigestFrontmatter(mdContent);
+    const rawContent = extractContentEn(mdContent);
+    const bodyHtml = marked.parse(rawContent || '');
+
+    const bodyContent = bodyHtml ||
+      `<p style="color:#888;">Full content not available. Visit the <a href="${SITE_URL}/briefing">briefing archive</a>.</p>`;
+
+    const route = {
+      title: `${digest.titleEn || frontmatter.titleEn || slug} · Thomas`,
+      description: truncateText(digest.excerptEn || frontmatter.excerptEn || '', 155),
+      url: routeUrl(`blog/${slug}`),
+      type: 'article',
+      publishedAt: digest.date ? new Date(digest.date).toISOString() : undefined,
+      keywords: ['AI Daily', 'digest'],
+    };
+
+    const bodyPageHtml = `
+      <div class="site-container fade-in" style="padding-top: 3rem; padding-bottom: 6rem;">
+        <a href="/briefing" style="font-size: 0.8125rem; color: #6b6b6b; display: inline-flex; align-items: center; gap: 0.25rem; margin-bottom: 2.5rem; transition: color 0.15s;">← AI Briefing</a>
+        <header style="margin-bottom: 2.5rem;">
+          <span class="tag-pill" style="margin-bottom: 0.75rem; display: inline-block; background: #1f1f1f; color: #888; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 4px;">AI Daily</span>
+          <h1 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; line-height: 1.3; letter-spacing: -0.025em; margin-bottom: 0.75rem; margin-top: 0.5rem;">${escapeHtml(digest.titleEn || frontmatter.titleEn || slug)}</h1>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <span style="font-size: 0.8rem; color: #6b6b6b;">${formatDisplayDate(digest.date || frontmatter.date)}</span>
+            ${digest.itemCount ? `<span style="font-size: 0.8rem; color: #6b6b6b;">${digest.itemCount} items</span>` : ''}
+            ${digest.bodyCoverage?.totalWords ? `<span style="font-size: 0.8rem; color: #6b6b6b;">${digest.bodyCoverage.totalWords} words</span>` : ''}
+          </div>
+          ${(digest.excerptEn || frontmatter.excerptEn) ? `<p style="font-size: 0.9375rem; color: #888888; line-height: 1.65; margin-top: 1rem; border-left: 2px solid #1f1f1f; padding-left: 1rem;">${escapeHtml(digest.excerptEn || frontmatter.excerptEn)}</p>` : ''}
+        </header>
+        <hr style="border: none; border-top: 1px solid #1f1f1f; margin-bottom: 2.5rem;" />
+        <div class="prose-blog">${bodyContent}</div>
+        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1f1f1f;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <a href="/briefing" style="font-size: 0.8125rem; color: #6b6b6b;">← Back to AI Briefing</a>
+            <a href="https://x.com/intent/tweet?text=${encodeURIComponent(digest.titleEn || slug)}&url=${encodeURIComponent(routeUrl(`blog/${slug}`))}&via=GuangtaoS29545" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; color: #6b6b6b; display: inline-flex; align-items: center; gap: 0.3rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Share on X
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    let html = renderShell(template, route);
+    html = injectRootContent(html, bodyPageHtml);
+
+    // Write to file (same as writeRouteHtml but with pre-built html)
+    const normalized = `blog/${slug}`.replace(/^\/+|\/+$/g, '');
+    const targetDir = path.join(DIST_DIR, normalized);
+    fs.mkdirSync(targetDir, { recursive: true });
+    fs.writeFileSync(path.join(targetDir, 'index.html'), html);
+    count++;
+  }
+
+  console.log(`  ✓ built ${count} AI daily digest pages`);
 }
 
 async function main() {
@@ -281,7 +422,7 @@ async function main() {
       </div>
       <div>
         ${digests.map(digest => `
-          <a href="${digest.path || `/briefing/${digest.slug}`}" class="post-item" style="text-decoration: none;">
+          <a href="${digest.path || `/blog/${digest.slug}`}" class="post-item" style="text-decoration: none;">
             <span class="post-item-date">${formatDateShort(digest.date)}</span>
             <div style="flex: 1; min-width: 0;">
               <div class="post-item-title">${escapeHtml(digest.titleEn)}</div>
@@ -377,6 +518,13 @@ async function main() {
   sitemapEntries.unshift({ loc: routeUrl('blog'), lastmod: new Date().toISOString() });
   sitemapEntries.unshift({ loc: routeUrl('briefing'), lastmod: new Date().toISOString() });
 
+  // Add digest pages to sitemap
+  const digestSitemapEntries = digests.map(digest => ({
+    loc: routeUrl(`blog/${digest.slug}`),
+    lastmod: new Date(digest.date).toISOString(),
+  }));
+  sitemapEntries.push(...digestSitemapEntries);
+
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${sitemapEntries.map(entry => `
@@ -387,6 +535,9 @@ async function main() {
   `).join('')}
 </urlset>`;
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml);
+
+  // --- AI Daily Digest HTML pages ---
+  await buildDigestPages(template, digests);
 
   // Other static files
   write404Page();
