@@ -59,7 +59,7 @@ BANNED (EN): "game-changer", "paradigm shift", "ecosystem", "landscape", "exciti
 BANNED (EN): starting sentences with "This", "It", "The article"
 BANNED (ZH): "值得关注", "意义重大", "具有重要意义", "不得不说", "让我们拭目以待", "不言而喻"
 BANNED: restating the title or press-release language
-IMPORTANT: Each article's 3 paragraphs must be UNIQUE — do NOT reuse sentence patterns across articles. Reference specific details from the content.
+IMPORTANT: Each article's 3 paragraphs must be UNIQUE — do NOT reuse sentence patterns across articles. Reference specific details from the content. Write complete sentences — do NOT cut off mid-word or mid-sentence.
 
 Output ONLY valid JSON:
 {"narrativeEn":["...","...","..."],"narrativeZh":["...","...","..."],"titleEn":"better title if original is SEO junk, else empty string"}`;
@@ -80,8 +80,8 @@ function buildEditorialSummaryPrompt(items) {
 ${articleSummaries}
 
 Write:
-1. issueTitle: sharp 8-12 word title capturing today SPECIFIC theme
-2. heroSummary: 2 sentences connecting the articles into one narrative
+1. issueTitle: sharp 8-12 word title capturing today SPECIFIC theme. IMPORTANT: do NOT repeat the same phrase (3+ words) twice in the title.
+2. heroSummary: 2 sentences connecting the articles into one narrative. IMPORTANT: write complete sentences, do NOT cut off mid-word or mid-sentence.
 
 Output ONLY JSON:
 {"issueTitle":{"en":"...","zh":"..."},"heroSummary":{"en":"...","zh":"..."}}`;
@@ -159,14 +159,14 @@ export async function generatePerArticle(item) {
     // narrativeZh is optional but validate if present
     let narrativeZh = null;
     if (Array.isArray(parsed.narrativeZh) && parsed.narrativeZh.length === 3) {
-      narrativeZh = parsed.narrativeZh.map(s => trimText(s, 220)).filter(s => s.length >= 10);
+      narrativeZh = parsed.narrativeZh.map(s => trimText(s, 400)).filter(s => s.length >= 10);
       if (narrativeZh.length !== 3) narrativeZh = null;
     }
 
     return {
-      narrativeEn: parsed.narrativeEn.map(s => trimText(s, 220)),
+      narrativeEn: parsed.narrativeEn.map(s => trimText(s, 400)),
       narrativeZh,
-      titleEn: parsed.titleEn ? trimText(parsed.titleEn, 120) : '',
+      titleEn: parsed.titleEn ? trimText(parsed.titleEn, 180) : '',
     };
   } catch (error) {
     console.warn(`[llm-narrative] Per-article failed for "${item.title}": ${error.message}`);
