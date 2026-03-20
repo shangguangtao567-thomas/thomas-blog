@@ -18,7 +18,7 @@
     "heroTitleZh": "Alibaba｜检索、多模态与记忆系统",
     "heroTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
     "limitedUpdateWindow": false,
-    "generatedAt": "2026-03-20T06:10:27.894Z",
+    "generatedAt": "2026-03-20T06:12:35.512Z",
     "windowHours": 36,
     "themes": [
       {
@@ -536,7 +536,7 @@
     ],
     "llmGenerated": false,
     "titleRegenerated": true,
-    "titleRegenReason": "Similar to digest from 2026-03-19"
+    "titleRegenReason": "Similar to digest from 2026-03-20"
   },
   {
     "slug": "ai-daily-2026-03-19",

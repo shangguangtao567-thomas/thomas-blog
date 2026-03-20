@@ -12,7 +12,7 @@
   },
   "messageZh": "✅ AI 日报更新成功（2026-03-20）\n网站地址：<https://blog.lincept.com/blog/ai-daily-2026-03-20>\n今日导语：今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三…\n今天展开：\n1. Alibaba｜检索、多模态与记忆系统 —— Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力…\n2. 飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统 —— 量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型…\n3. 蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地 —— 量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态…\n4. 钉钉发布多款AI硬件 推出AI创新工场计划 —— 量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态…",
   "messageEn": "✅ AI digest updated successfully (2026-03-20)\nDigest URL: <https://blog.lincept.com/blog/ai-daily-2026-03-20>\nLead: This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems…\nInside today:\n1. Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally — Alibaba moved memory and evaluation deeper into product and developer workflows…\n2. 飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统 — 量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling…\n3. 蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地 — 量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory…",
-  "generatedAt": "2026-03-20T06:10:27.894Z",
+  "generatedAt": "2026-03-20T06:12:35.512Z",
   "themes": [
     {
       "themeZh": "检索、多模态与记忆系统",
