@@ -11,6 +11,15 @@
     ]
   },
   {
+    "slug": "ai-ml",
+    "labelZh": "AI",
+    "labelEn": "AI & ML",
+    "count": 1,
+    "latestPostSlugs": [
+      "ai-architecture-revolution"
+    ]
+  },
+  {
     "slug": "essay",
     "labelZh": "思考",
     "labelEn": "Essay",

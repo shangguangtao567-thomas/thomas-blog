@@ -1,5 +1,544 @@
 [
   {
+    "slug": "ai-daily-2026-03-20",
+    "date": "2026-03-20",
+    "titleZh": "AI 日报｜Retrieval +  multimodal",
+    "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Agents and developer tooling, Retrieval, multimodal, and memory systems",
+    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱…",
+    "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison…",
+    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "introZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
+    "introEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
+    "methodologyZh": "",
+    "methodologyEn": "",
+    "path": "/blog/ai-daily-2026-03-20",
+    "digestUrl": "https://blog.lincept.com/blog/ai-daily-2026-03-20",
+    "itemCount": 6,
+    "heroTitleZh": "Alibaba｜检索、多模态与记忆系统",
+    "heroTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+    "limitedUpdateWindow": false,
+    "generatedAt": "2026-03-20T06:10:27.894Z",
+    "windowHours": 36,
+    "themes": [
+      {
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "count": 3
+      },
+      {
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "count": 1
+      },
+      {
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "count": 1
+      },
+      {
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "count": 1
+      }
+    ],
+    "bodyCoverage": {
+      "targeted": 2,
+      "succeeded": 3,
+      "totalWords": 677,
+      "ratio": 1.5
+    },
+    "featuredItems": [
+      {
+        "id": "simonwillison.net-0a402a421780",
+        "titleZh": "Alibaba｜检索、多模态与记忆系统",
+        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "tag": "Data",
+        "summaryZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "1 天前",
+        "publishedLabelEn": "1 day ago"
+      },
+      {
+        "id": "qbitai.com-632099a9a997",
+        "titleZh": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "titleEn": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "tag": "Tools",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling. 量子位 (QbitAI) is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow…",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago"
+      },
+      {
+        "id": "qbitai.com-d84eefbfc744",
+        "titleZh": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "titleEn": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "tag": "Data",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 目前公开细节仍然偏少，更多还是标题级信号。 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory. This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice. Public detail is still fairly thin…",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago"
+      }
+    ],
+    "items": [
+      {
+        "id": "simonwillison.net-0a402a421780",
+        "rank": 1,
+        "sectionLabelZh": "主线1｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Thread 1 | Retrieval, multimodal, and memory systems",
+        "titleZh": "Alibaba｜检索、多模态与记忆系统",
+        "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "briefTitleZh": "Alibaba｜检索、多模态与记忆系统",
+        "briefTitleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+        "kickerZh": "Alibaba · 检索、多模态与记忆系统",
+        "kickerEn": "Alibaba · Retrieval, multimodal, and memory systems",
+        "summaryZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
+        "summaryEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
+        "deckZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。",
+        "deckEn": "Alibaba moved memory and evaluation deeper into product and developer workflows…",
+        "narrativeZh": [
+          "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "文中最值得记的一处细节是：Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model… 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space. This looks like infrastructure…",
+          "The most useful detail in the piece is this: Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model… These are not always the loudest headlines, but they often decide the ceiling for a whole wave of downstream products.",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "Alibaba把记忆、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。",
+        "whatChangedEn": "Alibaba moved memory and evaluation deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "simonwillison.net",
+        "sourceName": "Simon Willison",
+        "sourceUrl": "https://simonwillison.net/2026/Mar/18/llm-in-a-flash/#atom-everything",
+        "relatedLinks": [
+          {
+            "labelZh": "Simon Willison 原文",
+            "labelEn": "Simon Willison source",
+            "url": "https://simonwillison.net/2026/Mar/18/llm-in-a-flash/#atom-everything"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://simonwillison.net/atom/everything/"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model…",
+          "Qwen 3.5 usually runs 10 experts per token, but this setup dropped that to 4 while claiming that the biggest quality dro…",
+          "Here's a fascinating piece of research by Dan Woods…"
+        ],
+        "evidenceBulletsEn": [
+          "Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model, which means that each token only needs to run against a subset of the overall model weights.",
+          "Qwen 3.5 usually runs 10 experts per token, but this setup dropped that to 4 while claiming that the biggest quality drop-off occurred at 3.",
+          "Here's a fascinating piece of research by Dan Woods, who managed to get a custom version of Qwen3.5-397B-A17B running at 5.5+ tokens/second on a 48GB MacBook Pr…"
+        ],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-18T23:56:46.000Z",
+        "publishedLabelZh": "1 天前",
+        "publishedLabelEn": "1 day ago",
+        "score": 30,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "cached",
+        "bodyWordCount": 487,
+        "bodySummary": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally . Here's a fascinating piece of research by Dan Woods, who managed to get a custom version of Qwen3.5-397B-A17B running at 5.5+ tokens/second on a 48GB MacBook Pro M3 Max despite that model taking up 209GB (120GB quantized) on disk. Qwen3.5-397B-A17B is a Mixture-of-Experts (MoE) model…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "qbitai.com-632099a9a997",
+        "rank": 2,
+        "sectionLabelZh": "主线2｜Agent 与开发者工具",
+        "sectionLabelEn": "Thread 2 | Agents and developer tooling",
+        "titleZh": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "titleEn": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "briefTitleZh": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "briefTitleEn": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
+        "kickerZh": "量子位 (QbitAI) · Agent 与开发者工具",
+        "kickerEn": "量子位 (QbitAI) · Agents and developer tooling",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling. 量子位 (QbitAI) is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow…",
+        "deckZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。",
+        "deckEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling.",
+        "narrativeZh": [
+          "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。",
+          "文中最值得记的一处细节是：3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily，用户只需简单创建… 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。",
+          "接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。"
+        ],
+        "narrativeEn": [
+          "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling. 量子位 (QbitAI) is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow.",
+          "The most useful detail in the piece is this: 3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily，用户只需简单创建，便可拥有通晓自己上下文的 Agent 伙伴；仅用自然语言描述下发任务，飞书妙搭即可生成复杂的业务系统；而在飞书多维表格… In other words…",
+          "What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies…"
+        ],
+        "whatChangedZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。",
+        "whatChangedEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling.",
+        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
+        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
+        "watchNextZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "watchNextEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "tag": "Tools",
+        "source": "qbitai.com",
+        "sourceName": "量子位 (QbitAI)",
+        "sourceUrl": "https://www.qbitai.com/2026/03/389311.html",
+        "relatedLinks": [
+          {
+            "labelZh": "量子位 (QbitAI) 原文",
+            "labelEn": "量子位 (QbitAI) source",
+            "url": "https://www.qbitai.com/2026/03/389311.html"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.qbitai.com/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily，用户只需简单创建，便可拥有通晓自己上下文的 Agent 伙伴；仅用自然语言描述下发任务，飞书妙搭即可生成复杂的业务系统；而在飞书多维表格…",
+          "飞书妙搭也推出了多项更新，用户通过自然语言即可驱动 Agent 生成复杂的业务系统和智能体。发布会现场，飞书展示了一个真实案例：用户仅耗费百余元 Token 费用，便通过对话生成了市场价值达 2 万元的系统应用。",
+          "同时，多维表格 AI 搭建能力正式亮相。用户只需要用自然语言描述业务需求，多维表格 Agent 就能理解、澄清、生成需求文档，并自动生成数据表、仪表盘、问卷、权限配置，乃至整套业务系统，推动系统搭建从“ 人工设计”迈向“AI 生成”…"
+        ],
+        "evidenceBulletsEn": [
+          "3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily，用户只需简单创建，便可拥有通晓自己上下文的 Agent 伙伴；仅用自然语言描述下发任务，飞书妙搭即可生成复杂的业务系统；而在飞书多维表格，用户也只需与 Agent 协作…",
+          "飞书妙搭也推出了多项更新，用户通过自然语言即可驱动 Agent 生成复杂的业务系统和智能体。发布会现场，飞书展示了一个真实案例：用户仅耗费百余元 Token 费用，便通过对话生成了市场价值达 2 万元的系统应用。",
+          "同时，多维表格 AI 搭建能力正式亮相。用户只需要用自然语言描述业务需求，多维表格 Agent 就能理解、澄清、生成需求文档，并自动生成数据表、仪表盘、问卷、权限配置，乃至整套业务系统，推动系统搭建从“ 人工设计”迈向“AI 生成”。让每个人都可以基于一个想法，快速拥有一套可用的业务系统。"
+        ],
+        "themeZh": "Agent 与开发者工具",
+        "themeEn": "Agents and developer tooling",
+        "impactZh": "后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
+        "impactEn": "What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.",
+        "publishedAt": "2026-03-19T08:46:16.000Z",
+        "publishedLabelZh": "21 小时前",
+        "publishedLabelEn": "21 hours ago",
+        "score": 21,
+        "featured": true,
+        "bodyFetched": true,
+        "bodyFetchTargeted": true,
+        "bodyFetchStatus": "fetched",
+        "bodyWordCount": 82,
+        "bodySummary": "3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily，用户只需简单创建，便可拥有通晓自己上下文的 Agent 伙伴；仅用自然语言描述下发任务，飞书妙搭即可生成复杂的业务系统；而在飞书多维表格，用户也只需与 Agent 协作，便能完成搭建数据表、仪表盘、工作流再到配置权限等多项工作。 自春节以来，OpenClaw 迅速爆火，在此期间，飞书也成为了 OpenClaw 用户首选的接入平台。此外，飞书还推出 OpenClaw 官方插件与一键部署等多项 Agent 友好能力。飞书 CEO 谢欣表示：“OpenClaw 的火爆开启了 Agent 应用的全新时代。如何让每个人都能简单、安全地拥有像‘龙虾’一样的 Agent 能力，是飞书首要解决的问题。我们希望在今年，让每个人都拥有自己的智能工作伙伴。” 飞书 aily 的升级即让用户能够快速拥有属于自己的、通晓上下文的 Agent。用户仅需点击…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "qbitai.com-d84eefbfc744",
+        "rank": 3,
+        "sectionLabelZh": "主线3｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Thread 3 | Retrieval, multimodal, and memory systems",
+        "titleZh": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "titleEn": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "briefTitleZh": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "briefTitleEn": "蚂蚁数科发布“龙虾卫士”，护航OpenClaw智能体安全落地",
+        "kickerZh": "量子位 (QbitAI) · 检索、多模态与记忆系统",
+        "kickerEn": "量子位 (QbitAI) · Retrieval, multimodal, and memory systems",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 目前公开细节仍然偏少，更多还是标题级信号。 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory. This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice. Public detail is still fairly thin…",
+        "deckZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。",
+        "deckEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory.",
+        "narrativeZh": [
+          "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "目前公开细节仍然偏少，更多还是标题级信号。 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory. This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice.",
+          "Public detail is still fairly thin, so this remains a headline-level signal. These are not always the loudest headlines, but they often decide the ceiling for a whole wave of downstream products.",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。",
+        "whatChangedEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "qbitai.com",
+        "sourceName": "量子位 (QbitAI)",
+        "sourceUrl": "https://www.qbitai.com/2026/03/389305.html",
+        "relatedLinks": [
+          {
+            "labelZh": "量子位 (QbitAI) 原文",
+            "labelEn": "量子位 (QbitAI) source",
+            "url": "https://www.qbitai.com/2026/03/389305.html"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.qbitai.com/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [],
+        "evidenceBulletsEn": [],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-19T08:38:15.000Z",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago",
+        "score": 18,
+        "featured": true,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "qbitai.com-4ef577d47aa1",
+        "rank": 4,
+        "sectionLabelZh": "补充1｜检索、多模态与记忆系统",
+        "sectionLabelEn": "Brief 1 | Retrieval, multimodal, and memory systems",
+        "titleZh": "钉钉发布多款AI硬件 推出AI创新工场计划",
+        "titleEn": "钉钉发布多款AI硬件 推出AI创新工场计划",
+        "briefTitleZh": "钉钉发布多款AI硬件 推出AI创新工场计划",
+        "briefTitleEn": "钉钉发布多款AI硬件 推出AI创新工场计划",
+        "kickerZh": "量子位 (QbitAI) · 检索、多模态与记忆系统",
+        "kickerEn": "量子位 (QbitAI) · Retrieval, multimodal, and memory systems",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 目前公开细节仍然偏少，更多还是标题级信号。 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory. This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice. Public detail is still fairly thin…",
+        "deckZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。",
+        "deckEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory.",
+        "narrativeZh": [
+          "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。",
+          "目前公开细节仍然偏少，更多还是标题级信号。 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。",
+          "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。"
+        ],
+        "narrativeEn": [
+          "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory. This looks like infrastructure, but it usually decides how good search, memory, and multimodal products feel in practice.",
+          "Public detail is still fairly thin, so this remains a headline-level signal. These are not always the loudest headlines, but they often decide the ceiling for a whole wave of downstream products.",
+          "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost…"
+        ],
+        "whatChangedZh": "量子位 (QbitAI)带来了一条围绕多模态检索与记忆的重要更新。",
+        "whatChangedEn": "量子位 (QbitAI) put out a meaningful update around multimodal retrieval and memory.",
+        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
+        "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
+        "watchNextZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "watchNextEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "tag": "Data",
+        "source": "qbitai.com",
+        "sourceName": "量子位 (QbitAI)",
+        "sourceUrl": "https://www.qbitai.com/2026/03/389301.html",
+        "relatedLinks": [
+          {
+            "labelZh": "量子位 (QbitAI) 原文",
+            "labelEn": "量子位 (QbitAI) source",
+            "url": "https://www.qbitai.com/2026/03/389301.html"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.qbitai.com/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [],
+        "evidenceBulletsEn": [],
+        "themeZh": "检索、多模态与记忆系统",
+        "themeEn": "Retrieval, multimodal, and memory systems",
+        "impactZh": "接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
+        "impactEn": "Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.",
+        "publishedAt": "2026-03-19T08:36:37.000Z",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago",
+        "score": 18,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      },
+      {
+        "id": "qbitai.com-432762e034ba",
+        "rank": 5,
+        "sectionLabelZh": "补充一｜AI 产品体验",
+        "sectionLabelEn": "Brief 2 | AI product experience",
+        "titleZh": "英伟达首台DGX GB300，老黄亲自登门送给他",
+        "titleEn": "英伟达首台DGX GB300，老黄亲自登门送给他",
+        "briefTitleZh": "英伟达首台DGX GB300，老黄亲自登门送给他",
+        "briefTitleEn": "英伟达首台DGX GB300，老黄亲自登门送给他",
+        "kickerZh": "量子位 (QbitAI) · AI 产品体验",
+        "kickerEn": "量子位 (QbitAI) · AI product experience",
+        "summaryZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。 文中最值得记的一处细节是：大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起…",
+        "summaryEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior. The most useful detail in the piece is this…",
+        "deckZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。",
+        "deckEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades.",
+        "narrativeZh": [
+          "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作。",
+          "文中最值得记的一处细节是：大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起，深度学习开始真正走向工程化… 一旦用户开始在日常动作里反复用到它，竞争维度就会从“能力有没有”转向“入口深不深、习惯强不强”。",
+          "所以后面该盯的，不只是发布节奏，而是使用频率、留存和付费这些更硬的产品信号。后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。"
+        ],
+        "narrativeEn": [
+          "量子位 (QbitAI) put out a meaningful update around product experience upgrades. The real question is not whether one more feature shipped, but whether AI is getting folded into repeat behavior.",
+          "The most useful detail in the piece is this: 大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起，深度学习开始真正走向工程化，AI进入“大模型前夜” Once people start using a feature inside everyday tasks…",
+          "So the next signals to watch are not more launch copy, but usage frequency, retention, and eventually monetization. The next signal is behavior: more frequent use, new habits…"
+        ],
+        "whatChangedZh": "量子位 (QbitAI)带来了一条围绕产品体验升级的重要更新。",
+        "whatChangedEn": "量子位 (QbitAI) put out a meaningful update around product experience upgrades.",
+        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
+        "whyItMattersEn": "Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
+        "watchNextZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "watchNextEn": "The next signal is behavior: more frequent use, new habits, and eventually some retention or monetization proof.",
+        "tag": "AI",
+        "source": "qbitai.com",
+        "sourceName": "量子位 (QbitAI)",
+        "sourceUrl": "https://www.qbitai.com/2026/03/389255.html",
+        "relatedLinks": [
+          {
+            "labelZh": "量子位 (QbitAI) 原文",
+            "labelEn": "量子位 (QbitAI) source",
+            "url": "https://www.qbitai.com/2026/03/389255.html"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://www.qbitai.com/feed"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起，深度学习开始真正走向工程化，AI进入“大模型前夜”。",
+          "再到近两年，他又分别给奥特曼和马斯克送上首台DGX H200、DGX Spark迷你超级计算机。这里头除了两人“闹掰”得分开送的原因外，背后的信号也很直接——大模型竞赛进入“深水区”，算力正在成为最终胜负手。",
+          "不过在特斯拉干了5年多之后，他又回归OpenAI了。But，这次回去也没待多久，然后就选择出来单干了…… 总结起来就是， 他正在把AI从“论文”和“大公司”，变成“一个人就能跑起来的系统” 。"
+        ],
+        "evidenceBulletsEn": [
+          "大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起，深度学习开始真正走向工程化，AI进入“大模型前夜”。",
+          "再到近两年，他又分别给奥特曼和马斯克送上首台DGX H200、DGX Spark迷你超级计算机。这里头除了两人“闹掰”得分开送的原因外，背后的信号也很直接——大模型竞赛进入“深水区”，算力正在成为最终胜负手。",
+          "不过在特斯拉干了5年多之后，他又回归OpenAI了。But，这次回去也没待多久，然后就选择出来单干了…… 总结起来就是， 他正在把AI从“论文”和“大公司”，变成“一个人就能跑起来的系统” 。"
+        ],
+        "themeZh": "AI 产品体验",
+        "themeEn": "AI product experience",
+        "impactZh": "后续重点是看用户行为是否改变：是否更频繁打开、是否形成新的工作习惯、是否带来付费或留存提升。",
+        "impactEn": "The next signal is behavior: more frequent use, new habits, and eventually some retention or monetization proof.",
+        "publishedAt": "2026-03-19T07:51:50.000Z",
+        "publishedLabelZh": "22 小时前",
+        "publishedLabelEn": "22 hours ago",
+        "score": 18,
+        "featured": false,
+        "bodyFetched": true,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "cached",
+        "bodyWordCount": 108,
+        "bodySummary": "首台DGX Station（GB300） 送给了卡帕西——这位AI时代的个人开发者代表。 致Andrej——第一台DGX Station的拥有者： AI智能体时代已经到来，这是一个令人难以置信的里程碑时刻，也让人想起我们一起走过的GTC早期岁月。 一路走来，你始终与我并肩同行。 而另一边，卡帕西也在上对老黄隔空发射爱心，并且透露自己准备用它搭一套个人AI集群，专门拿来折腾各种有意思的实验。 当然调侃归调侃，只需看一眼老黄曾经的上门服务案例，你就知道这背后实则大有文章了。 大约10年前（天哪都10年了），老黄把首台DGX-1送给了彼时还很年轻的OpenAI。而从那时起，深度学习开始真正走向工程化，AI进入“大模型前夜”。 再到近两年，他又分别给奥特曼和马斯克送上首台DGX H200、DGX Spark迷你超级计算机。这里头除了两人“闹掰”得分开送的原因外，背后的信号也很直接——大模型竞赛进入“深水区”，算力正在成为最终胜负手…",
+        "sourceNoteZh": "正文已补充抓取",
+        "sourceNoteEn": "full article fetched",
+        "llmGenerated": false
+      },
+      {
+        "id": "arxiv.org-ec3ed45c04eb",
+        "rank": 6,
+        "sectionLabelZh": "补充二｜前沿研究与能力边界",
+        "sectionLabelEn": "Brief 3 | Frontier research and capability shifts",
+        "titleZh": "arXiv cs.AI｜前沿研究与能力边界",
+        "titleEn": "NextMem: Towards Latent Factual Memory for LLM-based Agents",
+        "briefTitleZh": "arXiv cs.AI｜前沿研究与能力边界",
+        "briefTitleEn": "NextMem: Towards Latent Factual Memory for LLM-based Agents",
+        "kickerZh": "arXiv cs.AI · 前沿研究与能力边界",
+        "kickerEn": "arXiv cs.AI · Frontier research and capability shifts",
+        "summaryZh": "arXiv cs.AI放出了一项围绕记忆的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：arXiv:2603.15634v1 Announce Type: new Abstract…",
+        "summaryEn": "arXiv cs.AI published a research-led update around memory, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
+        "deckZh": "arXiv cs.AI放出了一项围绕记忆的研究型更新，指向的是推动能力边界继续外扩。",
+        "deckEn": "arXiv cs.AI published a research-led update around memory, aimed at pushing the capability frontier outward.",
+        "narrativeZh": [
+          "arXiv cs.AI放出了一项围绕记忆的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。",
+          "目前能确认的公开信号是：arXiv:2603.15634v1 Announce Type: new Abstract: 记忆 is critical for L… 研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+          "如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。"
+        ],
+        "narrativeEn": [
+          "arXiv cs.AI published a research-led update around memory, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward.",
+          "The clearest public signal so far is this: arXiv:2603.15634v1 Announce Type: new Abstract…",
+          "Given the current pace, the most concrete thing to track is: The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products."
+        ],
+        "whatChangedZh": "arXiv cs.AI放出了一项围绕记忆的研究型更新，指向的是推动能力边界继续外扩。",
+        "whatChangedEn": "arXiv cs.AI published a research-led update around memory, aimed at pushing the capability frontier outward.",
+        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
+        "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
+        "watchNextZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "watchNextEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "tag": "AI",
+        "source": "arxiv.org",
+        "sourceName": "arXiv cs.AI",
+        "sourceUrl": "https://arxiv.org/abs/2603.15634",
+        "relatedLinks": [
+          {
+            "labelZh": "arXiv cs.AI 原文",
+            "labelEn": "arXiv cs.AI source",
+            "url": "https://arxiv.org/abs/2603.15634"
+          },
+          {
+            "labelZh": "RSS 源",
+            "labelEn": "RSS feed",
+            "url": "https://rss.arxiv.org/rss/cs.AI"
+          }
+        ],
+        "takeawayBulletsZh": [],
+        "takeawayBulletsEn": [],
+        "evidenceBulletsZh": [
+          "arXiv:2603.15634v1 Announce Type: new Abstract: 记忆 is critical for LLM-based agents to preserve past observations fo…",
+          "Textual methods impose heavy context and indexing burdens…",
+          "However, existing approaches to constructing factual 记忆 face several limitations."
+        ],
+        "evidenceBulletsEn": [
+          "arXiv:2603.15634v1 Announce Type: new Abstract: Memory is critical for LLM-based agents to preserve past observations for future decision-making…",
+          "Textual methods impose heavy context and indexing burdens, while parametric methods suffer from catastrophic forgetting and high costs…",
+          "However, existing approaches to constructing factual memory face several limitations."
+        ],
+        "themeZh": "前沿研究与能力边界",
+        "themeEn": "Frontier research and capability shifts",
+        "impactZh": "要看后续是否出现复现、开源实现、API 化，或者被头部产品吸收进默认能力。",
+        "impactEn": "The next step to watch is replication, open implementation, API exposure, or absorption into mainstream products.",
+        "publishedAt": "2026-03-19T04:00:00.000Z",
+        "publishedLabelZh": "1 天前",
+        "publishedLabelEn": "1 day ago",
+        "score": 15,
+        "featured": false,
+        "bodyFetched": false,
+        "bodyFetchTargeted": false,
+        "bodyFetchStatus": "skipped",
+        "bodyWordCount": 0,
+        "bodySummary": "",
+        "sourceNoteZh": "目前主要依据公开摘要",
+        "sourceNoteEn": "summary-level public detail only",
+        "llmGenerated": false
+      }
+    ],
+    "llmGenerated": false,
+    "titleRegenerated": true,
+    "titleRegenReason": "Similar to digest from 2026-03-19"
+  },
+  {
     "slug": "ai-daily-2026-03-19",
     "date": "2026-03-19",
     "titleZh": "AI 日报｜Retrieval +  multimodal",
