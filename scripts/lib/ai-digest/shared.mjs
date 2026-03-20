@@ -63,7 +63,7 @@ export function trimText(text = '', max = 180) {
     sliced.lastIndexOf(': '),
   );
   const clipped = lastStop > Math.max(48, Math.floor(max * 0.4)) ? sliced.slice(0, lastStop) : sliced;
-  return `${clipped.trim()}…`;
+  return clipped.trim();
 }
 
 export function normalizeTitle(title = '') {

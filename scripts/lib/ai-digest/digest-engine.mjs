@@ -139,7 +139,7 @@ const THEME_RULES = [
     themeZh: 'Agent 与开发者工具',
     themeEn: 'Agents and developer tooling',
     keywords: ['agent', 'workflow', 'copilot', 'sdk', 'developer', 'cli', 'tool use', 'tooling', 'execution', 'automation', 'app building', 'coding'],
-    whyZh: '行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。',
+    whyZh: '行业竞争点正在从"聊天回答得好不好"转向"能不能稳定接进软件、工具链和自动化流程"，这决定了真正的生产力入口。',
     whyEn: 'The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.',
     watchZh: '后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。',
     watchEn: 'What matters next is whether these ideas become default plumbing inside products and developer stacks, not just good demos.',
@@ -157,7 +157,7 @@ const THEME_RULES = [
     whyZh: '这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。',
     whyEn: 'These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.',
     watchZh: '接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。',
-    watchEn: 'Watch for a real gap in quality, cost, and tooling support — and whether enterprise knowledge systems actually retool around it.',
+    watchEn: 'Watch for a real gap in quality, cost, and tooling support - and whether enterprise knowledge systems actually retool around it.',
     focusZh: '提升非结构化信息进入同一检索空间的能力',
     focusEn: 'bringing more unstructured data into the same retrieval space',
     topicZh: '多模态检索与记忆',
@@ -425,12 +425,12 @@ function composeWhatChangedEn(actor, action, topicEn, theme) {
 
 function composeWhatChangedZh(actor, action, topicZh, theme) {
   switch (action) {
-    case 'open-source': return `${actor}把围绕${topicZh}的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。`;
+    case 'open-source': return `${actor}把围绕${topicZh}的东西真正放了出来，重点不只是"开源"两个字，而是让外部生态更容易复用、验证和接着往下搭。`;
     case 'integration': return `${actor}把${topicZh}继续往产品和开发者工作流里压，重点已经不是演示能力，而是${theme.focusZh}。`;
     case 'research': return `${actor}放出了一项围绕${topicZh}的研究型更新，指向的是${theme.focusZh}。`;
     case 'tutorial': return `${actor}给出了一篇围绕${topicZh}的实践拆解，重点不在概念，而在它怎么进真实工作流。`;
     case 'commercial': return `${actor}把${topicZh}和更明确的产品化动作绑在一起，说明这件事正在往业务入口靠近。`;
-    case 'release': return `${actor}围绕${topicZh}又往前推了一步，继续沿着“${theme.focusZh}”这条线加速。`;
+    case 'release': return `${actor}围绕${topicZh}又往前推了一步，继续沿着"${theme.focusZh}"这条线加速。`;
     case 'benchmark': return `${actor}把${topicZh}放进更强的性能叙事里，这不是一次普通的小改版。`;
     default: return `${actor}带来了一条围绕${topicZh}的重要更新。`;
   }
@@ -498,40 +498,40 @@ function buildNarrativeZh(item, actor, theme, action, whatChangedZh, whyZh, watc
 
   if (theme.key === 'agents-tools') {
     return [
-      trimText(`${whatChangedZh}${/rakuten/i.test(originalTitle) ? ' 这类案例最有意思的地方，是它已经不再停留在“开发者喜欢不喜欢”，而是开始拿 MTTR、评审效率、CI/CD 这类业务指标说话。' : ` ${chooseZhAngle(theme, 'integration', actor)}`}`, 140),
-      trimText(`${evidenceLine} 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。`, 140),
-      trimText(`接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。${watchZh}`, 140),
+      `${whatChangedZh}${/rakuten/i.test(originalTitle) ? ' 这类案例最有意思的地方，是它已经不再停留在"开发者喜欢不喜欢"，而是开始拿 MTTR、评审效率、CI/CD 这类业务指标说话。' : ` ${chooseZhAngle(theme, 'integration', actor)}`}`,
+      `${evidenceLine} 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。`,
+      `接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。${watchZh}`,
     ];
   }
 
   if (theme.key === 'safety') {
     return [
-      trimText(`${whatChangedZh}${chooseZhAngle(theme, 'research', actor)}`, 140),
-      trimText(`${evidenceLine} 这件事一旦做不好，Agent 在企业和高风险场景里的可用性就会被直接卡住。`, 140),
-      trimText(`${whyZh}${watchZh}`, 140),
+      `${whatChangedZh}${chooseZhAngle(theme, 'research', actor)}`,
+      `${evidenceLine} 这件事一旦做不好，Agent 在企业和高风险场景里的可用性就会被直接卡住。`,
+      `${whyZh}${watchZh}`,
     ];
   }
 
   if (theme.key === 'retrieval-multimodal' || theme.key === 'data-eval') {
     return [
-      trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
-      trimText(`${evidenceLine} 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。`, 140),
-      trimText(`${whyZh}${watchZh}`, 140),
+      `${whatChangedZh}${chooseZhAngle(theme, action, actor)}`,
+      `${evidenceLine} 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。`,
+      `${whyZh}${watchZh}`,
     ];
   }
 
   if (theme.key === 'products') {
     return [
-      trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
-      trimText(`${evidenceLine} 一旦用户开始在日常动作里反复用到它，竞争维度就会从“能力有没有”转向“入口深不深、习惯强不强”。`, 140),
-      trimText(`所以后面该盯的，不只是发布节奏，而是使用频率、留存和付费这些更硬的产品信号。${watchZh}`, 140),
+      `${whatChangedZh}${chooseZhAngle(theme, action, actor)}`,
+      `${evidenceLine} 一旦用户开始在日常动作里反复用到它，竞争维度就会从"能力有没有"转向"入口深不深、习惯强不强"。`,
+      `所以后面该盯的，不只是发布节奏，而是使用频率、留存和付费这些更硬的产品信号。${watchZh}`,
     ];
   }
 
   return [
-    trimText(`${whatChangedZh}${chooseZhAngle(theme, action, actor)}`, 140),
-    trimText(`${evidenceLine} ${whyZh}`, 140),
-    trimText(`如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。${watchZh}`, 140),
+    `${whatChangedZh}${chooseZhAngle(theme, action, actor)}`,
+    `${evidenceLine} ${whyZh}`,
+    `如果把它放回这几周的节奏里看，更值得追的是它会不会从展示走向默认能力。${watchZh}`,
   ];
 }
 
@@ -613,7 +613,7 @@ function buildHeroSummaryZh(items, themes, windowHours) {
   const topTheme = themes[0]?.themeZh || '能力边界';
   const secondTheme = themes[1]?.themeZh || '产品与工作流';
   if (themes[0]?.themeZh && themes[1]?.themeZh) {
-    return `今天这期更像两条线同时加速：一条是 ${topTheme}，另一条是 ${secondTheme}。${actors.length ? `${actors.join('、')} 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。` : '几条更新都在把同一个问题往前推：能力怎样真正接进现实流程。'}`;
+    return `今天这期更像两条线同时加速：一条是 ${topTheme}，另一条是 ${secondTheme}。${actors.length ? `${actors.join('、')} 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在"新功能数量"，而在"能力能不能真正接进现实流程"。` : '几条更新都在把同一个问题往前推：能力怎样真正接进现实流程。'}`;
   }
   return `过去 ${windowHours} 小时里，AI 领域最值得看的不是单条新闻，而是一条更清晰的方向：${topTheme} 正在更快地往真实产品和工作流里落。`;
 }
@@ -632,7 +632,7 @@ function buildHeroSummaryEn(items, themes, windowHours) {
 function buildTitleSummaryZh(items, themes) {
   const titles = items.map(item => item.titleZh || '');
   if (titles.some(title => /提示注入|指令层级/.test(title)) && titles.some(title => /Codex|agent|工作流/i.test(title))) return '安全边界与 agent 落地，正在一起往前推';
-  if (titles.some(title => /表格|ChatGPT|心血管|Wayfair/.test(title))) return 'AI 正在离“会回答”更远，离“真能干活”更近';
+  if (titles.some(title => /表格|ChatGPT|心血管|Wayfair/.test(title))) return 'AI 正在离"会回答"更远，离"真能干活"更近';
   const actors = uniqueStrings(items.slice(0, 3).map(item => inferActor(item)));
   if (themes[0]?.themeZh && actors.length >= 2) return `${actors.slice(0, 2).join('、')}都在把 AI 往真实工作流里送`;
   if (themes[0]?.themeZh) return `${themes[0].themeZh}这一侧又有新动静`;
@@ -666,8 +666,8 @@ function buildItem(item, index) {
   const watchNextZh = theme.watchZh;
   const narrativeZh = buildNarrativeZh(item, actor, theme, action, whatChangedZh, whyItMattersZh, watchNextZh, evidence);
   const narrativeEn = buildNarrativeEn(item, actor, theme, action, whatChangedEn, whyItMattersEn, watchNextEn, evidence);
-  const summaryZh = trimText(narrativeZh.slice(0, 2).join(' '), 150);
-  const summaryEn = trimText(narrativeEn.slice(0, 2).join(' '), 240);
+  const summaryZh = trimText(narrativeZh.join(' '), 9999);
+  const summaryEn = trimText(narrativeEn.join(' '), 9999);
   const labels = relativeTimeLabels(item.pubDate || item.publishedAt);
 
   const titleZh = buildLocalizedTitleZh(item, actor, action, topics.topicZh, theme);
@@ -766,8 +766,8 @@ function buildItemWithLLM(item, index, llmAnalysis) {
     briefTitleEn: titleEn,
     kickerZh: `${actor} · ${theme.themeZh}`,
     kickerEn: `${actor} · ${theme.themeEn}`,
-    summaryZh: trimText(narrativeZh.slice(0, 2).join(' '), 150),
-    summaryEn: trimText(narrativeEn.slice(0, 2).join(' '), 240),
+    summaryZh: trimText(narrativeZh.join(' '), 9999),
+    summaryEn: trimText(narrativeEn.join(' '), 9999),
     deckZh: trimText(whatChangedZh, 92),
     deckEn: trimText(whatChangedEn, 156),
     narrativeZh,
@@ -869,11 +869,11 @@ function diversifyNarratives(items) {
     'all','each','few','more','most','other','some','such','no','nor','not','only','own','same',
     'so','than','too','very','just','and','but','if','or','because','until','while','that','this',
     'these','those','what','which','who','whom','whose']);
-  
+
   function wordSet(text) {
     return new Set(text.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 2 && !STOPWORDS.has(w)));
   }
-  
+
   function overlap(a, b) {
     const ws = wordSet(a), wt = wordSet(b);
     if (ws.size === 0 || wt.size === 0) return 0;
@@ -881,7 +881,7 @@ function diversifyNarratives(items) {
     const union = new Set([...ws, ...wt]).size;
     return union > 0 ? inter / union : 0;
   }
-  
+
   for (let i = 1; i < items.length; i++) {
     for (let j = 0; j < i; j++) {
       if (!items[i].narrativeEn?.[0] || !items[j].narrativeEn?.[0]) continue;
@@ -904,7 +904,7 @@ function diversifyNarratives(items) {
       }
     }
   }
-  
+
   return items;
 }
 
@@ -914,7 +914,7 @@ function diversifyNarratives(items) {
 function reassignSectionLabels(items) {
   const themeCount = new Map();
   const themeIndex = new Map();
-  
+
   // Group by theme
   const groups = new Map();
   for (const item of items) {
@@ -922,7 +922,7 @@ function reassignSectionLabels(items) {
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(item);
   }
-  
+
   // Reassign: if a theme has >2 items, move extras to "补充" variant
   let supplementIdx = 0;
   for (const [key, group] of groups) {
@@ -935,7 +935,7 @@ function reassignSectionLabels(items) {
       }
     }
   }
-  
+
   // Re-number sequentially
   let threadIdx = 0;
   let briefIdx = 0;
@@ -954,7 +954,7 @@ function reassignSectionLabels(items) {
       }
     }
   }
-  
+
   return items;
 }
 
@@ -1048,8 +1048,8 @@ export function buildDigestMarkdown(detail) {
 }
 
 export function buildDigestReport(detail) {
-  const topLinesZh = detail.items.slice(0, 4).map((item, index) => `${index + 1}. ${item.briefTitleZh || item.titleZh} —— ${trimText(item.summaryZh, 60)}`);
-  const topLinesEn = detail.items.slice(0, 3).map((item, index) => `${index + 1}. ${item.briefTitleEn || item.titleEn} — ${trimText(item.summaryEn, 90)}`);
+  const topLinesZh = detail.items.slice(0, 4).map((item, index) => `${index + 1}. ${item.briefTitleZh || item.titleZh} -- ${trimText(item.summaryZh, 60)}`);
+  const topLinesEn = detail.items.slice(0, 3).map((item, index) => `${index + 1}. ${item.briefTitleEn || item.titleEn} - ${trimText(item.summaryEn, 90)}`);
 
   const messageZh = [
     `✅ AI 日报更新成功（${detail.date}）`,
