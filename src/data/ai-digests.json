@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-23",
+    "date": "2026-03-23",
+    "titleZh": "AI 日报｜2026-03-23｜安全裂缝与自我进化：LLM系统的两面",
+    "titleEn": "AI 日报｜2026-03-23｜安全裂缝与自我进化：LLM系统的两面",
+    "excerptZh": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：一方面，自适应红队攻击揭示LLM安全护栏远比想象中脆弱；另一方面，Hyperagents展示了AI系统自我改进元层机制的可能性。两条线索在同一天出现，并非巧合——当我们教AI改进自己时，安全边界需要重新定义。同时，OpenClaw登顶GitHub趋势榜和中国AI周调用量超越美国的数字，都在提醒：开源生态与产业格局的演变正在以周为单位加速。",
+    "excerptEn": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：一方面，自适应红队攻击揭示LLM安全护栏远比想象中脆弱；另一方面，Hyperagents展示了AI系统自我改进元层机制的可能性。两条线索在同一天出现，并非巧合——当我们教AI改进自己时，安全边界需要重新定义。同时，OpenClaw登顶GitHub趋势榜和中国AI周调用量超越美国的数字，都在提醒：开源生态与产业格局的演变正在以周为单位加速。",
+    "issueSummaryZh": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：一方面，自适应红队攻击揭示LLM安全护栏远比想象中脆弱；另一方面，Hyperagents展示了AI系统自我改进元层机制的可能性。两条线索在同一天出现，并非巧合——当我们教AI改进自己时，安全边界需要重新定义。同时，OpenClaw登顶GitHub趋势榜和中国AI周调用量超越美国的数字，都在提醒：开源生态与产业格局的演变正在以周为单位加速。",
+    "issueSummaryEn": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：一方面，自适应红队攻击揭示LLM安全护栏远比想象中脆弱；另一方面，Hyperagents展示了AI系统自我改进元层机制的可能性。两条线索在同一天出现，并非巧合——当我们教AI改进自己时，安全边界需要重新定义。同时，OpenClaw登顶GitHub趋势榜和中国AI周调用量超越美国的数字，都在提醒：开源生态与产业格局的演变正在以周为单位加速。",
+    "path": "/blog/ai-daily-2026-03-23",
+    "itemCount": 6,
+    "heroTitleZh": "AI 日报｜2026-03-23｜安全裂缝与自我进化：LLM系统的两面",
+    "heroTitleEn": "AI 日报｜2026-03-23｜安全裂缝与自我进化：LLM系统的两面",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 2000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-20",
     "date": "2026-03-20",
     "titleZh": "AI 日报｜Agents and developer tooling +  Retrieval",
@@ -11,7 +42,7 @@
     "path": "/blog/ai-daily-2026-03-20",
     "itemCount": 6,
     "heroTitleZh": "GitHub｜Agent 与开发者工具",
-    "heroTitleEn": "How Squad runs coordinated AI agents inside your repository",
+    "heroTitleEn": "GitHub Squad Coordinates Multi-Agent AI Workflows Directly Inside Code Repositories",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
       "targeted": 5,
@@ -45,14 +76,14 @@
       {
         "id": "github.blog-217e48af9681",
         "titleZh": "GitHub｜Agent 与开发者工具",
-        "titleEn": "How Squad runs coordinated AI agents inside your repository",
+        "titleEn": "GitHub Squad Coordinates Multi-Agent AI Workflows Directly Inside Code Repositories",
         "tag": "Tools",
-        "summaryZh": "GitHub把Agent 工作流、Copilot SDK继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：See how the GitHub Copilot SDK enables Agent 工作流 directly inside 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。 接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
-        "summaryEn": "GitHub moved agentic workflows and copilot sdk deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows The most useful detail in the piece is this: See how the GitHub Copilot SDK enables agentic workflows directly inside your applications. In other words, the race is no longer just about who answers well What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies",
-        "whyItMattersZh": "行业竞争点正在从\"聊天回答得好不好\"转向\"能不能稳定接进软件、工具链和自动化流程\"，这决定了真正的生产力入口。",
-        "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "14 小时前",
-        "publishedLabelEn": "14 hours ago"
+        "summaryZh": "GitHub 推出了 Squad，这是一个在代码仓库内部署协调 AI 智能体的系统，可自动执行开发工作流程中的多项任务。这些智能体支持相互通信，能够处理涉及多个步骤的复杂任务，如自动分类 issues 和审核 pull requests。文档显示该系统采用了结构化的智能体间通信协议来实现任务协调。 本周内，开发团队应识别当前哪些人工流程适合交由 Squad 接管。建议从高频、低风险的任务开始，例如自动为 issues 打标签或根据文件路径路由 PR 给对应的审查者。先在小范围验证准确率，再逐步扩展到影响用户的功能模块。 关注 Squad 协调协议的开源实现细节，验证其智能体间消息格式是否有公开规范。查找该系统是否发布了多智能体协调成功率与单智能体的基准对比数据。同时确认其底层模型的版本信息，这直接影响对模糊技术问题判断的可靠性。",
+        "summaryEn": "GitHub introduced Squad, a system for deploying coordinated AI agents that operate directly within code repositories to automate development workflows. These agents can triage issues, review pull requests, and execute multi-step tasks across the codebase without human intervention in the loop Developers integrating Squad should evaluate which of their current code review or issue triage workflows involve highly repeatable decision patterns. Teams can start by mapping a single manual process—such as labeling issues by priority or routing PRs to reviewers—to Squad agents, then measure accuracy against human baseline before expanding scope. Start with low-stakes Monitor the open-source release of Squad's coordination protocol to verify whether agent-to-agent message schemas are documented and extensible. Check if the system publishes benchmark results comparing agent coordination success rates against single-agent baselines on standard code review tasks. Look for the specific version of GPT or Claude models powering the agents",
+        "whyItMattersZh": "本周内，开发团队应识别当前哪些人工流程适合交由 Squad 接管。建议从高频、低风险的任务开始，例如自动为 issues 打标签或根据文件路径路由 PR 给对应的审查者。先在小范围验证准确率，再逐步扩展到影响用户的功能模块。",
+        "whyItMattersEn": "Developers integrating Squad should evaluate which of their current code review or issue triage workflows involve highly repeatable decision patterns. Teams can start by mapping a single manual process—such as labeling issues by priority or routing PRs to reviewers—to Squad agents, then measure accuracy against human baseline before expanding scope. Start with low-stakes",
+        "publishedLabelZh": "18 小时前",
+        "publishedLabelEn": "18 hours ago"
       },
       {
         "id": "huggingface.co-6fcdc30a7049",
@@ -63,8 +94,8 @@
         "summaryEn": "Hugging Face opened up work around evaluation and retrieval, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search, memory The most useful detail in the piece is this: To achieve this, each candidate prompt is embedded into a dense vector space using a pretrained text embedder ( openai/t These are not always the loudest headlines These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost",
         "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "16 小时前",
-        "publishedLabelEn": "16 hours ago"
+        "publishedLabelZh": "20 小时前",
+        "publishedLabelEn": "20 hours ago"
       },
       {
         "id": "simonwillison.net-f59deb557976",
@@ -75,11 +106,11 @@
         "summaryEn": "OpenAI opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on. OpenAI is making the case that the next battle is not smarter chat The most useful detail in the piece is this: Since its release in February 2024—just two years ago—it’s become one of the most popular tools for running Python code. In other words What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies",
         "whyItMattersZh": "行业竞争点正在从\"聊天回答得好不好\"转向\"能不能稳定接进软件、工具链和自动化流程\"，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "14 小时前",
-        "publishedLabelEn": "14 hours ago"
+        "publishedLabelZh": "17 小时前",
+        "publishedLabelEn": "17 hours ago"
       }
     ],
-    "llmGenerated": false,
+    "llmGenerated": true,
     "titleRegenerated": true
   },
   {
