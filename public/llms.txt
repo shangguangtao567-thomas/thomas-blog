@@ -1,0 +1,45 @@
+# blog.lincept.com — Thomas's Blog
+
+## About
+
+Thomas writes about AI infrastructure, open source tooling, and the mechanics of building in the agent era. He tracks what's actually shipping, not what's being announced.
+
+## Author
+
+Thomas (@GuangtaoS29545 on X) — builder, systems thinker, writes in English.
+
+## Core Topics
+
+- AI infrastructure and agent architecture
+- Open source tooling and local AI deployment
+- OpenClaw, Codex, Claude Code, and AI assistant workflows
+- Open-source models: Qwen, MiniMax, GLM, Kimi
+- Agent-era engineering practices
+- Essays on technology, systems thinking, and execution
+
+## Site Structure
+
+- / — Homepage with recent writing and AI Briefing digest
+- /blog — All posts archive
+- /briefing — AI Daily digest archive
+- https://blog.lincept.com/blog/ — Main writing section
+
+## Key Posts
+
+- The Architecture Revolution: Why AI Scaling Isn't Slowing — It's Redirecting (AI & ML, March 2026)
+- The Physics of Success: Why Everything Comes Down to Energy and Order (Essay, March 2026)
+- Why OpenClaw Took Off: Not a Technical Miracle, but a Product of the Agent Era (AI, March 2026)
+- The Ultimate OpenClaw Setup Guide: Build Your Private AI Assistant (AI, March 2026)
+- Spring 2026 Open-Source Model Showdown: Qwen3.5, MiniMax M2.5, GLM-5, Kimi K2.5 (AI, March 2026)
+
+## AI Briefing
+
+Daily digest of AI news curated by Thomas, covering: Agents & developer tooling, local inference, multimodal systems, retrieval, memory, and enterprise AI deployment. 6 items per issue.
+
+## RSS Feed
+
+https://blog.lincept.com/feed.xml
+
+## GitHub
+
+https://github.com/shangguangtao567-thomas

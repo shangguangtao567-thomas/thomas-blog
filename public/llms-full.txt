@@ -1,0 +1,210 @@
+# blog.lincept.com — Thomas's Blog — Full Content
+
+## About
+Thomas writes about AI infrastructure, open source tooling, and the mechanics of building in the agent era. He tracks what's actually shipping, not what's being announced.
+
+## Author
+Thomas (@GuangtaoS29545 on X). Builder, systems thinker, writes in English.
+
+## RSS Feed
+https://blog.lincept.com/feed.xml
+
+## GitHub
+https://github.com/shangguangtao567-thomas
+
+## All Writing (long-form posts)
+
+### The Architecture Revolution: Why AI Scaling Isn't Slowing — It's Redirecting
+URL: https://blog.lincept.com/blog/ai-architecture-revolution/
+Published: 2026-03-20 | Tag: AI & ML
+Excerpt: When the industry starts rewriting residual paths, attention mixing, and long-context memory mechanisms — that's not a signal that AI is plateauing. It's the opposite: a signal that system-level evolution is accelerating.
+
+> Target audience: readers already familiar with the LLM training and inference stack. Core argument: when teams start rewriting residual paths, attention mixing, long-context memory mechanisms, and even the tokenizer-to-embedding interface, this isn't a sign of "nothing left to scale" — it's a signal that system-level evolution is accelerating at high speed.
+
+---
+
+### AttnRes and the Signal Nobody Should Be Ignoring
+
+Lately there's been a lot of buzz around AttnRes results: GPQA-Diamond jumping from 36.9 to 44.4, Math from 53.5 to 57.1, HumanEval from 59.1 to 62.2.
+
+Those numbers matter. But what's more important is *where* the change was made.
+
+Moonshot AI didn't invent a new external memory system. They didn't stack another batch of experts. They rewired the most foundational, least-examined path in modern decoder-only LLMs: how information aggregates in the depth dimension.
+
+In today's dominant pre-norm decoder architecture, the residual stream is essentially a continuously accumulating channel:
+
+[code block omitted]
+
+The upside: stable, simple, easy to scale. The cost: in deep models, every layer's output gets added indiscriminately into the same stream. As layers stack up, early representations get progressively diluted by later layers, and residual magnitude keeps growing. Moonshot's AttnRes README puts it plainly as *dilution and hidden-state growth under PreNorm*.
+
+AttnRes's fix is elegant: instead of defaulting to "every preceding layer accumulates with weight 1," each layer now performs a cross-depth attention read over earlier representations. The paper frames it as:
+
+[code block omitted]
+
+Where α_{i→l} is computed from the layer's learned pseudo-query against normalized representations of prior layers.
+
+The key insight isn't "residuals became attention" — it's that this change turns a *fixed engineering assumption* into something the model can learn to optimize: which early layers deserve repeated reads, which contributions should be downweighted, and w
+
+### The Physics of Success: Why Everything Comes Down to Energy and Order
+URL: https://blog.lincept.com/blog/the-physics-of-success/
+Published: 2026-03-18 | Tag: Essay
+Excerpt: The universe trends toward chaos. You trend toward order. From thermodynamics to personal growth, the same law governs every scale — and understanding it changes how you think about success.
+
+The universe has one default direction: toward chaos.
+
+Cups shatter and don't reassemble. Iron rusts. Buildings crumble. Stars burn out. The final state of everything is heat death — uniform energy distribution, no temperature differences, no information, nothing happening ever again. That's entropy. The second law of thermodynamics says it only goes one way in an isolated system: from order to disorder.
+
+Now look at yourself.
+
+This morning you spent energy organizing a pile of disorganized molecules into breakfast. Then you spent more energy transporting your body to work. Then even more turning thoughts into code, documents, conversations. Everything you did today was the same thing: turning disorder into order.
+
+It's not just you. Human civilization is an anti-entropy machine.
+
+### Life feeds on negative entropy
+
+Erwin Schrödinger put it perfectly in *What is Life?*: "Life feeds on negative entropy."
+
+Being alive means resisting entropy. You need continuous energy input (food) to maintain your body's internal order. Your body converts food's chemical energy into heat and motion, breaking low-entropy molecules into high-entropy waste. You're not "using" energy — you're buying order with it.
+
+Human civilization is just this process scaled up.
+
+Fire was humanity's first major energy skill tree. With fire, we stopped passively adapting to the environment and started actively reshaping it — cooking released more nutrition, lighting extended activity hours, smelting created tools. Each advancement used chemical energy to upgrade social order.
+
+Then came fossil fuels. Coal and oil are essentially billions of years of stored solar energy buried underground. Humans spent a few centuries cashing out this "energy savings account" — steam engines, electricity, airplanes, the internet. Every energy leap brought exponential growth in civilizational complexity: global trade, instant communication, 4 billion people online.
+
+This is not coincidence. Energy is civilization's curre
+
+### Why OpenClaw Took Off: Not a Technical Miracle, but a Product of the Agent Era
+URL: https://blog.lincept.com/blog/openclaw-product-of-its-time/
+Published: 2026-03-12 | Tag: AI
+Excerpt: My take on OpenClaw is not that it introduced some magical capability beyond tools like Claude Code, but that it compressed initiative, reachability, habit loops, and a now-maturing agent infrastructure into a product ordinary users can actually use.
+
+OpenClaw taking off does not mean it invented a magical technical layer beyond tools like Claude Code.
+
+What it means is simpler, and in some ways more important: the waterline of the agent stack has finally risen high enough that someone could package initiative, reachability, habit loops, and computer action into one product ordinary users can immediately feel.
+
+That is why I think OpenClaw is not a technical miracle.
+
+It is a product of its time.
+
+### It did not add one magical capability. It removed fifteen steps of friction.
+
+If you zoom in on the raw ingredients, OpenClaw is not made of unknown primitives.
+
+Model calls were already there. File operations were already there. Bash execution, browser control, prompt layering, history, tools, skills, hooks, plugins, and automation were all emerging in different forms.
+
+The breakthrough was not that OpenClaw discovered a hidden ability nobody else had.
+
+The breakthrough was that it turned a system only advanced users could stitch together into something normal users could actually *live with*.
+
+That difference matters.
+
+I think OpenClaw did three things especially well.
+
+The first is initiative.
+
+The official docs describe it as a long-running [Gateway Architecture](https://docs.openclaw.ai/concepts/architecture), not just a chat box. It also treats [Cron Jobs](https://docs.openclaw.ai/cron/) and [Hooks](https://docs.openclaw.ai/automation/hooks) as first-class product surfaces. The product intuition is obvious: this is supposed to keep acting, not just keep answering.
+
+The second is reachability.
+
+The [OpenClaw website](https://openclaw.ai/) explicitly sells the idea of meeting agents "where you already are," and the architecture docs revolve around sessions, routing, channels, and nodes. In practice, that means the user experience stops feeling like "I need to open a tool" and starts feeling like "this agent is already present in the places I use."
+
+The third is habit formation.
+
+Once initiative and reachability
+
+### The Ultimate OpenClaw Setup Guide: Build Your Private AI Assistant
+URL: https://blog.lincept.com/blog/openclaw-ultimate-setup-guide/
+Published: 2026-03-03 | Tag: AI
+Excerpt: A complete walkthrough of OpenClaw installation and configuration, covering Telegram/Discord integration, skill extensions, and common troubleshooting.
+
+OpenClaw (formerly known as Clawdbot) is an open-source project that lets you run a private AI assistant on your own computer. It integrates with WhatsApp, Telegram, Discord, Slack, and other major messaging platforms, supports executing local commands, remembers user preferences, and keeps all data local—nothing goes through third-party servers.
+
+After spending some time getting it set up, I've compiled the complete installation and configuration process into this guide to help you avoid common pitfalls.
+
+---
+
+### Prerequisites
+
+Before getting started, make sure you have the following:
+
+### 1. Operating System
+
+Supports macOS, Windows, and Linux—all three platforms work.
+
+### 2. Node.js (Version 22 or Higher)
+
+OpenClaw is built with JavaScript, so you need the Node.js runtime.
+
+Check if already installed:
+
+[code block omitted]
+
+If you see something like v22.1.0, you're good. If you get "command not found" or a version below 22, you'll need to install it first.
+
+### 3. AI Service Account
+
+OpenClaw doesn't include an AI model—it connects to third-party AI services. Currently supported:
+
+- Anthropic (Claude): Recommended; Claude Opus 4.5 works great
+- OpenAI (ChatGPT): Also supported; works with GPT-4 series
+
+---
+
+### Step 1: Install OpenClaw
+
+Open Terminal (macOS/Linux) or PowerShell (Windows) and run the installation command:
+
+[code block omitted]
+
+Verify the installation afterward:
+
+[code block omitted]
+
+---
+
+### Wrapping Up
+
+Overall, the OpenClaw installation process isn't particularly complex—most of the time is spent understanding the components and configuring messaging channels. Once it's running and connected to your daily Telegram or Discord, the experience is quite solid.
+
+If you run into issues during installation, feel free to leave a comment below, or check the [official documentation](https://docs.openclaw.ai).
+
+### Spring 2026 Open-Source Model Showdown: Qwen3.5, MiniMax M2.5, GLM-5, Kimi K2.5 — And Why the Orchestration Layer Matters
+URL: https://blog.lincept.com/blog/open-source-models-agent-orchestration/
+Published: 2026-03-03 | Tag: AI
+Excerpt: Four models, four technical approaches, one shared direction: prioritizing tool-calling and agent capabilities over raw intelligence. Behind this trend lies the rising value of the orchestration layer.
+
+In the week surrounding Chinese New Year 2026, China's AI scene put on a collective release show: Qwen3.5, MiniMax M2.5, GLM-5, and Kimi K2.5 all dropped within days of each other. I've been putting each of them through their paces, and the more I use them, the more I notice something interesting—their technical approaches differ, but they share a common direction: prioritizing tool-calling and agent capabilities over raw intelligence.
+
+This post is my research notes on these four models, ending with a broader observation I've been sitting with.
+
+---
+
+### Qwen3.5: Native Multimodal Agent on a Hybrid Architecture
+
+Alibaba's Qwen3.5 is the most architecturally adventurous of the bunch. The flagship Qwen3.5-397B-A17B uses a hybrid architecture fusing linear attention (via Gated Delta Networks) with sparse mixture-of-experts (Sparse MoE)—397B total parameters, but only 17B activated per forward pass. This achieves top-tier capability while dramatically reducing inference costs.
+
+The language coverage expansion is also notable: from 119 languages in the previous generation to 201 languages and dialects, which has real implications for global deployment.
+
+On tool calling, Qwen3.5 performs impressively. It scores 72.9 on BFCL-V4 (tool use benchmark) and 46.1 on MCP-Mark (MCP protocol tool calling), both placing it in the top tier among open-source models. The hosted Qwen3.5-Plus comes with built-in official tools, adaptive tool selection, and a 1 million token context window.
+
+The small-scale versions are equally interesting: Qwen3.5-9B outperforms OpenAI's gpt-oss-120B on multiple benchmarks while running on a standard laptop—a significant development for locally deployed agent frameworks.
+
+| Capability | Performance |
+|-----------|-------------|
+| Architecture | Linear attention + Sparse MoE hybrid |
+| Active parameters | 17B (of 397B total) |
+| Tool calling | BFCL-V4: 72.9, MCP-Mark: 46.1 |
+| Context window | 1M tokens (Plus version) |
+| Language support | 201 languages
+
+## AI Briefing Archive (Daily Digests)
+- 2026-03-20: AI Daily |  Agents and developer tooling, Retrieval, multimodal, and memory systems, Agents and developer tooling — 6 items
+- 2026-03-19: AI Daily | Local Inference Acceleration; Enterprise Agents Go Mainstream — 6 items
+- 2026-03-18: AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling — 6 items
+- 2026-03-17: AI Daily |  Model safety and controllability, Retrieval, multimodal, and memory systems, Frontier research and capability shifts — 6 items
+- 2026-03-16: AI Daily |  Agents and developer tooling, Frontier research and capability shifts, AI infrastructure — 6 items
+- 2026-03-14: AI Daily | Where AI starts to look more like infrastructure than demo — 6 items
+- 2026-03-13: AI Daily | AI is moving away from novelty and closer to actual work — 6 items
+- 2026-03-12: AI Daily | AI is moving away from novelty and closer to actual work — 6 items
+- 2026-03-11: 2026-03-11 AI Daily Briefing — 6 items

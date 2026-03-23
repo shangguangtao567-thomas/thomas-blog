@@ -16,6 +16,64 @@
     <meta name="twitter:title" content="Thomas's Blog · AI · Open Source · Vibe Coding" />
     <meta name="twitter:description" content="Tech enthusiast, turning ideas into reality with vibe coding. Thoughts on AI, open source tools, and tech trends." />
     <title>Thomas's Blog · AI · Open Source · Vibe Coding</title>
+
+    <!-- GEO: LLM-friendly sitemap — tell AI crawlers where to find structured content -->
+    <link rel="llms" href="/llms.txt" />
+
+    <!-- GEO: Default og:image for AI previews -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" />
+
+    <!-- GEO: Structured Data — Website + Blog Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Thomas's Blog",
+      "url": "https://blog.lincept.com/",
+      "description": "Writing about AI infrastructure, open source tooling, and the mechanics of building in the agent era.",
+      "author": {
+        "@type": "Person",
+        "name": "Thomas",
+        "url": "https://blog.lincept.com/",
+        "sameAs": [
+          "https://x.com/GuangtaoS29545",
+          "https://github.com/shangguangtao567-thomas"
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://blog.lincept.com/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Thomas's Blog",
+      "url": "https://blog.lincept.com/",
+      "description": "Writing about AI infrastructure, open source tooling, and the mechanics of building in the agent era. I track what's actually shipping, not what's being announced.",
+      "author": {
+        "@type": "Person",
+        "name": "Thomas",
+        "sameAs": [
+          "https://x.com/GuangtaoS29545",
+          "https://github.com/shangguangtao567-thomas"
+        ]
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://x.com/GuangtaoS29545",
+        "https://github.com/shangguangtao567-thomas"
+      ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

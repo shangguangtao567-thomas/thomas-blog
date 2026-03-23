@@ -26,8 +26,46 @@ export default function PostDetail() {
 
   const post = (postsData as Post[]).find(p => p.slug === slug);
 
+  const isoDate = post ? new Date(post.publishedAt).toISOString() : '';
+  const formattedDate = post ? formatDate(post.publishedAt) : '';
+
   useEffect(() => {
     if (!post) return;
+    // Inject JSON-LD structured data for this article
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.titleEn,
+      "description": post.excerptEn,
+      "url": `https://blog.lincept.com/blog/${post.slug}/`,
+      "datePublished": isoDate,
+      "author": {
+        "@type": "Person",
+        "name": "Thomas",
+        "url": "https://blog.lincept.com/",
+        "sameAs": ["https://x.com/GuangtaoS29545"]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Thomas",
+        "url": "https://blog.lincept.com/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://blog.lincept.com/blog/${post.slug}/`
+      },
+      "keywords": (post.keywords || []).join(', '),
+      "articleSection": post.tagEn,
+      "wordCount": post.contentEn ? post.contentEn.split(/\s+/).length : 0
+    };
+    const existing = document.getElementById('article-json-ld');
+    if (existing) existing.remove();
+    const script = document.createElement('script');
+    script.id = 'article-json-ld';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
     // Use marked from CDN or inline rendering
     const content = post.contentEn || '';
     // Simple markdown to html (basic)
@@ -41,7 +79,7 @@ export default function PostDetail() {
     }).catch(() => {
       setHtml(content.replace(/\n/g, '<br>'));
     });
-  }, [post]);
+  }, [post, isoDate]);
 
   if (!post) {
     return (
@@ -68,7 +106,7 @@ export default function PostDetail() {
           {post.titleEn}
         </h1>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)' }}>{formatDate(post.publishedAt)}</span>
+          <time dateTime={isoDate} style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)' }}>{formattedDate}</time>
           {post.readTime && (
             <span style={{ fontSize: '0.8rem', color: 'var(--fg-subtle)' }}>{post.readTime} min read</span>
           )}
@@ -83,7 +121,7 @@ export default function PostDetail() {
       <hr style={{ border: 'none', borderTop: '1px solid #1f1f1f', marginBottom: '2.5rem' }} />
 
       {/* Content */}
-      <div
+      <article
         className="prose-blog"
         dangerouslySetInnerHTML={{ __html: html }}
       />
