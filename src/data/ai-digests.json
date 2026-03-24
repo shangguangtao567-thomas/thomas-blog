@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-24",
+    "date": "2026-03-24",
+    "titleZh": "2026-03-24 AI 日报：数学推理突破与企业级 Agent 并行",
+    "titleEn": "Math Reasoning Breakthrough & Enterprise Agents",
+    "excerptZh": "GPT-5.4 Pro 首次解决 FrontierMath 前沿数学开放问题，百度 DuMate 全量上线成首个国产企业级 Agent，UK 发现 AI 网络攻击 scaling law。",
+    "excerptEn": "GPT-5.4 Pro solves FrontierMath open problem for the first time. Baidu DuMate launches as first domestic enterprise agent. UK discovers AI cybersecurity scaling law.",
+    "issueSummaryZh": "GPT-5.4 Pro 首次解决 FrontierMath 前沿数学开放问题，百度 DuMate 全量上线成首个国产企业级 Agent，UK 发现 AI 网络攻击 scaling law。",
+    "issueSummaryEn": "GPT-5.4 Pro solves FrontierMath open problem for the first time. Baidu DuMate launches as first domestic enterprise agent. UK discovers AI cybersecurity scaling law.",
+    "path": "/blog/ai-daily-2026-03-24",
+    "itemCount": 6,
+    "heroTitleZh": "AI 日报｜2026-03-24｜数学推理突破与企业级 Agent 并行",
+    "heroTitleEn": "AI 日报｜2026-03-24｜数学推理突破与企业级 Agent 并行",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 2000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-23",
     "date": "2026-03-23",
     "titleZh": "AI 日报｜2026-03-23｜安全裂缝与自我进化：LLM系统的两面",
