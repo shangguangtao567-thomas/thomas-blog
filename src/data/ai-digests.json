@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-25",
+    "date": "2026-03-25",
+    "titleZh": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
+    "titleEn": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
+    "excerptZh": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
+    "excerptEn": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
+    "issueSummaryZh": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
+    "issueSummaryEn": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
+    "path": "/blog/ai-daily-2026-03-25",
+    "itemCount": 6,
+    "heroTitleZh": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
+    "heroTitleEn": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 4000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-24",
     "date": "2026-03-24",
     "titleZh": "AI Daily | 2026-03-24 | AI Breaks New Ground in Math, Security, and Enterprise",
