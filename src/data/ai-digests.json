@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-26",
+    "date": "2026-03-26",
+    "titleZh": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
+    "titleEn": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
+    "excerptZh": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
+    "excerptEn": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
+    "issueSummaryZh": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
+    "issueSummaryEn": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
+    "path": "/blog/ai-daily-2026-03-26",
+    "itemCount": 6,
+    "heroTitleZh": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
+    "heroTitleEn": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 4400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-25",
     "date": "2026-03-25",
     "titleZh": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
