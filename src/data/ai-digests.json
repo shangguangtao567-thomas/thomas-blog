@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-27",
+    "date": "2026-03-27",
+    "titleZh": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
+    "titleEn": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
+    "excerptZh": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
+    "excerptEn": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
+    "issueSummaryZh": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
+    "issueSummaryEn": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
+    "path": "/blog/ai-daily-2026-03-27",
+    "itemCount": 6,
+    "heroTitleZh": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
+    "heroTitleEn": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 10400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-26",
     "date": "2026-03-26",
     "titleZh": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
