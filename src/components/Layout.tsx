@@ -1,28 +1,33 @@
 import { ReactNode } from 'react';
 import { useLocation } from 'wouter';
 import { ThemeProvider } from '../contexts/ThemeContext';
+import { siteConfig } from '../lib/siteConfig';
 import TopNav from './TopNav';
 
 function InnerLayout({ children }: { children: ReactNode }) {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <TopNav currentPath={location} navigate={(path) => window.location.href = path} />
+    <div className="site-shell bg-background text-foreground">
+      <div className="ambient-bg" aria-hidden="true" />
+      <TopNav currentPath={location} navigate={navigate} />
 
-      <main>
-        {children}
-      </main>
+      <main className="site-main">{children}</main>
 
-      <footer className="border-t border-border mt-20">
-        <div className="site-container" style={{ padding: '2rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-          <span className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Thomas · blog.lincept.com
-          </span>
-          <div style={{ display: 'flex', gap: '1.25rem' }}>
-            <a href="/feed.xml" className="text-xs text-muted-foreground hover:text-foreground transition-colors">RSS</a>
-            <a href="https://x.com/GuangtaoS29545" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground transition-colors">X</a>
-            <a href="https://github.com/shangguangtao567-thomas" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
+      <footer className="site-footer">
+        <div className="site-footer__panel">
+          <div>
+            <p className="site-footer__title">Thomas</p>
+            <p className="site-footer__copy">AI infrastructure, open source tooling, and agent-era engineering.</p>
+          </div>
+
+          <div className="site-footer__meta">
+            <div className="site-footer__links">
+              <a href="/feed.xml">RSS</a>
+              <a href={siteConfig.xProfileUrl} target="_blank" rel="noopener noreferrer">X</a>
+              <a href="https://github.com/shangguangtao567-thomas" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <span>&copy; {new Date().getFullYear()} Thomas &middot; blog.lincept.com</span>
           </div>
         </div>
       </footer>

@@ -607,6 +607,35 @@ function buildBodyCoverage(items = []) {
   return { targeted, succeeded, totalWords, ratio: targeted ? Number((succeeded / targeted).toFixed(2)) : 0 };
 }
 
+/**
+ * Build Chinese intro from the first item's LLM-generated narrative.
+ * Falls back to buildHeroSummaryZh only if no LLM narrative available.
+ * This avoids the template "两条线同时加速..." phrasing.
+ */
+function buildIntroFromFirstItem(items, windowHours, limitedUpdateWindow) {
+  // Find first item with actual LLM-generated narrative (not null, not template)
+  for (const item of items) {
+    const narrative = item.narrativeZh;
+    if (Array.isArray(narrative) && narrative.length > 0 && narrative[0]) {
+      const firstPara = narrative[0].trim();
+      // Skip if it looks like a template phrase
+      if (!firstPara.includes('两条线同时加速') && !firstPara.includes('两条发展路径') && firstPara.length > 30) {
+        return firstPara;
+      }
+    }
+    // Also try narrativeEn if no Chinese
+    const narrativeEn = item.narrativeEn;
+    if (Array.isArray(narrativeEn) && narrativeEn.length > 0 && narrativeEn[0]) {
+      const firstPara = narrativeEn[0].trim();
+      if (!firstPara.includes('two lines') && firstPara.length > 30) {
+        return firstPara; // use English if no Chinese available
+      }
+    }
+  }
+  // Fall back to template only as last resort
+  return buildHeroSummaryZh(items, [], windowHours);
+}
+
 function buildHeroSummaryZh(items, themes, windowHours) {
   if (!items.length) return `过去 ${windowHours} 小时没有出现值得单独展开的高信号更新。`;
   const actors = uniqueStrings(items.slice(0, 4).map(item => inferActor(item)));
@@ -976,7 +1005,7 @@ export function buildDigestDetail({ date, items, windowHours, digestUrl, generat
       + (limitedUpdateWindow ? ` High-signal items were thin in the last ${windowHours} hours, so older material was deliberately left out rather than padded in.` : '');
     introZh = (llmAnalysis.heroSummary.zh
       ? llmAnalysis.heroSummary.zh
-      : buildHeroSummaryZh(items, themes, windowHours))
+      : buildIntroFromFirstItem(items, windowHours, limitedUpdateWindow))
       + (limitedUpdateWindow ? ` 另外，近 ${windowHours} 小时可保留的高信号更新不多，所以这期没有拿更早的消息来凑数。` : '');
   } else {
     titleSummaryZh = buildTitleSummaryZh(items, themes);

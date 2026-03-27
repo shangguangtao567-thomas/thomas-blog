@@ -6,7 +6,7 @@ excerptZh: "四个模型的技术路线各有侧重，但有一个共同方向�
 excerptEn: "Four models, four technical approaches, one shared direction: prioritizing tool-calling and agent capabilities over raw intelligence. Behind this trend lies the rising value of the orchestration layer."
 tag: "AI"
 tagEn: "AI"
-image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=80"
+image: "/images/open-source-models-agent-orchestration.jpg"
 readTime: 18
 publishedAt: "2026-03-03"
 ---

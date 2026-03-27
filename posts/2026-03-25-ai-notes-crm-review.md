@@ -5,6 +5,7 @@ titleEn: "Why Your AI Notes App Keeps Gathering Dust (And How to Pick One That A
 excerptEn: "Most productivity tools die in the second week. Here's the honest diagnostic framework that will help you choose — and actually keep — the right one."
 tag: "AI Productivity"
 tagEn: "AI Productivity"
+image: "/images/ai-notes-crm-review.jpg"
 readTime: 20
 date: 2026-03-25
 ---

@@ -67,6 +67,8 @@ Paragraph 3 — Signal to watch:
 BANNED (EN): "game-changer", "paradigm shift", "ecosystem", "landscape", "exciting", "groundbreaking", "landmark", "notable", "significant"
 BANNED (EN): starting sentences with "This", "It", "The article", "This piece", "This update"
 BANNED (ZH): "值得关注", "意义重大", "具有重要意义", "不得不说", "让我们拭目以待", "不言而喻", "震撼", "突破性"
+BANNED (ZH): "涉及两条发展路径的同步加速", "两条路径同步加速", "共同点显而易见", "市场不再关注", "能力能不能经受住真实工作流程", "更关注模型功能能否经受住"
+BANNED (ZH): starting sentences with "这个问题", "这个问题实际上", "其实", "归根结底"
 BANNED: restating the title or press-release language verbatim
 IMPORTANT: Each paragraph must be COMPLETE SENTENCES. Do NOT cut off mid-word. Do NOT reuse sentence patterns across articles.
 
@@ -94,7 +96,10 @@ Write SEO metadata for this briefing:
 1. seoTitle: 8-12 words. PRIMARY KEYWORD FIRST. Format: "Primary Keyword | Secondary Topic [AI Daily]". Example: "Local LLM Inference Speeds Up | Enterprise AI Agents Go Mainstream". Do NOT start with "AI Daily". Do NOT repeat the same phrase twice.
 2. seoDescription: 120-155 chars. Factual, keyword-rich, drives click-through. Describe what engineers will learn, not how you feel about it. No "today's issue" or "in this issue".
 3. keywords: 3-5 comma-separated topic tags (e.g. "local-llm,inference,enterprise-agents,security,open-source")
-4. heroSummary: 2 sentences. Write as a factual brief opening paragraph. Start with a concrete fact, not "This issue". No marketing language.
+4. heroSummary: 2 sentences each language. Start with a CONCRETE FACT — a number, a release name, a specific product or benchmark result. Never start with "This issue", "This briefing", "Today", "A new report", or any meta-framing. No marketing language. No "involves X simultaneous acceleration". No "shared point is clear". No "market no longer cares about X, but cares about Y". BOTH languages required.
+
+BANNED phrases (EN): "game-changer", "paradigm shift", "ecosystem", "landscape", "exciting", "groundbreaking"
+BANNED phrases (ZH): "涉及两条发展路径的同步加速", "两条路径同步加速", "共同点显而易见", "市场不再关注", "这个问题实际上", "这个问题", "值得关注"
 
 IMPORTANT: seoTitle and seoDescription are used for search engine ranking and social sharing — write for discoverability, not style.
 
@@ -103,17 +108,18 @@ Output ONLY valid JSON:
 }
 
 /**
- * Call claude CLI with a prompt.
+ * Call claude CLI with a prompt via stdin (avoids shell escaping issues).
  */
 function callClaude(prompt) {
   return new Promise((resolve, reject) => {
     const child = execFile(
       CLAUDE_BIN,
-      ['--print', '--permission-mode', 'bypassPermissions', prompt],
+      ['--print', '--dangerously-skip-permissions'],
       {
         timeout: TIMEOUT_MS,
         maxBuffer: 1024 * 1024,
         env: { ...process.env, NO_COLOR: '1' },
+        stdio: ['pipe', 'pipe', 'pipe'],
       },
       (error, stdout, stderr) => {
         if (error) {
@@ -127,6 +133,7 @@ function callClaude(prompt) {
         resolve(stdout);
       },
     );
+    child.stdin.end(prompt);
   });
 }
 

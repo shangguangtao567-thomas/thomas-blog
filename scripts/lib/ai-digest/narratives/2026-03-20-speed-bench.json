@@ -1,0 +1,13 @@
+{
+  "narrativeEn": [
+    "SPEED-Bench provides standardized evaluation metrics for speculative decoding systems, covering draft prediction accuracy, verification efficiency, and end-to-end latency under a unified scoring framework. The benchmark enables direct comparison of different draft model strategies across model families. Teams can now benchmark speculative decoding performance using consistent methodology.",
+    "Run SPEED-Bench on your current speculative decoding pipeline to establish baseline metrics before making architecture changes. If your verification rate falls below the benchmark's reference scores, your draft model may be undersized for your target model. Use the results to justify or reject proposed changes to your SD configuration.",
+    "Check when the open-source benchmark code publishes on the Hugging Face repository. Run the evaluation against your specific model pairing to verify whether reported speedup numbers hold for your workload. This gives you actionable data within days of release."
+  ],
+  "narrativeZh": [
+    "SPEED-Bench为投机解码系统提供标准化评估指标，涵盖草稿预测准确率、验证效率和统一评分框架下的端到端延迟。该基准支持跨模型家族比较不同草稿模型策略。团队可以使用一致的方法论对投机解码性能进行基准测试。",
+    "立即对当前投机解码流程运行SPEED-Bench，在做出架构变更前建立基线指标。如果验证率低于基准参考分数，草稿模型可能对目标模型规模不足。使用结果来支持或否决对SD配置的拟议变更。",
+    "关注Hugging Face仓库上开源基准代码的发布时间。针对你的具体模型配对运行评估，验证报告的加速数字是否适用于你的工作负载。发布后数日内即可获得可操作的数据。"
+  ],
+  "titleEn": "SPEED-Bench: A Unified Benchmark for Speculative Decoding Evaluation"
+}

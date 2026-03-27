@@ -12,11 +12,10 @@ const POSTS_FILE = path.join(DATA_DIR, 'posts.json');
 const POSTS_INDEX_FILE = path.join(DATA_DIR, 'posts-index.json');
 const DIGESTS_FILE = path.join(DATA_DIR, 'ai-digests.json');
 
-const POSTS_DIR = path.join(ROOT, 'posts');
 const siteConfig = loadSiteConfig();
 const SITE_URL = (process.env.SITE_URL || siteConfig.siteUrl || 'https://blog.lincept.com').replace(/\/$/, '');
-const DEFAULT_TITLE = `Thomas · AI, Open Source, and Agent-era Engineering`;
-const DEFAULT_DESCRIPTION = `Durable notes on AI infrastructure, open source tooling, and the mechanics of building in the agent era. I track what's actually shipping, not what's being announced.`;
+const DEFAULT_TITLE = 'Thomas · AI, Open Source, and Agent-era Engineering';
+const DEFAULT_DESCRIPTION = "Durable notes on AI infrastructure, open source tooling, and the mechanics of building in the agent era. I track what's actually shipping, not what's being announced.";
 
 marked.setOptions({ gfm: true });
 
@@ -72,7 +71,7 @@ function formatDisplayDate(dateStr) {
   try {
     return new Date(dateStr).toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'short',
+      month: 'long',
       day: 'numeric',
     });
   } catch {
@@ -80,14 +79,12 @@ function formatDisplayDate(dateStr) {
   }
 }
 
-function formatDateShort(dateStr) {
+function formatShortDate(dateStr) {
   try {
     const d = new Date(dateStr);
-    const mo = String(d.getMonth() + 1).padStart(2, '0');
-    const dy = String(d.getDate()).padStart(2, '0');
-    return `${mo}/${dy}`;
+    return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
   } catch {
-    return '  /  ';
+    return '00/00';
   }
 }
 
@@ -113,7 +110,6 @@ function injectIntoHead(html, snippet) {
 }
 
 function injectRootContent(html, content) {
-  // Use regex to replace entire root div (not just empty ones)
   return html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${content}</div>`);
 }
 
@@ -163,20 +159,17 @@ function writeRouteHtml(template, routePath, route, bodyHtml = '') {
   const normalized = String(routePath || '').replace(/^\/+|\/+$/g, '');
   const targetDir = normalized ? path.join(DIST_DIR, normalized) : DIST_DIR;
   fs.mkdirSync(targetDir, { recursive: true });
-  const targetFile = path.join(targetDir, 'index.html');
 
   let html = renderShell(template, route);
   if (bodyHtml) {
     html = injectRootContent(html, bodyHtml);
   }
 
-  fs.writeFileSync(targetFile, html);
+  fs.writeFileSync(path.join(targetDir, 'index.html'), html);
 }
 
 function write404Page() {
-  const file = path.join(DIST_DIR, '404.html');
-  const html = fs.readFileSync(path.join(ROOT, 'public', '404.html'), 'utf-8');
-  fs.writeFileSync(file, html);
+  fs.copyFileSync(path.join(ROOT, 'public', '404.html'), path.join(DIST_DIR, '404.html'));
 }
 
 function writeCname() {
@@ -186,211 +179,374 @@ function writeCname() {
   }
 }
 
-function renderStaticHome({ posts, digests }) {
-  const latestPosts = posts.slice(0, 6).map((post) => `
-    <a href="${routeUrl(`blog/${post.slug}`)}" class="post-item" style="text-decoration: none;">
-      <span class="post-item-date">${formatDateShort(post.publishedAt)}</span>
-      <div class="post-item-title">${escapeHtml(post.titleEn)}</div>
-      ${post.tagEn ? `<span class="post-item-tag">${escapeHtml(post.tagEn)}</span>` : ''}
-    </a>
-  `).join('\n');
+function normalizeTitle(value = '') {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&[a-z]+;/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
 
-  const digestItems = digests.slice(0, 3).map(digest => `
-    <a href="${digest.path || `/blog/${digest.slug}`}" class="post-item" style="text-decoration: none;">
-      <span class="post-item-date">${formatDateShort(digest.date)}</span>
-      <div class="post-item-title">${escapeHtml(digest.titleEn)}</div>
-      <span class="post-item-tag">digest</span>
-    </a>
-  `).join('\n');
+function titlesOverlap(left = '', right = '') {
+  const normalizedLeft = normalizeTitle(left);
+  const normalizedRight = normalizeTitle(right);
+  return normalizedLeft === normalizedRight ||
+    normalizedLeft.includes(normalizedRight) ||
+    normalizedRight.includes(normalizedLeft);
+}
+
+function stripRedundantLeadingMarkdownH1(markdown = '', title = '') {
+  const match = String(markdown).match(/^\s*#\s+(.+?)\s*(?:\n|$)/);
+  if (!match) return markdown;
+  if (!titlesOverlap(match[1], title)) return markdown;
+  return String(markdown).replace(/^\s*#\s+.+?\s*(?:\n+|$)/, '');
+}
+
+function stripRedundantLeadingHtmlH1(html = '', title = '') {
+  const match = String(html).match(/^\s*<h1[^>]*>([\s\S]*?)<\/h1>\s*/i);
+  if (!match) return html;
+  if (!titlesOverlap(match[1], title)) return html;
+  return String(html).replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, '');
+}
+
+function stripDigestSignature(markdown = '') {
+  return String(markdown).replace(/\n+(?:---\s*\n+)?\*?AI\s+Daily\s*\|[^\n]*\*?\s*$/i, '');
+}
+
+function safeLink(pathOrUrl) {
+  if (!pathOrUrl) return '#';
+  if (/^https?:\/\//.test(pathOrUrl)) return pathOrUrl;
+  return pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
+}
+
+function renderTagPill(label) {
+  if (!label) return '';
+  return `<span class="tag-pill">${escapeHtml(label)}</span>`;
+}
+
+function renderBriefingChips(themes = [], max = 2) {
+  return themes
+    .slice(0, max)
+    .filter((theme) => theme?.themeEn)
+    .map((theme) => `<span class="briefing-chip">${escapeHtml(theme.themeEn)}</span>`)
+    .join('');
+}
+
+function renderDetailChips(items = [], max = 6) {
+  return items
+    .slice(0, max)
+    .filter(Boolean)
+    .map((item) => `<span class="detail-chip">${escapeHtml(item)}</span>`)
+    .join('');
+}
+
+function renderStaticHome({ posts, digests }) {
+  const heroPost = posts[0];
+  const featuredPosts = posts.slice(1, 4);
+  const latestDigests = digests.slice(0, 3);
 
   return `
-    <div class="site-container fade-in" style="padding-top: 4rem; padding-bottom: 6rem;">
-      <section style="margin-bottom: 4rem;">
-        <h1 style="font-size: 1.125rem; font-weight: 600; color: #ffffff; margin-bottom: 0.75rem; letter-spacing: -0.01em;">Thomas</h1>
-        <p style="font-size: 0.9rem; color: #888888; line-height: 1.7; max-width: 520px; margin-bottom: 1.25rem;">${DEFAULT_DESCRIPTION}</p>
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
-          <a href="https://x.com/GuangtaoS29545" target="_blank" rel="noopener noreferrer" class="x-cta">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            Follow on X
-          </a>
-          <a href="./feed.xml" style="font-size: 0.75rem; color: #6b6b6b;">RSS ↗</a>
+    <div class="site-container-wide page-shell page-shell--home fade-in">
+      <section class="home-hero">
+        <div class="hero-panel">
+          <p class="eyebrow">Thomas</p>
+          <h1 class="hero-panel__title"><span class="text-gradient">AI, open source,</span> and agent-era engineering.</h1>
+          <p class="hero-panel__copy">
+            Deep dives, daily briefings, and honest analysis on what is actually shipping in AI &mdash; not what is being announced.
+          </p>
+          <div class="hero-panel__actions">
+            <a href="/blog" class="button-link">Read the Writing</a>
+            <a href="/briefing" class="button-link--ghost">AI Briefing</a>
+            <a href="${escapeAttr(siteConfig.xProfileUrl)}" target="_blank" rel="noreferrer" class="x-cta">Follow on X</a>
+          </div>
         </div>
+
+        ${heroPost ? `
+          <a href="/blog/${heroPost.slug}" class="feature-card feature-card--hero">
+            ${heroPost.image ? `<img src="${escapeAttr(heroPost.image)}" alt="" class="feature-card__image" loading="lazy" />` : ''}
+            <div>
+              <p class="section-label">Latest</p>
+              <div class="feature-card__meta">
+                <span>${formatDisplayDate(heroPost.publishedAt)}</span>
+                <span>${heroPost.readTime} min read</span>
+                ${heroPost.tagEn ? renderTagPill(heroPost.tagEn) : ''}
+              </div>
+              <h2 class="feature-card__title">${escapeHtml(heroPost.titleEn)}</h2>
+              <p class="feature-card__excerpt">${escapeHtml(heroPost.excerptEn || '')}</p>
+            </div>
+            <div class="feature-card__footer">
+              <span class="button-link--ghost">Read article &rarr;</span>
+            </div>
+          </a>
+        ` : ''}
       </section>
-      <section style="margin-bottom: 4rem;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;"><p class="section-label">Writing</p><a href="/blog" style="font-size: 0.75rem; color: #6b6b6b;">All posts →</a></div>
-        <div>${latestPosts}</div>
+
+      <section class="home-section">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Writing</p>
+            <h2 class="section-head__title">Latest writing</h2>
+            <p class="section-head__copy">${posts.length} essays, reviews, and explainers.</p>
+          </div>
+          <a href="/blog" class="section-head__link">All writing</a>
+        </div>
+
+        <div class="story-grid">
+          ${featuredPosts.map((post) => `
+            <a href="/blog/${post.slug}" class="story-card">
+              <div class="story-row__meta">
+                <span>${formatShortDate(post.publishedAt)}</span>
+                ${post.tagEn ? renderTagPill(post.tagEn) : ''}
+              </div>
+              <h3 class="story-card__title">${escapeHtml(post.titleEn)}</h3>
+              <p class="story-card__excerpt">${escapeHtml(post.excerptEn || '')}</p>
+              <div class="story-card__footer">
+                <span class="meta-kicker">${post.readTime} min read</span>
+              </div>
+            </a>
+          `).join('')}
+        </div>
+
       </section>
-      <section>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;"><p class="section-label">AI Briefing</p><a href="/briefing" style="font-size: 0.75rem; color: #6b6b6b;">Archive →</a></div>
-        <div>${digestItems}</div>
+
+      <section class="home-section">
+        <div class="section-head">
+          <div>
+            <p class="section-label">AI Briefing</p>
+            <h2 class="section-head__title">Recent briefings</h2>
+            <p class="section-head__copy">${digests.length} daily issues, grouped by theme and signal.</p>
+          </div>
+          <a href="/briefing" class="section-head__link">Briefing archive</a>
+        </div>
+
+        <div class="briefing-grid">
+          ${latestDigests.map((digest) => `
+            <a href="${escapeAttr(safeLink(digest.path || `/blog/${digest.slug}`))}" class="briefing-card">
+              <div class="briefing-card__meta">
+                <span>${formatDisplayDate(digest.date)}</span>
+                ${digest.itemCount ? `<span>${digest.itemCount} items</span>` : ''}
+              </div>
+              <h3 class="briefing-card__title">${escapeHtml(digest.titleEn)}</h3>
+              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+              <div class="briefing-card__themes">${renderBriefingChips(digest.themes || [], 2)}</div>
+            </a>
+          `).join('')}
+        </div>
       </section>
     </div>
   `;
 }
 
-// --- AI Daily Digest page builder ---
-function parseDigestFrontmatter(content) {
-  const lines = content.split('\n');
-  if (lines[0] !== '---') return {};
-  const result = {};
-  let i = 1;
-  while (i < lines.length && lines[i] !== '---') {
-    const colonIdx = lines[i].indexOf(':');
-    if (colonIdx > 0) {
-      const key = lines[i].slice(0, colonIdx).trim();
-      const value = lines[i].slice(colonIdx + 1).trim().replace(/^["']|["']$/g, '');
-      result[key] = value;
-    }
-    i++;
-  }
-  return result;
-}
+function renderStaticBlog(posts) {
+  const leadPost = posts[0];
+  const restPosts = posts.slice(1);
 
-function extractContentEn(content) {
-  const marker = '<!-- CONTENT_EN -->';
-  const idx = content.indexOf(marker);
-  if (idx === -1) return content;
-  return content.slice(idx + marker.length).trim();
-}
-
-function stripFrontmatter(content) {
-  if (!content.startsWith('---')) return content;
-  const end = content.indexOf('---', 3);
-  if (end === -1) return content;
-  return content.slice(end + 3).trim();
-}
-
-async function buildDigestPages(template, digests) {
-  if (!digests || digests.length === 0) {
-    console.log('  (no AI daily digests to prerender)');
-    return;
-  }
-
-  // Read all ai-daily markdown files
-  const digestFiles = fs.readdirSync(POSTS_DIR)
-    .filter(f => f.startsWith('ai-daily-') && f.endsWith('.md'))
-    .sort()
-    .reverse();
-
-  const slugToMarkdown = {};
-  for (const file of digestFiles) {
-    const content = fs.readFileSync(path.join(POSTS_DIR, file), 'utf-8');
-    slugToMarkdown[file] = content;
-  }
-
-  let count = 0;
-  for (const digest of digests) {
-    // Find matching markdown file
-    const slug = digest.slug || `ai-daily-${digest.date}`;
-    const possibleFiles = [
-      `${digest.date}-${slug}.md`,
-      `${digest.date}-${slug.replace('/', '-')}.md`,
-    ];
-    let mdContent = null;
-    let mdFile = null;
-    for (const f of possibleFiles) {
-      if (fs.existsSync(path.join(POSTS_DIR, f))) {
-        mdContent = fs.readFileSync(path.join(POSTS_DIR, f), 'utf-8');
-        mdFile = f;
-        break;
-      }
-    }
-    if (!mdContent) {
-      // Try glob-style search
-      const matched = digestFiles.find(f => f.includes(digest.date) && f.includes('ai-daily'));
-      if (matched) {
-        mdContent = slugToMarkdown[matched];
-        mdFile = matched;
-      }
-    }
-
-    if (!mdContent) {
-      console.warn(`  [digest] no markdown for ${slug}, skipping HTML generation`);
-      continue;
-    }
-
-    // Parse frontmatter + content
-    const frontmatter = parseDigestFrontmatter(mdContent);
-    const rawContent = extractContentEn(mdContent);
-    const bodyHtml = marked.parse(rawContent || '');
-
-    const bodyContent = bodyHtml ||
-      `<p style="color:#888;">Full content not available. Visit the <a href="${SITE_URL}/briefing">briefing archive</a>.</p>`;
-
-    // Build SEO keywords from themes + topics in the digest
-    const topicTags = (digest.themes || []).map(t => (t.themeEn || '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')).filter(Boolean);
-    const seoKeywords = ['AI Daily', 'AI briefing', 'daily AI digest', ...topicTags.slice(0, 5)].filter(Boolean);
-
-    const route = {
-      title: `${digest.titleEn || frontmatter.titleEn || slug} · Thomas`,
-      description: truncateText(digest.excerptEn || frontmatter.excerptEn || '', 155),
-      url: routeUrl(`blog/${slug}`),
-      type: 'article',
-      publishedAt: digest.date ? new Date(digest.date).toISOString() : undefined,
-      keywords: seoKeywords,
-      jsonLd: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: digest.titleEn || slug,
-        description: truncateText(digest.excerptEn || '', 200),
-        datePublished: digest.date ? new Date(digest.date).toISOString() : undefined,
-        author: { '@type': 'Person', name: 'Thomas' },
-        publisher: { '@type': 'Person', name: 'Thomas' },
-        url: routeUrl(`blog/${slug}`),
-        keywords: seoKeywords.join(', '),
-        articleSection: 'AI Briefing',
-        inLanguage: 'en',
-      }),
-    };
-
-    const bodyPageHtml = `
-      <div class="site-container fade-in" style="padding-top: 3rem; padding-bottom: 6rem;">
-        <a href="/briefing" style="font-size: 0.8125rem; color: #6b6b6b; display: inline-flex; align-items: center; gap: 0.25rem; margin-bottom: 2.5rem; transition: color 0.15s;">← AI Briefing</a>
-        <header style="margin-bottom: 2.5rem;">
-          <span class="tag-pill" style="margin-bottom: 0.75rem; display: inline-block; background: #1f1f1f; color: #888; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 4px;">AI Daily</span>
-          <h1 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; line-height: 1.3; letter-spacing: -0.025em; margin-bottom: 0.75rem; margin-top: 0.5rem;">${escapeHtml(digest.titleEn || frontmatter.titleEn || slug)}</h1>
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <span style="font-size: 0.8rem; color: #6b6b6b;">${formatDisplayDate(digest.date || frontmatter.date)}</span>
-            ${digest.itemCount ? `<span style="font-size: 0.8rem; color: #6b6b6b;">${digest.itemCount} items</span>` : ''}
-            ${digest.bodyCoverage?.totalWords ? `<span style="font-size: 0.8rem; color: #6b6b6b;">${digest.bodyCoverage.totalWords} words</span>` : ''}
+  return `
+    <div class="site-container-wide page-shell fade-in">
+      <section class="home-section">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Writing</p>
+            <h1 class="section-head__title">Latest articles</h1>
+            <p class="section-head__copy">${posts.length} essays, reviews, and explainers.</p>
           </div>
-          ${(digest.excerptEn || frontmatter.excerptEn) ? `<p style="font-size: 0.9375rem; color: #888888; line-height: 1.65; margin-top: 1rem; border-left: 2px solid #1f1f1f; padding-left: 1rem;">${escapeHtml(digest.excerptEn || frontmatter.excerptEn)}</p>` : ''}
-        </header>
-        <hr style="border: none; border-top: 1px solid #1f1f1f; margin-bottom: 2.5rem;" />
-        <div class="prose-blog">${bodyContent}</div>
-        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1f1f1f;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <a href="/briefing" style="font-size: 0.8125rem; color: #6b6b6b;">← Back to AI Briefing</a>
-            <a href="https://x.com/intent/tweet?text=${encodeURIComponent(digest.titleEn || slug)}&url=${encodeURIComponent(routeUrl(`blog/${slug}`))}&via=GuangtaoS29545" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; color: #6b6b6b; display: inline-flex; align-items: center; gap: 0.3rem;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              Share on X
+        </div>
+
+        ${leadPost ? `
+          <a href="/blog/${leadPost.slug}" class="feature-card feature-card--lead">
+            <div>
+              <p class="section-label">Latest</p>
+              <div class="feature-card__meta">
+                <span>${formatDisplayDate(leadPost.publishedAt)}</span>
+                <span>${leadPost.readTime} min read</span>
+                ${leadPost.tagEn ? renderTagPill(leadPost.tagEn) : ''}
+              </div>
+              <h2 class="feature-card__title">${escapeHtml(leadPost.titleEn)}</h2>
+              <p class="feature-card__excerpt">${escapeHtml(leadPost.excerptEn || '')}</p>
+            </div>
+            <div class="feature-card__footer">
+              <span class="button-link--ghost">Read lead story</span>
+            </div>
+          </a>
+        ` : ''}
+      </section>
+
+      <section class="home-section">
+        <div class="story-list">
+          ${restPosts.map((post) => {
+            const showTag = post.tagEn && String(post.kind || '').toLowerCase() !== String(post.tagEn || '').toLowerCase();
+            return `
+              <a href="/blog/${post.slug}" class="story-row">
+                <div class="story-row__date">${formatShortDate(post.publishedAt)}</div>
+                <div class="story-row__body">
+                  <div class="story-row__meta">
+                    ${post.kind ? `<span class="meta-kicker">${escapeHtml(post.kind)}</span>` : ''}
+                    ${showTag ? renderTagPill(post.tagEn) : ''}
+                  </div>
+                  <h2 class="story-row__title">${escapeHtml(post.titleEn)}</h2>
+                  <p class="story-row__excerpt">${escapeHtml(post.excerptEn || '')}</p>
+                </div>
+                <div class="story-row__suffix">
+                  <span class="meta-kicker">${post.readTime} min</span>
+                </div>
+              </a>
+            `;
+          }).join('')}
+        </div>
+      </section>
+    </div>
+  `;
+}
+
+function renderStaticBriefing(digests) {
+  const leadDigest = digests[0];
+  const gridDigests = digests.slice(1, 4);
+  const restDigests = digests.slice(4);
+
+  return `
+    <div class="site-container-wide page-shell fade-in">
+      <section class="home-section">
+        <div class="section-head">
+          <div>
+            <p class="section-label">AI Briefing</p>
+            <h1 class="section-head__title">Daily issues</h1>
+            <p class="section-head__copy">${digests.length} briefings grouped by topic and signal.</p>
+          </div>
+        </div>
+
+        ${leadDigest ? `
+          <a href="${escapeAttr(safeLink(leadDigest.path || `/blog/${leadDigest.slug}`))}" class="feature-card feature-card--lead">
+            <p class="section-label">Latest Issue</p>
+            <div class="briefing-card__meta">
+              <span>${formatDisplayDate(leadDigest.date)}</span>
+              ${leadDigest.itemCount ? `<span>${leadDigest.itemCount} items</span>` : ''}
+            </div>
+            <h2 class="feature-card__title">${escapeHtml(leadDigest.titleEn)}</h2>
+            ${leadDigest.excerptEn ? `<p class="feature-card__excerpt">${escapeHtml(leadDigest.excerptEn || '')}</p>` : ''}
+            <div class="briefing-card__themes">${renderBriefingChips(leadDigest.themes || [], 3)}</div>
+          </a>
+        ` : ''}
+      </section>
+
+      <section class="home-section">
+        <div class="briefing-grid">
+          ${gridDigests.map((digest) => `
+            <a href="${escapeAttr(safeLink(digest.path || `/blog/${digest.slug}`))}" class="briefing-card">
+              <div class="briefing-card__meta">
+                <span>${formatDisplayDate(digest.date)}</span>
+                ${digest.itemCount ? `<span>${digest.itemCount} items</span>` : ''}
+              </div>
+              <h2 class="briefing-card__title">${escapeHtml(digest.titleEn)}</h2>
+              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+              <div class="briefing-card__themes">${renderBriefingChips(digest.themes || [], 2)}</div>
             </a>
+          `).join('')}
+        </div>
+
+        <div class="story-list" style="margin-top: 1rem;">
+          ${restDigests.map((digest) => `
+            <a href="${escapeAttr(safeLink(digest.path || `/blog/${digest.slug}`))}" class="story-row">
+              <div class="story-row__date">${new Date(digest.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>
+              <div class="story-row__body">
+                <div class="story-row__meta">
+                  <span class="meta-kicker">AI Daily</span>
+                  ${digest.itemCount ? renderTagPill(`${digest.itemCount} items`) : ''}
+                </div>
+                <h2 class="story-row__title">${escapeHtml(digest.titleEn)}</h2>
+                ${digest.excerptEn ? `<p class="story-row__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+              </div>
+            </a>
+          `).join('')}
+        </div>
+      </section>
+    </div>
+  `;
+}
+
+function renderStaticArticlePage(post, options = {}) {
+  const isDigest = Boolean(options.isDigest);
+  const route = options.route;
+  const heroKicker = isDigest ? 'AI Briefing' : post.tagEn || 'Writing';
+  const source = isDigest
+    ? stripDigestSignature(stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn))
+    : stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn);
+  const articleHtml = stripRedundantLeadingHtmlH1(marked.parse(source || ''), post.titleEn);
+  const backHref = isDigest ? '/briefing' : '/blog';
+  const backLabel = isDigest ? 'Back to AI Briefing' : 'Back to writing';
+  const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
+
+  return `
+    <div class="site-container detail-shell fade-in">
+      <a href="${backHref}" class="detail-backlink">
+        <span aria-hidden="true">←</span>
+        <span>${backLabel}</span>
+      </a>
+
+      <header class="detail-hero detail-hero--reading${isDigest ? ' detail-hero--digest' : ''}">
+        ${post.image ? `<img src="${escapeAttr(post.image)}" alt="" class="detail-hero__image" loading="eager" />` : ''}
+        <span class="tag-pill">${escapeHtml(heroKicker)}</span>
+        <div class="detail-hero__meta">
+          <time dateTime="${escapeAttr(route.publishedAt || '')}">${escapeHtml(formatDisplayDate(post.publishedAt))}</time>
+          ${post.readTime ? `<span>${post.readTime} min read</span>` : ''}
+          ${!isDigest && post.kind ? `<span>${escapeHtml(post.kind)}</span>` : ''}
+        </div>
+        <h1 class="detail-hero__title detail-hero__title--reading">${escapeHtml(post.titleEn)}</h1>
+        ${post.excerptEn ? `<div class="tldr-box"><span class="tldr-box__label">TL;DR</span><p class="tldr-box__content">${escapeHtml(post.excerptEn)}</p></div>` : ''}
+      </header>
+
+      <div class="detail-reading">
+        <article class="prose-blog detail-content">${articleHtml}</article>
+      </div>
+
+      <div class="detail-reading">
+        <div class="article-cta">
+          <h3 class="article-cta__title">Enjoyed this? Stay in the loop.</h3>
+          <p class="article-cta__copy">Get daily AI briefings and deep dives delivered to your feed.</p>
+          <div class="article-cta__actions">
+            <a href="${escapeAttr(siteConfig.xProfileUrl)}" target="_blank" rel="noreferrer" class="button-link">Follow on X</a>
+            <a href="${SITE_URL}/feed.xml" target="_blank" rel="noreferrer" class="button-link--ghost">Subscribe via RSS</a>
           </div>
         </div>
       </div>
-    `;
 
-    let html = renderShell(template, route);
-    html = injectRootContent(html, bodyPageHtml);
+      <div class="detail-footer">
+        <a href="${backHref}" class="button-link--ghost">${backLabel}</a>
+        <a href="https://x.com/intent/tweet?text=${encodeURIComponent(post.titleEn)}&url=${encodeURIComponent(route.url)}&via=GuangtaoS29545" target="_blank" rel="noopener noreferrer" class="x-cta">${shareText}</a>
+      </div>
+    </div>
+  `;
+}
 
-    // Write to file (same as writeRouteHtml but with pre-built html)
-    const normalized = `blog/${slug}`.replace(/^\/+|\/+$/g, '');
-    const targetDir = path.join(DIST_DIR, normalized);
-    fs.mkdirSync(targetDir, { recursive: true });
-    fs.writeFileSync(path.join(targetDir, 'index.html'), html);
-    count++;
+function buildJsonLd(post, route, section) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.titleEn,
+    description: truncateText(post.excerptEn || post.contentEn, 200),
+    datePublished: route.publishedAt,
+    author: { '@type': 'Person', name: 'Thomas', url: SITE_URL, sameAs: ['https://x.com/GuangtaoS29545', 'https://github.com/shangguangtao567-thomas'] },
+    publisher: { '@type': 'Person', name: 'Thomas', url: SITE_URL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': route.url },
+    url: route.url,
+    keywords: (post.keywords || []).join(', '),
+    articleSection: section,
+    wordCount: post.contentEn ? post.contentEn.split(/\s+/).length : 0,
+  };
+  if (post.image) {
+    schema.image = post.image.startsWith('/') ? `${SITE_URL}${post.image}` : post.image;
   }
-
-  console.log(`  ✓ built ${count} AI daily digest pages`);
+  return JSON.stringify(schema);
 }
 
 async function main() {
   ensureDistExists();
   const template = fs.readFileSync(path.join(DIST_DIR, 'index.html'), 'utf-8');
 
-  const posts = loadJson(POSTS_INDEX_FILE, []).filter(p => !p.slug.startsWith('ai-daily-'));
-  const allPosts = loadJson(POSTS_FILE, []).filter(p => !p.slug.startsWith('ai-daily-'));
+  const allPosts = loadJson(POSTS_FILE, []);
+  const posts = loadJson(POSTS_INDEX_FILE, []).filter((post) => !post.slug.startsWith('ai-daily-'));
   const digests = loadJson(DIGESTS_FILE, []);
+  const allPostsBySlug = new Map(allPosts.map((post) => [post.slug, post]));
 
   const baseRoute = {
     title: DEFAULT_TITLE,
@@ -398,106 +554,47 @@ async function main() {
     url: routeUrl(),
   };
 
-  // Home page
-  const homeHtml = renderStaticHome({ posts, digests });
-  writeRouteHtml(template, '/', baseRoute, homeHtml);
+  writeRouteHtml(template, '/', baseRoute, renderStaticHome({ posts, digests }));
+  writeRouteHtml(template, 'blog', { ...baseRoute, title: `Writing · ${siteConfig.siteName}`, url: routeUrl('blog') }, renderStaticBlog(posts));
 
-  // Blog list page
-  const blogRoute = { ...baseRoute, title: `Writing · ${siteConfig.siteName}`, url: routeUrl('blog') };
-  const blogHtml = `
-    <div class="site-container fade-in" style="padding-top: 3rem; padding-bottom: 6rem;">
-      <div style="margin-bottom: 2.5rem;">
-        <h1 style="font-size: 1.125rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem; letter-spacing: -0.01em;">Writing</h1>
-        <p style="font-size: 0.875rem; color: #6b6b6b;">${posts.length} posts on AI, open source, and building in the agent era.</p>
-      </div>
-      <div>
-        ${posts.map(post => `
-          <a href="/blog/${post.slug}" class="post-item" style="text-decoration: none;">
-            <span class="post-item-date">${formatDateShort(post.publishedAt)}</span>
-            <div style="flex: 1; min-width: 0;">
-              <div class="post-item-title">${escapeHtml(post.titleEn)}</div>
-              ${post.excerptEn ? `<div style="font-size: 0.8rem; color: #6b6b6b; margin-top: 0.2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(post.excerptEn)}</div>` : ''}
-            </div>
-            <div style="display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0;">
-              ${post.tagEn ? `<span class="post-item-tag">${escapeHtml(post.tagEn)}</span>` : ''}
-              ${post.readTime ? `<span style="font-size: 0.65rem; color: #6b6b6b; font-family: 'JetBrains Mono', monospace;">${post.readTime}m</span>` : ''}
-            </div>
-          </a>
-        `).join('\n')}
-      </div>
-    </div>
-  `;
-  writeRouteHtml(template, 'blog', blogRoute, blogHtml);
-
-  // Briefing list page
   const briefingRoute = { ...baseRoute, title: `AI Briefing · ${siteConfig.siteName}`, url: routeUrl('briefing') };
-  const briefingHtml = `
-    <div class="site-container fade-in" style="padding-top: 3rem; padding-bottom: 6rem;">
-      <div style="margin-bottom: 2.5rem;">
-        <h1 style="font-size: 1.125rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem; letter-spacing: -0.01em;">AI Briefing</h1>
-        <p style="font-size: 0.875rem; color: #6b6b6b;">Daily digests on AI infrastructure, open source models, and developer tooling.</p>
-      </div>
-      <div>
-        ${digests.map(digest => `
-          <a href="${digest.path || `/blog/${digest.slug}`}" class="post-item" style="text-decoration: none;">
-            <span class="post-item-date">${formatDateShort(digest.date)}</span>
-            <div style="flex: 1; min-width: 0;">
-              <div class="post-item-title">${escapeHtml(digest.titleEn)}</div>
-              ${digest.excerptEn ? `<div style="font-size: 0.8rem; color: #6b6b6b; margin-top: 0.2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(digest.excerptEn)}</div>` : ''}
-            </div>
-            ${digest.itemCount ? `<span class="post-item-tag">${digest.itemCount} items</span>` : ''}
-          </a>
-        `).join('\n')}
-      </div>
-    </div>
-  `;
+  const briefingHtml = renderStaticBriefing(digests);
   writeRouteHtml(template, 'briefing', briefingRoute, briefingHtml);
-  writeRouteHtml(template, 'tech', briefingRoute, briefingHtml); // Also keep /tech for old links
+  writeRouteHtml(template, 'tech', briefingRoute, briefingHtml);
 
-  // Article pages
-  for (const post of allPosts) {
+  for (const post of allPosts.filter((item) => !item.slug.startsWith('ai-daily-'))) {
     const articleRoute = {
-      ...baseRoute,
       title: `${post.titleEn} · Thomas`,
       description: truncateText(post.excerptEn || post.contentEn, 155),
       url: routeUrl(`blog/${post.slug}`),
       type: 'article',
-      publishedAt: post.publishedAt,
+      publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
       image: post.image,
       keywords: post.keywords || [],
-      section: post.tagEn || 'Tech',
+      jsonLd: buildJsonLd(post, { url: routeUrl(`blog/${post.slug}`), publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined }, post.tagEn || 'Writing'),
     };
 
-    const bodyHtml = `
-      <div class="site-container fade-in" style="padding-top: 3rem; padding-bottom: 6rem;">
-        <a href="/blog" style="font-size: 0.8125rem; color: #6b6b6b; display: inline-flex; align-items: center; gap: 0.25rem; margin-bottom: 2.5rem; transition: color 0.15s;">← Writing</a>
-        <header style="margin-bottom: 2.5rem;">
-          ${post.tagEn ? `<span class="tag-pill" style="margin-bottom: 0.75rem; display: inline-block;">${escapeHtml(post.tagEn)}</span>` : ''}
-          <h1 style="font-size: 1.625rem; font-weight: 600; color: #ffffff; line-height: 1.3; letter-spacing: -0.025em; margin-bottom: 0.75rem; margin-top: 0.5rem;">${escapeHtml(post.titleEn)}</h1>
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <span style="font-size: 0.8rem; color: #6b6b6b;">${formatDisplayDate(post.publishedAt)}</span>
-            ${post.readTime ? `<span style="font-size: 0.8rem; color: #6b6b6b;">${post.readTime} min read</span>` : ''}
-          </div>
-          ${post.excerptEn ? `<p style="font-size: 0.9375rem; color: #888888; line-height: 1.65; margin-top: 1rem; border-left: 2px solid #1f1f1f; padding-left: 1rem;">${escapeHtml(post.excerptEn)}</p>` : ''}
-        </header>
-        <hr style="border: none; border-top: 1px solid #1f1f1f; margin-bottom: 2.5rem;" />
-        <div class="prose-blog">${marked.parse(post.contentEn || '')}</div>
-        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #1f1f1f;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <a href="/blog" style="font-size: 0.8125rem; color: #6b6b6b;">← Back to writing</a>
-            <a href="https://x.com/intent/tweet?text=${encodeURIComponent(post.titleEn)}&url=${encodeURIComponent(routeUrl(`blog/${post.slug}`))}&via=GuangtaoS29545" target="_blank" rel="noopener noreferrer" class="x-cta">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              Share on X
-            </a>
-          </div>
-        </div>
-      </div>
-    `;
-    writeRouteHtml(template, `blog/${post.slug}`, articleRoute, bodyHtml);
+    writeRouteHtml(template, `blog/${post.slug}`, articleRoute, renderStaticArticlePage(allPostsBySlug.get(post.slug) || post, { route: articleRoute }));
   }
 
-  // RSS Feed
-  const feedItems = posts.map(post => {
+  for (const digest of digests) {
+    const post = allPostsBySlug.get(digest.slug);
+    if (!post) continue;
+
+    const digestRoute = {
+      title: `${post.titleEn} · Thomas`,
+      description: truncateText(digest.excerptEn || post.excerptEn || post.contentEn, 155),
+      url: routeUrl(`blog/${post.slug}`),
+      type: 'article',
+      publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
+      keywords: ['AI Daily', 'AI briefing', ...(digest.themes || []).map((theme) => theme.themeEn).filter(Boolean)],
+      jsonLd: buildJsonLd(post, { url: routeUrl(`blog/${post.slug}`), publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined }, 'AI Briefing'),
+    };
+
+    writeRouteHtml(template, `blog/${post.slug}`, digestRoute, renderStaticArticlePage(post, { isDigest: true, digest, route: digestRoute }));
+  }
+
+  const feedItems = posts.map((post) => {
     const url = routeUrl(`blog/${post.slug}`);
     const content = marked.parse(post.contentEn || '');
     return `
@@ -526,25 +623,17 @@ async function main() {
 </rss>`;
   fs.writeFileSync(path.join(DIST_DIR, 'feed.xml'), rssXml);
 
-  // Sitemap
-  const sitemapEntries = posts.map(post => ({
-    loc: routeUrl(`blog/${post.slug}`),
-    lastmod: new Date(post.publishedAt).toISOString(),
-  }));
-  sitemapEntries.unshift({ loc: routeUrl(), lastmod: new Date().toISOString() });
-  sitemapEntries.unshift({ loc: routeUrl('blog'), lastmod: new Date().toISOString() });
-  sitemapEntries.unshift({ loc: routeUrl('briefing'), lastmod: new Date().toISOString() });
-
-  // Add digest pages to sitemap
-  const digestSitemapEntries = digests.map(digest => ({
-    loc: routeUrl(`blog/${digest.slug}`),
-    lastmod: new Date(digest.date).toISOString(),
-  }));
-  sitemapEntries.push(...digestSitemapEntries);
+  const sitemapEntries = [
+    { loc: routeUrl('briefing'), lastmod: new Date().toISOString() },
+    { loc: routeUrl('blog'), lastmod: new Date().toISOString() },
+    { loc: routeUrl(), lastmod: new Date().toISOString() },
+    ...posts.map((post) => ({ loc: routeUrl(`blog/${post.slug}`), lastmod: new Date(post.publishedAt).toISOString() })),
+    ...digests.map((digest) => ({ loc: routeUrl(`blog/${digest.slug}`), lastmod: new Date(digest.date).toISOString() })),
+  ];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${sitemapEntries.map(entry => `
+  ${sitemapEntries.map((entry) => `
     <url>
       <loc>${entry.loc}</loc>
       <lastmod>${entry.lastmod}</lastmod>
@@ -553,15 +642,14 @@ async function main() {
 </urlset>`;
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml);
 
-  // --- AI Daily Digest HTML pages ---
-  await buildDigestPages(template, digests);
-
-  // Other static files
   write404Page();
   writeCname();
   fs.copyFileSync(path.join(ROOT, 'public', 'robots.txt'), path.join(DIST_DIR, 'robots.txt'));
 
-  console.log('✓ Static routes: prerendered all pages, feed.xml, sitemap.xml, robots.txt, CNAME, and 404.html');
+  console.log('✓ Static routes: prerendered redesigned pages, feed.xml, sitemap.xml, robots.txt, CNAME, and 404.html');
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

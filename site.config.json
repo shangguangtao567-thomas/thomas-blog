@@ -1,10 +1,10 @@
 {
-  "siteName": "Thomas's Blog",
+  "siteName": "Thomas — AI & Engineering",
   "siteUrl": "https://blog.lincept.com",
   "authorName": "Thomas",
   "xHandle": "@GuangtaoS29545",
   "xProfileUrl": "https://x.com/GuangtaoS29545",
   "buttondownUrl": "",
   "plausibleDomain": "",
-  "primaryTopics": ["AI", "Tools", "Infrastructure", "Open Source"]
+  "primaryTopics": ["AI Infrastructure", "Agent Engineering", "Open Source", "Systems Thinking"]
 }

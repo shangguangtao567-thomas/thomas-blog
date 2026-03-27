@@ -1,0 +1,13 @@
+{
+  "narrativeEn": [
+    "GitHub shipped Squad, a multi-agent coordination layer that runs AI agents directly inside code repositories. The system lets agents share context across PR reviews, issue triage, and code search without manual state handoff. Early documentation describes agents that can fork, branch, and submit PRs autonomously as a unit.",
+    "If you evaluate multi-agent frameworks this week, test Squad's repository-scoped memory versus shared-clipboard approaches like LangGraph's global store. Check whether agent isolation in private repos matches the behavior described in the public docs before planning a migration.",
+    "Look up the GitHub Models pricing page for Squad's agent-runner egress costs—docs reference per-minute compute beyond the base Copilot API tier."
+  ],
+  "narrativeZh": [
+    "GitHub 发布了 Squad，一个多智能体协调层，可在代码仓库内直接运行 AI 智能体。该系统支持智能体在 PR 审查、问题分类和代码搜索中共享上下文，无需手动传递状态。早期文档描述了可作为整体单元自动 fork、分支和提交 PR 的智能体。",
+    "如果本周要评估多智能体框架，请测试 Squad 的仓库作用域内存与 LangGraph 全局存储等共享剪贴板方案的差异。在规划迁移前，验证私有仓库中的智能体隔离行为是否与公开文档描述一致。",
+    "查阅 GitHub Models 定价页面中 Squad 智能体运行器的出口流量费用——文档提及超出基础 Copilot API 套餐的按分钟计费计算资源。"
+  ],
+  "titleEn": "GitHub Squad: Multi-Agent Coordination Inside Repositories"
+}

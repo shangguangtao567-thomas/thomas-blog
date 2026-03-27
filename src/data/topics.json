@@ -20,12 +20,30 @@
     ]
   },
   {
+    "slug": "ai-productivity",
+    "labelZh": "AI Productivity",
+    "labelEn": "AI Productivity",
+    "count": 1,
+    "latestPostSlugs": [
+      "ai-notes-crm-review"
+    ]
+  },
+  {
     "slug": "essay",
     "labelZh": "思考",
     "labelEn": "Essay",
     "count": 1,
     "latestPostSlugs": [
       "the-physics-of-success"
+    ]
+  },
+  {
+    "slug": "memory-architecture",
+    "labelZh": "记忆架构",
+    "labelEn": "Memory Architecture",
+    "count": 1,
+    "latestPostSlugs": [
+      "the-next-ai-breakthrough-is-learning-what-to-forget"
     ]
   }
 ]

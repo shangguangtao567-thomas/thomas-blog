@@ -6,7 +6,7 @@ excerptZh: "我对 OpenClaw 的判断，不是它突然比 Claude Code 这类工
 excerptEn: "My take on OpenClaw is not that it introduced some magical capability beyond tools like Claude Code, but that it compressed initiative, reachability, habit loops, and a now-maturing agent infrastructure into a product ordinary users can actually use."
 tag: "AI"
 tagEn: "AI"
-image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=80"
+image: "/images/openclaw-product-of-its-time.jpg"
 readTime: 11
 publishedAt: "2026-03-12"
 ---

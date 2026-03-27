@@ -11,6 +11,7 @@ pillarZh: "记忆架构"
 keywords: "llm memory, forgetting, abstraction, DeepSeek MLA, LightMem, CraniMem, KV cache, context caching"
 xHookZh: "AI 的下一个突破，不是更长上下文，而是一套删除策略。"
 xHookEn: "The next AI breakthrough isn't a longer context window. It's a deletion policy."
+image: "/images/the-next-ai-breakthrough-is-learning-what-to-forget.jpg"
 readTime: 12
 date: 2026-03-25
 ---

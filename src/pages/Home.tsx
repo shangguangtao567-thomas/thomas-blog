@@ -1,135 +1,162 @@
 import postsIndex from '../data/posts-index.json';
 import digestsData from '../data/ai-digests.json';
+import { siteConfig } from '../lib/siteConfig';
 
 interface Post {
   slug: string;
   titleEn: string;
   excerptEn: string;
-  tag: string;
   tagEn: string;
   publishedAt: string;
   readTime: number;
   kind?: string;
+  image?: string;
+}
+
+interface DigestTheme {
+  themeEn?: string;
+  count?: number;
 }
 
 interface Digest {
   slug: string;
   titleEn: string;
   date: string;
-  path: string;
+  path?: string;
   excerptEn?: string;
   itemCount?: number;
+  themes?: DigestTheme[];
 }
 
-function formatDateShort(dateStr: string): string {
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function formatShortDate(dateStr: string): string {
   const d = new Date(dateStr);
-  const mo = String(d.getMonth() + 1).padStart(2, '0');
-  const dy = String(d.getDate()).padStart(2, '0');
-  return `${mo}/${dy}`;
+  return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
 }
 
 export default function Home() {
-  const allPosts = (postsIndex as Post[]).filter(p => !p.slug.startsWith('ai-daily-'));
-  const digests = (digestsData as Digest[]).slice(0, 3);
+  const posts = (postsIndex as Post[]).filter((post) => !post.slug.startsWith('ai-daily-'));
+  const digests = digestsData as Digest[];
+
+  const heroPost = posts[0];
+  const featuredPosts = posts.slice(1, 4);
+  const latestDigests = digests.slice(0, 3);
 
   return (
-    <div className="site-container fade-in" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
+    <div className="site-container-wide page-shell page-shell--home fade-in">
+      <section className="home-hero">
+        <div className="hero-panel slide-up">
+          <p className="eyebrow">Thomas</p>
+          <h1 className="hero-panel__title">
+            <span className="text-gradient">AI, open source,</span> and agent-era engineering.
+          </h1>
+          <p className="hero-panel__copy">
+            Deep dives, daily briefings, and honest analysis on what is actually shipping in AI — not what is being announced.
+          </p>
 
-      {/* Bio */}
-      <section style={{ marginBottom: '4rem' }}>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: '600', color: 'var(--fg)', marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
-          Thomas
-        </h1>
-        <p style={{ fontSize: '0.9rem', color: 'var(--fg-muted)', lineHeight: '1.7', maxWidth: '520px', marginBottom: '1.25rem' }}>
-          Writing about AI infrastructure, open source tooling, and the mechanics of building in the agent era.
-          I track what's actually shipping, not what's being announced.
-        </p>
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a
-            href="https://x.com/GuangtaoS29545"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="x-cta"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            Follow on X
-          </a>
-          <a href="/feed.xml" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>RSS ↗</a>
+          <div className="hero-panel__actions">
+            <a href="/blog" className="button-link">Read the Writing</a>
+            <a href="/briefing" className="button-link--ghost">AI Briefing</a>
+            <a href={siteConfig.xProfileUrl} target="_blank" rel="noreferrer" className="x-cta">Follow on X</a>
+          </div>
         </div>
+
+        {heroPost && (
+          <a href={`/blog/${heroPost.slug}`} className="feature-card feature-card--hero slide-up slide-up-delay-1">
+            {heroPost.image && (
+              <img
+                src={heroPost.image}
+                alt=""
+                className="feature-card__image"
+                loading="lazy"
+              />
+            )}
+            <div>
+              <p className="section-label">Latest</p>
+              <div className="feature-card__meta">
+                <span>{formatDate(heroPost.publishedAt)}</span>
+                <span>{heroPost.readTime} min read</span>
+                {heroPost.tagEn ? <span className="tag-pill">{heroPost.tagEn}</span> : null}
+              </div>
+              <h2 className="feature-card__title">{heroPost.titleEn}</h2>
+              <p className="feature-card__excerpt">{heroPost.excerptEn}</p>
+            </div>
+
+            <div className="feature-card__footer">
+              <span className="button-link--ghost">Read article →</span>
+            </div>
+          </a>
+        )}
       </section>
 
-      {/* Writing */}
-      <section style={{ marginBottom: '4rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
-          <p className="section-label">Writing</p>
-          <a href="/blog" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>All posts →</a>
+      <section className="home-section slide-up slide-up-delay-2">
+        <div className="section-head">
+          <div>
+            <p className="section-label">Writing</p>
+            <h2 className="section-head__title">Latest essays & guides</h2>
+            <p className="section-head__copy">{posts.length} deep dives on AI infrastructure, tools, and systems thinking.</p>
+          </div>
+          <a href="/blog" className="section-head__link">All writing →</a>
         </div>
-        <div>
-          {allPosts.slice(0, 6).map((post) => (
-            <PostItem key={post.slug} post={post} />
+
+        <div className="story-grid">
+          {featuredPosts.map((post) => (
+            <a key={post.slug} href={`/blog/${post.slug}`} className="story-card">
+              {post.image && (
+                <img
+                  src={post.image}
+                  alt=""
+                  className="story-card__image"
+                  loading="lazy"
+                />
+              )}
+              <div className="story-row__meta">
+                <span>{formatShortDate(post.publishedAt)}</span>
+                {post.tagEn ? <span className="tag-pill">{post.tagEn}</span> : null}
+              </div>
+              <h3 className="story-card__title">{post.titleEn}</h3>
+              <p className="story-card__excerpt">{post.excerptEn}</p>
+              <div className="story-card__footer">
+                <span className="meta-kicker">{post.readTime} min read</span>
+              </div>
+            </a>
           ))}
         </div>
       </section>
 
-      {/* AI Briefing */}
-      {digests.length > 0 && (
-        <section>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
-            <p className="section-label">AI Briefing</p>
-            <a href="/briefing" style={{ fontSize: '0.75rem', color: 'var(--fg-subtle)' }}>Archive →</a>
-          </div>
+      <section className="home-section slide-up slide-up-delay-3">
+        <div className="section-head">
           <div>
-            {digests.map((digest) => (
-              <DigestItem key={digest.slug} digest={digest} />
-            ))}
+            <p className="section-label">AI Briefing</p>
+            <h2 className="section-head__title">Daily intelligence</h2>
+            <p className="section-head__copy">Curated AI news, grouped by theme and signal. {digests.length} issues and counting.</p>
           </div>
-        </section>
-      )}
-    </div>
-  );
-}
+          <a href="/briefing" className="section-head__link">Full archive →</a>
+        </div>
 
-function PostItem({ post }: { post: Post }) {
-  return (
-    <div
-      className="post-item"
-      onClick={() => { window.location.href = `/blog/${post.slug}`; }}
-      role="link"
-      tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && (window.location.href = `/blog/${post.slug}`)}
-    >
-      <span className="post-item-date">{formatDateShort(post.publishedAt)}</span>
-      <span className="post-item-title">{post.titleEn}</span>
-      {post.tagEn && <span className="post-item-tag">{post.tagEn}</span>}
-    </div>
-  );
-}
-
-function DigestItem({ digest }: { digest: Digest }) {
-  return (
-    <div
-      className="post-item"
-      onClick={() => { window.location.href = digest.path || `/briefing/${digest.slug}`; }}
-      role="link"
-      tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && (window.location.href = digest.path || `/briefing/${digest.slug}`)}
-    >
-      <span className="post-item-date">{formatDateShort(digest.date)}</span>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div className="post-item-title">{digest.titleEn}</div>
-        {digest.excerptEn && (
-          <div className="digest-item-excerpt">
-            {digest.excerptEn}
-          </div>
-        )}
-      </div>
-      {digest.itemCount && (
-        <span className="post-item-tag" style={{ background: 'color-mix(in srgb, var(--link) 15%, var(--accent))', color: 'var(--link)' }}>
-          {digest.itemCount} items
-        </span>
-      )}
+        <div className="briefing-grid">
+          {latestDigests.map((digest) => (
+            <a key={digest.slug} href={digest.path || `/blog/${digest.slug}`} className="briefing-card">
+              <div className="briefing-card__meta">
+                <span>{formatDate(digest.date)}</span>
+                {digest.itemCount ? <span>{digest.itemCount} items</span> : null}
+              </div>
+              <h3 className="briefing-card__title">{digest.titleEn}</h3>
+              {digest.excerptEn ? <p className="briefing-card__excerpt">{digest.excerptEn}</p> : null}
+              <div className="briefing-card__themes">
+                {(digest.themes || []).slice(0, 3).map((theme) => (
+                  <span key={theme.themeEn} className="briefing-chip">
+                    {theme.themeEn}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

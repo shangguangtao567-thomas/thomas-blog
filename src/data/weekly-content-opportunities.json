@@ -3,45 +3,42 @@
     "id": "agents-and-developer-tooling",
     "themeZh": "Agent 与开发者工具",
     "themeEn": "Agents and developer tooling",
-    "score": 13,
+    "score": 5,
     "rationaleZh": "过去 7 天里，Agent 与开发者工具 在日报里反复出现，而且还没有被系统化写成专题长文。",
     "rationaleEn": "Agents and developer tooling kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
     "proposedTitleZh": "Agent 与开发者工具 为什么正在变成这一周最值得写的 AI 主线",
     "proposedTitleEn": "Why Agents and developer tooling is becoming the AI theme worth writing this week",
     "relatedDigestSlugs": [
-      "ai-daily-2026-03-13",
-      "ai-daily-2026-03-14",
-      "ai-daily-2026-03-16"
-    ]
-  },
-  {
-    "id": "frontier-research-and-capability-shifts",
-    "themeZh": "前沿研究与能力边界",
-    "themeEn": "Frontier research and capability shifts",
-    "score": 13,
-    "rationaleZh": "过去 7 天里，前沿研究与能力边界 在日报里反复出现，而且还没有被系统化写成专题长文。",
-    "rationaleEn": "Frontier research and capability shifts kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
-    "proposedTitleZh": "前沿研究与能力边界 为什么正在变成这一周最值得写的 AI 主线",
-    "proposedTitleEn": "Why Frontier research and capability shifts is becoming the AI theme worth writing this week",
-    "relatedDigestSlugs": [
-      "ai-daily-2026-03-13",
-      "ai-daily-2026-03-14",
-      "ai-daily-2026-03-16"
+      "ai-daily-2026-03-19",
+      "ai-daily-2026-03-20"
     ]
   },
   {
     "id": "retrieval-multimodal-and-memory-systems",
     "themeZh": "检索、多模态与记忆系统",
     "themeEn": "Retrieval, multimodal, and memory systems",
-    "score": 9,
+    "score": 4,
     "rationaleZh": "过去 7 天里，检索、多模态与记忆系统 在日报里反复出现，而且还没有被系统化写成专题长文。",
     "rationaleEn": "Retrieval, multimodal, and memory systems kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
     "proposedTitleZh": "检索、多模态与记忆系统 为什么正在变成这一周最值得写的 AI 主线",
     "proposedTitleEn": "Why Retrieval, multimodal, and memory systems is becoming the AI theme worth writing this week",
     "relatedDigestSlugs": [
-      "ai-daily-2026-03-14",
-      "ai-daily-2026-03-17",
-      "ai-daily-2026-03-18"
+      "ai-daily-2026-03-19",
+      "ai-daily-2026-03-20"
+    ]
+  },
+  {
+    "id": "frontier-research-and-capability-shifts",
+    "themeZh": "前沿研究与能力边界",
+    "themeEn": "Frontier research and capability shifts",
+    "score": 2,
+    "rationaleZh": "过去 7 天里，前沿研究与能力边界 在日报里反复出现，而且还没有被系统化写成专题长文。",
+    "rationaleEn": "Frontier research and capability shifts kept recurring across the last 7 days of digests and still deserves a more durable long-form treatment.",
+    "proposedTitleZh": "前沿研究与能力边界 为什么正在变成这一周最值得写的 AI 主线",
+    "proposedTitleEn": "Why Frontier research and capability shifts is becoming the AI theme worth writing this week",
+    "relatedDigestSlugs": [
+      "ai-daily-2026-03-19",
+      "ai-daily-2026-03-20"
     ]
   }
 ]
