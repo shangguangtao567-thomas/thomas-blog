@@ -3,7 +3,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { trackGrowthEvent } from '../lib/analytics';
 import { siteConfig } from '../lib/siteConfig';
 
-const MASCOT_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663381834685/XCS6Hwos8gWNHteCJu7gAk/avatar-mascot-dark-3pskxT3vg4vKNUuH8m9JKo.webp';
+const MASCOT_URL = '/images/logo-thomas-nav.webp';
 
 interface TopNavProps {
   currentPath: string;
