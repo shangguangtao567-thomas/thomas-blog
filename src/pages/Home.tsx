@@ -37,6 +37,21 @@ function formatShortDate(dateStr: string): string {
   return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .replace(/[#>-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export default function Home() {
   const posts = (postsIndex as Post[]).filter((post) => !post.slug.startsWith('ai-daily-'));
   const digests = digestsData as Digest[];
@@ -145,7 +160,7 @@ export default function Home() {
                 {digest.itemCount ? <span>{digest.itemCount} items</span> : null}
               </div>
               <h3 className="briefing-card__title">{digest.titleEn}</h3>
-              {digest.excerptEn ? <p className="briefing-card__excerpt">{digest.excerptEn}</p> : null}
+              {digest.excerptEn ? <p className="briefing-card__excerpt">{stripMarkdown(digest.excerptEn)}</p> : null}
               <div className="briefing-card__themes">
                 {(digest.themes || []).slice(0, 3).map((theme) => (
                   <span key={theme.themeEn} className="briefing-chip">

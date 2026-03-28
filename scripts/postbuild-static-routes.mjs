@@ -56,7 +56,11 @@ function stripMarkdown(text = '') {
     .replace(/`([^`]+)`/g, '$1')
     .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[#>*_-]/g, ' ')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .replace(/[#>-]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -140,8 +144,9 @@ function renderShell(template, route) {
   }
 
   if (route.image) {
-    html = upsertMeta(html, 'property', 'og:image', route.image);
-    html = upsertMeta(html, 'name', 'twitter:image', route.image);
+    const absoluteImage = route.image.startsWith('/') ? `${SITE_URL}${route.image}` : route.image;
+    html = upsertMeta(html, 'property', 'og:image', absoluteImage);
+    html = upsertMeta(html, 'name', 'twitter:image', absoluteImage);
   }
 
   if (route.publishedAt) {
@@ -191,9 +196,20 @@ function normalizeTitle(value = '') {
 function titlesOverlap(left = '', right = '') {
   const normalizedLeft = normalizeTitle(left);
   const normalizedRight = normalizeTitle(right);
-  return normalizedLeft === normalizedRight ||
-    normalizedLeft.includes(normalizedRight) ||
-    normalizedRight.includes(normalizedLeft);
+  if (normalizedLeft === normalizedRight) return true;
+  if (normalizedLeft.includes(normalizedRight) || normalizedRight.includes(normalizedLeft)) return true;
+  // Fuzzy match: if both start with "ai daily", treat as overlapping (same digest, different title variants)
+  if (normalizedLeft.startsWith('ai daily') && normalizedRight.startsWith('ai daily')) return true;
+  // Fuzzy prefix match for other titles
+  const wordsLeft = normalizedLeft.split(/\s+/);
+  const wordsRight = normalizedRight.split(/\s+/);
+  const minLen = Math.min(wordsLeft.length, wordsRight.length);
+  if (minLen >= 4) {
+    let shared = 0;
+    for (let i = 0; i < minLen; i++) { if (wordsLeft[i] === wordsRight[i]) shared++; else break; }
+    if (shared >= 4 && shared >= minLen * 0.5) return true;
+  }
+  return false;
 }
 
 function stripRedundantLeadingMarkdownH1(markdown = '', title = '') {
@@ -328,7 +344,7 @@ function renderStaticHome({ posts, digests }) {
                 ${digest.itemCount ? `<span>${digest.itemCount} items</span>` : ''}
               </div>
               <h3 class="briefing-card__title">${escapeHtml(digest.titleEn)}</h3>
-              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(stripMarkdown(digest.excerptEn))}</p>` : ''}
               <div class="briefing-card__themes">${renderBriefingChips(digest.themes || [], 2)}</div>
             </a>
           `).join('')}
@@ -423,7 +439,7 @@ function renderStaticBriefing(digests) {
               ${leadDigest.itemCount ? `<span>${leadDigest.itemCount} items</span>` : ''}
             </div>
             <h2 class="feature-card__title">${escapeHtml(leadDigest.titleEn)}</h2>
-            ${leadDigest.excerptEn ? `<p class="feature-card__excerpt">${escapeHtml(leadDigest.excerptEn || '')}</p>` : ''}
+            ${leadDigest.excerptEn ? `<p class="feature-card__excerpt">${escapeHtml(stripMarkdown(leadDigest.excerptEn || ''))}</p>` : ''}
             <div class="briefing-card__themes">${renderBriefingChips(leadDigest.themes || [], 3)}</div>
           </a>
         ` : ''}
@@ -438,7 +454,7 @@ function renderStaticBriefing(digests) {
                 ${digest.itemCount ? `<span>${digest.itemCount} items</span>` : ''}
               </div>
               <h2 class="briefing-card__title">${escapeHtml(digest.titleEn)}</h2>
-              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+              ${digest.excerptEn ? `<p class="briefing-card__excerpt">${escapeHtml(stripMarkdown(digest.excerptEn))}</p>` : ''}
               <div class="briefing-card__themes">${renderBriefingChips(digest.themes || [], 2)}</div>
             </a>
           `).join('')}
@@ -454,7 +470,7 @@ function renderStaticBriefing(digests) {
                   ${digest.itemCount ? renderTagPill(`${digest.itemCount} items`) : ''}
                 </div>
                 <h2 class="story-row__title">${escapeHtml(digest.titleEn)}</h2>
-                ${digest.excerptEn ? `<p class="story-row__excerpt">${escapeHtml(digest.excerptEn)}</p>` : ''}
+                ${digest.excerptEn ? `<p class="story-row__excerpt">${escapeHtml(stripMarkdown(digest.excerptEn))}</p>` : ''}
               </div>
             </a>
           `).join('')}
@@ -594,16 +610,17 @@ async function main() {
     writeRouteHtml(template, `blog/${post.slug}`, digestRoute, renderStaticArticlePage(post, { isDigest: true, digest, route: digestRoute }));
   }
 
-  const feedItems = posts.map((post) => {
+  const feedPosts = allPosts.filter((item) => !item.slug.startsWith('ai-daily-'));
+  const feedItems = feedPosts.map((post) => {
     const url = routeUrl(`blog/${post.slug}`);
-    const content = marked.parse(post.contentEn || '');
+    const content = marked.parse(stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn));
     return `
       <item>
         <title>${escapeXml(post.titleEn)}</title>
         <link>${url}</link>
         <guid>${url}</guid>
         <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
-        <description>${escapeXml(truncateText(post.excerptEn || post.contentEn, 500))}</description>
+        <description>${escapeXml(truncateText(post.excerptEn || stripMarkdown(post.contentEn || ''), 500))}</description>
         <content:encoded><![CDATA[${content}]]></content:encoded>
       </item>
     `;

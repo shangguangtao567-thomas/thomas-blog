@@ -33,9 +33,18 @@ function normalizeTitle(value: string): string {
 function titlesOverlap(left: string, right: string): boolean {
   const normalizedLeft = normalizeTitle(left);
   const normalizedRight = normalizeTitle(right);
-  return normalizedLeft === normalizedRight ||
-    normalizedLeft.includes(normalizedRight) ||
-    normalizedRight.includes(normalizedLeft);
+  if (normalizedLeft === normalizedRight) return true;
+  if (normalizedLeft.includes(normalizedRight) || normalizedRight.includes(normalizedLeft)) return true;
+  if (normalizedLeft.startsWith('ai daily') && normalizedRight.startsWith('ai daily')) return true;
+  const wordsLeft = normalizedLeft.split(/\s+/);
+  const wordsRight = normalizedRight.split(/\s+/);
+  const minLen = Math.min(wordsLeft.length, wordsRight.length);
+  if (minLen >= 4) {
+    let shared = 0;
+    for (let i = 0; i < minLen; i++) { if (wordsLeft[i] === wordsRight[i]) shared++; else break; }
+    if (shared >= 4 && shared >= minLen * 0.5) return true;
+  }
+  return false;
 }
 
 function stripRedundantLeadingMarkdownH1(markdown: string, title: string): string {
@@ -110,17 +119,17 @@ export default function PostDetail() {
 
     const source = isDigest
       ? stripDigestSignature(stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn))
-      : (post.contentEn || '');
+      : stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn);
 
     import('marked')
       .then(({ marked }) => {
         const rendered = marked(source);
         if (typeof rendered === 'string') {
-          setHtml(isDigest ? stripRedundantLeadingHtmlH1(rendered, post.titleEn) : rendered);
+          setHtml(stripRedundantLeadingHtmlH1(rendered, post.titleEn));
           return;
         }
 
-        rendered.then((value) => setHtml(isDigest ? stripRedundantLeadingHtmlH1(value, post.titleEn) : value));
+        rendered.then((value) => setHtml(stripRedundantLeadingHtmlH1(value, post.titleEn)));
       })
       .catch(() => {
         setHtml(source.replace(/\n/g, '<br>'));

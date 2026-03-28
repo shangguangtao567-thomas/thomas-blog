@@ -19,6 +19,21 @@ function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .replace(/[#>-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export default function Tech() {
   const digests = digestsData as Digest[];
   const leadDigest = digests[0];
@@ -44,7 +59,7 @@ export default function Tech() {
               {leadDigest.itemCount ? <span>{leadDigest.itemCount} items</span> : null}
             </div>
             <h2 className="feature-card__title">{leadDigest.titleEn}</h2>
-            {leadDigest.excerptEn ? <p className="feature-card__excerpt">{leadDigest.excerptEn}</p> : null}
+            {leadDigest.excerptEn ? <p className="feature-card__excerpt">{stripMarkdown(leadDigest.excerptEn)}</p> : null}
             <div className="briefing-card__themes">
               {(leadDigest.themes || []).slice(0, 3).map((theme) => (
                 <span key={theme.themeEn} className="briefing-chip">
@@ -65,7 +80,7 @@ export default function Tech() {
                 {digest.itemCount ? <span>{digest.itemCount} items</span> : null}
               </div>
               <h2 className="briefing-card__title">{digest.titleEn}</h2>
-              {digest.excerptEn ? <p className="briefing-card__excerpt">{digest.excerptEn}</p> : null}
+              {digest.excerptEn ? <p className="briefing-card__excerpt">{stripMarkdown(digest.excerptEn)}</p> : null}
               <div className="briefing-card__themes">
                 {(digest.themes || []).slice(0, 2).map((theme) => (
                   <span key={theme.themeEn} className="briefing-chip">
@@ -87,7 +102,7 @@ export default function Tech() {
                   {digest.itemCount ? <span className="tag-pill">{digest.itemCount} items</span> : null}
                 </div>
                 <h2 className="story-row__title">{digest.titleEn}</h2>
-                {digest.excerptEn ? <p className="story-row__excerpt">{digest.excerptEn}</p> : null}
+                {digest.excerptEn ? <p className="story-row__excerpt">{stripMarkdown(digest.excerptEn)}</p> : null}
               </div>
             </a>
           ))}
