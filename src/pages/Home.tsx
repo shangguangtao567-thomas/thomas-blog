@@ -32,11 +32,6 @@ function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
-function formatShortDate(dateStr: string): string {
-  const d = new Date(dateStr);
-  return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
-}
-
 function stripMarkdown(text: string): string {
   return text
     .replace(/```[\s\S]*?```/g, ' ')
@@ -56,98 +51,76 @@ export default function Home() {
   const posts = (postsIndex as Post[]).filter((post) => !post.slug.startsWith('ai-daily-'));
   const digests = digestsData as Digest[];
 
-  const heroPost = posts[0];
-  const featuredPosts = posts.slice(1, 4);
+  const featuredPost = posts[0];
+  const morePosts = posts.slice(1, 7);
   const latestDigests = digests.slice(0, 3);
 
   return (
     <div className="site-container-wide page-shell page-shell--home fade-in">
-      <section className="home-hero">
-        <div className="hero-panel slide-up">
-          <p className="eyebrow">Thomas</p>
-          <h1 className="hero-panel__title">
-            <span className="text-gradient">AI, open source,</span> and agent-era engineering.
+      {/* ── Hero: featured article as the centerpiece ── */}
+      <section className="hero-editorial slide-up">
+        <div className="hero-editorial__intro">
+          <p className="eyebrow">Latest</p>
+          <h1 className="hero-editorial__headline">
+            <a href={`/blog/${featuredPost?.slug}`}>
+              {featuredPost?.titleEn}
+            </a>
           </h1>
-          <p className="hero-panel__copy">
-            Deep dives, daily briefings, and honest analysis on what is actually shipping in AI — not what is being announced.
-          </p>
-
-          <div className="hero-panel__actions">
-            <a href="/blog" className="button-link">Read the Writing</a>
-            <a href="/briefing" className="button-link--ghost">AI Briefing</a>
-            <a href={siteConfig.xProfileUrl} target="_blank" rel="noreferrer" className="x-cta">Follow on X</a>
+          <p className="hero-editorial__excerpt">{featuredPost?.excerptEn}</p>
+          <div className="hero-editorial__meta">
+            <time>{featuredPost ? formatDate(featuredPost.publishedAt) : ''}</time>
+            <span>{featuredPost?.readTime} min read</span>
+            {featuredPost?.tagEn && <span className="tag-pill">{featuredPost.tagEn}</span>}
           </div>
+          <a href={`/blog/${featuredPost?.slug}`} className="button-link" style={{ marginTop: '1.5rem' }}>
+            Read article →
+          </a>
         </div>
-
-        {heroPost && (
-          <a href={`/blog/${heroPost.slug}`} className="feature-card feature-card--hero slide-up slide-up-delay-1">
-            {heroPost.image && (
-              <img
-                src={heroPost.image}
-                alt=""
-                className="feature-card__image"
-                loading="lazy"
-              />
-            )}
-            <div>
-              <p className="section-label">Latest</p>
-              <div className="feature-card__meta">
-                <span>{formatDate(heroPost.publishedAt)}</span>
-                <span>{heroPost.readTime} min read</span>
-                {heroPost.tagEn ? <span className="tag-pill">{heroPost.tagEn}</span> : null}
-              </div>
-              <h2 className="feature-card__title">{heroPost.titleEn}</h2>
-              <p className="feature-card__excerpt">{heroPost.excerptEn}</p>
-            </div>
-
-            <div className="feature-card__footer">
-              <span className="button-link--ghost">Read article →</span>
-            </div>
+        {featuredPost?.image && (
+          <a href={`/blog/${featuredPost.slug}`} className="hero-editorial__image-wrap">
+            <img src={featuredPost.image} alt="" className="hero-editorial__image" loading="eager" />
           </a>
         )}
       </section>
 
-      <section className="home-section slide-up slide-up-delay-2">
+      {/* ── More Writing ── */}
+      <section className="home-section slide-up slide-up-delay-1">
         <div className="section-head">
           <div>
             <p className="section-label">Writing</p>
-            <h2 className="section-head__title">Latest essays & guides</h2>
-            <p className="section-head__copy">{posts.length} deep dives on AI infrastructure, tools, and systems thinking.</p>
+            <h2 className="section-head__title">More essays & guides</h2>
           </div>
           <a href="/blog" className="section-head__link">All writing →</a>
         </div>
 
-        <div className="story-grid">
-          {featuredPosts.map((post) => (
-            <a key={post.slug} href={`/blog/${post.slug}`} className="story-card">
+        <div className="post-grid">
+          {morePosts.map((post) => (
+            <a key={post.slug} href={`/blog/${post.slug}`} className="post-card">
               {post.image && (
-                <img
-                  src={post.image}
-                  alt=""
-                  className="story-card__image"
-                  loading="lazy"
-                />
+                <div className="post-card__img-wrap">
+                  <img src={post.image} alt="" className="post-card__img" loading="lazy" />
+                </div>
               )}
-              <div className="story-row__meta">
-                <span>{formatShortDate(post.publishedAt)}</span>
-                {post.tagEn ? <span className="tag-pill">{post.tagEn}</span> : null}
-              </div>
-              <h3 className="story-card__title">{post.titleEn}</h3>
-              <p className="story-card__excerpt">{post.excerptEn}</p>
-              <div className="story-card__footer">
-                <span className="meta-kicker">{post.readTime} min read</span>
+              <div className="post-card__body">
+                <div className="post-card__meta">
+                  <time>{formatDate(post.publishedAt)}</time>
+                  <span>{post.readTime} min</span>
+                  {post.tagEn && <span className="tag-pill">{post.tagEn}</span>}
+                </div>
+                <h3 className="post-card__title">{post.titleEn}</h3>
+                <p className="post-card__excerpt">{post.excerptEn}</p>
               </div>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="home-section slide-up slide-up-delay-3">
+      {/* ── AI Briefing ── */}
+      <section className="home-section slide-up slide-up-delay-2">
         <div className="section-head">
           <div>
             <p className="section-label">AI Briefing</p>
             <h2 className="section-head__title">Daily intelligence</h2>
-            <p className="section-head__copy">Curated AI news, grouped by theme and signal. {digests.length} issues and counting.</p>
           </div>
           <a href="/briefing" className="section-head__link">Full archive →</a>
         </div>

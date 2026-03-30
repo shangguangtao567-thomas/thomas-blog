@@ -51,7 +51,6 @@ function stripRedundantLeadingMarkdownH1(markdown: string, title: string): strin
   const match = markdown.match(/^\s*#\s+(.+?)\s*(?:\n|$)/);
   if (!match) return markdown;
   if (!titlesOverlap(match[1], title)) return markdown;
-
   return markdown.replace(/^\s*#\s+.+?\s*(?:\n+|$)/, '');
 }
 
@@ -59,7 +58,6 @@ function stripRedundantLeadingHtmlH1(html: string, title: string): string {
   const match = html.match(/^\s*<h1[^>]*>([\s\S]*?)<\/h1>\s*/i);
   if (!match) return html;
   if (!titlesOverlap(match[1], title)) return html;
-
   return html.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, '');
 }
 
@@ -128,7 +126,6 @@ export default function PostDetail() {
           setHtml(stripRedundantLeadingHtmlH1(rendered, post.titleEn));
           return;
         }
-
         rendered.then((value) => setHtml(stripRedundantLeadingHtmlH1(value, post.titleEn)));
       })
       .catch(() => {
@@ -154,45 +151,44 @@ export default function PostDetail() {
 
   const backHref = isDigest ? '/briefing' : '/blog';
   const backLabel = isDigest ? 'Back to AI Briefing' : 'Back to writing';
-  const shareText = isDigest ? `Share this issue on X` : 'Share on X';
+  const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
   const heroKicker = isDigest ? 'AI Briefing' : post.tagEn || 'Writing';
 
   return (
-    <div className="site-container detail-shell fade-in">
+    <div className="site-container article-shell fade-in">
       <a href={backHref} className="detail-backlink">
         <span aria-hidden="true">&larr;</span>
         <span>{backLabel}</span>
       </a>
 
-      <header className={`detail-hero detail-hero--reading${isDigest ? ' detail-hero--digest' : ''}`}>
-        {post.image && (
-          <img
-            src={post.image}
-            alt=""
-            className="detail-hero__image"
-            loading="eager"
-          />
-        )}
-        <span className="tag-pill">{heroKicker}</span>
-        <div className="detail-hero__meta">
+      {/* ── Compact article header ── */}
+      <header className="article-header-v2">
+        <div className="article-header-v2__meta">
+          <span className="tag-pill">{heroKicker}</span>
           <time dateTime={isoDate}>{formattedDate}</time>
           {post.readTime ? <span>{post.readTime} min read</span> : null}
           {!isDigest && post.kind ? <span>{post.kind}</span> : null}
         </div>
-        <h1 className="detail-hero__title detail-hero__title--reading">{post.titleEn}</h1>
-        {post.excerptEn ? (
-          <div className="tldr-box">
-            <span className="tldr-box__label">TL;DR</span>
-            <p className="tldr-box__content">{post.excerptEn}</p>
-          </div>
-        ) : null}
+        <h1 className="article-header-v2__title">{post.titleEn}</h1>
+        {post.excerptEn && (
+          <p className="article-header-v2__lede">{post.excerptEn}</p>
+        )}
       </header>
 
-      <div className="detail-reading">
-        <article className="prose-blog detail-content" dangerouslySetInnerHTML={{ __html: html }} />
+      {/* ── Hero image (if exists) ── */}
+      {post.image && (
+        <div className="article-hero-img">
+          <img src={post.image} alt="" loading="eager" />
+        </div>
+      )}
+
+      {/* ── Article body ── */}
+      <div className="article-body">
+        <article className="prose-blog" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
 
-      <div className="detail-reading">
+      {/* ── CTA ── */}
+      <div className="article-body">
         <div className="article-cta">
           <h3 className="article-cta__title">Enjoyed this? Stay in the loop.</h3>
           <p className="article-cta__copy">Get daily AI briefings and deep dives delivered to your feed.</p>
@@ -219,7 +215,8 @@ export default function PostDetail() {
         </div>
       </div>
 
-      <div className="detail-footer">
+      {/* ── Footer nav ── */}
+      <div className="article-footer">
         <a href={backHref} className="button-link--ghost">{backLabel}</a>
         <a
           href={`https://x.com/intent/tweet?text=${encodeURIComponent(post.titleEn)}&url=${encodeURIComponent(`https://blog.lincept.com/blog/${post.slug}`)}&via=GuangtaoS29545`}

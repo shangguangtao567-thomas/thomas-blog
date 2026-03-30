@@ -259,81 +259,67 @@ function renderDetailChips(items = [], max = 6) {
 
 function renderStaticHome({ posts, digests }) {
   const heroPost = posts[0];
-  const featuredPosts = posts.slice(1, 4);
+  const morePosts = posts.slice(1, 7);
   const latestDigests = digests.slice(0, 3);
 
   return `
     <div class="site-container-wide page-shell page-shell--home fade-in">
-      <section class="home-hero">
-        <div class="hero-panel">
-          <p class="eyebrow">Thomas</p>
-          <h1 class="hero-panel__title"><span class="text-gradient">AI, open source,</span> and agent-era engineering.</h1>
-          <p class="hero-panel__copy">
-            Deep dives, daily briefings, and honest analysis on what is actually shipping in AI &mdash; not what is being announced.
-          </p>
-          <div class="hero-panel__actions">
-            <a href="/blog" class="button-link">Read the Writing</a>
-            <a href="/briefing" class="button-link--ghost">AI Briefing</a>
-            <a href="${escapeAttr(siteConfig.xProfileUrl)}" target="_blank" rel="noreferrer" class="x-cta">Follow on X</a>
+      ${heroPost ? `
+      <section class="hero-editorial slide-up">
+        <div class="hero-editorial__intro">
+          <p class="eyebrow">Latest</p>
+          <h1 class="hero-editorial__headline">
+            <a href="/blog/${heroPost.slug}">${escapeHtml(heroPost.titleEn)}</a>
+          </h1>
+          <p class="hero-editorial__excerpt">${escapeHtml(heroPost.excerptEn || '')}</p>
+          <div class="hero-editorial__meta">
+            <time>${formatDisplayDate(heroPost.publishedAt)}</time>
+            <span>${heroPost.readTime} min read</span>
+            ${heroPost.tagEn ? renderTagPill(heroPost.tagEn) : ''}
           </div>
+          <a href="/blog/${heroPost.slug}" class="button-link" style="margin-top:1.5rem">Read article &rarr;</a>
         </div>
-
-        ${heroPost ? `
-          <a href="/blog/${heroPost.slug}" class="feature-card feature-card--hero">
-            ${heroPost.image ? `<img src="${escapeAttr(heroPost.image)}" alt="" class="feature-card__image" loading="lazy" />` : ''}
-            <div>
-              <p class="section-label">Latest</p>
-              <div class="feature-card__meta">
-                <span>${formatDisplayDate(heroPost.publishedAt)}</span>
-                <span>${heroPost.readTime} min read</span>
-                ${heroPost.tagEn ? renderTagPill(heroPost.tagEn) : ''}
-              </div>
-              <h2 class="feature-card__title">${escapeHtml(heroPost.titleEn)}</h2>
-              <p class="feature-card__excerpt">${escapeHtml(heroPost.excerptEn || '')}</p>
-            </div>
-            <div class="feature-card__footer">
-              <span class="button-link--ghost">Read article &rarr;</span>
-            </div>
-          </a>
-        ` : ''}
+        ${heroPost.image ? `
+        <a href="/blog/${heroPost.slug}" class="hero-editorial__image-wrap">
+          <img src="${escapeAttr(heroPost.image)}" alt="" class="hero-editorial__image" loading="eager" />
+        </a>` : ''}
       </section>
+      ` : ''}
 
-      <section class="home-section">
+      <section class="home-section slide-up slide-up-delay-1">
         <div class="section-head">
           <div>
             <p class="section-label">Writing</p>
-            <h2 class="section-head__title">Latest writing</h2>
-            <p class="section-head__copy">${posts.length} essays, reviews, and explainers.</p>
+            <h2 class="section-head__title">More essays &amp; guides</h2>
           </div>
-          <a href="/blog" class="section-head__link">All writing</a>
+          <a href="/blog" class="section-head__link">All writing &rarr;</a>
         </div>
 
-        <div class="story-grid">
-          ${featuredPosts.map((post) => `
-            <a href="/blog/${post.slug}" class="story-card">
-              <div class="story-row__meta">
-                <span>${formatShortDate(post.publishedAt)}</span>
-                ${post.tagEn ? renderTagPill(post.tagEn) : ''}
-              </div>
-              <h3 class="story-card__title">${escapeHtml(post.titleEn)}</h3>
-              <p class="story-card__excerpt">${escapeHtml(post.excerptEn || '')}</p>
-              <div class="story-card__footer">
-                <span class="meta-kicker">${post.readTime} min read</span>
+        <div class="post-grid">
+          ${morePosts.map((post) => `
+            <a href="/blog/${post.slug}" class="post-card">
+              ${post.image ? `<div class="post-card__img-wrap"><img src="${escapeAttr(post.image)}" alt="" class="post-card__img" loading="lazy" /></div>` : ''}
+              <div class="post-card__body">
+                <div class="post-card__meta">
+                  <time>${formatDisplayDate(post.publishedAt)}</time>
+                  <span>${post.readTime} min</span>
+                  ${post.tagEn ? renderTagPill(post.tagEn) : ''}
+                </div>
+                <h3 class="post-card__title">${escapeHtml(post.titleEn)}</h3>
+                <p class="post-card__excerpt">${escapeHtml(post.excerptEn || '')}</p>
               </div>
             </a>
           `).join('')}
         </div>
-
       </section>
 
-      <section class="home-section">
+      <section class="home-section slide-up slide-up-delay-2">
         <div class="section-head">
           <div>
             <p class="section-label">AI Briefing</p>
-            <h2 class="section-head__title">Recent briefings</h2>
-            <p class="section-head__copy">${digests.length} daily issues, grouped by theme and signal.</p>
+            <h2 class="section-head__title">Daily intelligence</h2>
           </div>
-          <a href="/briefing" class="section-head__link">Briefing archive</a>
+          <a href="/briefing" class="section-head__link">Full archive &rarr;</a>
         </div>
 
         <div class="briefing-grid">
@@ -493,29 +479,30 @@ function renderStaticArticlePage(post, options = {}) {
   const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
 
   return `
-    <div class="site-container detail-shell fade-in">
+    <div class="article-shell fade-in">
       <a href="${backHref}" class="detail-backlink">
-        <span aria-hidden="true">←</span>
+        <span aria-hidden="true">&larr;</span>
         <span>${backLabel}</span>
       </a>
 
-      <header class="detail-hero detail-hero--reading${isDigest ? ' detail-hero--digest' : ''}">
-        ${post.image ? `<img src="${escapeAttr(post.image)}" alt="" class="detail-hero__image" loading="eager" />` : ''}
-        <span class="tag-pill">${escapeHtml(heroKicker)}</span>
-        <div class="detail-hero__meta">
+      <header class="article-header-v2">
+        <div class="article-header-v2__meta">
+          <span class="tag-pill">${escapeHtml(heroKicker)}</span>
           <time dateTime="${escapeAttr(route.publishedAt || '')}">${escapeHtml(formatDisplayDate(post.publishedAt))}</time>
           ${post.readTime ? `<span>${post.readTime} min read</span>` : ''}
           ${!isDigest && post.kind ? `<span>${escapeHtml(post.kind)}</span>` : ''}
         </div>
-        <h1 class="detail-hero__title detail-hero__title--reading">${escapeHtml(post.titleEn)}</h1>
-        ${post.excerptEn ? `<div class="tldr-box"><span class="tldr-box__label">TL;DR</span><p class="tldr-box__content">${escapeHtml(post.excerptEn)}</p></div>` : ''}
+        <h1 class="article-header-v2__title">${escapeHtml(post.titleEn)}</h1>
+        ${post.excerptEn ? `<p class="article-header-v2__lede">${escapeHtml(post.excerptEn)}</p>` : ''}
       </header>
 
-      <div class="detail-reading">
-        <article class="prose-blog detail-content">${articleHtml}</article>
+      ${post.image ? `<div class="article-hero-img"><img src="${escapeAttr(post.image)}" alt="" loading="eager" /></div>` : ''}
+
+      <div class="article-body">
+        <article class="prose-blog">${articleHtml}</article>
       </div>
 
-      <div class="detail-reading">
+      <div class="article-body">
         <div class="article-cta">
           <h3 class="article-cta__title">Enjoyed this? Stay in the loop.</h3>
           <p class="article-cta__copy">Get daily AI briefings and deep dives delivered to your feed.</p>
@@ -526,7 +513,7 @@ function renderStaticArticlePage(post, options = {}) {
         </div>
       </div>
 
-      <div class="detail-footer">
+      <div class="article-footer">
         <a href="${backHref}" class="button-link--ghost">${backLabel}</a>
         <a href="https://x.com/intent/tweet?text=${encodeURIComponent(post.titleEn)}&url=${encodeURIComponent(route.url)}&via=GuangtaoS29545" target="_blank" rel="noopener noreferrer" class="x-cta">${shareText}</a>
       </div>

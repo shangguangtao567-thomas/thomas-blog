@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ai-daily-2026-03-30",
+    "kind": "digest",
+    "titleZh": "AI 日报｜政策博弈、安全危机与基础设施竞赛同日登场",
+    "titleEn": "The Architecture of AI Power",
+    "seoTitleZh": "",
+    "seoTitleEn": "",
+    "excerptZh": "今天的三条主线分别是：Anthropic 与美国国防部在军事 AI 使用问题上的宪法级冲突；基础设施竞赛升温——Nvidia 宣布 260 亿美元、LeCun 创立 AMI 融资超 10 亿；以及两份报告揭示 AI Agent 的系统性安全漏洞无法靠调参修复。同时，DeepMind 发布 AGI 十维认知框架，中国发布 MERLIN 电子战模型超越 GPT-5。",
+    "excerptEn": "Three converging dynamics define today's AI landscape: Anthropic's constitutional confrontation with the Pentagon over military AI; a $27B infrastructure race as Nvidia and LeCun's AMI pour resources into open-weight models; and growing evidence that AI agent safety risks are structural, not tunable.",
+    "keywords": [],
+    "pillar": "",
+    "pillarZh": "",
+    "topicSlug": "ai-daily",
+    "featured": false,
+    "xHookZh": "",
+    "xHookEn": "",
+    "tag": "AI 日报",
+    "tagEn": "AI Daily",
+    "image": "",
+    "readTime": 14,
+    "publishedAt": "2026-03-30T00:00:00.000Z"
+  },
+  {
     "slug": "ai-daily-2026-03-27",
     "kind": "digest",
     "titleZh": "AI 日报｜2026-03-27：安全危机、效率突破与推理的几何学",

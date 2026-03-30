@@ -3,7 +3,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { trackGrowthEvent } from '../lib/analytics';
 import { siteConfig } from '../lib/siteConfig';
 
-const MASCOT_URL = '/images/logo-thomas-nav.webp';
+const MASCOT_URL = '/images/logo-cat-nav.webp';
 
 interface TopNavProps {
   currentPath: string;
