@@ -1,9 +1,9 @@
 ---
 slug: "openclaw-product-of-its-time"
 titleZh: "OpenClaw 为什么会爆：它不是技术奇迹，而是 agent 时代的产物"
-titleEn: "Why OpenClaw Took Off: Not a Technical Miracle, but a Product of the Agent Era"
+titleEn: "Why OpenClaw Took Off: A Product of the Agent Era"
 excerptZh: "我对 OpenClaw 的判断，不是它突然比 Claude Code 这类工具多出了一项神秘技术，而是它把主动性、触达、养成和一整套已接近成熟的 agent 基础设施，压成了一个普通人也能直接使用的产品。"
-excerptEn: "My take on OpenClaw is not that it introduced some magical capability beyond tools like Claude Code, but that it compressed initiative, reachability, habit loops, and a now-maturing agent infrastructure into a product ordinary users can actually use."
+excerptEn: "OpenClaw didn't invent new AI magic. It compressed initiative, reachability, and habit loops into something ordinary users can live with. That's why it took off — and what it tells us about the agent era."
 tag: "AI"
 tagEn: "AI"
 image: "/images/openclaw-product-of-its-time.jpg"

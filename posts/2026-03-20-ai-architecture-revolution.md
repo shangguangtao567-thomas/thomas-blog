@@ -1,9 +1,9 @@
 ---
 kind: "essay"
 titleZh: "架构革命：为什么 AI 扩展没有放缓——而是在重新定向"
-titleEn: "The Architecture Revolution: Why AI Scaling Isn't Slowing — It's Redirecting"
+titleEn: "AI Scaling Isn't Slowing — It's Redirecting"
 excerptZh: "当行业开始重写残差路径、注意力混合方式、长上下文内存机制时，这不是放缓信号；恰恰相反，这是系统层高速进化的信号。"
-excerptEn: "When the industry starts rewriting residual paths, attention mixing, and long-context memory mechanisms — that's not a signal that AI is plateauing. It's the opposite: a signal that system-level evolution is accelerating."
+excerptEn: "Teams are rewriting residual paths, attention mixing, and memory mechanisms. That's not a sign AI hit a wall — it's proof that system-level evolution is accelerating faster than ever."
 tag: "AI"
 tagEn: "AI & ML"
 image: "/images/ai-architecture-revolution.jpg"

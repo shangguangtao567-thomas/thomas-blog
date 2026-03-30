@@ -1,7 +1,7 @@
 ---
 slug: "openclaw-ultimate-setup-guide"
 titleZh: "OpenClaw 终极安装指南：从零搭建你的私有 AI 助手"
-titleEn: "The Ultimate OpenClaw Setup Guide: Build Your Private AI Assistant"
+titleEn: "OpenClaw Setup Guide: Build Your Private AI Assistant"
 excerptZh: "完整记录 OpenClaw 的安装配置流程，涵盖 Telegram、Discord 接入、技能扩展与常见问题排查，帮你少踩坑。"
 excerptEn: "A complete walkthrough of OpenClaw installation and configuration, covering Telegram/Discord integration, skill extensions, and common troubleshooting."
 tag: "AI"

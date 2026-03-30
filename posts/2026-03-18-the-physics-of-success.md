@@ -1,9 +1,9 @@
 ---
 kind: "essay"
 titleZh: "万物皆能量：从热力学到个人成长的底层法则"
-titleEn: "The Physics of Success: Why Everything Comes Down to Energy and Order"
+titleEn: "The Physics of Success: Energy, Order, and Growth"
 excerptZh: "宇宙的底层法则是熵增，但人类文明是一台逆熵机器——从个人到组织到AI，同一套能量-秩序法则在不同尺度上运行。这不是鸡汤，这是热力学。"
-excerptEn: "The universe trends toward chaos. You trend toward order. From thermodynamics to personal growth, the same law governs every scale — and understanding it changes how you think about success."
+excerptEn: "The universe defaults toward entropy. You walk against it every day. From thermodynamics to personal growth to AI, the same energy-order law governs every scale — and it's not motivational fluff, it's physics."
 tag: "思考"
 tagEn: "Essay"
 image: "/images/the-physics-of-success.jpg"

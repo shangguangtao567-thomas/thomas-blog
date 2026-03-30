@@ -1,9 +1,9 @@
 ---
 slug: "open-source-models-agent-orchestration"
 titleZh: "2026 春节档 AI 大乱斗：Qwen3.5、MiniMax M2.5、GLM-5、Kimi K2.5 深度对比，以及我对 OpenClaw 层级价值的判断"
-titleEn: "Spring 2026 Open-Source Model Showdown: Qwen3.5, MiniMax M2.5, GLM-5, Kimi K2.5 — And Why the Orchestration Layer Matters"
+titleEn: "Qwen3.5 vs GLM-5 vs Kimi K2.5: Why Agent Orchestration Wins"
 excerptZh: "四个模型的技术路线各有侧重，但有一个共同方向：把工具调用和 Agent 能力放在比\"聪明程度\"更优先的位置。这背后，是 OpenClaw 这个层级正在崛起的价值。"
-excerptEn: "Four models, four technical approaches, one shared direction: prioritizing tool-calling and agent capabilities over raw intelligence. Behind this trend lies the rising value of the orchestration layer."
+excerptEn: "Four Chinese AI models dropped in one week — all prioritizing tool-calling over raw intelligence. Here's what each does differently, and why the orchestration layer is the real winner."
 tag: "AI"
 tagEn: "AI"
 image: "/images/open-source-models-agent-orchestration.jpg"

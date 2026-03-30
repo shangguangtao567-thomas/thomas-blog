@@ -1,8 +1,8 @@
 ---
 kind: "review"
 titleZh: "AI笔记与个人CRM深评：为什么你的工具最终吃灰，以及怎么选对"
-titleEn: "Why Your AI Notes App Keeps Gathering Dust (And How to Pick One That Actually Sticks)"
-excerptEn: "Most productivity tools die in the second week. Here's the honest diagnostic framework that will help you choose — and actually keep — the right one."
+titleEn: "Best AI Notes App 2026: Honest Reviews & How to Choose"
+excerptEn: "Notion, Obsidian, Mem, Reflect, Clay — reviewed honestly. Most AI note apps die in week two. Here's the diagnostic framework to pick one that actually sticks."
 tag: "AI Productivity"
 tagEn: "AI Productivity"
 image: "/images/ai-notes-crm-review.jpg"

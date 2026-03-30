@@ -1,9 +1,9 @@
 ---
 kind: "essay"
 titleZh: "AI 的下一个突破，不是更长上下文，而是学会忘掉什么"
-titleEn: "The Next Breakthrough in AI Isn't More Context. It's Learning What to Forget."
+titleEn: "AI's Next Breakthrough: Learning What to Forget"
 excerptZh: "模型已经很会在一个窗口里分配注意力了。更深的瓶颈是跨时间的记忆管理：什么该写入，什么该保留，什么该衰减，什么该重放。"
-excerptEn: "Models already know how to allocate attention inside a window. The deeper bottleneck is memory across time: what to write, keep, decay, replay, and compress into abstraction."
+excerptEn: "Context windows keep growing, but the real bottleneck is memory management across time. The next leap in LLMs isn't remembering more — it's knowing what to write, keep, decay, and delete."
 tag: "AI"
 tagEn: "AI & ML"
 pillar: "Memory Architecture"

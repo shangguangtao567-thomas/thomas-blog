@@ -567,7 +567,7 @@ async function main() {
 
   for (const post of allPosts.filter((item) => !item.slug.startsWith('ai-daily-'))) {
     const articleRoute = {
-      title: `${post.titleEn} · Thomas`,
+      title: post.titleEn,
       description: truncateText(post.excerptEn || post.contentEn, 155),
       url: routeUrl(`blog/${post.slug}`),
       type: 'article',
@@ -585,7 +585,7 @@ async function main() {
     if (!post) continue;
 
     const digestRoute = {
-      title: `${post.titleEn} · Thomas`,
+      title: post.titleEn,
       description: truncateText(digest.excerptEn || post.excerptEn || post.contentEn, 155),
       url: routeUrl(`blog/${post.slug}`),
       type: 'article',
