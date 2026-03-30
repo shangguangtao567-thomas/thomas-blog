@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-03-30",
+    "date": "2026-03-30",
+    "titleZh": "AI Daily | 2026-03-30 | The Architecture of AI Power",
+    "titleEn": "AI Daily | 2026-03-30 | The Architecture of AI Power",
+    "excerptZh": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
+    "excerptEn": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
+    "issueSummaryZh": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
+    "issueSummaryEn": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
+    "path": "/blog/ai-daily-2026-03-30",
+    "itemCount": 6,
+    "heroTitleZh": "AI Daily | 2026-03-30 | The Architecture of AI Power",
+    "heroTitleEn": "AI Daily | 2026-03-30 | The Architecture of AI Power",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 6800,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-27",
     "date": "2026-03-27",
     "titleZh": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
