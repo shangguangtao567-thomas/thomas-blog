@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-04-01",
+    "date": "2026-04-01",
+    "titleZh": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
+    "titleEn": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
+    "excerptZh": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
+    "excerptEn": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
+    "issueSummaryZh": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
+    "issueSummaryEn": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
+    "path": "/blog/ai-daily-2026-04-01",
+    "itemCount": 6,
+    "heroTitleZh": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
+    "heroTitleEn": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 3200,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-03-30",
     "date": "2026-03-30",
     "titleZh": "AI Daily | 2026-03-30 | The Architecture of AI Power",
