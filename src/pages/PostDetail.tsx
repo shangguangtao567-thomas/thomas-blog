@@ -65,6 +65,15 @@ function stripDigestSignature(markdown: string): string {
   return markdown.replace(/\n+(?:---\s*\n+)?\*?AI\s+Daily\s*\|[^\n]*\*?\s*$/i, '');
 }
 
+function bodyContainsImage(markdown: string, imagePath?: string): boolean {
+  if (!markdown || !imagePath) return false;
+
+  const normalizedPath = imagePath.trim();
+  if (!normalizedPath) return false;
+
+  return markdown.includes(`](${normalizedPath})`) || markdown.includes(`src="${normalizedPath}"`);
+}
+
 export default function PostDetail() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug;
@@ -153,6 +162,7 @@ export default function PostDetail() {
   const backLabel = isDigest ? 'Back to AI Briefing' : 'Back to writing';
   const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
   const heroKicker = isDigest ? 'AI Briefing' : post.tagEn || 'Writing';
+  const shouldRenderHeroImage = Boolean(post.image) && !bodyContainsImage(post.contentEn || '', post.image);
 
   return (
     <div className="site-container article-shell fade-in">
@@ -176,7 +186,7 @@ export default function PostDetail() {
       </header>
 
       {/* ── Hero image (if exists) ── */}
-      {post.image && (
+      {shouldRenderHeroImage && (
         <div className="article-hero-img">
           <img src={post.image} alt="" loading="eager" />
         </div>
