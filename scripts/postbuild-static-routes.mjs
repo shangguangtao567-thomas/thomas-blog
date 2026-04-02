@@ -92,6 +92,21 @@ function formatShortDate(dateStr) {
   }
 }
 
+function bodyContainsImage(markdown = '', imagePath = '') {
+  const normalizedPath = String(imagePath || '').trim();
+  if (!markdown || !normalizedPath) return false;
+  return markdown.includes(`](${normalizedPath})`) || markdown.includes(`src="${normalizedPath}"`);
+}
+
+function enhanceArticleHtml(html = '') {
+  return String(html || '').replace(/<img\b([^>]*)>/gi, (_match, attrs = '') => {
+    let nextAttrs = attrs;
+    if (!/\bloading=/.test(nextAttrs)) nextAttrs += ' loading="lazy"';
+    if (!/\bdecoding=/.test(nextAttrs)) nextAttrs += ' decoding="async"';
+    return `<img${nextAttrs}>`;
+  });
+}
+
 function upsertTag(html, pattern, replacement) {
   return pattern.test(html) ? html.replace(pattern, replacement) : html.replace('</head>', `  ${replacement}\n</head>`);
 }
@@ -473,10 +488,11 @@ function renderStaticArticlePage(post, options = {}) {
   const source = isDigest
     ? stripDigestSignature(stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn))
     : stripRedundantLeadingMarkdownH1(post.contentEn || '', post.titleEn);
-  const articleHtml = stripRedundantLeadingHtmlH1(marked.parse(source || ''), post.titleEn);
+  const articleHtml = enhanceArticleHtml(stripRedundantLeadingHtmlH1(marked.parse(source || ''), post.titleEn));
   const backHref = isDigest ? '/briefing' : '/blog';
   const backLabel = isDigest ? 'Back to AI Briefing' : 'Back to writing';
   const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
+  const shouldRenderHeroImage = Boolean(post.image) && !post.hideHero && !bodyContainsImage(post.contentEn || '', post.image);
 
   return `
     <div class="article-shell fade-in">
@@ -496,7 +512,7 @@ function renderStaticArticlePage(post, options = {}) {
         ${post.excerptEn ? `<p class="article-header-v2__lede">${escapeHtml(post.excerptEn)}</p>` : ''}
       </header>
 
-      ${post.image ? `<div class="article-hero-img"><img src="${escapeAttr(post.image)}" alt="" loading="eager" /></div>` : ''}
+      ${shouldRenderHeroImage ? `<div class="article-hero-img"><img src="${escapeAttr(post.image)}" alt="" loading="eager" decoding="async" /></div>` : ''}
 
       <div class="article-body">
         <article class="prose-blog">${articleHtml}</article>

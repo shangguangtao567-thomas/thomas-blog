@@ -17,6 +17,7 @@ export interface Post {
   tag: string;
   tagEn: string;
   image: string;
+  hideHero?: boolean;
   readTime: number;
   publishedAt: string;
   contentEn?: string;

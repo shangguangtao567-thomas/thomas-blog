@@ -95,6 +95,7 @@ const posts = files.map(filename => {
     tag: frontmatter.tag || 'Tech',
     tagEn: frontmatter.tagEn || frontmatter.tag || 'Tech',
     image: frontmatter.image || '',
+    hideHero: frontmatter.hideHero ? true : undefined,
     readTime: frontmatter.readTime || Math.ceil(content.split(' ').length / 200),
     publishedAt: frontmatter.date || frontmatter.publishedAt || filename.slice(0, 10),
     contentEn: frontmatter.lang === 'zh' ? '' : contentEn,

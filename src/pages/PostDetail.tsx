@@ -15,6 +15,7 @@ interface Post {
   contentEn: string;
   keywords?: string[];
   image?: string;
+  hideHero?: boolean;
 }
 
 function formatDate(dateStr: string): string {
@@ -72,6 +73,15 @@ function bodyContainsImage(markdown: string, imagePath?: string): boolean {
   if (!normalizedPath) return false;
 
   return markdown.includes(`](${normalizedPath})`) || markdown.includes(`src="${normalizedPath}"`);
+}
+
+function enhanceArticleHtml(html: string): string {
+  return html.replace(/<img\b([^>]*)>/gi, (_match, attrs = '') => {
+    let nextAttrs = attrs;
+    if (!/\bloading=/.test(nextAttrs)) nextAttrs += ' loading="lazy"';
+    if (!/\bdecoding=/.test(nextAttrs)) nextAttrs += ' decoding="async"';
+    return `<img${nextAttrs}>`;
+  });
 }
 
 export default function PostDetail() {
@@ -132,10 +142,10 @@ export default function PostDetail() {
       .then(({ marked }) => {
         const rendered = marked(source);
         if (typeof rendered === 'string') {
-          setHtml(stripRedundantLeadingHtmlH1(rendered, post.titleEn));
+          setHtml(enhanceArticleHtml(stripRedundantLeadingHtmlH1(rendered, post.titleEn)));
           return;
         }
-        rendered.then((value) => setHtml(stripRedundantLeadingHtmlH1(value, post.titleEn)));
+        rendered.then((value) => setHtml(enhanceArticleHtml(stripRedundantLeadingHtmlH1(value, post.titleEn))));
       })
       .catch(() => {
         setHtml(source.replace(/\n/g, '<br>'));
@@ -162,7 +172,7 @@ export default function PostDetail() {
   const backLabel = isDigest ? 'Back to AI Briefing' : 'Back to writing';
   const shareText = isDigest ? 'Share this issue on X' : 'Share on X';
   const heroKicker = isDigest ? 'AI Briefing' : post.tagEn || 'Writing';
-  const shouldRenderHeroImage = Boolean(post.image) && !bodyContainsImage(post.contentEn || '', post.image);
+  const shouldRenderHeroImage = Boolean(post.image) && !post.hideHero && !bodyContainsImage(post.contentEn || '', post.image);
 
   return (
     <div className="site-container article-shell fade-in">

@@ -14,6 +14,7 @@ xHookEn: "In the AI era, the scarcest resource is not information. It is attenti
 tag: "思考"
 tagEn: "Essay"
 image: "/images/filter-success-paradox-v3.webp"
+hideHero: true
 readTime: 6
 date: 2026-04-02
 ---
