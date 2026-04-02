@@ -24,8 +24,6 @@ Working in a startup team, I tell myself that staying informed is part of the jo
 
 I used to blame the outside world. Social media is flooded with recycled ideas. AI has made content cheaper, faster, and easier to repackage. Recommendation systems keep finding new ways to make everything feel relevant. But the harder truth is that the system is not failing to filter information. It is succeeding too well.
 
-![The Filter Success Paradox](/images/filter-success-paradox.png)
-
 In 2008, Clay Shirky famously declared, "It's not information overload. It's filter failure." It was a comforting thought—if the problem was just bad filters, we could simply build better ones. But three years later, technology writer Nicholas Carr pointed out the flaw in this logic. Carr argued that better filters do not mitigate information overload; they intensify it. As he put it: "It would be more accurate to say: It's not information overload. It's filter success."
 
 Carr made a crucial distinction between *situational overload* (trying to find a needle in a haystack) and *ambient overload* (being surrounded by haystack-sized piles of needles). Our modern algorithms are incredibly good at finding the needles. The problem is that they deliver so many highly relevant, perfectly targeted needles that we are overwhelmed by the sheer volume of things we actually *want* to see. The cause of situational overload is too much noise, but the cause of ambient overload is too much signal.
@@ -70,8 +68,6 @@ If I can protect that, I can think more clearly. If I can think more clearly, I 
 作为初创团队的一员，我总是告诉自己，保持信息敏锐是工作的一部分。我不想错过市场的任何变化、新模型的发布、产品洞察或是用户行为的转变。所以我不断地检查：文章、演示、推文、笔记、产品发布和新工具。然而，到了某个临界点，这就不再是研究了。它变成了披着良好外衣的焦虑。
 
 我曾经把这归咎于外部世界。社交媒体上充斥着被反复咀嚼的观点；AI 让内容的生产、重组变得更廉价、更快速；推荐系统不断找到新方法，让一切看起来都与我息息相关。但更残酷的真相是，系统并没有在过滤信息上失败。它只是太成功了。
-
-![Filter Success Paradox](/images/filter-success-paradox.png)
 
 2008 年，Clay Shirky 提出了一句名言：“这不是信息过载，这是过滤器失效（It's not information overload. It's filter failure）。” 这是一个令人欣慰的想法——如果问题仅仅是过滤器不够好，我们只需要构建更好的过滤器就行了。但三年后，科技作家 Nicholas Carr 指出了这个逻辑的缺陷。Carr 认为，更好的过滤器并不能缓解信息过载，反而会加剧它。正如他所说：“更准确的说法应该是：这不是信息过载。这是过滤器太成功了（It's filter success）。”
 
