@@ -29,6 +29,15 @@
     ]
   },
   {
+    "slug": "attention-judgment",
+    "labelZh": "注意力与判断",
+    "labelEn": "Attention & Judgment",
+    "count": 1,
+    "latestPostSlugs": [
+      "protecting-attention-in-the-ai-era"
+    ]
+  },
+  {
     "slug": "essay",
     "labelZh": "思考",
     "labelEn": "Essay",
