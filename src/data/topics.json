@@ -20,6 +20,15 @@
     ]
   },
   {
+    "slug": "ai-infrastructure",
+    "labelZh": "AI 基础设施",
+    "labelEn": "AI Infrastructure",
+    "count": 1,
+    "latestPostSlugs": [
+      "turboquant-kv-cache-open-source-latency"
+    ]
+  },
+  {
     "slug": "ai-productivity",
     "labelZh": "AI Productivity",
     "labelEn": "AI Productivity",
