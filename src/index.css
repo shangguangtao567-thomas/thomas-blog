@@ -1171,8 +1171,9 @@
 
   .article-hero-img img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   /* Article body */
@@ -1617,7 +1618,7 @@ footer,
   }
 
   .article-hero-img img {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: auto;
   }
 }
 
