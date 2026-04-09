@@ -1,5 +1,36 @@
 [
   {
+    "slug": "ai-daily-2026-04-09",
+    "date": "2026-04-09",
+    "titleZh": "Cross-Model Capability Transfer, No Retraining Required",
+    "titleEn": "Cross-Model Capability Transfer, No Retraining Required",
+    "excerptZh": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
+    "excerptEn": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
+    "issueSummaryZh": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
+    "issueSummaryEn": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
+    "path": "/blog/ai-daily-2026-04-09",
+    "itemCount": 6,
+    "heroTitleZh": "Cross-Model Capability Transfer, No Retraining Required",
+    "heroTitleEn": "Cross-Model Capability Transfer, No Retraining Required",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 6,
+      "succeeded": 6,
+      "totalWords": 3600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "AI 与技术",
+        "themeEn": "AI & Technology",
+        "count": 6
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-01",
     "date": "2026-04-01",
     "titleZh": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
@@ -10,8 +41,8 @@
     "issueSummaryEn": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
     "path": "/blog/ai-daily-2026-04-01",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
-    "heroTitleEn": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
+    "heroTitleZh": "Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures",
+    "heroTitleEn": "Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
       "targeted": 6,
@@ -21,9 +52,29 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
-        "themeEn": "AI & Technology",
-        "count": 6
+        "themeZh": "Agent 与自动化",
+        "themeEn": "Agent",
+        "count": 2
+      },
+      {
+        "themeZh": "推理与思考",
+        "themeEn": "Reasoning",
+        "count": 1
+      },
+      {
+        "themeZh": "架构与训练",
+        "themeEn": "Architecture",
+        "count": 1
+      },
+      {
+        "themeZh": "多模态",
+        "themeEn": "Multimodal",
+        "count": 1
+      },
+      {
+        "themeZh": "工具与工程",
+        "themeEn": "Tools",
+        "count": 1
       }
     ],
     "featuredItems": [],
