@@ -2,16 +2,16 @@
   {
     "slug": "ai-daily-2026-04-09",
     "date": "2026-04-09",
-    "titleZh": "Cross-Model Capability Transfer, No Retraining Required",
-    "titleEn": "Cross-Model Capability Transfer, No Retraining Required",
-    "excerptZh": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
-    "excerptEn": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
-    "issueSummaryZh": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
-    "issueSummaryEn": "Two structural research findings and an unusually dense frontier model release week. The Master Key Hypothesis demonstrates training-free cross-model capability transfer via a shared linear subspace — one model can activate directions it was not explicitly trained to perform. Adversarial smuggling shows MLLM safety failures can originate in the visual encoding channel, not the text channel.",
+    "titleZh": "AI Daily | 2026-04-09 | Capability and Danger Have Both Become Too Large to Release Openly",
+    "titleEn": "AI Daily | 2026-04-09 | Capability and Danger Have Both Become Too Large to Release Openly",
+    "excerptZh": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
+    "excerptEn": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
+    "issueSummaryZh": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
+    "issueSummaryEn": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
     "path": "/blog/ai-daily-2026-04-09",
     "itemCount": 6,
-    "heroTitleZh": "Cross-Model Capability Transfer, No Retraining Required",
-    "heroTitleEn": "Cross-Model Capability Transfer, No Retraining Required",
+    "heroTitleZh": "Adversarial Smuggling Attacks: MLLM Content Moderation Bypass via Visual Encoding",
+    "heroTitleEn": "Adversarial Smuggling Attacks: MLLM Content Moderation Bypass via Visual Encoding",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
       "targeted": 6,
@@ -21,8 +21,8 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
-        "themeEn": "AI & Technology",
+        "themeZh": "其他",
+        "themeEn": "Other",
         "count": 6
       }
     ],
