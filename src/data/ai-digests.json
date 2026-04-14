@@ -1,5 +1,51 @@
 [
   {
+    "slug": "ai-daily-2026-04-15",
+    "date": "2026-04-15",
+    "titleZh": "AI 日报 2026-04-15",
+    "titleEn": "AI 日报 2026-04-15",
+    "excerptZh": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
+    "excerptEn": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
+    "issueSummaryZh": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
+    "issueSummaryEn": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
+    "path": "/blog/ai-daily-2026-04-15",
+    "itemCount": 5,
+    "heroTitleZh": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
+    "heroTitleEn": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 5,
+      "succeeded": 5,
+      "totalWords": 800,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "前沿研究",
+        "themeEn": "Research",
+        "count": 2
+      },
+      {
+        "themeZh": "架构与训练",
+        "themeEn": "Architecture",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent 与自动化",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "security",
+        "themeEn": "Security",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-14",
     "date": "2026-04-14",
     "titleZh": "AI Daily | 2026-04-14 | AI Crosses the Research-Level Math Threshold",
