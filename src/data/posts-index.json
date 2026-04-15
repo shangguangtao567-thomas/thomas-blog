@@ -1,27 +1,5 @@
 [
   {
-    "slug": "ai-daily-2026-04-15",
-    "kind": "",
-    "titleZh": "ai-daily-2026-04-15",
-    "titleEn": "ai-daily-2026-04-15",
-    "seoTitleZh": "",
-    "seoTitleEn": "",
-    "excerptZh": "",
-    "excerptEn": "",
-    "keywords": [],
-    "pillar": "",
-    "pillarZh": "",
-    "topicSlug": "tech",
-    "featured": false,
-    "xHookZh": "",
-    "xHookEn": "",
-    "tag": "Tech",
-    "tagEn": "Tech",
-    "image": "",
-    "readTime": 2,
-    "publishedAt": "2026-04-15"
-  },
-  {
     "slug": "ai-daily-2026-04-09",
     "kind": "digest",
     "titleZh": "AI 日报｜前沿模型正在划定\"能释放\"的上限——攻击面和访问限制双向收紧",
