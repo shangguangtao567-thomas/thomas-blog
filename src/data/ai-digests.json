@@ -2,12 +2,12 @@
   {
     "slug": "ai-daily-2026-04-15",
     "date": "2026-04-15",
-    "titleZh": "AI 日报 2026-04-15",
-    "titleEn": "AI 日报 2026-04-15",
-    "excerptZh": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
-    "excerptEn": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
-    "issueSummaryZh": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
-    "issueSummaryEn": "斯坦福大学等机构发布的 GIANTS-4B（40 亿参数）通过强化学习，用\"预测洞察与真实洞察的相似度\"作为奖励信号，在 GiantsBench 基准（覆盖 8 大科学领域、17000 条示例）上将洞察预测准确率提升至比 gemini-3-pro 高 34%。第三方 SciJudge-30B 在 68% 的成对比较中更偏好 GIANTS-4B 的洞察。这是首次将\"从父论文预测下游论文核心洞察\"建模为生成任务并以 RL 训练，标志着 AI 自动化学术发现迈出重要一步。",
+    "titleZh": "Claude Managed Agents 正式发布；扩散语言模型首次追平自回归质量；Meta 联手博通自研 AI 芯片",
+    "titleEn": "Anthropic Launches Claude Managed Agents; First Diffusion LM Matches AR Quality; Meta Partners With Broadcom on Custom AI Silicon",
+    "excerptZh": "Anthropic 发布 Claude Managed Agents，将编排逻辑嵌入模型层；扩散语言模型 I-DLM-8B 首次在同等规模下追平自回归模型质量，同时带来 2.9–4.1 倍吞吐提升；Meta 联手博通自研 MTIA 芯片，首阶段承诺超 1GW；MCP 安全告警：40+ 攻击模式含两个 CVE；中国最大科学智能计算集群在郑州上线。",
+    "excerptEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
+    "issueSummaryZh": "Anthropic 发布 Claude Managed Agents，将编排逻辑嵌入模型层；扩散语言模型 I-DLM-8B 首次在同等规模下追平自回归模型质量，同时带来 2.9–4.1 倍吞吐提升；Meta 联手博通自研 MTIA 芯片，首阶段承诺超 1GW；MCP 安全告警：40+ 攻击模式含两个 CVE；中国最大科学智能计算集群在郑州上线。",
+    "issueSummaryEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
     "path": "/blog/ai-daily-2026-04-15",
     "itemCount": 5,
     "heroTitleZh": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
@@ -16,7 +16,7 @@
     "bodyCoverage": {
       "targeted": 5,
       "succeeded": 5,
-      "totalWords": 800,
+      "totalWords": 6400,
       "ratio": 1.0
     },
     "themes": [
