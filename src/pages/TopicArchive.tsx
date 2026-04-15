@@ -83,8 +83,8 @@ export default function TopicArchive({ slug, navigate }: TopicArchiveProps) {
 
         <section className="space-y-3">
           {relatedPosts.map((post, index) => {
-            const title = language === 'zh' ? post.titleZh : post.titleEn;
-            const excerpt = language === 'zh' ? post.excerptZh : post.excerptEn;
+            const title = language === 'zh' ? (post.titleZh || post.titleEn) : post.titleEn;
+            const excerpt = language === 'zh' ? (post.excerptZh || post.excerptEn) : post.excerptEn;
             return (
               <button
                 key={post.slug}

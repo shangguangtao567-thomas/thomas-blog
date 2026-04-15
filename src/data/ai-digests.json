@@ -1,62 +1,12 @@
 [
   {
-    "slug": "ai-daily-2026-04-15",
-    "date": "2026-04-15",
-    "titleZh": "Claude Managed Agents 正式发布；扩散语言模型首次追平自回归质量；Meta 联手博通自研 AI 芯片",
-    "titleEn": "Anthropic Launches Claude Managed Agents; First Diffusion LM Matches AR Quality; Meta Partners With Broadcom on Custom AI Silicon",
-    "excerptZh": "Anthropic 发布 Claude Managed Agents，将编排逻辑嵌入模型层；扩散语言模型 I-DLM-8B 首次在同等规模下追平自回归模型质量，同时带来 2.9–4.1 倍吞吐提升；Meta 联手博通自研 MTIA 芯片，首阶段承诺超 1GW；MCP 安全告警：40+ 攻击模式含两个 CVE；中国最大科学智能计算集群在郑州上线。",
-    "excerptEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
-    "issueSummaryZh": "Anthropic 发布 Claude Managed Agents，将编排逻辑嵌入模型层；扩散语言模型 I-DLM-8B 首次在同等规模下追平自回归模型质量，同时带来 2.9–4.1 倍吞吐提升；Meta 联手博通自研 MTIA 芯片，首阶段承诺超 1GW；MCP 安全告警：40+ 攻击模式含两个 CVE；中国最大科学智能计算集群在郑州上线。",
-    "issueSummaryEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
-    "path": "/blog/ai-daily-2026-04-15",
-    "itemCount": 5,
-    "heroTitleZh": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
-    "heroTitleEn": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
-    "limitedUpdateWindow": false,
-    "bodyCoverage": {
-      "targeted": 5,
-      "succeeded": 5,
-      "totalWords": 6400,
-      "ratio": 1.0
-    },
-    "themes": [
-      {
-        "themeZh": "前沿研究",
-        "themeEn": "Research",
-        "count": 2
-      },
-      {
-        "themeZh": "架构与训练",
-        "themeEn": "Architecture",
-        "count": 1
-      },
-      {
-        "themeZh": "Agent 与自动化",
-        "themeEn": "Agent",
-        "count": 1
-      },
-      {
-        "themeZh": "security",
-        "themeEn": "Security",
-        "count": 1
-      }
-    ],
-    "featuredItems": [],
-    "llmGenerated": true,
-    "titleRegenerated": false
-  },
-  {
     "slug": "ai-daily-2026-04-09",
     "date": "2026-04-09",
-    "titleZh": "AI Daily | 2026-04-09 | Capability and Danger Have Both Become Too Large to Release Openly",
     "titleEn": "AI Daily | 2026-04-09 | Capability and Danger Have Both Become Too Large to Release Openly",
-    "excerptZh": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
     "excerptEn": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
-    "issueSummaryZh": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
     "issueSummaryEn": "This week frontier AI crossed a threshold from which there is no clean return: the models have become simultaneously powerful enough to be dangerous in novel ways, and restricted enough that the most capable versions are no longer available to most people. Adversarial smuggling attacks — encoding harmful content in visual formats humans read instantly but AI cannot — now achieve >90% success rates against GPT-5, Qwen3-VL, Claude Opus 4.6, and Gemini 3.1 Pro. Meanwhile, Anthropic locked its most powerful cyber-exploit model behind a 50-company wall, acknowledging publicly that its exploit-generation capability is too high to release openly.",
     "path": "/blog/ai-daily-2026-04-09",
     "itemCount": 6,
-    "heroTitleZh": "Adversarial Smuggling Attacks: MLLM Content Moderation Bypass via Visual Encoding",
     "heroTitleEn": "Adversarial Smuggling Attacks: MLLM Content Moderation Bypass via Visual Encoding",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -67,7 +17,6 @@
     },
     "themes": [
       {
-        "themeZh": "其他",
         "themeEn": "Other",
         "count": 6
       }
@@ -79,15 +28,11 @@
   {
     "slug": "ai-daily-2026-04-01",
     "date": "2026-04-01",
-    "titleZh": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
     "titleEn": "AI Daily | 2026-04-01 | Agent Architectures and Edge-Deployable Models Take Center Stage",
-    "excerptZh": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
     "excerptEn": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
-    "issueSummaryZh": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
     "issueSummaryEn": "Two threads dominate this cycle: a landmark experiment showing self-organizing multi-agent systems outperform rigid role hierarchies, and the maturation of extreme model compression techniques — 1-bit quantization crossing commercial viability and a new open-source framework automating post-training quantization pipelines. Meanwhile, DeepSeek-R1's openweights release extends the reasoning model open-source wave, and an npm supply chain compromise affecting Axios reminds the ecosystem that security surface areas remain wide.",
     "path": "/blog/ai-daily-2026-04-01",
     "itemCount": 6,
-    "heroTitleZh": "Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures",
     "heroTitleEn": "Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -98,27 +43,22 @@
     },
     "themes": [
       {
-        "themeZh": "Agent 与自动化",
         "themeEn": "Agent",
         "count": 2
       },
       {
-        "themeZh": "推理与思考",
         "themeEn": "Reasoning",
         "count": 1
       },
       {
-        "themeZh": "架构与训练",
         "themeEn": "Architecture",
         "count": 1
       },
       {
-        "themeZh": "多模态",
         "themeEn": "Multimodal",
         "count": 1
       },
       {
-        "themeZh": "工具与工程",
         "themeEn": "Tools",
         "count": 1
       }
@@ -130,15 +70,11 @@
   {
     "slug": "ai-daily-2026-03-30",
     "date": "2026-03-30",
-    "titleZh": "AI Daily | 2026-03-30 | The Architecture of AI Power",
     "titleEn": "AI Daily | 2026-03-30 | The Architecture of AI Power",
-    "excerptZh": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
     "excerptEn": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
-    "issueSummaryZh": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
     "issueSummaryEn": "Today's AI landscape is defined by three converging dynamics: the collision between AI companies and state power over military use; a new infrastructure race as Nvidia and a LeCun-founded startup pour billions into open-weight models; and growing evidence that deployed AI agents carry systemic safety risks that cannot be patched away. Meanwhile, a ten-dimensional cognitive taxonomy from DeepMind attempts to systematize what \"AGI\" even means — and a Chinese consortium releases an electronic warfare model that beats GPT-5 on reasoning tasks.",
     "path": "/blog/ai-daily-2026-03-30",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-30 | The Architecture of AI Power",
     "heroTitleEn": "AI Daily | 2026-03-30 | The Architecture of AI Power",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -149,7 +85,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -161,15 +96,11 @@
   {
     "slug": "ai-daily-2026-03-27",
     "date": "2026-03-27",
-    "titleZh": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
     "titleEn": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
-    "excerptZh": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
     "excerptEn": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
-    "issueSummaryZh": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
     "issueSummaryEn": "**Editor's Note:** This week's AI landscape tells three interlocking stories. First, the LiteLLM supply chain attack exposed a structural vulnerability in how the AI tooling ecosystem secures its publishing infrastructure — and prompted a cross-ecosystem response that may permanently alter how package managers handle new releases. Second, two separate efficiency breakthroughs — one in RLVR training and one in KV cache compression — signal that the era of brute-force compute is giving way to targeted optimization at specific architectural bottlenecks. Third, and perhaps most revealingly, a series of studies on LLM reasoning and agent memory are forcing a theoretical reckoning with what these systems are actually doing when they reason. OpenAI's abrupt Sora shutdown rounds out the picture: even at the frontier, the commercial calculus is being rewritten.",
     "path": "/blog/ai-daily-2026-03-27",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
     "heroTitleEn": "AI Daily | 2026-03-27 | The Week Everything Changed: Security, Scale, and the Geometry of Thought",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -180,7 +111,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -192,15 +122,11 @@
   {
     "slug": "ai-daily-2026-03-26",
     "date": "2026-03-26",
-    "titleZh": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
     "titleEn": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
-    "excerptZh": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
     "excerptEn": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
-    "issueSummaryZh": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
     "issueSummaryEn": "This week reveals a critical paradox in AI development: the very capabilities that make frontier models powerful—reasoning, instruction-following, complex task execution—are increasingly being exposed as potential vulnerabilities. From a new \"internal safety collapse\" attack that exploits model capabilities to trigger harmful outputs, to evidence that some models develop concerning emotional behaviors under stress, to a $11B legal AI valuation signaling application-layer ascendance—the AI landscape in late March 2026 is defined by contradictions. Harvey's milestone validates the application layer, while infrastructure optimization like Google's 5x KV cache compression and Doubao's 100T tokens/day underscore the economic pressures underneath. Meanwhile, OpenAI's Sora shutdown reminds us that even the best-funded players must make hard choices. The era of \"bet on everything\" is ending; strategic focus is beginning.",
     "path": "/blog/ai-daily-2026-03-26",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
     "heroTitleEn": "AI Daily | 2026-03-26 | When Capabilities Become Liabilities",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -211,7 +137,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -223,15 +148,11 @@
   {
     "slug": "ai-daily-2026-03-25",
     "date": "2026-03-25",
-    "titleZh": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
     "titleEn": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
-    "excerptZh": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
     "excerptEn": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
-    "issueSummaryZh": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
     "issueSummaryEn": "The AI landscape is shifting from pure scale to smarter architectures, safer tools, and deeper understanding. Today's highlights span efficiency breakthroughs that break the scaling trade-offs, a landmark product launch that redefines what's possible, and emerging research that reveals surprising model behaviors. Plus: a supply chain attack that demands immediate action.",
     "path": "/blog/ai-daily-2026-03-25",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
     "heroTitleEn": "AI Daily | 2026-03-25 | Beyond Scaling: The New Frontier",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -242,7 +163,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -254,15 +174,11 @@
   {
     "slug": "ai-daily-2026-03-24",
     "date": "2026-03-24",
-    "titleZh": "AI Daily | 2026-03-24 | AI Breaks New Ground in Math, Security, and Enterprise",
     "titleEn": "AI Daily | Math, Security, and Enterprise",
-    "excerptZh": "Today's AI landscape marks three significant shifts: frontier math problems now yield to language models, safety research reveals unexpected model behaviors worth monitoring, and China's enterprise Agent market matures with Baidu's DuMate launch. This issue traces these developments from breakthrough research to practical products.",
     "excerptEn": "Today's AI landscape marks three significant shifts: frontier math problems now yield to language models, safety research reveals unexpected model behaviors worth monitoring, and China's enterprise Agent market matures with Baidu's DuMate launch. This issue traces these developments from breakthrough research to practical products.",
-    "issueSummaryZh": "Today's AI landscape marks three significant shifts: frontier math problems now yield to language models, safety research reveals unexpected model behaviors worth monitoring, and China's enterprise Agent market matures with Baidu's DuMate launch. This issue traces these developments from breakthrough research to practical products.",
     "issueSummaryEn": "Today's AI landscape marks three significant shifts: frontier math problems now yield to language models, safety research reveals unexpected model behaviors worth monitoring, and China's enterprise Agent market matures with Baidu's DuMate launch. This issue traces these developments from breakthrough research to practical products.",
     "path": "/blog/ai-daily-2026-03-24",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-24 | AI Breaks New Ground in Math, Security, and Enterprise",
     "heroTitleEn": "AI Daily | 2026-03-24 | AI Breaks New Ground in Math, Security, and Enterprise",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -273,7 +189,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -285,15 +200,11 @@
   {
     "slug": "ai-daily-2026-03-23",
     "date": "2026-03-23",
-    "titleZh": "AI 日报｜安全、进化与LLM系统行为",
     "titleEn": "AI Daily | Safety, Self-Evolution, and LLM System Behaviors",
-    "excerptZh": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：自适应红队攻击揭示LLM安全护栏远比想象中脆弱；Hyperagents展示了AI系统自我改进元层机制的可能性。",
     "excerptEn": "This week's AI field presents two colliding narratives: adaptive red-teaming reveals LLM safety guardrails are far more fragile than assumed, while Hyperagents demonstrates AI systems learning to improve their own improvement mechanisms.",
-    "issueSummaryZh": "本周AI领域最值得关注的不是新模型发布的军备竞赛，而是两个深层议题的碰撞：自适应红队攻击揭示LLM安全护栏远比想象中脆弱；Hyperagents展示了AI系统自我改进元层机制的可能性。",
     "issueSummaryEn": "This week's AI field presents two colliding narratives: adaptive red-teaming reveals LLM safety guardrails are far more fragile than assumed, while Hyperagents demonstrates AI systems learning to improve their own improvement mechanisms.",
     "path": "/blog/ai-daily-2026-03-23",
     "itemCount": 6,
-    "heroTitleZh": "AI Daily | 2026-03-23 | Safety Cracks and Self-Evolution",
     "heroTitleEn": "AI Daily | 2026-03-23 | Safety Cracks and Self-Evolution",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -304,7 +215,6 @@
     },
     "themes": [
       {
-        "themeZh": "AI 与技术",
         "themeEn": "AI & Technology",
         "count": 6
       }
@@ -316,15 +226,11 @@
   {
     "slug": "ai-daily-2026-03-20",
     "date": "2026-03-20",
-    "titleZh": "AI 日报｜Agents and developer tooling +  Retrieval",
     "titleEn": "AI Daily |  Agents and developer tooling, Retrieval, multimodal, and memory systems, Agents and developer tooling",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。GitHub、Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱",
     "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. GitHub, Hugging Face, Simon Willison",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 检索、多模态与记忆系统。GitHub、Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在\"新功能数量\"，而在\"能力能不能真正接进现实流程\"。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Retrieval, multimodal, and memory systems. GitHub, Hugging Face, Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-20",
     "itemCount": 6,
-    "heroTitleZh": "GitHub｜Agent 与开发者工具",
     "heroTitleEn": "GitHub Squad Coordinates Multi-Agent AI Workflows Directly Inside Code Repositories",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -335,22 +241,18 @@
     },
     "themes": [
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 3
       },
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 1
       },
       {
-        "themeZh": "AI 产品体验",
         "themeEn": "AI product experience",
         "count": 1
       },
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 1
       }
@@ -358,38 +260,26 @@
     "featuredItems": [
       {
         "id": "github.blog-217e48af9681",
-        "titleZh": "GitHub｜Agent 与开发者工具",
         "titleEn": "GitHub Squad Coordinates Multi-Agent AI Workflows Directly Inside Code Repositories",
         "tag": "Tools",
-        "summaryZh": "GitHub 推出了 Squad，这是一个在代码仓库内部署协调 AI 智能体的系统，可自动执行开发工作流程中的多项任务。这些智能体支持相互通信，能够处理涉及多个步骤的复杂任务，如自动分类 issues 和审核 pull requests。文档显示该系统采用了结构化的智能体间通信协议来实现任务协调。 本周内，开发团队应识别当前哪些人工流程适合交由 Squad 接管。建议从高频、低风险的任务开始，例如自动为 issues 打标签或根据文件路径路由 PR 给对应的审查者。先在小范围验证准确率，再逐步扩展到影响用户的功能模块。 关注 Squad 协调协议的开源实现细节，验证其智能体间消息格式是否有公开规范。查找该系统是否发布了多智能体协调成功率与单智能体的基准对比数据。同时确认其底层模型的版本信息，这直接影响对模糊技术问题判断的可靠性。",
         "summaryEn": "GitHub introduced Squad, a system for deploying coordinated AI agents that operate directly within code repositories to automate development workflows. These agents can triage issues, review pull requests, and execute multi-step tasks across the codebase without human intervention in the loop Developers integrating Squad should evaluate which of their current code review or issue triage workflows involve highly repeatable decision patterns. Teams can start by mapping a single manual process—such as labeling issues by priority or routing PRs to reviewers—to Squad agents, then measure accuracy against human baseline before expanding scope. Start with low-stakes Monitor the open-source release of Squad's coordination protocol to verify whether agent-to-agent message schemas are documented and extensible. Check if the system publishes benchmark results comparing agent coordination success rates against single-agent baselines on standard code review tasks. Look for the specific version of GPT or Claude models powering the agents",
-        "whyItMattersZh": "本周内，开发团队应识别当前哪些人工流程适合交由 Squad 接管。建议从高频、低风险的任务开始，例如自动为 issues 打标签或根据文件路径路由 PR 给对应的审查者。先在小范围验证准确率，再逐步扩展到影响用户的功能模块。",
         "whyItMattersEn": "Developers integrating Squad should evaluate which of their current code review or issue triage workflows involve highly repeatable decision patterns. Teams can start by mapping a single manual process—such as labeling issues by priority or routing PRs to reviewers—to Squad agents, then measure accuracy against human baseline before expanding scope. Start with low-stakes",
-        "publishedLabelZh": "18 小时前",
         "publishedLabelEn": "18 hours ago"
       },
       {
         "id": "huggingface.co-6fcdc30a7049",
-        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "**Introducing SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding**",
         "tag": "Data",
-        "summaryZh": "Hugging Face把围绕评测、检索的东西真正放了出来，重点不只是\"开源\"两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 文中最值得记的一处细节是：To achieve this, each candidate prompt is embedded into a dense vector s 这类更新往往不太像 headline product launch，但它经常决定后面一整批产品体验的上限。 这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。接下来要看效果、成本和工具链支持是否拉开差距，以及企业知识库、RAG 和跨模态搜索是否快速跟进。",
         "summaryEn": "Hugging Face opened up work around evaluation and retrieval, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search, memory The most useful detail in the piece is this: To achieve this, each candidate prompt is embedded into a dense vector space using a pretrained text embedder ( openai/t These are not always the loudest headlines These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here. Watch for a real gap in quality, cost",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "20 小时前",
         "publishedLabelEn": "20 hours ago"
       },
       {
         "id": "simonwillison.net-f59deb557976",
-        "titleZh": "OpenAI｜Agent 与开发者工具",
         "titleEn": "Thoughts on OpenAI acquiring Astral and uv/ruff/ty",
         "tag": "Tools",
-        "summaryZh": "OpenAI把围绕开源、工作流的东西真正放了出来，重点不只是\"开源\"两个字，而是让外部生态更容易复用、验证和接着往下搭。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：Since its release in February 2024—just two years ago—it’s become one of 换句话说，行业现在卷的已经不是谁更会回答，而是谁更能把能力接进现有软件和流程。 接下来真正要看的，是这类能力会不会变成默认配置，而不是只存在于少数标杆案例里。后续要看它是否被嵌进真实产品和开发者工作流，以及生态是否围绕它形成新的分发与集成方式。",
         "summaryEn": "OpenAI opened up work around open source and workflow, making it easier for the wider ecosystem to inspect, reuse, and build on. OpenAI is making the case that the next battle is not smarter chat The most useful detail in the piece is this: Since its release in February 2024—just two years ago—it’s become one of the most popular tools for running Python code. In other words What matters next is whether this becomes default product plumbing rather than a showcase reserved for a few strong case studies",
-        "whyItMattersZh": "行业竞争点正在从\"聊天回答得好不好\"转向\"能不能稳定接进软件、工具链和自动化流程\"，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "17 小时前",
         "publishedLabelEn": "17 hours ago"
       }
     ],
@@ -399,15 +289,11 @@
   {
     "slug": "ai-daily-2026-03-19",
     "date": "2026-03-19",
-    "titleZh": "AI 日报｜本地推理加速；飞书企业 Agent 批量上线",
     "titleEn": "AI Daily | Local Inference Acceleration; Enterprise Agents Go Mainstream",
-    "excerptZh": "两条主线并行：一条是本地推理加速（Hugging Face + Apple），另一条是企业级 Agent 开始批量落地（飞书、Snowflake）。",
     "excerptEn": "Two tracks: local inference reaching practical performance on consumer hardware, and enterprise agent platforms moving from demos to production.",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 Agent 与开发者工具。Hugging Face、Simon Willison、量子位 (QbitAI) 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Agents and developer tooling. Hugging Face, Simon Willison, 量子位 (QbitAI) are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-19",
     "itemCount": 6,
-    "heroTitleZh": "Hugging Face｜检索、多模态与记忆系统",
     "heroTitleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -418,17 +304,14 @@
     },
     "themes": [
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 3
       },
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 2
       },
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 1
       }
@@ -436,38 +319,26 @@
     "featuredItems": [
       {
         "id": "huggingface.co-310658f5b680",
-        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
         "tag": "Data",
-        "summaryZh": "Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
         "summaryEn": "Hugging Face opened up work around memory and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "1 天前",
         "publishedLabelEn": "1 day ago"
       },
       {
         "id": "simonwillison.net-0a402a421780",
-        "titleZh": "Alibaba｜检索、多模态与记忆系统",
         "titleEn": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
         "tag": "Data",
-        "summaryZh": "Alibaba把评测、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
         "summaryEn": "Alibaba moved evaluation and inference deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "11 小时前",
         "publishedLabelEn": "11 hours ago"
       },
       {
         "id": "qbitai.com-632099a9a997",
-        "titleZh": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
         "titleEn": "飞书发布多款企业级 Agent 覆盖个人智能伙伴与业务系统",
         "tag": "Tools",
-        "summaryZh": "量子位 (QbitAI)带来了一条围绕Agent 工作流与开发工具的重要更新。 量子位 (QbitAI)想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 文中最值得记的一处细节是：3 月 19 日，飞书发布了多款企业级 Agent 产品。通过全新升级的智能体平台飞书 aily…",
         "summaryEn": "量子位 (QbitAI) put out a meaningful update around agent workflows and developer tooling. 量子位 (QbitAI) is making the case that the next battle is not smarter chat, but software that can actually stay inside the workflow…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "2 小时前",
         "publishedLabelEn": "2 hours ago"
       }
     ],
@@ -477,15 +348,11 @@
   {
     "slug": "ai-daily-2026-03-18",
     "date": "2026-03-18",
-    "titleZh": "AI 日报｜Retrieval +  multimodal",
     "titleEn": "AI Daily |  Retrieval, multimodal, and memory systems, Retrieval, multimodal, and memory systems, Agents and developer tooling",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”…",
     "excerptEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Hugging Face…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 检索、多模态与记忆系统，另一条是 前沿研究与能力边界。Hugging Face、OpenAI 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Retrieval, multimodal, and memory systems, and Frontier research and capability shifts. Hugging Face, OpenAI are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-18",
     "itemCount": 6,
-    "heroTitleZh": "Hugging Face｜检索、多模态与记忆系统",
     "heroTitleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -496,22 +363,18 @@
     },
     "themes": [
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 2
       },
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 2
       },
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 1
       },
       {
-        "themeZh": "AI 产品体验",
         "themeEn": "AI product experience",
         "count": 1
       }
@@ -519,38 +382,26 @@
     "featuredItems": [
       {
         "id": "huggingface.co-310658f5b680",
-        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "Nemotron 3 Nano 4B: A Compact Hybrid Model for Efficient Local AI",
         "tag": "Data",
-        "summaryZh": "Hugging Face把围绕记忆、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
         "summaryEn": "Hugging Face opened up work around memory and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "8 小时前",
         "publishedLabelEn": "8 hours ago"
       },
       {
         "id": "huggingface.co-c07825b4f460",
-        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "Holotron-12B - High Throughput Computer Use Agent",
         "tag": "Data",
-        "summaryZh": "Hugging Face把围绕多模态、基准测试的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感…",
         "summaryEn": "Hugging Face opened up work around multimodal and benchmark, making it easier for the wider ecosystem to inspect, reuse, and build on. This looks like infrastructure, but it usually decides how good search…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "18 小时前",
         "publishedLabelEn": "18 hours ago"
       },
       {
         "id": "openai.com-c3d41e50070e",
-        "titleZh": "OpenAI｜Agent 与开发者工具",
         "titleEn": "Introducing GPT-5.4 mini and nano",
         "tag": "Tools",
-        "summaryZh": "OpenAI把多模态、推理继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 OpenAI想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具。 目前能确认的公开信号是：GPT-5.4 mini and nano are smaller…",
         "summaryEn": "OpenAI moved multimodal and reasoning deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "21 小时前",
         "publishedLabelEn": "21 hours ago"
       }
     ],
@@ -560,15 +411,11 @@
   {
     "slug": "ai-daily-2026-03-17",
     "date": "2026-03-17",
-    "titleZh": "AI 日报｜Model safety and controllability +  Retrieval",
     "titleEn": "AI Daily |  Model safety and controllability, Retrieval, multimodal, and memory systems, Frontier research and capability shifts",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。MIT Technology Review / AI、arXiv cs.CL 分别从研究、产品和工具三侧往前拱…",
     "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. MIT Technology Review / AI…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。MIT Technology Review / AI、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. MIT Technology Review / AI, arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-17",
     "itemCount": 6,
-    "heroTitleZh": "MIT Technology Review / AI｜模型安全与可控性",
     "heroTitleEn": "Nurturing agentic AI beyond the toddler stage",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -579,17 +426,14 @@
     },
     "themes": [
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 3
       },
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 2
       },
       {
-        "themeZh": "模型安全与可控性",
         "themeEn": "Model safety and controllability",
         "count": 1
       }
@@ -597,38 +441,26 @@
     "featuredItems": [
       {
         "id": "technologyreview.com-fa070f396d77",
-        "titleZh": "MIT Technology Review / AI｜模型安全与可控性",
         "titleEn": "Nurturing agentic AI beyond the toddler stage",
         "tag": "Security",
-        "summaryZh": "MIT Technology Review / AI把围绕基准测试、开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。这条更新真正关心的不是概念安全，而是模型在复杂链路里还能不能守住边界…",
         "summaryEn": "MIT Technology Review / AI opened up work around benchmark and open source, making it easier for the wider ecosystem to inspect, reuse, and build on. The point here is not safety theater… The most useful detail in the piece is this…",
-        "whyItMattersZh": "这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
         "whyItMattersEn": "This changes whether models can be trusted to follow the right instructions under pressure, which is foundational for enterprise use, controllable agents, and higher-risk deployments.",
-        "publishedLabelZh": "15 小时前",
         "publishedLabelEn": "15 hours ago"
       },
       {
         "id": "technologyreview.com-0b4700966501",
-        "titleZh": "OpenAI｜检索、多模态与记忆系统",
         "titleEn": "Where OpenAI’s technology could show up in Iran",
         "tag": "Data",
-        "summaryZh": "OpenAI把多模态检索与记忆继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 文中最值得记的一处细节是：At the end of 2024…",
         "summaryEn": "OpenAI moved multimodal retrieval and memory deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "11 小时前",
         "publishedLabelEn": "11 hours ago"
       },
       {
         "id": "technologyreview.com-a02b0d923ccf",
-        "titleZh": "MIT Technology Review / AI｜前沿研究与能力边界",
         "titleEn": "Securing digital assets against future threats",
         "tag": "AI",
-        "summaryZh": "MIT Technology Review / AI把研究前沿继续往产品和开发者工作流里压，重点已经不是演示能力，而是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 文中最值得记的一处细节是：In one case…",
         "summaryEn": "MIT Technology Review / AI moved research frontier deeper into product and developer workflows, which is really about pushing the capability frontier outward… The most useful detail in the piece is this: In one case…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
         "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "17 小时前",
         "publishedLabelEn": "17 hours ago"
       }
     ],
@@ -638,15 +470,11 @@
   {
     "slug": "ai-daily-2026-03-16",
     "date": "2026-03-16",
-    "titleZh": "AI 日报｜Agents and developer tooling +  Frontier research and capability shifts",
     "titleEn": "AI Daily |  Agents and developer tooling, Frontier research and capability shifts, AI infrastructure",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Simon Willison、MarkTechPost、arXiv cs.CL 分别从研究、产品和工具三侧往前拱…",
     "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Simon Willison, MarkTechPost…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 Agent 与开发者工具。Simon Willison、MarkTechPost、arXiv cs.CL 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Agents and developer tooling. Simon Willison, MarkTechPost, arXiv cs.CL are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-16",
     "itemCount": 6,
-    "heroTitleZh": "Simon Willison｜Agent 与开发者工具",
     "heroTitleEn": "What is agentic engineering?",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -657,17 +485,14 @@
     },
     "themes": [
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 3
       },
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 2
       },
       {
-        "themeZh": "AI 基础设施",
         "themeEn": "AI infrastructure",
         "count": 1
       }
@@ -675,38 +500,26 @@
     "featuredItems": [
       {
         "id": "simonwillison.net-3272e374bfa9",
-        "titleZh": "Simon Willison｜Agent 与开发者工具",
         "titleEn": "What is agentic engineering?",
         "tag": "Tools",
-        "summaryZh": "Simon Willison把工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 Simon Willison想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
         "summaryEn": "Simon Willison moved workflow deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "12 小时前",
         "publishedLabelEn": "12 hours ago"
       },
       {
         "id": "marktechpost.com-f8eeee9f4e88",
-        "titleZh": "MarkTechPost｜前沿研究与能力边界",
         "titleEn": "Moonshot AI Releases 𝑨𝒕𝒕𝒆𝒏𝒕𝒊𝒐𝒏 𝑹𝒆𝒔𝒊𝒅𝒖𝒂𝒍𝒔 to Replace Fixed Residual Mixing with Depth-Wise Attention for Better Scaling in Transformers",
         "tag": "AI",
-        "summaryZh": "MarkTechPost放出了一项围绕研究前沿的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
         "summaryEn": "MarkTechPost published a research-led update around research frontier, aimed at pushing the capability frontier outward… The clearest public signal so far is this…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
         "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "4 小时前",
         "publishedLabelEn": "4 hours ago"
       },
       {
         "id": "marktechpost.com-9956eaeec682",
-        "titleZh": "MarkTechPost｜AI 基础设施",
         "titleEn": "IBM AI Releases Granite 4.0 1B Speech as a Compact Multilingual Speech Model for Edge AI and Translation Pipelines",
         "tag": "Infrastructure",
-        "summaryZh": "MarkTechPost放出了一项围绕基准测试、记忆的研究型更新，指向的是降低规模化部署的摩擦。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：IBM has released Granite 4.0 1B Speech…",
         "summaryEn": "MarkTechPost published a research-led update around benchmark and memory, aimed at reducing friction in scaled deployment… The clearest public signal so far is this: IBM has released Granite 4.0 1B Speech…",
-        "whyItMattersZh": "基础设施变化往往决定成本、吞吐、协作和交付速度，虽然不总是最吸睛，但对团队能否大规模落地最关键。",
         "whyItMattersEn": "Infrastructure shifts decide cost, throughput, delivery speed, and how much friction real deployment still carries.",
-        "publishedLabelZh": "6 小时前",
         "publishedLabelEn": "6 hours ago"
       }
     ],
@@ -716,15 +529,11 @@
   {
     "slug": "ai-daily-2026-03-14",
     "date": "2026-03-14",
-    "titleZh": "AI 日报｜Hugging Face、Simon Willison都在把 AI 往真实工作流里送",
     "titleEn": "AI Daily | Where AI starts to look more like infrastructure than demo",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Hugging Face、Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱…",
     "excerptEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Hugging Face, Simon Willison…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 前沿研究与能力边界，另一条是 检索、多模态与记忆系统。Hugging Face、Simon Willison、MarkTechPost 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Frontier research and capability shifts, and Retrieval, multimodal, and memory systems. Hugging Face, Simon Willison, MarkTechPost are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-14",
     "itemCount": 6,
-    "heroTitleZh": "Hugging Face｜检索、多模态与记忆系统",
     "heroTitleEn": "Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -735,27 +544,22 @@
     },
     "themes": [
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 2
       },
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 1
       },
       {
-        "themeZh": "AI 产品体验",
         "themeEn": "AI product experience",
         "count": 1
       },
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 1
       },
       {
-        "themeZh": "模型安全与可控性",
         "themeEn": "Model safety and controllability",
         "count": 1
       }
@@ -763,38 +567,26 @@
     "featuredItems": [
       {
         "id": "huggingface.co-a8faebcc5f7f",
-        "titleZh": "Hugging Face｜检索、多模态与记忆系统",
         "titleEn": "Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline",
         "tag": "Data",
-        "summaryZh": "Hugging Face把嵌入模型、Agent 工作流继续往产品和开发者工作流里压，重点已经不是演示能力，而是提升非结构化信息进入同一检索空间的能力。看上去像底层升级，但最后影响的还是搜索、知识库和多模态产品的手感。 文中最值得记的一处细节是：In contrast…",
         "summaryEn": "Hugging Face moved embedding model and agentic workflows deeper into product and developer workflows, which is really about bringing more unstructured data into the same retrieval space…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer changes set the ceiling for search, recommendation, knowledge systems, and cross-modal retrieval. A lot of product quality is decided here.",
-        "publishedLabelZh": "9 小时前",
         "publishedLabelEn": "9 hours ago"
       },
       {
         "id": "simonwillison.net-fa2e436bfdfc",
-        "titleZh": "Simon Willison｜AI 产品体验",
         "titleEn": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
         "tag": "AI",
-        "summaryZh": "Simon Willison把产品体验升级和更明确的产品化动作绑在一起，说明这件事正在往业务入口靠近。重点不是功能又多了一项，而是 AI 是否更深地嵌进用户日常动作…",
         "summaryEn": "Simon Willison tied product experience upgrades to a more explicit product push, suggesting the story is moving closer to distribution and adoption…",
-        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
         "whyItMattersEn": "Once capability lands inside everyday behavior, the real contest shifts to usage depth, habit formation, interaction design, and default entry points.",
-        "publishedLabelZh": "10 小时前",
         "publishedLabelEn": "10 hours ago"
       },
       {
         "id": "marktechpost.com-dbbb1c189e27",
-        "titleZh": "Google｜前沿研究与能力边界",
         "titleEn": "Google DeepMind Introduces Aletheia: The AI Agent Moving from Math Competitions to Fully Autonomous Professional Research Discoveries",
         "tag": "AI",
-        "summaryZh": "Google放出了一项围绕研究前沿的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截。 目前能确认的公开信号是：Google DeepMind team has introduced Aletheia…",
         "summaryEn": "Google published a research-led update around research frontier, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
         "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "6 小时前",
         "publishedLabelEn": "6 hours ago"
       }
     ]
@@ -802,15 +594,11 @@
   {
     "slug": "ai-daily-2026-03-13",
     "date": "2026-03-13",
-    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
     "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱…",
     "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 数据与评测基础设施。Hugging Face、Google、GitHub、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Data and evaluation infrastructure. Hugging Face, Google, GitHub, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-13",
     "itemCount": 6,
-    "heroTitleZh": "Hugging Face｜数据与评测基础设施",
     "heroTitleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -821,17 +609,14 @@
     },
     "themes": [
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 4
       },
       {
-        "themeZh": "数据与评测基础设施",
         "themeEn": "Data and evaluation infrastructure",
         "count": 1
       },
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 1
       }
@@ -839,38 +624,26 @@
     "featuredItems": [
       {
         "id": "huggingface.co-4e558c1ba7e5",
-        "titleZh": "Hugging Face｜数据与评测基础设施",
         "titleEn": "Build an Agent That Thinks Like a Data Scientist: How We Hit #1 on DABStep with Reusable Tool Generation",
         "tag": "Data",
-        "summaryZh": "Hugging Face把基准测试、评测继续往产品和开发者工作流里压，重点已经不是演示能力，而是提高训练与比较的可复用性。它表面讲的是数据或评测，实际上讲的是以后大家用什么口径比较能力。 文中最值得记的一处细节是：Notably…",
         "summaryEn": "Hugging Face moved benchmark and evaluation deeper into product and developer workflows, which is really about making training and comparison more reusable. On the surface this is about data or benchmarks…",
-        "whyItMattersZh": "数据供给和评测标准决定模型上限，也会重新定义大家如何比较能力、优化训练和挑选路线。",
         "whyItMattersEn": "Data supply and evaluation standards shape the ceiling of models, and they also redefine how teams compare progress and choose directions.",
-        "publishedLabelZh": "6 小时前",
         "publishedLabelEn": "6 hours ago"
       },
       {
         "id": "blog.google-dbf82fe6e648",
-        "titleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
         "titleEn": "How AI is helping improve heart health in rural Australia",
         "tag": "AI",
-        "summaryZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
         "summaryEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
         "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "16 小时前",
         "publishedLabelEn": "16 hours ago"
       },
       {
         "id": "github.blog-8802ea5b7cd4",
-        "titleZh": "GitHub｜Agent 与开发者工具",
         "titleEn": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
         "tag": "Tools",
-        "summaryZh": "GitHub把Agent 工作流与开发工具继续往产品和开发者工作流里压，重点已经不是演示能力，而是把模型能力变成可编排的执行链路。 GitHub想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
         "summaryEn": "GitHub moved agent workflows and developer tooling deeper into product and developer workflows, which is really about turning model capability into orchestrated execution workflows… The clearest public signal so far is this…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "15 小时前",
         "publishedLabelEn": "15 hours ago"
       }
     ]
@@ -878,15 +651,11 @@
   {
     "slug": "ai-daily-2026-03-12",
     "date": "2026-03-12",
-    "titleZh": "AI 日报｜AI 正在离“会回答”更远，离“真能干活”更近",
     "titleEn": "AI Daily | AI is moving away from novelty and closer to actual work",
-    "excerptZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 前沿研究与能力边界。Google、Hugging Face、OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱…",
     "excerptEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Frontier research and capability shifts. Google, Hugging Face, OpenAI…",
-    "issueSummaryZh": "今天这期更像两条线同时加速：一条是 Agent 与开发者工具，另一条是 前沿研究与能力边界。Google、Hugging Face、OpenAI、Simon Willison 分别从研究、产品和工具三侧往前拱，读完会更容易看清当下 AI 行业的重心并不在“新功能数量”，而在“能力能不能真正接进现实流程”。",
     "issueSummaryEn": "This issue is really about two lines accelerating at once: Agents and developer tooling, and Frontier research and capability shifts. Google, Hugging Face, OpenAI, Simon Willison are pushing from different angles, but the shared point is hard to miss: the market is caring less about isolated model demos and more about whether capability can survive contact with real workflows.",
     "path": "/blog/ai-daily-2026-03-12",
     "itemCount": 6,
-    "heroTitleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
     "heroTitleEn": "How AI is helping improve heart health in rural Australia",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -897,12 +666,10 @@
     },
     "themes": [
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 5
       },
       {
-        "themeZh": "前沿研究与能力边界",
         "themeEn": "Frontier research and capability shifts",
         "count": 1
       }
@@ -910,38 +677,26 @@
     "featuredItems": [
       {
         "id": "blog.google-dbf82fe6e648",
-        "titleZh": "Google 想把心血管早筛做成偏远地区也能用的 AI 基础服务",
         "titleEn": "How AI is helping improve heart health in rural Australia",
         "tag": "AI",
-        "summaryZh": "Google放出了一项围绕数据集的研究型更新，指向的是推动能力边界继续外扩。这条消息值得看，不只是因为它新，而是因为它把最近这波行业主线又往前推了一截…",
         "summaryEn": "Google published a research-led update around dataset, aimed at pushing the capability frontier outward. What makes this worth following is that it pushes the broader industry arc a little further forward…",
-        "whyItMattersZh": "研究型更新不一定会马上产品化，但它能提示下一阶段能力边界正在往哪边移动。",
         "whyItMattersEn": "Research updates do not always become products quickly, but they often tell you where the capability frontier is starting to bend.",
-        "publishedLabelZh": "1 小时内",
         "publishedLabelEn": "within 1 hour"
       },
       {
         "id": "huggingface.co-74a942baffcf",
-        "titleZh": "NVIDIA AI-Q 登顶 DeepResearch Bench，Agent 工程开始卷长链路稳定性",
         "titleEn": "How NVIDIA AI-Q Reached \\#1 on DeepResearch Bench I and II",
         "tag": "Tools",
-        "summaryZh": "Hugging Face把围绕上下文窗口、开源的东西真正放了出来，重点不只是“开源”两个字，而是让外部生态更容易复用、验证和接着往下搭。 Hugging Face想证明的不是模型更聪明，而是 agent 终于更像能进生产环境的工具…",
         "summaryEn": "Hugging Face opened up work around context window and open source, making it easier for the wider ecosystem to inspect, reuse, and build on…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "9 小时前",
         "publishedLabelEn": "9 hours ago"
       },
       {
         "id": "openai.com-34e6351b3e4d",
-        "titleZh": "Rakuten 用 Codex 把修复速度拉快，Agent 工具开始交付业务指标",
         "titleEn": "Rakuten fixes issues twice as fast with Codex",
         "tag": "Tools",
-        "summaryZh": "OpenAI给出了一篇围绕Agent 工作流与开发工具的实践拆解，重点不在概念，而在它怎么进真实工作流。 这类案例最有意思的地方，是它已经不再停留在“开发者喜欢不喜欢”，而是开始拿 MTTR、评审效率、CI/CD 这类业务指标说话。 目前能确认的公开信号是：Rakuten uses Codex…",
         "summaryEn": "OpenAI published a hands-on account of agent workflows and developer tooling, with the emphasis on how it behaves in a real workflow rather than in abstract… The clearest public signal so far is this: Rakuten uses Codex…",
-        "whyItMattersZh": "行业竞争点正在从“聊天回答得好不好”转向“能不能稳定接进软件、工具链和自动化流程”，这决定了真正的生产力入口。",
         "whyItMattersEn": "The competition is moving from chat quality to whether models can sit inside software, tooling, and automation without breaking the workflow around them.",
-        "publishedLabelZh": "1 天前",
         "publishedLabelEn": "1 day ago"
       }
     ]
@@ -949,15 +704,11 @@
   {
     "slug": "ai-daily-2026-03-11",
     "date": "2026-03-11",
-    "titleZh": "2026-03-11 AI 日报：OpenAI公布指令层级、提示注入",
     "titleEn": "2026-03-11 AI Daily Briefing",
-    "excerptZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
     "excerptEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
-    "issueSummaryZh": "这期只保留近 24 小时里最值得继续跟进的 6 条 AI 更新，主线集中在 AI 产品体验、检索、多模态与记忆系统、模型安全与可控性。其中 2 条补抓了原文正文，所以解释不只停留在 RSS 片段。",
     "issueSummaryEn": "This issue keeps only the 6 highest-signal AI updates from the last 24 hours, concentrated around AI product experience, Retrieval, multimodal, and memory systems, Model safety and controllability. 2 of them include fetched full article bodies, so the commentary goes beyond RSS snippets.",
     "path": "/blog/ai-daily-2026-03-11",
     "itemCount": 6,
-    "heroTitleZh": "OpenAI公布指令层级、提示注入",
     "heroTitleEn": "Improving instruction hierarchy in frontier LLMs",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
@@ -968,22 +719,18 @@
     },
     "themes": [
       {
-        "themeZh": "AI 产品体验",
         "themeEn": "AI product experience",
         "count": 2
       },
       {
-        "themeZh": "检索、多模态与记忆系统",
         "themeEn": "Retrieval, multimodal, and memory systems",
         "count": 2
       },
       {
-        "themeZh": "模型安全与可控性",
         "themeEn": "Model safety and controllability",
         "count": 1
       },
       {
-        "themeZh": "Agent 与开发者工具",
         "themeEn": "Agents and developer tooling",
         "count": 1
       }
@@ -991,38 +738,26 @@
     "featuredItems": [
       {
         "id": "openai.com-458a72f18aa6",
-        "titleZh": "OpenAI公布指令层级、提示注入",
         "titleEn": "Improving instruction hierarchy in frontier LLMs",
         "tag": "Security",
-        "summaryZh": "OpenAI公布了一项围绕指令层级、提示注入的研究型更新，目标是让模型在复杂提示冲突里更可控。 正文里最值得记下的信号是：IH-Challenge trains models to prioritize trusted instructions, improving 指令层级, 安全 steerability, and resistance to 提示注入 attacks…",
         "summaryEn": "OpenAI published a research-driven update around instruction hierarchy and prompt injection, aimed at making models more controllable under conflicting instructions. The strongest signal in the article is: IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability…",
-        "whyItMattersZh": "这类进展会直接影响模型在真实产品里能否稳定遵循高优先级指令，是企业接入、Agent 可控性和高风险场景落地的基础。",
         "whyItMattersEn": "This kind of progress changes whether frontier models can obey higher-priority instructions reliably in production, which directly affects enterprise adoption, controllable agents, and high-risk deployments.",
-        "publishedLabelZh": "21 小时前",
         "publishedLabelEn": "21 hours ago"
       },
       {
         "id": "openai.com-88306bd64ac1",
-        "titleZh": "OpenAI发布交互式可视化讲解、数学与科学",
         "titleEn": "New ways to learn math and science in ChatGPT",
         "tag": "AI",
-        "summaryZh": "OpenAI发布了一个围绕交互式可视化讲解、数学与科学的新动作，继续沿着“把 AI 能力做成可重复使用的产品体验”这条线推进。 正文里最值得记下的信号是：ChatGPT 发布 交互式可视化讲解 用于 数学与科学, helping students explore formulas, variables, and concepts in real time. 为什么值得看：当能力真正进入用户日常动作时…",
         "summaryEn": "OpenAI rolled out a new move around interactive visual explanations and math and science, extending its push on turning capability into repeatable product behavior. The strongest signal in the article is: ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time…",
-        "whyItMattersZh": "当能力真正进入用户日常动作时，竞争会从模型分数转向使用深度、留存、交互设计和默认入口。",
         "whyItMattersEn": "Once capability lands inside everyday user actions, competition shifts from raw model scores to depth of use, retention, interaction design, and default entry points.",
-        "publishedLabelZh": "22 小时前",
         "publishedLabelEn": "22 hours ago"
       },
       {
         "id": "huggingface.co-087b7ac98b37",
-        "titleZh": "Hugging Face推进嵌入模型、多模态",
         "titleEn": "How NVIDIA Builds Open Data for AI",
         "tag": "Data",
-        "summaryZh": "Hugging Face把嵌入模型、多模态进一步推进到产品和开发者工作流里，重点放在提升非结构化信息进入同一检索空间的能力。 正文里最值得记下的信号是：Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents…",
         "summaryEn": "Hugging Face pushed embedding model and multimodal deeper into product and developer workflows, with a clear emphasis on bringing more unstructured data into the same retrieval space. The strongest signal in the article is: Enterprise + Article Published March 10, 2026 - A collaborative approach to scaling trustworthy AI systems and agents. Why it matters…",
-        "whyItMattersZh": "这类底层能力决定搜索、推荐、知识库和多模态检索系统的可用性，很多 AI 产品体验的上限取决于这里。",
         "whyItMattersEn": "These lower-layer capabilities determine the quality ceiling for search, recommendations, knowledge systems, and multimodal retrieval—many AI products become meaningfully better or worse here.",
-        "publishedLabelZh": "12 小时前",
         "publishedLabelEn": "12 hours ago"
       }
     ]

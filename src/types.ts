@@ -1,11 +1,11 @@
 export interface Post {
   slug: string;
   kind?: string;
-  titleZh: string;
+  titleZh?: string;
   titleEn: string;
   seoTitleZh?: string;
   seoTitleEn?: string;
-  excerptZh: string;
+  excerptZh?: string;
   excerptEn: string;
   keywords?: string[];
   pillar?: string;
@@ -35,7 +35,7 @@ export interface TechNewsItem {
   rank?: number;
   sectionLabelZh?: string;
   sectionLabelEn?: string;
-  titleZh: string;
+  titleZh?: string;
   titleEn: string;
   briefTitleZh?: string;
   briefTitleEn?: string;
@@ -81,7 +81,7 @@ export interface TechNewsItem {
 }
 
 export interface DigestThemeCount {
-  themeZh: string;
+  themeZh?: string;
   themeEn: string;
   count: number;
 }
@@ -96,9 +96,9 @@ export interface DigestBodyCoverage {
 export interface AiDigestIndexItem {
   slug: string;
   date: string;
-  titleZh: string;
+  titleZh?: string;
   titleEn: string;
-  excerptZh: string;
+  excerptZh?: string;
   excerptEn: string;
   issueSummaryZh?: string;
   issueSummaryEn?: string;
@@ -111,7 +111,7 @@ export interface AiDigestIndexItem {
   themes?: DigestThemeCount[];
   featuredItems?: Array<{
     id: string;
-    titleZh: string;
+    titleZh?: string;
     titleEn: string;
     tag: string;
     summaryZh?: string;
