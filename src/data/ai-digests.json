@@ -2,41 +2,36 @@
   {
     "slug": "ai-daily-2026-04-15",
     "date": "2026-04-15",
-    "titleEn": "Anthropic Launches Claude Managed Agents; First Diffusion LM Matches AR Quality; Meta Partners With Broadcom on Custom AI Silicon",
-    "excerptEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
-    "issueSummaryZh": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
-    "issueSummaryEn": "Anthropic launches Claude Managed Agents, embedding orchestration in the model layer; I-DLM-8B becomes the first diffusion language model to match same-scale autoregressive quality with 2.9–4.1x throughput gain; Meta partners with Broadcom on custom MTIA silicon with a 1GW+ commitment; 40+ MCP attack patterns disclosed including two CVEs; China's largest scientific AI computing cluster goes live in Zhengzhou.",
+    "titleEn": "Claude Opus 4.6 Reimplementations and I-DLM Architecture: The Week AI Agents Got Real",
+    "excerptEn": "This week saw AI agents cross a meaningful capability threshold — Claude Opus 4.6 autonomously reimplemented a 16K-line Go codebase in weeks, I-DLM-8B matched autoregressive quality with 4x throughput, Anthropic embedded orchestration in the model layer, and OpenAI launched a cyber-permissive GPT-5.4 variant. Meanwhile, ByteDance opened four-modality video generation and a Chinese startup shipped the first commercially deployable embodied world model running on a $500 edge device.",
+    "issueSummaryZh": "This week saw AI agents cross a meaningful capability threshold — Claude Opus 4.6 autonomously reimplemented a 16K-line Go codebase in weeks, I-DLM-8B matched autoregressive quality with 4x throughput, Anthropic embedded orchestration in the model layer, and OpenAI launched a cyber-permissive GPT-5.4 variant. Meanwhile, ByteDance opened four-modality video generation and a Chinese startup shipped the first commercially deployable embodied world model running on a $500 edge device.",
+    "issueSummaryEn": "This week saw AI agents cross a meaningful capability threshold — Claude Opus 4.6 autonomously reimplemented a 16K-line Go codebase in weeks, I-DLM-8B matched autoregressive quality with 4x throughput, Anthropic embedded orchestration in the model layer, and OpenAI launched a cyber-permissive GPT-5.4 variant. Meanwhile, ByteDance opened four-modality video generation and a Chinese startup shipped the first commercially deployable embodied world model running on a $500 edge device.",
     "path": "/blog/ai-daily-2026-04-15",
-    "itemCount": 5,
-    "heroTitleZh": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
-    "heroTitleEn": "首个 RL 训练的论文洞察预测模型 GIANTS-4B 亮相，比 gemini-3-pro 高 34%",
+    "itemCount": 8,
+    "heroTitleZh": "Claude Opus 4.6 Autonomously Reimplemented a 16,000-Line Go Codebase",
+    "heroTitleEn": "Claude Opus 4.6 Autonomously Reimplemented a 16,000-Line Go Codebase",
     "limitedUpdateWindow": false,
     "bodyCoverage": {
-      "targeted": 5,
-      "succeeded": 5,
-      "totalWords": 6400,
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 6000,
       "ratio": 1.0
     },
     "themes": [
       {
-        "themeZh": "Research",
-        "themeEn": "Research",
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 4
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
         "count": 2
       },
       {
         "themeZh": "Architecture",
         "themeEn": "Architecture",
-        "count": 1
-      },
-      {
-        "themeZh": "Agent",
-        "themeEn": "Agent",
-        "count": 1
-      },
-      {
-        "themeZh": "Security",
-        "themeEn": "Security",
-        "count": 1
+        "count": 2
       }
     ],
     "featuredItems": [],
