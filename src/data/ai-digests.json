@@ -46,37 +46,6 @@
     "titleRegenerated": false
   },
   {
-    "slug": "ai-daily-2026-04-14",
-    "date": "2026-04-14",
-    "titleZh": "AI Daily | 2026-04-14 | AI Crosses the Research-Level Math Threshold",
-    "titleEn": "AI Daily | 2026-04-14 | AI Crosses the Research-Level Math Threshold",
-    "excerptZh": "The inflection point arrived this cycle: AI systems solved over half of research-level mathematics problems in 2026 — up from 5 out of 6 IMO problems just months earlier. Terence Tao, Fields Medalist at UCLA, put it plainly in a Quanta Magazine interview: \"For the first time, it does feel like we could formalize a significant fraction of mathematics through AI.\" The hardware layer enabling longer reasoning chains also moved: China's first domestically produced HBM3 chip reached 819GB/s bandwidth, removing a memory-wall bottleneck that analysts say is now the rate-limiting factor for sustained AI proof search. And wide distribution via Cloudflare (3M weekly Codex users, 15B tokens/min processed) means the tools are no longer confined to AI labs.",
-    "excerptEn": "The inflection point arrived this cycle: AI systems solved over half of research-level mathematics problems in 2026 — up from 5 out of 6 IMO problems just months earlier. Terence Tao, Fields Medalist at UCLA, put it plainly in a Quanta Magazine interview: \"For the first time, it does feel like we could formalize a significant fraction of mathematics through AI.\" The hardware layer enabling longer reasoning chains also moved: China's first domestically produced HBM3 chip reached 819GB/s bandwidth, removing a memory-wall bottleneck that analysts say is now the rate-limiting factor for sustained AI proof search. And wide distribution via Cloudflare (3M weekly Codex users, 15B tokens/min processed) means the tools are no longer confined to AI labs.",
-    "issueSummaryZh": "The inflection point arrived this cycle: AI systems solved over half of research-level mathematics problems in 2026 — up from 5 out of 6 IMO problems just months earlier. Terence Tao, Fields Medalist at UCLA, put it plainly in a Quanta Magazine interview: \"For the first time, it does feel like we could formalize a significant fraction of mathematics through AI.\" The hardware layer enabling longer reasoning chains also moved: China's first domestically produced HBM3 chip reached 819GB/s bandwidth, removing a memory-wall bottleneck that analysts say is now the rate-limiting factor for sustained AI proof search. And wide distribution via Cloudflare (3M weekly Codex users, 15B tokens/min processed) means the tools are no longer confined to AI labs.",
-    "issueSummaryEn": "The inflection point arrived this cycle: AI systems solved over half of research-level mathematics problems in 2026 — up from 5 out of 6 IMO problems just months earlier. Terence Tao, Fields Medalist at UCLA, put it plainly in a Quanta Magazine interview: \"For the first time, it does feel like we could formalize a significant fraction of mathematics through AI.\" The hardware layer enabling longer reasoning chains also moved: China's first domestically produced HBM3 chip reached 819GB/s bandwidth, removing a memory-wall bottleneck that analysts say is now the rate-limiting factor for sustained AI proof search. And wide distribution via Cloudflare (3M weekly Codex users, 15B tokens/min processed) means the tools are no longer confined to AI labs.",
-    "path": "/blog/ai-daily-2026-04-14",
-    "itemCount": 4,
-    "heroTitleZh": "AI Crosses the Research-Level Math Threshold",
-    "heroTitleEn": "AI Crosses the Research-Level Math Threshold",
-    "limitedUpdateWindow": false,
-    "bodyCoverage": {
-      "targeted": 4,
-      "succeeded": 4,
-      "totalWords": 3200,
-      "ratio": 1.0
-    },
-    "themes": [
-      {
-        "themeZh": "其他",
-        "themeEn": "Other",
-        "count": 4
-      }
-    ],
-    "featuredItems": [],
-    "llmGenerated": true,
-    "titleRegenerated": false
-  },
-  {
     "slug": "ai-daily-2026-04-09",
     "date": "2026-04-09",
     "titleZh": "AI Daily | 2026-04-09 | Capability and Danger Have Both Become Too Large to Release Openly",

@@ -1,0 +1,55 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#070810"/>
+  <circle cx="260" cy="210" r="230" fill="url(#paint0_radial)" fill-opacity="0.9"/>
+  <circle cx="1330" cy="720" r="260" fill="url(#paint1_radial)" fill-opacity="0.85"/>
+  <rect x="70" y="72" width="1460" height="756" rx="34" fill="rgba(10,12,22,0.86)" stroke="rgba(165,148,255,0.18)"/>
+
+  <text x="118" y="182" font-family="Inter, Arial, sans-serif" font-size="24" fill="#8B7BFF" letter-spacing="0.18em">AI &amp; ML</text>
+  <text x="118" y="270" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="70" font-weight="700" fill="#F5F4FF">TurboQuant, KV Cache</text>
+  <text x="118" y="348" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="70" font-weight="700" fill="#F5F4FF">Compression, and the</text>
+  <text x="118" y="426" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="70" font-weight="700" fill="#F5F4FF">New Speed of Open Source</text>
+  <text x="118" y="496" font-family="Inter, Arial, sans-serif" font-size="28" fill="#B9BCD3">A systems idea became an implementation race in less than a week.</text>
+
+  <rect x="118" y="580" width="612" height="170" rx="26" fill="rgba(14,18,30,0.92)" stroke="rgba(62,207,207,0.22)"/>
+  <text x="154" y="628" font-family="Inter, Arial, sans-serif" font-size="26" fill="#ECEBFF">Compression chain</text>
+  <rect x="154" y="656" width="108" height="56" rx="16" fill="#121628" stroke="rgba(165,148,255,0.25)"/>
+  <rect x="302" y="656" width="108" height="56" rx="16" fill="#121628" stroke="rgba(165,148,255,0.25)"/>
+  <rect x="450" y="656" width="108" height="56" rx="16" fill="#121628" stroke="rgba(165,148,255,0.25)"/>
+  <rect x="598" y="656" width="108" height="56" rx="16" fill="#121628" stroke="rgba(165,148,255,0.25)"/>
+  <text x="196" y="691" font-family="JetBrains Mono, monospace" font-size="22" fill="#F4F3FF">x</text>
+  <text x="337" y="691" font-family="JetBrains Mono, monospace" font-size="22" fill="#F4F3FF">R x</text>
+  <text x="476" y="691" font-family="JetBrains Mono, monospace" font-size="22" fill="#F4F3FF">Q(Rx)</text>
+  <text x="619" y="691" font-family="JetBrains Mono, monospace" font-size="20" fill="#F4F3FF">R^T Q(Rx)</text>
+  <path d="M262 684H302" stroke="#7AD7D7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M410 684H450" stroke="#7AD7D7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M558 684H598" stroke="#7AD7D7" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="866" y="184" width="566" height="500" rx="28" fill="rgba(14,18,30,0.92)" stroke="rgba(165,148,255,0.22)"/>
+  <text x="906" y="238" font-family="Inter, Arial, sans-serif" font-size="30" fill="#ECEBFF">Publication to implementation</text>
+  <path d="M940 420H1344" stroke="rgba(165,148,255,0.48)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="960" cy="420" r="12" fill="#A594FF"/>
+  <circle cx="1098" cy="420" r="12" fill="#A594FF"/>
+  <circle cx="1242" cy="420" r="12" fill="#A594FF"/>
+  <circle cx="1344" cy="420" r="12" fill="#A594FF"/>
+  <text x="926" y="374" font-family="Inter, Arial, sans-serif" font-size="20" fill="#FFFFFF">Mar 24</text>
+  <text x="902" y="458" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B9BCD3">Google post</text>
+  <text x="1064" y="374" font-family="Inter, Arial, sans-serif" font-size="20" fill="#FFFFFF">Mar 25</text>
+  <text x="1022" y="458" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B9BCD3">Repo created</text>
+  <text x="1208" y="374" font-family="Inter, Arial, sans-serif" font-size="20" fill="#FFFFFF">Mar 31</text>
+  <text x="1144" y="458" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B9BCD3">2,978 stars / 307 forks</text>
+  <text x="1320" y="374" font-family="Inter, Arial, sans-serif" font-size="20" fill="#FFFFFF">Now</text>
+  <text x="1264" y="458" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B9BCD3">Implementation race</text>
+  <text x="906" y="548" font-family="Inter, Arial, sans-serif" font-size="21" fill="#D6D7E5">The important change is not that AI replaces research.</text>
+  <text x="906" y="580" font-family="Inter, Arial, sans-serif" font-size="21" fill="#D6D7E5">It compresses the lag between a public method and a real stack.</text>
+
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 210) rotate(90) scale(230)">
+      <stop stop-color="#7C6AEF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7C6AEF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1330 720) rotate(90) scale(260)">
+      <stop stop-color="#3ECFCF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#3ECFCF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

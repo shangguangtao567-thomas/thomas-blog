@@ -1392,6 +1392,62 @@
     content: '';
   }
 
+  .prose-blog .math-inline {
+    display: inline-block;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 1.02em;
+    line-height: 1;
+    color: var(--fg);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    vertical-align: -0.03em;
+  }
+
+  .prose-blog .math-inline sub,
+  .prose-blog .math-inline sup,
+  .prose-blog .math-block sub,
+  .prose-blog .math-block sup {
+    font-size: 0.68em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  .prose-blog .math-inline sup,
+  .prose-blog .math-block sup {
+    top: -0.55em;
+  }
+
+  .prose-blog .math-inline sub,
+  .prose-blog .math-block sub {
+    bottom: -0.15em;
+  }
+
+  .prose-blog .math-block {
+    margin: 1.4rem 0 1.6rem;
+    padding: 1.1rem 1.4rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--accent-soft) 45%, transparent), transparent 38%),
+      color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+    overflow-x: auto;
+  }
+
+  .prose-blog .math-block__line {
+    text-align: center;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+    line-height: 1.45;
+    color: var(--fg);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .prose-blog .math-block__line + .math-block__line {
+    margin-top: 0.5rem;
+  }
+
   .prose-blog pre {
     padding: 1.2rem;
     border-radius: 1rem;
