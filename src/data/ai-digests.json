@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-04-16",
+    "date": "2026-04-16",
+    "titleEn": "AI Daily · April 16, 2026",
+    "excerptEn": "This week's AI developments span two landmark security disclosures for agentic systems, a breakthrough mechanistic explanation for LLM hallucination origins, a major OpenAI agent infrastructure release, and fresh evidence that enterprise AI is failing in production at scale.",
+    "issueSummaryZh": "This week's AI developments span two landmark security disclosures for agentic systems, a breakthrough mechanistic explanation for LLM hallucination origins, a major OpenAI agent infrastructure release, and fresh evidence that enterprise AI is failing in production at scale.",
+    "issueSummaryEn": "This week's AI developments span two landmark security disclosures for agentic systems, a breakthrough mechanistic explanation for LLM hallucination origins, a major OpenAI agent infrastructure release, and fresh evidence that enterprise AI is failing in production at scale.",
+    "path": "/blog/ai-daily-2026-04-16",
+    "itemCount": 7,
+    "heroTitleZh": "EMBER: LLMs Generate Hallucination Signals at Token Position Zero Before Any Output",
+    "heroTitleEn": "EMBER: LLMs Generate Hallucination Signals at Token Position Zero Before Any Output",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 7,
+      "succeeded": 7,
+      "totalWords": 5200,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 2
+      },
+      {
+        "themeZh": "Security",
+        "themeEn": "Security",
+        "count": 2
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Architecture",
+        "themeEn": "Architecture",
+        "count": 1
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-15",
     "date": "2026-04-15",
     "titleEn": "Claude Opus 4.6 Reimplementations and I-DLM Architecture: The Week AI Agents Got Real",
