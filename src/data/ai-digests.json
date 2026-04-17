@@ -1,5 +1,34 @@
 [
   {
+    "slug": "ai-daily-2026-04-17",
+    "date": "2026-04-17",
+    "titleEn": "AI Daily · April 17, 2026",
+    "excerptEn": "Claude Opus 4.7 hits 13% coding gains and builds a Rust TTS engine autonomously; OpenAI launches GPT-Rosalind for life sciences and beefs up Codex with full desktop control; Physical Intelligence's π0.7 generalizes to unseen robot tasks; TSMC warns AI demand remains unsatisfiable through 2026.",
+    "issueSummaryZh": "Claude Opus 4.7 hits 13% coding gains and builds a Rust TTS engine autonomously; OpenAI launches GPT-Rosalind for life sciences and beefs up Codex with full desktop control; Physical Intelligence's π0.7 generalizes to unseen robot tasks; TSMC warns AI demand remains unsatisfiable through 2026.",
+    "issueSummaryEn": "Claude Opus 4.7 hits 13% coding gains and builds a Rust TTS engine autonomously; OpenAI launches GPT-Rosalind for life sciences and beefs up Codex with full desktop control; Physical Intelligence's π0.7 generalizes to unseen robot tasks; TSMC warns AI demand remains unsatisfiable through 2026.",
+    "path": "/blog/ai-daily-2026-04-17",
+    "itemCount": 1,
+    "heroTitleZh": "Claude Opus 4.7",
+    "heroTitleEn": "Claude Opus 4.7",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 1,
+      "succeeded": 1,
+      "totalWords": 4400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-16",
     "date": "2026-04-16",
     "titleEn": "AI Daily · April 16, 2026",
