@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ai-daily-2026-04-20",
+    "date": "2026-04-20",
+    "titleEn": "AI Daily · April 20, 2026",
+    "excerptEn": "Eight notable developments: a new language model architecture reframes generation as algebraic constraint solving; Anthropic's Claude Opus 4.7 tokenizer changes cost economics; DeepSeek pursues its first external capital at a $100B valuation; a humanoid robot breaks the human half-marathon world record; NBER finds 90% of executives report zero AI productivity impact; Vercel suffers a supply-chain breach via a third-party AI analytics tool; Physical Intelligence releases pi_0.7; and Tesla expands robotaxi service to two new US cities.",
+    "issueSummaryZh": "Eight notable developments: a new language model architecture reframes generation as algebraic constraint solving; Anthropic's Claude Opus 4.7 tokenizer changes cost economics; DeepSeek pursues its first external capital at a $100B valuation; a humanoid robot breaks the human half-marathon world record; NBER finds 90% of executives report zero AI productivity impact; Vercel suffers a supply-chain breach via a third-party AI analytics tool; Physical Intelligence releases pi_0.7; and Tesla expands robotaxi service to two new US cities.",
+    "issueSummaryEn": "Eight notable developments: a new language model architecture reframes generation as algebraic constraint solving; Anthropic's Claude Opus 4.7 tokenizer changes cost economics; DeepSeek pursues its first external capital at a $100B valuation; a humanoid robot breaks the human half-marathon world record; NBER finds 90% of executives report zero AI productivity impact; Vercel suffers a supply-chain breach via a third-party AI analytics tool; Physical Intelligence releases pi_0.7; and Tesla expands robotaxi service to two new US cities.",
+    "path": "/blog/ai-daily-2026-04-20",
+    "itemCount": 8,
+    "heroTitleZh": "DALM",
+    "heroTitleEn": "DALM",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 6000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 3
+      },
+      {
+        "themeZh": "Architecture",
+        "themeEn": "Architecture",
+        "count": 1
+      },
+      {
+        "themeZh": "Training",
+        "themeEn": "Training",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Security",
+        "themeEn": "Security",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-17",
     "date": "2026-04-17",
     "titleEn": "AI Daily · April 17, 2026",
