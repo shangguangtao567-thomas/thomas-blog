@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-04-21",
+    "date": "2026-04-21",
+    "titleEn": "AI Daily · April 21, 2026",
+    "excerptEn": "This session: Anthropic's AARs autonomously run alignment research and beat human researchers; Kimi K2.5 safety audit reveals guardrails can be stripped for $500; Alibaba releases a 30-language end-to-end speech model; and Ant Group launches a social platform where every post is a live AI app.",
+    "issueSummaryZh": "This session: Anthropic's AARs autonomously run alignment research and beat human researchers; Kimi K2.5 safety audit reveals guardrails can be stripped for $500; Alibaba releases a 30-language end-to-end speech model; and Ant Group launches a social platform where every post is a live AI app.",
+    "issueSummaryEn": "This session: Anthropic's AARs autonomously run alignment research and beat human researchers; Kimi K2.5 safety audit reveals guardrails can be stripped for $500; Alibaba releases a 30-language end-to-end speech model; and Ant Group launches a social platform where every post is a live AI app.",
+    "path": "/blog/ai-daily-2026-04-21",
+    "itemCount": 7,
+    "heroTitleZh": "Anthropic AARs beat human researchers on alignment research",
+    "heroTitleEn": "Anthropic AARs beat human researchers on alignment research",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 7,
+      "succeeded": 7,
+      "totalWords": 3600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 3
+      },
+      {
+        "themeZh": "Reasoning",
+        "themeEn": "Reasoning",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Multimodal",
+        "themeEn": "Multimodal",
+        "count": 1
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-20",
     "date": "2026-04-20",
     "titleEn": "AI Daily · April 20, 2026",
