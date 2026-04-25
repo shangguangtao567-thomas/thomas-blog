@@ -1,0 +1,141 @@
+{
+  "files": [
+    {
+      "id": "home",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/home-390.png",
+      "width": 390
+    },
+    {
+      "id": "home",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/home-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "blog-index",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/blog-index-390.png",
+      "width": 390
+    },
+    {
+      "id": "blog-index",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/blog-index-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "briefing-index",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/briefing-index-390.png",
+      "width": 390
+    },
+    {
+      "id": "briefing-index",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/briefing-index-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "tech-compat",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/tech-compat-390.png",
+      "width": 390
+    },
+    {
+      "id": "tech-compat",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/tech-compat-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "not-found",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/not-found-390.png",
+      "width": 390
+    },
+    {
+      "id": "not-found",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/not-found-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "essay-lead",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-lead-390.png",
+      "width": 390
+    },
+    {
+      "id": "essay-lead",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-lead-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "essay-with-image",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-with-image-390.png",
+      "width": 390
+    },
+    {
+      "id": "essay-with-image",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-with-image-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "essay-hidden-hero",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-hidden-hero-390.png",
+      "width": 390
+    },
+    {
+      "id": "essay-hidden-hero",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-hidden-hero-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "essay-no-image",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-no-image-390.png",
+      "width": 390
+    },
+    {
+      "id": "essay-no-image",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/essay-no-image-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "digest-structured",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/digest-structured-390.png",
+      "width": 390
+    },
+    {
+      "id": "digest-structured",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/digest-structured-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "digest-markdown",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/digest-markdown-390.png",
+      "width": 390
+    },
+    {
+      "id": "digest-markdown",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/digest-markdown-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "topic-lead",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/topic-lead-390.png",
+      "width": 390
+    },
+    {
+      "id": "topic-lead",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/topic-lead-1440.png",
+      "width": 1440
+    },
+    {
+      "id": "topic-singleton",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/topic-singleton-390.png",
+      "width": 390
+    },
+    {
+      "id": "topic-singleton",
+      "path": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current/topic-singleton-1440.png",
+      "width": 1440
+    }
+  ],
+  "generatedAt": "2026-04-20T17:05:10.790Z",
+  "outputDir": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/screenshots/current",
+  "target": "current",
+  "widths": [
+    390,
+    1440
+  ]
+}

@@ -6,7 +6,7 @@ excerptZh: "四个模型的技术路线各有侧重，但有一个共同方向�
 excerptEn: "Four Chinese AI models dropped in one week — all prioritizing tool-calling over raw intelligence. Here's what each does differently, and why the orchestration layer is the real winner."
 tag: "AI"
 tagEn: "AI"
-image: "/images/open-source-models-agent-orchestration.jpg"
+image: "/images/open-source-models-agent-orchestration.png"
 readTime: 18
 publishedAt: "2026-03-03"
 ---

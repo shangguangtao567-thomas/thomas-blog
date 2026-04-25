@@ -1,0 +1,525 @@
+{
+  "generatedAt": "2026-04-20T17:51:59.255Z",
+  "outputDir": "docs/baselines/lighthouse/current",
+  "profileCount": 2,
+  "profiles": [
+    {
+      "averages": {
+        "accessibility": 1,
+        "performance": 0.95,
+        "seo": 1
+      },
+      "fixtures": [
+        {
+          "fetchTime": "2026-04-20T17:49:33.108Z",
+          "finalUrl": "http://127.0.0.1:59466/",
+          "id": "home",
+          "jsonPath": "docs/baselines/lighthouse/current/desktop/home.json",
+          "kind": "home",
+          "label": "Homepage",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "First Contentful Paint",
+              "value": 244
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.3 s",
+              "title": "Largest Contentful Paint",
+              "value": 284
+            },
+            "speed-index": {
+              "displayValue": "1.0 s",
+              "title": "Speed Index",
+              "value": 1028
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/",
+          "profile": "desktop",
+          "requestedUrl": "http://127.0.0.1:59466/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 1,
+            "seo": 1
+          }
+        },
+        {
+          "fetchTime": "2026-04-20T17:49:45.078Z",
+          "finalUrl": "http://127.0.0.1:59466/blog/turboquant-kv-cache-open-source-latency/",
+          "id": "essay-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/desktop/essay-lead.json",
+          "kind": "essay",
+          "label": "TurboQuant, KV Cache Compression, and the New Speed of Open Source",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "First Contentful Paint",
+              "value": 247
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "Largest Contentful Paint",
+              "value": 247
+            },
+            "speed-index": {
+              "displayValue": "2.1 s",
+              "title": "Speed Index",
+              "value": 2052
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/blog/turboquant-kv-cache-open-source-latency/",
+          "profile": "desktop",
+          "requestedUrl": "http://127.0.0.1:59466/blog/turboquant-kv-cache-open-source-latency/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.96,
+            "seo": 1
+          },
+          "slug": "turboquant-kv-cache-open-source-latency"
+        },
+        {
+          "fetchTime": "2026-04-20T17:49:58.780Z",
+          "finalUrl": "http://127.0.0.1:59466/briefing/",
+          "id": "briefing-index",
+          "jsonPath": "docs/baselines/lighthouse/current/desktop/briefing-index.json",
+          "kind": "briefing-index",
+          "label": "Briefing index",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "First Contentful Paint",
+              "value": 246
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.3 s",
+              "title": "Largest Contentful Paint",
+              "value": 285
+            },
+            "speed-index": {
+              "displayValue": "2.7 s",
+              "title": "Speed Index",
+              "value": 2730
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/briefing/",
+          "profile": "desktop",
+          "requestedUrl": "http://127.0.0.1:59466/briefing/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.93,
+            "seo": 1
+          }
+        },
+        {
+          "fetchTime": "2026-04-20T17:50:13.761Z",
+          "finalUrl": "http://127.0.0.1:59466/blog/ai-daily-2026-04-20/",
+          "id": "digest-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/desktop/digest-lead.json",
+          "kind": "digest",
+          "label": "AI Daily · April 20, 2026",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "First Contentful Paint",
+              "value": 243
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.3 s",
+              "title": "Largest Contentful Paint",
+              "value": 282
+            },
+            "speed-index": {
+              "displayValue": "3.1 s",
+              "title": "Speed Index",
+              "value": 3057
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/blog/ai-daily-2026-04-20/",
+          "profile": "desktop",
+          "requestedUrl": "http://127.0.0.1:59466/blog/ai-daily-2026-04-20/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.93,
+            "seo": 1
+          },
+          "slug": "ai-daily-2026-04-20"
+        },
+        {
+          "fetchTime": "2026-04-20T17:50:29.254Z",
+          "finalUrl": "http://127.0.0.1:59466/topic/ai/",
+          "id": "topic-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/desktop/topic-lead.json",
+          "kind": "topic",
+          "label": "AI",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "First Contentful Paint",
+              "value": 243
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.2 s",
+              "title": "Largest Contentful Paint",
+              "value": 243
+            },
+            "speed-index": {
+              "displayValue": "2.8 s",
+              "title": "Speed Index",
+              "value": 2843
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/topic/ai/",
+          "profile": "desktop",
+          "requestedUrl": "http://127.0.0.1:59466/topic/ai/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.93,
+            "seo": 1
+          },
+          "slug": "ai"
+        }
+      ],
+      "gates": {
+        "categories": {
+          "accessibility": {
+            "maxRegression": 0.01,
+            "min": 0.95
+          },
+          "performance": {
+            "min": 0.9
+          },
+          "seo": {
+            "maxRegression": 0.01,
+            "min": 0.95
+          }
+        },
+        "metrics": {
+          "cumulative-layout-shift": {
+            "maxRegression": 0.02
+          },
+          "first-contentful-paint": {
+            "maxRegression": 150
+          },
+          "largest-contentful-paint": {
+            "maxRegression": 250
+          },
+          "total-blocking-time": {
+            "maxRegression": 100
+          }
+        }
+      },
+      "id": "desktop",
+      "label": "Desktop"
+    },
+    {
+      "averages": {
+        "accessibility": 1,
+        "performance": 0.93,
+        "seo": 1
+      },
+      "fixtures": [
+        {
+          "fetchTime": "2026-04-20T17:50:44.428Z",
+          "finalUrl": "http://127.0.0.1:59466/",
+          "id": "home",
+          "jsonPath": "docs/baselines/lighthouse/current/mobile/home.json",
+          "kind": "home",
+          "label": "Homepage",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "First Contentful Paint",
+              "value": 906
+            },
+            "largest-contentful-paint": {
+              "displayValue": "1.1 s",
+              "title": "Largest Contentful Paint",
+              "value": 1056
+            },
+            "speed-index": {
+              "displayValue": "9.2 s",
+              "title": "Speed Index",
+              "value": 9214
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/",
+          "profile": "mobile",
+          "requestedUrl": "http://127.0.0.1:59466/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.91,
+            "seo": 1
+          }
+        },
+        {
+          "fetchTime": "2026-04-20T17:51:01.309Z",
+          "finalUrl": "http://127.0.0.1:59466/blog/turboquant-kv-cache-open-source-latency/",
+          "id": "essay-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/mobile/essay-lead.json",
+          "kind": "essay",
+          "label": "TurboQuant, KV Cache Compression, and the New Speed of Open Source",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "First Contentful Paint",
+              "value": 902
+            },
+            "largest-contentful-paint": {
+              "displayValue": "1.1 s",
+              "title": "Largest Contentful Paint",
+              "value": 1052
+            },
+            "speed-index": {
+              "displayValue": "6.9 s",
+              "title": "Speed Index",
+              "value": 6856
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/blog/turboquant-kv-cache-open-source-latency/",
+          "profile": "mobile",
+          "requestedUrl": "http://127.0.0.1:59466/blog/turboquant-kv-cache-open-source-latency/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.93,
+            "seo": 1
+          },
+          "slug": "turboquant-kv-cache-open-source-latency"
+        },
+        {
+          "fetchTime": "2026-04-20T17:51:16.480Z",
+          "finalUrl": "http://127.0.0.1:59466/briefing/",
+          "id": "briefing-index",
+          "jsonPath": "docs/baselines/lighthouse/current/mobile/briefing-index.json",
+          "kind": "briefing-index",
+          "label": "Briefing index",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "First Contentful Paint",
+              "value": 901
+            },
+            "largest-contentful-paint": {
+              "displayValue": "1.1 s",
+              "title": "Largest Contentful Paint",
+              "value": 1051
+            },
+            "speed-index": {
+              "displayValue": "6.8 s",
+              "title": "Speed Index",
+              "value": 6789
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/briefing/",
+          "profile": "mobile",
+          "requestedUrl": "http://127.0.0.1:59466/briefing/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.94,
+            "seo": 1
+          }
+        },
+        {
+          "fetchTime": "2026-04-20T17:51:31.554Z",
+          "finalUrl": "http://127.0.0.1:59466/blog/ai-daily-2026-04-20/",
+          "id": "digest-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/mobile/digest-lead.json",
+          "kind": "digest",
+          "label": "AI Daily · April 20, 2026",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "First Contentful Paint",
+              "value": 904
+            },
+            "largest-contentful-paint": {
+              "displayValue": "1.1 s",
+              "title": "Largest Contentful Paint",
+              "value": 1054
+            },
+            "speed-index": {
+              "displayValue": "7.6 s",
+              "title": "Speed Index",
+              "value": 7558
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/blog/ai-daily-2026-04-20/",
+          "profile": "mobile",
+          "requestedUrl": "http://127.0.0.1:59466/blog/ai-daily-2026-04-20/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.93,
+            "seo": 1
+          },
+          "slug": "ai-daily-2026-04-20"
+        },
+        {
+          "fetchTime": "2026-04-20T17:51:47.215Z",
+          "finalUrl": "http://127.0.0.1:59466/topic/ai/",
+          "id": "topic-lead",
+          "jsonPath": "docs/baselines/lighthouse/current/mobile/topic-lead.json",
+          "kind": "topic",
+          "label": "AI",
+          "metrics": {
+            "cumulative-layout-shift": {
+              "displayValue": "0",
+              "title": "Cumulative Layout Shift",
+              "value": 0
+            },
+            "first-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "First Contentful Paint",
+              "value": 905
+            },
+            "largest-contentful-paint": {
+              "displayValue": "0.9 s",
+              "title": "Largest Contentful Paint",
+              "value": 905
+            },
+            "speed-index": {
+              "displayValue": "6.2 s",
+              "title": "Speed Index",
+              "value": 6164
+            },
+            "total-blocking-time": {
+              "displayValue": "0 ms",
+              "title": "Total Blocking Time",
+              "value": 0
+            }
+          },
+          "path": "/topic/ai/",
+          "profile": "mobile",
+          "requestedUrl": "http://127.0.0.1:59466/topic/ai/",
+          "scores": {
+            "accessibility": 1,
+            "performance": 0.94,
+            "seo": 1
+          },
+          "slug": "ai"
+        }
+      ],
+      "gates": {
+        "categories": {
+          "accessibility": {
+            "maxRegression": 0.01,
+            "min": 0.95
+          },
+          "performance": {
+            "min": 0.85
+          },
+          "seo": {
+            "maxRegression": 0.01,
+            "min": 0.95
+          }
+        },
+        "metrics": {
+          "cumulative-layout-shift": {
+            "maxRegression": 0.03
+          },
+          "first-contentful-paint": {
+            "maxRegression": 250
+          },
+          "largest-contentful-paint": {
+            "maxRegression": 400
+          },
+          "total-blocking-time": {
+            "maxRegression": 150
+          }
+        }
+      },
+      "id": "mobile",
+      "label": "Mobile"
+    }
+  ],
+  "routeCount": 5,
+  "target": "current"
+}

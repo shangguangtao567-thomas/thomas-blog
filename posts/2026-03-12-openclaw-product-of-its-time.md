@@ -6,7 +6,7 @@ excerptZh: "我对 OpenClaw 的判断，不是它突然比 Claude Code 这类工
 excerptEn: "OpenClaw didn't invent new AI magic. It compressed initiative, reachability, and habit loops into something ordinary users can live with. That's why it took off — and what it tells us about the agent era."
 tag: "AI"
 tagEn: "AI"
-image: "/images/openclaw-product-of-its-time.jpg"
+image: "/images/openclaw-product-of-its-time.png"
 readTime: 11
 publishedAt: "2026-03-12"
 ---

@@ -1,0 +1,95 @@
+---
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
+import ReadingPath from '../../components/ReadingPath.astro';
+import { buildPageMeta, buildTopicJsonLd } from '../../content/seo';
+import { getTopicPageData } from '../../content/routes';
+import { loadTopics } from '../../content/loaders';
+import { formatCompactDate } from '../../content/normalize';
+
+export async function getStaticPaths() {
+  return loadTopics().map((topic) => ({
+    params: { slug: topic.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const { topic, posts, guide } = getTopicPageData(slug);
+
+if (!topic) {
+  throw new Error(`Missing topic data for ${slug}`);
+}
+
+const meta = buildPageMeta(`/topic/${topic.slug}/`, {
+  title: `${topic.labelEn} · Thomas`,
+  description: `A topic archive for ${topic.labelEn}, with ${topic.count} linked essays.`,
+  jsonLd: buildTopicJsonLd(topic.labelEn, `A topic archive for ${topic.labelEn}, with ${topic.count} linked essays.`, `https://blog.lincept.com/topic/${topic.slug}/`, topic.count),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="collection-hero collection-hero--topic reveal">
+    <div>
+      <p class="hero__eyebrow">// Topic archive</p>
+      <h1 class="collection-hero__title">{topic.labelEn}</h1>
+      <p class="collection-hero__lede">{guide?.intro || `This topic gathers ${topic.count} essays into a single line of thought so readers can keep moving without bouncing around the archive.`}</p>
+      <div class="hero__meta">
+        <span>{topic.count} posts</span>
+        {guide?.rangeLabel ? <span>{guide.rangeLabel}</span> : null}
+        {guide?.modeLabel ? <span>{guide.modeLabel}</span> : null}
+      </div>
+      <div class="hero__actions">
+        <a class="button" href="/blog/">Writing</a>
+        <a class="button button--ghost" href="/briefing/">Briefing</a>
+      </div>
+    </div>
+    <aside class="collection-hero__note">
+      <span>Thread map</span>
+      <strong>{guide?.continueTitle || 'Continue this thread'}</strong>
+      <p>{guide?.continueCopy || 'Use the strongest entry points first, then work through the full ledger.'}</p>
+    </aside>
+  </section>
+
+  <section class="section reveal delay-1">
+    <ReadingPath
+      eyebrow="Start here"
+      title={`Enter ${topic.labelEn} through the strongest two entry points`}
+      copy="The first read gives you the current front door. The second read gives you the frame that the later pieces are building on."
+      items={guide?.startHere || []}
+    />
+  </section>
+
+  <section class="section reveal delay-2">
+    <ReadingPath
+      eyebrow="Continue"
+      title={guide?.continueTitle || 'Continue this thread'}
+      copy={guide?.continueCopy}
+      items={guide?.continueReading || []}
+    />
+  </section>
+
+  <section class="section reveal delay-3">
+    <div class="section__head">
+      <div>
+        <p class="section-eyebrow">Full ledger</p>
+        <h2 class="section__title">Posts in this thread</h2>
+        <p class="section__copy">The full list stays chronological enough to scan, but the sections above give you the better entry path.</p>
+      </div>
+    </div>
+
+    <div class="story-list">
+      {posts.map((post, index) => (
+        <a class="story-row" href={`/blog/${post.slug}/`}>
+          <div class="story-row__date">{String(index + 1).padStart(2, '0')}</div>
+          <div>
+            <div class="story-row__meta">
+              <span class="meta-kicker">{formatCompactDate(post.publishedAt)}</span>
+              <span class="tag">{post.readTime} min</span>
+            </div>
+            <h3 class="story-row__title">{post.titleEn}</h3>
+            <p class="story-row__excerpt">{post.excerptEn}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</CollectionLayout>

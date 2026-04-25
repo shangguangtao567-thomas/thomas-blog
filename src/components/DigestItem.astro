@@ -1,0 +1,34 @@
+---
+const { item } = Astro.props as { item: any };
+---
+
+<article class="surface-card collection-card">
+  <div class="story-row__meta">
+    <span class="meta-kicker">{String(item.rank || '').padStart(2, '0')}</span>
+    {item.sectionLabelEn ? <span class="tag">{item.sectionLabelEn}</span> : null}
+    {item.kickerEn ? <span class="tag">{item.kickerEn}</span> : null}
+  </div>
+
+  <h2 class="collection-card__title">{item.briefTitleEn || item.titleEn}</h2>
+
+  {item.summaryEn ? <p class="collection-card__copy">{item.summaryEn}</p> : null}
+  {item.whatChangedEn || item.deckEn ? <div class="article-summary">{item.whatChangedEn || item.deckEn}</div> : null}
+
+  {item.narrativeEn?.length ? (
+    <div class="prose-article">
+      {item.narrativeEn.map((line: string) => <p>{line}</p>)}
+    </div>
+  ) : null}
+
+  {item.whyItMattersEn || item.impactEn ? <div class="article-summary">{item.whyItMattersEn || item.impactEn}</div> : null}
+
+  {item.relatedLinks?.length ? (
+    <div class="section-actions">
+      {item.relatedLinks.map((link: any) => (
+        <a class="button button--ghost" href={link.url} target="_blank" rel="noreferrer">
+          {link.labelEn}
+        </a>
+      ))}
+    </div>
+  ) : null}
+</article>

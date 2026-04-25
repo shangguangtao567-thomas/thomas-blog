@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "id": "home",
+      "path": "docs/baselines/lighthouse/baseline/desktop/home.json",
+      "profile": "desktop"
+    },
+    {
+      "id": "essay-lead",
+      "path": "docs/baselines/lighthouse/baseline/desktop/essay-lead.json",
+      "profile": "desktop"
+    },
+    {
+      "id": "briefing-index",
+      "path": "docs/baselines/lighthouse/baseline/desktop/briefing-index.json",
+      "profile": "desktop"
+    },
+    {
+      "id": "digest-lead",
+      "path": "docs/baselines/lighthouse/baseline/desktop/digest-lead.json",
+      "profile": "desktop"
+    },
+    {
+      "id": "topic-lead",
+      "path": "docs/baselines/lighthouse/baseline/desktop/topic-lead.json",
+      "profile": "desktop"
+    },
+    {
+      "id": "home",
+      "path": "docs/baselines/lighthouse/baseline/mobile/home.json",
+      "profile": "mobile"
+    },
+    {
+      "id": "essay-lead",
+      "path": "docs/baselines/lighthouse/baseline/mobile/essay-lead.json",
+      "profile": "mobile"
+    },
+    {
+      "id": "briefing-index",
+      "path": "docs/baselines/lighthouse/baseline/mobile/briefing-index.json",
+      "profile": "mobile"
+    },
+    {
+      "id": "digest-lead",
+      "path": "docs/baselines/lighthouse/baseline/mobile/digest-lead.json",
+      "profile": "mobile"
+    },
+    {
+      "id": "topic-lead",
+      "path": "docs/baselines/lighthouse/baseline/mobile/topic-lead.json",
+      "profile": "mobile"
+    }
+  ],
+  "generatedAt": "2026-04-20T17:49:20.969Z",
+  "outputDir": "docs/baselines/lighthouse/baseline",
+  "target": "baseline"
+}

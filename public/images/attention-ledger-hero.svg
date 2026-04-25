@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Attention ledger</title>
+  <desc id="desc">Editorial diagram showing signal, noise, and protected attention zones.</desc>
+  <rect width="1600" height="900" fill="#f7f1e4"/>
+  <g opacity="0.45" stroke="#d6c9b4">
+    <path d="M0 120h1600M0 240h1600M0 360h1600M0 480h1600M0 600h1600M0 720h1600M0 840h1600"/>
+    <path d="M160 0v900M320 0v900M480 0v900M640 0v900M800 0v900M960 0v900M1120 0v900M1280 0v900M1440 0v900"/>
+  </g>
+  <rect x="188" y="124" width="1224" height="652" rx="16" fill="#fbf8ef" stroke="#1a1a16" stroke-opacity=".12"/>
+  <rect x="188" y="124" width="1224" height="58" rx="16" fill="#1a1a16"/>
+  <text x="230" y="160" fill="#fbf8ef" font-family="IBM Plex Mono, monospace" font-size="26" letter-spacing="4">ATTENTION LEDGER</text>
+  <text x="1190" y="160" fill="#fbf8ef" font-family="IBM Plex Mono, monospace" font-size="26" letter-spacing="4">FILTER SUCCESS</text>
+  <rect x="242" y="230" width="384" height="320" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".18"/>
+  <circle cx="434" cy="228" r="14" fill="#989080"/>
+  <text x="272" y="280" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="4">SIGNAL</text>
+  <text x="272" y="344" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="72" font-weight="600">Relevant</text>
+  <text x="272" y="416" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="72" font-weight="600">Inputs still</text>
+  <text x="272" y="488" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="72" font-weight="600">become load.</text>
+  <text x="272" y="536" fill="#635c51" font-family="IBM Plex Mono, monospace" font-size="28">More precision does not mean more peace.</text>
+  <rect x="684" y="232" width="212" height="228" fill="#c9d7ab" stroke="#1a1a16" stroke-opacity=".14" transform="rotate(2 790 346)"/>
+  <text x="726" y="290" fill="#314131" font-family="IBM Plex Mono, monospace" font-size="32">habit loops</text>
+  <text x="726" y="338" fill="#314131" font-family="IBM Plex Mono, monospace" font-size="32">ship tiny</text>
+  <text x="726" y="386" fill="#314131" font-family="IBM Plex Mono, monospace" font-size="32">settle first</text>
+  <text x="726" y="434" fill="#314131" font-family="IBM Plex Mono, monospace" font-size="32">then iterate</text>
+  <rect x="964" y="228" width="354" height="320" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".18"/>
+  <text x="1000" y="280" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="4">NOISE MODEL</text>
+  <text x="1004" y="350" fill="#315c88" font-family="IBM Plex Mono, monospace" font-size="32">signal = relevance</text>
+  <text x="1004" y="396" fill="#315c88" font-family="IBM Plex Mono, monospace" font-size="32">noise = urgency</text>
+  <text x="1004" y="442" fill="#315c88" font-family="IBM Plex Mono, monospace" font-size="32">cost = switching * residue</text>
+  <text x="1004" y="520" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="24">good information can still break rhythm</text>
+  <rect x="250" y="594" width="316" height="124" fill="#1a1a16" rx="10"/>
+  <text x="282" y="636" fill="#9fb09c" font-family="IBM Plex Mono, monospace" font-size="22" letter-spacing="4">RUN OUTPUT</text>
+  <text x="282" y="686" fill="#fbf8ef" font-family="IBM Plex Mono, monospace" font-size="30">focus       0.62</text>
+  <text x="282" y="724" fill="#fbf8ef" font-family="IBM Plex Mono, monospace" font-size="30">clarity     0.78</text>
+  <rect x="662" y="584" width="420" height="152" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".18" rx="10"/>
+  <text x="694" y="624" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="4">SYSTEM SKETCH</text>
+  <rect x="736" y="658" width="94" height="42" fill="none" stroke="#1a1a16" stroke-width="2"/>
+  <rect x="914" y="658" width="104" height="42" fill="none" stroke="#1a1a16" stroke-width="2"/>
+  <rect x="822" y="584" width="110" height="42" fill="none" stroke="#1a1a16" stroke-width="2"/>
+  <path d="M830 679h74M878 626v28M792 679c0 48 154 48 154 0" fill="none" stroke="#1a1a16" stroke-width="2"/>
+  <text x="759" y="686" fill="#1a1a16" font-family="IBM Plex Mono, monospace" font-size="22">USER</text>
+  <text x="939" y="686" fill="#1a1a16" font-family="IBM Plex Mono, monospace" font-size="22">ACTION</text>
+  <text x="844" y="612" fill="#1a1a16" font-family="IBM Plex Mono, monospace" font-size="22">FILTER</text>
+  <rect x="1120" y="586" width="252" height="150" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".18" rx="10"/>
+  <text x="1152" y="626" fill="#c85135" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="4">PROTECTED</text>
+  <text x="1152" y="682" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="56" font-weight="600">Attention</text>
+  <text x="1152" y="720" fill="#635c51" font-family="IBM Plex Mono, monospace" font-size="22">less input, cleaner feedback</text>
+</svg>

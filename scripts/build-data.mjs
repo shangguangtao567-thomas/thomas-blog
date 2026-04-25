@@ -4,8 +4,8 @@
  * - src/data/posts-index.json  (metadata only, for listing)
  * - src/data/posts.json        (full content, for detail pages)
  * 
- * Run: node scripts/build-data.mjs
- * This runs automatically before vite build.
+ * Run manually when you intentionally want to regenerate source data:
+ * node scripts/build-data.mjs
  */
 import fs from 'fs';
 import path from 'path';

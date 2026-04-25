@@ -1,0 +1,24 @@
+---
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
+import { buildPageMeta } from '../../content/seo';
+
+const meta = buildPageMeta('/tech/', {
+  title: 'AI Briefing · Thomas',
+  description: 'Compatibility entry point for the AI briefing archive.',
+  robots: 'noindex,follow',
+  refreshTo: '/briefing/',
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="page compat-shell reveal">
+    <p class="hero__eyebrow">Compatibility</p>
+    <h1 class="section__title">This link now points to the briefing archive.</h1>
+    <p class="hero__lede">
+      `/tech/` remains available for old links and external references, but the canonical archive lives at `/briefing/`.
+    </p>
+    <div class="hero__actions">
+      <a class="button" href="/briefing/">Open briefing</a>
+    </div>
+  </section>
+</CollectionLayout>

@@ -1,0 +1,430 @@
+{
+  "collections": {
+    "aiDigestDetails": {
+      "count": 9,
+      "items": [
+        {
+          "hash": "5cb80eac505ffdd981dd6209ca551fc161667d8c6f65a6c7eff98ab63bf877b2",
+          "slug": "ai-daily-2026-03-11"
+        },
+        {
+          "hash": "48ae0231dac5aa1ba459384709ca4c258b59c3f2fcea759c2a596d047057c79e",
+          "slug": "ai-daily-2026-03-12"
+        },
+        {
+          "hash": "b3ec39b9583b1fa031f61143c33269879e9e15a112b9bb76fae06c5839448b3f",
+          "slug": "ai-daily-2026-03-13"
+        },
+        {
+          "hash": "c4b16546b492bac108b26af261eb0c1ff4d739fb6ac256a4fac9e0184a7ba39b",
+          "slug": "ai-daily-2026-03-14"
+        },
+        {
+          "hash": "5691bd25fb570e2b13d705fbb30f612385b01344720947ff8c6f673db473c319",
+          "slug": "ai-daily-2026-03-16"
+        },
+        {
+          "hash": "ade8675dc4af12cf4fef65f0377039c2b96bbd06bedaca938864f869c87113d2",
+          "slug": "ai-daily-2026-03-17"
+        },
+        {
+          "hash": "2e65b08ed265db454bfde8b28027f40de72a54e1637da010044a8a3df9305f5f",
+          "slug": "ai-daily-2026-03-18"
+        },
+        {
+          "hash": "015433096e2ad4cdf5ed153660a1b9b0a4206a5f1f3f3e5001b63174b9bf0b53",
+          "slug": "ai-daily-2026-03-19"
+        },
+        {
+          "hash": "d788863cfecec907d2612577a34dd3423ff4302fadbc81f43c3e5e26fc62f83f",
+          "slug": "ai-daily-2026-03-20"
+        }
+      ],
+      "source": "src/data/ai-digest-details.json"
+    },
+    "aiDigests": {
+      "count": 21,
+      "items": [
+        {
+          "hash": "b2d2a817792253c9b2a85a3d5fd9fc0cde1ff90af4726879dc07c3d39e7bada6",
+          "slug": "ai-daily-2026-03-11"
+        },
+        {
+          "hash": "4e358ed3678a6448789dc7010cacbbfcebb7c57da7fe9bdcb408400e2db9e7df",
+          "slug": "ai-daily-2026-03-12"
+        },
+        {
+          "hash": "c526e782e481ac762eef3d7b8e466f8f305436121592245f3267aa923f8aa076",
+          "slug": "ai-daily-2026-03-13"
+        },
+        {
+          "hash": "bd0df2c9858f8ce8a27baaae6c928c1ec072ee61f757262b2161bf396dbd2422",
+          "slug": "ai-daily-2026-03-14"
+        },
+        {
+          "hash": "b300c82de91ede4aa76b9ba647bcda12e3fb8a85ad9bef4c3c2f3daf9cc05067",
+          "slug": "ai-daily-2026-03-16"
+        },
+        {
+          "hash": "2f433573a79fb8a61cbddf977bf43cd586dd0db08dbc9c1d8b6abd363a9735de",
+          "slug": "ai-daily-2026-03-17"
+        },
+        {
+          "hash": "390712d4e5def314cd3ef539055d5e063ad490ca0a910fa1bc80a1dde3ae83a6",
+          "slug": "ai-daily-2026-03-18"
+        },
+        {
+          "hash": "86741d2952685fb69976bf04d874c13e16ace635e9e4c20bd386327a14072f4c",
+          "slug": "ai-daily-2026-03-19"
+        },
+        {
+          "hash": "60b423782c77893546d5635f88a0ff25f1b6d7c7895962d9f8d01f742fce3469",
+          "slug": "ai-daily-2026-03-20"
+        },
+        {
+          "hash": "daa1329a25d53b88b5e62b5b14c680983954f73135f7348bc02167bcc870ffb6",
+          "slug": "ai-daily-2026-03-23"
+        },
+        {
+          "hash": "edd090ef81c77a6d77a9a806cc5c4c20c0906716b98c32c72aae9d6eafbd1215",
+          "slug": "ai-daily-2026-03-24"
+        },
+        {
+          "hash": "d9a2ed63be8955f3a22b5320d3394a75088ee1b5615178292c384e8a25485e9f",
+          "slug": "ai-daily-2026-03-25"
+        },
+        {
+          "hash": "135b9afe964d0a5fc43a4754e013efd958cc7b7f964830a6e204f4a79b40b37c",
+          "slug": "ai-daily-2026-03-26"
+        },
+        {
+          "hash": "5241451431389a7b4db2d93d3f45539293f33c584b0fd9a1015e0392382897b0",
+          "slug": "ai-daily-2026-03-27"
+        },
+        {
+          "hash": "367589f6b4c98f2acf801a02f86007f53c35f9239e570a95cca85a57e951bf79",
+          "slug": "ai-daily-2026-03-30"
+        },
+        {
+          "hash": "882f7a706b5ec840a906f9da6c0c1726da5322911b30ea8fda2889f66ad8e271",
+          "slug": "ai-daily-2026-04-01"
+        },
+        {
+          "hash": "7c419d939e9b8ae7e407b45a4a2f30eb721a7ff8aa6135c11b60d97103821e2d",
+          "slug": "ai-daily-2026-04-09"
+        },
+        {
+          "hash": "1560ce18149fa37eabd6b2c5a9d40d9ab8aaa2b842d8ab5c56b321951304e4d2",
+          "slug": "ai-daily-2026-04-15"
+        },
+        {
+          "hash": "1fa0f3d2456cd7a423e605c068bf1b182cba1e75dd58d8ae0b41f74c8fe22715",
+          "slug": "ai-daily-2026-04-16"
+        },
+        {
+          "hash": "8dc983c48131ee3019e0276567c0048555ecb9c6a77a045d1f01315fcfc1d3da",
+          "slug": "ai-daily-2026-04-17"
+        },
+        {
+          "hash": "e2f1175537f81ae641d1a22786603236e67d9a4c6d0ba042569814fa354ae002",
+          "slug": "ai-daily-2026-04-20"
+        }
+      ],
+      "source": "src/data/ai-digests.json"
+    },
+    "posts": {
+      "count": 31,
+      "items": [
+        {
+          "hash": "cc76b99cbc52c66e4cb45988cb872606386516314738468710cd90265a4c83de",
+          "slug": "ai-architecture-revolution"
+        },
+        {
+          "hash": "68032c47bb56539af9f5abb741df206ccb36ea2712c5ee92007999b7644e83cc",
+          "slug": "ai-daily-2026-03-11"
+        },
+        {
+          "hash": "3461ad5d5f4e50225bec7291b92e4491edddfaa690f2271af0817d069d9b253f",
+          "slug": "ai-daily-2026-03-12"
+        },
+        {
+          "hash": "cc1e9168639e39b6f0325e0e707a07fdd2b2a141744e4127f78277eeabc5ba67",
+          "slug": "ai-daily-2026-03-13"
+        },
+        {
+          "hash": "5a7b0f292fa0dd4a17cd45898084711300ad5a008d861b3b54f03c07bab64695",
+          "slug": "ai-daily-2026-03-14"
+        },
+        {
+          "hash": "38417e5195edb29ca980d2c9a6485c5ca071e750ad2fdf5abd639bf08d7e0df2",
+          "slug": "ai-daily-2026-03-16"
+        },
+        {
+          "hash": "c901da32fbc23fdad1a4e0de9394c7c6acbdd163b867f57ba8102f51dd1b6ac1",
+          "slug": "ai-daily-2026-03-17"
+        },
+        {
+          "hash": "9f7c7bfa68b1c4c52341252b6ad87fc76c262f9e552086d4f68b7922fca59d41",
+          "slug": "ai-daily-2026-03-18"
+        },
+        {
+          "hash": "d264a5e0780b6c4dfa465aa7269b1c25615b4bf24f0b3c4ed53ec73d7ba16b46",
+          "slug": "ai-daily-2026-03-19"
+        },
+        {
+          "hash": "9b5ddc40c5ea6c83f30b52e31d5f8df07860b90e4ac18458d75a66a2dc1a865c",
+          "slug": "ai-daily-2026-03-20"
+        },
+        {
+          "hash": "cd7b909a105ed7790d8e7ff04bce60ec6d64fe4bc3b3b406c0f6e407e51c392f",
+          "slug": "ai-daily-2026-03-23"
+        },
+        {
+          "hash": "9ccf4861150062f7820c598b369d3b2ae3d40e13891e13641a148eabe513d6ca",
+          "slug": "ai-daily-2026-03-24"
+        },
+        {
+          "hash": "4c2e10b97e60bbb24fffe8be8697df06a4d273070ac63f92a9f8bb07ff25c3c2",
+          "slug": "ai-daily-2026-03-25"
+        },
+        {
+          "hash": "bd78223a41ea43e8aefc92332d5efe83c662f0f32fe173551d269d9f678a5671",
+          "slug": "ai-daily-2026-03-26"
+        },
+        {
+          "hash": "bda67291bfdbe0ff4e5842579ac937715bb3ebf7ffbd906efc9a9f6599f31d2e",
+          "slug": "ai-daily-2026-03-27"
+        },
+        {
+          "hash": "b230f83379ba46bbbb1009ca72b473b9bfd70e1aca374e3e4c27dd726653d5bb",
+          "slug": "ai-daily-2026-03-30"
+        },
+        {
+          "hash": "11abe856fb43dac893e22a9176d205eb94ab0b44063460f0f7b207378857c8d7",
+          "slug": "ai-daily-2026-03-31"
+        },
+        {
+          "hash": "02a18318c026d4385c3a64b70c61ec7d140503e5b01a2880f2ab2a18866f04b3",
+          "slug": "ai-daily-2026-04-01"
+        },
+        {
+          "hash": "7a836a111bb7228b3a7372847d315d43258fb786de2d720c34a5e0248abfd791",
+          "slug": "ai-daily-2026-04-09"
+        },
+        {
+          "hash": "27cf866923d40cb0aced51c82ab13048dc9d8d4e84d18638aee9be2e35cb0cc1",
+          "slug": "ai-daily-2026-04-15"
+        },
+        {
+          "hash": "b9930aac397ff037b06177e1eb1b1867cbbff91ed39837bc6b97515ac8d95c24",
+          "slug": "ai-daily-2026-04-16"
+        },
+        {
+          "hash": "3c44a80c3d6fd00270718a00ef056bdadd08979239846f90b6aa9c628d2b3104",
+          "slug": "ai-daily-2026-04-17"
+        },
+        {
+          "hash": "6c0b1b48b614d1560aeace671b589ed9d99546435366711e423591be7ab59f3b",
+          "slug": "ai-daily-2026-04-20"
+        },
+        {
+          "hash": "08998dfd175961c55801e6859ba774ec04410e1abd711ad304ade5c1f619af10",
+          "slug": "ai-notes-crm-review"
+        },
+        {
+          "hash": "87403842441e682b6833a811160cf2150a996378bd6c8229e7e38ffe19a1df5d",
+          "slug": "open-source-models-agent-orchestration"
+        },
+        {
+          "hash": "e6c0b85e2cc4fe8aa3deb771502c4e58597e7305701381c55821d22d0f1a6808",
+          "slug": "openclaw-product-of-its-time"
+        },
+        {
+          "hash": "8003d9bb1eb799ac606d55297e3b65fa6328f01dd1c62a924b32470ab18d40c0",
+          "slug": "openclaw-ultimate-setup-guide"
+        },
+        {
+          "hash": "0f45f34764b00d733fea316c88f028212dbce9e71a321c48396428a5204bee8c",
+          "slug": "protecting-attention-in-the-ai-era"
+        },
+        {
+          "hash": "d699bc69f14ba03412999bd30d437fe191ca1bc97e4d6d523b62ab80dc46f3fd",
+          "slug": "the-next-ai-breakthrough-is-learning-what-to-forget"
+        },
+        {
+          "hash": "91716d53a2a0b680bec1d2c3832f1ba48a0ed07806925ad37d1c30435728af3d",
+          "slug": "the-physics-of-success"
+        },
+        {
+          "hash": "b3117ed915fd9a70d8c4bf16dd967699813acd7c2438393ee758046f19b18617",
+          "slug": "turboquant-kv-cache-open-source-latency"
+        }
+      ],
+      "source": "src/data/posts.json"
+    },
+    "postsIndex": {
+      "count": 31,
+      "items": [
+        {
+          "hash": "9caefcc74c97f510fd8cba139eaa13e03c814475b054b39fb07941be91ff239c",
+          "slug": "ai-architecture-revolution"
+        },
+        {
+          "hash": "2edf3b981f58a14c036bcec1239dd2e6d8bc82a024a77ded891264f795a92a81",
+          "slug": "ai-daily-2026-03-11"
+        },
+        {
+          "hash": "0cbde60c479f80982285bb046487d5704df185d34edfb2223811f84d65573c3d",
+          "slug": "ai-daily-2026-03-12"
+        },
+        {
+          "hash": "a7a1dd630f056e676117691682827115af600f5a970ca09b5c132bc073cc1d99",
+          "slug": "ai-daily-2026-03-13"
+        },
+        {
+          "hash": "e33883704123c168eb03bc4956e53cdfd08d74a77b1a034997de6bd315e69295",
+          "slug": "ai-daily-2026-03-14"
+        },
+        {
+          "hash": "74ea56b3cdc9f0a1118a7badf98126ecb5ca96d5fb5e2520e79602280192c09f",
+          "slug": "ai-daily-2026-03-16"
+        },
+        {
+          "hash": "08f77f04cc7660a03b6ec250cbeaa8e87f774bc76b9e861726c1bc2e39dd427c",
+          "slug": "ai-daily-2026-03-17"
+        },
+        {
+          "hash": "0f1b7a143983c0a24b7e3f6aedc5cc0e1d6b6d4dfc6a70ad1fb47241094f0052",
+          "slug": "ai-daily-2026-03-18"
+        },
+        {
+          "hash": "b83ccf3cafa4439c7fbcaa78779bbdcf6a18151a4eb8f1570c8ef5d42a5f0904",
+          "slug": "ai-daily-2026-03-19"
+        },
+        {
+          "hash": "e77a0bf946591b1fcffb1af81082450681fa1d011452146015397552d9687356",
+          "slug": "ai-daily-2026-03-20"
+        },
+        {
+          "hash": "8512ae567b7812b52e4e9f355f6de937a3544723d165d280a30a8f3c23437ec7",
+          "slug": "ai-daily-2026-03-23"
+        },
+        {
+          "hash": "1444bf3748f93b57cbd52a0171aac7cc6302e596ed90694b9a0af4d6ab899949",
+          "slug": "ai-daily-2026-03-24"
+        },
+        {
+          "hash": "e5871eb94408ea69dc6b1c18d9472d1852fd34089916a632578e2b25b4ebe514",
+          "slug": "ai-daily-2026-03-25"
+        },
+        {
+          "hash": "2ac8054510226dd55f2090b0d0063d97c2efbd7831ff6df8d00278270d785b68",
+          "slug": "ai-daily-2026-03-26"
+        },
+        {
+          "hash": "59b469848287f20618990a2eff5fea984e087b368d565d349446246c2123d8f7",
+          "slug": "ai-daily-2026-03-27"
+        },
+        {
+          "hash": "8640d6b38133218824f680687bbfacbb948141029a1b464f591c43df5da4a0e6",
+          "slug": "ai-daily-2026-03-30"
+        },
+        {
+          "hash": "0867a0878cbd9cd4dca312767d17cbe1a847f1ab7317add0e227a6eab4f86423",
+          "slug": "ai-daily-2026-03-31"
+        },
+        {
+          "hash": "260bfd8d4b7c8902eb6e0d6a56e802f48688be197e1ca6644d378f2f684eb7f2",
+          "slug": "ai-daily-2026-04-01"
+        },
+        {
+          "hash": "573e124a4202879674d351a826194aebb2624b14a8c330cfa0156ac027553b51",
+          "slug": "ai-daily-2026-04-09"
+        },
+        {
+          "hash": "daf6a4bc3ff2b842d925ce922cd21e7e3f69799bdf8b8823fdf135bf76bc55ca",
+          "slug": "ai-daily-2026-04-15"
+        },
+        {
+          "hash": "87a19988f4436def6807c9d36dab7d5582421b4f40fe1e1795c2a2651cace13c",
+          "slug": "ai-daily-2026-04-16"
+        },
+        {
+          "hash": "faf4a917aee45eea45a0cdab525ef0358dad8c7addae2f02a75defaf2af5c864",
+          "slug": "ai-daily-2026-04-17"
+        },
+        {
+          "hash": "b39af0ed5330b57161b3a6ee78bbc962f8b95f20e8cea340326cb0d8b7376dc3",
+          "slug": "ai-daily-2026-04-20"
+        },
+        {
+          "hash": "4d9bfbadad6cbfb695624c6de178cac8866301c4b399e0eb6b24ace2cc2b902c",
+          "slug": "ai-notes-crm-review"
+        },
+        {
+          "hash": "b70ef30de8cf605ef9f7b341c86c91294c5b92a81c1a05e916644007f848e152",
+          "slug": "open-source-models-agent-orchestration"
+        },
+        {
+          "hash": "3a5e12ae066afcc08384460e6d7f43b299e7904ae964aba171fec24594cf0799",
+          "slug": "openclaw-product-of-its-time"
+        },
+        {
+          "hash": "42e55963b883689191614ecf8ab56e0ddd1f9fb25e4ed3eabe08e5754cb0f856",
+          "slug": "openclaw-ultimate-setup-guide"
+        },
+        {
+          "hash": "7bad85da53ff58c1d467c3cb3f2f21a51e18dca9ea221da8969537a46f34a596",
+          "slug": "protecting-attention-in-the-ai-era"
+        },
+        {
+          "hash": "1e08351803d017ec0e490cd0a56316120dee2eeb32c852bdb656773a6c414ccb",
+          "slug": "the-next-ai-breakthrough-is-learning-what-to-forget"
+        },
+        {
+          "hash": "a59f49d043e3bdbdf386fa7f99b3ef05d1369448b9b97d51c1f5fb8f8eb8beb5",
+          "slug": "the-physics-of-success"
+        },
+        {
+          "hash": "4821b6f7efceafc55fe82e730adefc27f70b71a9f943fa8665cd9530ce4a3609",
+          "slug": "turboquant-kv-cache-open-source-latency"
+        }
+      ],
+      "source": "src/data/posts-index.json"
+    },
+    "topics": {
+      "count": 7,
+      "items": [
+        {
+          "hash": "7a926ab0aa3ac527551951b73a2a3443c9ba67ffdf3c8468758e0b6fd1a3642f",
+          "slug": "ai"
+        },
+        {
+          "hash": "dcd7904b21c856077b0d695bb4564e72296715e4688a1a44697bbac57b5d584a",
+          "slug": "ai-infrastructure"
+        },
+        {
+          "hash": "ff62bf87ad04e9c92e081492ede69028359f4c8704d7200ec71fee1bc91cacbf",
+          "slug": "ai-ml"
+        },
+        {
+          "hash": "d5ec2b5838c61fc6cbeed92bd0bfacf7a3d541a0e5132886cc096da99dfe4ff0",
+          "slug": "ai-productivity"
+        },
+        {
+          "hash": "2ed332171ef8469f1e26fa4d0327991a9d5f2a765cb903f0f9144bca5aeab93b",
+          "slug": "attention-judgment"
+        },
+        {
+          "hash": "ece51093608d605c34f0abaef484d71bd173d3cf84caed608b676b38674abe96",
+          "slug": "essay"
+        },
+        {
+          "hash": "85a6b918842b681a94ce7a58763f167fa1bb4b76bcddbb903d102f084a3433ad",
+          "slug": "memory-architecture"
+        }
+      ],
+      "source": "src/data/topics.json"
+    }
+  }
+}

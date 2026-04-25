@@ -1,0 +1,140 @@
+---
+import { hasSubscribeSecondary, subscribeContract } from '../lib/siteConfig';
+
+type Props = {
+  variant?: 'panel' | 'footer' | 'inline' | 'handoff';
+  title?: string;
+  copy?: string;
+  showSecondary?: boolean;
+  compact?: boolean;
+  eyebrow?: string;
+};
+
+const {
+  variant = 'panel',
+  title = subscribeContract.heading,
+  copy = subscribeContract.helperCopy,
+  showSecondary = true,
+  compact = false,
+  eyebrow = variant === 'footer' ? 'Stay in touch' : variant === 'handoff' ? 'Reading rhythm' : 'Subscribe',
+} = Astro.props as Props;
+
+const subscribeTarget = subscribeContract.external ? '_blank' : undefined;
+const subscribeRel = subscribeContract.external ? 'noreferrer' : undefined;
+const canEmbedEmail = subscribeContract.kind === 'newsletter-form' && Boolean(subscribeContract.formAction);
+const canMailtoEmail = subscribeContract.kind === 'mailto-form' && Boolean(subscribeContract.contactEmail);
+const usesHostedSignup = subscribeContract.kind === 'newsletter-link';
+const showsEmailTeaser = (variant === 'handoff' || variant === 'panel') && !canMailtoEmail;
+const emailFieldId = `subscribe-email-${crypto.randomUUID().slice(0, 8)}`;
+---
+
+<div class={`subscribe-cta subscribe-cta--${variant}${compact ? ' subscribe-cta--compact' : ''}`}>
+  {variant === 'handoff' ? <div class="subscribe-cta__stamp" aria-hidden="true">Early<br />Readers</div> : null}
+  <div class="subscribe-cta__body">
+    <p class="panel__title">{eyebrow}</p>
+    <h2 class="subscribe-cta__title">{title}</h2>
+    <p class="subscribe-cta__copy">{copy}</p>
+    {!canEmbedEmail && showsEmailTeaser ? (
+      <p class="subscribe-cta__status">
+        {usesHostedSignup
+          ? 'RSS is live here. Email signup opens on the hosted subscribe page until the embedded endpoint is configured here.'
+          : 'This site currently publishes through RSS only.'}
+      </p>
+    ) : null}
+  </div>
+
+  {canEmbedEmail ? (
+    <form
+      class="subscribe-cta__form"
+      action={subscribeContract.formAction}
+      method={subscribeContract.formMethod}
+      target="_blank"
+    >
+      <label class="subscribe-cta__field" for={emailFieldId}>
+        <span class="subscribe-cta__fieldLabel">Email address</span>
+        <input
+          id={emailFieldId}
+          class="subscribe-cta__input"
+          type="email"
+          name={subscribeContract.formEmailName}
+          placeholder="name@company.com"
+          autocomplete="email"
+          required
+        />
+      </label>
+      <input type="hidden" name={subscribeContract.formEmbedName} value={subscribeContract.formEmbedValue} />
+      <div class="subscribe-cta__actions section-actions">
+        <button class="button" type="submit">{subscribeContract.label}</button>
+        {showSecondary && hasSubscribeSecondary ? (
+          <a class="button button--ghost" href={subscribeContract.secondaryHref} target="_blank" rel="noreferrer">
+            {subscribeContract.secondaryLabel}
+          </a>
+        ) : null}
+      </div>
+    </form>
+  ) : canMailtoEmail ? (
+    <form
+      class="subscribe-cta__form"
+      action={subscribeContract.href}
+      method="get"
+      data-mailto-subscribe
+      data-contact-email={subscribeContract.contactEmail}
+    >
+      <label class="subscribe-cta__field" for={emailFieldId}>
+        <span class="subscribe-cta__fieldLabel">Email address</span>
+        <input
+          id={emailFieldId}
+          class="subscribe-cta__input"
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        />
+      </label>
+      <div class="subscribe-cta__actions section-actions">
+        <button class="button" type="submit">{subscribeContract.label}</button>
+        {showSecondary && hasSubscribeSecondary ? (
+          <a class="button button--ghost" href={subscribeContract.secondaryHref} target="_blank" rel="noreferrer">
+            {subscribeContract.secondaryLabel}
+          </a>
+        ) : null}
+      </div>
+      <p class="subscribe-cta__micro" data-subscribe-feedback>
+        This opens a prefilled email. Send it and I will add you manually.
+      </p>
+    </form>
+  ) : (
+    <div class="subscribe-cta__actions section-actions">
+      <a class="button" href={subscribeContract.href} target={subscribeTarget} rel={subscribeRel}>
+        {subscribeContract.label}
+      </a>
+      {showSecondary && hasSubscribeSecondary ? (
+        <a class="button button--ghost" href={subscribeContract.secondaryHref} target="_blank" rel="noreferrer">
+          {subscribeContract.secondaryLabel}
+        </a>
+      ) : null}
+    </div>
+  )}
+</div>
+
+{canMailtoEmail ? (
+  <script is:inline>
+    (() => {
+      const forms = document.querySelectorAll('[data-mailto-subscribe]');
+      forms.forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = form.querySelector('input[type="email"]')?.value?.trim();
+          const contactEmail = form.getAttribute('data-contact-email');
+          const feedback = form.querySelector('[data-subscribe-feedback]');
+          if (!email || !contactEmail) return;
+          const subject = 'Join Thomas early readers';
+          const body = `Please add me to the Thomas early reader list.\n\nEmail: ${email}`;
+          window.location.href = `mailto:${encodeURIComponent(contactEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          if (feedback) feedback.textContent = 'Opening an email draft. Send it and I will add you manually.';
+        });
+      });
+    })();
+  </script>
+) : null}

@@ -5,7 +5,7 @@ titleEn: "Best AI Notes App 2026: Honest Reviews & How to Choose"
 excerptEn: "Notion, Obsidian, Mem, Reflect, Clay — reviewed honestly. Most AI note apps die in week two. Here's the diagnostic framework to pick one that actually sticks."
 tag: "AI Productivity"
 tagEn: "AI Productivity"
-image: "/images/ai-notes-crm-review.jpg"
+image: "/images/ai-notes-crm-review.png"
 readTime: 20
 date: 2026-03-25
 ---
@@ -315,4 +315,3 @@ The right tool doesn't feel like a chore. It feels like a relief.
 ---
 
 *This article is part of an ongoing series reviewing AI productivity tools with honest tradeoffs. All product sections reflect independent research as of March 2026. Pricing and features may have changed — verify on the product's official site before committing.*
-

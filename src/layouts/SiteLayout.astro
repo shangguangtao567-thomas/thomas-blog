@@ -1,0 +1,79 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import type { PageMeta } from '../content/contracts';
+import { hasPlausible, siteConfig } from '../lib/siteConfig';
+import '../styles/site.css';
+
+const { meta, pathname = Astro.url.pathname } = Astro.props as { meta: PageMeta; pathname?: string };
+
+const canonical = meta.canonical || siteConfig.siteUrl;
+const alternateLinks = meta.alternateLinks || [];
+const robots = meta.robots || 'index,follow';
+const socialImage = meta.image || `${siteConfig.siteUrl.replace(/\/$/, '')}/images/og-default.png`;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3efe5" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/brand-mark-apple.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+    <script is:inline>
+      const storageKey = 'thomas-theme';
+      const root = document.documentElement;
+      try {
+        const saved = localStorage.getItem(storageKey);
+        if (saved === 'light' || saved === 'dark') {
+          root.dataset.theme = saved;
+        } else {
+          root.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+      } catch {
+        root.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+    </script>
+
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:site_name" content={siteConfig.siteName} />
+    <meta property="og:type" content={meta.ogType} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:site" content={siteConfig.xHandle} />
+    <meta name="twitter:creator" content={siteConfig.xHandle} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:image" content={socialImage} />
+    {meta.keywords?.length ? <meta name="keywords" content={meta.keywords.join(', ')} /> : null}
+    {meta.publishedAt ? <meta property="article:published_time" content={meta.publishedAt} /> : null}
+    {meta.lastmod ? <meta property="article:modified_time" content={meta.lastmod} /> : null}
+    {meta.refreshTo ? <meta http-equiv="refresh" content={`0; url=${meta.refreshTo}`} /> : null}
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+    {alternateLinks.map((link) => (
+      <link rel={link.rel} href={link.href} type={link.type} title={link.title} />
+    ))}
+    {hasPlausible ? <script defer src="https://plausible.io/js/script.js" data-domain={siteConfig.plausibleDomain} /> : null}
+    {meta.jsonLd ? <script type="application/ld+json" set:html={JSON.stringify(meta.jsonLd, null, 2)} /> : null}
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
+      <SiteHeader pathname={pathname} />
+      <main id="main-content" class="site-main" tabindex="-1">
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+  </body>
+</html>

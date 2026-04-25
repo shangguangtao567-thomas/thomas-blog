@@ -1,0 +1,77 @@
+---
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
+import SubscribeCTA from '../../components/SubscribeCTA.astro';
+import { loadPostsByTopicSlug, loadTopics } from '../../content/loaders';
+import { buildPageMeta, buildCollectionJsonLd } from '../../content/seo';
+
+const topics = loadTopics().map((topic) => ({
+  ...topic,
+  posts: loadPostsByTopicSlug(topic.slug),
+}));
+
+const paths = [
+  {
+    title: 'Build better systems',
+    copy: 'Infrastructure, agent orchestration, memory, and evaluation notes.',
+    href: '/topic/ai-infrastructure/',
+  },
+  {
+    title: 'Think with less noise',
+    copy: 'Attention, judgment, growth, and what to ignore.',
+    href: '/topic/attention-judgment/',
+  },
+  {
+    title: 'Follow AI signal',
+    copy: 'Daily briefing threads and fast-moving model/product shifts.',
+    href: '/briefing/',
+  },
+];
+
+const meta = buildPageMeta('/topic/', {
+  title: 'Topics · Thomas',
+  description: 'Routes through the Thomas living notebook.',
+  jsonLd: buildCollectionJsonLd('Topics', 'Routes through the Thomas living notebook.', 'https://blog.lincept.com/topic/'),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="collection-hero collection-hero--topics reveal">
+    <div>
+      <p class="hero__eyebrow">// Topics</p>
+      <h1 class="collection-hero__title">Routes through the living notebook.</h1>
+      <p class="collection-hero__lede">
+        Topic pages are not tag buckets. They are reading paths for staying inside one argument long enough
+        to see what is actually changing.
+      </p>
+    </div>
+    <aside class="collection-hero__note">
+      <span>Start here</span>
+      <strong>{paths[0].title}</strong>
+      <p>{paths[0].copy}</p>
+    </aside>
+  </section>
+
+  <section class="topic-board reveal delay-1">
+    <div class="topic-board__canvas">
+      {topics.map((topic, index) => (
+        <a class={`topic-node topic-node--${(index % 4) + 1}`} href={`/topic/${topic.slug}/`}>
+          <span class="topic-node__count">{String(topic.count).padStart(2, '0')}</span>
+          <h2>{topic.labelEn}</h2>
+          <p>{topic.posts[0]?.titleEn || 'A focused archive for continued reading.'}</p>
+          <small>{topic.count} posts · latest route →</small>
+        </a>
+      ))}
+    </div>
+
+    <aside class="topic-board__paths">
+      <p class="panel__title">Curated routes</p>
+      {paths.map((path) => (
+        <a class="topic-path" href={path.href}>
+          <strong>{path.title}</strong>
+          <span>{path.copy}</span>
+        </a>
+      ))}
+      <SubscribeCTA variant="panel" compact showSecondary={false} title="Become an early reader" copy="Get new notes and briefing issues without checking the archive manually." />
+    </aside>
+  </section>
+</CollectionLayout>

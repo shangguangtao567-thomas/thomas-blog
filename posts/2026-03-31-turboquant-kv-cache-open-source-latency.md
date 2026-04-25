@@ -11,7 +11,7 @@ pillarZh: "AI 基础设施"
 keywords: "TurboQuant, KV cache compression, Google Research, open source, Claude Code, llama.cpp, Walsh-Hadamard rotation, QJL"
 xHookZh: "TurboQuant 的重点不只是压缩率，而是 AI 正在把论文变工程的周期压到按天算。"
 xHookEn: "TurboQuant matters not just because of KV cache compression, but because AI is collapsing the gap between a published paper and a working open-source implementation."
-image: ""
+image: "/images/turboquant-kv-cache-open-source-latency.png"
 readTime: 11
 date: 2026-03-31
 ---

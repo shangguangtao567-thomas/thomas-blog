@@ -1,0 +1,158 @@
+---
+import CollectionLayout from '../layouts/CollectionLayout.astro';
+import SubscribeCTA from '../components/SubscribeCTA.astro';
+import WorkbenchBoard from '../components/WorkbenchBoard.astro';
+import { getHomePageData } from '../content/routes';
+import { buildPageMeta, buildWebSiteJsonLd } from '../content/seo';
+import { formatDisplayDate } from '../content/normalize';
+
+const { leadEssay, moreEssays, latestDigests, topics } = getHomePageData();
+const topicBySlug = new Map(topics.map((topic) => [topic.slug, topic]));
+const topicMeta = (slug: string) => topicBySlug.get(slug);
+const aiTopic = topicMeta('ai');
+const attentionTopic = topicMeta('attention-judgment');
+const latestDigest = latestDigests[0];
+const homeRoutes = [
+  {
+    label: 'Build',
+    title: 'Understand agent-era products',
+    copy: 'Open source tools, agent workflows, and the product patterns that turn raw AI capability into something usable.',
+    href: aiTopic ? `/topic/${aiTopic.slug}/` : '/blog/',
+    meta: aiTopic ? `${aiTopic.count} posts` : 'essays',
+  },
+  {
+    label: 'Focus',
+    title: 'Protect attention and judgment',
+    copy: 'Notes on filters, decision quality, habit loops, and why better tooling still needs a human operating system.',
+    href: attentionTopic ? `/topic/${attentionTopic.slug}/` : '/blog/protecting-attention-in-the-ai-era/',
+    meta: attentionTopic ? `${attentionTopic.count} post` : 'field notes',
+  },
+  {
+    label: 'Signal',
+    title: 'Follow the daily AI briefing',
+    copy: 'A fast line through model releases, tooling changes, infrastructure signals, and the ideas worth saving.',
+    href: '/briefing/',
+    meta: latestDigest?.itemCount ? `${latestDigest.itemCount} items latest` : 'daily archive',
+  },
+];
+
+const meta = buildPageMeta('/', {
+  title: 'Thomas · Editorial research desk for AI, open source, and agent-era engineering',
+  description: 'Editorial notes on AI infrastructure, open source tooling, and the mechanics of building in the agent era.',
+  jsonLd: buildWebSiteJsonLd(),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="home-hero reveal">
+    <div class="home-hero__copy">
+      <p class="hero__eyebrow">// Thesis</p>
+      <h1 class="home-hero__title">Learn in public. Build small. Keep what works.</h1>
+      <p class="home-hero__lede">
+        I write about AI infrastructure, tooling, and agent-era engineering. Each week: field notes,
+        experiments, and the signal I wish I had earlier.
+      </p>
+
+      <div class="home-hero__modes" aria-label="Reading modes">
+        <a href="/blog/"><span>▤</span><strong>Longform</strong><small>essays & deep dives</small></a>
+        <a href="/briefing/"><span>⚡</span><strong>Daily</strong><small>briefings & AI signal</small></a>
+        <a href="/topic/"><span>⌬</span><strong>Topics</strong><small>maps & playbooks</small></a>
+        <a href="/blog/"><span>▱</span><strong>Living</strong><small>archive of everything</small></a>
+      </div>
+
+      <p class="home-hero__reader">
+        <span>New reader?</span>
+        <a href="/briefing/">Start with the daily briefing →</a>
+      </p>
+    </div>
+
+    <div class="home-hero__board">
+      <WorkbenchBoard leadEssay={leadEssay} latestDigests={latestDigests} topics={topics} />
+    </div>
+  </section>
+
+  <section class="section section--tight reveal delay-1" id="early-readers">
+    <SubscribeCTA variant="handoff" title="Join early readers" copy="Get the daily briefing and new essays. No spam. Unsubscribe anytime." showSecondary={false} />
+  </section>
+
+  <section class="section reveal delay-2">
+    <div class="section__head">
+      <div>
+        <p class="section-eyebrow">Writing</p>
+        <h2 class="section__title">Recent essays</h2>
+        <p class="section__copy">A short stack of the latest longform pieces, arranged for scanning rather than scrolling noise.</p>
+      </div>
+      <a class="section__link" href="/blog/">All writing</a>
+    </div>
+
+    <div class="story-list story-list--ledger">
+      {moreEssays.map((post) => (
+        <a class="story-row" href={`/blog/${post.slug}/`}>
+          <div class="story-row__date">{formatDisplayDate(post.publishedAt)}</div>
+          <div>
+            <div class="story-row__meta">
+              {post.kind ? <span class="meta-kicker">{post.kind}</span> : null}
+              {post.tagEn ? <span class="tag">{post.tagEn}</span> : null}
+            </div>
+            <h3 class="story-row__title">{post.titleEn}</h3>
+            <p class="story-row__excerpt">{post.excerptEn}</p>
+          </div>
+          <div class="story-row__suffix">{post.readTime} min</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section reveal delay-3">
+    <div class="section__head">
+      <div>
+        <p class="section-eyebrow">Briefing</p>
+        <h2 class="section__title">Latest issues</h2>
+        <p class="section__copy">Recent AI briefings for readers who want the fast line before dropping back into essays.</p>
+      </div>
+      <a class="section__link" href="/briefing/">Full archive</a>
+    </div>
+
+    <div class="story-list story-list--ledger">
+      {latestDigests.map((digest) => (
+        <a class="story-row" href={digest.path || `/blog/${digest.slug}/`}>
+          <div class="story-row__date">{formatDisplayDate(digest.date)}</div>
+          <div>
+            <div class="story-row__meta">
+              <span class="meta-kicker">AI Briefing</span>
+              {digest.itemCount ? <span class="tag">{digest.itemCount} items</span> : null}
+            </div>
+            <h3 class="story-row__title">{digest.titleEn}</h3>
+            {digest.excerptEn ? <p class="story-row__excerpt">{digest.excerptEn}</p> : null}
+          </div>
+          <div class="story-row__suffix">Open issue</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--routes reveal delay-4">
+    <div class="section__head">
+      <div>
+        <p class="section-eyebrow">Start paths</p>
+        <h2 class="section__title">Pick a route, not a category</h2>
+        <p class="section__copy">
+          The homepage should answer “where do I begin?” Full topic pages stay available when you want the whole map.
+        </p>
+      </div>
+      <a class="section__link" href="/topic/">Full topic map</a>
+    </div>
+
+    <div class="route-grid">
+      {homeRoutes.map((route, index) => (
+        <a class="route-card" href={route.href}>
+          <span class="route-card__index">{String(index + 1).padStart(2, '0')}</span>
+          <span class="route-card__label">{route.label}</span>
+          <h3>{route.title}</h3>
+          <p>{route.copy}</p>
+          <small>{route.meta} →</small>
+        </a>
+      ))}
+    </div>
+  </section>
+</CollectionLayout>

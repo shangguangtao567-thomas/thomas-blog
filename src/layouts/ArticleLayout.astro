@@ -1,0 +1,12 @@
+---
+import SiteLayout from './SiteLayout.astro';
+import type { PageMeta } from '../content/contracts';
+
+const { meta } = Astro.props as { meta: PageMeta };
+---
+
+<SiteLayout meta={meta}>
+  <div class="page article-shell">
+    <slot />
+  </div>
+</SiteLayout>

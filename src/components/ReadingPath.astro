@@ -1,0 +1,42 @@
+---
+import { formatDisplayDate } from '../content/normalize';
+import type { ReadingPathEntry } from '../content/reading';
+
+type Props = {
+  eyebrow?: string;
+  title: string;
+  copy?: string;
+  items: ReadingPathEntry[];
+};
+
+const { eyebrow, title, copy, items } = Astro.props as Props;
+---
+
+<section class="reading-path">
+  <div class="section__head section__head--stack">
+    <div>
+      {eyebrow ? <p class="section-eyebrow">{eyebrow}</p> : null}
+      <h2 class="section__title">{title}</h2>
+      {copy ? <p class="section__copy">{copy}</p> : null}
+    </div>
+  </div>
+
+  <div class="reading-path__list">
+    {items.map((item, index) => (
+      <a class="reading-path__row" href={item.href}>
+        <div class="reading-path__index">{String(index + 1).padStart(2, '0')}</div>
+        <div class="reading-path__body">
+          <div class="reading-path__meta">
+            <span class="meta-kicker">{item.label}</span>
+            {item.date ? <span>{formatDisplayDate(item.date)}</span> : null}
+            {item.readTime ? <span>{item.readTime} min read</span> : null}
+            {item.itemCount ? <span>{item.itemCount} items</span> : null}
+          </div>
+          <h3 class="reading-path__title">{item.title}</h3>
+          <p class="reading-path__copy">{item.description}</p>
+        </div>
+        <div class="reading-path__arrow" aria-hidden="true">↗</div>
+      </a>
+    ))}
+  </div>
+</section>

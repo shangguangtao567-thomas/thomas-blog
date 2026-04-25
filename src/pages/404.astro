@@ -1,0 +1,24 @@
+---
+import CollectionLayout from '../layouts/CollectionLayout.astro';
+import { buildPageMeta, buildCollectionJsonLd } from '../content/seo';
+
+const meta = buildPageMeta('/404.html', {
+  title: 'Not found · Thomas',
+  description: 'The requested page does not exist.',
+  robots: 'noindex,follow',
+  jsonLd: buildCollectionJsonLd('Not found', 'The requested page does not exist.', 'https://blog.lincept.com/404.html'),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="page compat-shell reveal">
+    <p class="hero__eyebrow">404</p>
+    <h1 class="section__title">This page does not exist.</h1>
+    <p class="hero__lede">Choose one of the main entry points below and keep reading.</p>
+    <div class="hero__actions">
+      <a class="button" href="/">Home</a>
+      <a class="button button--ghost" href="/blog/">Writing</a>
+      <a class="button button--ghost" href="/briefing/">Briefing</a>
+    </div>
+  </section>
+</CollectionLayout>

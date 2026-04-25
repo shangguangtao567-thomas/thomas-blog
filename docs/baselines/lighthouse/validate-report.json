@@ -1,0 +1,659 @@
+{
+  "baselineSummary": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/lighthouse/baseline-summary.json",
+  "checks": [
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "home",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "performance",
+      "current": 1,
+      "fixture": "home",
+      "kind": "category",
+      "minimum": 0.9,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "home",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 0.02,
+      "metric": "cumulative-layout-shift",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 243,
+      "current": 244,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "first-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 283,
+      "current": 284,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "largest-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 100,
+      "metric": "total-blocking-time",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "performance",
+      "current": 0.96,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "minimum": 0.9,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 0.02,
+      "metric": "cumulative-layout-shift",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 245,
+      "current": 247,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "first-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 284,
+      "current": 247,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "largest-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 100,
+      "metric": "total-blocking-time",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "performance",
+      "current": 0.93,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "minimum": 0.9,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 0.02,
+      "metric": "cumulative-layout-shift",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 241,
+      "current": 246,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "first-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 241,
+      "current": 285,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "largest-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 100,
+      "metric": "total-blocking-time",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "performance",
+      "current": 0.93,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "minimum": 0.9,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 0.02,
+      "metric": "cumulative-layout-shift",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 243,
+      "current": 243,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "first-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 282,
+      "current": 282,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "largest-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 100,
+      "metric": "total-blocking-time",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "performance",
+      "current": 0.93,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "minimum": 0.9,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 0.02,
+      "metric": "cumulative-layout-shift",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 242,
+      "current": 243,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "first-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 242,
+      "current": 243,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "largest-contentful-paint",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 100,
+      "metric": "total-blocking-time",
+      "profile": "desktop"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "home",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0.91,
+      "category": "performance",
+      "current": 0.91,
+      "fixture": "home",
+      "kind": "category",
+      "minimum": 0.85,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "home",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 0.03,
+      "metric": "cumulative-layout-shift",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 902,
+      "current": 906,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "first-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1052,
+      "current": 1056,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 400,
+      "metric": "largest-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "home",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "total-blocking-time",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0.92,
+      "category": "performance",
+      "current": 0.93,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "minimum": 0.85,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "essay-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 0.03,
+      "metric": "cumulative-layout-shift",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 901,
+      "current": 902,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "first-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1051,
+      "current": 1052,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 400,
+      "metric": "largest-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "essay-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "total-blocking-time",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0.93,
+      "category": "performance",
+      "current": 0.94,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "minimum": 0.85,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "briefing-index",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 0.03,
+      "metric": "cumulative-layout-shift",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 902,
+      "current": 901,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "first-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1052,
+      "current": 1051,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 400,
+      "metric": "largest-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "briefing-index",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "total-blocking-time",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0.94,
+      "category": "performance",
+      "current": 0.93,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "minimum": 0.85,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "digest-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 0.03,
+      "metric": "cumulative-layout-shift",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 903,
+      "current": 904,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "first-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1053,
+      "current": 1054,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 400,
+      "metric": "largest-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "digest-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "total-blocking-time",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "accessibility",
+      "current": 1,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0.92,
+      "category": "performance",
+      "current": 0.94,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "minimum": 0.85,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 1,
+      "category": "seo",
+      "current": 1,
+      "fixture": "topic-lead",
+      "kind": "category",
+      "maxRegression": 0.01,
+      "minimum": 0.95,
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 0.03,
+      "metric": "cumulative-layout-shift",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 901,
+      "current": 905,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 250,
+      "metric": "first-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 901,
+      "current": 905,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 400,
+      "metric": "largest-contentful-paint",
+      "profile": "mobile"
+    },
+    {
+      "baseline": 0,
+      "current": 0,
+      "fixture": "topic-lead",
+      "kind": "metric",
+      "maxRegression": 150,
+      "metric": "total-blocking-time",
+      "profile": "mobile"
+    }
+  ],
+  "currentSummary": "/Users/shangguangtao/projects/thomas-blog/docs/baselines/lighthouse/current-summary.json",
+  "errorCount": 0,
+  "errors": [],
+  "generatedAt": "2026-04-20T17:51:59.258Z"
+}

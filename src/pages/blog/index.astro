@@ -1,0 +1,130 @@
+---
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
+import SubscribeCTA from '../../components/SubscribeCTA.astro';
+import { getBlogPageData } from '../../content/routes';
+import { loadTopics } from '../../content/loaders';
+import { buildPageMeta, buildCollectionJsonLd } from '../../content/seo';
+import { formatCompactDate, formatDisplayDate } from '../../content/normalize';
+
+const { leadEssay, restEssays } = getBlogPageData();
+const topics = loadTopics();
+const topicBySlug = new Map(topics.map((topic) => [topic.slug, topic]));
+
+const meta = buildPageMeta('/blog/', {
+  title: 'Writing · Thomas',
+  description: 'Essays, reviews, and explainers.',
+  jsonLd: buildCollectionJsonLd('Writing', 'Essays, reviews, and explainers.', 'https://blog.lincept.com/blog/'),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="collection-hero collection-hero--writing reveal">
+    <div>
+      <p class="hero__eyebrow">// Writing</p>
+      <h1 class="collection-hero__title">Essays, experiments, and field notes.</h1>
+      <p class="collection-hero__lede">Longform notes about AI systems, personal growth, open source tooling, and the routines that survive contact with real work.</p>
+      <div class="hero__actions">
+        <a class="button" href={leadEssay ? `/blog/${leadEssay.slug}/` : '/'}>Open lead story</a>
+        <a class="button button--ghost" href="/briefing/">Briefing archive</a>
+      </div>
+    </div>
+    <aside class="collection-hero__note">
+      <span>Current lead</span>
+      <strong>{leadEssay?.titleEn || 'Essays and explainers'}</strong>
+      <p>{leadEssay?.excerptEn || 'A chronological archive of the site’s longform writing.'}</p>
+    </aside>
+  </section>
+
+  <div class="collection-shell reveal delay-1">
+    <aside class="collection-rail">
+      <p class="panel__title">Routes</p>
+      <div class="collection-rail__links">
+        {topics.map((topic) => (
+          <a href={`/topic/${topic.slug}/`}>
+            <span>{topic.labelEn}</span>
+            <small>{topic.count}</small>
+          </a>
+        ))}
+      </div>
+      <SubscribeCTA variant="panel" compact showSecondary={false} title="Read the next note" copy="A quiet email when there is a new essay or useful briefing." />
+    </aside>
+
+    <div class="collection-main">
+      {leadEssay ? (
+        <section class="section section--first">
+          <a class="lead-essay-card" href={`/blog/${leadEssay.slug}/`}>
+            <div class="lead-essay-card__visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>
+              <div class="story-row__meta">
+                <span class="meta-kicker">Lead story</span>
+                <span class="tag">{formatDisplayDate(leadEssay.publishedAt)}</span>
+                <span class="tag">{leadEssay.readTime} min</span>
+              </div>
+              <h2 class="collection-card__title">{leadEssay.titleEn}</h2>
+              <p class="collection-card__copy">{leadEssay.excerptEn}</p>
+            </div>
+          </a>
+        </section>
+      ) : null}
+
+      <section class="section">
+        <div class="section__head">
+          <div>
+            <p class="section-eyebrow">Archive</p>
+            <h2 class="section__title">Recent essays</h2>
+          </div>
+        </div>
+
+        <div class="story-list story-list--ledger">
+          {restEssays.map((post) => (
+            <article class="story-row">
+              <div class="story-row__date">{formatCompactDate(post.publishedAt)}</div>
+              <div>
+                <div class="story-row__meta">
+                  {post.kind ? <span class="meta-kicker">{post.kind}</span> : null}
+                  {post.tagEn ? <span class="tag">{post.tagEn}</span> : null}
+                  {post.topicSlug && topicBySlug.get(post.topicSlug) ? (
+                    <a class="tag tag--link" href={`/topic/${post.topicSlug}/`}>
+                      {topicBySlug.get(post.topicSlug)?.labelEn}
+                    </a>
+                  ) : null}
+                </div>
+                <h3 class="story-row__title">
+                  <a class="story-row__titleLink" href={`/blog/${post.slug}/`}>
+                    {post.titleEn}
+                  </a>
+                </h3>
+                <p class="story-row__excerpt">{post.excerptEn}</p>
+              </div>
+              <div class="story-row__suffix">{post.readTime} min</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <div>
+            <p class="section-eyebrow">Topics</p>
+            <h2 class="section__title">Browse by thread</h2>
+            <p class="section__copy">Jump into one current line of thought without leaving the writing index.</p>
+          </div>
+        </div>
+
+        <div class="topic-grid">
+          {topics.map((topic) => (
+            <a class="surface-card collection-card" href={`/topic/${topic.slug}/`}>
+              <div class="story-row__meta">
+                <span class="meta-kicker">{topic.count} posts</span>
+              </div>
+              <h3 class="collection-card__title">{topic.labelEn}</h3>
+              <p class="collection-card__copy">A focused archive for continued reading.</p>
+            </a>
+          ))}
+        </div>
+      </section>
+      </div>
+    </div>
+</CollectionLayout>

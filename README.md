@@ -16,7 +16,7 @@
 - `src/data/ai-digest-details.json`
   - 日报详情页所需的结构化数据
 - `src/data/x-drafts.json`
-  - 首页 / tech 页面使用的最新 X 草稿包索引
+  - 首页等运营入口使用的最新 X 草稿包索引
 - `src/data/topics.json`
   - `topic/<slug>` 专题页数据
 - `src/data/weekly-content-opportunities.json`
@@ -72,6 +72,8 @@ date: 2026-03-05
 
 - `buttondownUrl`
   - 为空时，站内订阅入口会回退到 `feed.xml`
+  - 若配置为 `https://buttondown.email/api/emails/embed-subscribe/<your-newsletter>`，站内会启用真实 email 表单
+  - 若配置为普通 Buttondown 主页链接，站内会保留 hosted signup 按钮，但不会伪装成内嵌表单
 - `plausibleDomain`
   - 为空时不注入 Plausible
   - 配好后会自动启用首页 / 文章页 / digest 页的基础点击统计
@@ -135,7 +137,8 @@ scripts/run-weekly-content-planning.sh
 
 - `主页静态 HTML`
 - `blog` 静态列表页
-- `tech` 静态 digest hub
+- `briefing` 规范化 digest archive
+- `tech` 兼容入口，canonical 与跳转语义都指向 `/briefing/`
 - `topic/<slug>/index.html`
 - `blog/<slug>/index.html`
 - `sitemap.xml`
@@ -151,14 +154,30 @@ scripts/run-weekly-content-planning.sh
 pnpm install
 pnpm dev
 pnpm build
+pnpm validate
+pnpm screenshot:compare
 ```
 
 常用命令：
 
 ```bash
-pnpm build-x-drafts
-pnpm build-weekly-content-opportunities
+pnpm validate
+pnpm screenshot:compare
+pnpm lighthouse:baseline
+pnpm lighthouse:validate
+pnpm validate:parity
 ```
+
+说明：
+
+- `pnpm validate`
+  - 本地静态验证：内容清单、输出路由、内部链接、阅读链
+- `pnpm screenshot:compare`
+  - 基于 `docs/baselines/` 的本地截图回归，比对漂移时直接失败
+- `pnpm lighthouse:baseline` / `pnpm lighthouse:validate`
+  - 针对首页、lead essay、`/briefing/`、lead digest、lead topic 的性能与质量基线
+- `pnpm validate:parity`
+  - 访问 `site.config.json` 中的 live URL，校验 GitHub Pages 上 `/briefing/`、`/tech/`、`404`、代表性详情页与 `_astro` 资源的部署一致性
 
 ## OpenClaw Cron 建议
 
@@ -181,3 +200,5 @@ pnpm build-weekly-content-opportunities
 
 - 继续使用 GitHub Pages
 - push 到 `main` 后触发 `.github/workflows/deploy.yml`
+- deploy workflow 现在会在上传前执行 `pnpm build`、`pnpm validate`、`pnpm screenshot:compare`
+- 页面发布后会额外执行 `pnpm validate:parity`，检查 live 站点与仓库预期是否一致

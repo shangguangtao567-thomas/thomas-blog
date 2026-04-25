@@ -1,0 +1,124 @@
+---
+import CollectionLayout from '../../layouts/CollectionLayout.astro';
+import ReadingPath from '../../components/ReadingPath.astro';
+import SubscribeCTA from '../../components/SubscribeCTA.astro';
+import { getBriefingPageData } from '../../content/routes';
+import { buildPageMeta, buildCollectionJsonLd } from '../../content/seo';
+import { formatDisplayDate, formatBriefDate } from '../../content/normalize';
+
+const { leadDigest, recentDigests, archiveDigests, guide } = getBriefingPageData();
+
+const meta = buildPageMeta('/briefing/', {
+  title: 'AI Briefing · Thomas',
+  description: 'Daily AI briefings and the archive around them.',
+  jsonLd: buildCollectionJsonLd('AI Briefing', 'Daily AI briefings and the archive around them.', 'https://blog.lincept.com/briefing/'),
+});
+---
+
+<CollectionLayout meta={meta}>
+  <section class="collection-hero collection-hero--briefing reveal">
+    <div>
+      <p class="hero__eyebrow">// AI Briefing</p>
+      <h1 class="collection-hero__title">Daily AI signal, kept close to the workbench.</h1>
+      <p class="collection-hero__lede">{leadDigest?.excerptEn || 'A tighter reading surface for the daily digest stream, with the latest issue up top and the archive beneath it.'}</p>
+      {leadDigest ? (
+        <div class="hero__meta">
+          <span>{formatDisplayDate(leadDigest.date)}</span>
+          {leadDigest.itemCount ? <span>{leadDigest.itemCount} items</span> : null}
+        </div>
+      ) : null}
+      <div class="hero__actions">
+        <a class="button" href={leadDigest?.path || '/blog/'}>Open latest issue</a>
+        <a class="button button--ghost" href="#archive">Browse archive</a>
+      </div>
+    </div>
+    {leadDigest ? (
+      <a class="briefing-latest-card" href={leadDigest.path || `/blog/${leadDigest.slug}/`}>
+        <span>Latest issue</span>
+        <strong>{leadDigest.titleEn}</strong>
+        <small>{leadDigest.itemCount || 0} items · {formatDisplayDate(leadDigest.date)}</small>
+      </a>
+    ) : null}
+  </section>
+
+  <div class="collection-shell reveal delay-1">
+    <aside class="collection-rail">
+      <p class="panel__title">Use the archive</p>
+      <ReadingPath title="Three moves" copy={guide.intro} items={guide.steps} />
+      <SubscribeCTA variant="panel" compact showSecondary={false} title="Get the daily signal" copy="A compact email for the AI items that should stay on your radar." />
+    </aside>
+
+    <div class="collection-main">
+      {leadDigest ? (
+        <section class="section section--first">
+          <a class="issue-command-card" href={leadDigest.path || `/blog/${leadDigest.slug}/`}>
+            <div class="issue-command-card__meta">
+              <span>Latest issue</span>
+              <time>{formatDisplayDate(leadDigest.date)}</time>
+              {leadDigest.itemCount ? <strong>{leadDigest.itemCount} items</strong> : null}
+            </div>
+            <h2>{leadDigest.titleEn}</h2>
+            <p>{leadDigest.issueSummaryEn || leadDigest.excerptEn}</p>
+            <span class="issue-command-card__open">Open issue →</span>
+          </a>
+        </section>
+      ) : null}
+
+      {recentDigests.length ? (
+        <section class="section" id="recent-issues">
+          <div class="section__head">
+            <div>
+              <p class="section-eyebrow">Recent</p>
+              <h2 class="section__title">Recent issues</h2>
+              <p class="section__copy">If you missed the last few days, read these in order before going further down the archive.</p>
+            </div>
+          </div>
+
+          <div class="story-list story-list--ledger story-list--issues">
+            {recentDigests.map((digest) => (
+              <a class="story-row" href={digest.path || `/blog/${digest.slug}/`}>
+                <div class="story-row__date">{formatDisplayDate(digest.date)}</div>
+                <div>
+                  <div class="story-row__meta">
+                    <span class="meta-kicker">AI Briefing</span>
+                    {digest.itemCount ? <span class="tag">{digest.itemCount} items</span> : null}
+                  </div>
+                  <h3 class="story-row__title">{digest.titleEn}</h3>
+                  <p class="story-row__excerpt">{digest.excerptEn}</p>
+                </div>
+                <div class="story-row__suffix">Read next</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section class="section" id="archive">
+        <div class="section__head">
+          <div>
+            <p class="section-eyebrow">Archive</p>
+            <h2 class="section__title">Older issues</h2>
+            <p class="section__copy">Work backwards by date when you want to follow a theme as it hardens across multiple daily issues.</p>
+          </div>
+        </div>
+
+        <div class="story-list story-list--ledger story-list--issues">
+          {archiveDigests.map((digest) => (
+            <a class="story-row" href={digest.path || `/blog/${digest.slug}/`}>
+              <div class="story-row__date">{formatBriefDate(digest.date)}</div>
+              <div>
+                <div class="story-row__meta">
+                  <span class="meta-kicker">AI Daily</span>
+                  {digest.itemCount ? <span class="tag">{digest.itemCount} items</span> : null}
+                </div>
+                <h3 class="story-row__title">{digest.titleEn}</h3>
+                <p class="story-row__excerpt">{digest.excerptEn}</p>
+              </div>
+              <div class="story-row__suffix">{digest.itemCount} items</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</CollectionLayout>

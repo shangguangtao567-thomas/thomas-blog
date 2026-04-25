@@ -1,0 +1,50 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const { pathname = '/' } = Astro.props as { pathname?: string };
+
+const navItems = [
+  { href: '/blog/', label: 'Writing', note: 'essays & notes' },
+  { href: '/briefing/', label: 'Briefing', note: 'daily AI signal' },
+  { href: '/topic/', label: 'Topics', note: 'maps & guides' },
+];
+
+function isActive(href: string) {
+  if (href === '/') return pathname === '/' ;
+  return pathname === href || pathname.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-brand" aria-label="Thomas home">
+      <span class="site-brand__mark" aria-hidden="true">
+        <img src="/images/brand-mark.png" alt="" width="48" height="48" decoding="async" />
+      </span>
+      <span class="site-brand__wordmark">
+        <span class="site-brand__name">Thomas</span>
+        <span class="site-brand__tag">Notes, experiments, and daily signal for the agent era.</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="site-nav__link"
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >
+          <span>{item.label}</span>
+          <small>{item.note}</small>
+        </a>
+      ))}
+    </nav>
+
+    <div class="site-actions">
+      <a class="button site-actions__join" href="/#early-readers">
+        Join early readers <span aria-hidden="true">↗</span>
+      </a>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>

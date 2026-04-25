@@ -1,0 +1,301 @@
+{
+  "assets": [
+    {
+      "distPath": "dist/robots.txt",
+      "kind": "robots"
+    },
+    {
+      "distPath": "dist/CNAME",
+      "kind": "cname"
+    },
+    {
+      "distPath": "dist/feed.xml",
+      "kind": "feed"
+    },
+    {
+      "distPath": "dist/sitemap.xml",
+      "kind": "sitemap"
+    }
+  ],
+  "htmlKinds": {
+    "blog-index": {
+      "jsonLd": true,
+      "ogType": "website",
+      "robots": "index,follow"
+    },
+    "briefing-index": {
+      "jsonLd": true,
+      "ogType": "website",
+      "robots": "index,follow"
+    },
+    "compat": {
+      "jsonLd": false,
+      "ogType": "website",
+      "refreshTo": "/briefing/",
+      "robots": "noindex,follow"
+    },
+    "digest": {
+      "jsonLd": true,
+      "ogType": "article",
+      "robots": "index,follow"
+    },
+    "essay": {
+      "jsonLd": true,
+      "ogType": "article",
+      "robots": "index,follow"
+    },
+    "home": {
+      "jsonLd": true,
+      "ogType": "website",
+      "robots": "index,follow"
+    },
+    "not-found": {
+      "jsonLd": true,
+      "ogType": "website",
+      "robots": "noindex,follow"
+    },
+    "topic": {
+      "jsonLd": true,
+      "ogType": "website",
+      "robots": "index,follow"
+    }
+  },
+  "lighthouse": {
+    "directories": {
+      "baseline": "docs/baselines/lighthouse/baseline",
+      "current": "docs/baselines/lighthouse/current"
+    },
+    "fixtures": [
+      {
+        "id": "home",
+        "kind": "home",
+        "label": "Homepage",
+        "path": "/"
+      },
+      {
+        "id": "essay-lead",
+        "kind": "essay",
+        "label": "TurboQuant, KV Cache Compression, and the New Speed of Open Source",
+        "path": "/blog/turboquant-kv-cache-open-source-latency/",
+        "slug": "turboquant-kv-cache-open-source-latency"
+      },
+      {
+        "id": "briefing-index",
+        "kind": "briefing-index",
+        "label": "Briefing index",
+        "path": "/briefing/"
+      },
+      {
+        "id": "digest-lead",
+        "kind": "digest",
+        "label": "AI Daily · April 20, 2026",
+        "path": "/blog/ai-daily-2026-04-20/",
+        "slug": "ai-daily-2026-04-20"
+      },
+      {
+        "id": "topic-lead",
+        "kind": "topic",
+        "label": "AI",
+        "path": "/topic/ai/",
+        "slug": "ai"
+      }
+    ],
+    "profiles": [
+      {
+        "auditTimeoutMs": 45000,
+        "config": "desktop",
+        "gates": {
+          "categories": {
+            "accessibility": {
+              "maxRegression": 0.01,
+              "min": 0.95
+            },
+            "performance": {
+              "min": 0.9
+            },
+            "seo": {
+              "maxRegression": 0.01,
+              "min": 0.95
+            }
+          },
+          "metrics": {
+            "cumulative-layout-shift": {
+              "maxRegression": 0.02
+            },
+            "first-contentful-paint": {
+              "maxRegression": 150
+            },
+            "largest-contentful-paint": {
+              "maxRegression": 250
+            },
+            "total-blocking-time": {
+              "maxRegression": 100
+            }
+          }
+        },
+        "id": "desktop",
+        "label": "Desktop"
+      },
+      {
+        "auditTimeoutMs": 45000,
+        "config": "mobile",
+        "gates": {
+          "categories": {
+            "accessibility": {
+              "maxRegression": 0.01,
+              "min": 0.95
+            },
+            "performance": {
+              "min": 0.85
+            },
+            "seo": {
+              "maxRegression": 0.01,
+              "min": 0.95
+            }
+          },
+          "metrics": {
+            "cumulative-layout-shift": {
+              "maxRegression": 0.03
+            },
+            "first-contentful-paint": {
+              "maxRegression": 250
+            },
+            "largest-contentful-paint": {
+              "maxRegression": 400
+            },
+            "total-blocking-time": {
+              "maxRegression": 150
+            }
+          }
+        },
+        "id": "mobile",
+        "label": "Mobile"
+      }
+    ]
+  },
+  "screenshots": {
+    "directories": {
+      "baseline": "docs/baselines/screenshots/baseline",
+      "current": "docs/baselines/screenshots/current",
+      "diff": "docs/baselines/screenshots/diff"
+    },
+    "fixtures": [
+      {
+        "id": "home",
+        "kind": "home",
+        "label": "Homepage",
+        "path": "/",
+        "readySelector": ".hero__title",
+        "readyTimeoutMs": 5000
+      },
+      {
+        "id": "blog-index",
+        "kind": "blog-index",
+        "label": "Writing index",
+        "path": "/blog/",
+        "readySelector": ".hero__title",
+        "readyTimeoutMs": 5000
+      },
+      {
+        "id": "briefing-index",
+        "kind": "briefing-index",
+        "label": "Briefing index",
+        "path": "/briefing/",
+        "readySelector": ".hero__title",
+        "readyTimeoutMs": 5000
+      },
+      {
+        "id": "tech-compat",
+        "kind": "compat",
+        "label": "Compatibility route",
+        "path": "/tech/",
+        "readySelector": ".compat-shell",
+        "readyTimeoutMs": 3500
+      },
+      {
+        "id": "not-found",
+        "kind": "not-found",
+        "label": "Not found",
+        "path": "/404.html",
+        "readySelector": ".compat-shell",
+        "readyTimeoutMs": 3500
+      },
+      {
+        "id": "essay-lead",
+        "kind": "essay",
+        "label": "TurboQuant, KV Cache Compression, and the New Speed of Open Source",
+        "path": "/blog/turboquant-kv-cache-open-source-latency/",
+        "readySelector": ".article-header__title",
+        "readyTimeoutMs": 5000,
+        "slug": "turboquant-kv-cache-open-source-latency"
+      },
+      {
+        "id": "essay-with-image",
+        "kind": "essay",
+        "label": "AI's Next Breakthrough: Learning What to Forget",
+        "path": "/blog/the-next-ai-breakthrough-is-learning-what-to-forget/",
+        "readySelector": ".article-hero",
+        "readyTimeoutMs": 5000,
+        "slug": "the-next-ai-breakthrough-is-learning-what-to-forget"
+      },
+      {
+        "id": "essay-hidden-hero",
+        "kind": "essay",
+        "label": "Protecting Attention in the AI Era: The Paradox of Filter Success",
+        "path": "/blog/protecting-attention-in-the-ai-era/",
+        "readySelector": ".prose-article",
+        "readyTimeoutMs": 5000,
+        "slug": "protecting-attention-in-the-ai-era"
+      },
+      {
+        "id": "essay-no-image",
+        "kind": "essay",
+        "label": "TurboQuant, KV Cache Compression, and the New Speed of Open Source",
+        "path": "/blog/turboquant-kv-cache-open-source-latency/",
+        "readySelector": ".reading-path__list",
+        "readyTimeoutMs": 5000,
+        "slug": "turboquant-kv-cache-open-source-latency"
+      },
+      {
+        "id": "digest-structured",
+        "kind": "digest",
+        "label": "AI Daily |  Agents and developer tooling, Retrieval, multimodal, and memory systems, Agents and developer tooling",
+        "path": "/blog/ai-daily-2026-03-20/",
+        "readySelector": ".digest-item, .prose-article",
+        "readyTimeoutMs": 6000,
+        "slug": "ai-daily-2026-03-20"
+      },
+      {
+        "id": "digest-markdown",
+        "kind": "digest",
+        "label": "AI Daily · April 20, 2026",
+        "path": "/blog/ai-daily-2026-04-20/",
+        "readySelector": ".prose-article",
+        "readyTimeoutMs": 5000,
+        "slug": "ai-daily-2026-04-20"
+      },
+      {
+        "id": "topic-lead",
+        "kind": "topic",
+        "label": "AI",
+        "path": "/topic/ai/",
+        "readySelector": ".reading-path__list",
+        "readyTimeoutMs": 5000,
+        "slug": "ai"
+      },
+      {
+        "id": "topic-singleton",
+        "kind": "topic",
+        "label": "AI Infrastructure",
+        "path": "/topic/ai-infrastructure/",
+        "readySelector": ".story-list",
+        "readyTimeoutMs": 5000,
+        "slug": "ai-infrastructure"
+      }
+    ],
+    "widths": [
+      390,
+      1440
+    ]
+  }
+}

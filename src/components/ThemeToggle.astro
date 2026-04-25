@@ -1,0 +1,144 @@
+---
+const buttonId = 'theme-toggle';
+---
+
+<button
+  id={buttonId}
+  type="button"
+  class="theme-toggle"
+  aria-label="Switch to dark mode"
+  aria-pressed="false"
+  title="Switch to dark mode"
+  data-theme-toggle
+>
+  <span class="theme-toggle__icon" data-theme-toggle-icon aria-hidden="true">☼</span>
+  <span class="theme-toggle__copy">
+    <span class="theme-toggle__label">Appearance</span>
+    <span class="theme-toggle__mode" data-theme-toggle-mode>Light mode</span>
+  </span>
+</button>
+
+<script is:inline>
+  (() => {
+    const themeStorageKey = 'thomas-theme';
+    const rootElement = document.documentElement;
+    const toggleButton = document.getElementById('theme-toggle');
+    const modeNode = toggleButton?.querySelector('[data-theme-toggle-mode]');
+    const iconNode = toggleButton?.querySelector('[data-theme-toggle-icon]');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    if (!toggleButton) return;
+
+    const readSavedTheme = () => {
+      try {
+        return localStorage.getItem(themeStorageKey);
+      } catch {
+        return null;
+      }
+    };
+
+    const writeSavedTheme = (theme) => {
+      try {
+        localStorage.setItem(themeStorageKey, theme);
+      } catch {}
+    };
+
+    const currentTheme = () => {
+      const activeTheme = rootElement.dataset.theme;
+      if (activeTheme === 'light' || activeTheme === 'dark') return activeTheme;
+      return prefersDark.matches ? 'dark' : 'light';
+    };
+
+    const renderToggle = (theme) => {
+      const isDark = theme === 'dark';
+      rootElement.dataset.theme = isDark ? 'dark' : 'light';
+      toggleButton.dataset.theme = isDark ? 'dark' : 'light';
+      toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      toggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      toggleButton.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      if (modeNode) modeNode.textContent = isDark ? 'Dark mode' : 'Light mode';
+      if (iconNode) iconNode.textContent = isDark ? '☾' : '☼';
+    };
+
+    const savedTheme = readSavedTheme();
+    renderToggle(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : currentTheme());
+
+    toggleButton.addEventListener('click', () => {
+      const nextTheme = currentTheme() === 'dark' ? 'light' : 'dark';
+      writeSavedTheme(nextTheme);
+      renderToggle(nextTheme);
+    });
+
+    if (typeof prefersDark.addEventListener === 'function') {
+      prefersDark.addEventListener('change', () => {
+        const explicitTheme = readSavedTheme();
+        if (explicitTheme === 'light' || explicitTheme === 'dark') return;
+        renderToggle(prefersDark.matches ? 'dark' : 'light');
+      });
+    }
+  })();
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 2.7rem;
+    padding: 0.44rem 0.68rem;
+    border-radius: 0.08rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg-muted);
+    font-family: var(--font-ui);
+    font-size: 0.84rem;
+    font-weight: 500;
+    transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+  }
+
+  .theme-toggle:hover {
+    color: var(--fg);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .theme-toggle[data-theme='dark'] {
+    background: color-mix(in srgb, var(--accent-soft) 70%, var(--surface));
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+    color: var(--fg);
+  }
+
+  .theme-toggle__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.08rem;
+    background: color-mix(in srgb, var(--accent-soft) 58%, transparent);
+    font-size: 0.92rem;
+  }
+
+  .theme-toggle[data-theme='dark'] .theme-toggle__icon {
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+
+  .theme-toggle__copy {
+    display: grid;
+    gap: 0.02rem;
+    text-align: left;
+    line-height: 1.1;
+  }
+
+  .theme-toggle__label {
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+  }
+
+  .theme-toggle__mode {
+    color: var(--fg);
+    font-size: 0.84rem;
+  }
+</style>

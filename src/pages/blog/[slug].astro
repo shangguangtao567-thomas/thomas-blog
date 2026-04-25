@@ -1,0 +1,172 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import DigestItem from '../../components/DigestItem.astro';
+import ReadingPath from '../../components/ReadingPath.astro';
+import SubscribeCTA from '../../components/SubscribeCTA.astro';
+import { getArticlePageData } from '../../content/routes';
+import { buildArticleJsonLd, buildPageMeta } from '../../content/seo';
+import {
+  bodyContainsImage,
+  formatDisplayDate,
+  renderMarkdownHtml,
+  stripDigestSignature,
+  stripLeadingH1,
+  truncateText,
+} from '../../content/normalize';
+import { loadArticleIndex, loadTopics } from '../../content/loaders';
+import { siteConfig } from '../../lib/siteConfig';
+
+export async function getStaticPaths() {
+  return loadArticleIndex().map((item) => ({
+    params: { slug: item.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const articleData = getArticlePageData(slug);
+const post = articleData.post;
+const digestIndex = articleData.digestIndex;
+const digestDetail = articleData.digestDetail;
+const isDigest = articleData.isDigest;
+const continuation = articleData.continuation;
+const digestNeighbors = articleData.digestNeighbors || [];
+const topics = loadTopics();
+const topic = post?.topicSlug ? topics.find((item) => item.slug === post.topicSlug) : undefined;
+
+if (!post) {
+  throw new Error(`Missing article data for ${slug}`);
+}
+
+const canonical = isDigest ? `/blog/${slug}/` : `/blog/${slug}/`;
+const description = isDigest
+  ? truncateText(digestDetail?.issueSummaryEn || digestIndex?.excerptEn || post.excerptEn || post.contentEn || '', 160)
+  : truncateText(post.excerptEn || post.contentEn || '', 160);
+
+const meta = buildPageMeta(canonical, {
+  title: isDigest ? (digestDetail?.titleEn || digestIndex?.titleEn || post.titleEn) : (post.seoTitleEn || post.titleEn),
+  description,
+  ogType: 'article',
+  publishedAt: isDigest ? digestDetail?.date || digestIndex?.date || post.publishedAt : post.publishedAt,
+  lastmod: isDigest ? digestDetail?.generatedAt || digestDetail?.date || digestIndex?.date || post.publishedAt : post.publishedAt,
+  image: post.image ? (post.image.startsWith('/') ? `${siteConfig.siteUrl.replace(/\/$/, '')}${post.image}` : post.image) : undefined,
+  keywords: isDigest ? ['AI Daily', 'AI briefing', ...(digestDetail?.themes || []).map((theme) => theme.themeEn).filter(Boolean)] : post.keywords || [],
+  jsonLd: buildArticleJsonLd(
+    {
+      titleEn: isDigest ? (digestDetail?.titleEn || digestIndex?.titleEn || post.titleEn) : post.titleEn,
+      excerptEn: isDigest ? (digestDetail?.issueSummaryEn || digestIndex?.excerptEn || post.excerptEn) : post.excerptEn,
+      contentEn: post.contentEn,
+      publishedAt: isDigest ? (digestDetail?.date || digestIndex?.date || post.publishedAt) : post.publishedAt,
+      image: post.image,
+      keywords: isDigest ? ['AI Daily', 'AI briefing'] : post.keywords,
+      slug: post.slug,
+    },
+    {
+      canonical: `https://blog.lincept.com${canonical}`,
+      section: isDigest ? 'AI Briefing' : post.tagEn || 'Writing',
+      isDigest,
+    },
+  ),
+});
+
+const bodySource = isDigest
+  ? stripDigestSignature(stripLeadingH1(post.contentEn || '', post.titleEn))
+  : stripLeadingH1(post.contentEn || '', post.titleEn);
+const renderedFallbackHtml = renderMarkdownHtml(post.contentEn || '', post.titleEn, { digest: isDigest });
+const shouldRenderHeroImage = Boolean(post.image) && !post.hideHero && !bodyContainsImage(bodySource, post.image);
+---
+
+<ArticleLayout meta={meta}>
+  <div class="article-main reveal">
+    <a class="section__link" href={isDigest ? '/briefing/' : '/blog/'}>Back</a>
+
+    <header class="article-header">
+      <div class="article-header__meta">
+        <span class="meta-kicker">{isDigest ? 'AI Briefing' : post.tagEn || 'Writing'}</span>
+        <time dateTime={isDigest ? digestDetail?.date || digestIndex?.date || post.publishedAt : post.publishedAt}>
+          {formatDisplayDate(isDigest ? digestDetail?.date || digestIndex?.date || post.publishedAt : post.publishedAt)}
+        </time>
+        <span>{post.readTime} min read</span>
+        {topic ? <a class="tag" href={`/topic/${topic.slug}/`}>{topic.labelEn}</a> : null}
+      </div>
+      <h1 class="article-header__title">{isDigest ? (digestDetail?.titleEn || digestIndex?.titleEn || post.titleEn) : post.titleEn}</h1>
+      <p class="article-header__lede">
+        {isDigest
+          ? (digestDetail?.issueSummaryEn || digestIndex?.excerptEn || post.excerptEn)
+          : post.excerptEn}
+      </p>
+    </header>
+
+    {shouldRenderHeroImage ? (
+      <figure class={`article-hero${post.image?.startsWith('/') ? ' article-hero--local' : ''}`}>
+        <img src={post.image} alt="" loading="eager" />
+      </figure>
+    ) : null}
+
+    <article class="prose-article">
+      {isDigest && digestDetail?.items?.length ? (
+        <>
+          {digestDetail.items.map((item) => <DigestItem item={item} />)}
+        </>
+      ) : (
+        <div set:html={renderedFallbackHtml} />
+      )}
+    </article>
+
+    {continuation ? (
+      <section class="section reveal delay-2">
+        <ReadingPath
+          eyebrow={continuation.eyebrow}
+          title={continuation.title}
+          copy={continuation.intro}
+          items={continuation.items}
+        />
+      </section>
+    ) : null}
+  </div>
+
+  <aside class="article-side reveal delay-1">
+    <section class="panel">
+      <p class="panel__title">{continuation?.contextTitle || 'Reading context'}</p>
+      <p class="collection-card__copy">{continuation?.contextCopy || 'A single page in the Thomas editorial archive.'}</p>
+      {continuation?.contextMeta?.length ? (
+        <ul class="context-list">
+          {continuation.contextMeta.map((item) => <li>{item}</li>)}
+        </ul>
+      ) : null}
+    </section>
+
+    <SubscribeCTA variant="panel" compact />
+
+    {isDigest ? (
+      <section class="panel">
+        <p class="panel__title">Adjacent issues</p>
+        {digestNeighbors.length ? (
+          <div class="story-list">
+            {digestNeighbors.map((digest) => (
+              <a class="story-row" href={digest.path || `/blog/${digest.slug}/`}>
+                <div class="story-row__date">{formatDisplayDate(digest.date)}</div>
+                <div>
+                  <div class="story-row__meta">
+                    <span class="meta-kicker">{digest.relationLabel}</span>
+                  </div>
+                  <h3 class="story-row__title">{digest.titleEn}</h3>
+                  <p class="story-row__excerpt">{digest.issueSummaryEn || digest.excerptEn}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <p class="collection-card__copy">No adjacent issues are available around this edge of the archive.</p>
+        )}
+      </section>
+    ) : topic ? (
+      <section class="panel">
+        <p class="panel__title">Thread map</p>
+        <div class="section-actions">
+          <a class="button button--ghost" href={`/topic/${topic.slug}/`}>Open {topic.labelEn}</a>
+          <a class="button button--ghost" href="/blog/">All writing</a>
+        </div>
+      </section>
+    ) : null}
+  </aside>
+</ArticleLayout>

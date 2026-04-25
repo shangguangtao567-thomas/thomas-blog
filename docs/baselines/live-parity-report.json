@@ -1,0 +1,130 @@
+{
+  "asset": {
+    "assetPath": "",
+    "contentType": "",
+    "errors": [
+      "Could not find a representative /_astro asset on the live homepage"
+    ],
+    "status": 0
+  },
+  "errorCount": 35,
+  "errors": [
+    "/: Title mismatch: expected \"Thomas · Editorial research desk for AI, open source, and agent-era engineering\", got \"Thomas · AI, Open Source, and Agent-era Engineering\"",
+    "/: Missing stable main content target `#main-content`",
+    "/: Homepage is missing the visible-on-focus skip link",
+    "/briefing/: Title mismatch: expected \"AI Briefing · Thomas\", got \"AI Briefing · Thomas — AI &amp; Engineering\"",
+    "/briefing/: Missing stable main content target `#main-content`",
+    "/briefing/: Briefing index is missing the live archive handoff CTA",
+    "/tech/: Title mismatch: expected \"AI Briefing · Thomas\", got \"AI Briefing · Thomas — AI &amp; Engineering\"",
+    "/tech/: Robots mismatch: expected noindex,follow, got index,follow",
+    "/tech/: Missing stable main content target `#main-content`",
+    "/tech/: Compatibility route is missing the /briefing/ refresh handoff",
+    "/tech/: Compatibility route is missing the compat shell markup",
+    "/tech/: Compatibility route is missing the briefing handoff link",
+    "/404.html: Expected HTTP 404, got 200",
+    "/404.html: Title mismatch: expected \"Not found · Thomas\", got \"Redirecting…\"",
+    "/404.html: Canonical mismatch: expected https://blog.lincept.com/404.html, got (missing)",
+    "/404.html: Robots mismatch: expected noindex,follow, got noindex",
+    "/404.html: og:type mismatch: expected website, got (missing)",
+    "/404.html: Missing stable main content target `#main-content`",
+    "/404.html: 404 page is missing the shared fallback shell",
+    "/404.html: 404 page is missing the briefing recovery link",
+    "/blog/turboquant-kv-cache-open-source-latency/: Missing stable main content target `#main-content`",
+    "/blog/turboquant-kv-cache-open-source-latency/: Essay detail is missing the article header",
+    "/blog/turboquant-kv-cache-open-source-latency/: Essay detail is missing the continuation reading path",
+    "/blog/ai-daily-2026-04-20/: Missing stable main content target `#main-content`",
+    "/blog/ai-daily-2026-04-20/: Digest detail is missing the article header",
+    "/blog/ai-daily-2026-04-20/: Digest detail is missing the adjacent issues rail",
+    "/topic/ai/: Expected HTTP 200, got 404",
+    "/topic/ai/: Title mismatch: expected \"AI · Thomas\", got \"Redirecting…\"",
+    "/topic/ai/: Canonical mismatch: expected https://blog.lincept.com/topic/ai/, got (missing)",
+    "/topic/ai/: Robots mismatch: expected index,follow, got noindex",
+    "/topic/ai/: og:type mismatch: expected website, got (missing)",
+    "/topic/ai/: Missing stable main content target `#main-content`",
+    "/topic/ai/: Topic page is missing the start-here reading path",
+    "/topic/ai/: Topic page is missing the archive story list",
+    "Could not find a representative /_astro asset on the live homepage"
+  ],
+  "generatedAt": "2026-04-20T10:43:38.095Z",
+  "routeCount": 7,
+  "routes": [
+    {
+      "attempt": 3,
+      "canonical": "https://blog.lincept.com/",
+      "id": "home",
+      "ogType": "website",
+      "path": "/",
+      "refresh": "",
+      "robots": "index,follow",
+      "status": 200,
+      "title": "Thomas · AI, Open Source, and Agent-era Engineering"
+    },
+    {
+      "attempt": 3,
+      "canonical": "https://blog.lincept.com/briefing/",
+      "id": "briefing-index",
+      "ogType": "website",
+      "path": "/briefing/",
+      "refresh": "",
+      "robots": "index,follow",
+      "status": 200,
+      "title": "AI Briefing · Thomas — AI &amp; Engineering"
+    },
+    {
+      "attempt": 3,
+      "canonical": "https://blog.lincept.com/briefing/",
+      "id": "tech-compat",
+      "ogType": "website",
+      "path": "/tech/",
+      "refresh": "",
+      "robots": "index,follow",
+      "status": 200,
+      "title": "AI Briefing · Thomas — AI &amp; Engineering"
+    },
+    {
+      "attempt": 3,
+      "canonical": "",
+      "id": "not-found",
+      "ogType": "",
+      "path": "/404.html",
+      "refresh": "",
+      "robots": "noindex",
+      "status": 200,
+      "title": "Redirecting…"
+    },
+    {
+      "attempt": 3,
+      "canonical": "https://blog.lincept.com/blog/turboquant-kv-cache-open-source-latency/",
+      "id": "essay-lead",
+      "ogType": "article",
+      "path": "/blog/turboquant-kv-cache-open-source-latency/",
+      "refresh": "",
+      "robots": "index,follow",
+      "status": 200,
+      "title": "TurboQuant, KV Cache Compression, and the New Speed of Open Source"
+    },
+    {
+      "attempt": 3,
+      "canonical": "https://blog.lincept.com/blog/ai-daily-2026-04-20/",
+      "id": "digest-lead",
+      "ogType": "article",
+      "path": "/blog/ai-daily-2026-04-20/",
+      "refresh": "",
+      "robots": "index,follow",
+      "status": 200,
+      "title": "AI Daily · April 20, 2026"
+    },
+    {
+      "attempt": 3,
+      "canonical": "",
+      "id": "topic-lead",
+      "ogType": "",
+      "path": "/topic/ai/",
+      "refresh": "",
+      "robots": "noindex",
+      "status": 404,
+      "title": "Redirecting…"
+    }
+  ],
+  "siteUrl": "https://blog.lincept.com"
+}

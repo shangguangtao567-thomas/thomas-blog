@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">River reading map</title>
+  <desc id="desc">Editorial map showing a river path with selected notes instead of a bucket list.</desc>
+  <rect width="1200" height="760" fill="#fbf8ef"/>
+  <g opacity=".5" stroke="#d8cebd">
+    <path d="M0 128h1200M0 256h1200M0 384h1200M0 512h1200M0 640h1200"/>
+    <path d="M160 0v760M320 0v760M480 0v760M640 0v760M800 0v760M960 0v760M1120 0v760"/>
+  </g>
+  <path d="M126 168c134 18 208 84 276 144 78 70 146 114 272 130 116 16 232-6 400-110" fill="none" stroke="#6b8f76" stroke-width="58" stroke-linecap="round"/>
+  <path d="M126 168c134 18 208 84 276 144 78 70 146 114 272 130 116 16 232-6 400-110" fill="none" stroke="#89b09a" stroke-width="30" stroke-linecap="round"/>
+  <path d="M126 168c134 18 208 84 276 144 78 70 146 114 272 130 116 16 232-6 400-110" fill="none" stroke="#dfe9df" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 22"/>
+  <rect x="172" y="92" width="214" height="124" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".16"/>
+  <rect x="452" y="254" width="226" height="132" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".16"/>
+  <rect x="798" y="182" width="218" height="124" fill="#fffdf7" stroke="#1a1a16" stroke-opacity=".16"/>
+  <text x="202" y="134" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="20" letter-spacing="3">READ TODAY</text>
+  <text x="202" y="186" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="46" font-weight="600">Take one note.</text>
+  <text x="480" y="296" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="20" letter-spacing="3">DO NOT HOARD</text>
+  <text x="480" y="348" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="46" font-weight="600">The river keeps moving.</text>
+  <text x="828" y="224" fill="#7a7266" font-family="IBM Plex Mono, monospace" font-size="20" letter-spacing="3">RETURN TOMORROW</text>
+  <text x="828" y="276" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="46" font-weight="600">No backlog guilt.</text>
+  <circle cx="386" cy="226" r="13" fill="#c85135"/>
+  <circle cx="690" cy="416" r="13" fill="#c85135"/>
+  <circle cx="782" cy="286" r="13" fill="#c85135"/>
+  <text x="256" y="610" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="68" font-weight="600">Treat the reading list like a river,</text>
+  <text x="334" y="674" fill="#1a1a16" font-family="Newsreader, Georgia, serif" font-size="68" font-weight="600">not a bucket.</text>
+</svg>

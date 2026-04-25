@@ -6,7 +6,7 @@ excerptZh: "完整记录 OpenClaw 的安装配置流程，涵盖 Telegram、Disc
 excerptEn: "A complete walkthrough of OpenClaw installation and configuration, covering Telegram/Discord integration, skill extensions, and common troubleshooting."
 tag: "AI"
 tagEn: "AI"
-image: "/images/openclaw-ultimate-setup-guide.jpg"
+image: "/images/openclaw-ultimate-setup-guide.png"
 readTime: 15
 publishedAt: "2026-03-03"
 ---

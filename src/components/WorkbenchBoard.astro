@@ -1,0 +1,154 @@
+---
+import { formatDisplayDate } from '../content/normalize';
+
+type WorkbenchPost = {
+  slug: string;
+  titleEn: string;
+  excerptEn?: string;
+  readTime?: number;
+  publishedAt?: string;
+  tagEn?: string;
+  path?: string;
+  itemCount?: number;
+};
+
+type WorkbenchTopic = {
+  slug: string;
+  labelEn: string;
+  count: number;
+};
+
+type Props = {
+  leadEssay?: WorkbenchPost;
+  latestDigests?: WorkbenchPost[];
+  topics?: WorkbenchTopic[];
+};
+
+const { leadEssay, latestDigests = [], topics = [] } = Astro.props as Props;
+const queue = [
+  ...(latestDigests || []).slice(0, 3).map((item) => ({
+    href: item.path || `/blog/${item.slug}/`,
+    label: 'Daily signal',
+    title: item.titleEn,
+    meta: item.itemCount ? `${item.itemCount} items` : 'AI briefing',
+  })),
+  ...(topics || []).slice(0, 2).map((topic) => ({
+    href: `/topic/${topic.slug}/`,
+    label: 'Topic map',
+    title: topic.labelEn,
+    meta: `${topic.count} posts`,
+  })),
+].slice(0, 5);
+---
+
+<section class="workbench" aria-label="Thomas workbench">
+  <div class="workbench__bar">
+    <span>On the desk</span>
+    <time>{formatDisplayDate(leadEssay?.publishedAt || new Date().toISOString())}</time>
+  </div>
+
+  <div class="workbench__surface">
+    <a class="bench-card bench-card--note" href={leadEssay ? `/blog/${leadEssay.slug}/` : '/blog/'}>
+      <span class="bench-card__pin" aria-hidden="true"></span>
+      <p class="bench-card__eyebrow">Latest note</p>
+      <h2>{leadEssay?.titleEn || 'Why OpenClaw Took Off: A Product of the Agent Era'}</h2>
+      <p>{leadEssay?.excerptEn || 'A close look at reachability, habit loops, and why this category unlocked.'}</p>
+      <span class="bench-card__footer">
+        <span>{leadEssay?.readTime || 8} min read</span>
+        <span aria-hidden="true">→</span>
+      </span>
+    </a>
+
+    <div class="sticky-note" aria-label="Current operating rule">
+      <span>working rule</span>
+      <span>one loop</span>
+      <span>ship small</span>
+      <span>observe</span>
+      <span>rewrite</span>
+    </div>
+
+    <div class="code-card" aria-label="Judgment test">
+      <div class="code-card__head">
+        <span>Judgment test</span>
+        <span>py</span>
+      </div>
+      <pre><code>def keep(note):
+    signal = note.useful
+    noise = note.novel
+    return signal &gt; noise</code></pre>
+      <p># useful beats impressive</p>
+    </div>
+
+    <div class="run-card" aria-label="Evidence log">
+      <p class="run-card__title">Evidence log</p>
+      <div><span>note</span><span>test</span><span>ship</span></div>
+      <div><span>clarity</span><strong>0.78</strong><i style="--w: 84%"></i></div>
+      <div><span>friction</span><strong>0.31</strong><i style="--w: 38%"></i></div>
+      <div><span>next step</span><strong>1</strong><i style="--w: 68%"></i></div>
+      <p>move one idea from draft to proof.</p>
+    </div>
+
+    <div class="signal-card" aria-label="Signal radar">
+      <p class="signal-card__title">Signal radar</p>
+      <div>
+        <strong>Agent UX</strong>
+        <span>habits, not demos</span>
+      </div>
+      <div>
+        <strong>Memory</strong>
+        <span>retrieval and compression</span>
+      </div>
+      <div>
+        <strong>Infra</strong>
+        <span>latency, cost, evals</span>
+      </div>
+    </div>
+
+    <div class="idea-card" aria-label="Idea bank">
+      <p>Idea bank <span aria-hidden="true">＋</span></p>
+      <ul>
+        <li>agent memory retrieval</li>
+        <li>browser context compaction</li>
+        <li>long-horizon evals</li>
+      </ul>
+    </div>
+
+    <div class="loop-card" aria-label="Sensemaking loop">
+      <p>Sensemaking loop</p>
+      <ol>
+        <li><span>01</span><strong>Collect signals</strong></li>
+        <li><span>02</span><strong>Compress to claims</strong></li>
+        <li><span>03</span><strong>Test in workflow</strong></li>
+        <li><span>04</span><strong>Publish as memory</strong></li>
+      </ol>
+    </div>
+
+    <div class="field-card" aria-label="Field note">
+      <div class="field-card__image"></div>
+      <p>Field note</p>
+      <span>Walks > prompts. Distance helps clarity.</span>
+    </div>
+  </div>
+
+  <div class="workbench__caption">
+    <span>A working surface for essays, AI signal, and reusable notes.</span>
+    <a href="/blog/">View full archive →</a>
+  </div>
+</section>
+
+<aside class="briefing-queue" aria-label="Briefing queue">
+  <p class="briefing-queue__title">Briefing queue <span>{queue.length}</span></p>
+  <div class="briefing-queue__list">
+    {queue.map((item) => (
+      <a class="briefing-queue__item" href={item.href}>
+        <span class="briefing-queue__icon" aria-hidden="true">✣</span>
+        <span>
+          <small>{item.label}</small>
+          <strong>{item.title}</strong>
+          <em>{item.meta}</em>
+        </span>
+      </a>
+    ))}
+  </div>
+  <a class="briefing-queue__link" href="/briefing/">View full briefing →</a>
+</aside>
