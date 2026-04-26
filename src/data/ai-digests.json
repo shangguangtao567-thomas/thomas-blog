@@ -1,5 +1,44 @@
 [
   {
+    "slug": "ai-daily-2026-04-26",
+    "date": "2026-04-26",
+    "titleEn": "AI Daily · 2026-04-26",
+    "excerptEn": "DeepSeek V4 open-sources a frontier-competitive model at 1/10th the cost; AI backlash escalates as compute crunch bites GitHub Copilot, raises GPU prices 3.6×, and triggers Virginia electricity rate spikes; Anthropic secures $10B from Google and eyes $800B+ IPO; OpenAI unifies GPT-5.5 with Codex and launches a $25K bio jailbreak bounty.",
+    "issueSummaryZh": "DeepSeek V4 open-sources a frontier-competitive model at 1/10th the cost; AI backlash escalates as compute crunch bites GitHub Copilot, raises GPU prices 3.6×, and triggers Virginia electricity rate spikes; Anthropic secures $10B from Google and eyes $800B+ IPO; OpenAI unifies GPT-5.5 with Codex and launches a $25K bio jailbreak bounty.",
+    "issueSummaryEn": "DeepSeek V4 open-sources a frontier-competitive model at 1/10th the cost; AI backlash escalates as compute crunch bites GitHub Copilot, raises GPU prices 3.6×, and triggers Virginia electricity rate spikes; Anthropic secures $10B from Google and eyes $800B+ IPO; OpenAI unifies GPT-5.5 with Codex and launches a $25K bio jailbreak bounty.",
+    "path": "/blog/ai-daily-2026-04-26",
+    "itemCount": 9,
+    "heroTitleZh": "DeepSeek V4 open-sources frontier-competitive model at 1/10th cost with 1M-token context",
+    "heroTitleEn": "DeepSeek V4 open-sources frontier-competitive model at 1/10th cost with 1M-token context",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 9,
+      "succeeded": 9,
+      "totalWords": 5600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 6
+      },
+      {
+        "themeZh": "Industry",
+        "themeEn": "Industry",
+        "count": 2
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-21",
     "date": "2026-04-21",
     "titleEn": "AI Daily · April 21, 2026",
