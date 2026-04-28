@@ -1,5 +1,49 @@
 [
   {
+    "slug": "ai-daily-2026-04-28",
+    "date": "2026-04-28",
+    "titleEn": "AI Daily · April 28, 2026",
+    "excerptEn": "OpenAI-Microsoft dissolve their AGI revenue-sharing deal, GPT 5.5 demonstrates 6-hour autonomous task execution, Anthropic's automated alignment researchers achieve near-human-level research performance, and China blocks Meta's $2B Manus acquisition in a busy week for AI policy and capability milestones.",
+    "issueSummaryZh": "OpenAI-Microsoft dissolve their AGI revenue-sharing deal, GPT 5.5 demonstrates 6-hour autonomous task execution, Anthropic's automated alignment researchers achieve near-human-level research performance, and China blocks Meta's $2B Manus acquisition in a busy week for AI policy and capability milestones.",
+    "issueSummaryEn": "OpenAI-Microsoft dissolve their AGI revenue-sharing deal, GPT 5.5 demonstrates 6-hour autonomous task execution, Anthropic's automated alignment researchers achieve near-human-level research performance, and China blocks Meta's $2B Manus acquisition in a busy week for AI policy and capability milestones.",
+    "path": "/blog/ai-daily-2026-04-28",
+    "itemCount": 7,
+    "heroTitleZh": "OpenAI and Microsoft Dissolve Their AGI Revenue-Sharing Deal",
+    "heroTitleEn": "OpenAI and Microsoft Dissolve Their AGI Revenue-Sharing Deal",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 7,
+      "succeeded": 7,
+      "totalWords": 4000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 3
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 2
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-26",
     "date": "2026-04-26",
     "titleEn": "AI Daily · 2026-04-26",
