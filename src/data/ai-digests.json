@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ai-daily-2026-05-05",
+    "date": "2026-05-05",
+    "titleEn": "AI Daily · May 5, 2026",
+    "excerptEn": "Week one of the Musk v. Altman trial exposes xAI-OpenAI distillation ties; Cerebras files a $3.5B IPO at $26.6B valuation; Microsoft makes Agent 365 generally available at $15/user/month; Apple accidentally ships Claude.md, revealing its deep Anthropic dependency; the Trump administration proposes pre-release government review of frontier AI models.",
+    "issueSummaryZh": "Week one of the Musk v. Altman trial exposes xAI-OpenAI distillation ties; Cerebras files a $3.5B IPO at $26.6B valuation; Microsoft makes Agent 365 generally available at $15/user/month; Apple accidentally ships Claude.md, revealing its deep Anthropic dependency; the Trump administration proposes pre-release government review of frontier AI models.",
+    "issueSummaryEn": "Week one of the Musk v. Altman trial exposes xAI-OpenAI distillation ties; Cerebras files a $3.5B IPO at $26.6B valuation; Microsoft makes Agent 365 generally available at $15/user/month; Apple accidentally ships Claude.md, revealing its deep Anthropic dependency; the Trump administration proposes pre-release government review of frontier AI models.",
+    "path": "/blog/ai-daily-2026-05-05",
+    "itemCount": 8,
+    "heroTitleZh": "Week One of Musk v. Altman Trial Surfaces xAI-OpenAI Distillation and Zuckerberg Coordination",
+    "heroTitleEn": "Week One of Musk v. Altman Trial Surfaces xAI-OpenAI Distillation and Zuckerberg Coordination",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 4000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 2
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 2
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Tools",
+        "themeEn": "Tools",
+        "count": 1
+      },
+      {
+        "themeZh": "Architecture",
+        "themeEn": "Architecture",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-04-28",
     "date": "2026-04-28",
     "titleEn": "AI Daily · April 28, 2026",
