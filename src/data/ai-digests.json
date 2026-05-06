@@ -1,5 +1,49 @@
 [
   {
+    "slug": "ai-daily-2026-05-06",
+    "date": "2026-05-06",
+    "titleEn": "AI Daily · May 06, 2026",
+    "excerptEn": "This week's AI news: Anthropic launches finance agent templates, Google releases Gemma 4 with 3x inference speedup, SAP bets €1.16B on tabular foundation models, Meta faces copyright lawsuit over Llama training, and a new benchmark reveals computer-use agents cost 45x more than structured APIs.",
+    "issueSummaryZh": "This week's AI news: Anthropic launches finance agent templates, Google releases Gemma 4 with 3x inference speedup, SAP bets €1.16B on tabular foundation models, Meta faces copyright lawsuit over Llama training, and a new benchmark reveals computer-use agents cost 45x more than structured APIs.",
+    "issueSummaryEn": "This week's AI news: Anthropic launches finance agent templates, Google releases Gemma 4 with 3x inference speedup, SAP bets €1.16B on tabular foundation models, Meta faces copyright lawsuit over Llama training, and a new benchmark reveals computer-use agents cost 45x more than structured APIs.",
+    "path": "/blog/ai-daily-2026-05-06",
+    "itemCount": 8,
+    "heroTitleZh": "Anthropic Launches 10 Finance Agent Templates and Microsoft 365 Claude Add-ins",
+    "heroTitleEn": "Anthropic Launches 10 Finance Agent Templates and Microsoft 365 Claude Add-ins",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 5600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 3
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 3
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-05",
     "date": "2026-05-05",
     "titleEn": "AI Daily · May 5, 2026",
