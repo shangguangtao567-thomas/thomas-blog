@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ai-daily-2026-05-08",
+    "date": "2026-05-08",
+    "titleEn": "AI Daily · May 8, 2026",
+    "excerptEn": "Anthropic signs a $200B Google TPU deal, Firefox ships 423 security fixes with Claude, Sakana's RL Conductor learns to orchestrate GPT-5 and Claude, Anthropic publishes model-interpretability research that reads Claude's unverbalized thoughts, and DeepSeek V4 Flash gets a native Metal inference engine.",
+    "issueSummaryZh": "Anthropic signs a $200B Google TPU deal, Firefox ships 423 security fixes with Claude, Sakana's RL Conductor learns to orchestrate GPT-5 and Claude, Anthropic publishes model-interpretability research that reads Claude's unverbalized thoughts, and DeepSeek V4 Flash gets a native Metal inference engine.",
+    "issueSummaryEn": "Anthropic signs a $200B Google TPU deal, Firefox ships 423 security fixes with Claude, Sakana's RL Conductor learns to orchestrate GPT-5 and Claude, Anthropic publishes model-interpretability research that reads Claude's unverbalized thoughts, and DeepSeek V4 Flash gets a native Metal inference engine.",
+    "path": "/blog/ai-daily-2026-05-08",
+    "itemCount": 8,
+    "heroTitleZh": "Anthropic $200B Google TPU deal",
+    "heroTitleEn": "Anthropic $200B Google TPU deal",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 5600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 2
+      },
+      {
+        "themeZh": "Tools",
+        "themeEn": "Tools",
+        "count": 2
+      },
+      {
+        "themeZh": "Infrastructure",
+        "themeEn": "Infrastructure",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Reasoning",
+        "themeEn": "Reasoning",
+        "count": 1
+      },
+      {
+        "themeZh": "Multimodal",
+        "themeEn": "Multimodal",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-06",
     "date": "2026-05-06",
     "titleEn": "AI Daily · May 06, 2026",
