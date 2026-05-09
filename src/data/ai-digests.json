@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ai-daily-2026-05-09",
+    "date": "2026-05-09",
+    "titleEn": "AI Daily · May 9, 2026",
+    "excerptEn": "Anthropic hits $30B revenue run rate and signs the largest chip rental in history; DeepSeek raises at $45B; Mozilla finds 271 Firefox bugs with a single AI agent; Google AlphaEvolve AI designs next-gen TPU silicon.",
+    "issueSummaryZh": "Anthropic hits $30B revenue run rate and signs the largest chip rental in history; DeepSeek raises at $45B; Mozilla finds 271 Firefox bugs with a single AI agent; Google AlphaEvolve AI designs next-gen TPU silicon.",
+    "issueSummaryEn": "Anthropic hits $30B revenue run rate and signs the largest chip rental in history; DeepSeek raises at $45B; Mozilla finds 271 Firefox bugs with a single AI agent; Google AlphaEvolve AI designs next-gen TPU silicon.",
+    "path": "/blog/ai-daily-2026-05-09",
+    "itemCount": 10,
+    "heroTitleZh": "AI Daily 2026-05-09",
+    "heroTitleEn": "AI Daily 2026-05-09",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 10,
+      "succeeded": 10,
+      "totalWords": 6000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 4
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 2
+      },
+      {
+        "themeZh": "Company",
+        "themeEn": "Company",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Labor",
+        "themeEn": "Labor",
+        "count": 1
+      },
+      {
+        "themeZh": "Platform",
+        "themeEn": "Platform",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-08",
     "date": "2026-05-08",
     "titleEn": "AI Daily · May 8, 2026",
