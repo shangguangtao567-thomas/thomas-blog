@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-05-10",
+    "date": "2026-05-10",
+    "titleEn": "AI Daily · May 10, 2026",
+    "excerptEn": "OpenAI's governance trial reaches a boiling point in court as Greg Brockman testifies Elon Musk wanted full control of OpenAI; Google DeepMind upgrades Gemini File Search with native multimodal RAG; a new benchmark finds frontier LLMs silently corrupt a quarter of delegated document content; DigitalOcean launches a five-layer AI-native cloud stack; DeepSeek reportedly seeks a ~$50B mega-round; and Baidu's DuMate tops agent benchmarks.",
+    "issueSummaryZh": "OpenAI's governance trial reaches a boiling point in court as Greg Brockman testifies Elon Musk wanted full control of OpenAI; Google DeepMind upgrades Gemini File Search with native multimodal RAG; a new benchmark finds frontier LLMs silently corrupt a quarter of delegated document content; DigitalOcean launches a five-layer AI-native cloud stack; DeepSeek reportedly seeks a ~$50B mega-round; and Baidu's DuMate tops agent benchmarks.",
+    "issueSummaryEn": "OpenAI's governance trial reaches a boiling point in court as Greg Brockman testifies Elon Musk wanted full control of OpenAI; Google DeepMind upgrades Gemini File Search with native multimodal RAG; a new benchmark finds frontier LLMs silently corrupt a quarter of delegated document content; DigitalOcean launches a five-layer AI-native cloud stack; DeepSeek reportedly seeks a ~$50B mega-round; and Baidu's DuMate tops agent benchmarks.",
+    "path": "/blog/ai-daily-2026-05-10",
+    "itemCount": 7,
+    "heroTitleZh": "OpenAI Governance Trial: Musk Demanded Majority Equity and Board Control as OpenAI Weighs $1T IPO",
+    "heroTitleEn": "OpenAI Governance Trial: Musk Demanded Majority Equity and Board Control as OpenAI Weighs $1T IPO",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 7,
+      "succeeded": 7,
+      "totalWords": 4000,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 3
+      },
+      {
+        "themeZh": "Governance",
+        "themeEn": "Governance",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Business",
+        "themeEn": "Business",
+        "count": 1
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-09",
     "date": "2026-05-09",
     "titleEn": "AI Daily · May 9, 2026",
