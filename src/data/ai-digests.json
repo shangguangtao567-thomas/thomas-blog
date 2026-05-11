@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-05-11",
+    "date": "2026-05-11",
+    "titleEn": "AI Daily · May 11, 2026",
+    "excerptEn": "NVIDIA's robotics chief declares VLA dead in favor of world-action models; a Chinese robot manipulation paper hits 99.9% on LIBERO; Claude alignment improves via constitutional training; and AutoTTS automates test-time scaling discovery for $39.9.",
+    "issueSummaryZh": "NVIDIA's robotics chief declares VLA dead in favor of world-action models; a Chinese robot manipulation paper hits 99.9% on LIBERO; Claude alignment improves via constitutional training; and AutoTTS automates test-time scaling discovery for $39.9.",
+    "issueSummaryEn": "NVIDIA's robotics chief declares VLA dead in favor of world-action models; a Chinese robot manipulation paper hits 99.9% on LIBERO; Claude alignment improves via constitutional training; and AutoTTS automates test-time scaling discovery for $39.9.",
+    "path": "/blog/ai-daily-2026-05-11",
+    "itemCount": 8,
+    "heroTitleZh": "NVIDIA Robotics Chief Declares VLA Dead, Backs World-Action Model Pretraining on Egocentric Video",
+    "heroTitleEn": "NVIDIA Robotics Chief Declares VLA Dead, Backs World-Action Model Pretraining on Egocentric Video",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 5600,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Reasoning",
+        "themeEn": "Reasoning",
+        "count": 3
+      },
+      {
+        "themeZh": "Architecture",
+        "themeEn": "Architecture",
+        "count": 2
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-10",
     "date": "2026-05-10",
     "titleEn": "AI Daily · May 10, 2026",
