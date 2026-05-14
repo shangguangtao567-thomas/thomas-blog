@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-05-14",
+    "date": "2026-05-14",
+    "titleEn": "AI Daily · May 14, 2026",
+    "excerptEn": "Anthropic overtakes OpenAI in paid business adoption; Amazon Alexa+ becomes an agentic shopping assistant; Google embeds Gemini Intelligence across Android; Notion crosses 1 million custom agents; new research exposes benchmark gaming and belief implantation risks in LLMs; and OpenAI and DeepSeek race to raise billions for AI infrastructure.",
+    "issueSummaryZh": "Anthropic overtakes OpenAI in paid business adoption; Amazon Alexa+ becomes an agentic shopping assistant; Google embeds Gemini Intelligence across Android; Notion crosses 1 million custom agents; new research exposes benchmark gaming and belief implantation risks in LLMs; and OpenAI and DeepSeek race to raise billions for AI infrastructure.",
+    "issueSummaryEn": "Anthropic overtakes OpenAI in paid business adoption; Amazon Alexa+ becomes an agentic shopping assistant; Google embeds Gemini Intelligence across Android; Notion crosses 1 million custom agents; new research exposes benchmark gaming and belief implantation risks in LLMs; and OpenAI and DeepSeek race to raise billions for AI infrastructure.",
+    "path": "/blog/ai-daily-2026-05-14",
+    "itemCount": 8,
+    "heroTitleZh": "Anthropic overtakes OpenAI in paid business adoption",
+    "heroTitleEn": "Anthropic overtakes OpenAI in paid business adoption",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 3200,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 4
+      },
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 1
+      },
+      {
+        "themeZh": "Safety",
+        "themeEn": "Safety",
+        "count": 1
+      },
+      {
+        "themeZh": "Training",
+        "themeEn": "Training",
+        "count": 1
+      },
+      {
+        "themeZh": "Other",
+        "themeEn": "Other",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-11",
     "date": "2026-05-11",
     "titleEn": "AI Daily · May 11, 2026",
