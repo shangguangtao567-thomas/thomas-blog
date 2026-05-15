@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-05-15",
+    "date": "2026-05-15",
+    "titleEn": "AI Daily · 2026-05-15",
+    "excerptEn": "Cerebras scores 2026's first major tech IPO; Recursive Superintelligence raises $650M for self-improving AI; OpenAI brings Codex to mobile; researchers expose widespread reward-hacking in agent benchmarks and a critical vulnerability in speculative decoding.",
+    "issueSummaryZh": "Cerebras scores 2026's first major tech IPO; Recursive Superintelligence raises $650M for self-improving AI; OpenAI brings Codex to mobile; researchers expose widespread reward-hacking in agent benchmarks and a critical vulnerability in speculative decoding.",
+    "issueSummaryEn": "Cerebras scores 2026's first major tech IPO; Recursive Superintelligence raises $650M for self-improving AI; OpenAI brings Codex to mobile; researchers expose widespread reward-hacking in agent benchmarks and a critical vulnerability in speculative decoding.",
+    "path": "/blog/ai-daily-2026-05-15",
+    "itemCount": 7,
+    "heroTitleZh": "Cerebras surges 108% in 2026's opening tech IPO, reaching a $66 billion valuation",
+    "heroTitleEn": "Cerebras surges 108% in 2026's opening tech IPO, reaching a $66 billion valuation",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 7,
+      "succeeded": 7,
+      "totalWords": 4400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 2
+      },
+      {
+        "themeZh": "Reasoning",
+        "themeEn": "Reasoning",
+        "count": 2
+      },
+      {
+        "themeZh": "Business",
+        "themeEn": "Business",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      },
+      {
+        "themeZh": "Security",
+        "themeEn": "Security",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-14",
     "date": "2026-05-14",
     "titleEn": "AI Daily · May 14, 2026",
