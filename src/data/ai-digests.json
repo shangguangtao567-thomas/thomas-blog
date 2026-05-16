@@ -1,5 +1,54 @@
 [
   {
+    "slug": "ai-daily-2026-05-16",
+    "date": "2026-05-16",
+    "titleEn": "AI Daily · May 16, 2026",
+    "excerptEn": "This week: ChatGPT connects to real bank accounts, Anthropic publishes a landmark alignment study, Nous Research slashes pretraining costs by 60%, Recursive Superintelligence raises $650M, Runway stakes its claim on world models, and two security milestones redefine what AI can do in adversarial environments.",
+    "issueSummaryZh": "This week: ChatGPT connects to real bank accounts, Anthropic publishes a landmark alignment study, Nous Research slashes pretraining costs by 60%, Recursive Superintelligence raises $650M, Runway stakes its claim on world models, and two security milestones redefine what AI can do in adversarial environments.",
+    "issueSummaryEn": "This week: ChatGPT connects to real bank accounts, Anthropic publishes a landmark alignment study, Nous Research slashes pretraining costs by 60%, Recursive Superintelligence raises $650M, Runway stakes its claim on world models, and two security milestones redefine what AI can do in adversarial environments.",
+    "path": "/blog/ai-daily-2026-05-16",
+    "itemCount": 8,
+    "heroTitleZh": "ChatGPT connects bank accounts via Plaid",
+    "heroTitleEn": "ChatGPT connects bank accounts via Plaid",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 6400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 3
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 2
+      },
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 1
+      },
+      {
+        "themeZh": "Training",
+        "themeEn": "Training",
+        "count": 1
+      },
+      {
+        "themeZh": "Multimodal",
+        "themeEn": "Multimodal",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-15",
     "date": "2026-05-15",
     "titleEn": "AI Daily · 2026-05-15",
