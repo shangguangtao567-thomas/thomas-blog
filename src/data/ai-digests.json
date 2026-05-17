@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ai-daily-2026-05-17",
+    "date": "2026-05-17",
+    "titleEn": "AI Daily · 2026-05-17",
+    "excerptEn": "This week's AI developments span world models that generate minute-scale 720p video on consumer GPUs, OpenAI's first national ChatGPT Plus deployment in Malta, new open-source agent frameworks with self-improving memory loops, and arXiv's enforcement of a one-year ban on unverified AI-generated preprints.",
+    "issueSummaryZh": "This week's AI developments span world models that generate minute-scale 720p video on consumer GPUs, OpenAI's first national ChatGPT Plus deployment in Malta, new open-source agent frameworks with self-improving memory loops, and arXiv's enforcement of a one-year ban on unverified AI-generated preprints.",
+    "issueSummaryEn": "This week's AI developments span world models that generate minute-scale 720p video on consumer GPUs, OpenAI's first national ChatGPT Plus deployment in Malta, new open-source agent frameworks with self-improving memory loops, and arXiv's enforcement of a one-year ban on unverified AI-generated preprints.",
+    "path": "/blog/ai-daily-2026-05-17",
+    "itemCount": 8,
+    "heroTitleZh": "SANA-WM Generates Minute-Scale 720p World-Model Video on a Single Consumer GPU",
+    "heroTitleEn": "SANA-WM Generates Minute-Scale 720p World-Model Video on a Single Consumer GPU",
+    "limitedUpdateWindow": false,
+    "bodyCoverage": {
+      "targeted": 8,
+      "succeeded": 8,
+      "totalWords": 4400,
+      "ratio": 1.0
+    },
+    "themes": [
+      {
+        "themeZh": "Agent",
+        "themeEn": "Agent",
+        "count": 2
+      },
+      {
+        "themeZh": "Product",
+        "themeEn": "Product",
+        "count": 2
+      },
+      {
+        "themeZh": "Architecture",
+        "themeEn": "Architecture",
+        "count": 1
+      },
+      {
+        "themeZh": "Multimodal",
+        "themeEn": "Multimodal",
+        "count": 1
+      },
+      {
+        "themeZh": "Tools",
+        "themeEn": "Tools",
+        "count": 1
+      },
+      {
+        "themeZh": "Research",
+        "themeEn": "Research",
+        "count": 1
+      }
+    ],
+    "featuredItems": [],
+    "llmGenerated": true,
+    "titleRegenerated": false
+  },
+  {
     "slug": "ai-daily-2026-05-16",
     "date": "2026-05-16",
     "titleEn": "AI Daily · May 16, 2026",
